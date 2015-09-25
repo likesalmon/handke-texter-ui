@@ -1,0 +1,73 @@
+<md-content class="texter" layout="row" flex>
+    <div layout="column"
+        flex>
+        <md-subheader class="md-no-sticky">Contacts</md-subheader>
+        <md-list>
+            <md-list-item ng-repeat="contact in contacts">
+                <ng-md-icon class="md-avatar"
+                    icon="account_circle"
+                    style="fill: #000"
+                    size="40"></ng-md-icon>
+
+                <p class="md-primary">{{ contact.number }}</p>
+                <md-checkbox class="md-secondary"
+                    ng-model="contact.selected"></md-checkbox>
+            </md-list-item>
+        </md-list>
+    </div>
+
+    <div layout="column"
+        flex>
+        <md-subheader class="md-no-sticky">
+            Scripts
+        </md-subheader>
+
+        <md-list>
+            <md-list-item class="md-2-line"
+                ng-repeat="script in scripts"
+                ng-click="loadScript(script)">
+                <md-list-item-text>
+                    <h4>{{ script.title }}</h4>
+                    <p>{{ script.text }}</p>
+                </md-list-item-text>
+            </md-list-item>
+        </md-list>
+    </div>
+
+    <div layout="column"
+        flex>
+        <md-subheader class="md-no-sticky">
+            Outgoing
+        </md-subheader>
+
+        <md-content layout-padding>
+            <form name="outgoingForm" ng-submit="send()">
+                <md-input-container>
+                    <label for="text">Text</label>
+                    <textarea name="text" ng-model="outgoing.text">
+                    </textarea>
+                </md-input-container>
+
+                <md-button class="md-raised md-primary"
+                    type="submit">Send</md-button>
+            </form>
+        </md-content>
+
+    </div>
+
+    <div layout="column"
+        flex>
+        <md-subheader class="md-no-sticky">Incoming</md-subheader>
+        <md-list>
+            <md-list-item ng-repeat="text in incoming">
+                <ng-md-icon class="md-avatar"
+                    icon="account_circle"
+                    style="fill: #000"
+                    size="40"></ng-md-icon>
+
+                <p>{{ incoming.number }}</p>
+                <p>{{ incoming.text }}</p>
+            </md-list-item>
+        </md-list>
+    </div>
+</md-content>

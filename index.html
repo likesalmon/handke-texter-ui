@@ -1,0 +1,44 @@
+<!doctype html>
+<html ng-app="handkeTexter">
+    <head>
+        <meta charset="utf-8">
+        <base href="/">
+        <title>Handke Texter</title>
+    </head>
+    <body layout="column">
+        <md-toolbar layout="row">
+            <div class="md-toolbar-tools">
+                <h2>Handke Texter</h2>
+                <span flex></span>
+                <md-menu>
+                    <md-button class="md-icon-button"
+                        aria-label="settings"
+                        ng-click="$mdOpenMenu()">
+                        <ng-md-icon icon="menu"
+                            style="fill: #fff"
+                            size="40"
+                            md-menu-align-target>
+                        </ng-md-icon>
+                    </md-button>
+                    <md-menu-content>
+                        <md-menu-item>
+                            <md-button ui-sref="texter">
+                                Texter
+                            </md-button>
+                        </md-menu-item>
+                        <md-divider></md-divider>
+                        <md-menu-item>
+                            <md-button ui-sref="login">
+                                Logout
+                            </md-button>
+                        </md-menu-item>
+                    </md-menu-content>
+                </md-menu>
+            </div>
+        </md-toolbar>
+
+        <div layout="row" flex ui-view></div>
+
+        <script src="dist/bundle.js" charset="utf-8"></script>
+    </body>
+</html>

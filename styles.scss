@@ -1,0 +1,7 @@
+@import "./node_modules/angular-material/angular-material.scss";
+
+.texter {
+    > div {
+        border-right: 1px solid #ccc;
+    }
+}

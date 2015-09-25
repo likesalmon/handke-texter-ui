@@ -1,0 +1,23 @@
+<md-content layout="column" flex="33" offset="33">
+    <h2>Login</h2>
+    <form name="loginForm" ng-submit="login()">
+        <md-input-container>
+            <label for="username">Username</label>
+            <input type="text"
+                name="username"
+                ng-model="credentials.username">
+        </md-input-container>
+        <md-input-container>
+            <label for="password">Password</label>
+            <input type="password"
+                name="password"
+                ng-model="credentials.password">
+        </md-input-container>
+        <md-button
+            type="submit"
+            class="md-primary md-raised">
+            Login
+        </md-button>
+    </form>
+</md-content>
+<span flex></span>
