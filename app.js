@@ -5,6 +5,7 @@ var ngResource = require('angular-resource');
 var material = require('angular-material');
 var uiRouter = require('angular-ui-router');
 var ngMdIcons = require('angular-material-icons');
+var socketIo = require('./node_modules/angular-socket-io/socket.js');
 var Login = require('./Login');
 var Texter = require('./Texter');
 
@@ -14,6 +15,7 @@ angular.module('handkeTexter', [
         'ngMaterial',
         'ngMdIcons',
         'ui.router',
+        'btford.socket-io',
         Texter.name,
         Login.name
     ])
@@ -51,4 +53,11 @@ angular.module('handkeTexter', [
         }
     ])
     .run(['$state', function ($state) {
+    }])
+    .factory('handkeSocket', ['socketFactory', function (socketFactory) {
+        var handkeSocket = socketFactory({
+            ioSocket: io.connect('http://localhost:8000')
+        });
+        handkeSocket.forward('error');
+        return handkeSocket;
     }]);

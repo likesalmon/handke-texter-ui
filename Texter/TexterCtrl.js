@@ -1,7 +1,8 @@
 module.exports = [
     '$scope',
     'Text',
-    function TexterCtrl ($scope, Text) {
+    'handkeSocket',
+    function TexterCtrl ($scope, Text, handkeSocket) {
         $scope.contacts = [
             {
                 number: '+15034197245',
@@ -15,16 +16,7 @@ module.exports = [
             }
         ];
 
-        $scope.incoming = [
-            {
-                number: '503-555-1234',
-                text: 'This is a text.'
-            },
-            {
-                number: '503-555-1234',
-                text: 'This is another text.'
-            }
-        ];
+        $scope.incoming = [];
 
         $scope.scripts = [
             {
@@ -52,5 +44,20 @@ module.exports = [
 
             text.$save();
         };
+
+        $scope.$on('socket:error', function (ev, data) {
+            console.error('socket:error', data);
+        });
+
+        handkeSocket.forward('incoming', $scope);
+        $scope.$on('socket:incoming', function (ev, data) {
+            data.timestamp = new Date();
+            $scope.incoming.push(data);
+        });
+
+        handkeSocket.forward('connection', $scope);
+        $scope.$on('socket:connection', function (ev, data) {
+            console.log('socket:connection');
+        });
     }
 ];

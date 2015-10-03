@@ -59,14 +59,19 @@
         flex>
         <md-subheader class="md-no-sticky">Incoming</md-subheader>
         <md-list>
-            <md-list-item ng-repeat="text in incoming">
+            <md-list-item class="md-3-line"
+                ng-repeat="text in incoming">
+
                 <ng-md-icon class="md-avatar"
                     icon="account_circle"
                     style="fill: #000"
                     size="40"></ng-md-icon>
 
-                <p>{{ incoming.number }}</p>
-                <p>{{ incoming.text }}</p>
+                    <div class="md-list-item-text" layout="column">
+                        <h3>From: {{ text.From }}</h3>
+                        <h4>Sent: {{ text.timestamp | date:'short' }}</h4>
+                        <p>{{ text.Body }}</p>
+                    </div>
             </md-list-item>
         </md-list>
     </div>
