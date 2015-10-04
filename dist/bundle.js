@@ -66,9 +66,9 @@
 	        Login.name
 	    ])
 	    .constant('API', {
-	        root: 'http://localhost:8000/api',
-	        login: '/login',
-	        sendText: '/sendText'
+	        protocol: 'http',
+	        ip: '45.55.27.217',
+	        port: '8000'
 	    })
 	    .config([
 	        '$locationProvider',
@@ -100,13 +100,26 @@
 	    ])
 	    .run(['$state', function ($state) {
 	    }])
-	    .factory('handkeSocket', ['socketFactory', function (socketFactory) {
-	        var handkeSocket = socketFactory({
-	            ioSocket: io.connect('http://localhost:8000')
-	        });
-	        handkeSocket.forward('error');
-	        return handkeSocket;
-	    }]);
+	    .factory('handkeSocket', [
+	        'API',
+	        'socketFactory',
+	        '$window',
+	        function (API, socketFactory, $window) {
+	            var options = {};
+	            var apiUrl = API.protocol + '://localhost:' + API.port;
+
+	            if (!/localhost/.test($window.location.href)) {
+	                apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
+	            }
+
+	            var handkeSocket = socketFactory({
+	                ioSocket: io.connect(apiUrl)
+	            });
+
+	            handkeSocket.forward('error');
+	            return handkeSocket;
+	        }
+	    ]);
 
 
 /***/ },
