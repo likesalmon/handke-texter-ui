@@ -1,1 +1,11 @@
-UI layer for Offending the Audience text app
+Handke Texter UI
+================
+UI layer for Offending the Audience SMS app
+
+
+Development
+===========
+
+
+Production
+==========
