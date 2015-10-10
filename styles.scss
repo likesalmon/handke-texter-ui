@@ -53,15 +53,17 @@ md-menu-item {
     height: 35px;
 }
 
-.incoming-toggle {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-
+.md-button {
     ng-md-icon {
         position: relative;
         top: 3px;
     }
+}
+
+.incoming-toggle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
 }
 
 .edit-button {
