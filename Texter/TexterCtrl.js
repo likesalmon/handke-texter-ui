@@ -1,33 +1,26 @@
 module.exports = [
     'ContactService',
-    '$scope',
-    'Text',
     'handkeSocket',
     '$mdDialog',
     '$mdSidenav',
+    'Text',
+    '$scope',
+    'ScriptService',
     function TexterCtrl (
         ContactService,
-        $scope,
-        Text,
         handkeSocket,
         $mdDialog,
-        $mdSidenav
+        $mdSidenav,
+        Text,
+        $scope,
+        ScriptService
     ) {
         $scope.init = function () {
             $scope.contacts = ContactService.get();
 
             $scope.incoming = [];
 
-            $scope.scripts = [
-                {
-                    title: 'First Script',
-                    text: 'This is the first script. It is long.'
-                },
-                {
-                    title: 'Second Script',
-                    text: 'This is the second script'
-                }
-            ];
+            $scope.scripts = ScriptService.get();
 
             $scope.outgoing = {};
 
@@ -90,7 +83,6 @@ module.exports = [
                 bindToController: true
             })
             .then(function (results) {
-                console.log(results);
                 if (results.action === 'update') {
                     $scope.contacts = ContactService.update(results.contact);
                     return;
@@ -98,6 +90,30 @@ module.exports = [
 
                 if (results.action === 'remove') {
                     $scope.contacts = ContactService.remove(results.contact);
+                    return;
+                }
+            });
+        };
+
+        $scope.openEditScriptDialog = function (script) {
+            $mdDialog.show({
+                controller: 'ScriptDialogCtrl',
+                template: require('./EditScriptDialog.html'),
+                parent: angular.element(document.body),
+                clickOutsideToClose: true,
+                locals: {
+                    script: script
+                },
+                bindToController: true
+            })
+            .then(function (results) {
+                if (results.action === 'update') {
+                    $scope.scripts = ScriptService.update(results.script);
+                    return;
+                }
+
+                if (results.action === 'remove') {
+                    $scope.scripts = ScriptService.remove(results.script);
                     return;
                 }
             });

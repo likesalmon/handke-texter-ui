@@ -4,7 +4,7 @@
         flex>
         <md-subheader class="md-no-sticky">
             Contacts
-            <md-button class="md-icon-button"
+            <md-button class="add-button md-icon-button"
                 aria-label="Add Contact"
                 ng-click="openAddContactDialog()">
                 <ng-md-icon icon="add"
@@ -14,9 +14,8 @@
         </md-subheader>
 
         <md-list class="contact-list">
-            <md-list-item class="md-3-line"
-                ng-repeat="contact in contacts">
-                <div flex="90" layout="row" layout-align="start center">
+            <md-list-item ng-repeat="contact in contacts">
+                <md-list-item-text flex="90" layout="row" layout-align="start center">
                     <div flex>
                         <h4>{{ contact.name }}</h4>
                         <p>{{ contact.phone }}</p>
@@ -32,7 +31,7 @@
                         <md-checkbox class="md-accent"
                             ng-model="contact.selected"></md-checkbox>
                     </div>
-                </div>
+                </md-list-item-text>
             </md-list-item>
         </md-list>
     </div>
@@ -42,7 +41,7 @@
         flex>
         <md-subheader class="md-no-sticky">
             Scripts
-            <md-button class="md-icon-button"
+            <md-button class="add-button md-icon-button"
                 aria-label="Add Script">
                 <ng-md-icon icon="add"
                     style="fill: #fff"

@@ -72,12 +72,14 @@ md-menu-item {
     line-height: 1.2em;
 }
 
+.add-button {
+    float: right;
+    position: relative;
+    top: -12px;
+}
+
 .contacts {
     background-color: #C62828;
-
-    .md-icon-button {
-        float: right;
-    }
 
     .contact-list {
         h3, h4, p {
@@ -88,10 +90,6 @@ md-menu-item {
 
 .scripts {
     background-color: #D32F2F;
-
-    .md-icon-button {
-        float: right;
-    }
 
     h4 {
         margin: 0;

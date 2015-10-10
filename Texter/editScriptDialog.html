@@ -1,12 +1,12 @@
 <md-dialog>
     <md-dialog-content>
         <md-input-container>
-            <label>Name</label>
-            <input type="text" ng-model="contact.name">
+            <label>Title</label>
+            <input type="text" ng-model="script.title">
         </md-input-container>
         <md-input-container>
-            <label>Phone</label>
-            <input type="tel"  ng-model="contact.phone">
+            <label>Text</label>
+            <textarea ng-model="script.text"></textarea>
         </md-input-container>
         <div class="md-actions">
             <md-button ng-click="update()">Update</md-button>

@@ -3,6 +3,7 @@
 module.exports = [function () {
     var contacts = [
         {
+            id: 1,
             name: 'testuser',
             phone: '555555555'
         }
