@@ -5,5 +5,5 @@ module.exports = angular.module('Texter', [])
         .controller('ContactDialogCtrl', require('./ContactDialogCtrl'))
         .controller('ScriptDialogCtrl', require('./ScriptDialogCtrl'))
         .service('Text', require('./TexterService'))
-        .service('ContactService', require('./ContactService'))
-        .service('ScriptService', require('./ScriptService'));
+        .factory('Contact', require('./ContactService'))
+        .factory('Script', require('./ScriptService'));

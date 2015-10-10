@@ -1,26 +1,38 @@
 module.exports = [
-    'ContactService',
+    'Contact',
     'handkeSocket',
     '$mdDialog',
     '$mdSidenav',
     'Text',
     '$scope',
-    'ScriptService',
+    'Script',
     function TexterCtrl (
-        ContactService,
+        Contact,
         handkeSocket,
         $mdDialog,
         $mdSidenav,
         Text,
         $scope,
-        ScriptService
+        Script
     ) {
         $scope.init = function () {
-            $scope.contacts = ContactService.get();
+            $scope.contacts = Contact.$query();
 
             $scope.incoming = [];
 
-            $scope.scripts = ScriptService.get();
+            var script = Script({});
+            console.log(script, Script);
+
+            // $scope.scripts = Script().$query();
+
+            // $scope.scripts = Script.$query(function (results) {
+            //     console.log(results);
+            // });
+            // var script = new Script();
+            // Script.$query()
+            //     .then(function (results) {
+            //         $scope.scripts = results;
+            //     });
 
             $scope.outgoing = {};
 
@@ -59,6 +71,12 @@ module.exports = [
             $mdSidenav('incoming').toggle();
         };
 
+
+
+        /*************
+            Contacts
+        **************/
+
         $scope.openAddContactDialog = function () {
             $mdDialog.show({
                 controller: 'ContactDialogCtrl',
@@ -95,6 +113,25 @@ module.exports = [
             });
         };
 
+        /*************
+            Scripts
+        **************/
+        $scope.openAddScriptDialog = function () {
+            $mdDialog.show({
+                controller: 'ScriptDialogCtrl',
+                template: require('./AddScriptDialog.html'),
+                parent: angular.element(document.body),
+                clickOutsideToClose: true
+            })
+            .then(function (script) {
+                console.log('script', script);
+                Script.$save({}, script)
+                    .then(function () {
+                        $scope.scripts = Script.$query();
+                    });
+            });
+        };
+
         $scope.openEditScriptDialog = function (script) {
             $mdDialog.show({
                 controller: 'ScriptDialogCtrl',
@@ -108,12 +145,12 @@ module.exports = [
             })
             .then(function (results) {
                 if (results.action === 'update') {
-                    $scope.scripts = ScriptService.update(results.script);
+                    $scope.scripts = Script.update(results.script);
                     return;
                 }
 
                 if (results.action === 'remove') {
-                    $scope.scripts = ScriptService.remove(results.script);
+                    $scope.scripts = Script.remove(results.script);
                     return;
                 }
             });

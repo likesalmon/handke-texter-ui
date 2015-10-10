@@ -1,43 +1,67 @@
 'use strict';
 
-module.exports = [function () {
-    var scripts = [
-        {
-            id: 1,
-            title: 'First Script',
-            text: 'This is the first script. It is long.'
-        },
-        {
-            id: 2,
-            title: 'Second Script',
-            text: 'This is the second script'
+module.exports = [
+    'API',
+    '$resource',
+    '$window',
+    function (API, $resource, $window) {
+        var apiUrl = API.protocol + '://localhost:' + API.port;
+
+        if (!/localhost/.test($window.location.href)) {
+            apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
         }
-    ];
 
-    return {
-        get: function () {
-            return scripts;
-        },
-        save: function (script) {
-            script.id = scripts.length + 1;
-            scripts.push(script);
-        },
-        update: function (script) {
-            var oldContact = scripts.filter(function (c) {
-                return c.id === script.id;
-            });
+        return $resource(apiUrl + '/api/scripts/:id',
+            {
+                id: '@id'
+            },
+            {
+                update: {
+                    method: 'PUT'
+                }
+            }
+        );
 
-            oldContact.name = script.name;
-            oldContact.number = script.number;
+        // return new Script();
 
-            return scripts;
-        },
-        remove: function (script) {
-            scripts = scripts.filter(function (c) {
-                return c.id !== script.id;
-            });
-
-            return scripts;
-        }
-    };
-}];
+        // var scripts = [
+        //     {
+        //         id: 1,
+        //         title: 'First Script',
+        //         content: 'This is the first script. It is long.'
+        //     },
+        //     {
+        //         id: 2,
+        //         title: 'Second Script',
+        //         content: 'This is the second script'
+        //     }
+        // ];
+        //
+        // return {
+        //     get: function () {
+        //         return scripts;
+        //     },
+        //     save: function (script) {
+        //         script.id = scripts.length + 1;
+        //         scripts.push(script);
+        //     },
+        //     update: function (script) {
+        //         var oldContact = scripts.filter(function (c) {
+        //             return c.id === script.id;
+        //         });
+        //
+        //         oldContact.name = script.name;
+        //         oldContact.number = script.number;
+        //
+        //         return scripts;
+        //     },
+        //     remove: function (script) {
+        //         scripts = scripts.filter(function (c) {
+        //             return c.id !== script.id;
+        //         });
+        //
+        //         return scripts;
+        //     }
+        // };
+    }
+];

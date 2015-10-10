@@ -45,7 +45,8 @@
         <md-subheader class="md-no-sticky">
             Scripts
             <md-button class="add-button md-icon-button"
-                aria-label="Add Script">
+                aria-label="Add Script"
+                ng-click="openAddScriptDialog()">
                 <ng-md-icon icon="add"
                     style="fill: #fff"
                     size="20"></ng-md-icon>
@@ -59,7 +60,7 @@
                 <md-list-item-text>
                     <h4>{{ script.title }}</h4>
                     <p>
-                        {{ script.text }}
+                        {{ script.content }}
                         <md-button class="edit-button md-accent md-mini"
                             ng-click="openEditScriptDialog(contact)">
                             <ng-md-icon icon="edit"
