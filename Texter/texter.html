@@ -1,25 +1,53 @@
 <md-content class="texter" layout="row" flex>
-    <div layout="column"
+    <div class="contacts"
+        layout="column"
         flex>
-        <md-subheader class="md-no-sticky">Contacts</md-subheader>
-        <md-list>
-            <md-list-item ng-repeat="contact in contacts">
-                <ng-md-icon class="md-avatar"
-                    icon="account_circle"
-                    style="fill: #000"
-                    size="40"></ng-md-icon>
+        <md-subheader class="md-no-sticky">
+            Contacts
+            <md-button class="md-icon-button"
+                aria-label="Add Contact"
+                ng-click="openAddContactDialog()">
+                <ng-md-icon icon="add"
+                    style="fill: #fff"
+                    size="20"></ng-md-icon>
+            </md-button>
+        </md-subheader>
 
-                <p class="md-primary">{{ contact.number }}</p>
-                <md-checkbox class="md-secondary"
-                    ng-model="contact.selected"></md-checkbox>
+        <md-list class="contact-list">
+            <md-list-item class="md-3-line"
+                ng-repeat="contact in contacts">
+                <div flex="90" layout="row" layout-align="start center">
+                    <div flex>
+                        <h4>{{ contact.name }}</h4>
+                        <p>{{ contact.phone }}</p>
+                        <p>
+                            <md-button class="edit-button md-accent md-mini"
+                                ng-click="openEditContactDialog(contact)">
+                                Edit
+                            </md-button>
+                        </p>
+                    </div>
+
+                    <div flex="10">
+                        <md-checkbox class="md-accent"
+                            ng-model="contact.selected"></md-checkbox>
+                    </div>
+                </div>
             </md-list-item>
         </md-list>
     </div>
 
-    <div layout="column"
+    <div class="scripts"
+        layout="column"
         flex>
         <md-subheader class="md-no-sticky">
             Scripts
+            <md-button class="md-icon-button"
+                aria-label="Add Script">
+                <ng-md-icon icon="add"
+                    style="fill: #fff"
+                    size="20"></ng-md-icon>
+            </md-button>
         </md-subheader>
 
         <md-list>
@@ -28,13 +56,20 @@
                 ng-click="loadScript(script)">
                 <md-list-item-text>
                     <h4>{{ script.title }}</h4>
-                    <p>{{ script.text }}</p>
+                    <p>
+                        {{ script.text }}
+                        <md-button class="edit-button md-accent md-mini"
+                            ng-click="openEditScriptDialog(contact)">
+                            Edit
+                        </md-button>
+                    </p>
                 </md-list-item-text>
             </md-list-item>
         </md-list>
     </div>
 
-    <div layout="column"
+    <div class="outgoing"
+        layout="column"
         flex>
         <md-subheader class="md-no-sticky">
             Outgoing
@@ -48,23 +83,32 @@
                     </textarea>
                 </md-input-container>
 
-                <md-button class="md-raised md-primary"
+                <md-button class="md-accent"
                     type="submit">Send</md-button>
             </form>
         </md-content>
 
+        <md-button class="incoming-toggle"
+            ng-click="toggleIncoming()">
+                <ng-md-icon icon="chevron_left"
+                    style="fill: #fff"
+                    size="17"></ng-md-icon>
+                {{ incoming.length }} Incoming
+        </md-button>
     </div>
 
-    <div layout="column"
-        flex>
-        <md-subheader class="md-no-sticky">Incoming</md-subheader>
+    <md-sidenav class="md-sidenav-right md-whiteframe-z2"
+        md-component-id="incoming">
+        <md-toolbar class="md-theme-light">
+            <h1 class="md-toolbar-tools">Incoming Texts</h1>
+        </md-toolbar>
         <md-list>
             <md-list-item class="md-3-line"
                 ng-repeat="text in incoming">
 
                 <ng-md-icon class="md-avatar"
                     icon="account_circle"
-                    style="fill: #000"
+                    style="fill: #fff"
                     size="40"></ng-md-icon>
 
                     <div class="md-list-item-text" layout="column">
@@ -74,5 +118,5 @@
                     </div>
             </md-list-item>
         </md-list>
-    </div>
+    </md-sidenav>
 </md-content>

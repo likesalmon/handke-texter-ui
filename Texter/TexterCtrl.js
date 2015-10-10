@@ -1,35 +1,52 @@
 module.exports = [
+    'ContactService',
     '$scope',
     'Text',
     'handkeSocket',
-    function TexterCtrl ($scope, Text, handkeSocket) {
-        $scope.contacts = [
-            {
-                number: '+15034197245',
-                group: 'a',
-                selected: false
-            },
-            {
-                number: '+15035555555',
-                group: 'a',
-                selected: false
-            }
-        ];
+    '$mdDialog',
+    '$mdSidenav',
+    function TexterCtrl (
+        ContactService,
+        $scope,
+        Text,
+        handkeSocket,
+        $mdDialog,
+        $mdSidenav
+    ) {
+        $scope.init = function () {
+            $scope.contacts = ContactService.get();
 
-        $scope.incoming = [];
+            $scope.incoming = [];
 
-        $scope.scripts = [
-            {
-                title: 'First Script',
-                text: 'This is the first script. It is long.'
-            },
-            {
-                title: 'Second Script',
-                text: 'This is the second script'
-            }
-        ];
+            $scope.scripts = [
+                {
+                    title: 'First Script',
+                    text: 'This is the first script. It is long.'
+                },
+                {
+                    title: 'Second Script',
+                    text: 'This is the second script'
+                }
+            ];
 
-        $scope.outgoing = {};
+            $scope.outgoing = {};
+
+            $scope.$on('socket:error', function (ev, data) {
+                console.error('socket:error', data);
+            });
+
+            handkeSocket.forward('incoming', $scope);
+            $scope.$on('socket:incoming', function (ev, data) {
+                data.timestamp = new Date();
+                $scope.incoming.push(data);
+            });
+
+            handkeSocket.forward('connection', $scope);
+            $scope.$on('socket:connection', function (ev, data) {
+                console.log('socket:connection');
+            });
+        };
+
         $scope.loadScript = function (script) {
             $scope.outgoing.text = script.text;
         };
@@ -45,19 +62,47 @@ module.exports = [
             text.$save();
         };
 
-        $scope.$on('socket:error', function (ev, data) {
-            console.error('socket:error', data);
-        });
+        $scope.toggleIncoming = function () {
+            $mdSidenav('incoming').toggle();
+        };
 
-        handkeSocket.forward('incoming', $scope);
-        $scope.$on('socket:incoming', function (ev, data) {
-            data.timestamp = new Date();
-            $scope.incoming.push(data);
-        });
+        $scope.openAddContactDialog = function () {
+            $mdDialog.show({
+                controller: 'ContactDialogCtrl',
+                template: require('./AddContactDialog.html'),
+                parent: angular.element(document.body),
+                clickOutsideToClose: true
+            })
+            .then(function (contact) {
+                ContactService.save(contact);
+            });
+        };
 
-        handkeSocket.forward('connection', $scope);
-        $scope.$on('socket:connection', function (ev, data) {
-            console.log('socket:connection');
-        });
+        $scope.openEditContactDialog = function (contact) {
+            $mdDialog.show({
+                controller: 'ContactDialogCtrl',
+                template: require('./EditContactDialog.html'),
+                parent: angular.element(document.body),
+                clickOutsideToClose: true,
+                locals: {
+                    contact: contact
+                },
+                bindToController: true
+            })
+            .then(function (results) {
+                console.log(results);
+                if (results.action === 'update') {
+                    $scope.contacts = ContactService.update(results.contact);
+                    return;
+                }
+
+                if (results.action === 'remove') {
+                    $scope.contacts = ContactService.remove(results.contact);
+                    return;
+                }
+            });
+        };
+
+        $scope.init();
     }
 ];

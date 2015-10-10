@@ -27,13 +27,19 @@ angular.module('handkeTexter', [
     .config([
         '$locationProvider',
         '$stateProvider',
+        '$mdThemingProvider',
         '$urlRouterProvider',
         function (
             $locationProvider,
             $stateProvider,
+            $mdThemingProvider,
             $urlRouterProvider
         ) {
             $locationProvider.html5Mode(false);
+
+            $mdThemingProvider.theme('default')
+                .primaryPalette('red')
+                .accentPalette('orange');
 
             $urlRouterProvider.otherwise('/login');
 

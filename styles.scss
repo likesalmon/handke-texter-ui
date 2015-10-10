@@ -1,7 +1,112 @@
 @import "./node_modules/angular-material/angular-material.scss";
 
-.texter {
-    > div {
-        border-right: 1px solid #ccc;
+html,
+body {
+    color: #fff;
+    background: #B71C1C;
+}
+
+md-content,
+.md-subheader {
+    background-color: transparent;
+    color: #fff;
+}
+
+md-list md-list-item button.md-button:not([disabled]):hover {
+    background-color: #F57F17;
+}
+
+md-checkbox .md-icon {
+    border-color: #fff;
+}
+
+a.md-button.md-accent.md-raised,
+a.md-button.md-accent.md-fab,
+.md-button.md-accent.md-raised,
+.md-button.md-accent.md-fab {
+    color: #fff;
+}
+
+.md-fab ng-md-icon,
+md-menu-item ng-md-icon {
+    position: relative;
+    top: 4px;
+}
+
+md-input-container .md-input {
+    color: #fff;
+}
+
+md-dialog {
+    md-input-container .md-input,
+    .md-actions .md-button {
+        color: #333;
+    }
+}
+
+md-menu-content {
+    padding: 0;
+}
+
+md-menu-item {
+    min-height: 35px;
+    height: 35px;
+}
+
+.incoming-toggle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+    ng-md-icon {
+        position: relative;
+        top: 3px;
+    }
+}
+
+.edit-button {
+    min-height: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2em;
+}
+
+.contacts {
+    background-color: #C62828;
+
+    .md-icon-button {
+        float: right;
+    }
+
+    .contact-list {
+        h3, h4, p {
+            margin: 0;
+        }
+    }
+}
+
+.scripts {
+    background-color: #D32F2F;
+
+    .md-icon-button {
+        float: right;
+    }
+
+    h4 {
+        margin: 0;
+    }
+
+    p {
+        margin-top: 0;
+        line-height: 1.2em;
+    }
+}
+
+.outgoing {
+    background-color: #E53935;
+
+    .md-button {
+        float: right;
     }
 }
