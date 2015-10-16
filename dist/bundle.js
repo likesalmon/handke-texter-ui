@@ -92,12 +92,12 @@
 	            $stateProvider
 	                .state('login', {
 	                    url: '/login',
-	                    template: __webpack_require__(31),
+	                    template: __webpack_require__(32),
 	                    controller: 'LoginCtrl'
 	                })
 	                .state('texter', {
 	                    url: '/texter',
-	                    template: __webpack_require__(32),
+	                    template: __webpack_require__(33),
 	                    controller: 'TexterCtrl'
 	                });
 
@@ -163,7 +163,7 @@
 
 
 	// module
-	exports.push([module.id, "html, body {\n  height: 100%;\n  color: rgba(0, 0, 0, 0.87);\n  background: white;\n  position: relative; }\n\nbody {\n  margin: 0;\n  padding: 0; }\n\n[tabindex='-1']:focus {\n  outline: none; }\n\n.inset {\n  padding: 10px; }\n\nbutton.md-no-style {\n  font-weight: normal;\n  background-color: inherit;\n  text-align: left;\n  border: none;\n  padding: 0;\n  margin: 0; }\n\nselect,\nbutton,\ntextarea,\ninput {\n  vertical-align: baseline; }\n\ninput[type=\"reset\"],\ninput[type=\"submit\"],\nhtml input[type=\"button\"],\nbutton {\n  cursor: pointer;\n  -webkit-appearance: button; }\n  input[type=\"reset\"][disabled],\n  input[type=\"submit\"][disabled],\n  html input[type=\"button\"][disabled],\n  button[disabled] {\n    cursor: default; }\n\ntextarea {\n  vertical-align: top;\n  overflow: auto; }\n\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  box-sizing: content-box;\n  -webkit-box-sizing: content-box; }\n  input[type=\"search\"]::-webkit-search-decoration,\n  input[type=\"search\"]::-webkit-search-cancel-button {\n    -webkit-appearance: none; }\n\n.md-visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  text-transform: none;\n  width: 1px; }\n\n.md-shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  border-radius: inherit;\n  pointer-events: none; }\n\n.md-shadow-bottom-z-1 {\n  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n\n.md-shadow-bottom-z-2 {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }\n\n.md-shadow-animated.md-shadow {\n  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }\n\n/*\n * A container inside of a rippling element (eg a button),\n * which contains all of the individual ripples\n */\n.md-ripple-container {\n  pointer-events: none;\n  position: absolute;\n  overflow: hidden;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  transition: all 0.55s cubic-bezier(0.25, 0.8, 0.25, 1); }\n\n.md-ripple {\n  position: absolute;\n  transform: translate(-50%, -50%) scale(0);\n  transform-origin: 50% 50%;\n  opacity: 0;\n  border-radius: 50%; }\n  .md-ripple.md-ripple-placed {\n    transition: margin 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), border 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), height 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-ripple.md-ripple-scaled {\n    transform: translate(-50%, -50%) scale(1); }\n  .md-ripple.md-ripple-active, .md-ripple.md-ripple-full, .md-ripple.md-ripple-visible {\n    opacity: 0.20; }\n\n.md-padding {\n  padding: 8px; }\n\n.md-margin {\n  margin: 8px; }\n\n.md-scroll-mask {\n  position: absolute;\n  background-color: transparent;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0; }\n  .md-scroll-mask > .md-scroll-mask-bar {\n    display: block;\n    position: absolute;\n    background-color: #fafafa;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    z-index: 65;\n    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.3); }\n\n@media (min-width: 600px) {\n  .md-padding {\n    padding: 16px; } }\n\nhtml, body {\n  -webkit-tap-highlight-color: transparent;\n  -webkit-touch-callout: none;\n  min-height: 100%;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n/************\n * Headings\n ************/\n.md-display-4 {\n  font-size: 112px;\n  font-weight: 300;\n  letter-spacing: -0.010em;\n  line-height: 112px; }\n\n.md-display-3 {\n  font-size: 56px;\n  font-weight: 400;\n  letter-spacing: -0.005em;\n  line-height: 56px; }\n\n.md-display-2 {\n  font-size: 45px;\n  font-weight: 400;\n  line-height: 64px; }\n\n.md-display-1 {\n  font-size: 34px;\n  font-weight: 400;\n  line-height: 40px; }\n\n.md-headline {\n  font-size: 24px;\n  font-weight: 400;\n  line-height: 32px; }\n\n.md-title {\n  font-size: 20px;\n  font-weight: 500;\n  letter-spacing: 0.005em; }\n\n.md-subhead {\n  font-size: 16px;\n  font-weight: 400;\n  letter-spacing: 0.010em;\n  line-height: 24px; }\n\n/************\n * Body Copy\n ************/\n.md-body-1 {\n  font-size: 14px;\n  font-weight: 400;\n  letter-spacing: 0.010em;\n  line-height: 20px; }\n\n.md-body-2 {\n  font-size: 14px;\n  font-weight: 500;\n  letter-spacing: 0.010em;\n  line-height: 24px; }\n\n.md-caption {\n  font-size: 12px;\n  letter-spacing: 0.020em; }\n\n.md-button {\n  letter-spacing: 0.010em; }\n\n/************\n * Defaults\n ************/\nbutton,\nselect,\nhtml,\ntextarea,\ninput {\n  font-family: Roboto, \"Helvetica Neue\", sans-serif; }\n\nselect,\nbutton,\ntextarea,\ninput {\n  font-size: 100%; }\n\n/* Sizes:\n  0    <= size < 600  Phone\n  600  <= size < 960  Tablet\n  960  <= size < 1200 Tablet-Landscape\n  1200 <= size         PC\n*/\n.layout {\n  box-sizing: border-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -moz-flex;\n  display: -ms-flexbox;\n  display: flex; }\n\n.layout-column {\n  flex-direction: column;\n  -webkit-flex-direction: column; }\n\n.layout-row {\n  flex-direction: row;\n  -webkit-flex-direction: row; }\n\n.layout-padding > .flex-sm,\n.layout-padding > .flex-lt-md {\n  padding: 4px; }\n\n.layout-padding,\n.layout-padding > .flex,\n.layout-padding > .flex-gt-sm,\n.layout-padding > .flex-md,\n.layout-padding > .flex-lt-lg {\n  padding: 8px; }\n\n.layout-padding > .flex-gt-md,\n.layout-padding > .flex-lg {\n  padding: 16px; }\n\n.layout-margin > .flex-sm,\n.layout-margin > .flex-lt-md {\n  margin: 4px; }\n\n.layout-margin,\n.layout-margin > .flex,\n.layout-margin > .flex-gt-sm,\n.layout-margin > .flex-md,\n.layout-margin > .flex-lt-lg {\n  margin: 8px; }\n\n.layout-margin > .flex-gt-md,\n.layout-margin > .flex-lg {\n  margin: 16px; }\n\n.layout-wrap {\n  flex-wrap: wrap; }\n\n.layout-fill {\n  margin: 0;\n  min-height: 100%;\n  width: 100%; }\n\n@-moz-document url-prefix() {\n  .layout-fill {\n    margin: 0;\n    width: 100%;\n    min-height: auto;\n    height: inherit; } }\n\n.flex {\n  box-sizing: border-box;\n  flex: 1; }\n\n.flex-0 {\n  flex: 0 0 0%; }\n\n.layout-row > .flex-0 {\n  max-width: 0%; }\n\n.layout-column > .flex-0 {\n  max-height: 0%; }\n\n.flex-5 {\n  flex: 0 0 5%; }\n\n.layout-row > .flex-5 {\n  max-width: 5%; }\n\n.layout-column > .flex-5 {\n  max-height: 5%; }\n\n.flex-10 {\n  flex: 0 0 10%; }\n\n.layout-row > .flex-10 {\n  max-width: 10%; }\n\n.layout-column > .flex-10 {\n  max-height: 10%; }\n\n.flex-15 {\n  flex: 0 0 15%; }\n\n.layout-row > .flex-15 {\n  max-width: 15%; }\n\n.layout-column > .flex-15 {\n  max-height: 15%; }\n\n.flex-20 {\n  flex: 0 0 20%; }\n\n.layout-row > .flex-20 {\n  max-width: 20%; }\n\n.layout-column > .flex-20 {\n  max-height: 20%; }\n\n.flex-25 {\n  flex: 0 0 25%; }\n\n.layout-row > .flex-25 {\n  max-width: 25%; }\n\n.layout-column > .flex-25 {\n  max-height: 25%; }\n\n.flex-30 {\n  flex: 0 0 30%; }\n\n.layout-row > .flex-30 {\n  max-width: 30%; }\n\n.layout-column > .flex-30 {\n  max-height: 30%; }\n\n.flex-35 {\n  flex: 0 0 35%; }\n\n.layout-row > .flex-35 {\n  max-width: 35%; }\n\n.layout-column > .flex-35 {\n  max-height: 35%; }\n\n.flex-40 {\n  flex: 0 0 40%; }\n\n.layout-row > .flex-40 {\n  max-width: 40%; }\n\n.layout-column > .flex-40 {\n  max-height: 40%; }\n\n.flex-45 {\n  flex: 0 0 45%; }\n\n.layout-row > .flex-45 {\n  max-width: 45%; }\n\n.layout-column > .flex-45 {\n  max-height: 45%; }\n\n.flex-50 {\n  flex: 0 0 50%; }\n\n.layout-row > .flex-50 {\n  max-width: 50%; }\n\n.layout-column > .flex-50 {\n  max-height: 50%; }\n\n.flex-55 {\n  flex: 0 0 55%; }\n\n.layout-row > .flex-55 {\n  max-width: 55%; }\n\n.layout-column > .flex-55 {\n  max-height: 55%; }\n\n.flex-60 {\n  flex: 0 0 60%; }\n\n.layout-row > .flex-60 {\n  max-width: 60%; }\n\n.layout-column > .flex-60 {\n  max-height: 60%; }\n\n.flex-65 {\n  flex: 0 0 65%; }\n\n.layout-row > .flex-65 {\n  max-width: 65%; }\n\n.layout-column > .flex-65 {\n  max-height: 65%; }\n\n.flex-70 {\n  flex: 0 0 70%; }\n\n.layout-row > .flex-70 {\n  max-width: 70%; }\n\n.layout-column > .flex-70 {\n  max-height: 70%; }\n\n.flex-75 {\n  flex: 0 0 75%; }\n\n.layout-row > .flex-75 {\n  max-width: 75%; }\n\n.layout-column > .flex-75 {\n  max-height: 75%; }\n\n.flex-80 {\n  flex: 0 0 80%; }\n\n.layout-row > .flex-80 {\n  max-width: 80%; }\n\n.layout-column > .flex-80 {\n  max-height: 80%; }\n\n.flex-85 {\n  flex: 0 0 85%; }\n\n.layout-row > .flex-85 {\n  max-width: 85%; }\n\n.layout-column > .flex-85 {\n  max-height: 85%; }\n\n.flex-90 {\n  flex: 0 0 90%; }\n\n.layout-row > .flex-90 {\n  max-width: 90%; }\n\n.layout-column > .flex-90 {\n  max-height: 90%; }\n\n.flex-95 {\n  flex: 0 0 95%; }\n\n.layout-row > .flex-95 {\n  max-width: 95%; }\n\n.layout-column > .flex-95 {\n  max-height: 95%; }\n\n.flex-100 {\n  flex: 0 0 100%; }\n\n.layout-row > .flex-100 {\n  max-width: 100%; }\n\n.layout-column > .flex-100 {\n  max-height: 100%; }\n\n.flex-33, .flex-34 {\n  flex: 0 0 33.33%; }\n\n.flex-66, .flex-67 {\n  flex: 0 0 66.66%; }\n\n.layout-row > .flex-33, .layout-row > .flex-34 {\n  max-width: 33.33%; }\n\n.layout-row > .flex-66, .layout-row > .flex-67 {\n  max-width: 66.66%; }\n\n.layout-column > .flex-33, .layout-column > .flex-34 {\n  max-height: 33.33%; }\n\n.layout-column > .flex-66, .layout-column > .flex-67 {\n  max-height: 66.66%; }\n\n.layout-align-center, .layout-align-center-center,\n.layout-align-center-start,\n.layout-align-center-end {\n  justify-content: center; }\n\n.layout-align-end, .layout-align-end-center,\n.layout-align-end-start,\n.layout-align-end-end {\n  justify-content: flex-end; }\n\n.layout-align-space-around, .layout-align-space-around-center,\n.layout-align-space-around-start,\n.layout-align-space-around-end {\n  justify-content: space-around; }\n\n.layout-align-space-between, .layout-align-space-between-center,\n.layout-align-space-between-start,\n.layout-align-space-between-end {\n  justify-content: space-between; }\n\n.layout-align-center-center,\n.layout-align-start-center,\n.layout-align-end-center,\n.layout-align-space-between-center,\n.layout-align-space-around-center {\n  align-items: center; }\n\n.layout-align-center-start,\n.layout-align-start-start,\n.layout-align-end-start,\n.layout-align-space-between-start,\n.layout-align-space-around-start {\n  align-items: flex-start; }\n\n.layout-align-center-end,\n.layout-align-start-end,\n.layout-align-end-end,\n.layout-align-space-between-end,\n.layout-align-space-around-end {\n  align-items: flex-end; }\n\n.flex-order-0 {\n  order: 0; }\n\n.flex-order-1 {\n  order: 1; }\n\n.flex-order-2 {\n  order: 2; }\n\n.flex-order-3 {\n  order: 3; }\n\n.flex-order-4 {\n  order: 4; }\n\n.flex-order-5 {\n  order: 5; }\n\n.flex-order-6 {\n  order: 6; }\n\n.flex-order-7 {\n  order: 7; }\n\n.flex-order-8 {\n  order: 8; }\n\n.flex-order-9 {\n  order: 9; }\n\n.offset-5 {\n  margin-left: 5%; }\n\n.offset-10 {\n  margin-left: 10%; }\n\n.offset-15 {\n  margin-left: 15%; }\n\n.offset-20 {\n  margin-left: 20%; }\n\n.offset-25 {\n  margin-left: 25%; }\n\n.offset-30 {\n  margin-left: 30%; }\n\n.offset-35 {\n  margin-left: 35%; }\n\n.offset-40 {\n  margin-left: 40%; }\n\n.offset-45 {\n  margin-left: 45%; }\n\n.offset-50 {\n  margin-left: 50%; }\n\n.offset-55 {\n  margin-left: 55%; }\n\n.offset-60 {\n  margin-left: 60%; }\n\n.offset-65 {\n  margin-left: 65%; }\n\n.offset-70 {\n  margin-left: 70%; }\n\n.offset-75 {\n  margin-left: 75%; }\n\n.offset-80 {\n  margin-left: 80%; }\n\n.offset-85 {\n  margin-left: 85%; }\n\n.offset-90 {\n  margin-left: 90%; }\n\n.offset-95 {\n  margin-left: 95%; }\n\n.offset-33, .offset-34 {\n  margin-left: 33.33%; }\n\n.offset-66, .offset-67 {\n  margin-left: 66.66%; }\n\n/**\n * `hide-gt-sm show-gt-lg` should hide from 600px to 1200px\n * `show-md hide-gt-sm` should show from 0px to 960px and hide at >960px\n * `hide-gt-md show-gt-sm` should show everywhere (show overrides hide)`\n */\n@media (max-width: 599px) {\n  .hide-sm:not(.show-sm):not(.show), .hide:not(.show-sm):not(.show) {\n    display: none; }\n  .flex-order-sm-0 {\n    order: 0; }\n  .flex-order-sm-1 {\n    order: 1; }\n  .flex-order-sm-2 {\n    order: 2; }\n  .flex-order-sm-3 {\n    order: 3; }\n  .flex-order-sm-4 {\n    order: 4; }\n  .flex-order-sm-5 {\n    order: 5; }\n  .flex-order-sm-6 {\n    order: 6; }\n  .flex-order-sm-7 {\n    order: 7; }\n  .flex-order-sm-8 {\n    order: 8; }\n  .flex-order-sm-9 {\n    order: 9; }\n  .layout-align-sm-center, .layout-align-sm-center-center,\n  .layout-align-sm-center-start,\n  .layout-align-sm-center-end {\n    justify-content: center; }\n  .layout-align-sm-end, .layout-align-sm-end-center,\n  .layout-align-sm-end-start,\n  .layout-align-sm-end-end {\n    justify-content: flex-end; }\n  .layout-align-sm-space-around, .layout-align-sm-space-around-center,\n  .layout-align-sm-space-around-start,\n  .layout-align-sm-space-around-end {\n    justify-content: space-around; }\n  .layout-align-sm-space-between, .layout-align-sm-space-between-center,\n  .layout-align-sm-space-between-start,\n  .layout-align-sm-space-between-end {\n    justify-content: space-between; }\n  .layout-align-sm-center-center,\n  .layout-align-sm-start-center,\n  .layout-align-sm-end-center,\n  .layout-align-sm-space-between-center,\n  .layout-align-sm-space-around-center {\n    align-items: center; }\n  .layout-align-sm-center-start,\n  .layout-align-sm-start-start,\n  .layout-align-sm-end-start,\n  .layout-align-sm-space-between-start,\n  .layout-align-sm-space-around-start {\n    align-items: flex-start; }\n  .layout-align-sm-center-end,\n  .layout-align-sm-start-end,\n  .layout-align-sm-end-end,\n  .layout-align-sm-space-between-end,\n  .layout-align-sm-space-around-end {\n    align-items: flex-end; }\n  .layout-sm {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -moz-flex;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-sm-column {\n    flex-direction: column; }\n  .layout-sm-row {\n    flex-direction: row; }\n  .offset-sm-5 {\n    margin-left: 5%; }\n  .offset-sm-10 {\n    margin-left: 10%; }\n  .offset-sm-15 {\n    margin-left: 15%; }\n  .offset-sm-20 {\n    margin-left: 20%; }\n  .offset-sm-25 {\n    margin-left: 25%; }\n  .offset-sm-30 {\n    margin-left: 30%; }\n  .offset-sm-35 {\n    margin-left: 35%; }\n  .offset-sm-40 {\n    margin-left: 40%; }\n  .offset-sm-45 {\n    margin-left: 45%; }\n  .offset-sm-50 {\n    margin-left: 50%; }\n  .offset-sm-55 {\n    margin-left: 55%; }\n  .offset-sm-60 {\n    margin-left: 60%; }\n  .offset-sm-65 {\n    margin-left: 65%; }\n  .offset-sm-70 {\n    margin-left: 70%; }\n  .offset-sm-75 {\n    margin-left: 75%; }\n  .offset-sm-80 {\n    margin-left: 80%; }\n  .offset-sm-85 {\n    margin-left: 85%; }\n  .offset-sm-90 {\n    margin-left: 90%; }\n  .offset-sm-95 {\n    margin-left: 95%; }\n  .offset-sm-33, .offset-sm-34 {\n    margin-left: 33.33%; }\n  .offset-sm-66, .offset-sm-67 {\n    margin-left: 66.66%; }\n  .flex-sm {\n    box-sizing: border-box;\n    flex: 1; }\n  .flex-sm-0 {\n    flex: 0 0 0%; }\n  .layout-row > .flex-sm-0 {\n    max-width: 0%; }\n  .layout-column > .flex-sm-0 {\n    max-height: 0%; }\n  .flex-sm-5 {\n    flex: 0 0 5%; }\n  .layout-row > .flex-sm-5 {\n    max-width: 5%; }\n  .layout-column > .flex-sm-5 {\n    max-height: 5%; }\n  .flex-sm-10 {\n    flex: 0 0 10%; }\n  .layout-row > .flex-sm-10 {\n    max-width: 10%; }\n  .layout-column > .flex-sm-10 {\n    max-height: 10%; }\n  .flex-sm-15 {\n    flex: 0 0 15%; }\n  .layout-row > .flex-sm-15 {\n    max-width: 15%; }\n  .layout-column > .flex-sm-15 {\n    max-height: 15%; }\n  .flex-sm-20 {\n    flex: 0 0 20%; }\n  .layout-row > .flex-sm-20 {\n    max-width: 20%; }\n  .layout-column > .flex-sm-20 {\n    max-height: 20%; }\n  .flex-sm-25 {\n    flex: 0 0 25%; }\n  .layout-row > .flex-sm-25 {\n    max-width: 25%; }\n  .layout-column > .flex-sm-25 {\n    max-height: 25%; }\n  .flex-sm-30 {\n    flex: 0 0 30%; }\n  .layout-row > .flex-sm-30 {\n    max-width: 30%; }\n  .layout-column > .flex-sm-30 {\n    max-height: 30%; }\n  .flex-sm-35 {\n    flex: 0 0 35%; }\n  .layout-row > .flex-sm-35 {\n    max-width: 35%; }\n  .layout-column > .flex-sm-35 {\n    max-height: 35%; }\n  .flex-sm-40 {\n    flex: 0 0 40%; }\n  .layout-row > .flex-sm-40 {\n    max-width: 40%; }\n  .layout-column > .flex-sm-40 {\n    max-height: 40%; }\n  .flex-sm-45 {\n    flex: 0 0 45%; }\n  .layout-row > .flex-sm-45 {\n    max-width: 45%; }\n  .layout-column > .flex-sm-45 {\n    max-height: 45%; }\n  .flex-sm-50 {\n    flex: 0 0 50%; }\n  .layout-row > .flex-sm-50 {\n    max-width: 50%; }\n  .layout-column > .flex-sm-50 {\n    max-height: 50%; }\n  .flex-sm-55 {\n    flex: 0 0 55%; }\n  .layout-row > .flex-sm-55 {\n    max-width: 55%; }\n  .layout-column > .flex-sm-55 {\n    max-height: 55%; }\n  .flex-sm-60 {\n    flex: 0 0 60%; }\n  .layout-row > .flex-sm-60 {\n    max-width: 60%; }\n  .layout-column > .flex-sm-60 {\n    max-height: 60%; }\n  .flex-sm-65 {\n    flex: 0 0 65%; }\n  .layout-row > .flex-sm-65 {\n    max-width: 65%; }\n  .layout-column > .flex-sm-65 {\n    max-height: 65%; }\n  .flex-sm-70 {\n    flex: 0 0 70%; }\n  .layout-row > .flex-sm-70 {\n    max-width: 70%; }\n  .layout-column > .flex-sm-70 {\n    max-height: 70%; }\n  .flex-sm-75 {\n    flex: 0 0 75%; }\n  .layout-row > .flex-sm-75 {\n    max-width: 75%; }\n  .layout-column > .flex-sm-75 {\n    max-height: 75%; }\n  .flex-sm-80 {\n    flex: 0 0 80%; }\n  .layout-row > .flex-sm-80 {\n    max-width: 80%; }\n  .layout-column > .flex-sm-80 {\n    max-height: 80%; }\n  .flex-sm-85 {\n    flex: 0 0 85%; }\n  .layout-row > .flex-sm-85 {\n    max-width: 85%; }\n  .layout-column > .flex-sm-85 {\n    max-height: 85%; }\n  .flex-sm-90 {\n    flex: 0 0 90%; }\n  .layout-row > .flex-sm-90 {\n    max-width: 90%; }\n  .layout-column > .flex-sm-90 {\n    max-height: 90%; }\n  .flex-sm-95 {\n    flex: 0 0 95%; }\n  .layout-row > .flex-sm-95 {\n    max-width: 95%; }\n  .layout-column > .flex-sm-95 {\n    max-height: 95%; }\n  .flex-sm-100 {\n    flex: 0 0 100%; }\n  .layout-row > .flex-sm-100 {\n    max-width: 100%; }\n  .layout-column > .flex-sm-100 {\n    max-height: 100%; }\n  .flex-sm-33, .flex-sm-34 {\n    flex: 0 0 33.33%; }\n  .flex-sm-66, .flex-sm-67 {\n    flex: 0 0 66.66%; }\n  .layout-row > .flex-sm-33, .layout-row > .flex-sm-34 {\n    max-width: 33.33%; }\n  .layout-row > .flex-sm-66, .layout-row > .flex-sm-67 {\n    max-width: 66.66%; }\n  .layout-column > .flex-sm-33, .layout-column > .flex-sm-34 {\n    max-height: 33.33%; }\n  .layout-column > .flex-sm-66, .layout-column > .flex-sm-67 {\n    max-height: 66.66%; } }\n\n@media (min-width: 600px) {\n  .flex-order-gt-sm-0 {\n    order: 0; }\n  .flex-order-gt-sm-1 {\n    order: 1; }\n  .flex-order-gt-sm-2 {\n    order: 2; }\n  .flex-order-gt-sm-3 {\n    order: 3; }\n  .flex-order-gt-sm-4 {\n    order: 4; }\n  .flex-order-gt-sm-5 {\n    order: 5; }\n  .flex-order-gt-sm-6 {\n    order: 6; }\n  .flex-order-gt-sm-7 {\n    order: 7; }\n  .flex-order-gt-sm-8 {\n    order: 8; }\n  .flex-order-gt-sm-9 {\n    order: 9; }\n  .layout-align-gt-sm-center, .layout-align-gt-sm-center-center,\n  .layout-align-gt-sm-center-start,\n  .layout-align-gt-sm-center-end {\n    justify-content: center; }\n  .layout-align-gt-sm-end, .layout-align-gt-sm-end-center,\n  .layout-align-gt-sm-end-start,\n  .layout-align-gt-sm-end-end {\n    justify-content: flex-end; }\n  .layout-align-gt-sm-space-around, .layout-align-gt-sm-space-around-center,\n  .layout-align-gt-sm-space-around-start,\n  .layout-align-gt-sm-space-around-end {\n    justify-content: space-around; }\n  .layout-align-gt-sm-space-between, .layout-align-gt-sm-space-between-center,\n  .layout-align-gt-sm-space-between-start,\n  .layout-align-gt-sm-space-between-end {\n    justify-content: space-between; }\n  .layout-align-gt-sm-center-center,\n  .layout-align-gt-sm-start-center,\n  .layout-align-gt-sm-end-center,\n  .layout-align-gt-sm-space-between-center,\n  .layout-align-gt-sm-space-around-center {\n    align-items: center; }\n  .layout-align-gt-sm-center-start,\n  .layout-align-gt-sm-start-start,\n  .layout-align-gt-sm-end-start,\n  .layout-align-gt-sm-space-between-start,\n  .layout-align-gt-sm-space-around-start {\n    align-items: flex-start; }\n  .layout-align-gt-sm-center-end,\n  .layout-align-gt-sm-start-end,\n  .layout-align-gt-sm-end-end,\n  .layout-align-gt-sm-space-between-end,\n  .layout-align-gt-sm-space-around-end {\n    align-items: flex-end; }\n  .layout-gt-sm {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -moz-flex;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-gt-sm-column {\n    flex-direction: column; }\n  .layout-gt-sm-row {\n    flex-direction: row; }\n  .offset-gt-sm-5 {\n    margin-left: 5%; }\n  .offset-gt-sm-10 {\n    margin-left: 10%; }\n  .offset-gt-sm-15 {\n    margin-left: 15%; }\n  .offset-gt-sm-20 {\n    margin-left: 20%; }\n  .offset-gt-sm-25 {\n    margin-left: 25%; }\n  .offset-gt-sm-30 {\n    margin-left: 30%; }\n  .offset-gt-sm-35 {\n    margin-left: 35%; }\n  .offset-gt-sm-40 {\n    margin-left: 40%; }\n  .offset-gt-sm-45 {\n    margin-left: 45%; }\n  .offset-gt-sm-50 {\n    margin-left: 50%; }\n  .offset-gt-sm-55 {\n    margin-left: 55%; }\n  .offset-gt-sm-60 {\n    margin-left: 60%; }\n  .offset-gt-sm-65 {\n    margin-left: 65%; }\n  .offset-gt-sm-70 {\n    margin-left: 70%; }\n  .offset-gt-sm-75 {\n    margin-left: 75%; }\n  .offset-gt-sm-80 {\n    margin-left: 80%; }\n  .offset-gt-sm-85 {\n    margin-left: 85%; }\n  .offset-gt-sm-90 {\n    margin-left: 90%; }\n  .offset-gt-sm-95 {\n    margin-left: 95%; }\n  .offset-gt-sm-33, .offset-gt-sm-34 {\n    margin-left: 33.33%; }\n  .offset-gt-sm-66, .offset-gt-sm-67 {\n    margin-left: 66.66%; }\n  .flex-gt-sm {\n    box-sizing: border-box;\n    flex: 1; }\n  .flex-gt-sm-0 {\n    flex: 0 0 0%; }\n  .layout-row > .flex-gt-sm-0 {\n    max-width: 0%; }\n  .layout-column > .flex-gt-sm-0 {\n    max-height: 0%; }\n  .flex-gt-sm-5 {\n    flex: 0 0 5%; }\n  .layout-row > .flex-gt-sm-5 {\n    max-width: 5%; }\n  .layout-column > .flex-gt-sm-5 {\n    max-height: 5%; }\n  .flex-gt-sm-10 {\n    flex: 0 0 10%; }\n  .layout-row > .flex-gt-sm-10 {\n    max-width: 10%; }\n  .layout-column > .flex-gt-sm-10 {\n    max-height: 10%; }\n  .flex-gt-sm-15 {\n    flex: 0 0 15%; }\n  .layout-row > .flex-gt-sm-15 {\n    max-width: 15%; }\n  .layout-column > .flex-gt-sm-15 {\n    max-height: 15%; }\n  .flex-gt-sm-20 {\n    flex: 0 0 20%; }\n  .layout-row > .flex-gt-sm-20 {\n    max-width: 20%; }\n  .layout-column > .flex-gt-sm-20 {\n    max-height: 20%; }\n  .flex-gt-sm-25 {\n    flex: 0 0 25%; }\n  .layout-row > .flex-gt-sm-25 {\n    max-width: 25%; }\n  .layout-column > .flex-gt-sm-25 {\n    max-height: 25%; }\n  .flex-gt-sm-30 {\n    flex: 0 0 30%; }\n  .layout-row > .flex-gt-sm-30 {\n    max-width: 30%; }\n  .layout-column > .flex-gt-sm-30 {\n    max-height: 30%; }\n  .flex-gt-sm-35 {\n    flex: 0 0 35%; }\n  .layout-row > .flex-gt-sm-35 {\n    max-width: 35%; }\n  .layout-column > .flex-gt-sm-35 {\n    max-height: 35%; }\n  .flex-gt-sm-40 {\n    flex: 0 0 40%; }\n  .layout-row > .flex-gt-sm-40 {\n    max-width: 40%; }\n  .layout-column > .flex-gt-sm-40 {\n    max-height: 40%; }\n  .flex-gt-sm-45 {\n    flex: 0 0 45%; }\n  .layout-row > .flex-gt-sm-45 {\n    max-width: 45%; }\n  .layout-column > .flex-gt-sm-45 {\n    max-height: 45%; }\n  .flex-gt-sm-50 {\n    flex: 0 0 50%; }\n  .layout-row > .flex-gt-sm-50 {\n    max-width: 50%; }\n  .layout-column > .flex-gt-sm-50 {\n    max-height: 50%; }\n  .flex-gt-sm-55 {\n    flex: 0 0 55%; }\n  .layout-row > .flex-gt-sm-55 {\n    max-width: 55%; }\n  .layout-column > .flex-gt-sm-55 {\n    max-height: 55%; }\n  .flex-gt-sm-60 {\n    flex: 0 0 60%; }\n  .layout-row > .flex-gt-sm-60 {\n    max-width: 60%; }\n  .layout-column > .flex-gt-sm-60 {\n    max-height: 60%; }\n  .flex-gt-sm-65 {\n    flex: 0 0 65%; }\n  .layout-row > .flex-gt-sm-65 {\n    max-width: 65%; }\n  .layout-column > .flex-gt-sm-65 {\n    max-height: 65%; }\n  .flex-gt-sm-70 {\n    flex: 0 0 70%; }\n  .layout-row > .flex-gt-sm-70 {\n    max-width: 70%; }\n  .layout-column > .flex-gt-sm-70 {\n    max-height: 70%; }\n  .flex-gt-sm-75 {\n    flex: 0 0 75%; }\n  .layout-row > .flex-gt-sm-75 {\n    max-width: 75%; }\n  .layout-column > .flex-gt-sm-75 {\n    max-height: 75%; }\n  .flex-gt-sm-80 {\n    flex: 0 0 80%; }\n  .layout-row > .flex-gt-sm-80 {\n    max-width: 80%; }\n  .layout-column > .flex-gt-sm-80 {\n    max-height: 80%; }\n  .flex-gt-sm-85 {\n    flex: 0 0 85%; }\n  .layout-row > .flex-gt-sm-85 {\n    max-width: 85%; }\n  .layout-column > .flex-gt-sm-85 {\n    max-height: 85%; }\n  .flex-gt-sm-90 {\n    flex: 0 0 90%; }\n  .layout-row > .flex-gt-sm-90 {\n    max-width: 90%; }\n  .layout-column > .flex-gt-sm-90 {\n    max-height: 90%; }\n  .flex-gt-sm-95 {\n    flex: 0 0 95%; }\n  .layout-row > .flex-gt-sm-95 {\n    max-width: 95%; }\n  .layout-column > .flex-gt-sm-95 {\n    max-height: 95%; }\n  .flex-gt-sm-100 {\n    flex: 0 0 100%; }\n  .layout-row > .flex-gt-sm-100 {\n    max-width: 100%; }\n  .layout-column > .flex-gt-sm-100 {\n    max-height: 100%; }\n  .flex-gt-sm-33, .flex-gt-sm-34 {\n    flex: 0 0 33.33%; }\n  .flex-gt-sm-66, .flex-gt-sm-67 {\n    flex: 0 0 66.66%; }\n  .layout-row > .flex-gt-sm-33, .layout-row > .flex-gt-sm-34 {\n    max-width: 33.33%; }\n  .layout-row > .flex-gt-sm-66, .layout-row > .flex-gt-sm-67 {\n    max-width: 66.66%; }\n  .layout-column > .flex-gt-sm-33, .layout-column > .flex-gt-sm-34 {\n    max-height: 33.33%; }\n  .layout-column > .flex-gt-sm-66, .layout-column > .flex-gt-sm-67 {\n    max-height: 66.66%; } }\n\n@media (min-width: 600px) and (max-width: 959px) {\n  .hide:not(.show-gt-sm):not(.show-md):not(.show), .hide-gt-sm:not(.show-gt-sm):not(.show-md):not(.show) {\n    display: none; }\n  .hide-md:not(.show-md):not(.show) {\n    display: none; }\n  .flex-order-md-0 {\n    order: 0; }\n  .flex-order-md-1 {\n    order: 1; }\n  .flex-order-md-2 {\n    order: 2; }\n  .flex-order-md-3 {\n    order: 3; }\n  .flex-order-md-4 {\n    order: 4; }\n  .flex-order-md-5 {\n    order: 5; }\n  .flex-order-md-6 {\n    order: 6; }\n  .flex-order-md-7 {\n    order: 7; }\n  .flex-order-md-8 {\n    order: 8; }\n  .flex-order-md-9 {\n    order: 9; }\n  .layout-align-md-center, .layout-align-md-center-center,\n  .layout-align-md-center-start,\n  .layout-align-md-center-end {\n    justify-content: center; }\n  .layout-align-md-end, .layout-align-md-end-center,\n  .layout-align-md-end-start,\n  .layout-align-md-end-end {\n    justify-content: flex-end; }\n  .layout-align-md-space-around, .layout-align-md-space-around-center,\n  .layout-align-md-space-around-start,\n  .layout-align-md-space-around-end {\n    justify-content: space-around; }\n  .layout-align-md-space-between, .layout-align-md-space-between-center,\n  .layout-align-md-space-between-start,\n  .layout-align-md-space-between-end {\n    justify-content: space-between; }\n  .layout-align-md-center-center,\n  .layout-align-md-start-center,\n  .layout-align-md-end-center,\n  .layout-align-md-space-between-center,\n  .layout-align-md-space-around-center {\n    align-items: center; }\n  .layout-align-md-center-start,\n  .layout-align-md-start-start,\n  .layout-align-md-end-start,\n  .layout-align-md-space-between-start,\n  .layout-align-md-space-around-start {\n    align-items: flex-start; }\n  .layout-align-md-center-end,\n  .layout-align-md-start-end,\n  .layout-align-md-end-end,\n  .layout-align-md-space-between-end,\n  .layout-align-md-space-around-end {\n    align-items: flex-end; }\n  .layout-md {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -moz-flex;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-md-column {\n    flex-direction: column; }\n  .layout-md-row {\n    flex-direction: row; }\n  .offset-md-5 {\n    margin-left: 5%; }\n  .offset-md-10 {\n    margin-left: 10%; }\n  .offset-md-15 {\n    margin-left: 15%; }\n  .offset-md-20 {\n    margin-left: 20%; }\n  .offset-md-25 {\n    margin-left: 25%; }\n  .offset-md-30 {\n    margin-left: 30%; }\n  .offset-md-35 {\n    margin-left: 35%; }\n  .offset-md-40 {\n    margin-left: 40%; }\n  .offset-md-45 {\n    margin-left: 45%; }\n  .offset-md-50 {\n    margin-left: 50%; }\n  .offset-md-55 {\n    margin-left: 55%; }\n  .offset-md-60 {\n    margin-left: 60%; }\n  .offset-md-65 {\n    margin-left: 65%; }\n  .offset-md-70 {\n    margin-left: 70%; }\n  .offset-md-75 {\n    margin-left: 75%; }\n  .offset-md-80 {\n    margin-left: 80%; }\n  .offset-md-85 {\n    margin-left: 85%; }\n  .offset-md-90 {\n    margin-left: 90%; }\n  .offset-md-95 {\n    margin-left: 95%; }\n  .offset-md-33, .offset-md-34 {\n    margin-left: 33.33%; }\n  .offset-md-66, .offset-md-67 {\n    margin-left: 66.66%; }\n  .flex-md {\n    box-sizing: border-box;\n    flex: 1; }\n  .flex-md-0 {\n    flex: 0 0 0%; }\n  .layout-row > .flex-md-0 {\n    max-width: 0%; }\n  .layout-column > .flex-md-0 {\n    max-height: 0%; }\n  .flex-md-5 {\n    flex: 0 0 5%; }\n  .layout-row > .flex-md-5 {\n    max-width: 5%; }\n  .layout-column > .flex-md-5 {\n    max-height: 5%; }\n  .flex-md-10 {\n    flex: 0 0 10%; }\n  .layout-row > .flex-md-10 {\n    max-width: 10%; }\n  .layout-column > .flex-md-10 {\n    max-height: 10%; }\n  .flex-md-15 {\n    flex: 0 0 15%; }\n  .layout-row > .flex-md-15 {\n    max-width: 15%; }\n  .layout-column > .flex-md-15 {\n    max-height: 15%; }\n  .flex-md-20 {\n    flex: 0 0 20%; }\n  .layout-row > .flex-md-20 {\n    max-width: 20%; }\n  .layout-column > .flex-md-20 {\n    max-height: 20%; }\n  .flex-md-25 {\n    flex: 0 0 25%; }\n  .layout-row > .flex-md-25 {\n    max-width: 25%; }\n  .layout-column > .flex-md-25 {\n    max-height: 25%; }\n  .flex-md-30 {\n    flex: 0 0 30%; }\n  .layout-row > .flex-md-30 {\n    max-width: 30%; }\n  .layout-column > .flex-md-30 {\n    max-height: 30%; }\n  .flex-md-35 {\n    flex: 0 0 35%; }\n  .layout-row > .flex-md-35 {\n    max-width: 35%; }\n  .layout-column > .flex-md-35 {\n    max-height: 35%; }\n  .flex-md-40 {\n    flex: 0 0 40%; }\n  .layout-row > .flex-md-40 {\n    max-width: 40%; }\n  .layout-column > .flex-md-40 {\n    max-height: 40%; }\n  .flex-md-45 {\n    flex: 0 0 45%; }\n  .layout-row > .flex-md-45 {\n    max-width: 45%; }\n  .layout-column > .flex-md-45 {\n    max-height: 45%; }\n  .flex-md-50 {\n    flex: 0 0 50%; }\n  .layout-row > .flex-md-50 {\n    max-width: 50%; }\n  .layout-column > .flex-md-50 {\n    max-height: 50%; }\n  .flex-md-55 {\n    flex: 0 0 55%; }\n  .layout-row > .flex-md-55 {\n    max-width: 55%; }\n  .layout-column > .flex-md-55 {\n    max-height: 55%; }\n  .flex-md-60 {\n    flex: 0 0 60%; }\n  .layout-row > .flex-md-60 {\n    max-width: 60%; }\n  .layout-column > .flex-md-60 {\n    max-height: 60%; }\n  .flex-md-65 {\n    flex: 0 0 65%; }\n  .layout-row > .flex-md-65 {\n    max-width: 65%; }\n  .layout-column > .flex-md-65 {\n    max-height: 65%; }\n  .flex-md-70 {\n    flex: 0 0 70%; }\n  .layout-row > .flex-md-70 {\n    max-width: 70%; }\n  .layout-column > .flex-md-70 {\n    max-height: 70%; }\n  .flex-md-75 {\n    flex: 0 0 75%; }\n  .layout-row > .flex-md-75 {\n    max-width: 75%; }\n  .layout-column > .flex-md-75 {\n    max-height: 75%; }\n  .flex-md-80 {\n    flex: 0 0 80%; }\n  .layout-row > .flex-md-80 {\n    max-width: 80%; }\n  .layout-column > .flex-md-80 {\n    max-height: 80%; }\n  .flex-md-85 {\n    flex: 0 0 85%; }\n  .layout-row > .flex-md-85 {\n    max-width: 85%; }\n  .layout-column > .flex-md-85 {\n    max-height: 85%; }\n  .flex-md-90 {\n    flex: 0 0 90%; }\n  .layout-row > .flex-md-90 {\n    max-width: 90%; }\n  .layout-column > .flex-md-90 {\n    max-height: 90%; }\n  .flex-md-95 {\n    flex: 0 0 95%; }\n  .layout-row > .flex-md-95 {\n    max-width: 95%; }\n  .layout-column > .flex-md-95 {\n    max-height: 95%; }\n  .flex-md-100 {\n    flex: 0 0 100%; }\n  .layout-row > .flex-md-100 {\n    max-width: 100%; }\n  .layout-column > .flex-md-100 {\n    max-height: 100%; }\n  .flex-md-33, .flex-md-34 {\n    flex: 0 0 33.33%; }\n  .flex-md-66, .flex-md-67 {\n    flex: 0 0 66.66%; }\n  .layout-row > .flex-md-33, .layout-row > .flex-md-34 {\n    max-width: 33.33%; }\n  .layout-row > .flex-md-66, .layout-row > .flex-md-67 {\n    max-width: 66.66%; }\n  .layout-column > .flex-md-33, .layout-column > .flex-md-34 {\n    max-height: 33.33%; }\n  .layout-column > .flex-md-66, .layout-column > .flex-md-67 {\n    max-height: 66.66%; } }\n\n@media (min-width: 960px) {\n  .flex-order-gt-md-0 {\n    order: 0; }\n  .flex-order-gt-md-1 {\n    order: 1; }\n  .flex-order-gt-md-2 {\n    order: 2; }\n  .flex-order-gt-md-3 {\n    order: 3; }\n  .flex-order-gt-md-4 {\n    order: 4; }\n  .flex-order-gt-md-5 {\n    order: 5; }\n  .flex-order-gt-md-6 {\n    order: 6; }\n  .flex-order-gt-md-7 {\n    order: 7; }\n  .flex-order-gt-md-8 {\n    order: 8; }\n  .flex-order-gt-md-9 {\n    order: 9; }\n  .layout-align-gt-md-center, .layout-align-gt-md-center-center,\n  .layout-align-gt-md-center-start,\n  .layout-align-gt-md-center-end {\n    justify-content: center; }\n  .layout-align-gt-md-end, .layout-align-gt-md-end-center,\n  .layout-align-gt-md-end-start,\n  .layout-align-gt-md-end-end {\n    justify-content: flex-end; }\n  .layout-align-gt-md-space-around, .layout-align-gt-md-space-around-center,\n  .layout-align-gt-md-space-around-start,\n  .layout-align-gt-md-space-around-end {\n    justify-content: space-around; }\n  .layout-align-gt-md-space-between, .layout-align-gt-md-space-between-center,\n  .layout-align-gt-md-space-between-start,\n  .layout-align-gt-md-space-between-end {\n    justify-content: space-between; }\n  .layout-align-gt-md-center-center,\n  .layout-align-gt-md-start-center,\n  .layout-align-gt-md-end-center,\n  .layout-align-gt-md-space-between-center,\n  .layout-align-gt-md-space-around-center {\n    align-items: center; }\n  .layout-align-gt-md-center-start,\n  .layout-align-gt-md-start-start,\n  .layout-align-gt-md-end-start,\n  .layout-align-gt-md-space-between-start,\n  .layout-align-gt-md-space-around-start {\n    align-items: flex-start; }\n  .layout-align-gt-md-center-end,\n  .layout-align-gt-md-start-end,\n  .layout-align-gt-md-end-end,\n  .layout-align-gt-md-space-between-end,\n  .layout-align-gt-md-space-around-end {\n    align-items: flex-end; }\n  .layout-gt-md {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -moz-flex;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-gt-md-column {\n    flex-direction: column; }\n  .layout-gt-md-row {\n    flex-direction: row; }\n  .offset-gt-md-5 {\n    margin-left: 5%; }\n  .offset-gt-md-10 {\n    margin-left: 10%; }\n  .offset-gt-md-15 {\n    margin-left: 15%; }\n  .offset-gt-md-20 {\n    margin-left: 20%; }\n  .offset-gt-md-25 {\n    margin-left: 25%; }\n  .offset-gt-md-30 {\n    margin-left: 30%; }\n  .offset-gt-md-35 {\n    margin-left: 35%; }\n  .offset-gt-md-40 {\n    margin-left: 40%; }\n  .offset-gt-md-45 {\n    margin-left: 45%; }\n  .offset-gt-md-50 {\n    margin-left: 50%; }\n  .offset-gt-md-55 {\n    margin-left: 55%; }\n  .offset-gt-md-60 {\n    margin-left: 60%; }\n  .offset-gt-md-65 {\n    margin-left: 65%; }\n  .offset-gt-md-70 {\n    margin-left: 70%; }\n  .offset-gt-md-75 {\n    margin-left: 75%; }\n  .offset-gt-md-80 {\n    margin-left: 80%; }\n  .offset-gt-md-85 {\n    margin-left: 85%; }\n  .offset-gt-md-90 {\n    margin-left: 90%; }\n  .offset-gt-md-95 {\n    margin-left: 95%; }\n  .offset-gt-md-33, .offset-gt-md-34 {\n    margin-left: 33.33%; }\n  .offset-gt-md-66, .offset-gt-md-67 {\n    margin-left: 66.66%; }\n  .flex-gt-md {\n    box-sizing: border-box;\n    flex: 1; }\n  .flex-gt-md-0 {\n    flex: 0 0 0%; }\n  .layout-row > .flex-gt-md-0 {\n    max-width: 0%; }\n  .layout-column > .flex-gt-md-0 {\n    max-height: 0%; }\n  .flex-gt-md-5 {\n    flex: 0 0 5%; }\n  .layout-row > .flex-gt-md-5 {\n    max-width: 5%; }\n  .layout-column > .flex-gt-md-5 {\n    max-height: 5%; }\n  .flex-gt-md-10 {\n    flex: 0 0 10%; }\n  .layout-row > .flex-gt-md-10 {\n    max-width: 10%; }\n  .layout-column > .flex-gt-md-10 {\n    max-height: 10%; }\n  .flex-gt-md-15 {\n    flex: 0 0 15%; }\n  .layout-row > .flex-gt-md-15 {\n    max-width: 15%; }\n  .layout-column > .flex-gt-md-15 {\n    max-height: 15%; }\n  .flex-gt-md-20 {\n    flex: 0 0 20%; }\n  .layout-row > .flex-gt-md-20 {\n    max-width: 20%; }\n  .layout-column > .flex-gt-md-20 {\n    max-height: 20%; }\n  .flex-gt-md-25 {\n    flex: 0 0 25%; }\n  .layout-row > .flex-gt-md-25 {\n    max-width: 25%; }\n  .layout-column > .flex-gt-md-25 {\n    max-height: 25%; }\n  .flex-gt-md-30 {\n    flex: 0 0 30%; }\n  .layout-row > .flex-gt-md-30 {\n    max-width: 30%; }\n  .layout-column > .flex-gt-md-30 {\n    max-height: 30%; }\n  .flex-gt-md-35 {\n    flex: 0 0 35%; }\n  .layout-row > .flex-gt-md-35 {\n    max-width: 35%; }\n  .layout-column > .flex-gt-md-35 {\n    max-height: 35%; }\n  .flex-gt-md-40 {\n    flex: 0 0 40%; }\n  .layout-row > .flex-gt-md-40 {\n    max-width: 40%; }\n  .layout-column > .flex-gt-md-40 {\n    max-height: 40%; }\n  .flex-gt-md-45 {\n    flex: 0 0 45%; }\n  .layout-row > .flex-gt-md-45 {\n    max-width: 45%; }\n  .layout-column > .flex-gt-md-45 {\n    max-height: 45%; }\n  .flex-gt-md-50 {\n    flex: 0 0 50%; }\n  .layout-row > .flex-gt-md-50 {\n    max-width: 50%; }\n  .layout-column > .flex-gt-md-50 {\n    max-height: 50%; }\n  .flex-gt-md-55 {\n    flex: 0 0 55%; }\n  .layout-row > .flex-gt-md-55 {\n    max-width: 55%; }\n  .layout-column > .flex-gt-md-55 {\n    max-height: 55%; }\n  .flex-gt-md-60 {\n    flex: 0 0 60%; }\n  .layout-row > .flex-gt-md-60 {\n    max-width: 60%; }\n  .layout-column > .flex-gt-md-60 {\n    max-height: 60%; }\n  .flex-gt-md-65 {\n    flex: 0 0 65%; }\n  .layout-row > .flex-gt-md-65 {\n    max-width: 65%; }\n  .layout-column > .flex-gt-md-65 {\n    max-height: 65%; }\n  .flex-gt-md-70 {\n    flex: 0 0 70%; }\n  .layout-row > .flex-gt-md-70 {\n    max-width: 70%; }\n  .layout-column > .flex-gt-md-70 {\n    max-height: 70%; }\n  .flex-gt-md-75 {\n    flex: 0 0 75%; }\n  .layout-row > .flex-gt-md-75 {\n    max-width: 75%; }\n  .layout-column > .flex-gt-md-75 {\n    max-height: 75%; }\n  .flex-gt-md-80 {\n    flex: 0 0 80%; }\n  .layout-row > .flex-gt-md-80 {\n    max-width: 80%; }\n  .layout-column > .flex-gt-md-80 {\n    max-height: 80%; }\n  .flex-gt-md-85 {\n    flex: 0 0 85%; }\n  .layout-row > .flex-gt-md-85 {\n    max-width: 85%; }\n  .layout-column > .flex-gt-md-85 {\n    max-height: 85%; }\n  .flex-gt-md-90 {\n    flex: 0 0 90%; }\n  .layout-row > .flex-gt-md-90 {\n    max-width: 90%; }\n  .layout-column > .flex-gt-md-90 {\n    max-height: 90%; }\n  .flex-gt-md-95 {\n    flex: 0 0 95%; }\n  .layout-row > .flex-gt-md-95 {\n    max-width: 95%; }\n  .layout-column > .flex-gt-md-95 {\n    max-height: 95%; }\n  .flex-gt-md-100 {\n    flex: 0 0 100%; }\n  .layout-row > .flex-gt-md-100 {\n    max-width: 100%; }\n  .layout-column > .flex-gt-md-100 {\n    max-height: 100%; }\n  .flex-gt-md-33, .flex-gt-md-34 {\n    flex: 0 0 33.33%; }\n  .flex-gt-md-66, .flex-gt-md-67 {\n    flex: 0 0 66.66%; }\n  .layout-row > .flex-gt-md-33, .layout-row > .flex-gt-md-34 {\n    max-width: 33.33%; }\n  .layout-row > .flex-gt-md-66, .layout-row > .flex-gt-md-67 {\n    max-width: 66.66%; }\n  .layout-column > .flex-gt-md-33, .layout-column > .flex-gt-md-34 {\n    max-height: 33.33%; }\n  .layout-column > .flex-gt-md-66, .layout-column > .flex-gt-md-67 {\n    max-height: 66.66%; } }\n\n@media (min-width: 960px) and (max-width: 1199px) {\n  .hide:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show), .hide-gt-sm:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show), .hide-gt-md:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show) {\n    display: none; }\n  .hide-lg:not(.show-lg):not(.show) {\n    display: none; }\n  .flex-order-lg-0 {\n    order: 0; }\n  .flex-order-lg-1 {\n    order: 1; }\n  .flex-order-lg-2 {\n    order: 2; }\n  .flex-order-lg-3 {\n    order: 3; }\n  .flex-order-lg-4 {\n    order: 4; }\n  .flex-order-lg-5 {\n    order: 5; }\n  .flex-order-lg-6 {\n    order: 6; }\n  .flex-order-lg-7 {\n    order: 7; }\n  .flex-order-lg-8 {\n    order: 8; }\n  .flex-order-lg-9 {\n    order: 9; }\n  .layout-align-lg-center, .layout-align-lg-center-center,\n  .layout-align-lg-center-start,\n  .layout-align-lg-center-end {\n    justify-content: center; }\n  .layout-align-lg-end, .layout-align-lg-end-center,\n  .layout-align-lg-end-start,\n  .layout-align-lg-end-end {\n    justify-content: flex-end; }\n  .layout-align-lg-space-around, .layout-align-lg-space-around-center,\n  .layout-align-lg-space-around-start,\n  .layout-align-lg-space-around-end {\n    justify-content: space-around; }\n  .layout-align-lg-space-between, .layout-align-lg-space-between-center,\n  .layout-align-lg-space-between-start,\n  .layout-align-lg-space-between-end {\n    justify-content: space-between; }\n  .layout-align-lg-center-center,\n  .layout-align-lg-start-center,\n  .layout-align-lg-end-center,\n  .layout-align-lg-space-between-center,\n  .layout-align-lg-space-around-center {\n    align-items: center; }\n  .layout-align-lg-center-start,\n  .layout-align-lg-start-start,\n  .layout-align-lg-end-start,\n  .layout-align-lg-space-between-start,\n  .layout-align-lg-space-around-start {\n    align-items: flex-start; }\n  .layout-align-lg-center-end,\n  .layout-align-lg-start-end,\n  .layout-align-lg-end-end,\n  .layout-align-lg-space-between-end,\n  .layout-align-lg-space-around-end {\n    align-items: flex-end; }\n  .layout-lg {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -moz-flex;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-lg-column {\n    flex-direction: column; }\n  .layout-lg-row {\n    flex-direction: row; }\n  .offset-lg-5 {\n    margin-left: 5%; }\n  .offset-lg-10 {\n    margin-left: 10%; }\n  .offset-lg-15 {\n    margin-left: 15%; }\n  .offset-lg-20 {\n    margin-left: 20%; }\n  .offset-lg-25 {\n    margin-left: 25%; }\n  .offset-lg-30 {\n    margin-left: 30%; }\n  .offset-lg-35 {\n    margin-left: 35%; }\n  .offset-lg-40 {\n    margin-left: 40%; }\n  .offset-lg-45 {\n    margin-left: 45%; }\n  .offset-lg-50 {\n    margin-left: 50%; }\n  .offset-lg-55 {\n    margin-left: 55%; }\n  .offset-lg-60 {\n    margin-left: 60%; }\n  .offset-lg-65 {\n    margin-left: 65%; }\n  .offset-lg-70 {\n    margin-left: 70%; }\n  .offset-lg-75 {\n    margin-left: 75%; }\n  .offset-lg-80 {\n    margin-left: 80%; }\n  .offset-lg-85 {\n    margin-left: 85%; }\n  .offset-lg-90 {\n    margin-left: 90%; }\n  .offset-lg-95 {\n    margin-left: 95%; }\n  .offset-lg-33, .offset-lg-34 {\n    margin-left: 33.33%; }\n  .offset-lg-66, .offset-lg-67 {\n    margin-left: 66.66%; }\n  .flex-lg {\n    box-sizing: border-box;\n    flex: 1; }\n  .flex-lg-0 {\n    flex: 0 0 0%; }\n  .layout-row > .flex-lg-0 {\n    max-width: 0%; }\n  .layout-column > .flex-lg-0 {\n    max-height: 0%; }\n  .flex-lg-5 {\n    flex: 0 0 5%; }\n  .layout-row > .flex-lg-5 {\n    max-width: 5%; }\n  .layout-column > .flex-lg-5 {\n    max-height: 5%; }\n  .flex-lg-10 {\n    flex: 0 0 10%; }\n  .layout-row > .flex-lg-10 {\n    max-width: 10%; }\n  .layout-column > .flex-lg-10 {\n    max-height: 10%; }\n  .flex-lg-15 {\n    flex: 0 0 15%; }\n  .layout-row > .flex-lg-15 {\n    max-width: 15%; }\n  .layout-column > .flex-lg-15 {\n    max-height: 15%; }\n  .flex-lg-20 {\n    flex: 0 0 20%; }\n  .layout-row > .flex-lg-20 {\n    max-width: 20%; }\n  .layout-column > .flex-lg-20 {\n    max-height: 20%; }\n  .flex-lg-25 {\n    flex: 0 0 25%; }\n  .layout-row > .flex-lg-25 {\n    max-width: 25%; }\n  .layout-column > .flex-lg-25 {\n    max-height: 25%; }\n  .flex-lg-30 {\n    flex: 0 0 30%; }\n  .layout-row > .flex-lg-30 {\n    max-width: 30%; }\n  .layout-column > .flex-lg-30 {\n    max-height: 30%; }\n  .flex-lg-35 {\n    flex: 0 0 35%; }\n  .layout-row > .flex-lg-35 {\n    max-width: 35%; }\n  .layout-column > .flex-lg-35 {\n    max-height: 35%; }\n  .flex-lg-40 {\n    flex: 0 0 40%; }\n  .layout-row > .flex-lg-40 {\n    max-width: 40%; }\n  .layout-column > .flex-lg-40 {\n    max-height: 40%; }\n  .flex-lg-45 {\n    flex: 0 0 45%; }\n  .layout-row > .flex-lg-45 {\n    max-width: 45%; }\n  .layout-column > .flex-lg-45 {\n    max-height: 45%; }\n  .flex-lg-50 {\n    flex: 0 0 50%; }\n  .layout-row > .flex-lg-50 {\n    max-width: 50%; }\n  .layout-column > .flex-lg-50 {\n    max-height: 50%; }\n  .flex-lg-55 {\n    flex: 0 0 55%; }\n  .layout-row > .flex-lg-55 {\n    max-width: 55%; }\n  .layout-column > .flex-lg-55 {\n    max-height: 55%; }\n  .flex-lg-60 {\n    flex: 0 0 60%; }\n  .layout-row > .flex-lg-60 {\n    max-width: 60%; }\n  .layout-column > .flex-lg-60 {\n    max-height: 60%; }\n  .flex-lg-65 {\n    flex: 0 0 65%; }\n  .layout-row > .flex-lg-65 {\n    max-width: 65%; }\n  .layout-column > .flex-lg-65 {\n    max-height: 65%; }\n  .flex-lg-70 {\n    flex: 0 0 70%; }\n  .layout-row > .flex-lg-70 {\n    max-width: 70%; }\n  .layout-column > .flex-lg-70 {\n    max-height: 70%; }\n  .flex-lg-75 {\n    flex: 0 0 75%; }\n  .layout-row > .flex-lg-75 {\n    max-width: 75%; }\n  .layout-column > .flex-lg-75 {\n    max-height: 75%; }\n  .flex-lg-80 {\n    flex: 0 0 80%; }\n  .layout-row > .flex-lg-80 {\n    max-width: 80%; }\n  .layout-column > .flex-lg-80 {\n    max-height: 80%; }\n  .flex-lg-85 {\n    flex: 0 0 85%; }\n  .layout-row > .flex-lg-85 {\n    max-width: 85%; }\n  .layout-column > .flex-lg-85 {\n    max-height: 85%; }\n  .flex-lg-90 {\n    flex: 0 0 90%; }\n  .layout-row > .flex-lg-90 {\n    max-width: 90%; }\n  .layout-column > .flex-lg-90 {\n    max-height: 90%; }\n  .flex-lg-95 {\n    flex: 0 0 95%; }\n  .layout-row > .flex-lg-95 {\n    max-width: 95%; }\n  .layout-column > .flex-lg-95 {\n    max-height: 95%; }\n  .flex-lg-100 {\n    flex: 0 0 100%; }\n  .layout-row > .flex-lg-100 {\n    max-width: 100%; }\n  .layout-column > .flex-lg-100 {\n    max-height: 100%; }\n  .flex-lg-33, .flex-lg-34 {\n    flex: 0 0 33.33%; }\n  .flex-lg-66, .flex-lg-67 {\n    flex: 0 0 66.66%; }\n  .layout-row > .flex-lg-33, .layout-row > .flex-lg-34 {\n    max-width: 33.33%; }\n  .layout-row > .flex-lg-66, .layout-row > .flex-lg-67 {\n    max-width: 66.66%; }\n  .layout-column > .flex-lg-33, .layout-column > .flex-lg-34 {\n    max-height: 33.33%; }\n  .layout-column > .flex-lg-66, .layout-column > .flex-lg-67 {\n    max-height: 66.66%; } }\n\n@media (min-width: 1200px) {\n  .hide-gt-sm:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide-gt-md:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide-gt-lg:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show) {\n    display: none; }\n  .flex-order-gt-lg-0 {\n    order: 0; }\n  .flex-order-gt-lg-1 {\n    order: 1; }\n  .flex-order-gt-lg-2 {\n    order: 2; }\n  .flex-order-gt-lg-3 {\n    order: 3; }\n  .flex-order-gt-lg-4 {\n    order: 4; }\n  .flex-order-gt-lg-5 {\n    order: 5; }\n  .flex-order-gt-lg-6 {\n    order: 6; }\n  .flex-order-gt-lg-7 {\n    order: 7; }\n  .flex-order-gt-lg-8 {\n    order: 8; }\n  .flex-order-gt-lg-9 {\n    order: 9; }\n  .layout-align-gt-lg-center, .layout-align-gt-lg-center-center,\n  .layout-align-gt-lg-center-start,\n  .layout-align-gt-lg-center-end {\n    justify-content: center; }\n  .layout-align-gt-lg-end, .layout-align-gt-lg-end-center,\n  .layout-align-gt-lg-end-start,\n  .layout-align-gt-lg-end-end {\n    justify-content: flex-end; }\n  .layout-align-gt-lg-space-around, .layout-align-gt-lg-space-around-center,\n  .layout-align-gt-lg-space-around-start,\n  .layout-align-gt-lg-space-around-end {\n    justify-content: space-around; }\n  .layout-align-gt-lg-space-between, .layout-align-gt-lg-space-between-center,\n  .layout-align-gt-lg-space-between-start,\n  .layout-align-gt-lg-space-between-end {\n    justify-content: space-between; }\n  .layout-align-gt-lg-center-center,\n  .layout-align-gt-lg-start-center,\n  .layout-align-gt-lg-end-center,\n  .layout-align-gt-lg-space-between-center,\n  .layout-align-gt-lg-space-around-center {\n    align-items: center; }\n  .layout-align-gt-lg-center-start,\n  .layout-align-gt-lg-start-start,\n  .layout-align-gt-lg-end-start,\n  .layout-align-gt-lg-space-between-start,\n  .layout-align-gt-lg-space-around-start {\n    align-items: flex-start; }\n  .layout-align-gt-lg-center-end,\n  .layout-align-gt-lg-start-end,\n  .layout-align-gt-lg-end-end,\n  .layout-align-gt-lg-space-between-end,\n  .layout-align-gt-lg-space-around-end {\n    align-items: flex-end; }\n  .layout-gt-lg {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -moz-flex;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-gt-lg-column {\n    flex-direction: column; }\n  .layout-gt-lg-row {\n    flex-direction: row; }\n  .offset-gt-lg-5 {\n    margin-left: 5%; }\n  .offset-gt-lg-10 {\n    margin-left: 10%; }\n  .offset-gt-lg-15 {\n    margin-left: 15%; }\n  .offset-gt-lg-20 {\n    margin-left: 20%; }\n  .offset-gt-lg-25 {\n    margin-left: 25%; }\n  .offset-gt-lg-30 {\n    margin-left: 30%; }\n  .offset-gt-lg-35 {\n    margin-left: 35%; }\n  .offset-gt-lg-40 {\n    margin-left: 40%; }\n  .offset-gt-lg-45 {\n    margin-left: 45%; }\n  .offset-gt-lg-50 {\n    margin-left: 50%; }\n  .offset-gt-lg-55 {\n    margin-left: 55%; }\n  .offset-gt-lg-60 {\n    margin-left: 60%; }\n  .offset-gt-lg-65 {\n    margin-left: 65%; }\n  .offset-gt-lg-70 {\n    margin-left: 70%; }\n  .offset-gt-lg-75 {\n    margin-left: 75%; }\n  .offset-gt-lg-80 {\n    margin-left: 80%; }\n  .offset-gt-lg-85 {\n    margin-left: 85%; }\n  .offset-gt-lg-90 {\n    margin-left: 90%; }\n  .offset-gt-lg-95 {\n    margin-left: 95%; }\n  .offset-gt-lg-33, .offset-gt-lg-34 {\n    margin-left: 33.33%; }\n  .offset-gt-lg-66, .offset-gt-lg-67 {\n    margin-left: 66.66%; }\n  .flex-gt-lg {\n    box-sizing: border-box;\n    flex: 1; }\n  .flex-gt-lg-0 {\n    flex: 0 0 0%; }\n  .layout-row > .flex-gt-lg-0 {\n    max-width: 0%; }\n  .layout-column > .flex-gt-lg-0 {\n    max-height: 0%; }\n  .flex-gt-lg-5 {\n    flex: 0 0 5%; }\n  .layout-row > .flex-gt-lg-5 {\n    max-width: 5%; }\n  .layout-column > .flex-gt-lg-5 {\n    max-height: 5%; }\n  .flex-gt-lg-10 {\n    flex: 0 0 10%; }\n  .layout-row > .flex-gt-lg-10 {\n    max-width: 10%; }\n  .layout-column > .flex-gt-lg-10 {\n    max-height: 10%; }\n  .flex-gt-lg-15 {\n    flex: 0 0 15%; }\n  .layout-row > .flex-gt-lg-15 {\n    max-width: 15%; }\n  .layout-column > .flex-gt-lg-15 {\n    max-height: 15%; }\n  .flex-gt-lg-20 {\n    flex: 0 0 20%; }\n  .layout-row > .flex-gt-lg-20 {\n    max-width: 20%; }\n  .layout-column > .flex-gt-lg-20 {\n    max-height: 20%; }\n  .flex-gt-lg-25 {\n    flex: 0 0 25%; }\n  .layout-row > .flex-gt-lg-25 {\n    max-width: 25%; }\n  .layout-column > .flex-gt-lg-25 {\n    max-height: 25%; }\n  .flex-gt-lg-30 {\n    flex: 0 0 30%; }\n  .layout-row > .flex-gt-lg-30 {\n    max-width: 30%; }\n  .layout-column > .flex-gt-lg-30 {\n    max-height: 30%; }\n  .flex-gt-lg-35 {\n    flex: 0 0 35%; }\n  .layout-row > .flex-gt-lg-35 {\n    max-width: 35%; }\n  .layout-column > .flex-gt-lg-35 {\n    max-height: 35%; }\n  .flex-gt-lg-40 {\n    flex: 0 0 40%; }\n  .layout-row > .flex-gt-lg-40 {\n    max-width: 40%; }\n  .layout-column > .flex-gt-lg-40 {\n    max-height: 40%; }\n  .flex-gt-lg-45 {\n    flex: 0 0 45%; }\n  .layout-row > .flex-gt-lg-45 {\n    max-width: 45%; }\n  .layout-column > .flex-gt-lg-45 {\n    max-height: 45%; }\n  .flex-gt-lg-50 {\n    flex: 0 0 50%; }\n  .layout-row > .flex-gt-lg-50 {\n    max-width: 50%; }\n  .layout-column > .flex-gt-lg-50 {\n    max-height: 50%; }\n  .flex-gt-lg-55 {\n    flex: 0 0 55%; }\n  .layout-row > .flex-gt-lg-55 {\n    max-width: 55%; }\n  .layout-column > .flex-gt-lg-55 {\n    max-height: 55%; }\n  .flex-gt-lg-60 {\n    flex: 0 0 60%; }\n  .layout-row > .flex-gt-lg-60 {\n    max-width: 60%; }\n  .layout-column > .flex-gt-lg-60 {\n    max-height: 60%; }\n  .flex-gt-lg-65 {\n    flex: 0 0 65%; }\n  .layout-row > .flex-gt-lg-65 {\n    max-width: 65%; }\n  .layout-column > .flex-gt-lg-65 {\n    max-height: 65%; }\n  .flex-gt-lg-70 {\n    flex: 0 0 70%; }\n  .layout-row > .flex-gt-lg-70 {\n    max-width: 70%; }\n  .layout-column > .flex-gt-lg-70 {\n    max-height: 70%; }\n  .flex-gt-lg-75 {\n    flex: 0 0 75%; }\n  .layout-row > .flex-gt-lg-75 {\n    max-width: 75%; }\n  .layout-column > .flex-gt-lg-75 {\n    max-height: 75%; }\n  .flex-gt-lg-80 {\n    flex: 0 0 80%; }\n  .layout-row > .flex-gt-lg-80 {\n    max-width: 80%; }\n  .layout-column > .flex-gt-lg-80 {\n    max-height: 80%; }\n  .flex-gt-lg-85 {\n    flex: 0 0 85%; }\n  .layout-row > .flex-gt-lg-85 {\n    max-width: 85%; }\n  .layout-column > .flex-gt-lg-85 {\n    max-height: 85%; }\n  .flex-gt-lg-90 {\n    flex: 0 0 90%; }\n  .layout-row > .flex-gt-lg-90 {\n    max-width: 90%; }\n  .layout-column > .flex-gt-lg-90 {\n    max-height: 90%; }\n  .flex-gt-lg-95 {\n    flex: 0 0 95%; }\n  .layout-row > .flex-gt-lg-95 {\n    max-width: 95%; }\n  .layout-column > .flex-gt-lg-95 {\n    max-height: 95%; }\n  .flex-gt-lg-100 {\n    flex: 0 0 100%; }\n  .layout-row > .flex-gt-lg-100 {\n    max-width: 100%; }\n  .layout-column > .flex-gt-lg-100 {\n    max-height: 100%; }\n  .flex-gt-lg-33, .flex-gt-lg-34 {\n    flex: 0 0 33.33%; }\n  .flex-gt-lg-66, .flex-gt-lg-67 {\n    flex: 0 0 66.66%; }\n  .layout-row > .flex-gt-lg-33, .layout-row > .flex-gt-lg-34 {\n    max-width: 33.33%; }\n  .layout-row > .flex-gt-lg-66, .layout-row > .flex-gt-lg-67 {\n    max-width: 66.66%; }\n  .layout-column > .flex-gt-lg-33, .layout-column > .flex-gt-lg-34 {\n    max-height: 33.33%; }\n  .layout-column > .flex-gt-lg-66, .layout-column > .flex-gt-lg-67 {\n    max-height: 66.66%; } }\n\n@keyframes md-autocomplete-list-out {\n  0% {\n    animation-timing-function: linear; }\n  50% {\n    opacity: 0;\n    height: 40px;\n    animation-timing-function: ease-in; }\n  100% {\n    height: 0;\n    opacity: 0; } }\n\n@keyframes md-autocomplete-list-in {\n  0% {\n    opacity: 0;\n    height: 0;\n    animation-timing-function: ease-out; }\n  50% {\n    opacity: 0;\n    height: 40px; }\n  100% {\n    opacity: 1;\n    height: 40px; } }\n\nmd-autocomplete {\n  border-radius: 2px;\n  display: block;\n  height: 40px;\n  position: relative;\n  overflow: visible;\n  min-width: 190px; }\n  md-autocomplete[disabled] input {\n    cursor: not-allowed; }\n  md-autocomplete[md-floating-label] {\n    padding-bottom: 26px;\n    border-radius: 0;\n    background: transparent;\n    height: auto; }\n    md-autocomplete[md-floating-label] md-input-container {\n      padding-bottom: 0; }\n    md-autocomplete[md-floating-label] md-autocomplete-wrap {\n      height: auto; }\n    md-autocomplete[md-floating-label] button {\n      position: absolute;\n      top: auto;\n      bottom: 0;\n      right: 0;\n      width: 30px;\n      height: 30px; }\n  md-autocomplete md-autocomplete-wrap {\n    display: block;\n    position: relative;\n    overflow: visible;\n    height: 40px; }\n    md-autocomplete md-autocomplete-wrap.md-menu-showing {\n      z-index: 51; }\n    md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate {\n      position: absolute;\n      top: 20px;\n      left: 0;\n      width: 100%;\n      height: 3px;\n      transition: none; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate .md-container {\n        transition: none;\n        height: 3px; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-enter {\n        transition: opacity 0.15s linear; }\n        md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-enter.ng-enter-active {\n          opacity: 1; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-leave {\n        transition: opacity 0.15s linear; }\n        md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-leave.ng-leave-active {\n          opacity: 0; }\n  md-autocomplete input:not(.md-input) {\n    font-size: 14px;\n    box-sizing: border-box;\n    border: none;\n    box-shadow: none;\n    outline: none;\n    background: transparent;\n    width: 100%;\n    padding: 0 15px;\n    line-height: 40px;\n    height: 40px; }\n    md-autocomplete input:not(.md-input)::-ms-clear {\n      display: none; }\n  md-autocomplete button {\n    position: relative;\n    line-height: 20px;\n    text-align: center;\n    width: 30px;\n    height: 30px;\n    cursor: pointer;\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n    font-size: 12px;\n    background: transparent;\n    margin: auto 5px; }\n    md-autocomplete button:after {\n      content: '';\n      position: absolute;\n      top: -6px;\n      right: -6px;\n      bottom: -6px;\n      left: -6px;\n      border-radius: 50%;\n      transform: scale(0);\n      opacity: 0;\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n    md-autocomplete button:focus {\n      outline: none; }\n      md-autocomplete button:focus:after {\n        transform: scale(1);\n        opacity: 1; }\n    md-autocomplete button md-icon {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate3d(-50%, -50%, 0) scale(0.9); }\n      md-autocomplete button md-icon path {\n        stroke-width: 0; }\n    md-autocomplete button.ng-enter {\n      transform: scale(0);\n      transition: transform 0.15s ease-out; }\n      md-autocomplete button.ng-enter.ng-enter-active {\n        transform: scale(1); }\n    md-autocomplete button.ng-leave {\n      transition: transform 0.15s ease-out; }\n      md-autocomplete button.ng-leave.ng-leave-active {\n        transform: scale(0); }\n  @media screen and (-ms-high-contrast: active) {\n    md-autocomplete input {\n      border: 1px solid #fff; }\n    md-autocomplete li:focus {\n      color: #fff; } }\n\n.md-virtual-repeat-container.md-autocomplete-suggestions-container {\n  position: absolute;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);\n  height: 225.5px;\n  max-height: 225.5px;\n  z-index: 100; }\n\n.md-autocomplete-suggestions {\n  margin: 0;\n  list-style: none;\n  padding: 0; }\n  .md-autocomplete-suggestions li {\n    cursor: pointer;\n    font-size: 14px;\n    overflow: hidden;\n    padding: 0 15px;\n    line-height: 48px;\n    height: 48px;\n    transition: background 0.15s linear;\n    margin: 0;\n    white-space: nowrap;\n    text-overflow: ellipsis; }\n    .md-autocomplete-suggestions li:focus {\n      outline: none; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-autocomplete,\n  .md-autocomplete-suggestions {\n    border: 1px solid #fff; } }\n\nmd-bottom-sheet {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  padding: 8px 16px 88px 16px;\n  z-index: 70;\n  border-top-width: 1px;\n  border-top-style: solid;\n  transform: translate3d(0, 80px, 0);\n  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  transition-property: transform; }\n  md-bottom-sheet.md-has-header {\n    padding-top: 0; }\n  md-bottom-sheet.ng-enter {\n    opacity: 0;\n    transform: translate3d(0, 100%, 0); }\n  md-bottom-sheet.ng-enter-active {\n    opacity: 1;\n    display: block;\n    transform: translate3d(0, 80px, 0) !important; }\n  md-bottom-sheet.ng-leave-active {\n    transform: translate3d(0, 100%, 0) !important;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-bottom-sheet .md-subheader {\n    background-color: transparent;\n    font-family: Roboto, \"Helvetica Neue\", sans-serif;\n    line-height: 56px;\n    padding: 0;\n    white-space: nowrap; }\n  md-bottom-sheet md-inline-icon {\n    display: inline-block;\n    height: 24px;\n    width: 24px;\n    fill: #444; }\n  md-bottom-sheet md-list-item {\n    display: flex;\n    outline: none; }\n    md-bottom-sheet md-list-item:hover {\n      cursor: pointer; }\n  md-bottom-sheet.md-list md-list-item {\n    padding: 0;\n    align-items: center;\n    height: 48px; }\n    md-bottom-sheet.md-list md-list-item div.md-icon-container {\n      display: inline-block;\n      height: 24px;\n      margin-right: 32px; }\n  md-bottom-sheet.md-grid {\n    padding-left: 24px;\n    padding-right: 24px;\n    padding-top: 0; }\n    md-bottom-sheet.md-grid md-list {\n      display: flex;\n      flex-direction: row;\n      flex-wrap: wrap;\n      transition: all 0.5s;\n      align-items: center; }\n    md-bottom-sheet.md-grid md-list-item {\n      flex-direction: column;\n      align-items: center;\n      transition: all 0.5s;\n      height: 96px;\n      margin-top: 8px;\n      margin-bottom: 8px;\n      /* Mixin for how many grid items to show per row */ }\n      @media screen and (max-width: 600px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 33.33333%;\n          max-width: 33.33333%; }\n          md-bottom-sheet.md-grid md-list-item:nth-of-type(3n + 1) {\n            align-items: flex-start; }\n          md-bottom-sheet.md-grid md-list-item:nth-of-type(3n) {\n            align-items: flex-end; } }\n      @media screen and (min-width: 600px) and (max-width: 960px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 25%;\n          max-width: 25%; } }\n      @media screen and (min-width: 960px) and (max-width: 1200px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 16.66667%;\n          max-width: 16.66667%; } }\n      @media screen and (min-width: 1200px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 14.28571%;\n          max-width: 14.28571%; } }\n      md-bottom-sheet.md-grid md-list-item .md-list-item-content {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        width: 48px;\n        padding-bottom: 16px; }\n      md-bottom-sheet.md-grid md-list-item .md-grid-item-content {\n        border: 1px solid transparent;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        width: 80px; }\n      md-bottom-sheet.md-grid md-list-item .md-icon-container {\n        display: inline-block;\n        box-sizing: border-box;\n        height: 48px;\n        width: 48px;\n        margin: 0 0; }\n      md-bottom-sheet.md-grid md-list-item .md-grid-text {\n        font-weight: 400;\n        line-height: 16px;\n        font-size: 13px;\n        margin: 0;\n        white-space: nowrap;\n        width: 64px;\n        text-align: center;\n        text-transform: none;\n        padding-top: 8px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-bottom-sheet {\n    border: 1px solid #fff; } }\n\nmd-backdrop {\n  transition: opacity 450ms;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 50; }\n  md-backdrop.md-menu-backdrop {\n    position: fixed !important;\n    z-index: 98; }\n  md-backdrop.md-select-backdrop {\n    z-index: 81;\n    transition-duration: 0; }\n  md-backdrop.md-dialog-backdrop {\n    z-index: 79; }\n  md-backdrop.md-bottom-sheet-backdrop {\n    z-index: 69; }\n  md-backdrop.md-sidenav-backdrop {\n    z-index: 59; }\n  md-backdrop.md-click-catcher {\n    position: absolute; }\n  md-backdrop.md-opaque {\n    opacity: .48; }\n    md-backdrop.md-opaque.ng-enter {\n      opacity: 0; }\n    md-backdrop.md-opaque.ng-enter.md-opaque.ng-enter-active {\n      opacity: .48; }\n    md-backdrop.md-opaque.ng-leave {\n      opacity: .48;\n      transition: opacity 400ms; }\n    md-backdrop.md-opaque.ng-leave.md-opaque.ng-leave-active {\n      opacity: 0; }\n\n.md-button {\n  border-radius: 3px;\n  box-sizing: border-box;\n  color: currentColor;\n  user-select: none;\n  position: relative;\n  outline: none;\n  border: 0;\n  display: inline-block;\n  align-items: center;\n  padding: 0 6px;\n  margin: 6px 8px;\n  line-height: 36px;\n  min-height: 36px;\n  background: transparent;\n  white-space: nowrap;\n  min-width: 88px;\n  text-align: center;\n  text-transform: uppercase;\n  font-weight: 500;\n  font-size: 14px;\n  font-style: inherit;\n  font-variant: inherit;\n  font-family: inherit;\n  text-decoration: none;\n  cursor: pointer;\n  overflow: hidden;\n  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-button:focus {\n    outline: none; }\n  .md-button:hover, .md-button:focus {\n    text-decoration: none; }\n  .md-button.ng-hide, .md-button.ng-leave {\n    transition: none; }\n  .md-button.md-cornered {\n    border-radius: 0; }\n  .md-button.md-icon {\n    padding: 0;\n    background: none; }\n  .md-button.md-raised:not([disabled]) {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n  .md-button.md-icon-button {\n    margin: 0 6px;\n    height: 48px;\n    min-width: 0;\n    line-height: 48px;\n    padding-left: 0;\n    padding-right: 0;\n    width: 48px;\n    border-radius: 50%; }\n    .md-button.md-icon-button .md-ripple-container {\n      border-radius: 50%;\n      background-clip: padding-box;\n      overflow: hidden;\n      -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n  .md-button.md-fab {\n    z-index: 20;\n    line-height: 56px;\n    min-width: 0;\n    width: 56px;\n    height: 56px;\n    vertical-align: middle;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n    border-radius: 50%;\n    background-clip: padding-box;\n    overflow: hidden;\n    transition: 0.2s linear;\n    transition-property: background-color, box-shadow; }\n    .md-button.md-fab.md-fab-bottom-right {\n      top: auto;\n      right: 20px;\n      bottom: 20px;\n      left: auto;\n      position: absolute; }\n    .md-button.md-fab.md-fab-bottom-left {\n      top: auto;\n      right: auto;\n      bottom: 20px;\n      left: 20px;\n      position: absolute; }\n    .md-button.md-fab.md-fab-top-right {\n      top: 20px;\n      right: 20px;\n      bottom: auto;\n      left: auto;\n      position: absolute; }\n    .md-button.md-fab.md-fab-top-left {\n      top: 20px;\n      right: auto;\n      bottom: auto;\n      left: 20px;\n      position: absolute; }\n    .md-button.md-fab .md-ripple-container {\n      border-radius: 50%;\n      background-clip: padding-box;\n      overflow: hidden;\n      -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n    .md-button.md-fab.md-mini {\n      line-height: 40px;\n      width: 40px;\n      height: 40px; }\n  .md-button:not([disabled]).md-raised.md-focused,\n  .md-button:not([disabled]).md-fab.md-focused {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n  .md-button:not([disabled]).md-raised:active,\n  .md-button:not([disabled]).md-fab:active {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }\n  .md-button .md-ripple-container {\n    border-radius: 3px;\n    background-clip: padding-box;\n    overflow: hidden;\n    -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n\n.md-toast-open-top .md-button.md-fab-top-left,\n.md-toast-open-top .md-button.md-fab-top-right {\n  transform: translate3d(0, 42px, 0); }\n  .md-toast-open-top .md-button.md-fab-top-left:not([disabled]).md-focused,\n  .md-toast-open-top .md-button.md-fab-top-left:not([disabled]):hover,\n  .md-toast-open-top .md-button.md-fab-top-right:not([disabled]).md-focused,\n  .md-toast-open-top .md-button.md-fab-top-right:not([disabled]):hover {\n    transform: translate3d(0, 41px, 0); }\n\n.md-toast-open-bottom .md-button.md-fab-bottom-left,\n.md-toast-open-bottom .md-button.md-fab-bottom-right {\n  transform: translate3d(0, -42px, 0); }\n  .md-toast-open-bottom .md-button.md-fab-bottom-left:not([disabled]).md-focused,\n  .md-toast-open-bottom .md-button.md-fab-bottom-left:not([disabled]):hover,\n  .md-toast-open-bottom .md-button.md-fab-bottom-right:not([disabled]).md-focused,\n  .md-toast-open-bottom .md-button.md-fab-bottom-right:not([disabled]):hover {\n    transform: translate3d(0, -43px, 0); }\n\n.md-button-group {\n  display: flex;\n  flex: 1;\n  width: 100%; }\n\n.md-button-group > .md-button {\n  flex: 1;\n  display: block;\n  overflow: hidden;\n  width: 0;\n  border-width: 1px 0px 1px 1px;\n  border-radius: 0;\n  text-align: center;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n  .md-button-group > .md-button:first-child {\n    border-radius: 2px 0px 0px 2px; }\n  .md-button-group > .md-button:last-child {\n    border-right-width: 1px;\n    border-radius: 0px 2px 2px 0px; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-button.md-raised,\n  .md-button.md-fab {\n    border: 1px solid #fff; } }\n\nmd-card {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.098), 0px 1px 5px 0px rgba(0, 0, 0, 0.084); }\n  md-card > img,\n  md-card > :not(md-card-content) img {\n    width: 100%; }\n  md-card md-card-content {\n    padding: 16px; }\n  md-card .md-actions {\n    margin: 0; }\n    md-card .md-actions .md-button {\n      margin-bottom: 8px;\n      margin-top: 8px;\n      margin-right: 4px;\n      margin-left: 4px; }\n  md-card md-card-footer {\n    padding: 16px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-card {\n    border: 1px solid #fff; } }\n\nmd-checkbox {\n  box-sizing: border-box;\n  display: block;\n  margin: 8px;\n  white-space: nowrap;\n  cursor: pointer;\n  outline: none;\n  user-select: none;\n  padding-left: 18px;\n  padding-right: 0;\n  position: relative;\n  line-height: 26px;\n  min-width: 18px;\n  min-height: 18px; }\n  html[dir=rtl] md-checkbox {\n    padding-left: 0;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-checkbox {\n    padding-left: 0;\n    unicode-bidi: embed; }\n  md-checkbox bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-checkbox bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  html[dir=rtl] md-checkbox {\n    padding-right: 18px;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-checkbox {\n    padding-right: 18px;\n    unicode-bidi: embed; }\n  md-checkbox bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-checkbox bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  md-checkbox.md-focused:not([disabled]) .md-container:before {\n    left: -8px;\n    top: -8px;\n    right: -8px;\n    bottom: -8px; }\n  md-checkbox.md-focused:not([disabled]):not(.md-checked) .md-container:before {\n    background-color: rgba(0, 0, 0, 0.12); }\n  md-checkbox .md-container {\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    box-sizing: border-box;\n    display: inline-block;\n    width: 18px;\n    height: 18px;\n    left: 0;\n    right: auto; }\n    html[dir=rtl] md-checkbox .md-container {\n      left: auto;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-container {\n      left: auto;\n      unicode-bidi: embed; }\n    md-checkbox .md-container bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-checkbox .md-container {\n      right: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-container {\n      right: 0;\n      unicode-bidi: embed; }\n    md-checkbox .md-container bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container:before {\n      box-sizing: border-box;\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n    md-checkbox .md-container:after {\n      box-sizing: border-box;\n      content: '';\n      position: absolute;\n      top: -10px;\n      right: -10px;\n      bottom: -10px;\n      left: -10px; }\n    md-checkbox .md-container .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: auto;\n      height: auto;\n      left: -15px;\n      top: -15px;\n      right: -15px;\n      bottom: -15px; }\n  md-checkbox.md-align-top-left > div.md-container {\n    top: 12px; }\n  md-checkbox .md-icon {\n    box-sizing: border-box;\n    transition: 240ms;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 18px;\n    height: 18px;\n    border-width: 2px;\n    border-style: solid;\n    border-radius: 2px; }\n  md-checkbox.md-checked .md-icon {\n    border: none; }\n  md-checkbox[disabled] {\n    cursor: no-drop; }\n  md-checkbox.md-checked .md-icon:after {\n    box-sizing: border-box;\n    transform: rotate(45deg);\n    position: absolute;\n    left: 6px;\n    top: 2px;\n    display: table;\n    width: 6px;\n    height: 12px;\n    border-width: 2px;\n    border-style: solid;\n    border-top: 0;\n    border-left: 0;\n    content: ''; }\n  md-checkbox .md-label {\n    box-sizing: border-box;\n    position: relative;\n    display: inline-block;\n    vertical-align: middle;\n    white-space: normal;\n    user-select: text;\n    margin-left: 10px;\n    margin-right: 0; }\n    html[dir=rtl] md-checkbox .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    md-checkbox .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-checkbox .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    md-checkbox .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n\n.md-contact-chips .md-chips .md-chip {\n  padding: 0 25px 0 0; }\n  .md-contact-chips .md-chips .md-chip .md-contact-avatar {\n    float: left; }\n    .md-contact-chips .md-chips .md-chip .md-contact-avatar img {\n      height: 32px;\n      border-radius: 16px; }\n  .md-contact-chips .md-chips .md-chip .md-contact-name {\n    display: inline-block;\n    height: 32px;\n    margin-left: 8px; }\n\n.md-contact-suggestion {\n  height: 56px; }\n  .md-contact-suggestion img {\n    height: 40px;\n    border-radius: 20px;\n    margin-top: 8px; }\n  .md-contact-suggestion .md-contact-name {\n    margin-left: 8px;\n    width: 120px; }\n  .md-contact-suggestion .md-contact-name, .md-contact-suggestion .md-contact-email {\n    display: inline-block;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n\n.md-contact-chips-suggestions li {\n  height: 100%; }\n\n.md-chips {\n  display: block;\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\n  font-size: 16px;\n  padding: 0 0 8px 3px;\n  vertical-align: middle; }\n  .md-chips:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .md-chips:not(.md-readonly) {\n    cursor: text; }\n    .md-chips:not(.md-readonly) .md-chip {\n      padding-right: 22px; }\n  .md-chips .md-chip {\n    cursor: default;\n    border-radius: 16px;\n    display: block;\n    height: 32px;\n    line-height: 32px;\n    margin: 8px 8px 0 0;\n    padding: 0 12px 0 12px;\n    float: left;\n    box-sizing: border-box;\n    max-width: 100%;\n    position: relative; }\n    .md-chips .md-chip .md-chip-content {\n      display: block;\n      padding-right: 4px;\n      float: left;\n      white-space: nowrap;\n      max-width: 100%;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n      .md-chips .md-chip .md-chip-content:focus {\n        outline: none; }\n    .md-chips .md-chip .md-chip-remove-container {\n      position: absolute;\n      right: 0;\n      line-height: 22px; }\n    .md-chips .md-chip .md-chip-remove {\n      text-align: center;\n      width: 32px;\n      height: 32px;\n      min-width: 0;\n      padding: 0;\n      background: transparent;\n      border: none;\n      box-shadow: none;\n      margin: 0;\n      position: relative; }\n      .md-chips .md-chip .md-chip-remove md-icon {\n        height: 18px;\n        width: 18px;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate3d(-50%, -50%, 0); }\n  .md-chips .md-chip-input-container {\n    display: block;\n    line-height: 32px;\n    margin: 8px 8px 0 0;\n    padding: 0 12px 0 12px;\n    float: left; }\n    .md-chips .md-chip-input-container input:not([type]), .md-chips .md-chip-input-container input[type=\"email\"], .md-chips .md-chip-input-container input[type=\"number\"], .md-chips .md-chip-input-container input[type=\"tel\"], .md-chips .md-chip-input-container input[type=\"url\"], .md-chips .md-chip-input-container input[type=\"text\"] {\n      border: 0;\n      height: 32px;\n      line-height: 32px;\n      padding: 0; }\n      .md-chips .md-chip-input-container input:not([type]):focus, .md-chips .md-chip-input-container input[type=\"email\"]:focus, .md-chips .md-chip-input-container input[type=\"number\"]:focus, .md-chips .md-chip-input-container input[type=\"tel\"]:focus, .md-chips .md-chip-input-container input[type=\"url\"]:focus, .md-chips .md-chip-input-container input[type=\"text\"]:focus {\n        outline: none; }\n    .md-chips .md-chip-input-container md-autocomplete, .md-chips .md-chip-input-container md-autocomplete-wrap {\n      background: transparent;\n      height: 32px; }\n    .md-chips .md-chip-input-container md-autocomplete md-autocomplete-wrap {\n      box-shadow: none; }\n    .md-chips .md-chip-input-container md-autocomplete input {\n      position: relative; }\n    .md-chips .md-chip-input-container input {\n      border: 0;\n      height: 32px;\n      line-height: 32px;\n      padding: 0; }\n      .md-chips .md-chip-input-container input:focus {\n        outline: none; }\n    .md-chips .md-chip-input-container md-autocomplete, .md-chips .md-chip-input-container md-autocomplete-wrap {\n      height: 32px; }\n    .md-chips .md-chip-input-container md-autocomplete {\n      box-shadow: none; }\n      .md-chips .md-chip-input-container md-autocomplete input {\n        position: relative; }\n    .md-chips .md-chip-input-container:not(:first-child) {\n      margin: 8px 8px 0 0; }\n    .md-chips .md-chip-input-container input {\n      background: transparent;\n      border-width: 0; }\n  .md-chips md-autocomplete button {\n    display: none; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-chip-input-container,\n  md-chip {\n    border: 1px solid #fff; }\n  .md-chip-input-container md-autocomplete {\n    border: none; } }\n\nmd-content {\n  display: block;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n  md-content[md-scroll-y] {\n    overflow-y: auto;\n    overflow-x: hidden; }\n  md-content[md-scroll-x] {\n    overflow-x: auto;\n    overflow-y: hidden; }\n  md-content.autoScroll {\n    -webkit-overflow-scrolling: auto; }\n\n/** Styles for mdCalendar. */\nmd-calendar {\n  font-size: 13px;\n  user-select: none; }\n\n.md-calendar-scroll-mask {\n  display: inline-block;\n  overflow: hidden;\n  height: 308px; }\n  .md-calendar-scroll-mask .md-virtual-repeat-scroller {\n    overflow-y: scroll;\n    -webkit-overflow-scrolling: touch; }\n    .md-calendar-scroll-mask .md-virtual-repeat-scroller::-webkit-scrollbar {\n      display: none; }\n  .md-calendar-scroll-mask .md-virtual-repeat-offsetter {\n    width: 100%; }\n\n.md-calendar-scroll-container {\n  display: inline-block;\n  height: 308px;\n  width: 340px; }\n\n.md-calendar-date {\n  height: 44px;\n  width: 44px;\n  text-align: center;\n  padding: 0;\n  border: none; }\n  .md-calendar-date:first-child {\n    padding-left: 16px; }\n  .md-calendar-date:last-child {\n    padding-right: 16px; }\n  .md-calendar-date.md-calendar-date-disabled {\n    cursor: default; }\n\n.md-calendar-date-selection-indicator {\n  transition: background-color, color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  border-radius: 50%;\n  display: inline-block;\n  width: 40px;\n  height: 40px;\n  line-height: 40px; }\n  .md-calendar-date:not(.md-disabled) .md-calendar-date-selection-indicator {\n    cursor: pointer; }\n\n.md-calendar-month-label {\n  height: 44px;\n  font-size: 13px;\n  padding: 0 0 0 24px; }\n\n.md-calendar-day-header {\n  table-layout: fixed;\n  border-spacing: 0;\n  border-collapse: collapse; }\n  .md-calendar-day-header th {\n    height: 44px;\n    width: 44px;\n    text-align: center;\n    padding: 0;\n    border: none;\n    font-weight: normal;\n    height: 40px; }\n    .md-calendar-day-header th:first-child {\n      padding-left: 16px; }\n    .md-calendar-day-header th:last-child {\n      padding-right: 16px; }\n\n.md-calendar {\n  table-layout: fixed;\n  border-spacing: 0;\n  border-collapse: collapse; }\n  .md-calendar tr:last-child td {\n    border-bottom-width: 1px;\n    border-bottom-style: solid; }\n  .md-calendar:first-child {\n    border-top: 1px solid transparent; }\n\n/** Styles for mdDatepicker. */\nmd-datepicker {\n  white-space: nowrap; }\n\n.md-datepicker-button {\n  display: inline-block;\n  box-sizing: border-box;\n  background: none; }\n\n.md-datepicker-input {\n  font-size: 14px;\n  box-sizing: border-box;\n  border: none;\n  box-shadow: none;\n  outline: none;\n  background: transparent;\n  min-width: 120px;\n  max-width: 328px; }\n  .md-datepicker-input::-ms-clear {\n    display: none; }\n\n.md-datepicker-input-container {\n  position: relative;\n  padding-bottom: 5px;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  display: inline-block;\n  width: auto;\n  margin-left: 12px; }\n  .md-datepicker-input-container.md-datepicker-focused {\n    border-bottom-width: 2px; }\n\n.md-datepicker-calendar-pane {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 99;\n  border-width: 1px;\n  border-style: solid;\n  background: transparent;\n  transform: scale(0);\n  transform-origin: 0 0;\n  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-datepicker-calendar-pane.md-pane-open {\n    transform: scale(1); }\n\n.md-datepicker-input-mask {\n  height: 40px;\n  width: 340px;\n  position: relative;\n  background: transparent;\n  pointer-events: none;\n  cursor: text; }\n\n.md-datepicker-input-mask-opaque {\n  position: absolute;\n  right: 0;\n  left: 120px;\n  background: white;\n  height: 100%; }\n\n.md-datepicker-calendar {\n  opacity: 0;\n  transition: opacity 0.2s cubic-bezier(0.5, 0, 0.25, 1); }\n  .md-pane-open .md-datepicker-calendar {\n    opacity: 1; }\n  .md-datepicker-calendar md-calendar:focus {\n    outline: none; }\n\n.md-datepicker-expand-triangle {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 0;\n  height: 0;\n  border-left: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-top: 5px solid rgba(0, 0, 0, 0.2); }\n\n.md-datepicker-triangle-button {\n  position: absolute;\n  right: 0;\n  top: 0;\n  transform: translateY(-25%) translateX(45%); }\n\n.md-datepicker-triangle-button.md-button.md-icon-button {\n  height: 100%;\n  width: 36px;\n  position: absolute; }\n\nmd-datepicker[disabled] .md-datepicker-input-container {\n  border-bottom-color: transparent; }\n\nmd-datepicker[disabled] .md-datepicker-triangle-button {\n  display: none; }\n\n.md-datepicker-open .md-datepicker-input-container {\n  margin-left: -12px;\n  border: none; }\n\n.md-datepicker-open .md-datepicker-input {\n  margin-left: 24px;\n  height: 40px; }\n\n.md-datepicker-open .md-datepicker-triangle-button {\n  display: none; }\n\n.md-dialog-is-showing {\n  max-height: 100%; }\n\n.md-dialog-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 80;\n  overflow: hidden; }\n\nmd-dialog {\n  opacity: 0;\n  min-width: 240px;\n  max-width: 80%;\n  max-height: 80%;\n  position: relative;\n  overflow: auto;\n  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.14), 0px 16px 24px 2px rgba(0, 0, 0, 0.098), 0px 6px 30px 5px rgba(0, 0, 0, 0.084);\n  display: flex;\n  flex-direction: column; }\n  md-dialog.md-transition-in {\n    opacity: 1;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transform: translate3d(0, 0, 0) scale(1); }\n  md-dialog.md-transition-out {\n    opacity: 0;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transform: translate3d(0, 100%, 0) scale(0.2); }\n  md-dialog > form {\n    display: flex;\n    flex-direction: column;\n    overflow: auto; }\n  md-dialog md-dialog-content {\n    order: 1;\n    flex-direction: column;\n    padding: 24px;\n    overflow: auto;\n    -webkit-overflow-scrolling: touch; }\n    md-dialog md-dialog-content:not([layout=row]) > *:first-child:not(.md-subheader) {\n      margin-top: 0; }\n    md-dialog md-dialog-content:focus {\n      outline: none; }\n    md-dialog md-dialog-content .md-subheader {\n      margin: 0; }\n      md-dialog md-dialog-content .md-subheader.sticky-clone {\n        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16); }\n    md-dialog md-dialog-content.sticky-container {\n      padding: 0; }\n      md-dialog md-dialog-content.sticky-container > div {\n        padding: 24px;\n        padding-top: 0; }\n    md-dialog md-dialog-content .md-dialog-content-body {\n      width: 100%; }\n  md-dialog .md-actions {\n    display: flex;\n    order: 2;\n    box-sizing: border-box;\n    align-items: center;\n    justify-content: flex-end;\n    margin-bottom: 0;\n    padding-right: 8px;\n    padding-left: 16px;\n    min-height: 52px;\n    overflow: hidden; }\n    md-dialog .md-actions .md-button {\n      margin-bottom: 8px;\n      margin-left: 8px;\n      margin-right: 0;\n      margin-top: 8px; }\n  md-dialog.md-content-overflow .md-actions {\n    border-top-width: 1px;\n    border-top-style: solid; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-dialog {\n    border: 1px solid #fff; } }\n\nmd-divider {\n  display: block;\n  border-top-width: 1px;\n  border-top-style: solid;\n  margin: 0; }\n  md-divider[md-inset] {\n    margin-left: 80px; }\n\nmd-fab-speed-dial {\n  position: relative;\n  display: flex;\n  align-items: center;\n  /*\n   * Handle the animations\n   */ }\n  md-fab-speed-dial.md-fab-bottom-right {\n    top: auto;\n    right: 20px;\n    bottom: 20px;\n    left: auto;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-bottom-left {\n    top: auto;\n    right: auto;\n    bottom: 20px;\n    left: 20px;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-top-right {\n    top: 20px;\n    right: 20px;\n    bottom: auto;\n    left: auto;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-top-left {\n    top: 20px;\n    right: auto;\n    bottom: auto;\n    left: 20px;\n    position: absolute; }\n  md-fab-speed-dial .md-css-variables {\n    z-index: 20; }\n  md-fab-speed-dial.md-is-open .md-fab-action-item {\n    visibility: visible;\n    align-items: center; }\n  md-fab-speed-dial md-fab-actions {\n    display: flex;\n    height: auto; }\n    md-fab-speed-dial md-fab-actions .md-fab-action-item {\n      visibility: hidden;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-down {\n    flex-direction: column; }\n    md-fab-speed-dial.md-down md-fab-trigger {\n      order: 1; }\n    md-fab-speed-dial.md-down md-fab-actions {\n      flex-direction: column;\n      order: 2; }\n  md-fab-speed-dial.md-up {\n    flex-direction: column; }\n    md-fab-speed-dial.md-up md-fab-trigger {\n      order: 2; }\n    md-fab-speed-dial.md-up md-fab-actions {\n      flex-direction: column-reverse;\n      order: 1; }\n  md-fab-speed-dial.md-left {\n    flex-direction: row; }\n    md-fab-speed-dial.md-left md-fab-trigger {\n      order: 2; }\n    md-fab-speed-dial.md-left md-fab-actions {\n      flex-direction: row-reverse;\n      order: 1; }\n      md-fab-speed-dial.md-left md-fab-actions .md-fab-action-item {\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-right {\n    flex-direction: row; }\n    md-fab-speed-dial.md-right md-fab-trigger {\n      order: 1; }\n    md-fab-speed-dial.md-right md-fab-actions {\n      flex-direction: row;\n      order: 2; }\n      md-fab-speed-dial.md-right md-fab-actions .md-fab-action-item {\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-scale .md-fab-action-item {\n    opacity: 0;\n    transform: scale(0);\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 0.14286s; }\n\nmd-fab-toolbar {\n  display: block;\n  /*\n   * Closed styling\n   */\n  /*\n   * Hover styling\n   */ }\n  md-fab-toolbar.md-fab-bottom-right {\n    top: auto;\n    right: 20px;\n    bottom: 20px;\n    left: auto;\n    position: absolute; }\n  md-fab-toolbar.md-fab-bottom-left {\n    top: auto;\n    right: auto;\n    bottom: 20px;\n    left: 20px;\n    position: absolute; }\n  md-fab-toolbar.md-fab-top-right {\n    top: 20px;\n    right: 20px;\n    bottom: auto;\n    left: auto;\n    position: absolute; }\n  md-fab-toolbar.md-fab-top-left {\n    top: 20px;\n    right: auto;\n    bottom: auto;\n    left: 20px;\n    position: absolute; }\n  md-fab-toolbar .md-fab-toolbar-wrapper {\n    display: block;\n    position: relative;\n    overflow: hidden;\n    height: 68px; }\n  md-fab-toolbar md-fab-trigger {\n    position: absolute;\n    z-index: 20; }\n    md-fab-toolbar md-fab-trigger button {\n      overflow: visible !important; }\n    md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {\n      display: block;\n      position: absolute;\n      z-index: 21;\n      opacity: 1;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n    md-fab-toolbar md-fab-trigger md-icon {\n      position: relative;\n      z-index: 22;\n      opacity: 1;\n      transition: all 200ms ease-in; }\n  md-fab-toolbar.md-left md-fab-trigger {\n    right: 0; }\n  md-fab-toolbar.md-left .md-toolbar-tools {\n    flex-direction: row-reverse; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:first-child {\n      margin-right: 0.6rem; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:first-child {\n      margin-left: -0.8rem; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:last-child {\n      margin-right: 8px; }\n  md-fab-toolbar.md-right md-fab-trigger {\n    left: 0; }\n  md-fab-toolbar.md-right .md-toolbar-tools {\n    flex-direction: row; }\n  md-fab-toolbar md-toolbar {\n    background-color: transparent !important;\n    pointer-events: none;\n    z-index: 23; }\n    md-fab-toolbar md-toolbar .md-toolbar-tools {\n      padding: 0 20px;\n      margin-top: 3px; }\n    md-fab-toolbar md-toolbar .md-fab-action-item {\n      opacity: 0;\n      transform: scale(0);\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-duration: 0.15s; }\n  md-fab-toolbar.md-is-open md-fab-trigger > button {\n    box-shadow: none; }\n    md-fab-toolbar.md-is-open md-fab-trigger > button md-icon {\n      opacity: 0; }\n  md-fab-toolbar.md-is-open .md-fab-action-item {\n    opacity: 1;\n    transform: scale(1); }\n\nmd-grid-list {\n  box-sizing: border-box;\n  display: block;\n  position: relative; }\n  md-grid-list md-grid-tile,\n  md-grid-list md-grid-tile > figure,\n  md-grid-list md-grid-tile-header,\n  md-grid-list md-grid-tile-footer {\n    box-sizing: border-box; }\n  md-grid-list md-grid-tile {\n    display: block;\n    position: absolute; }\n    md-grid-list md-grid-tile figure {\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      height: 100%;\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      padding: 0;\n      margin: 0; }\n    md-grid-list md-grid-tile md-grid-tile-header,\n    md-grid-list md-grid-tile md-grid-tile-footer {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      height: 48px;\n      color: #fff;\n      background: rgba(0, 0, 0, 0.18);\n      overflow: hidden;\n      position: absolute;\n      left: 0;\n      right: 0; }\n      md-grid-list md-grid-tile md-grid-tile-header h3,\n      md-grid-list md-grid-tile md-grid-tile-header h4,\n      md-grid-list md-grid-tile md-grid-tile-footer h3,\n      md-grid-list md-grid-tile md-grid-tile-footer h4 {\n        font-weight: 400;\n        margin: 0 0 0 16px; }\n      md-grid-list md-grid-tile md-grid-tile-header h3,\n      md-grid-list md-grid-tile md-grid-tile-footer h3 {\n        font-size: 14px; }\n      md-grid-list md-grid-tile md-grid-tile-header h4,\n      md-grid-list md-grid-tile md-grid-tile-footer h4 {\n        font-size: 12px; }\n    md-grid-list md-grid-tile md-grid-tile-header {\n      top: 0; }\n    md-grid-list md-grid-tile md-grid-tile-footer {\n      bottom: 0; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-grid-tile {\n    border: 1px solid #fff; }\n  md-grid-tile-footer {\n    border-top: 1px solid #fff; } }\n\nmd-icon {\n  margin: auto;\n  background-repeat: no-repeat no-repeat;\n  display: inline-block;\n  vertical-align: middle;\n  fill: currentColor;\n  height: 24px;\n  width: 24px; }\n  md-icon svg {\n    pointer-events: none; }\n  md-icon[md-font-icon] {\n    line-height: 1;\n    width: auto; }\n\nmd-input-container {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  padding: 2px;\n  padding-bottom: 26px;\n  /*\n   * The .md-input class is added to the input/textarea\n   */ }\n  md-input-container > md-icon {\n    position: absolute;\n    top: 5px;\n    left: 2px; }\n    md-input-container > md-icon + input {\n      margin-left: 36px; }\n  md-input-container textarea,\n  md-input-container input[type=\"text\"],\n  md-input-container input[type=\"password\"],\n  md-input-container input[type=\"datetime\"],\n  md-input-container input[type=\"datetime-local\"],\n  md-input-container input[type=\"date\"],\n  md-input-container input[type=\"month\"],\n  md-input-container input[type=\"time\"],\n  md-input-container input[type=\"week\"],\n  md-input-container input[type=\"number\"],\n  md-input-container input[type=\"email\"],\n  md-input-container input[type=\"url\"],\n  md-input-container input[type=\"search\"],\n  md-input-container input[type=\"tel\"],\n  md-input-container input[type=\"color\"] {\n    /* remove default appearance from all input/textarea */\n    -moz-appearance: none;\n    -webkit-appearance: none; }\n  md-input-container input[type=\"date\"],\n  md-input-container input[type=\"datetime-local\"],\n  md-input-container input[type=\"month\"],\n  md-input-container input[type=\"time\"],\n  md-input-container input[type=\"week\"] {\n    min-height: 26px; }\n  md-input-container textarea {\n    resize: none;\n    overflow: hidden; }\n  md-input-container textarea.md-input {\n    min-height: 26px;\n    -ms-flex-preferred-size: auto; }\n  md-input-container label {\n    position: relative;\n    top: -2px; }\n  md-input-container label:not(.md-no-float),\n  md-input-container .md-placeholder {\n    order: 1;\n    pointer-events: none;\n    -webkit-font-smoothing: antialiased;\n    padding-left: 2px;\n    z-index: 1;\n    transform: translate3d(0, 28px, 0) scale(1);\n    transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;\n    transform-origin: left top; }\n    html[dir=rtl] md-input-container label:not(.md-no-float),\n    html[dir=rtl] md-input-container .md-placeholder {\n      transform-origin: right top;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-input-container label:not(.md-no-float),\n    body[dir=rtl] md-input-container .md-placeholder {\n      transform-origin: right top;\n      unicode-bidi: embed; }\n    md-input-container label:not(.md-no-float) bdo[dir=rtl],\n    md-input-container .md-placeholder bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-input-container label:not(.md-no-float) bdo[dir=ltr],\n    md-input-container .md-placeholder bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n  md-input-container .md-placeholder {\n    position: absolute;\n    top: 0;\n    opacity: 0;\n    transition-property: opacity, transform;\n    transform: translate3d(0, 30px, 0); }\n    md-input-container .md-placeholder.md-static {\n      position: static; }\n  md-input-container.md-input-focused .md-placeholder {\n    opacity: 1;\n    transform: translate3d(0, 24px, 0); }\n  md-input-container.md-input-has-value .md-placeholder {\n    transition: none;\n    opacity: 0; }\n  md-input-container:not(.md-input-has-value) input:not(:focus),\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-ampm-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-day-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-hour-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-millisecond-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-minute-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-month-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-second-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-week-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-year-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text {\n    color: transparent; }\n  md-input-container .md-input {\n    order: 2;\n    display: block;\n    margin-top: auto;\n    background: none;\n    padding-top: 2px;\n    padding-bottom: 1px;\n    padding-left: 2px;\n    padding-right: 2px;\n    border-width: 0 0 1px 0;\n    line-height: 26px;\n    -ms-flex-preferred-size: 26px;\n    border-radius: 0; }\n    md-input-container .md-input:focus {\n      outline: none; }\n    md-input-container .md-input:invalid {\n      outline: none;\n      box-shadow: none; }\n    md-input-container .md-input.md-no-flex {\n      flex: none !important; }\n  md-input-container ng-messages, md-input-container data-ng-messages, md-input-container x-ng-messages,\n  md-input-container [ng-messages], md-input-container [data-ng-messages], md-input-container [x-ng-messages] {\n    order: 3;\n    position: relative; }\n  md-input-container ng-message, md-input-container data-ng-message, md-input-container x-ng-message,\n  md-input-container [ng-message], md-input-container [data-ng-message], md-input-container [x-ng-message],\n  md-input-container .md-char-counter {\n    position: absolute;\n    font-size: 12px;\n    line-height: 24px; }\n    md-input-container ng-message:not(.md-char-counter), md-input-container data-ng-message:not(.md-char-counter), md-input-container x-ng-message:not(.md-char-counter),\n    md-input-container [ng-message]:not(.md-char-counter), md-input-container [data-ng-message]:not(.md-char-counter), md-input-container [x-ng-message]:not(.md-char-counter),\n    md-input-container .md-char-counter:not(.md-char-counter) {\n      padding-right: 30px; }\n    md-input-container ng-message.ng-enter, md-input-container data-ng-message.ng-enter, md-input-container x-ng-message.ng-enter,\n    md-input-container [ng-message].ng-enter, md-input-container [data-ng-message].ng-enter, md-input-container [x-ng-message].ng-enter,\n    md-input-container .md-char-counter.ng-enter {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transition-delay: 0.2s; }\n    md-input-container ng-message.ng-leave, md-input-container data-ng-message.ng-leave, md-input-container x-ng-message.ng-leave,\n    md-input-container [ng-message].ng-leave, md-input-container [data-ng-message].ng-leave, md-input-container [x-ng-message].ng-leave,\n    md-input-container .md-char-counter.ng-leave {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n    md-input-container ng-message.ng-enter,\n    md-input-container ng-message.ng-leave.ng-leave-active, md-input-container data-ng-message.ng-enter,\n    md-input-container data-ng-message.ng-leave.ng-leave-active, md-input-container x-ng-message.ng-enter,\n    md-input-container x-ng-message.ng-leave.ng-leave-active,\n    md-input-container [ng-message].ng-enter,\n    md-input-container [ng-message].ng-leave.ng-leave-active, md-input-container [data-ng-message].ng-enter,\n    md-input-container [data-ng-message].ng-leave.ng-leave-active, md-input-container [x-ng-message].ng-enter,\n    md-input-container [x-ng-message].ng-leave.ng-leave-active,\n    md-input-container .md-char-counter.ng-enter,\n    md-input-container .md-char-counter.ng-leave.ng-leave-active {\n      opacity: 0;\n      transform: translate3d(0, -20%, 0); }\n    md-input-container ng-message.ng-leave,\n    md-input-container ng-message.ng-enter.ng-enter-active, md-input-container data-ng-message.ng-leave,\n    md-input-container data-ng-message.ng-enter.ng-enter-active, md-input-container x-ng-message.ng-leave,\n    md-input-container x-ng-message.ng-enter.ng-enter-active,\n    md-input-container [ng-message].ng-leave,\n    md-input-container [ng-message].ng-enter.ng-enter-active, md-input-container [data-ng-message].ng-leave,\n    md-input-container [data-ng-message].ng-enter.ng-enter-active, md-input-container [x-ng-message].ng-leave,\n    md-input-container [x-ng-message].ng-enter.ng-enter-active,\n    md-input-container .md-char-counter.ng-leave,\n    md-input-container .md-char-counter.ng-enter.ng-enter-active {\n      opacity: 1;\n      transform: translate3d(0, 0, 0); }\n  md-input-container .md-char-counter {\n    bottom: 2px;\n    right: 2px; }\n  md-input-container.md-input-focused label:not(.md-no-float),\n  md-input-container.md-input-has-value label:not(.md-no-float) {\n    transform: translate3d(0, 6px, 0) scale(0.75); }\n  md-input-container.md-input-focused .md-input,\n  md-input-container .md-input.ng-invalid.ng-dirty {\n    padding-bottom: 0;\n    border-width: 0 0 2px 0; }\n  md-input-container .md-input[disabled],\n  [disabled] md-input-container .md-input {\n    background-position: 0 bottom;\n    background-size: 4px 1px;\n    background-repeat: repeat-x;\n    margin-bottom: -1px; }\n\nmd-input-container.md-icon-float {\n  margin-top: -16px;\n  transition: margin-top 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-input-container.md-icon-float > label {\n    pointer-events: none;\n    position: absolute;\n    margin-left: 36px; }\n  md-input-container.md-icon-float > md-icon {\n    top: 26px;\n    left: 2px; }\n    md-input-container.md-icon-float > md-icon + input,\n    md-input-container.md-icon-float > md-icon + textarea {\n      margin-left: 36px; }\n  md-input-container.md-icon-float > input,\n  md-input-container.md-icon-float > textarea {\n    padding-top: 24px; }\n  md-input-container.md-icon-float.md-input-focused,\n  md-input-container.md-icon-float.md-input-has-value {\n    margin-top: -8px; }\n    md-input-container.md-icon-float.md-input-focused label,\n    md-input-container.md-icon-float.md-input-has-value label {\n      transform: translate3d(0, 6px, 0) scale(0.75);\n      transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-input-container.md-default-theme > md-icon {\n    fill: #fff; } }\n\nmd-list {\n  display: block;\n  padding: 8px 0px 8px 0px; }\n  md-list .md-subheader {\n    font-size: 14px;\n    font-weight: 500;\n    letter-spacing: 0.010em;\n    line-height: 0.75em; }\n\nmd-list-item.md-proxy-focus.md-focused .md-no-style {\n  transition: background-color 0.15s linear; }\n\nmd-list-item.md-no-proxy,\nmd-list-item .md-no-style {\n  position: relative;\n  padding: 0px 16px;\n  flex: 1; }\n  md-list-item.md-no-proxy.md-button,\n  md-list-item .md-no-style.md-button {\n    font-size: inherit;\n    height: inherit;\n    text-align: left;\n    text-transform: none;\n    width: 100%;\n    white-space: normal;\n    flex-direction: inherit;\n    align-items: inherit; }\n  md-list-item.md-no-proxy:focus,\n  md-list-item .md-no-style:focus {\n    outline: none; }\n\nmd-list-item.md-with-secondary {\n  position: relative; }\n\nmd-list-item.md-clickable:hover {\n  cursor: pointer; }\n\nmd-list-item md-divider {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%; }\n  md-list-item md-divider[md-inset] {\n    left: 96px;\n    width: calc(100% - 96px);\n    margin: 0; }\n\nmd-list-item, md-list-item .md-list-item-inner {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  min-height: 64px; }\n  md-list-item > div.md-primary > md-icon,\n  md-list-item > div.md-secondary > md-icon,\n  md-list-item > md-icon:first-child,\n  md-list-item > md-icon.md-secondary, md-list-item .md-list-item-inner > div.md-primary > md-icon,\n  md-list-item .md-list-item-inner > div.md-secondary > md-icon,\n  md-list-item .md-list-item-inner > md-icon:first-child,\n  md-list-item .md-list-item-inner > md-icon.md-secondary {\n    width: 24px;\n    margin-top: 16px;\n    margin-bottom: 12px;\n    box-sizing: content-box; }\n  md-list-item > div.md-primary > md-checkbox,\n  md-list-item > div.md-secondary > md-checkbox,\n  md-list-item > md-checkbox:first-child,\n  md-list-item md-checkbox.md-secondary, md-list-item .md-list-item-inner > div.md-primary > md-checkbox,\n  md-list-item .md-list-item-inner > div.md-secondary > md-checkbox,\n  md-list-item .md-list-item-inner > md-checkbox:first-child,\n  md-list-item .md-list-item-inner md-checkbox.md-secondary {\n    align-self: center; }\n    md-list-item > div.md-primary > md-checkbox .md-label,\n    md-list-item > div.md-secondary > md-checkbox .md-label,\n    md-list-item > md-checkbox:first-child .md-label,\n    md-list-item md-checkbox.md-secondary .md-label, md-list-item .md-list-item-inner > div.md-primary > md-checkbox .md-label,\n    md-list-item .md-list-item-inner > div.md-secondary > md-checkbox .md-label,\n    md-list-item .md-list-item-inner > md-checkbox:first-child .md-label,\n    md-list-item .md-list-item-inner md-checkbox.md-secondary .md-label {\n      display: none; }\n  md-list-item > md-icon:first-child, md-list-item .md-list-item-inner > md-icon:first-child {\n    margin-right: 32px; }\n  md-list-item > md-checkbox:first-child, md-list-item .md-list-item-inner > md-checkbox:first-child {\n    width: 24px;\n    margin-left: 3px;\n    margin-right: 29px; }\n  md-list-item > .md-avatar:first-child, md-list-item .md-list-item-inner > .md-avatar:first-child {\n    width: 40px;\n    height: 40px;\n    margin-top: 8px;\n    margin-bottom: 8px;\n    margin-right: 16px;\n    border-radius: 50%;\n    box-sizing: content-box; }\n  md-list-item md-checkbox.md-secondary,\n  md-list-item md-switch.md-secondary, md-list-item .md-list-item-inner md-checkbox.md-secondary,\n  md-list-item .md-list-item-inner md-switch.md-secondary {\n    margin-right: 0;\n    margin-top: 0;\n    margin-bottom: 0; }\n  md-list-item button.md-button.md-secondary-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container {\n    background-color: transparent;\n    align-self: center;\n    border-radius: 50%;\n    margin: 0px;\n    min-width: 0px; }\n    md-list-item button.md-button.md-secondary-container .md-ripple,\n    md-list-item button.md-button.md-secondary-container .md-ripple-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container .md-ripple,\n    md-list-item .md-list-item-inner button.md-button.md-secondary-container .md-ripple-container {\n      border-radius: 50%; }\n  md-list-item .md-secondary-container,\n  md-list-item .md-secondary, md-list-item .md-list-item-inner .md-secondary-container,\n  md-list-item .md-list-item-inner .md-secondary {\n    margin-left: 16px;\n    position: absolute;\n    right: 16px;\n    top: 50%;\n    transform: translate3d(0, -50%, 0); }\n  md-list-item > .md-button.md-secondary-container > .md-secondary, md-list-item .md-list-item-inner > .md-button.md-secondary-container > .md-secondary {\n    margin-left: 0px;\n    position: static; }\n  md-list-item > p, md-list-item > .md-list-item-inner > p, md-list-item .md-list-item-inner > p, md-list-item .md-list-item-inner > .md-list-item-inner > p {\n    flex: 1;\n    margin: 0; }\n\nmd-list-item.md-2-line,\nmd-list-item.md-2-line > .md-no-style,\nmd-list-item.md-3-line,\nmd-list-item.md-3-line > .md-no-style {\n  align-items: flex-start; }\n  md-list-item.md-2-line .md-list-item-text,\n  md-list-item.md-2-line > .md-no-style .md-list-item-text,\n  md-list-item.md-3-line .md-list-item-text,\n  md-list-item.md-3-line > .md-no-style .md-list-item-text {\n    flex: 1;\n    padding: 16px 0;\n    text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text.md-offset,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text.md-offset,\n    md-list-item.md-3-line .md-list-item-text.md-offset,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text.md-offset {\n      margin-left: 56px; }\n    md-list-item.md-2-line .md-list-item-text h3,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text h3,\n    md-list-item.md-3-line .md-list-item-text h3,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text h3 {\n      font-size: 16px;\n      font-weight: 400;\n      letter-spacing: 0.010em;\n      margin: 0 0 6px 0;\n      line-height: 0.75em; }\n    md-list-item.md-2-line .md-list-item-text h4,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text h4,\n    md-list-item.md-3-line .md-list-item-text h4,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text h4 {\n      font-size: 14px;\n      letter-spacing: 0.010em;\n      margin: 10px 0 5px 0;\n      font-weight: 400;\n      line-height: 0.75em; }\n    md-list-item.md-2-line .md-list-item-text p,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text p,\n    md-list-item.md-3-line .md-list-item-text p,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text p {\n      font-size: 14px;\n      font-weight: 500;\n      letter-spacing: 0.010em;\n      margin: 0 0 0 0;\n      line-height: 1.6em; }\n\nmd-list-item.md-2-line > .md-avatar:first-child,\nmd-list-item.md-2-line > .md-no-style > .md-avatar:first-child {\n  margin-top: 12px; }\n\nmd-list-item.md-2-line > md-icon:first-child,\nmd-list-item.md-2-line > .md-no-style > md-icon:first-child {\n  align-self: flex-start; }\n\nmd-list-item.md-2-line .md-list-item-text,\nmd-list-item.md-2-line > .md-no-style .md-list-item-text {\n  flex: 1;\n  padding-top: 19px; }\n\nmd-list-item.md-3-line > md-icon:first-child,\nmd-list-item.md-3-line > .md-avatar:first-child,\nmd-list-item.md-3-line > .md-no-style > md-icon:first-child,\nmd-list-item.md-3-line > .md-no-style > .md-avatar:first-child {\n  margin-top: 16px; }\n\n.md-open-menu-container {\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: 99;\n  opacity: 0;\n  border-radius: 2px; }\n  .md-open-menu-container md-menu-divider {\n    margin-top: 4px;\n    margin-bottom: 4px;\n    height: 1px;\n    width: 100%; }\n  .md-open-menu-container md-menu-content > * {\n    opacity: 0; }\n  .md-open-menu-container:not(.md-clickable) {\n    pointer-events: none; }\n  .md-open-menu-container.md-active {\n    opacity: 1;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transition-duration: 200ms; }\n    .md-open-menu-container.md-active > md-menu-content > * {\n      opacity: 1;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-duration: 200ms;\n      transition-delay: 100ms; }\n  .md-open-menu-container.md-leave {\n    opacity: 0;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 250ms; }\n\nmd-menu-content {\n  display: flex;\n  flex-direction: column;\n  padding: 8px 0;\n  max-height: 304px;\n  overflow-y: auto; }\n  md-menu-content.md-dense {\n    max-height: 208px; }\n    md-menu-content.md-dense md-menu-item {\n      height: 32px;\n      min-height: 0px; }\n\nmd-menu-item {\n  display: flex;\n  flex-direction: row;\n  min-height: 48px;\n  height: 48px;\n  align-content: center;\n  justify-content: flex-start; }\n  md-menu-item > * {\n    width: 100%;\n    margin: auto 0;\n    padding-left: 16px;\n    padding-right: 16px; }\n  md-menu-item > .md-button {\n    border-radius: 0;\n    margin: auto 0;\n    font-size: 15px;\n    text-transform: none;\n    font-weight: 400;\n    text-align: start;\n    height: 100%;\n    padding-left: 16px;\n    padding-right: 16px;\n    display: inline-block;\n    align-items: baseline;\n    align-content: left;\n    width: 100%; }\n    md-menu-item > .md-button md-icon {\n      margin: auto 16px auto 0; }\n    md-menu-item > .md-button p {\n      display: inline-block;\n      margin: auto; }\n    md-menu-item > .md-button span {\n      margin-top: auto;\n      margin-bottom: auto; }\n    md-menu-item > .md-button .md-ripple-container {\n      border-radius: inherit; }\n\n.md-menu {\n  padding: 8px 0; }\n\nmd-toolbar .md-menu {\n  height: auto;\n  margin: auto; }\n\n@media (max-width: 599px) {\n  md-menu-content {\n    min-width: 112px; }\n  md-menu-content[width=\"3\"] {\n    min-width: 168px; }\n  md-menu-content[width=\"4\"] {\n    min-width: 224px; }\n  md-menu-content[width=\"5\"] {\n    min-width: 280px; }\n  md-menu-content[width=\"6\"] {\n    min-width: 336px; }\n  md-menu-content[width=\"7\"] {\n    min-width: 392px; } }\n\n@media (min-width: 600px) {\n  md-menu-content {\n    min-width: 96px; }\n  md-menu-content[width=\"3\"] {\n    min-width: 192px; }\n  md-menu-content[width=\"4\"] {\n    min-width: 256px; }\n  md-menu-content[width=\"5\"] {\n    min-width: 320px; }\n  md-menu-content[width=\"6\"] {\n    min-width: 384px; }\n  md-menu-content[width=\"7\"] {\n    min-width: 448px; } }\n\nmd-toolbar.md-menu-toolbar h2.md-toolbar-tools {\n  line-height: 1rem;\n  height: auto;\n  padding: 28px;\n  padding-bottom: 12px; }\n\nmd-menu-bar {\n  padding: 0 20px;\n  display: block;\n  position: relative;\n  z-index: 2; }\n  md-menu-bar .md-menu {\n    display: inline-block;\n    padding: 0;\n    position: relative; }\n  md-menu-bar button {\n    font-size: 14px;\n    padding: 0 10px;\n    margin: 0;\n    border: 0;\n    background-color: transparent;\n    height: 40px; }\n  md-menu-bar md-backdrop.md-menu-backdrop {\n    z-index: -2; }\n\nmd-menu-content.md-menu-bar-menu.md-dense {\n  max-height: none;\n  padding: 16px 0; }\n  md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent {\n    position: relative; }\n    md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent > md-icon {\n      position: absolute;\n      padding: 0;\n      width: 24px;\n      top: 6px;\n      left: 24px; }\n    md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent > .md-button, md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent .md-menu > .md-button {\n      padding: 0 32px 0 64px; }\n  md-menu-content.md-menu-bar-menu.md-dense .md-button {\n    min-height: 0;\n    height: 32px;\n    display: flex; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-button span {\n      flex-grow: 1; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-button span.md-alt-text {\n      flex-grow: 0;\n      align-self: flex-end;\n      margin: 0 8px; }\n  md-menu-content.md-menu-bar-menu.md-dense md-menu-divider {\n    margin: 8px 0; }\n  md-menu-content.md-menu-bar-menu.md-dense .md-menu {\n    padding: 0; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button {\n      position: relative;\n      margin: 0;\n      width: 100%;\n      text-align: left;\n      text-align: start;\n      text-transform: none;\n      font-weight: normal;\n      border-radius: 0px;\n      padding-left: 16px; }\n      md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button:after {\n        display: block;\n        content: '\\25BC';\n        position: absolute;\n        top: 0px;\n        speak: none;\n        transform: rotate(270deg) scaleY(0.45) scaleX(0.9);\n        right: 28px; }\n\nmd-progress-circular {\n  display: block;\n  position: relative;\n  width: 100px;\n  height: 100px;\n  padding-top: 0 !important;\n  margin-bottom: 0 !important;\n  transform: scale(0.5); }\n  md-progress-circular .md-spinner-wrapper {\n    display: block;\n    position: relative;\n    overflow: hidden; }\n    md-progress-circular .md-spinner-wrapper .md-inner {\n      width: 100px;\n      height: 100px;\n      position: relative; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-gap {\n        position: absolute;\n        left: 49px;\n        right: 49px;\n        top: 0;\n        bottom: 0;\n        border-top-width: 10px;\n        border-top-style: solid;\n        box-sizing: border-box; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-left, md-progress-circular .md-spinner-wrapper .md-inner .md-right {\n        position: absolute;\n        top: 0;\n        height: 100px;\n        width: 50px;\n        overflow: hidden; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-left .md-half-circle, md-progress-circular .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n          position: absolute;\n          top: 0;\n          width: 100px;\n          height: 100px;\n          box-sizing: border-box;\n          border-width: 10px;\n          border-style: solid;\n          border-bottom-color: transparent;\n          border-radius: 50%; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-left {\n        left: 0; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-left .md-half-circle {\n          left: 0;\n          border-right-color: transparent; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-right {\n        right: 0; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n          right: 0;\n          border-left-color: transparent; }\n  md-progress-circular .md-spinner-wrapper.md-mode-indeterminate {\n    animation: outer-rotate 2.91667s linear infinite; }\n    md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner {\n      animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-left .md-half-circle, md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-right .md-half-circle {\n        animation-iteration-count: infinite;\n        animation-duration: 1.3125s;\n        animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1); }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-left .md-half-circle {\n        animation-name: left-wobble; }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-right .md-half-circle {\n        animation-name: right-wobble; }\n  md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper {\n    animation: none; }\n    md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner {\n      animation: none; }\n      md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner .md-left .md-half-circle {\n        animation-name: none; }\n      md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n        animation-name: none; }\n  md-progress-circular .md-spinner-wrapper.ng-hide {\n    animation: none; }\n    md-progress-circular .md-spinner-wrapper.ng-hide .md-inner {\n      animation: none; }\n      md-progress-circular .md-spinner-wrapper.ng-hide .md-inner .md-left .md-half-circle {\n        animation-name: none; }\n      md-progress-circular .md-spinner-wrapper.ng-hide .md-inner .md-right .md-half-circle {\n        animation-name: none; }\n\n@keyframes outer-rotate {\n  100% {\n    transform: rotate(360deg); } }\n\n@keyframes left-wobble {\n  0%, 100% {\n    transform: rotate(130deg); }\n  50% {\n    transform: rotate(-5deg); } }\n\n@keyframes right-wobble {\n  0%, 100% {\n    transform: rotate(-130deg); }\n  50% {\n    transform: rotate(5deg); } }\n\n@keyframes sporadic-rotate {\n  12.5% {\n    transform: rotate(135deg); }\n  25% {\n    transform: rotate(270deg); }\n  37.5% {\n    transform: rotate(405deg); }\n  50% {\n    transform: rotate(540deg); }\n  62.5% {\n    transform: rotate(675deg); }\n  75% {\n    transform: rotate(810deg); }\n  87.5% {\n    transform: rotate(945deg); }\n  100% {\n    transform: rotate(1080deg); } }\n\nmd-radio-button,\n.md-switch-thumb {\n  box-sizing: border-box;\n  display: block;\n  margin: 15px;\n  white-space: nowrap;\n  cursor: pointer; }\n  md-radio-button .md-container,\n  .md-switch-thumb .md-container {\n    box-sizing: border-box;\n    position: relative;\n    top: 4px;\n    display: inline-block;\n    width: 16px;\n    height: 16px;\n    cursor: pointer; }\n    md-radio-button .md-container .md-ripple-container,\n    .md-switch-thumb .md-container .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: 48px;\n      height: 48px;\n      left: -16px;\n      top: -16px; }\n    md-radio-button .md-container:before,\n    .md-switch-thumb .md-container:before {\n      box-sizing: border-box;\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n  md-radio-button.md-align-top-left > div.md-container,\n  .md-switch-thumb.md-align-top-left > div.md-container {\n    top: -15px; }\n  md-radio-button .md-off,\n  .md-switch-thumb .md-off {\n    box-sizing: border-box;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 16px;\n    height: 16px;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 50%;\n    transition: border-color ease 0.28s; }\n  md-radio-button .md-on,\n  .md-switch-thumb .md-on {\n    box-sizing: border-box;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 16px;\n    height: 16px;\n    border-radius: 50%;\n    transition: transform ease 0.28s;\n    transform: scale(0); }\n  md-radio-button.md-checked .md-on,\n  .md-switch-thumb.md-checked .md-on {\n    transform: scale(0.5); }\n  md-radio-button .md-label,\n  .md-switch-thumb .md-label {\n    box-sizing: border-box;\n    position: relative;\n    display: inline-block;\n    margin-left: 10px;\n    margin-right: 0;\n    vertical-align: middle;\n    white-space: normal;\n    pointer-events: none;\n    width: auto; }\n    html[dir=rtl] md-radio-button .md-label,\n    html[dir=rtl] .md-switch-thumb .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-radio-button .md-label,\n    body[dir=rtl] .md-switch-thumb .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    md-radio-button .md-label bdo[dir=rtl],\n    .md-switch-thumb .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-radio-button .md-label bdo[dir=ltr],\n    .md-switch-thumb .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-radio-button .md-label,\n    html[dir=rtl] .md-switch-thumb .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-radio-button .md-label,\n    body[dir=rtl] .md-switch-thumb .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    md-radio-button .md-label bdo[dir=rtl],\n    .md-switch-thumb .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-radio-button .md-label bdo[dir=ltr],\n    .md-switch-thumb .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n  md-radio-button .circle,\n  .md-switch-thumb .circle {\n    border-radius: 50%; }\n\nmd-radio-group:focus {\n  outline: none; }\n\nmd-radio-group.md-focused .md-checked .md-container:before {\n  left: -8px;\n  top: -8px;\n  right: -8px;\n  bottom: -8px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-radio-button.md-default-theme .md-on {\n    background-color: #fff; } }\n\nmd-progress-linear {\n  display: block;\n  position: relative;\n  width: 100%;\n  height: 5px;\n  padding-top: 0 !important;\n  margin-bottom: 0 !important; }\n  md-progress-linear .md-container {\n    display: block;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n    height: 5px;\n    transform: translate(0, 0) scale(1, 1); }\n    md-progress-linear .md-container .md-bar {\n      position: absolute;\n      left: 0;\n      top: 0;\n      bottom: 0;\n      width: 100%;\n      height: 5px; }\n    md-progress-linear .md-container .md-dashed:before {\n      content: \"\";\n      display: none;\n      position: absolute;\n      margin-top: 0;\n      height: 5px;\n      width: 100%;\n      background-color: transparent;\n      background-size: 10px 10px !important;\n      background-position: 0px -23px; }\n    md-progress-linear .md-container .md-bar1, md-progress-linear .md-container .md-bar2 {\n      transition: transform 0.2s linear; }\n    md-progress-linear .md-container.md-mode-query .md-bar1 {\n      display: none; }\n    md-progress-linear .md-container.md-mode-query .md-bar2 {\n      transition: all 0.2s linear;\n      animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1); }\n    md-progress-linear .md-container.md-mode-determinate .md-bar1 {\n      display: none; }\n    md-progress-linear .md-container.md-mode-indeterminate .md-bar1 {\n      animation: md-progress-linear-indeterminate-scale-1 4s infinite, md-progress-linear-indeterminate-1 4s infinite; }\n    md-progress-linear .md-container.md-mode-indeterminate .md-bar2 {\n      animation: md-progress-linear-indeterminate-scale-2 4s infinite, md-progress-linear-indeterminate-2 4s infinite; }\n    md-progress-linear .md-container.ng-hide {\n      animation: none; }\n      md-progress-linear .md-container.ng-hide .md-bar1 {\n        animation-name: none; }\n      md-progress-linear .md-container.ng-hide .md-bar2 {\n        animation-name: none; }\n  md-progress-linear .md-container.md-mode-buffer {\n    background-color: transparent !important;\n    transition: all 0.2s linear; }\n    md-progress-linear .md-container.md-mode-buffer .md-dashed:before {\n      display: block;\n      animation: buffer 3s infinite linear; }\n\n@keyframes query {\n  0% {\n    opacity: 1;\n    transform: translateX(35%) scale(0.3, 1); }\n  100% {\n    opacity: 0;\n    transform: translateX(-50%) scale(0, 1); } }\n\n@keyframes buffer {\n  0% {\n    opacity: 1;\n    background-position: 0px -23px; }\n  50% {\n    opacity: 0; }\n  100% {\n    opacity: 1;\n    background-position: -200px -23px; } }\n\n@keyframes md-progress-linear-indeterminate-scale-1 {\n  0% {\n    transform: scaleX(0.1);\n    animation-timing-function: linear; }\n  36.6% {\n    transform: scaleX(0.1);\n    animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1); }\n  69.15% {\n    transform: scaleX(0.83);\n    animation-timing-function: cubic-bezier(0.22573, 0, 0.23365, 1.37098); }\n  100% {\n    transform: scaleX(0.1); } }\n\n@keyframes md-progress-linear-indeterminate-1 {\n  0% {\n    left: -105.16667%;\n    animation-timing-function: linear; }\n  20% {\n    left: -105.16667%;\n    animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582); }\n  69.15% {\n    left: 21.5%;\n    animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635); }\n  100% {\n    left: 95.44444%; } }\n\n@keyframes md-progress-linear-indeterminate-scale-2 {\n  0% {\n    transform: scaleX(0.1);\n    animation-timing-function: cubic-bezier(0.20503, 0.05705, 0.57661, 0.45397); }\n  19.15% {\n    transform: scaleX(0.57);\n    animation-timing-function: cubic-bezier(0.15231, 0.19643, 0.64837, 1.00432); }\n  44.15% {\n    transform: scaleX(0.91);\n    animation-timing-function: cubic-bezier(0.25776, -0.00316, 0.21176, 1.38179); }\n  100% {\n    transform: scaleX(0.1); } }\n\n@keyframes md-progress-linear-indeterminate-2 {\n  0% {\n    left: -54.88889%;\n    animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40968); }\n  25% {\n    left: -17.25%;\n    animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73372); }\n  48.35% {\n    left: 29.5%;\n    animation-timing-function: cubic-bezier(0.4, 0.62703, 0.6, 0.90203); }\n  100% {\n    left: 117.38889%; } }\n\n.md-select-menu-container {\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: 99;\n  opacity: 0; }\n  .md-select-menu-container:not(.md-clickable) {\n    pointer-events: none; }\n  .md-select-menu-container md-progress-circular {\n    display: table;\n    margin: 24px auto !important; }\n  .md-select-menu-container.md-active {\n    opacity: 1; }\n    .md-select-menu-container.md-active md-select-menu {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transition-duration: 150ms; }\n      .md-select-menu-container.md-active md-select-menu > * {\n        opacity: 1;\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n        transition-duration: 150ms;\n        transition-delay: 100ms; }\n  .md-select-menu-container.md-leave {\n    opacity: 0;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 250ms; }\n\nmd-input-container > md-select {\n  margin: auto 0 0 0;\n  order: 2; }\n\nmd-select {\n  display: flex;\n  margin: 20px 0 26px 0; }\n  md-select:focus {\n    outline: none; }\n  md-select[disabled]:hover {\n    cursor: default; }\n  md-select:not([disabled]):hover {\n    cursor: pointer; }\n  md-select:not([disabled]).ng-invalid.ng-dirty .md-select-value {\n    border-bottom: 2px solid;\n    padding-bottom: 0; }\n  md-select:not([disabled]):focus .md-select-value {\n    border-bottom-width: 2px;\n    border-bottom-style: solid;\n    padding-bottom: 0; }\n\n.md-select-value {\n  display: flex;\n  align-items: center;\n  padding: 2px 2px 1px;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  background-color: transparent;\n  position: relative;\n  box-sizing: content-box;\n  min-width: 64px;\n  min-height: 26px;\n  flex-grow: 1; }\n  .md-select-value *:first-child {\n    flex: 1;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n    max-width: calc(100% - 2*8px);\n    transform: translate3d(0, 2px, 0); }\n  .md-select-value .md-select-icon {\n    display: block;\n    align-items: flex-end;\n    text-align: end;\n    width: 24px;\n    margin: 0 4px;\n    transform: translate3d(0, 1px, 0); }\n  .md-select-value .md-select-icon:after {\n    display: block;\n    content: '\\25BC';\n    position: relative;\n    top: 2px;\n    speak: none;\n    transform: scaleY(0.6) scaleX(1); }\n  .md-select-value.md-select-placeholder {\n    display: flex;\n    order: 1;\n    pointer-events: none;\n    -webkit-font-smoothing: antialiased;\n    padding-left: 2px;\n    z-index: 1; }\n\nmd-select-menu {\n  display: flex;\n  flex-direction: column;\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.098), 0px 1px 5px 0px rgba(0, 0, 0, 0.084);\n  max-height: 256px;\n  min-height: 48px;\n  overflow-y: hidden;\n  transform-origin: left top;\n  transform: scale(1); }\n  md-select-menu.md-reverse {\n    flex-direction: column-reverse; }\n  md-select-menu:not(.md-overflow) md-content {\n    padding-top: 8px;\n    padding-bottom: 8px; }\n  html[dir=rtl] md-select-menu {\n    transform-origin: right top;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-select-menu {\n    transform-origin: right top;\n    unicode-bidi: embed; }\n  md-select-menu bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-select-menu bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  md-select-menu md-content {\n    min-width: 136px;\n    min-height: 48px;\n    max-height: 256px;\n    overflow-y: auto; }\n  md-select-menu > * {\n    opacity: 0; }\n\nmd-option {\n  cursor: pointer;\n  position: relative;\n  display: flex;\n  align-items: center;\n  width: auto;\n  padding: 0 16px 0 16px;\n  height: 48px; }\n  md-option:focus {\n    outline: none; }\n  md-option .md-text {\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    width: auto;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    font-size: 16px; }\n\nmd-optgroup {\n  display: block; }\n  md-optgroup label {\n    display: block;\n    font-size: 14px;\n    text-transform: uppercase;\n    padding: 16px;\n    font-weight: 500; }\n  md-optgroup md-option {\n    padding-left: 32px;\n    padding-right: 32px; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-select-backdrop {\n    background-color: transparent; }\n  md-select-menu {\n    border: 1px solid #fff; } }\n\n@keyframes sliderFocusThumb {\n  0% {\n    opacity: 0;\n    transform: scale(0); }\n  50% {\n    transform: scale(1);\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\nmd-slider {\n  height: 48px;\n  position: relative;\n  display: block;\n  margin-left: 4px;\n  margin-right: 4px;\n  padding: 0;\n  /**\n   * Track\n   */\n  /**\n   * Slider thumb\n   */\n  /* The sign that's focused in discrete mode */\n  /**\n   * The border/background that comes in when focused in non-discrete mode\n   */\n  /* Don't animate left/right while panning */ }\n  md-slider *, md-slider *:after {\n    box-sizing: border-box; }\n  md-slider .md-slider-wrapper {\n    position: relative; }\n  md-slider .md-track-container {\n    width: 100%;\n    position: absolute;\n    top: 23px;\n    height: 2px; }\n  md-slider .md-track {\n    position: absolute;\n    left: 0;\n    right: 0;\n    height: 100%; }\n  md-slider .md-track-fill {\n    transition: width 0.05s linear; }\n  md-slider .md-track-ticks {\n    position: absolute;\n    left: 0;\n    right: 0;\n    height: 100%; }\n  md-slider .md-track-ticks canvas {\n    width: 100%; }\n  md-slider .md-thumb-container {\n    position: absolute;\n    left: 0;\n    top: 50%;\n    transform: translate3d(-50%, -50%, 0);\n    transition: left 0.1s linear; }\n  md-slider .md-thumb {\n    z-index: 1;\n    position: absolute;\n    left: -19px;\n    top: 5px;\n    width: 38px;\n    height: 38px;\n    border-radius: 38px;\n    transform: scale(0.5);\n    transition: all 0.1s linear; }\n    md-slider .md-thumb:after {\n      content: '';\n      position: absolute;\n      left: 3px;\n      top: 3px;\n      width: 32px;\n      height: 32px;\n      border-radius: 32px;\n      border-width: 3px;\n      border-style: solid; }\n  md-slider .md-sign {\n    /* Center the children (slider-thumb-text) */\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: absolute;\n    left: -14px;\n    top: -20px;\n    width: 28px;\n    height: 28px;\n    border-radius: 28px;\n    transform: scale(0.4) translate3d(0, 70px, 0);\n    transition: all 0.2s ease-in-out;\n    /* The arrow pointing down under the sign */ }\n    md-slider .md-sign:after {\n      position: absolute;\n      content: '';\n      left: 0px;\n      border-radius: 16px;\n      top: 19px;\n      border-left: 14px solid transparent;\n      border-right: 14px solid transparent;\n      border-top-width: 16px;\n      border-top-style: solid;\n      opacity: 0;\n      transform: translate3d(0, -8px, 0);\n      transition: all 0.2s ease-in-out; }\n    md-slider .md-sign .md-thumb-text {\n      z-index: 1;\n      font-size: 12px;\n      font-weight: bold; }\n  md-slider .md-focus-thumb {\n    position: absolute;\n    left: -24px;\n    top: 0px;\n    width: 48px;\n    height: 48px;\n    border-radius: 48px;\n    display: none;\n    opacity: 0;\n    background-color: #C0C0C0;\n    animation: sliderFocusThumb 0.4s linear; }\n  md-slider .md-focus-ring {\n    position: absolute;\n    left: -24px;\n    top: 0px;\n    width: 48px;\n    height: 48px;\n    border-radius: 48px;\n    transform: scale(0);\n    transition: all 0.2s linear;\n    opacity: 0.26; }\n  md-slider .md-disabled-thumb {\n    position: absolute;\n    left: -22px;\n    top: 2px;\n    width: 44px;\n    height: 44px;\n    border-radius: 44px;\n    transform: scale(0.35);\n    border-width: 6px;\n    border-style: solid;\n    display: none; }\n  md-slider.md-min .md-thumb:after {\n    background-color: white; }\n  md-slider.md-min .md-sign {\n    opacity: 0; }\n  md-slider:focus {\n    outline: none; }\n  md-slider.dragging .md-thumb-container,\n  md-slider.dragging .md-track-fill {\n    transition: none; }\n  md-slider:not([md-discrete]) {\n    /* Hide the sign and ticks in non-discrete mode */ }\n    md-slider:not([md-discrete]) .md-track-ticks,\n    md-slider:not([md-discrete]) .md-sign {\n      display: none; }\n    md-slider:not([md-discrete]):not([disabled]):hover .md-thumb {\n      transform: scale(0.6); }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-thumb,\n    md-slider:not([md-discrete]):not([disabled]).active .md-focus-thumb {\n      display: block; }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-ring,\n    md-slider:not([md-discrete]):not([disabled]).active .md-focus-ring {\n      transform: scale(1); }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-thumb,\n    md-slider:not([md-discrete]):not([disabled]).active .md-thumb {\n      transform: scale(0.85); }\n  md-slider[md-discrete] {\n    /* Hide the focus thumb in discrete mode */ }\n    md-slider[md-discrete] .md-focus-thumb,\n    md-slider[md-discrete] .md-focus-ring {\n      display: none; }\n    md-slider[md-discrete]:not([disabled]):focus .md-sign,\n    md-slider[md-discrete]:not([disabled]):focus .md-sign:after,\n    md-slider[md-discrete]:not([disabled]).active .md-sign,\n    md-slider[md-discrete]:not([disabled]).active .md-sign:after {\n      opacity: 1;\n      transform: translate3d(0, 0, 0) scale(1); }\n  md-slider[disabled] .md-track-fill {\n    display: none; }\n  md-slider[disabled] .md-sign {\n    display: none; }\n  md-slider[disabled] .md-thumb {\n    transform: scale(0.35); }\n  md-slider[disabled] .md-disabled-thumb {\n    display: block; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-slider.md-default-theme .md-track {\n    border-bottom: 1px solid #fff; } }\n\nmd-sidenav {\n  box-sizing: border-box;\n  position: absolute;\n  flex-direction: column;\n  z-index: 60;\n  width: 304px;\n  min-width: 304px;\n  max-width: 304px;\n  bottom: 0;\n  background-color: white;\n  overflow: auto; }\n  md-sidenav ul {\n    list-style: none; }\n  md-sidenav.md-closed {\n    display: none; }\n  md-sidenav.md-closed-add,\n  md-sidenav.md-closed-remove {\n    display: flex;\n    transition: 0.2s ease-in all; }\n  md-sidenav.md-closed-add.md-closed-add-active,\n  md-sidenav.md-closed-remove.md-closed-remove-active {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-sidenav.md-locked-open-add,\n  md-sidenav.md-locked-open-remove {\n    position: static;\n    display: flex;\n    transform: translate3d(0, 0, 0); }\n  md-sidenav.md-locked-open {\n    width: 304px;\n    min-width: 304px;\n    max-width: 304px; }\n  md-sidenav.md-locked-open,\n  md-sidenav.md-locked-open.md-closed,\n  md-sidenav.md-locked-open.md-closed.md-sidenav-left,\n  md-sidenav.md-locked-open.md-closed,\n  md-sidenav.md-locked-open.md-closed.md-sidenav-right,\n  md-sidenav.md-locked-open-remove.md-closed {\n    position: static;\n    display: flex;\n    transform: translate3d(0, 0, 0); }\n  md-sidenav.md-locked-open-remove-active {\n    transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    width: 0;\n    min-width: 0; }\n  md-sidenav.md-closed.md-locked-open-add {\n    width: 0;\n    min-width: 0;\n    transform: translate3d(0%, 0, 0); }\n  md-sidenav.md-closed.md-locked-open-add-active {\n    transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    width: 304px;\n    min-width: 304px;\n    transform: translate3d(0%, 0, 0); }\n\n.md-sidenav-backdrop.md-locked-open {\n  display: none; }\n\n.md-sidenav-left, md-sidenav {\n  left: 0;\n  top: 0;\n  transform: translate3d(0%, 0, 0); }\n  .md-sidenav-left.md-closed, md-sidenav.md-closed {\n    transform: translate3d(-100%, 0, 0); }\n\n.md-sidenav-right {\n  left: 100%;\n  top: 0;\n  transform: translate3d(-100%, 0, 0); }\n  .md-sidenav-right.md-closed {\n    transform: translate3d(0%, 0, 0); }\n\n@media (max-width: 360px) {\n  md-sidenav {\n    width: 85%; } }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-sidenav-left, md-sidenav {\n    border-right: 1px solid #fff; }\n  .md-sidenav-right {\n    border-left: 1px solid #fff; } }\n\n.md-sticky-clone {\n  z-index: 2;\n  top: 0;\n  left: 0;\n  right: 0;\n  position: absolute !important;\n  transform: translate3d(-9999px, -9999px, 0); }\n  .md-sticky-clone[sticky-state=\"active\"] {\n    transform: translate3d(0, 0, 0); }\n    .md-sticky-clone[sticky-state=\"active\"]:not(.md-sticky-no-effect) .md-subheader-inner {\n      animation: subheaderStickyHoverIn 0.3s ease-out both; }\n\n@keyframes subheaderStickyHoverIn {\n  0% {\n    box-shadow: 0 0 0 0 transparent; }\n  100% {\n    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16); } }\n\n@keyframes subheaderStickyHoverOut {\n  0% {\n    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16); }\n  100% {\n    box-shadow: 0 0 0 0 transparent; } }\n\n.md-subheader-wrapper:not(.md-sticky-no-effect) {\n  transition: 0.2s ease-out margin; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect) .md-subheader {\n    margin: 0; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect).md-sticky-clone {\n    z-index: 2; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect)[sticky-state=\"active\"] {\n    margin-top: -2px; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect):not(.md-sticky-clone)[sticky-prev-state=\"active\"] .md-subheader-inner:after {\n    animation: subheaderStickyHoverOut 0.3s ease-out both; }\n\n.md-subheader {\n  display: block;\n  font-size: 14px;\n  font-weight: 500;\n  line-height: 1em;\n  margin: 0 0 0 0;\n  margin-right: 16px;\n  position: relative; }\n  .md-subheader .md-subheader-inner {\n    display: block;\n    padding: 16px 0px 16px 16px; }\n  .md-subheader .md-subheader-content {\n    display: block;\n    z-index: 1;\n    position: relative; }\n\nmd-switch {\n  display: flex;\n  align-items: center;\n  margin: 15px;\n  white-space: nowrap;\n  cursor: pointer;\n  outline: none;\n  user-select: none; }\n  md-switch .md-container {\n    cursor: grab;\n    width: 36px;\n    height: 24px;\n    position: relative;\n    user-select: none;\n    margin-right: 8px; }\n  md-switch:not([disabled]) .md-dragging,\n  md-switch:not([disabled]).md-dragging .md-container {\n    cursor: grabbing; }\n  md-switch.md-focused:not([disabled]) .md-thumb:before {\n    left: -8px;\n    top: -8px;\n    right: -8px;\n    bottom: -8px; }\n  md-switch.md-focused:not([disabled]):not(.md-checked) .md-thumb:before {\n    background-color: rgba(0, 0, 0, 0.12); }\n  md-switch .md-label {\n    border-color: transparent;\n    border-width: 0; }\n  md-switch .md-bar {\n    left: 1px;\n    width: 34px;\n    top: 5px;\n    height: 14px;\n    border-radius: 8px;\n    position: absolute; }\n  md-switch .md-thumb-container {\n    top: 2px;\n    left: 0;\n    width: 16px;\n    position: absolute;\n    transform: translate3d(0, 0, 0);\n    z-index: 1; }\n  md-switch.md-checked .md-thumb-container {\n    transform: translate3d(100%, 0, 0); }\n  md-switch .md-thumb {\n    position: absolute;\n    margin: 0;\n    left: 0;\n    top: 0;\n    outline: none;\n    height: 20px;\n    width: 20px;\n    border-radius: 50%;\n    box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.098), 0px 1px 5px 0px rgba(0, 0, 0, 0.084); }\n    md-switch .md-thumb:before {\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n    md-switch .md-thumb .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: auto;\n      height: auto;\n      left: -20px;\n      top: -20px;\n      right: -20px;\n      bottom: -20px; }\n  md-switch:not(.md-dragging) .md-bar,\n  md-switch:not(.md-dragging) .md-thumb-container,\n  md-switch:not(.md-dragging) .md-thumb {\n    transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n    transition-property: transform, background-color; }\n  md-switch:not(.md-dragging) .md-bar,\n  md-switch:not(.md-dragging) .md-thumb {\n    transition-delay: 0.05s; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-switch.md-default-theme .md-bar {\n    background-color: #666; }\n  md-switch.md-default-theme.md-checked .md-bar {\n    background-color: #9E9E9E; }\n  md-switch.md-default-theme .md-thumb {\n    background-color: #fff; } }\n\n@keyframes md-tab-content-hide {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\nmd-tab-data {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: -1;\n  opacity: 0; }\n\nmd-tabs {\n  display: block;\n  margin: 0;\n  border-radius: 2px;\n  overflow: hidden;\n  position: relative;\n  flex-shrink: 0; }\n  md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {\n    min-height: 248px; }\n  md-tabs[md-align-tabs=\"bottom\"] md-tabs-wrapper {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    height: 48px; }\n  md-tabs[md-align-tabs=\"bottom\"] md-tabs-content-wrapper {\n    top: 0;\n    bottom: 48px; }\n  md-tabs.md-dynamic-height md-tabs-content-wrapper {\n    min-height: 0;\n    position: relative;\n    top: auto;\n    left: auto;\n    right: auto;\n    bottom: auto;\n    overflow: visible; }\n  md-tabs.md-dynamic-height md-tab-content.md-active {\n    position: relative; }\n  md-tabs[md-border-bottom] md-tabs-wrapper {\n    border-width: 0 0 1px;\n    border-style: solid; }\n  md-tabs[md-border-bottom]:not(.md-dynamic-height) md-tabs-content-wrapper {\n    top: 49px; }\n\nmd-tabs-wrapper {\n  display: block;\n  position: relative; }\n  md-tabs-wrapper md-prev-button, md-tabs-wrapper md-next-button {\n    height: 100%;\n    width: 32px;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    line-height: 1em;\n    z-index: 2;\n    cursor: pointer;\n    font-size: 16px;\n    background: transparent no-repeat center center;\n    transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1); }\n    md-tabs-wrapper md-prev-button:focus, md-tabs-wrapper md-next-button:focus {\n      outline: none; }\n    md-tabs-wrapper md-prev-button.md-disabled, md-tabs-wrapper md-next-button.md-disabled {\n      opacity: 0.25;\n      cursor: default; }\n    md-tabs-wrapper md-prev-button.ng-leave, md-tabs-wrapper md-next-button.ng-leave {\n      transition: none; }\n    md-tabs-wrapper md-prev-button md-icon, md-tabs-wrapper md-next-button md-icon {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate3d(-50%, -50%, 0); }\n  md-tabs-wrapper md-prev-button {\n    left: 0;\n    background-image: url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMjA4IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTUuNCw3LjQgMTQsNiA4LDEyIDE0LDE4IDE1LjQsMTYuNiAxMC44LDEyIAkJIiBzdHlsZT0iZmlsbDp3aGl0ZTsiLz4gPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+IDwvZz4gPC9nPiA8ZyBpZD0iR3JpZCIgZGlzcGxheT0ibm9uZSI+IDxnIGRpc3BsYXk9ImlubGluZSI+IDwvZz4gPC9nPiA8L3N2Zz4NCg==\"); }\n  md-tabs-wrapper md-next-button {\n    right: 0;\n    background-image: url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMzM2IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTAsNiA4LjYsNy40IDEzLjIsMTIgOC42LDE2LjYgMTAsMTggMTYsMTIgCQkiIHN0eWxlPSJmaWxsOndoaXRlOyIvPiA8cmVjdCBmaWxsPSJub25lIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4gPC9nPiA8L2c+IDxnIGlkPSJHcmlkIiBkaXNwbGF5PSJub25lIj4gPGcgZGlzcGxheT0iaW5saW5lIj4gPC9nPiA8L2c+IDwvc3ZnPg0K\"); }\n    md-tabs-wrapper md-next-button md-icon {\n      transform: translate3d(-50%, -50%, 0) rotate(180deg); }\n  md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper {\n    width: 100%;\n    display: flex;\n    flex-direction: row; }\n    md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {\n      flex-grow: 1; }\n\nmd-tabs-canvas {\n  position: relative;\n  overflow: hidden;\n  display: block;\n  height: 48px; }\n  md-tabs-canvas:after {\n    content: '';\n    display: table;\n    clear: both; }\n  md-tabs-canvas .md-dummy-wrapper {\n    position: absolute;\n    top: 0;\n    left: 0; }\n  md-tabs-canvas.md-paginated {\n    margin: 0 32px; }\n  md-tabs-canvas.md-center-tabs {\n    display: flex;\n    flex-direction: column;\n    text-align: center; }\n    md-tabs-canvas.md-center-tabs .md-tab {\n      float: none;\n      display: inline-block; }\n\nmd-pagination-wrapper {\n  height: 48px;\n  display: block;\n  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n  position: absolute;\n  width: 999999px;\n  left: 0;\n  transform: translate3d(0, 0, 0); }\n  md-pagination-wrapper:after {\n    content: '';\n    display: table;\n    clear: both; }\n  md-pagination-wrapper.md-center-tabs {\n    position: relative;\n    width: initial;\n    flex: 1;\n    margin: 0 auto; }\n\nmd-tabs-content-wrapper {\n  display: block;\n  position: absolute;\n  top: 48px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden; }\n\nmd-tab-content {\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  transform: translateX(0);\n  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n  overflow: auto; }\n  md-tab-content.md-no-scroll {\n    bottom: auto;\n    overflow: hidden; }\n  md-tab-content.ng-leave, md-tab-content.md-no-transition {\n    transition: none; }\n  md-tab-content.md-left {\n    transform: translateX(-100%);\n    animation: 1s md-tab-content-hide;\n    opacity: 0; }\n    md-tab-content.md-left * {\n      transition: visibility 0s linear;\n      transition-delay: 0.5s;\n      visibility: hidden; }\n  md-tab-content.md-right {\n    transform: translateX(100%);\n    animation: 1s md-tab-content-hide;\n    opacity: 0; }\n    md-tab-content.md-right * {\n      transition: visibility 0s linear;\n      transition-delay: 0.5s;\n      visibility: hidden; }\n  md-tab-content > div.ng-leave {\n    animation: 1s md-tab-content-hide; }\n\nmd-ink-bar {\n  position: absolute;\n  left: auto;\n  right: auto;\n  bottom: 0;\n  height: 2px; }\n  md-ink-bar.md-left {\n    transition: left 0.225s cubic-bezier(0.35, 0, 0.25, 1), right 0.5s cubic-bezier(0.35, 0, 0.25, 1); }\n  md-ink-bar.md-right {\n    transition: left 0.5s cubic-bezier(0.35, 0, 0.25, 1), right 0.225s cubic-bezier(0.35, 0, 0.25, 1); }\n\nmd-tab {\n  position: absolute;\n  z-index: -1;\n  left: -9999px; }\n\n.md-tab {\n  font-size: 14px;\n  text-align: center;\n  line-height: 24px;\n  padding: 12px 24px;\n  transition: background-color 0.35s cubic-bezier(0.35, 0, 0.25, 1);\n  cursor: pointer;\n  white-space: nowrap;\n  position: relative;\n  text-transform: uppercase;\n  float: left;\n  font-weight: 500;\n  box-sizing: border-box;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n  .md-tab.md-focused {\n    box-shadow: none;\n    outline: none; }\n  .md-tab.md-active {\n    cursor: default; }\n  .md-tab.md-disabled {\n    pointer-events: none;\n    touch-action: pan-y;\n    user-select: none;\n    -webkit-user-drag: none;\n    opacity: 0.5;\n    cursor: default; }\n  .md-tab.ng-leave {\n    transition: none; }\n\nmd-toolbar + md-tabs {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0; }\n\nmd-toast {\n  display: flex;\n  position: absolute;\n  z-index: 90;\n  box-sizing: border-box;\n  align-items: center;\n  min-height: 48px;\n  padding-left: 24px;\n  padding-right: 24px;\n  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n  border-radius: 2px;\n  font-size: 14px;\n  cursor: default;\n  height: auto;\n  max-height: 168px;\n  max-width: 100%;\n  overflow: hidden;\n  opacity: 1;\n  transform: translate3d(0, 0, 0) rotateZ(0deg);\n  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  /* Transition differently when swiping */ }\n  md-toast.md-capsule {\n    border-radius: 24px; }\n  md-toast.ng-leave-active {\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-toast.md-swipeleft,\n  md-toast.md-swiperight,\n  md-toast.md-swipeup,\n  md-toast.md-swipedown {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-toast.ng-enter {\n    transform: translate3d(0, 100%, 0);\n    opacity: 0; }\n    md-toast.ng-enter.md-top {\n      transform: translate3d(0, -100%, 0); }\n    md-toast.ng-enter.ng-enter-active {\n      transform: translate3d(0, 0, 0);\n      opacity: 1; }\n  md-toast.ng-leave.ng-leave-active {\n    opacity: 0;\n    transform: translate3d(0, 100%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-top {\n      transform: translate3d(0, -100%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-swipeleft {\n      transform: translate3d(-100%, 0%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-swiperight {\n      transform: translate3d(100%, 0%, 0); }\n  md-toast .md-action {\n    line-height: 19px;\n    margin-left: 24px;\n    cursor: pointer;\n    text-transform: uppercase;\n    float: right; }\n    md-toast .md-action.md-button {\n      min-width: 0; }\n\n@media (max-width: 600px) {\n  md-toast {\n    left: 0;\n    right: 0;\n    width: 100%;\n    max-width: 100%;\n    min-width: 0;\n    border-radius: 0;\n    bottom: 0; }\n    md-toast.md-top {\n      bottom: auto;\n      top: 0; } }\n\n@media (min-width: 600px) {\n  md-toast {\n    min-width: 288px;\n    /*\n     * When the toast doesn't take up the whole screen,\n     * make it rotate when the user swipes it away\n     */ }\n    md-toast.md-bottom {\n      bottom: 8px; }\n    md-toast.md-left {\n      left: 8px; }\n    md-toast.md-right {\n      right: 8px; }\n    md-toast.md-top {\n      top: 8px; }\n    md-toast.ng-leave.ng-leave-active.md-swipeleft {\n      transform: translate3d(-100%, 25%, 0) rotateZ(-15deg); }\n    md-toast.ng-leave.ng-leave-active.md-swiperight {\n      transform: translate3d(100%, 25%, 0) rotateZ(15deg); }\n    md-toast.ng-leave.ng-leave-active.md-top.md-swipeleft {\n      transform: translate3d(-100%, 0, 0) rotateZ(-15deg); }\n    md-toast.ng-leave.ng-leave-active.md-top.md-swiperight {\n      transform: translate3d(100%, 0, 0) rotateZ(15deg); } }\n\n@media (min-width: 1200px) {\n  md-toast {\n    max-width: 568px; } }\n\n@media screen and (-ms-high-contrast: active) {\n  md-toast {\n    border: 1px solid #fff; } }\n\nmd-toolbar {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  z-index: 2;\n  font-size: 20px;\n  min-height: 64px;\n  width: 100%; }\n  md-toolbar.md-whiteframe-z1-add, md-toolbar.md-whiteframe-z1-remove {\n    transition: box-shadow 0.5s linear; }\n  md-toolbar md-toolbar-filler {\n    width: 72px; }\n  md-toolbar *,\n  md-toolbar *:before,\n  md-toolbar *:after {\n    box-sizing: border-box; }\n  md-toolbar.md-tall {\n    height: 128px;\n    min-height: 128px;\n    max-height: 128px; }\n  md-toolbar.md-medium-tall {\n    height: 88px;\n    min-height: 88px;\n    max-height: 88px; }\n    md-toolbar.md-medium-tall .md-toolbar-tools {\n      height: 48px;\n      min-height: 48px;\n      max-height: 48px; }\n  md-toolbar > .md-indent {\n    margin-left: 64px; }\n  md-toolbar ~ md-content > md-list {\n    padding: 0; }\n    md-toolbar ~ md-content > md-list md-list-item:last-child md-divider {\n      display: none; }\n\n.md-toolbar-tools {\n  font-size: 20px;\n  letter-spacing: 0.005em;\n  box-sizing: border-box;\n  font-weight: 400;\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  max-height: 64px;\n  padding: 0 16px;\n  margin: 0; }\n  .md-toolbar-tools h1, .md-toolbar-tools h2, .md-toolbar-tools h3 {\n    font-size: inherit;\n    font-weight: inherit;\n    margin: inherit; }\n  .md-toolbar-tools a {\n    color: inherit;\n    text-decoration: none; }\n  .md-toolbar-tools .fill-height {\n    display: flex;\n    align-items: center; }\n  .md-toolbar-tools .md-button {\n    margin-top: 0;\n    margin-bottom: 0; }\n  .md-toolbar-tools > .md-button:first-child {\n    margin-left: -8px; }\n  .md-toolbar-tools > .md-button:last-child {\n    margin-right: -8px; }\n  .md-toolbar-tools > md-menu:last-child {\n    margin-right: -8px; }\n    .md-toolbar-tools > md-menu:last-child > .md-button {\n      margin-right: 0; }\n  @media screen and (-ms-high-contrast: active) {\n    .md-toolbar-tools {\n      border-bottom: 1px solid #fff; } }\n\n@media only screen and (min-width: 0) and (max-width: 600px) and (orientation: portrait) {\n  md-toolbar {\n    min-height: 56px; }\n  .md-toolbar-tools {\n    height: 56px;\n    max-height: 56px; } }\n\n@media only screen and (min-width: 0) and (max-width: 600px) and (orientation: landscape) {\n  md-toolbar {\n    min-height: 48px; }\n  .md-toolbar-tools {\n    height: 48px;\n    max-height: 48px; } }\n\nmd-tooltip {\n  position: absolute;\n  z-index: 100;\n  overflow: hidden;\n  pointer-events: none;\n  border-radius: 4px;\n  font-weight: 500;\n  font-size: 14px; }\n  @media screen and (min-width: 600px) {\n    md-tooltip {\n      font-size: 10px; } }\n  md-tooltip .md-background {\n    position: absolute;\n    border-radius: 50%;\n    transform: translate(-50%, -50%) scale(0);\n    opacity: 1; }\n    md-tooltip .md-background.md-show-add {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transform: translate(-50%, -50%) scale(0);\n      opacity: 0; }\n    md-tooltip .md-background.md-show, md-tooltip .md-background.md-show-add-active {\n      transform: translate(-50%, -50%) scale(1);\n      opacity: 1; }\n    md-tooltip .md-background.md-show-remove {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n      md-tooltip .md-background.md-show-remove.md-show-remove-active {\n        transform: translate(-50%, -50%) scale(0);\n        opacity: 0; }\n  md-tooltip .md-content {\n    position: relative;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    background: transparent;\n    opacity: 0;\n    height: 32px;\n    line-height: 32px;\n    padding-left: 16px;\n    padding-right: 16px; }\n    @media screen and (min-width: 600px) {\n      md-tooltip .md-content {\n        height: 22px;\n        line-height: 22px;\n        padding-left: 8px;\n        padding-right: 8px; } }\n    md-tooltip .md-content.md-show-add {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      opacity: 0; }\n    md-tooltip .md-content.md-show, md-tooltip .md-content.md-show-add-active {\n      opacity: 1; }\n    md-tooltip .md-content.md-show-remove {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n      md-tooltip .md-content.md-show-remove.md-show-remove-active {\n        opacity: 0; }\n  md-tooltip.md-hide {\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-tooltip.md-show {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    pointer-events: auto;\n    transform: translate3d(0, 0, 0); }\n\n.md-virtual-repeat-container {\n  box-sizing: border-box;\n  display: block;\n  margin: 0;\n  overflow: hidden;\n  padding: 0;\n  position: relative; }\n  .md-virtual-repeat-container .md-virtual-repeat-scroller {\n    bottom: 0;\n    box-sizing: border-box;\n    left: 0;\n    margin: 0;\n    overflow-x: hidden;\n    padding: 0;\n    position: absolute;\n    right: 0;\n    top: 0; }\n  .md-virtual-repeat-container .md-virtual-repeat-sizer {\n    box-sizing: border-box;\n    height: 1px;\n    display: inline-block;\n    margin: 0;\n    padding: 0;\n    width: 1px; }\n  .md-virtual-repeat-container .md-virtual-repeat-offsetter {\n    box-sizing: border-box;\n    left: 0;\n    margin: 0;\n    padding: 0;\n    position: absolute;\n    right: 16px;\n    top: 0; }\n\n.md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-scroller {\n  overflow-x: auto;\n  overflow-y: hidden; }\n\n.md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-offsetter {\n  bottom: 16px;\n  right: auto;\n  white-space: nowrap; }\n\n.md-whiteframe-z1 {\n  box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.14), 0px 2px 2px 0px rgba(0, 0, 0, 0.098), 0px 1px 5px 0px rgba(0, 0, 0, 0.084); }\n\n.md-whiteframe-z2 {\n  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.14), 0 4px 5px 0 rgba(0, 0, 0, 0.098), 0 1px 10px 0 rgba(0, 0, 0, 0.084); }\n\n.md-whiteframe-z3 {\n  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.14), 0px 6px 10px 0px rgba(0, 0, 0, 0.098), 0px 1px 18px 0px rgba(0, 0, 0, 0.084); }\n\n.md-whiteframe-z4 {\n  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.14), 0px 8px 10px 1px rgba(0, 0, 0, 0.098), 0px 3px 14px 2px rgba(0, 0, 0, 0.084); }\n\n.md-whiteframe-z5 {\n  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.14), 0px 16px 24px 2px rgba(0, 0, 0, 0.098), 0px 6px 30px 5px rgba(0, 0, 0, 0.084); }\n\n@media screen and (-ms-high-contrast: active) {\n  md-whiteframe {\n    border: 1px solid #fff; } }\n\nhtml,\nbody {\n  color: #fff;\n  background: #B71C1C; }\n\nmd-content,\n.md-subheader {\n  background-color: transparent;\n  color: #fff; }\n\nmd-list md-list-item button.md-button:not([disabled]):hover {\n  background-color: #F57F17; }\n\nmd-checkbox .md-icon {\n  border-color: #fff; }\n\na.md-button.md-accent.md-raised,\na.md-button.md-accent.md-fab,\n.md-button.md-accent.md-raised,\n.md-button.md-accent.md-fab {\n  color: #fff; }\n\n.md-fab ng-md-icon,\nmd-menu-item ng-md-icon {\n  position: relative;\n  top: 4px; }\n\nmd-input-container .md-input {\n  color: #fff; }\n\nmd-dialog md-input-container .md-input,\nmd-dialog .md-actions .md-button {\n  color: #333; }\n\nmd-menu-content {\n  padding: 0; }\n\nmd-menu-item {\n  min-height: 35px;\n  height: 35px; }\n\n.md-button ng-md-icon {\n  position: relative;\n  top: 3px; }\n\n.incoming-toggle {\n  position: absolute;\n  bottom: 0;\n  right: 0; }\n\n.edit-button {\n  min-height: 0;\n  min-width: 0;\n  margin: 0;\n  padding: 0;\n  line-height: 1.2em; }\n\n.add-button {\n  float: right;\n  position: relative;\n  top: -12px; }\n\n.contacts {\n  background-color: #C62828; }\n  .contacts .contact-list h3, .contacts .contact-list h4, .contacts .contact-list p {\n    margin: 0; }\n\n.scripts {\n  background-color: #D32F2F; }\n  .scripts h4 {\n    margin: 0; }\n  .scripts p {\n    margin-top: 0;\n    line-height: 1.2em; }\n\n.outgoing {\n  background-color: #E53935; }\n  .outgoing .md-button {\n    float: right; }\n", ""]);
+	exports.push([module.id, "html, body {\n  height: 100%;\n  color: rgba(0, 0, 0, 0.87);\n  background: white;\n  position: relative; }\n\nbody {\n  margin: 0;\n  padding: 0; }\n\n[tabindex='-1']:focus {\n  outline: none; }\n\n.inset {\n  padding: 10px; }\n\nbutton.md-no-style {\n  font-weight: normal;\n  background-color: inherit;\n  text-align: left;\n  border: none;\n  padding: 0;\n  margin: 0; }\n\nselect,\nbutton,\ntextarea,\ninput {\n  vertical-align: baseline; }\n\ninput[type=\"reset\"],\ninput[type=\"submit\"],\nhtml input[type=\"button\"],\nbutton {\n  cursor: pointer;\n  -webkit-appearance: button; }\n  input[type=\"reset\"][disabled],\n  input[type=\"submit\"][disabled],\n  html input[type=\"button\"][disabled],\n  button[disabled] {\n    cursor: default; }\n\ntextarea {\n  vertical-align: top;\n  overflow: auto; }\n\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  box-sizing: content-box;\n  -webkit-box-sizing: content-box; }\n  input[type=\"search\"]::-webkit-search-decoration,\n  input[type=\"search\"]::-webkit-search-cancel-button {\n    -webkit-appearance: none; }\n\n.md-visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  text-transform: none;\n  width: 1px; }\n\n.md-shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  border-radius: inherit;\n  pointer-events: none; }\n\n.md-shadow-bottom-z-1 {\n  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n\n.md-shadow-bottom-z-2 {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }\n\n.md-shadow-animated.md-shadow {\n  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }\n\n/*\n * A container inside of a rippling element (eg a button),\n * which contains all of the individual ripples\n */\n.md-ripple-container {\n  pointer-events: none;\n  position: absolute;\n  overflow: hidden;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  transition: all 0.55s cubic-bezier(0.25, 0.8, 0.25, 1); }\n\n.md-ripple {\n  position: absolute;\n  transform: translate(-50%, -50%) scale(0);\n  transform-origin: 50% 50%;\n  opacity: 0;\n  border-radius: 50%; }\n  .md-ripple.md-ripple-placed {\n    transition: margin 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), border 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), height 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-ripple.md-ripple-scaled {\n    transform: translate(-50%, -50%) scale(1); }\n  .md-ripple.md-ripple-active, .md-ripple.md-ripple-full, .md-ripple.md-ripple-visible {\n    opacity: 0.20; }\n\n.md-padding {\n  padding: 8px; }\n\n.md-margin {\n  margin: 8px; }\n\n.md-scroll-mask {\n  position: absolute;\n  background-color: transparent;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0; }\n  .md-scroll-mask > .md-scroll-mask-bar {\n    display: block;\n    position: absolute;\n    background-color: #fafafa;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    z-index: 65;\n    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.3); }\n\n@media (min-width: 600px) {\n  .md-padding {\n    padding: 16px; } }\n\nhtml, body {\n  -webkit-tap-highlight-color: transparent;\n  -webkit-touch-callout: none;\n  min-height: 100%;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n/************\n * Headings\n ************/\n.md-display-4 {\n  font-size: 112px;\n  font-weight: 300;\n  letter-spacing: -0.010em;\n  line-height: 112px; }\n\n.md-display-3 {\n  font-size: 56px;\n  font-weight: 400;\n  letter-spacing: -0.005em;\n  line-height: 56px; }\n\n.md-display-2 {\n  font-size: 45px;\n  font-weight: 400;\n  line-height: 64px; }\n\n.md-display-1 {\n  font-size: 34px;\n  font-weight: 400;\n  line-height: 40px; }\n\n.md-headline {\n  font-size: 24px;\n  font-weight: 400;\n  line-height: 32px; }\n\n.md-title {\n  font-size: 20px;\n  font-weight: 500;\n  letter-spacing: 0.005em; }\n\n.md-subhead {\n  font-size: 16px;\n  font-weight: 400;\n  letter-spacing: 0.010em;\n  line-height: 24px; }\n\n/************\n * Body Copy\n ************/\n.md-body-1 {\n  font-size: 14px;\n  font-weight: 400;\n  letter-spacing: 0.010em;\n  line-height: 20px; }\n\n.md-body-2 {\n  font-size: 14px;\n  font-weight: 500;\n  letter-spacing: 0.010em;\n  line-height: 24px; }\n\n.md-caption {\n  font-size: 12px;\n  letter-spacing: 0.020em; }\n\n.md-button {\n  letter-spacing: 0.010em; }\n\n/************\n * Defaults\n ************/\nbutton,\nselect,\nhtml,\ntextarea,\ninput {\n  font-family: Roboto, \"Helvetica Neue\", sans-serif; }\n\nselect,\nbutton,\ntextarea,\ninput {\n  font-size: 100%; }\n\n/*\n*\n*  Responsive attributes\n*\n*  References:\n*  1) https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties#flex\n*  2) https://css-tricks.com/almanac/properties/f/flex/\n*  3) https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items\n*  4) http://godban.com.ua/projects/flexgrid\n*\n*/\n@-moz-document url-prefix() {\n  .layout-fill, [layout-fill] {\n    margin: 0;\n    width: 100%;\n    min-height: 100%;\n    height: 100%; } }\n\n/*\n *  Apply Mixins to create Layout/Flexbox styles\n *\n */\n.flex-order, [flex-order] {\n  order: 0; }\n\n.flex-order-0, [flex-order=\"0\"] {\n  order: 0; }\n\n.flex-order-1, [flex-order=\"1\"] {\n  order: 1; }\n\n.flex-order-2, [flex-order=\"2\"] {\n  order: 2; }\n\n.flex-order-3, [flex-order=\"3\"] {\n  order: 3; }\n\n.flex-order-4, [flex-order=\"4\"] {\n  order: 4; }\n\n.flex-order-5, [flex-order=\"5\"] {\n  order: 5; }\n\n.flex-order-6, [flex-order=\"6\"] {\n  order: 6; }\n\n.flex-order-7, [flex-order=\"7\"] {\n  order: 7; }\n\n.flex-order-8, [flex-order=\"8\"] {\n  order: 8; }\n\n.flex-order-9, [flex-order=\"9\"] {\n  order: 9; }\n\n.flex-order-10, [flex-order=\"10\"] {\n  order: 10; }\n\n.flex-order-11, [flex-order=\"11\"] {\n  order: 11; }\n\n.flex-order-12, [flex-order=\"12\"] {\n  order: 12; }\n\n.flex-order-13, [flex-order=\"13\"] {\n  order: 13; }\n\n.flex-order-14, [flex-order=\"14\"] {\n  order: 14; }\n\n.flex-order-15, [flex-order=\"15\"] {\n  order: 15; }\n\n.flex-order-16, [flex-order=\"16\"] {\n  order: 16; }\n\n.flex-order-17, [flex-order=\"17\"] {\n  order: 17; }\n\n.flex-order-18, [flex-order=\"18\"] {\n  order: 18; }\n\n.flex-order-19, [flex-order=\"19\"] {\n  order: 19; }\n\n.offset-0, [offset=\"0\"] {\n  margin-left: 0%; }\n\n.offset-5, [offset=\"5\"] {\n  margin-left: 5%; }\n\n.offset-10, [offset=\"10\"] {\n  margin-left: 10%; }\n\n.offset-15, [offset=\"15\"] {\n  margin-left: 15%; }\n\n.offset-20, [offset=\"20\"] {\n  margin-left: 20%; }\n\n.offset-25, [offset=\"25\"] {\n  margin-left: 25%; }\n\n.offset-30, [offset=\"30\"] {\n  margin-left: 30%; }\n\n.offset-35, [offset=\"35\"] {\n  margin-left: 35%; }\n\n.offset-40, [offset=\"40\"] {\n  margin-left: 40%; }\n\n.offset-45, [offset=\"45\"] {\n  margin-left: 45%; }\n\n.offset-50, [offset=\"50\"] {\n  margin-left: 50%; }\n\n.offset-55, [offset=\"55\"] {\n  margin-left: 55%; }\n\n.offset-60, [offset=\"60\"] {\n  margin-left: 60%; }\n\n.offset-65, [offset=\"65\"] {\n  margin-left: 65%; }\n\n.offset-70, [offset=\"70\"] {\n  margin-left: 70%; }\n\n.offset-75, [offset=\"75\"] {\n  margin-left: 75%; }\n\n.offset-80, [offset=\"80\"] {\n  margin-left: 80%; }\n\n.offset-85, [offset=\"85\"] {\n  margin-left: 85%; }\n\n.offset-90, [offset=\"90\"] {\n  margin-left: 90%; }\n\n.offset-95, [offset=\"95\"] {\n  margin-left: 95%; }\n\n.offset-33, [offset-=\"33\"], .offset-34, [offset-=\"34\"] {\n  margin-left: 33%; }\n\n.offset-66, [offset-=\"66\"], .offset-67, [offset-=\"67\"] {\n  margin-left: 67%; }\n\n.layout-align-center, .layout-align-center-center,\n.layout-align-center-start,\n.layout-align-center-end,\n[layout-align=\"center\"],\n[layout-align=\"center center\"],\n[layout-align=\"center start\"],\n[layout-align=\"center end\"] {\n  justify-content: center; }\n\n.layout-align-end, .layout-align-end-center,\n.layout-align-end-start,\n.layout-align-end-end,\n[layout-align=\"end\"], [layout-align=\"end center\"],\n[layout-align=\"end start\"],\n[layout-align=\"end end\"] {\n  justify-content: flex-end; }\n\n.layout-align-space-around, .layout-align-space-around-center,\n.layout-align-space-around-start,\n.layout-align-space-around-end,\n[layout-align=\"space-around\"], [layout-align=\"space-around center\"],\n[layout-align=\"space-around start\"],\n[layout-align=\"space-around end\"] {\n  justify-content: space-around; }\n\n.layout-align-space-between, .layout-align-space-between-center,\n.layout-align-space-between-start,\n.layout-align-space-between-end,\n[layout-align=\"space-between\"], [layout-align=\"space-between center\"],\n[layout-align=\"space-between start\"],\n[layout-align=\"space-between end\"] {\n  justify-content: space-between; }\n\n.layout-align-center-start,\n.layout-align-start-start,\n.layout-align-end-start,\n.layout-align-space-between-start,\n.layout-align-space-around-start,\n[layout-align=\"center start\"],\n[layout-align=\"start start\"],\n[layout-align=\"end start\"],\n[layout-align=\"space-between start\"],\n[layout-align=\"space-around start\"] {\n  align-items: flex-start; }\n\n.layout-align-center-center,\n.layout-align-start-center,\n.layout-align-end-center,\n.layout-align-space-between-center,\n.layout-align-space-around-center,\n[layout-align=\"center center\"],\n[layout-align=\"start center\"],\n[layout-align=\"end center\"],\n[layout-align=\"space-between center\"],\n[layout-align=\"space-around center\"] {\n  align-items: center;\n  max-width: 100%; }\n\n.layout-align-center-end,\n.layout-align-start-end,\n.layout-align-end-end,\n.layout-align-space-between-end,\n.layout-align-space-around-end,\n[layout-align=\"center end\"],\n[layout-align=\"start end\"],\n[layout-align=\"end end\"],\n[layout-align=\"space-between end\"],\n[layout-align=\"space-around end\"] {\n  align-items: flex-end; }\n\n.flex {\n  box-sizing: border-box; }\n\n.flex {\n  flex: 1; }\n\n.flex-grow {\n  flex: 1 1 100%; }\n\n.flex-initial {\n  flex: 0 1 auto; }\n\n.flex-auto {\n  flex: 1 1 auto; }\n\n.flex-none {\n  flex: 0 0 auto; }\n\n.flex-0 {\n  box-sizing: border-box;\n  flex: 0 0 0%; }\n\n.md-layout-row > .flex-0,\n.md-layout-row > .flex-0 {\n  flex: 0 0 0%;\n  max-width: 0%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-0,\n.md-layout-column > .flex-0 {\n  flex: 0 0 0%;\n  max-width: 100%;\n  max-height: 0%; }\n\n.flex-5 {\n  box-sizing: border-box;\n  flex: 0 0 5%; }\n\n.md-layout-row > .flex-5,\n.md-layout-row > .flex-5 {\n  flex: 0 0 5%;\n  max-width: 5%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-5,\n.md-layout-column > .flex-5 {\n  flex: 0 0 5%;\n  max-width: 100%;\n  max-height: 5%; }\n\n.flex-10 {\n  box-sizing: border-box;\n  flex: 0 0 10%; }\n\n.md-layout-row > .flex-10,\n.md-layout-row > .flex-10 {\n  flex: 0 0 10%;\n  max-width: 10%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-10,\n.md-layout-column > .flex-10 {\n  flex: 0 0 10%;\n  max-width: 100%;\n  max-height: 10%; }\n\n.flex-15 {\n  box-sizing: border-box;\n  flex: 0 0 15%; }\n\n.md-layout-row > .flex-15,\n.md-layout-row > .flex-15 {\n  flex: 0 0 15%;\n  max-width: 15%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-15,\n.md-layout-column > .flex-15 {\n  flex: 0 0 15%;\n  max-width: 100%;\n  max-height: 15%; }\n\n.flex-20 {\n  box-sizing: border-box;\n  flex: 0 0 20%; }\n\n.md-layout-row > .flex-20,\n.md-layout-row > .flex-20 {\n  flex: 0 0 20%;\n  max-width: 20%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-20,\n.md-layout-column > .flex-20 {\n  flex: 0 0 20%;\n  max-width: 100%;\n  max-height: 20%; }\n\n.flex-25 {\n  box-sizing: border-box;\n  flex: 0 0 25%; }\n\n.md-layout-row > .flex-25,\n.md-layout-row > .flex-25 {\n  flex: 0 0 25%;\n  max-width: 25%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-25,\n.md-layout-column > .flex-25 {\n  flex: 0 0 25%;\n  max-width: 100%;\n  max-height: 25%; }\n\n.flex-30 {\n  box-sizing: border-box;\n  flex: 0 0 30%; }\n\n.md-layout-row > .flex-30,\n.md-layout-row > .flex-30 {\n  flex: 0 0 30%;\n  max-width: 30%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-30,\n.md-layout-column > .flex-30 {\n  flex: 0 0 30%;\n  max-width: 100%;\n  max-height: 30%; }\n\n.flex-35 {\n  box-sizing: border-box;\n  flex: 0 0 35%; }\n\n.md-layout-row > .flex-35,\n.md-layout-row > .flex-35 {\n  flex: 0 0 35%;\n  max-width: 35%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-35,\n.md-layout-column > .flex-35 {\n  flex: 0 0 35%;\n  max-width: 100%;\n  max-height: 35%; }\n\n.flex-40 {\n  box-sizing: border-box;\n  flex: 0 0 40%; }\n\n.md-layout-row > .flex-40,\n.md-layout-row > .flex-40 {\n  flex: 0 0 40%;\n  max-width: 40%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-40,\n.md-layout-column > .flex-40 {\n  flex: 0 0 40%;\n  max-width: 100%;\n  max-height: 40%; }\n\n.flex-45 {\n  box-sizing: border-box;\n  flex: 0 0 45%; }\n\n.md-layout-row > .flex-45,\n.md-layout-row > .flex-45 {\n  flex: 0 0 45%;\n  max-width: 45%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-45,\n.md-layout-column > .flex-45 {\n  flex: 0 0 45%;\n  max-width: 100%;\n  max-height: 45%; }\n\n.flex-50 {\n  box-sizing: border-box;\n  flex: 0 0 50%; }\n\n.md-layout-row > .flex-50,\n.md-layout-row > .flex-50 {\n  flex: 0 0 50%;\n  max-width: 50%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-50,\n.md-layout-column > .flex-50 {\n  flex: 0 0 50%;\n  max-width: 100%;\n  max-height: 50%; }\n\n.flex-55 {\n  box-sizing: border-box;\n  flex: 0 0 55%; }\n\n.md-layout-row > .flex-55,\n.md-layout-row > .flex-55 {\n  flex: 0 0 55%;\n  max-width: 55%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-55,\n.md-layout-column > .flex-55 {\n  flex: 0 0 55%;\n  max-width: 100%;\n  max-height: 55%; }\n\n.flex-60 {\n  box-sizing: border-box;\n  flex: 0 0 60%; }\n\n.md-layout-row > .flex-60,\n.md-layout-row > .flex-60 {\n  flex: 0 0 60%;\n  max-width: 60%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-60,\n.md-layout-column > .flex-60 {\n  flex: 0 0 60%;\n  max-width: 100%;\n  max-height: 60%; }\n\n.flex-65 {\n  box-sizing: border-box;\n  flex: 0 0 65%; }\n\n.md-layout-row > .flex-65,\n.md-layout-row > .flex-65 {\n  flex: 0 0 65%;\n  max-width: 65%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-65,\n.md-layout-column > .flex-65 {\n  flex: 0 0 65%;\n  max-width: 100%;\n  max-height: 65%; }\n\n.flex-70 {\n  box-sizing: border-box;\n  flex: 0 0 70%; }\n\n.md-layout-row > .flex-70,\n.md-layout-row > .flex-70 {\n  flex: 0 0 70%;\n  max-width: 70%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-70,\n.md-layout-column > .flex-70 {\n  flex: 0 0 70%;\n  max-width: 100%;\n  max-height: 70%; }\n\n.flex-75 {\n  box-sizing: border-box;\n  flex: 0 0 75%; }\n\n.md-layout-row > .flex-75,\n.md-layout-row > .flex-75 {\n  flex: 0 0 75%;\n  max-width: 75%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-75,\n.md-layout-column > .flex-75 {\n  flex: 0 0 75%;\n  max-width: 100%;\n  max-height: 75%; }\n\n.flex-80 {\n  box-sizing: border-box;\n  flex: 0 0 80%; }\n\n.md-layout-row > .flex-80,\n.md-layout-row > .flex-80 {\n  flex: 0 0 80%;\n  max-width: 80%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-80,\n.md-layout-column > .flex-80 {\n  flex: 0 0 80%;\n  max-width: 100%;\n  max-height: 80%; }\n\n.flex-85 {\n  box-sizing: border-box;\n  flex: 0 0 85%; }\n\n.md-layout-row > .flex-85,\n.md-layout-row > .flex-85 {\n  flex: 0 0 85%;\n  max-width: 85%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-85,\n.md-layout-column > .flex-85 {\n  flex: 0 0 85%;\n  max-width: 100%;\n  max-height: 85%; }\n\n.flex-90 {\n  box-sizing: border-box;\n  flex: 0 0 90%; }\n\n.md-layout-row > .flex-90,\n.md-layout-row > .flex-90 {\n  flex: 0 0 90%;\n  max-width: 90%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-90,\n.md-layout-column > .flex-90 {\n  flex: 0 0 90%;\n  max-width: 100%;\n  max-height: 90%; }\n\n.flex-95 {\n  box-sizing: border-box;\n  flex: 0 0 95%; }\n\n.md-layout-row > .flex-95,\n.md-layout-row > .flex-95 {\n  flex: 0 0 95%;\n  max-width: 95%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-95,\n.md-layout-column > .flex-95 {\n  flex: 0 0 95%;\n  max-width: 100%;\n  max-height: 95%; }\n\n.flex-100 {\n  box-sizing: border-box;\n  flex: 0 0 100%; }\n\n.md-layout-row > .flex-100,\n.md-layout-row > .flex-100 {\n  flex: 0 0 100%;\n  max-width: 100%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-100,\n.md-layout-column > .flex-100 {\n  flex: 0 0 100%;\n  max-width: 100%;\n  max-height: 100%; }\n\n.md-layout-row > .flex-33, .md-layout-row > .flex-34, .md-layout-row > .flex-33, .md-layout-row > .flex-34 {\n  flex: 0 0 33%;\n  max-width: 33%;\n  max-height: 100%; }\n\n.md-layout-row > .flex-66, .md-layout-row > .flex-67, .md-layout-row > .flex-66, .md-layout-row > .flex-67 {\n  flex: 0 0 67%;\n  max-width: 67%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-33, .md-layout-column > .flex-34, .md-layout-column > .flex-33, .md-layout-column > .flex-34 {\n  flex: 0 0 33%;\n  max-width: 100%;\n  max-height: 33%; }\n\n.md-layout-column > .flex-66, .md-layout-column > .flex-67, .md-layout-column > .flex-66, .md-layout-column > .flex-67 {\n  flex: 0 0 67%;\n  max-width: 100%;\n  max-height: 67%; }\n\n.md-layout, .md-layout-column, .md-layout-row {\n  box-sizing: border-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex; }\n\n.md-layout-column {\n  flex-direction: column; }\n\n.md-layout-row {\n  flex-direction: row; }\n\n.layout-padding > .flex-sm, .layout-padding > .flex-lt-md {\n  padding: 4px; }\n\n.layout-padding,\n.layout-padding > .flex,\n.layout-padding > .flex-gt-sm,\n.layout-padding > .flex-md,\n.layout-padding > .flex-lt-lg {\n  padding: 8px; }\n\n.layout-padding > .flex-gt-md,\n.layout-padding > .flex-lg {\n  padding: 16px; }\n\n.layout-margin > .flex-sm,\n.layout-margin > .flex-lt-md {\n  margin: 4px; }\n\n.layout-margin,\n.layout-margin > .flex,\n.layout-margin > .flex-gt-sm,\n.layout-margin > .flex-md,\n.layout-margin > .flex-lt-lg {\n  margin: 8px; }\n\n.layout-margin > .flex-gt-md,\n.layout-margin > .flex-lg {\n  margin: 16px; }\n\n.layout-wrap, [layout-wrap] {\n  flex-wrap: wrap; }\n\n.layout-nowrap, [layout-nowrap] {\n  flex-wrap: nowrap; }\n\n.layout-fill, [layout-fill] {\n  margin: 0;\n  width: 100%;\n  min-height: 100%;\n  height: 100%; }\n\n/**\n * `hide-gt-sm show-gt-lg` should hide from 600px to 1200px\n * `show-md hide-gt-sm` should show from 0px to 960px and hide at >960px\n * `hide-gt-md show-gt-sm` should show everywhere (show overrides hide)`\n *\n *  hide means hide everywhere\n *  Sizes:\n *         0    <= size < 600  Phone\n *         600  <= size < 960  Tablet\n *         960  <= size < 1200 Tablet-Landscape\n */\n@media (max-width: 599px) {\n  .hide-sm:not(.show-sm):not(.show), .hide:not(.show-sm):not(.show) {\n    display: none; }\n  .flex-order-sm-0, [flex-order-sm=\"0\"] {\n    order: 0; }\n  .flex-order-sm-1, [flex-order-sm=\"1\"] {\n    order: 1; }\n  .flex-order-sm-2, [flex-order-sm=\"2\"] {\n    order: 2; }\n  .flex-order-sm-3, [flex-order-sm=\"3\"] {\n    order: 3; }\n  .flex-order-sm-4, [flex-order-sm=\"4\"] {\n    order: 4; }\n  .flex-order-sm-5, [flex-order-sm=\"5\"] {\n    order: 5; }\n  .flex-order-sm-6, [flex-order-sm=\"6\"] {\n    order: 6; }\n  .flex-order-sm-7, [flex-order-sm=\"7\"] {\n    order: 7; }\n  .flex-order-sm-8, [flex-order-sm=\"8\"] {\n    order: 8; }\n  .flex-order-sm-9, [flex-order-sm=\"9\"] {\n    order: 9; }\n  .flex-order-sm-10, [flex-order-sm=\"10\"] {\n    order: 10; }\n  .flex-order-sm-11, [flex-order-sm=\"11\"] {\n    order: 11; }\n  .flex-order-sm-12, [flex-order-sm=\"12\"] {\n    order: 12; }\n  .flex-order-sm-13, [flex-order-sm=\"13\"] {\n    order: 13; }\n  .flex-order-sm-14, [flex-order-sm=\"14\"] {\n    order: 14; }\n  .flex-order-sm-15, [flex-order-sm=\"15\"] {\n    order: 15; }\n  .flex-order-sm-16, [flex-order-sm=\"16\"] {\n    order: 16; }\n  .flex-order-sm-17, [flex-order-sm=\"17\"] {\n    order: 17; }\n  .flex-order-sm-18, [flex-order-sm=\"18\"] {\n    order: 18; }\n  .flex-order-sm-19, [flex-order-sm=\"19\"] {\n    order: 19; }\n  .offset-sm-0, [offset-sm=\"0\"] {\n    margin-left: 0%; }\n  .offset-sm-5, [offset-sm=\"5\"] {\n    margin-left: 5%; }\n  .offset-sm-10, [offset-sm=\"10\"] {\n    margin-left: 10%; }\n  .offset-sm-15, [offset-sm=\"15\"] {\n    margin-left: 15%; }\n  .offset-sm-20, [offset-sm=\"20\"] {\n    margin-left: 20%; }\n  .offset-sm-25, [offset-sm=\"25\"] {\n    margin-left: 25%; }\n  .offset-sm-30, [offset-sm=\"30\"] {\n    margin-left: 30%; }\n  .offset-sm-35, [offset-sm=\"35\"] {\n    margin-left: 35%; }\n  .offset-sm-40, [offset-sm=\"40\"] {\n    margin-left: 40%; }\n  .offset-sm-45, [offset-sm=\"45\"] {\n    margin-left: 45%; }\n  .offset-sm-50, [offset-sm=\"50\"] {\n    margin-left: 50%; }\n  .offset-sm-55, [offset-sm=\"55\"] {\n    margin-left: 55%; }\n  .offset-sm-60, [offset-sm=\"60\"] {\n    margin-left: 60%; }\n  .offset-sm-65, [offset-sm=\"65\"] {\n    margin-left: 65%; }\n  .offset-sm-70, [offset-sm=\"70\"] {\n    margin-left: 70%; }\n  .offset-sm-75, [offset-sm=\"75\"] {\n    margin-left: 75%; }\n  .offset-sm-80, [offset-sm=\"80\"] {\n    margin-left: 80%; }\n  .offset-sm-85, [offset-sm=\"85\"] {\n    margin-left: 85%; }\n  .offset-sm-90, [offset-sm=\"90\"] {\n    margin-left: 90%; }\n  .offset-sm-95, [offset-sm=\"95\"] {\n    margin-left: 95%; }\n  .offset-sm-33, [offset-sm=\"33\"], .offset-sm-34, [offset-sm=\"34\"] {\n    margin-left: 33%; }\n  .offset-sm-66, [offset-sm=\"66\"], .offset-sm-67, [offset-sm=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-sm-center, .layout-align-sm-center-center,\n  .layout-align-sm-center-start,\n  .layout-align-sm-center-end,\n  [layout-align-sm=\"center\"],\n  [layout-align-sm=\"center center\"],\n  [layout-align-sm=\"center start\"],\n  [layout-align-sm=\"center end\"] {\n    justify-content: center; }\n  .layout-align-sm-end, .layout-align-sm-end-center,\n  .layout-align-sm-end-start,\n  .layout-align-sm-end-end,\n  [layout-align-sm=\"end\"], [layout-align-sm=\"end center\"],\n  [layout-align-sm=\"end start\"],\n  [layout-align-sm=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-sm-space-around, .layout-align-sm-space-around-center,\n  .layout-align-sm-space-around-start,\n  .layout-align-sm-space-around-end,\n  [layout-align-sm=\"space-around\"], [layout-align-sm=\"space-around center\"],\n  [layout-align-sm=\"space-around start\"],\n  [layout-align-sm=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-sm-space-between, .layout-align-sm-space-between-center,\n  .layout-align-sm-space-between-start,\n  .layout-align-sm-space-between-end,\n  [layout-align-sm=\"space-between\"], [layout-align-sm=\"space-between center\"],\n  [layout-align-sm=\"space-between start\"],\n  [layout-align-sm=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-sm-center-start,\n  .layout-align-sm-start-start,\n  .layout-align-sm-end-start,\n  .layout-align-sm-space-between-start,\n  .layout-align-sm-space-around-start,\n  [layout-align-sm=\"center start\"],\n  [layout-align-sm=\"start start\"],\n  [layout-align-sm=\"end start\"],\n  [layout-align-sm=\"space-between start\"],\n  [layout-align-sm=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-sm-center-center,\n  .layout-align-sm-start-center,\n  .layout-align-sm-end-center,\n  .layout-align-sm-space-between-center,\n  .layout-align-sm-space-around-center,\n  [layout-align-sm=\"center center\"],\n  [layout-align-sm=\"start center\"],\n  [layout-align-sm=\"end center\"],\n  [layout-align-sm=\"space-between center\"],\n  [layout-align-sm=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-sm-center-end,\n  .layout-align-sm-start-end,\n  .layout-align-sm-end-end,\n  .layout-align-sm-space-between-end,\n  .layout-align-sm-space-around-end,\n  [layout-align-sm=\"center end\"],\n  [layout-align-sm=\"start end\"],\n  [layout-align-sm=\"end end\"],\n  [layout-align-sm=\"space-between end\"],\n  [layout-align-sm=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-sm {\n    box-sizing: border-box; }\n  .flex-sm {\n    flex: 1; }\n  .flex-sm-grow {\n    flex: 1 1 100%; }\n  .flex-sm-initial {\n    flex: 0 1 auto; }\n  .flex-sm-auto {\n    flex: 1 1 auto; }\n  .flex-sm-none {\n    flex: 0 0 auto; }\n  .flex-sm-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-sm-0,\n  .md-layout-sm-row > .flex-sm-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-0,\n  .md-layout-sm-column > .flex-sm-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-sm-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-sm-5,\n  .md-layout-sm-row > .flex-sm-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-5,\n  .md-layout-sm-column > .flex-sm-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-sm-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-sm-10,\n  .md-layout-sm-row > .flex-sm-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-10,\n  .md-layout-sm-column > .flex-sm-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-sm-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-sm-15,\n  .md-layout-sm-row > .flex-sm-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-15,\n  .md-layout-sm-column > .flex-sm-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-sm-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-sm-20,\n  .md-layout-sm-row > .flex-sm-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-20,\n  .md-layout-sm-column > .flex-sm-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-sm-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-sm-25,\n  .md-layout-sm-row > .flex-sm-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-25,\n  .md-layout-sm-column > .flex-sm-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-sm-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-sm-30,\n  .md-layout-sm-row > .flex-sm-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-30,\n  .md-layout-sm-column > .flex-sm-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-sm-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-sm-35,\n  .md-layout-sm-row > .flex-sm-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-35,\n  .md-layout-sm-column > .flex-sm-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-sm-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-sm-40,\n  .md-layout-sm-row > .flex-sm-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-40,\n  .md-layout-sm-column > .flex-sm-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-sm-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-sm-45,\n  .md-layout-sm-row > .flex-sm-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-45,\n  .md-layout-sm-column > .flex-sm-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-sm-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-sm-50,\n  .md-layout-sm-row > .flex-sm-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-50,\n  .md-layout-sm-column > .flex-sm-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-sm-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-sm-55,\n  .md-layout-sm-row > .flex-sm-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-55,\n  .md-layout-sm-column > .flex-sm-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-sm-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-sm-60,\n  .md-layout-sm-row > .flex-sm-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-60,\n  .md-layout-sm-column > .flex-sm-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-sm-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-sm-65,\n  .md-layout-sm-row > .flex-sm-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-65,\n  .md-layout-sm-column > .flex-sm-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-sm-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-sm-70,\n  .md-layout-sm-row > .flex-sm-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-70,\n  .md-layout-sm-column > .flex-sm-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-sm-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-sm-75,\n  .md-layout-sm-row > .flex-sm-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-75,\n  .md-layout-sm-column > .flex-sm-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-sm-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-sm-80,\n  .md-layout-sm-row > .flex-sm-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-80,\n  .md-layout-sm-column > .flex-sm-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-sm-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-sm-85,\n  .md-layout-sm-row > .flex-sm-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-85,\n  .md-layout-sm-column > .flex-sm-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-sm-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-sm-90,\n  .md-layout-sm-row > .flex-sm-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-90,\n  .md-layout-sm-column > .flex-sm-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-sm-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-sm-95,\n  .md-layout-sm-row > .flex-sm-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-95,\n  .md-layout-sm-column > .flex-sm-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-sm-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-sm-100,\n  .md-layout-sm-row > .flex-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-100,\n  .md-layout-sm-column > .flex-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-sm-33, .md-layout-row > .flex-sm-34, .md-layout-sm-row > .flex-sm-33, .md-layout-sm-row > .flex-sm-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-sm-66, .md-layout-row > .flex-sm-67, .md-layout-sm-row > .flex-sm-66, .md-layout-sm-row > .flex-sm-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-33, .md-layout-column > .flex-sm-34, .md-layout-sm-column > .flex-sm-33, .md-layout-sm-column > .flex-sm-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-sm-66, .md-layout-column > .flex-sm-67, .md-layout-sm-column > .flex-sm-66, .md-layout-sm-column > .flex-sm-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-sm, .md-layout-sm-column, .md-layout-sm-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-sm-column {\n    flex-direction: column; }\n  .md-layout-sm-row {\n    flex-direction: row; } }\n\n@media (min-width: 600px) {\n  .flex-order-gt-sm-0, [flex-order-gt-sm=\"0\"] {\n    order: 0; }\n  .flex-order-gt-sm-1, [flex-order-gt-sm=\"1\"] {\n    order: 1; }\n  .flex-order-gt-sm-2, [flex-order-gt-sm=\"2\"] {\n    order: 2; }\n  .flex-order-gt-sm-3, [flex-order-gt-sm=\"3\"] {\n    order: 3; }\n  .flex-order-gt-sm-4, [flex-order-gt-sm=\"4\"] {\n    order: 4; }\n  .flex-order-gt-sm-5, [flex-order-gt-sm=\"5\"] {\n    order: 5; }\n  .flex-order-gt-sm-6, [flex-order-gt-sm=\"6\"] {\n    order: 6; }\n  .flex-order-gt-sm-7, [flex-order-gt-sm=\"7\"] {\n    order: 7; }\n  .flex-order-gt-sm-8, [flex-order-gt-sm=\"8\"] {\n    order: 8; }\n  .flex-order-gt-sm-9, [flex-order-gt-sm=\"9\"] {\n    order: 9; }\n  .flex-order-gt-sm-10, [flex-order-gt-sm=\"10\"] {\n    order: 10; }\n  .flex-order-gt-sm-11, [flex-order-gt-sm=\"11\"] {\n    order: 11; }\n  .flex-order-gt-sm-12, [flex-order-gt-sm=\"12\"] {\n    order: 12; }\n  .flex-order-gt-sm-13, [flex-order-gt-sm=\"13\"] {\n    order: 13; }\n  .flex-order-gt-sm-14, [flex-order-gt-sm=\"14\"] {\n    order: 14; }\n  .flex-order-gt-sm-15, [flex-order-gt-sm=\"15\"] {\n    order: 15; }\n  .flex-order-gt-sm-16, [flex-order-gt-sm=\"16\"] {\n    order: 16; }\n  .flex-order-gt-sm-17, [flex-order-gt-sm=\"17\"] {\n    order: 17; }\n  .flex-order-gt-sm-18, [flex-order-gt-sm=\"18\"] {\n    order: 18; }\n  .flex-order-gt-sm-19, [flex-order-gt-sm=\"19\"] {\n    order: 19; }\n  .offset-gt-sm-0, [offset-gt-sm=\"0\"] {\n    margin-left: 0%; }\n  .offset-gt-sm-5, [offset-gt-sm=\"5\"] {\n    margin-left: 5%; }\n  .offset-gt-sm-10, [offset-gt-sm=\"10\"] {\n    margin-left: 10%; }\n  .offset-gt-sm-15, [offset-gt-sm=\"15\"] {\n    margin-left: 15%; }\n  .offset-gt-sm-20, [offset-gt-sm=\"20\"] {\n    margin-left: 20%; }\n  .offset-gt-sm-25, [offset-gt-sm=\"25\"] {\n    margin-left: 25%; }\n  .offset-gt-sm-30, [offset-gt-sm=\"30\"] {\n    margin-left: 30%; }\n  .offset-gt-sm-35, [offset-gt-sm=\"35\"] {\n    margin-left: 35%; }\n  .offset-gt-sm-40, [offset-gt-sm=\"40\"] {\n    margin-left: 40%; }\n  .offset-gt-sm-45, [offset-gt-sm=\"45\"] {\n    margin-left: 45%; }\n  .offset-gt-sm-50, [offset-gt-sm=\"50\"] {\n    margin-left: 50%; }\n  .offset-gt-sm-55, [offset-gt-sm=\"55\"] {\n    margin-left: 55%; }\n  .offset-gt-sm-60, [offset-gt-sm=\"60\"] {\n    margin-left: 60%; }\n  .offset-gt-sm-65, [offset-gt-sm=\"65\"] {\n    margin-left: 65%; }\n  .offset-gt-sm-70, [offset-gt-sm=\"70\"] {\n    margin-left: 70%; }\n  .offset-gt-sm-75, [offset-gt-sm=\"75\"] {\n    margin-left: 75%; }\n  .offset-gt-sm-80, [offset-gt-sm=\"80\"] {\n    margin-left: 80%; }\n  .offset-gt-sm-85, [offset-gt-sm=\"85\"] {\n    margin-left: 85%; }\n  .offset-gt-sm-90, [offset-gt-sm=\"90\"] {\n    margin-left: 90%; }\n  .offset-gt-sm-95, [offset-gt-sm=\"95\"] {\n    margin-left: 95%; }\n  .offset-gt-sm-33, [offset-gt-sm=\"33\"], .offset-gt-sm-34, [offset-gt-sm=\"34\"] {\n    margin-left: 33%; }\n  .offset-gt-sm-66, [offset-gt-sm=\"66\"], .offset-gt-sm-67, [offset-gt-sm=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-gt-sm-center, .layout-align-gt-sm-center-center,\n  .layout-align-gt-sm-center-start,\n  .layout-align-gt-sm-center-end,\n  [layout-align-gt-sm=\"center\"],\n  [layout-align-gt-sm=\"center center\"],\n  [layout-align-gt-sm=\"center start\"],\n  [layout-align-gt-sm=\"center end\"] {\n    justify-content: center; }\n  .layout-align-gt-sm-end, .layout-align-gt-sm-end-center,\n  .layout-align-gt-sm-end-start,\n  .layout-align-gt-sm-end-end,\n  [layout-align-gt-sm=\"end\"], [layout-align-gt-sm=\"end center\"],\n  [layout-align-gt-sm=\"end start\"],\n  [layout-align-gt-sm=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-gt-sm-space-around, .layout-align-gt-sm-space-around-center,\n  .layout-align-gt-sm-space-around-start,\n  .layout-align-gt-sm-space-around-end,\n  [layout-align-gt-sm=\"space-around\"], [layout-align-gt-sm=\"space-around center\"],\n  [layout-align-gt-sm=\"space-around start\"],\n  [layout-align-gt-sm=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-gt-sm-space-between, .layout-align-gt-sm-space-between-center,\n  .layout-align-gt-sm-space-between-start,\n  .layout-align-gt-sm-space-between-end,\n  [layout-align-gt-sm=\"space-between\"], [layout-align-gt-sm=\"space-between center\"],\n  [layout-align-gt-sm=\"space-between start\"],\n  [layout-align-gt-sm=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-gt-sm-center-start,\n  .layout-align-gt-sm-start-start,\n  .layout-align-gt-sm-end-start,\n  .layout-align-gt-sm-space-between-start,\n  .layout-align-gt-sm-space-around-start,\n  [layout-align-gt-sm=\"center start\"],\n  [layout-align-gt-sm=\"start start\"],\n  [layout-align-gt-sm=\"end start\"],\n  [layout-align-gt-sm=\"space-between start\"],\n  [layout-align-gt-sm=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-gt-sm-center-center,\n  .layout-align-gt-sm-start-center,\n  .layout-align-gt-sm-end-center,\n  .layout-align-gt-sm-space-between-center,\n  .layout-align-gt-sm-space-around-center,\n  [layout-align-gt-sm=\"center center\"],\n  [layout-align-gt-sm=\"start center\"],\n  [layout-align-gt-sm=\"end center\"],\n  [layout-align-gt-sm=\"space-between center\"],\n  [layout-align-gt-sm=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-gt-sm-center-end,\n  .layout-align-gt-sm-start-end,\n  .layout-align-gt-sm-end-end,\n  .layout-align-gt-sm-space-between-end,\n  .layout-align-gt-sm-space-around-end,\n  [layout-align-gt-sm=\"center end\"],\n  [layout-align-gt-sm=\"start end\"],\n  [layout-align-gt-sm=\"end end\"],\n  [layout-align-gt-sm=\"space-between end\"],\n  [layout-align-gt-sm=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-gt-sm {\n    box-sizing: border-box; }\n  .flex-gt-sm {\n    flex: 1; }\n  .flex-gt-sm-grow {\n    flex: 1 1 100%; }\n  .flex-gt-sm-initial {\n    flex: 0 1 auto; }\n  .flex-gt-sm-auto {\n    flex: 1 1 auto; }\n  .flex-gt-sm-none {\n    flex: 0 0 auto; }\n  .flex-gt-sm-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-gt-sm-0,\n  .md-layout-gt-sm-row > .flex-gt-sm-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-0,\n  .md-layout-gt-sm-column > .flex-gt-sm-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-gt-sm-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-gt-sm-5,\n  .md-layout-gt-sm-row > .flex-gt-sm-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-5,\n  .md-layout-gt-sm-column > .flex-gt-sm-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-gt-sm-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-gt-sm-10,\n  .md-layout-gt-sm-row > .flex-gt-sm-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-10,\n  .md-layout-gt-sm-column > .flex-gt-sm-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-gt-sm-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-gt-sm-15,\n  .md-layout-gt-sm-row > .flex-gt-sm-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-15,\n  .md-layout-gt-sm-column > .flex-gt-sm-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-gt-sm-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-gt-sm-20,\n  .md-layout-gt-sm-row > .flex-gt-sm-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-20,\n  .md-layout-gt-sm-column > .flex-gt-sm-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-gt-sm-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-gt-sm-25,\n  .md-layout-gt-sm-row > .flex-gt-sm-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-25,\n  .md-layout-gt-sm-column > .flex-gt-sm-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-gt-sm-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-gt-sm-30,\n  .md-layout-gt-sm-row > .flex-gt-sm-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-30,\n  .md-layout-gt-sm-column > .flex-gt-sm-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-gt-sm-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-gt-sm-35,\n  .md-layout-gt-sm-row > .flex-gt-sm-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-35,\n  .md-layout-gt-sm-column > .flex-gt-sm-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-gt-sm-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-gt-sm-40,\n  .md-layout-gt-sm-row > .flex-gt-sm-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-40,\n  .md-layout-gt-sm-column > .flex-gt-sm-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-gt-sm-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-gt-sm-45,\n  .md-layout-gt-sm-row > .flex-gt-sm-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-45,\n  .md-layout-gt-sm-column > .flex-gt-sm-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-gt-sm-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-gt-sm-50,\n  .md-layout-gt-sm-row > .flex-gt-sm-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-50,\n  .md-layout-gt-sm-column > .flex-gt-sm-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-gt-sm-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-gt-sm-55,\n  .md-layout-gt-sm-row > .flex-gt-sm-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-55,\n  .md-layout-gt-sm-column > .flex-gt-sm-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-gt-sm-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-gt-sm-60,\n  .md-layout-gt-sm-row > .flex-gt-sm-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-60,\n  .md-layout-gt-sm-column > .flex-gt-sm-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-gt-sm-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-gt-sm-65,\n  .md-layout-gt-sm-row > .flex-gt-sm-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-65,\n  .md-layout-gt-sm-column > .flex-gt-sm-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-gt-sm-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-gt-sm-70,\n  .md-layout-gt-sm-row > .flex-gt-sm-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-70,\n  .md-layout-gt-sm-column > .flex-gt-sm-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-gt-sm-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-gt-sm-75,\n  .md-layout-gt-sm-row > .flex-gt-sm-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-75,\n  .md-layout-gt-sm-column > .flex-gt-sm-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-gt-sm-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-gt-sm-80,\n  .md-layout-gt-sm-row > .flex-gt-sm-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-80,\n  .md-layout-gt-sm-column > .flex-gt-sm-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-gt-sm-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-gt-sm-85,\n  .md-layout-gt-sm-row > .flex-gt-sm-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-85,\n  .md-layout-gt-sm-column > .flex-gt-sm-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-gt-sm-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-gt-sm-90,\n  .md-layout-gt-sm-row > .flex-gt-sm-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-90,\n  .md-layout-gt-sm-column > .flex-gt-sm-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-gt-sm-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-gt-sm-95,\n  .md-layout-gt-sm-row > .flex-gt-sm-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-95,\n  .md-layout-gt-sm-column > .flex-gt-sm-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-gt-sm-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-gt-sm-100,\n  .md-layout-gt-sm-row > .flex-gt-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-100,\n  .md-layout-gt-sm-column > .flex-gt-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-sm-33, .md-layout-row > .flex-gt-sm-34, .md-layout-gt-sm-row > .flex-gt-sm-33, .md-layout-gt-sm-row > .flex-gt-sm-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-sm-66, .md-layout-row > .flex-gt-sm-67, .md-layout-gt-sm-row > .flex-gt-sm-66, .md-layout-gt-sm-row > .flex-gt-sm-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-33, .md-layout-column > .flex-gt-sm-34, .md-layout-gt-sm-column > .flex-gt-sm-33, .md-layout-gt-sm-column > .flex-gt-sm-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-gt-sm-66, .md-layout-column > .flex-gt-sm-67, .md-layout-gt-sm-column > .flex-gt-sm-66, .md-layout-gt-sm-column > .flex-gt-sm-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-gt-sm, .md-layout-gt-sm-column, .md-layout-gt-sm-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-gt-sm-column {\n    flex-direction: column; }\n  .md-layout-gt-sm-row {\n    flex-direction: row; } }\n\n@media (min-width: 600px) and (max-width: 959px) {\n  .hide:not(.show-gt-sm):not(.show-md):not(.show), .hide-gt-sm:not(.show-gt-sm):not(.show-md):not(.show) {\n    display: none; }\n  .hide-md:not(.show-md):not(.show) {\n    display: none; }\n  .flex-order-md-0, [flex-order-md=\"0\"] {\n    order: 0; }\n  .flex-order-md-1, [flex-order-md=\"1\"] {\n    order: 1; }\n  .flex-order-md-2, [flex-order-md=\"2\"] {\n    order: 2; }\n  .flex-order-md-3, [flex-order-md=\"3\"] {\n    order: 3; }\n  .flex-order-md-4, [flex-order-md=\"4\"] {\n    order: 4; }\n  .flex-order-md-5, [flex-order-md=\"5\"] {\n    order: 5; }\n  .flex-order-md-6, [flex-order-md=\"6\"] {\n    order: 6; }\n  .flex-order-md-7, [flex-order-md=\"7\"] {\n    order: 7; }\n  .flex-order-md-8, [flex-order-md=\"8\"] {\n    order: 8; }\n  .flex-order-md-9, [flex-order-md=\"9\"] {\n    order: 9; }\n  .flex-order-md-10, [flex-order-md=\"10\"] {\n    order: 10; }\n  .flex-order-md-11, [flex-order-md=\"11\"] {\n    order: 11; }\n  .flex-order-md-12, [flex-order-md=\"12\"] {\n    order: 12; }\n  .flex-order-md-13, [flex-order-md=\"13\"] {\n    order: 13; }\n  .flex-order-md-14, [flex-order-md=\"14\"] {\n    order: 14; }\n  .flex-order-md-15, [flex-order-md=\"15\"] {\n    order: 15; }\n  .flex-order-md-16, [flex-order-md=\"16\"] {\n    order: 16; }\n  .flex-order-md-17, [flex-order-md=\"17\"] {\n    order: 17; }\n  .flex-order-md-18, [flex-order-md=\"18\"] {\n    order: 18; }\n  .flex-order-md-19, [flex-order-md=\"19\"] {\n    order: 19; }\n  .offset-md-0, [offset-md=\"0\"] {\n    margin-left: 0%; }\n  .offset-md-5, [offset-md=\"5\"] {\n    margin-left: 5%; }\n  .offset-md-10, [offset-md=\"10\"] {\n    margin-left: 10%; }\n  .offset-md-15, [offset-md=\"15\"] {\n    margin-left: 15%; }\n  .offset-md-20, [offset-md=\"20\"] {\n    margin-left: 20%; }\n  .offset-md-25, [offset-md=\"25\"] {\n    margin-left: 25%; }\n  .offset-md-30, [offset-md=\"30\"] {\n    margin-left: 30%; }\n  .offset-md-35, [offset-md=\"35\"] {\n    margin-left: 35%; }\n  .offset-md-40, [offset-md=\"40\"] {\n    margin-left: 40%; }\n  .offset-md-45, [offset-md=\"45\"] {\n    margin-left: 45%; }\n  .offset-md-50, [offset-md=\"50\"] {\n    margin-left: 50%; }\n  .offset-md-55, [offset-md=\"55\"] {\n    margin-left: 55%; }\n  .offset-md-60, [offset-md=\"60\"] {\n    margin-left: 60%; }\n  .offset-md-65, [offset-md=\"65\"] {\n    margin-left: 65%; }\n  .offset-md-70, [offset-md=\"70\"] {\n    margin-left: 70%; }\n  .offset-md-75, [offset-md=\"75\"] {\n    margin-left: 75%; }\n  .offset-md-80, [offset-md=\"80\"] {\n    margin-left: 80%; }\n  .offset-md-85, [offset-md=\"85\"] {\n    margin-left: 85%; }\n  .offset-md-90, [offset-md=\"90\"] {\n    margin-left: 90%; }\n  .offset-md-95, [offset-md=\"95\"] {\n    margin-left: 95%; }\n  .offset-md-33, [offset-md=\"33\"], .offset-md-34, [offset-md=\"34\"] {\n    margin-left: 33%; }\n  .offset-md-66, [offset-md=\"66\"], .offset-md-67, [offset-md=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-md-center, .layout-align-md-center-center,\n  .layout-align-md-center-start,\n  .layout-align-md-center-end,\n  [layout-align-md=\"center\"],\n  [layout-align-md=\"center center\"],\n  [layout-align-md=\"center start\"],\n  [layout-align-md=\"center end\"] {\n    justify-content: center; }\n  .layout-align-md-end, .layout-align-md-end-center,\n  .layout-align-md-end-start,\n  .layout-align-md-end-end,\n  [layout-align-md=\"end\"], [layout-align-md=\"end center\"],\n  [layout-align-md=\"end start\"],\n  [layout-align-md=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-md-space-around, .layout-align-md-space-around-center,\n  .layout-align-md-space-around-start,\n  .layout-align-md-space-around-end,\n  [layout-align-md=\"space-around\"], [layout-align-md=\"space-around center\"],\n  [layout-align-md=\"space-around start\"],\n  [layout-align-md=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-md-space-between, .layout-align-md-space-between-center,\n  .layout-align-md-space-between-start,\n  .layout-align-md-space-between-end,\n  [layout-align-md=\"space-between\"], [layout-align-md=\"space-between center\"],\n  [layout-align-md=\"space-between start\"],\n  [layout-align-md=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-md-center-start,\n  .layout-align-md-start-start,\n  .layout-align-md-end-start,\n  .layout-align-md-space-between-start,\n  .layout-align-md-space-around-start,\n  [layout-align-md=\"center start\"],\n  [layout-align-md=\"start start\"],\n  [layout-align-md=\"end start\"],\n  [layout-align-md=\"space-between start\"],\n  [layout-align-md=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-md-center-center,\n  .layout-align-md-start-center,\n  .layout-align-md-end-center,\n  .layout-align-md-space-between-center,\n  .layout-align-md-space-around-center,\n  [layout-align-md=\"center center\"],\n  [layout-align-md=\"start center\"],\n  [layout-align-md=\"end center\"],\n  [layout-align-md=\"space-between center\"],\n  [layout-align-md=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-md-center-end,\n  .layout-align-md-start-end,\n  .layout-align-md-end-end,\n  .layout-align-md-space-between-end,\n  .layout-align-md-space-around-end,\n  [layout-align-md=\"center end\"],\n  [layout-align-md=\"start end\"],\n  [layout-align-md=\"end end\"],\n  [layout-align-md=\"space-between end\"],\n  [layout-align-md=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-md {\n    box-sizing: border-box; }\n  .flex-md {\n    flex: 1; }\n  .flex-md-grow {\n    flex: 1 1 100%; }\n  .flex-md-initial {\n    flex: 0 1 auto; }\n  .flex-md-auto {\n    flex: 1 1 auto; }\n  .flex-md-none {\n    flex: 0 0 auto; }\n  .flex-md-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-md-0,\n  .md-layout-md-row > .flex-md-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-0,\n  .md-layout-md-column > .flex-md-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-md-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-md-5,\n  .md-layout-md-row > .flex-md-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-5,\n  .md-layout-md-column > .flex-md-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-md-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-md-10,\n  .md-layout-md-row > .flex-md-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-10,\n  .md-layout-md-column > .flex-md-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-md-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-md-15,\n  .md-layout-md-row > .flex-md-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-15,\n  .md-layout-md-column > .flex-md-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-md-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-md-20,\n  .md-layout-md-row > .flex-md-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-20,\n  .md-layout-md-column > .flex-md-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-md-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-md-25,\n  .md-layout-md-row > .flex-md-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-25,\n  .md-layout-md-column > .flex-md-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-md-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-md-30,\n  .md-layout-md-row > .flex-md-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-30,\n  .md-layout-md-column > .flex-md-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-md-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-md-35,\n  .md-layout-md-row > .flex-md-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-35,\n  .md-layout-md-column > .flex-md-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-md-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-md-40,\n  .md-layout-md-row > .flex-md-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-40,\n  .md-layout-md-column > .flex-md-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-md-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-md-45,\n  .md-layout-md-row > .flex-md-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-45,\n  .md-layout-md-column > .flex-md-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-md-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-md-50,\n  .md-layout-md-row > .flex-md-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-50,\n  .md-layout-md-column > .flex-md-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-md-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-md-55,\n  .md-layout-md-row > .flex-md-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-55,\n  .md-layout-md-column > .flex-md-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-md-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-md-60,\n  .md-layout-md-row > .flex-md-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-60,\n  .md-layout-md-column > .flex-md-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-md-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-md-65,\n  .md-layout-md-row > .flex-md-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-65,\n  .md-layout-md-column > .flex-md-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-md-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-md-70,\n  .md-layout-md-row > .flex-md-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-70,\n  .md-layout-md-column > .flex-md-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-md-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-md-75,\n  .md-layout-md-row > .flex-md-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-75,\n  .md-layout-md-column > .flex-md-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-md-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-md-80,\n  .md-layout-md-row > .flex-md-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-80,\n  .md-layout-md-column > .flex-md-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-md-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-md-85,\n  .md-layout-md-row > .flex-md-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-85,\n  .md-layout-md-column > .flex-md-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-md-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-md-90,\n  .md-layout-md-row > .flex-md-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-90,\n  .md-layout-md-column > .flex-md-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-md-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-md-95,\n  .md-layout-md-row > .flex-md-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-95,\n  .md-layout-md-column > .flex-md-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-md-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-md-100,\n  .md-layout-md-row > .flex-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-100,\n  .md-layout-md-column > .flex-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-md-33, .md-layout-row > .flex-md-34, .md-layout-md-row > .flex-md-33, .md-layout-md-row > .flex-md-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-md-66, .md-layout-row > .flex-md-67, .md-layout-md-row > .flex-md-66, .md-layout-md-row > .flex-md-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-33, .md-layout-column > .flex-md-34, .md-layout-md-column > .flex-md-33, .md-layout-md-column > .flex-md-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-md-66, .md-layout-column > .flex-md-67, .md-layout-md-column > .flex-md-66, .md-layout-md-column > .flex-md-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-md, .md-layout-md-column, .md-layout-md-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-md-column {\n    flex-direction: column; }\n  .md-layout-md-row {\n    flex-direction: row; } }\n\n@media (min-width: 960px) {\n  .flex-order-gt-md-0, [flex-order-gt-md=\"0\"] {\n    order: 0; }\n  .flex-order-gt-md-1, [flex-order-gt-md=\"1\"] {\n    order: 1; }\n  .flex-order-gt-md-2, [flex-order-gt-md=\"2\"] {\n    order: 2; }\n  .flex-order-gt-md-3, [flex-order-gt-md=\"3\"] {\n    order: 3; }\n  .flex-order-gt-md-4, [flex-order-gt-md=\"4\"] {\n    order: 4; }\n  .flex-order-gt-md-5, [flex-order-gt-md=\"5\"] {\n    order: 5; }\n  .flex-order-gt-md-6, [flex-order-gt-md=\"6\"] {\n    order: 6; }\n  .flex-order-gt-md-7, [flex-order-gt-md=\"7\"] {\n    order: 7; }\n  .flex-order-gt-md-8, [flex-order-gt-md=\"8\"] {\n    order: 8; }\n  .flex-order-gt-md-9, [flex-order-gt-md=\"9\"] {\n    order: 9; }\n  .flex-order-gt-md-10, [flex-order-gt-md=\"10\"] {\n    order: 10; }\n  .flex-order-gt-md-11, [flex-order-gt-md=\"11\"] {\n    order: 11; }\n  .flex-order-gt-md-12, [flex-order-gt-md=\"12\"] {\n    order: 12; }\n  .flex-order-gt-md-13, [flex-order-gt-md=\"13\"] {\n    order: 13; }\n  .flex-order-gt-md-14, [flex-order-gt-md=\"14\"] {\n    order: 14; }\n  .flex-order-gt-md-15, [flex-order-gt-md=\"15\"] {\n    order: 15; }\n  .flex-order-gt-md-16, [flex-order-gt-md=\"16\"] {\n    order: 16; }\n  .flex-order-gt-md-17, [flex-order-gt-md=\"17\"] {\n    order: 17; }\n  .flex-order-gt-md-18, [flex-order-gt-md=\"18\"] {\n    order: 18; }\n  .flex-order-gt-md-19, [flex-order-gt-md=\"19\"] {\n    order: 19; }\n  .offset-gt-md-0, [offset-gt-md=\"0\"] {\n    margin-left: 0%; }\n  .offset-gt-md-5, [offset-gt-md=\"5\"] {\n    margin-left: 5%; }\n  .offset-gt-md-10, [offset-gt-md=\"10\"] {\n    margin-left: 10%; }\n  .offset-gt-md-15, [offset-gt-md=\"15\"] {\n    margin-left: 15%; }\n  .offset-gt-md-20, [offset-gt-md=\"20\"] {\n    margin-left: 20%; }\n  .offset-gt-md-25, [offset-gt-md=\"25\"] {\n    margin-left: 25%; }\n  .offset-gt-md-30, [offset-gt-md=\"30\"] {\n    margin-left: 30%; }\n  .offset-gt-md-35, [offset-gt-md=\"35\"] {\n    margin-left: 35%; }\n  .offset-gt-md-40, [offset-gt-md=\"40\"] {\n    margin-left: 40%; }\n  .offset-gt-md-45, [offset-gt-md=\"45\"] {\n    margin-left: 45%; }\n  .offset-gt-md-50, [offset-gt-md=\"50\"] {\n    margin-left: 50%; }\n  .offset-gt-md-55, [offset-gt-md=\"55\"] {\n    margin-left: 55%; }\n  .offset-gt-md-60, [offset-gt-md=\"60\"] {\n    margin-left: 60%; }\n  .offset-gt-md-65, [offset-gt-md=\"65\"] {\n    margin-left: 65%; }\n  .offset-gt-md-70, [offset-gt-md=\"70\"] {\n    margin-left: 70%; }\n  .offset-gt-md-75, [offset-gt-md=\"75\"] {\n    margin-left: 75%; }\n  .offset-gt-md-80, [offset-gt-md=\"80\"] {\n    margin-left: 80%; }\n  .offset-gt-md-85, [offset-gt-md=\"85\"] {\n    margin-left: 85%; }\n  .offset-gt-md-90, [offset-gt-md=\"90\"] {\n    margin-left: 90%; }\n  .offset-gt-md-95, [offset-gt-md=\"95\"] {\n    margin-left: 95%; }\n  .offset-gt-md-33, [offset-gt-md=\"33\"], .offset-gt-md-34, [offset-gt-md=\"34\"] {\n    margin-left: 33%; }\n  .offset-gt-md-66, [offset-gt-md=\"66\"], .offset-gt-md-67, [offset-gt-md=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-gt-md-center, .layout-align-gt-md-center-center,\n  .layout-align-gt-md-center-start,\n  .layout-align-gt-md-center-end,\n  [layout-align-gt-md=\"center\"],\n  [layout-align-gt-md=\"center center\"],\n  [layout-align-gt-md=\"center start\"],\n  [layout-align-gt-md=\"center end\"] {\n    justify-content: center; }\n  .layout-align-gt-md-end, .layout-align-gt-md-end-center,\n  .layout-align-gt-md-end-start,\n  .layout-align-gt-md-end-end,\n  [layout-align-gt-md=\"end\"], [layout-align-gt-md=\"end center\"],\n  [layout-align-gt-md=\"end start\"],\n  [layout-align-gt-md=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-gt-md-space-around, .layout-align-gt-md-space-around-center,\n  .layout-align-gt-md-space-around-start,\n  .layout-align-gt-md-space-around-end,\n  [layout-align-gt-md=\"space-around\"], [layout-align-gt-md=\"space-around center\"],\n  [layout-align-gt-md=\"space-around start\"],\n  [layout-align-gt-md=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-gt-md-space-between, .layout-align-gt-md-space-between-center,\n  .layout-align-gt-md-space-between-start,\n  .layout-align-gt-md-space-between-end,\n  [layout-align-gt-md=\"space-between\"], [layout-align-gt-md=\"space-between center\"],\n  [layout-align-gt-md=\"space-between start\"],\n  [layout-align-gt-md=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-gt-md-center-start,\n  .layout-align-gt-md-start-start,\n  .layout-align-gt-md-end-start,\n  .layout-align-gt-md-space-between-start,\n  .layout-align-gt-md-space-around-start,\n  [layout-align-gt-md=\"center start\"],\n  [layout-align-gt-md=\"start start\"],\n  [layout-align-gt-md=\"end start\"],\n  [layout-align-gt-md=\"space-between start\"],\n  [layout-align-gt-md=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-gt-md-center-center,\n  .layout-align-gt-md-start-center,\n  .layout-align-gt-md-end-center,\n  .layout-align-gt-md-space-between-center,\n  .layout-align-gt-md-space-around-center,\n  [layout-align-gt-md=\"center center\"],\n  [layout-align-gt-md=\"start center\"],\n  [layout-align-gt-md=\"end center\"],\n  [layout-align-gt-md=\"space-between center\"],\n  [layout-align-gt-md=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-gt-md-center-end,\n  .layout-align-gt-md-start-end,\n  .layout-align-gt-md-end-end,\n  .layout-align-gt-md-space-between-end,\n  .layout-align-gt-md-space-around-end,\n  [layout-align-gt-md=\"center end\"],\n  [layout-align-gt-md=\"start end\"],\n  [layout-align-gt-md=\"end end\"],\n  [layout-align-gt-md=\"space-between end\"],\n  [layout-align-gt-md=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-gt-md {\n    box-sizing: border-box; }\n  .flex-gt-md {\n    flex: 1; }\n  .flex-gt-md-grow {\n    flex: 1 1 100%; }\n  .flex-gt-md-initial {\n    flex: 0 1 auto; }\n  .flex-gt-md-auto {\n    flex: 1 1 auto; }\n  .flex-gt-md-none {\n    flex: 0 0 auto; }\n  .flex-gt-md-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-gt-md-0,\n  .md-layout-gt-md-row > .flex-gt-md-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-0,\n  .md-layout-gt-md-column > .flex-gt-md-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-gt-md-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-gt-md-5,\n  .md-layout-gt-md-row > .flex-gt-md-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-5,\n  .md-layout-gt-md-column > .flex-gt-md-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-gt-md-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-gt-md-10,\n  .md-layout-gt-md-row > .flex-gt-md-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-10,\n  .md-layout-gt-md-column > .flex-gt-md-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-gt-md-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-gt-md-15,\n  .md-layout-gt-md-row > .flex-gt-md-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-15,\n  .md-layout-gt-md-column > .flex-gt-md-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-gt-md-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-gt-md-20,\n  .md-layout-gt-md-row > .flex-gt-md-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-20,\n  .md-layout-gt-md-column > .flex-gt-md-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-gt-md-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-gt-md-25,\n  .md-layout-gt-md-row > .flex-gt-md-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-25,\n  .md-layout-gt-md-column > .flex-gt-md-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-gt-md-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-gt-md-30,\n  .md-layout-gt-md-row > .flex-gt-md-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-30,\n  .md-layout-gt-md-column > .flex-gt-md-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-gt-md-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-gt-md-35,\n  .md-layout-gt-md-row > .flex-gt-md-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-35,\n  .md-layout-gt-md-column > .flex-gt-md-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-gt-md-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-gt-md-40,\n  .md-layout-gt-md-row > .flex-gt-md-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-40,\n  .md-layout-gt-md-column > .flex-gt-md-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-gt-md-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-gt-md-45,\n  .md-layout-gt-md-row > .flex-gt-md-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-45,\n  .md-layout-gt-md-column > .flex-gt-md-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-gt-md-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-gt-md-50,\n  .md-layout-gt-md-row > .flex-gt-md-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-50,\n  .md-layout-gt-md-column > .flex-gt-md-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-gt-md-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-gt-md-55,\n  .md-layout-gt-md-row > .flex-gt-md-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-55,\n  .md-layout-gt-md-column > .flex-gt-md-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-gt-md-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-gt-md-60,\n  .md-layout-gt-md-row > .flex-gt-md-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-60,\n  .md-layout-gt-md-column > .flex-gt-md-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-gt-md-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-gt-md-65,\n  .md-layout-gt-md-row > .flex-gt-md-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-65,\n  .md-layout-gt-md-column > .flex-gt-md-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-gt-md-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-gt-md-70,\n  .md-layout-gt-md-row > .flex-gt-md-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-70,\n  .md-layout-gt-md-column > .flex-gt-md-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-gt-md-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-gt-md-75,\n  .md-layout-gt-md-row > .flex-gt-md-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-75,\n  .md-layout-gt-md-column > .flex-gt-md-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-gt-md-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-gt-md-80,\n  .md-layout-gt-md-row > .flex-gt-md-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-80,\n  .md-layout-gt-md-column > .flex-gt-md-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-gt-md-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-gt-md-85,\n  .md-layout-gt-md-row > .flex-gt-md-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-85,\n  .md-layout-gt-md-column > .flex-gt-md-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-gt-md-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-gt-md-90,\n  .md-layout-gt-md-row > .flex-gt-md-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-90,\n  .md-layout-gt-md-column > .flex-gt-md-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-gt-md-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-gt-md-95,\n  .md-layout-gt-md-row > .flex-gt-md-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-95,\n  .md-layout-gt-md-column > .flex-gt-md-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-gt-md-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-gt-md-100,\n  .md-layout-gt-md-row > .flex-gt-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-100,\n  .md-layout-gt-md-column > .flex-gt-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-md-33, .md-layout-row > .flex-gt-md-34, .md-layout-gt-md-row > .flex-gt-md-33, .md-layout-gt-md-row > .flex-gt-md-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-md-66, .md-layout-row > .flex-gt-md-67, .md-layout-gt-md-row > .flex-gt-md-66, .md-layout-gt-md-row > .flex-gt-md-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-33, .md-layout-column > .flex-gt-md-34, .md-layout-gt-md-column > .flex-gt-md-33, .md-layout-gt-md-column > .flex-gt-md-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-gt-md-66, .md-layout-column > .flex-gt-md-67, .md-layout-gt-md-column > .flex-gt-md-66, .md-layout-gt-md-column > .flex-gt-md-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-gt-md, .md-layout-gt-md-column, .md-layout-gt-md-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-gt-md-column {\n    flex-direction: column; }\n  .md-layout-gt-md-row {\n    flex-direction: row; } }\n\n@media (min-width: 960px) and (max-width: 1199px) {\n  .hide:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show), .hide-gt-sm:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show), .hide-gt-md:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show) {\n    display: none; }\n  .hide-lg:not(.show-lg):not(.show) {\n    display: none; }\n  .flex-order-lg-0, [flex-order-lg=\"0\"] {\n    order: 0; }\n  .flex-order-lg-1, [flex-order-lg=\"1\"] {\n    order: 1; }\n  .flex-order-lg-2, [flex-order-lg=\"2\"] {\n    order: 2; }\n  .flex-order-lg-3, [flex-order-lg=\"3\"] {\n    order: 3; }\n  .flex-order-lg-4, [flex-order-lg=\"4\"] {\n    order: 4; }\n  .flex-order-lg-5, [flex-order-lg=\"5\"] {\n    order: 5; }\n  .flex-order-lg-6, [flex-order-lg=\"6\"] {\n    order: 6; }\n  .flex-order-lg-7, [flex-order-lg=\"7\"] {\n    order: 7; }\n  .flex-order-lg-8, [flex-order-lg=\"8\"] {\n    order: 8; }\n  .flex-order-lg-9, [flex-order-lg=\"9\"] {\n    order: 9; }\n  .flex-order-lg-10, [flex-order-lg=\"10\"] {\n    order: 10; }\n  .flex-order-lg-11, [flex-order-lg=\"11\"] {\n    order: 11; }\n  .flex-order-lg-12, [flex-order-lg=\"12\"] {\n    order: 12; }\n  .flex-order-lg-13, [flex-order-lg=\"13\"] {\n    order: 13; }\n  .flex-order-lg-14, [flex-order-lg=\"14\"] {\n    order: 14; }\n  .flex-order-lg-15, [flex-order-lg=\"15\"] {\n    order: 15; }\n  .flex-order-lg-16, [flex-order-lg=\"16\"] {\n    order: 16; }\n  .flex-order-lg-17, [flex-order-lg=\"17\"] {\n    order: 17; }\n  .flex-order-lg-18, [flex-order-lg=\"18\"] {\n    order: 18; }\n  .flex-order-lg-19, [flex-order-lg=\"19\"] {\n    order: 19; }\n  .offset-lg-0, [offset-lg=\"0\"] {\n    margin-left: 0%; }\n  .offset-lg-5, [offset-lg=\"5\"] {\n    margin-left: 5%; }\n  .offset-lg-10, [offset-lg=\"10\"] {\n    margin-left: 10%; }\n  .offset-lg-15, [offset-lg=\"15\"] {\n    margin-left: 15%; }\n  .offset-lg-20, [offset-lg=\"20\"] {\n    margin-left: 20%; }\n  .offset-lg-25, [offset-lg=\"25\"] {\n    margin-left: 25%; }\n  .offset-lg-30, [offset-lg=\"30\"] {\n    margin-left: 30%; }\n  .offset-lg-35, [offset-lg=\"35\"] {\n    margin-left: 35%; }\n  .offset-lg-40, [offset-lg=\"40\"] {\n    margin-left: 40%; }\n  .offset-lg-45, [offset-lg=\"45\"] {\n    margin-left: 45%; }\n  .offset-lg-50, [offset-lg=\"50\"] {\n    margin-left: 50%; }\n  .offset-lg-55, [offset-lg=\"55\"] {\n    margin-left: 55%; }\n  .offset-lg-60, [offset-lg=\"60\"] {\n    margin-left: 60%; }\n  .offset-lg-65, [offset-lg=\"65\"] {\n    margin-left: 65%; }\n  .offset-lg-70, [offset-lg=\"70\"] {\n    margin-left: 70%; }\n  .offset-lg-75, [offset-lg=\"75\"] {\n    margin-left: 75%; }\n  .offset-lg-80, [offset-lg=\"80\"] {\n    margin-left: 80%; }\n  .offset-lg-85, [offset-lg=\"85\"] {\n    margin-left: 85%; }\n  .offset-lg-90, [offset-lg=\"90\"] {\n    margin-left: 90%; }\n  .offset-lg-95, [offset-lg=\"95\"] {\n    margin-left: 95%; }\n  .offset-lg-33, [offset-lg=\"33\"], .offset-lg-34, [offset-lg=\"34\"] {\n    margin-left: 33%; }\n  .offset-lg-66, [offset-lg=\"66\"], .offset-lg-67, [offset-lg=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-lg-center, .layout-align-lg-center-center,\n  .layout-align-lg-center-start,\n  .layout-align-lg-center-end,\n  [layout-align-lg=\"center\"],\n  [layout-align-lg=\"center center\"],\n  [layout-align-lg=\"center start\"],\n  [layout-align-lg=\"center end\"] {\n    justify-content: center; }\n  .layout-align-lg-end, .layout-align-lg-end-center,\n  .layout-align-lg-end-start,\n  .layout-align-lg-end-end,\n  [layout-align-lg=\"end\"], [layout-align-lg=\"end center\"],\n  [layout-align-lg=\"end start\"],\n  [layout-align-lg=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-lg-space-around, .layout-align-lg-space-around-center,\n  .layout-align-lg-space-around-start,\n  .layout-align-lg-space-around-end,\n  [layout-align-lg=\"space-around\"], [layout-align-lg=\"space-around center\"],\n  [layout-align-lg=\"space-around start\"],\n  [layout-align-lg=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-lg-space-between, .layout-align-lg-space-between-center,\n  .layout-align-lg-space-between-start,\n  .layout-align-lg-space-between-end,\n  [layout-align-lg=\"space-between\"], [layout-align-lg=\"space-between center\"],\n  [layout-align-lg=\"space-between start\"],\n  [layout-align-lg=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-lg-center-start,\n  .layout-align-lg-start-start,\n  .layout-align-lg-end-start,\n  .layout-align-lg-space-between-start,\n  .layout-align-lg-space-around-start,\n  [layout-align-lg=\"center start\"],\n  [layout-align-lg=\"start start\"],\n  [layout-align-lg=\"end start\"],\n  [layout-align-lg=\"space-between start\"],\n  [layout-align-lg=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-lg-center-center,\n  .layout-align-lg-start-center,\n  .layout-align-lg-end-center,\n  .layout-align-lg-space-between-center,\n  .layout-align-lg-space-around-center,\n  [layout-align-lg=\"center center\"],\n  [layout-align-lg=\"start center\"],\n  [layout-align-lg=\"end center\"],\n  [layout-align-lg=\"space-between center\"],\n  [layout-align-lg=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-lg-center-end,\n  .layout-align-lg-start-end,\n  .layout-align-lg-end-end,\n  .layout-align-lg-space-between-end,\n  .layout-align-lg-space-around-end,\n  [layout-align-lg=\"center end\"],\n  [layout-align-lg=\"start end\"],\n  [layout-align-lg=\"end end\"],\n  [layout-align-lg=\"space-between end\"],\n  [layout-align-lg=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-lg {\n    box-sizing: border-box; }\n  .flex-lg {\n    flex: 1; }\n  .flex-lg-grow {\n    flex: 1 1 100%; }\n  .flex-lg-initial {\n    flex: 0 1 auto; }\n  .flex-lg-auto {\n    flex: 1 1 auto; }\n  .flex-lg-none {\n    flex: 0 0 auto; }\n  .flex-lg-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-lg-0,\n  .md-layout-lg-row > .flex-lg-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-0,\n  .md-layout-lg-column > .flex-lg-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-lg-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-lg-5,\n  .md-layout-lg-row > .flex-lg-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-5,\n  .md-layout-lg-column > .flex-lg-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-lg-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-lg-10,\n  .md-layout-lg-row > .flex-lg-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-10,\n  .md-layout-lg-column > .flex-lg-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-lg-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-lg-15,\n  .md-layout-lg-row > .flex-lg-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-15,\n  .md-layout-lg-column > .flex-lg-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-lg-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-lg-20,\n  .md-layout-lg-row > .flex-lg-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-20,\n  .md-layout-lg-column > .flex-lg-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-lg-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-lg-25,\n  .md-layout-lg-row > .flex-lg-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-25,\n  .md-layout-lg-column > .flex-lg-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-lg-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-lg-30,\n  .md-layout-lg-row > .flex-lg-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-30,\n  .md-layout-lg-column > .flex-lg-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-lg-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-lg-35,\n  .md-layout-lg-row > .flex-lg-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-35,\n  .md-layout-lg-column > .flex-lg-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-lg-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-lg-40,\n  .md-layout-lg-row > .flex-lg-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-40,\n  .md-layout-lg-column > .flex-lg-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-lg-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-lg-45,\n  .md-layout-lg-row > .flex-lg-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-45,\n  .md-layout-lg-column > .flex-lg-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-lg-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-lg-50,\n  .md-layout-lg-row > .flex-lg-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-50,\n  .md-layout-lg-column > .flex-lg-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-lg-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-lg-55,\n  .md-layout-lg-row > .flex-lg-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-55,\n  .md-layout-lg-column > .flex-lg-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-lg-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-lg-60,\n  .md-layout-lg-row > .flex-lg-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-60,\n  .md-layout-lg-column > .flex-lg-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-lg-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-lg-65,\n  .md-layout-lg-row > .flex-lg-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-65,\n  .md-layout-lg-column > .flex-lg-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-lg-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-lg-70,\n  .md-layout-lg-row > .flex-lg-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-70,\n  .md-layout-lg-column > .flex-lg-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-lg-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-lg-75,\n  .md-layout-lg-row > .flex-lg-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-75,\n  .md-layout-lg-column > .flex-lg-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-lg-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-lg-80,\n  .md-layout-lg-row > .flex-lg-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-80,\n  .md-layout-lg-column > .flex-lg-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-lg-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-lg-85,\n  .md-layout-lg-row > .flex-lg-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-85,\n  .md-layout-lg-column > .flex-lg-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-lg-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-lg-90,\n  .md-layout-lg-row > .flex-lg-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-90,\n  .md-layout-lg-column > .flex-lg-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-lg-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-lg-95,\n  .md-layout-lg-row > .flex-lg-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-95,\n  .md-layout-lg-column > .flex-lg-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-lg-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-lg-100,\n  .md-layout-lg-row > .flex-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-100,\n  .md-layout-lg-column > .flex-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-lg-33, .md-layout-row > .flex-lg-34, .md-layout-lg-row > .flex-lg-33, .md-layout-lg-row > .flex-lg-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-lg-66, .md-layout-row > .flex-lg-67, .md-layout-lg-row > .flex-lg-66, .md-layout-lg-row > .flex-lg-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-33, .md-layout-column > .flex-lg-34, .md-layout-lg-column > .flex-lg-33, .md-layout-lg-column > .flex-lg-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-lg-66, .md-layout-column > .flex-lg-67, .md-layout-lg-column > .flex-lg-66, .md-layout-lg-column > .flex-lg-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-lg, .md-layout-lg-column, .md-layout-lg-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-lg-column {\n    flex-direction: column; }\n  .md-layout-lg-row {\n    flex-direction: row; } }\n\n@media (min-width: 1200px) {\n  .hide-gt-sm:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide-gt-md:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide-gt-lg:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show) {\n    display: none; }\n  .flex-order-gt-lg-0, [flex-order-gt-lg=\"0\"] {\n    order: 0; }\n  .flex-order-gt-lg-1, [flex-order-gt-lg=\"1\"] {\n    order: 1; }\n  .flex-order-gt-lg-2, [flex-order-gt-lg=\"2\"] {\n    order: 2; }\n  .flex-order-gt-lg-3, [flex-order-gt-lg=\"3\"] {\n    order: 3; }\n  .flex-order-gt-lg-4, [flex-order-gt-lg=\"4\"] {\n    order: 4; }\n  .flex-order-gt-lg-5, [flex-order-gt-lg=\"5\"] {\n    order: 5; }\n  .flex-order-gt-lg-6, [flex-order-gt-lg=\"6\"] {\n    order: 6; }\n  .flex-order-gt-lg-7, [flex-order-gt-lg=\"7\"] {\n    order: 7; }\n  .flex-order-gt-lg-8, [flex-order-gt-lg=\"8\"] {\n    order: 8; }\n  .flex-order-gt-lg-9, [flex-order-gt-lg=\"9\"] {\n    order: 9; }\n  .flex-order-gt-lg-10, [flex-order-gt-lg=\"10\"] {\n    order: 10; }\n  .flex-order-gt-lg-11, [flex-order-gt-lg=\"11\"] {\n    order: 11; }\n  .flex-order-gt-lg-12, [flex-order-gt-lg=\"12\"] {\n    order: 12; }\n  .flex-order-gt-lg-13, [flex-order-gt-lg=\"13\"] {\n    order: 13; }\n  .flex-order-gt-lg-14, [flex-order-gt-lg=\"14\"] {\n    order: 14; }\n  .flex-order-gt-lg-15, [flex-order-gt-lg=\"15\"] {\n    order: 15; }\n  .flex-order-gt-lg-16, [flex-order-gt-lg=\"16\"] {\n    order: 16; }\n  .flex-order-gt-lg-17, [flex-order-gt-lg=\"17\"] {\n    order: 17; }\n  .flex-order-gt-lg-18, [flex-order-gt-lg=\"18\"] {\n    order: 18; }\n  .flex-order-gt-lg-19, [flex-order-gt-lg=\"19\"] {\n    order: 19; }\n  .offset-gt-lg-0, [offset-gt-lg=\"0\"] {\n    margin-left: 0%; }\n  .offset-gt-lg-5, [offset-gt-lg=\"5\"] {\n    margin-left: 5%; }\n  .offset-gt-lg-10, [offset-gt-lg=\"10\"] {\n    margin-left: 10%; }\n  .offset-gt-lg-15, [offset-gt-lg=\"15\"] {\n    margin-left: 15%; }\n  .offset-gt-lg-20, [offset-gt-lg=\"20\"] {\n    margin-left: 20%; }\n  .offset-gt-lg-25, [offset-gt-lg=\"25\"] {\n    margin-left: 25%; }\n  .offset-gt-lg-30, [offset-gt-lg=\"30\"] {\n    margin-left: 30%; }\n  .offset-gt-lg-35, [offset-gt-lg=\"35\"] {\n    margin-left: 35%; }\n  .offset-gt-lg-40, [offset-gt-lg=\"40\"] {\n    margin-left: 40%; }\n  .offset-gt-lg-45, [offset-gt-lg=\"45\"] {\n    margin-left: 45%; }\n  .offset-gt-lg-50, [offset-gt-lg=\"50\"] {\n    margin-left: 50%; }\n  .offset-gt-lg-55, [offset-gt-lg=\"55\"] {\n    margin-left: 55%; }\n  .offset-gt-lg-60, [offset-gt-lg=\"60\"] {\n    margin-left: 60%; }\n  .offset-gt-lg-65, [offset-gt-lg=\"65\"] {\n    margin-left: 65%; }\n  .offset-gt-lg-70, [offset-gt-lg=\"70\"] {\n    margin-left: 70%; }\n  .offset-gt-lg-75, [offset-gt-lg=\"75\"] {\n    margin-left: 75%; }\n  .offset-gt-lg-80, [offset-gt-lg=\"80\"] {\n    margin-left: 80%; }\n  .offset-gt-lg-85, [offset-gt-lg=\"85\"] {\n    margin-left: 85%; }\n  .offset-gt-lg-90, [offset-gt-lg=\"90\"] {\n    margin-left: 90%; }\n  .offset-gt-lg-95, [offset-gt-lg=\"95\"] {\n    margin-left: 95%; }\n  .offset-gt-lg-33, [offset-gt-lg=\"33\"], .offset-gt-lg-34, [offset-gt-lg=\"34\"] {\n    margin-left: 33%; }\n  .offset-gt-lg-66, [offset-gt-lg=\"66\"], .offset-gt-lg-67, [offset-gt-lg=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-gt-lg-center, .layout-align-gt-lg-center-center,\n  .layout-align-gt-lg-center-start,\n  .layout-align-gt-lg-center-end,\n  [layout-align-gt-lg=\"center\"],\n  [layout-align-gt-lg=\"center center\"],\n  [layout-align-gt-lg=\"center start\"],\n  [layout-align-gt-lg=\"center end\"] {\n    justify-content: center; }\n  .layout-align-gt-lg-end, .layout-align-gt-lg-end-center,\n  .layout-align-gt-lg-end-start,\n  .layout-align-gt-lg-end-end,\n  [layout-align-gt-lg=\"end\"], [layout-align-gt-lg=\"end center\"],\n  [layout-align-gt-lg=\"end start\"],\n  [layout-align-gt-lg=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-gt-lg-space-around, .layout-align-gt-lg-space-around-center,\n  .layout-align-gt-lg-space-around-start,\n  .layout-align-gt-lg-space-around-end,\n  [layout-align-gt-lg=\"space-around\"], [layout-align-gt-lg=\"space-around center\"],\n  [layout-align-gt-lg=\"space-around start\"],\n  [layout-align-gt-lg=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-gt-lg-space-between, .layout-align-gt-lg-space-between-center,\n  .layout-align-gt-lg-space-between-start,\n  .layout-align-gt-lg-space-between-end,\n  [layout-align-gt-lg=\"space-between\"], [layout-align-gt-lg=\"space-between center\"],\n  [layout-align-gt-lg=\"space-between start\"],\n  [layout-align-gt-lg=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-gt-lg-center-start,\n  .layout-align-gt-lg-start-start,\n  .layout-align-gt-lg-end-start,\n  .layout-align-gt-lg-space-between-start,\n  .layout-align-gt-lg-space-around-start,\n  [layout-align-gt-lg=\"center start\"],\n  [layout-align-gt-lg=\"start start\"],\n  [layout-align-gt-lg=\"end start\"],\n  [layout-align-gt-lg=\"space-between start\"],\n  [layout-align-gt-lg=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-gt-lg-center-center,\n  .layout-align-gt-lg-start-center,\n  .layout-align-gt-lg-end-center,\n  .layout-align-gt-lg-space-between-center,\n  .layout-align-gt-lg-space-around-center,\n  [layout-align-gt-lg=\"center center\"],\n  [layout-align-gt-lg=\"start center\"],\n  [layout-align-gt-lg=\"end center\"],\n  [layout-align-gt-lg=\"space-between center\"],\n  [layout-align-gt-lg=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-gt-lg-center-end,\n  .layout-align-gt-lg-start-end,\n  .layout-align-gt-lg-end-end,\n  .layout-align-gt-lg-space-between-end,\n  .layout-align-gt-lg-space-around-end,\n  [layout-align-gt-lg=\"center end\"],\n  [layout-align-gt-lg=\"start end\"],\n  [layout-align-gt-lg=\"end end\"],\n  [layout-align-gt-lg=\"space-between end\"],\n  [layout-align-gt-lg=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-gt-lg {\n    box-sizing: border-box; }\n  .flex-gt-lg {\n    flex: 1; }\n  .flex-gt-lg-grow {\n    flex: 1 1 100%; }\n  .flex-gt-lg-initial {\n    flex: 0 1 auto; }\n  .flex-gt-lg-auto {\n    flex: 1 1 auto; }\n  .flex-gt-lg-none {\n    flex: 0 0 auto; }\n  .flex-gt-lg-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-gt-lg-0,\n  .md-layout-gt-lg-row > .flex-gt-lg-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-0,\n  .md-layout-gt-lg-column > .flex-gt-lg-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-gt-lg-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-gt-lg-5,\n  .md-layout-gt-lg-row > .flex-gt-lg-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-5,\n  .md-layout-gt-lg-column > .flex-gt-lg-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-gt-lg-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-gt-lg-10,\n  .md-layout-gt-lg-row > .flex-gt-lg-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-10,\n  .md-layout-gt-lg-column > .flex-gt-lg-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-gt-lg-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-gt-lg-15,\n  .md-layout-gt-lg-row > .flex-gt-lg-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-15,\n  .md-layout-gt-lg-column > .flex-gt-lg-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-gt-lg-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-gt-lg-20,\n  .md-layout-gt-lg-row > .flex-gt-lg-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-20,\n  .md-layout-gt-lg-column > .flex-gt-lg-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-gt-lg-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-gt-lg-25,\n  .md-layout-gt-lg-row > .flex-gt-lg-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-25,\n  .md-layout-gt-lg-column > .flex-gt-lg-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-gt-lg-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-gt-lg-30,\n  .md-layout-gt-lg-row > .flex-gt-lg-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-30,\n  .md-layout-gt-lg-column > .flex-gt-lg-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-gt-lg-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-gt-lg-35,\n  .md-layout-gt-lg-row > .flex-gt-lg-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-35,\n  .md-layout-gt-lg-column > .flex-gt-lg-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-gt-lg-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-gt-lg-40,\n  .md-layout-gt-lg-row > .flex-gt-lg-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-40,\n  .md-layout-gt-lg-column > .flex-gt-lg-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-gt-lg-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-gt-lg-45,\n  .md-layout-gt-lg-row > .flex-gt-lg-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-45,\n  .md-layout-gt-lg-column > .flex-gt-lg-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-gt-lg-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-gt-lg-50,\n  .md-layout-gt-lg-row > .flex-gt-lg-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-50,\n  .md-layout-gt-lg-column > .flex-gt-lg-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-gt-lg-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-gt-lg-55,\n  .md-layout-gt-lg-row > .flex-gt-lg-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-55,\n  .md-layout-gt-lg-column > .flex-gt-lg-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-gt-lg-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-gt-lg-60,\n  .md-layout-gt-lg-row > .flex-gt-lg-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-60,\n  .md-layout-gt-lg-column > .flex-gt-lg-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-gt-lg-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-gt-lg-65,\n  .md-layout-gt-lg-row > .flex-gt-lg-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-65,\n  .md-layout-gt-lg-column > .flex-gt-lg-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-gt-lg-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-gt-lg-70,\n  .md-layout-gt-lg-row > .flex-gt-lg-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-70,\n  .md-layout-gt-lg-column > .flex-gt-lg-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-gt-lg-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-gt-lg-75,\n  .md-layout-gt-lg-row > .flex-gt-lg-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-75,\n  .md-layout-gt-lg-column > .flex-gt-lg-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-gt-lg-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-gt-lg-80,\n  .md-layout-gt-lg-row > .flex-gt-lg-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-80,\n  .md-layout-gt-lg-column > .flex-gt-lg-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-gt-lg-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-gt-lg-85,\n  .md-layout-gt-lg-row > .flex-gt-lg-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-85,\n  .md-layout-gt-lg-column > .flex-gt-lg-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-gt-lg-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-gt-lg-90,\n  .md-layout-gt-lg-row > .flex-gt-lg-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-90,\n  .md-layout-gt-lg-column > .flex-gt-lg-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-gt-lg-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-gt-lg-95,\n  .md-layout-gt-lg-row > .flex-gt-lg-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-95,\n  .md-layout-gt-lg-column > .flex-gt-lg-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-gt-lg-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-gt-lg-100,\n  .md-layout-gt-lg-row > .flex-gt-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-100,\n  .md-layout-gt-lg-column > .flex-gt-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-lg-33, .md-layout-row > .flex-gt-lg-34, .md-layout-gt-lg-row > .flex-gt-lg-33, .md-layout-gt-lg-row > .flex-gt-lg-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-lg-66, .md-layout-row > .flex-gt-lg-67, .md-layout-gt-lg-row > .flex-gt-lg-66, .md-layout-gt-lg-row > .flex-gt-lg-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-33, .md-layout-column > .flex-gt-lg-34, .md-layout-gt-lg-column > .flex-gt-lg-33, .md-layout-gt-lg-column > .flex-gt-lg-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-gt-lg-66, .md-layout-column > .flex-gt-lg-67, .md-layout-gt-lg-column > .flex-gt-lg-66, .md-layout-gt-lg-column > .flex-gt-lg-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-gt-lg, .md-layout-gt-lg-column, .md-layout-gt-lg-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-gt-lg-column {\n    flex-direction: column; }\n  .md-layout-gt-lg-row {\n    flex-direction: row; } }\n\n@keyframes md-autocomplete-list-out {\n  0% {\n    animation-timing-function: linear; }\n  50% {\n    opacity: 0;\n    height: 40px;\n    animation-timing-function: ease-in; }\n  100% {\n    height: 0;\n    opacity: 0; } }\n\n@keyframes md-autocomplete-list-in {\n  0% {\n    opacity: 0;\n    height: 0;\n    animation-timing-function: ease-out; }\n  50% {\n    opacity: 0;\n    height: 40px; }\n  100% {\n    opacity: 1;\n    height: 40px; } }\n\nmd-autocomplete {\n  border-radius: 2px;\n  display: block;\n  height: 40px;\n  position: relative;\n  overflow: visible;\n  min-width: 190px; }\n  md-autocomplete[disabled] input {\n    cursor: not-allowed; }\n  md-autocomplete[md-floating-label] {\n    border-radius: 0;\n    background: transparent;\n    height: auto; }\n    md-autocomplete[md-floating-label] md-input-container {\n      padding-bottom: 26px; }\n      md-autocomplete[md-floating-label] md-input-container.md-input-has-messages {\n        padding-bottom: 2px; }\n    md-autocomplete[md-floating-label] md-autocomplete-wrap {\n      height: auto; }\n    md-autocomplete[md-floating-label] button {\n      position: absolute;\n      top: auto;\n      bottom: 0;\n      right: 0;\n      width: 30px;\n      height: 30px; }\n  md-autocomplete md-autocomplete-wrap {\n    display: block;\n    position: relative;\n    overflow: visible;\n    height: 40px; }\n    md-autocomplete md-autocomplete-wrap.md-menu-showing {\n      z-index: 51; }\n    md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate {\n      position: absolute;\n      top: 20px;\n      left: 0;\n      width: 100%;\n      height: 3px;\n      transition: none; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate .md-container {\n        transition: none;\n        height: 3px; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-enter {\n        transition: opacity 0.15s linear; }\n        md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-enter.ng-enter-active {\n          opacity: 1; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-leave {\n        transition: opacity 0.15s linear; }\n        md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-leave.ng-leave-active {\n          opacity: 0; }\n  md-autocomplete input:not(.md-input) {\n    font-size: 14px;\n    box-sizing: border-box;\n    border: none;\n    box-shadow: none;\n    outline: none;\n    background: transparent;\n    width: 100%;\n    padding: 0 15px;\n    line-height: 40px;\n    height: 40px; }\n    md-autocomplete input:not(.md-input)::-ms-clear {\n      display: none; }\n  md-autocomplete button {\n    position: relative;\n    line-height: 20px;\n    text-align: center;\n    width: 30px;\n    height: 30px;\n    cursor: pointer;\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n    font-size: 12px;\n    background: transparent;\n    margin: auto 5px; }\n    md-autocomplete button:after {\n      content: '';\n      position: absolute;\n      top: -6px;\n      right: -6px;\n      bottom: -6px;\n      left: -6px;\n      border-radius: 50%;\n      transform: scale(0);\n      opacity: 0;\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n    md-autocomplete button:focus {\n      outline: none; }\n      md-autocomplete button:focus:after {\n        transform: scale(1);\n        opacity: 1; }\n    md-autocomplete button md-icon {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate3d(-50%, -50%, 0) scale(0.9); }\n      md-autocomplete button md-icon path {\n        stroke-width: 0; }\n    md-autocomplete button.ng-enter {\n      transform: scale(0);\n      transition: transform 0.15s ease-out; }\n      md-autocomplete button.ng-enter.ng-enter-active {\n        transform: scale(1); }\n    md-autocomplete button.ng-leave {\n      transition: transform 0.15s ease-out; }\n      md-autocomplete button.ng-leave.ng-leave-active {\n        transform: scale(0); }\n  @media screen and (-ms-high-contrast: active) {\n    md-autocomplete input {\n      border: 1px solid #fff; }\n    md-autocomplete li:focus {\n      color: #fff; } }\n\n.md-virtual-repeat-container.md-autocomplete-suggestions-container {\n  position: absolute;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);\n  height: 225.5px;\n  max-height: 225.5px;\n  z-index: 100; }\n\n.md-autocomplete-suggestions {\n  margin: 0;\n  list-style: none;\n  padding: 0; }\n  .md-autocomplete-suggestions li {\n    cursor: pointer;\n    font-size: 14px;\n    overflow: hidden;\n    padding: 0 15px;\n    line-height: 48px;\n    height: 48px;\n    transition: background 0.15s linear;\n    margin: 0;\n    white-space: nowrap;\n    text-overflow: ellipsis; }\n    .md-autocomplete-suggestions li:focus {\n      outline: none; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-autocomplete,\n  .md-autocomplete-suggestions {\n    border: 1px solid #fff; } }\n\nmd-backdrop {\n  transition: opacity 450ms;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 50; }\n  md-backdrop.md-menu-backdrop {\n    position: fixed !important;\n    z-index: 98; }\n  md-backdrop.md-select-backdrop {\n    z-index: 81;\n    transition-duration: 0; }\n  md-backdrop.md-dialog-backdrop {\n    z-index: 79; }\n  md-backdrop.md-bottom-sheet-backdrop {\n    z-index: 69; }\n  md-backdrop.md-sidenav-backdrop {\n    z-index: 59; }\n  md-backdrop.md-click-catcher {\n    position: absolute; }\n  md-backdrop.md-opaque {\n    opacity: .48; }\n    md-backdrop.md-opaque.ng-enter {\n      opacity: 0; }\n    md-backdrop.md-opaque.ng-enter.md-opaque.ng-enter-active {\n      opacity: .48; }\n    md-backdrop.md-opaque.ng-leave {\n      opacity: .48;\n      transition: opacity 400ms; }\n    md-backdrop.md-opaque.ng-leave.md-opaque.ng-leave-active {\n      opacity: 0; }\n\nmd-bottom-sheet {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  padding: 8px 16px 88px 16px;\n  z-index: 70;\n  border-top-width: 1px;\n  border-top-style: solid;\n  transform: translate3d(0, 80px, 0);\n  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  transition-property: transform; }\n  md-bottom-sheet.md-has-header {\n    padding-top: 0; }\n  md-bottom-sheet.ng-enter {\n    opacity: 0;\n    transform: translate3d(0, 100%, 0); }\n  md-bottom-sheet.ng-enter-active {\n    opacity: 1;\n    display: block;\n    transform: translate3d(0, 80px, 0) !important; }\n  md-bottom-sheet.ng-leave-active {\n    transform: translate3d(0, 100%, 0) !important;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-bottom-sheet .md-subheader {\n    background-color: transparent;\n    font-family: Roboto, \"Helvetica Neue\", sans-serif;\n    line-height: 56px;\n    padding: 0;\n    white-space: nowrap; }\n  md-bottom-sheet md-inline-icon {\n    display: inline-block;\n    height: 24px;\n    width: 24px;\n    fill: #444; }\n  md-bottom-sheet md-list-item {\n    display: flex;\n    outline: none; }\n    md-bottom-sheet md-list-item:hover {\n      cursor: pointer; }\n  md-bottom-sheet.md-list md-list-item {\n    padding: 0;\n    align-items: center;\n    height: 48px; }\n    md-bottom-sheet.md-list md-list-item div.md-icon-container {\n      display: inline-block;\n      height: 24px;\n      margin-right: 32px; }\n  md-bottom-sheet.md-grid {\n    padding-left: 24px;\n    padding-right: 24px;\n    padding-top: 0; }\n    md-bottom-sheet.md-grid md-list {\n      display: flex;\n      flex-direction: row;\n      flex-wrap: wrap;\n      transition: all 0.5s;\n      align-items: center; }\n    md-bottom-sheet.md-grid md-list-item {\n      flex-direction: column;\n      align-items: center;\n      transition: all 0.5s;\n      height: 96px;\n      margin-top: 8px;\n      margin-bottom: 8px;\n      /* Mixin for how many grid items to show per row */ }\n      @media screen and (max-width: 600px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 33.33333%;\n          max-width: 33.33333%; }\n          md-bottom-sheet.md-grid md-list-item:nth-of-type(3n + 1) {\n            align-items: flex-start; }\n          md-bottom-sheet.md-grid md-list-item:nth-of-type(3n) {\n            align-items: flex-end; } }\n      @media screen and (min-width: 600px) and (max-width: 960px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 25%;\n          max-width: 25%; } }\n      @media screen and (min-width: 960px) and (max-width: 1200px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 16.66667%;\n          max-width: 16.66667%; } }\n      @media screen and (min-width: 1200px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 14.28571%;\n          max-width: 14.28571%; } }\n      md-bottom-sheet.md-grid md-list-item .md-list-item-content {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        width: 48px;\n        padding-bottom: 16px; }\n      md-bottom-sheet.md-grid md-list-item .md-grid-item-content {\n        border: 1px solid transparent;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        width: 80px; }\n      md-bottom-sheet.md-grid md-list-item .md-icon-container {\n        display: inline-block;\n        box-sizing: border-box;\n        height: 48px;\n        width: 48px;\n        margin: 0 0; }\n      md-bottom-sheet.md-grid md-list-item .md-grid-text {\n        font-weight: 400;\n        line-height: 16px;\n        font-size: 13px;\n        margin: 0;\n        white-space: nowrap;\n        width: 64px;\n        text-align: center;\n        text-transform: none;\n        padding-top: 8px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-bottom-sheet {\n    border: 1px solid #fff; } }\n\n.md-button {\n  border-radius: 3px;\n  box-sizing: border-box;\n  color: currentColor;\n  user-select: none;\n  position: relative;\n  outline: none;\n  border: 0;\n  display: inline-block;\n  align-items: center;\n  padding: 0 6px;\n  margin: 6px 8px;\n  line-height: 36px;\n  min-height: 36px;\n  background: transparent;\n  white-space: nowrap;\n  min-width: 88px;\n  text-align: center;\n  text-transform: uppercase;\n  font-weight: 500;\n  font-size: 14px;\n  font-style: inherit;\n  font-variant: inherit;\n  font-family: inherit;\n  text-decoration: none;\n  cursor: pointer;\n  overflow: hidden;\n  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-button:focus {\n    outline: none; }\n  .md-button:hover, .md-button:focus {\n    text-decoration: none; }\n  .md-button.ng-hide, .md-button.ng-leave {\n    transition: none; }\n  .md-button.md-cornered {\n    border-radius: 0; }\n  .md-button.md-icon {\n    padding: 0;\n    background: none; }\n  .md-button.md-raised:not([disabled]) {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n  .md-button.md-icon-button {\n    margin: 0 6px;\n    height: 48px;\n    min-width: 0;\n    line-height: 48px;\n    padding-left: 0;\n    padding-right: 0;\n    width: 48px;\n    border-radius: 50%; }\n    .md-button.md-icon-button .md-ripple-container {\n      border-radius: 50%;\n      background-clip: padding-box;\n      overflow: hidden;\n      -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n  .md-button.md-fab {\n    z-index: 20;\n    line-height: 56px;\n    min-width: 0;\n    width: 56px;\n    height: 56px;\n    vertical-align: middle;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n    border-radius: 50%;\n    background-clip: padding-box;\n    overflow: hidden;\n    transition: 0.2s linear;\n    transition-property: background-color, box-shadow; }\n    .md-button.md-fab.md-fab-bottom-right {\n      top: auto;\n      right: 20px;\n      bottom: 20px;\n      left: auto;\n      position: absolute; }\n    .md-button.md-fab.md-fab-bottom-left {\n      top: auto;\n      right: auto;\n      bottom: 20px;\n      left: 20px;\n      position: absolute; }\n    .md-button.md-fab.md-fab-top-right {\n      top: 20px;\n      right: 20px;\n      bottom: auto;\n      left: auto;\n      position: absolute; }\n    .md-button.md-fab.md-fab-top-left {\n      top: 20px;\n      right: auto;\n      bottom: auto;\n      left: 20px;\n      position: absolute; }\n    .md-button.md-fab .md-ripple-container {\n      border-radius: 50%;\n      background-clip: padding-box;\n      overflow: hidden;\n      -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n    .md-button.md-fab.md-mini {\n      line-height: 40px;\n      width: 40px;\n      height: 40px; }\n  .md-button:not([disabled]).md-raised.md-focused,\n  .md-button:not([disabled]).md-fab.md-focused {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n  .md-button:not([disabled]).md-raised:active,\n  .md-button:not([disabled]).md-fab:active {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }\n  .md-button .md-ripple-container {\n    border-radius: 3px;\n    background-clip: padding-box;\n    overflow: hidden;\n    -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n\n.md-toast-open-top .md-button.md-fab-top-left,\n.md-toast-open-top .md-button.md-fab-top-right {\n  transform: translate3d(0, 42px, 0); }\n  .md-toast-open-top .md-button.md-fab-top-left:not([disabled]).md-focused,\n  .md-toast-open-top .md-button.md-fab-top-left:not([disabled]):hover,\n  .md-toast-open-top .md-button.md-fab-top-right:not([disabled]).md-focused,\n  .md-toast-open-top .md-button.md-fab-top-right:not([disabled]):hover {\n    transform: translate3d(0, 41px, 0); }\n\n.md-toast-open-bottom .md-button.md-fab-bottom-left,\n.md-toast-open-bottom .md-button.md-fab-bottom-right {\n  transform: translate3d(0, -42px, 0); }\n  .md-toast-open-bottom .md-button.md-fab-bottom-left:not([disabled]).md-focused,\n  .md-toast-open-bottom .md-button.md-fab-bottom-left:not([disabled]):hover,\n  .md-toast-open-bottom .md-button.md-fab-bottom-right:not([disabled]).md-focused,\n  .md-toast-open-bottom .md-button.md-fab-bottom-right:not([disabled]):hover {\n    transform: translate3d(0, -43px, 0); }\n\n.md-button-group {\n  display: flex;\n  flex: 1;\n  width: 100%; }\n\n.md-button-group > .md-button {\n  flex: 1;\n  display: block;\n  overflow: hidden;\n  width: 0;\n  border-width: 1px 0px 1px 1px;\n  border-radius: 0;\n  text-align: center;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n  .md-button-group > .md-button:first-child {\n    border-radius: 2px 0px 0px 2px; }\n  .md-button-group > .md-button:last-child {\n    border-right-width: 1px;\n    border-radius: 0px 2px 2px 0px; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-button.md-raised,\n  .md-button.md-fab {\n    border: 1px solid #fff; } }\n\nmd-card {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }\n  md-card > img,\n  md-card > :not(md-card-content) img {\n    width: 100%; }\n  md-card md-card-content {\n    padding: 16px; }\n  md-card .md-actions {\n    margin: 0; }\n    md-card .md-actions .md-button {\n      margin-bottom: 8px;\n      margin-top: 8px;\n      margin-right: 4px;\n      margin-left: 4px; }\n  md-card md-card-footer {\n    padding: 16px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-card {\n    border: 1px solid #fff; } }\n\n.md-contact-chips .md-chips .md-chip {\n  padding: 0 25px 0 0; }\n  .md-contact-chips .md-chips .md-chip .md-contact-avatar {\n    float: left; }\n    .md-contact-chips .md-chips .md-chip .md-contact-avatar img {\n      height: 32px;\n      border-radius: 16px; }\n  .md-contact-chips .md-chips .md-chip .md-contact-name {\n    display: inline-block;\n    height: 32px;\n    margin-left: 8px; }\n\n.md-contact-suggestion {\n  height: 56px; }\n  .md-contact-suggestion img {\n    height: 40px;\n    border-radius: 20px;\n    margin-top: 8px; }\n  .md-contact-suggestion .md-contact-name {\n    margin-left: 8px;\n    width: 120px; }\n  .md-contact-suggestion .md-contact-name, .md-contact-suggestion .md-contact-email {\n    display: inline-block;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n\n.md-contact-chips-suggestions li {\n  height: 100%; }\n\n.md-chips {\n  display: block;\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\n  font-size: 16px;\n  padding: 0 0 8px 3px;\n  vertical-align: middle; }\n  .md-chips:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .md-chips:not(.md-readonly) {\n    cursor: text; }\n    .md-chips:not(.md-readonly) .md-chip {\n      padding-right: 22px; }\n  .md-chips .md-chip {\n    cursor: default;\n    border-radius: 16px;\n    display: block;\n    height: 32px;\n    line-height: 32px;\n    margin: 8px 8px 0 0;\n    padding: 0 12px 0 12px;\n    float: left;\n    box-sizing: border-box;\n    max-width: 100%;\n    position: relative; }\n    .md-chips .md-chip .md-chip-content {\n      display: block;\n      padding-right: 4px;\n      float: left;\n      white-space: nowrap;\n      max-width: 100%;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n      .md-chips .md-chip .md-chip-content:focus {\n        outline: none; }\n    .md-chips .md-chip .md-chip-remove-container {\n      position: absolute;\n      right: 0;\n      line-height: 22px; }\n    .md-chips .md-chip .md-chip-remove {\n      text-align: center;\n      width: 32px;\n      height: 32px;\n      min-width: 0;\n      padding: 0;\n      background: transparent;\n      border: none;\n      box-shadow: none;\n      margin: 0;\n      position: relative; }\n      .md-chips .md-chip .md-chip-remove md-icon {\n        height: 18px;\n        width: 18px;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate3d(-50%, -50%, 0); }\n  .md-chips .md-chip-input-container {\n    display: block;\n    line-height: 32px;\n    margin: 8px 8px 0 0;\n    padding: 0 12px 0 12px;\n    float: left; }\n    .md-chips .md-chip-input-container input:not([type]), .md-chips .md-chip-input-container input[type=\"email\"], .md-chips .md-chip-input-container input[type=\"number\"], .md-chips .md-chip-input-container input[type=\"tel\"], .md-chips .md-chip-input-container input[type=\"url\"], .md-chips .md-chip-input-container input[type=\"text\"] {\n      border: 0;\n      height: 32px;\n      line-height: 32px;\n      padding: 0; }\n      .md-chips .md-chip-input-container input:not([type]):focus, .md-chips .md-chip-input-container input[type=\"email\"]:focus, .md-chips .md-chip-input-container input[type=\"number\"]:focus, .md-chips .md-chip-input-container input[type=\"tel\"]:focus, .md-chips .md-chip-input-container input[type=\"url\"]:focus, .md-chips .md-chip-input-container input[type=\"text\"]:focus {\n        outline: none; }\n    .md-chips .md-chip-input-container md-autocomplete, .md-chips .md-chip-input-container md-autocomplete-wrap {\n      background: transparent;\n      height: 32px; }\n    .md-chips .md-chip-input-container md-autocomplete md-autocomplete-wrap {\n      box-shadow: none; }\n    .md-chips .md-chip-input-container md-autocomplete input {\n      position: relative; }\n    .md-chips .md-chip-input-container input {\n      border: 0;\n      height: 32px;\n      line-height: 32px;\n      padding: 0; }\n      .md-chips .md-chip-input-container input:focus {\n        outline: none; }\n    .md-chips .md-chip-input-container md-autocomplete, .md-chips .md-chip-input-container md-autocomplete-wrap {\n      height: 32px; }\n    .md-chips .md-chip-input-container md-autocomplete {\n      box-shadow: none; }\n      .md-chips .md-chip-input-container md-autocomplete input {\n        position: relative; }\n    .md-chips .md-chip-input-container:not(:first-child) {\n      margin: 8px 8px 0 0; }\n    .md-chips .md-chip-input-container input {\n      background: transparent;\n      border-width: 0; }\n  .md-chips md-autocomplete button {\n    display: none; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-chip-input-container,\n  md-chip {\n    border: 1px solid #fff; }\n  .md-chip-input-container md-autocomplete {\n    border: none; } }\n\nmd-checkbox {\n  box-sizing: border-box;\n  display: block;\n  margin: 8px;\n  white-space: nowrap;\n  cursor: pointer;\n  outline: none;\n  user-select: none;\n  padding-left: 18px;\n  padding-right: 0;\n  position: relative;\n  line-height: 26px;\n  min-width: 18px;\n  min-height: 18px; }\n  html[dir=rtl] md-checkbox {\n    padding-left: 0;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-checkbox {\n    padding-left: 0;\n    unicode-bidi: embed; }\n  md-checkbox bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-checkbox bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  html[dir=rtl] md-checkbox {\n    padding-right: 18px;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-checkbox {\n    padding-right: 18px;\n    unicode-bidi: embed; }\n  md-checkbox bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-checkbox bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  md-checkbox.md-focused:not([disabled]) .md-container:before {\n    left: -8px;\n    top: -8px;\n    right: -8px;\n    bottom: -8px; }\n  md-checkbox.md-focused:not([disabled]):not(.md-checked) .md-container:before {\n    background-color: rgba(0, 0, 0, 0.12); }\n  md-checkbox .md-container {\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    box-sizing: border-box;\n    display: inline-block;\n    width: 18px;\n    height: 18px;\n    left: 0;\n    right: auto; }\n    html[dir=rtl] md-checkbox .md-container {\n      left: auto;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-container {\n      left: auto;\n      unicode-bidi: embed; }\n    md-checkbox .md-container bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-checkbox .md-container {\n      right: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-container {\n      right: 0;\n      unicode-bidi: embed; }\n    md-checkbox .md-container bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container:before {\n      box-sizing: border-box;\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n    md-checkbox .md-container:after {\n      box-sizing: border-box;\n      content: '';\n      position: absolute;\n      top: -10px;\n      right: -10px;\n      bottom: -10px;\n      left: -10px; }\n    md-checkbox .md-container .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: auto;\n      height: auto;\n      left: -15px;\n      top: -15px;\n      right: -15px;\n      bottom: -15px; }\n  md-checkbox.md-align-top-left > div.md-container {\n    top: 12px; }\n  md-checkbox .md-icon {\n    box-sizing: border-box;\n    transition: 240ms;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 18px;\n    height: 18px;\n    border-width: 2px;\n    border-style: solid;\n    border-radius: 2px; }\n  md-checkbox.md-checked .md-icon {\n    border: none; }\n  md-checkbox[disabled] {\n    cursor: no-drop; }\n  md-checkbox.md-checked .md-icon:after {\n    box-sizing: border-box;\n    transform: rotate(45deg);\n    position: absolute;\n    left: 6px;\n    top: 2px;\n    display: table;\n    width: 6px;\n    height: 12px;\n    border-width: 2px;\n    border-style: solid;\n    border-top: 0;\n    border-left: 0;\n    content: ''; }\n  md-checkbox .md-label {\n    box-sizing: border-box;\n    position: relative;\n    display: inline-block;\n    vertical-align: middle;\n    white-space: normal;\n    user-select: text;\n    margin-left: 10px;\n    margin-right: 0; }\n    html[dir=rtl] md-checkbox .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    md-checkbox .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-checkbox .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    md-checkbox .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n\nmd-content {\n  display: block;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n  md-content[md-scroll-y] {\n    overflow-y: auto;\n    overflow-x: hidden; }\n  md-content[md-scroll-x] {\n    overflow-x: auto;\n    overflow-y: hidden; }\n  md-content.autoScroll {\n    -webkit-overflow-scrolling: auto; }\n\n/** Styles for mdCalendar. */\nmd-calendar {\n  font-size: 13px;\n  user-select: none; }\n\n.md-calendar-scroll-mask {\n  display: inline-block;\n  overflow: hidden;\n  height: 308px; }\n  .md-calendar-scroll-mask .md-virtual-repeat-scroller {\n    overflow-y: scroll;\n    -webkit-overflow-scrolling: touch; }\n    .md-calendar-scroll-mask .md-virtual-repeat-scroller::-webkit-scrollbar {\n      display: none; }\n  .md-calendar-scroll-mask .md-virtual-repeat-offsetter {\n    width: 100%; }\n\n.md-calendar-scroll-container {\n  box-shadow: inset -3px 3px 6px rgba(0, 0, 0, 0.2);\n  display: inline-block;\n  height: 308px;\n  width: 346px; }\n\n.md-calendar-date {\n  height: 44px;\n  width: 44px;\n  text-align: center;\n  padding: 0;\n  border: none; }\n  .md-calendar-date:first-child {\n    padding-left: 16px; }\n  .md-calendar-date:last-child {\n    padding-right: 16px; }\n  .md-calendar-date.md-calendar-date-disabled {\n    cursor: default; }\n\n.md-calendar-date-selection-indicator {\n  transition: background-color, color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  border-radius: 50%;\n  display: inline-block;\n  width: 40px;\n  height: 40px;\n  line-height: 40px; }\n  .md-calendar-date:not(.md-disabled) .md-calendar-date-selection-indicator {\n    cursor: pointer; }\n\n.md-calendar-month-label {\n  height: 44px;\n  font-size: 14px;\n  font-weight: 500;\n  padding: 0 0 0 24px; }\n\n.md-calendar-day-header {\n  table-layout: fixed;\n  border-spacing: 0;\n  border-collapse: collapse; }\n  .md-calendar-day-header th {\n    height: 44px;\n    width: 44px;\n    text-align: center;\n    padding: 0;\n    border: none;\n    font-weight: normal;\n    height: 40px; }\n    .md-calendar-day-header th:first-child {\n      padding-left: 16px; }\n    .md-calendar-day-header th:last-child {\n      padding-right: 16px; }\n\n.md-calendar {\n  table-layout: fixed;\n  border-spacing: 0;\n  border-collapse: collapse; }\n  .md-calendar tr:last-child td {\n    border-bottom-width: 1px;\n    border-bottom-style: solid; }\n  .md-calendar:first-child {\n    border-top: 1px solid transparent; }\n\n/** Styles for mdDatepicker. */\nmd-datepicker {\n  white-space: nowrap; }\n\n.md-datepicker-button {\n  display: inline-block;\n  box-sizing: border-box;\n  background: none; }\n\n.md-datepicker-input {\n  font-size: 14px;\n  box-sizing: border-box;\n  border: none;\n  box-shadow: none;\n  outline: none;\n  background: transparent;\n  min-width: 120px;\n  max-width: 328px; }\n  .md-datepicker-input::-ms-clear {\n    display: none; }\n\n.md-datepicker-input-container {\n  position: relative;\n  padding-bottom: 5px;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  display: inline-block;\n  width: auto;\n  margin-left: 12px; }\n  .md-datepicker-input-container.md-datepicker-focused {\n    border-bottom-width: 2px; }\n\n.md-datepicker-calendar-pane {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 99;\n  border-width: 1px;\n  border-style: solid;\n  background: transparent;\n  transform: scale(0);\n  transform-origin: 0 0;\n  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-datepicker-calendar-pane.md-pane-open {\n    transform: scale(1); }\n\n.md-datepicker-input-mask {\n  height: 40px;\n  width: 340px;\n  position: relative;\n  background: transparent;\n  pointer-events: none;\n  cursor: text; }\n\n.md-datepicker-input-mask-opaque {\n  position: absolute;\n  right: 0;\n  left: 120px;\n  height: 100%; }\n\n.md-datepicker-calendar {\n  opacity: 0;\n  transition: opacity 0.2s cubic-bezier(0.5, 0, 0.25, 1); }\n  .md-pane-open .md-datepicker-calendar {\n    opacity: 1; }\n  .md-datepicker-calendar md-calendar:focus {\n    outline: none; }\n\n.md-datepicker-expand-triangle {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 0;\n  height: 0;\n  border-left: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-top: 5px solid; }\n\n.md-datepicker-triangle-button {\n  position: absolute;\n  right: 0;\n  top: 0;\n  transform: translateY(-25%) translateX(45%); }\n\n.md-datepicker-triangle-button.md-button.md-icon-button {\n  height: 100%;\n  width: 36px;\n  position: absolute; }\n\nmd-datepicker[disabled] .md-datepicker-input-container {\n  border-bottom-color: transparent; }\n\nmd-datepicker[disabled] .md-datepicker-triangle-button {\n  display: none; }\n\n.md-datepicker-open .md-datepicker-input-container {\n  margin-left: -12px;\n  border: none; }\n\n.md-datepicker-open .md-datepicker-input {\n  margin-left: 24px;\n  height: 40px; }\n\n.md-datepicker-open .md-datepicker-triangle-button {\n  display: none; }\n\n.md-datepicker-pos-adjusted .md-datepicker-input-mask {\n  display: none; }\n\n.md-datepicker-calendar-pane .md-calendar {\n  transform: translateY(-85px);\n  transition: transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);\n  transition-delay: 0.125s; }\n\n.md-datepicker-calendar-pane.md-pane-open .md-calendar {\n  transform: translateY(0); }\n\n.md-dialog-is-showing {\n  max-height: 100%; }\n\n.md-dialog-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 80;\n  overflow: hidden; }\n\nmd-dialog {\n  opacity: 0;\n  min-width: 240px;\n  max-width: 80%;\n  max-height: 80%;\n  position: relative;\n  overflow: auto;\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12);\n  display: flex;\n  flex-direction: column; }\n  md-dialog.md-transition-in {\n    opacity: 1;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transform: translate3d(0, 0, 0) scale(1); }\n  md-dialog.md-transition-out {\n    opacity: 0;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transform: translate3d(0, 100%, 0) scale(0.2); }\n  md-dialog > form {\n    display: flex;\n    flex-direction: column;\n    overflow: auto; }\n  md-dialog md-dialog-content {\n    order: 1;\n    flex-direction: column;\n    padding: 24px;\n    overflow: auto;\n    -webkit-overflow-scrolling: touch; }\n    md-dialog md-dialog-content:not([layout=row]) > *:first-child:not(.md-subheader) {\n      margin-top: 0; }\n    md-dialog md-dialog-content:focus {\n      outline: none; }\n    md-dialog md-dialog-content .md-subheader {\n      margin: 0; }\n      md-dialog md-dialog-content .md-subheader.sticky-clone {\n        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16); }\n    md-dialog md-dialog-content.sticky-container {\n      padding: 0; }\n      md-dialog md-dialog-content.sticky-container > div {\n        padding: 24px;\n        padding-top: 0; }\n    md-dialog md-dialog-content .md-dialog-content-body {\n      width: 100%; }\n  md-dialog .md-actions {\n    display: flex;\n    order: 2;\n    box-sizing: border-box;\n    align-items: center;\n    justify-content: flex-end;\n    margin-bottom: 0;\n    padding-right: 8px;\n    padding-left: 16px;\n    min-height: 52px;\n    overflow: hidden; }\n    md-dialog .md-actions .md-button {\n      margin-bottom: 8px;\n      margin-left: 8px;\n      margin-right: 0;\n      margin-top: 8px; }\n  md-dialog.md-content-overflow .md-actions {\n    border-top-width: 1px;\n    border-top-style: solid; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-dialog {\n    border: 1px solid #fff; } }\n\nmd-divider {\n  display: block;\n  border-top-width: 1px;\n  border-top-style: solid;\n  margin: 0; }\n  md-divider[md-inset] {\n    margin-left: 80px; }\n\nmd-fab-speed-dial {\n  position: relative;\n  display: flex;\n  align-items: center;\n  /*\n   * Handle the animations\n   */ }\n  md-fab-speed-dial.md-fab-bottom-right {\n    top: auto;\n    right: 20px;\n    bottom: 20px;\n    left: auto;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-bottom-left {\n    top: auto;\n    right: auto;\n    bottom: 20px;\n    left: 20px;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-top-right {\n    top: 20px;\n    right: 20px;\n    bottom: auto;\n    left: auto;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-top-left {\n    top: 20px;\n    right: auto;\n    bottom: auto;\n    left: 20px;\n    position: absolute; }\n  md-fab-speed-dial .md-css-variables {\n    z-index: 20; }\n  md-fab-speed-dial.md-is-open .md-fab-action-item {\n    visibility: visible;\n    align-items: center; }\n  md-fab-speed-dial md-fab-actions {\n    display: flex;\n    height: auto; }\n    md-fab-speed-dial md-fab-actions .md-fab-action-item {\n      visibility: hidden;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-down {\n    flex-direction: column; }\n    md-fab-speed-dial.md-down md-fab-trigger {\n      order: 1; }\n    md-fab-speed-dial.md-down md-fab-actions {\n      flex-direction: column;\n      order: 2; }\n  md-fab-speed-dial.md-up {\n    flex-direction: column; }\n    md-fab-speed-dial.md-up md-fab-trigger {\n      order: 2; }\n    md-fab-speed-dial.md-up md-fab-actions {\n      flex-direction: column-reverse;\n      order: 1; }\n  md-fab-speed-dial.md-left {\n    flex-direction: row; }\n    md-fab-speed-dial.md-left md-fab-trigger {\n      order: 2; }\n    md-fab-speed-dial.md-left md-fab-actions {\n      flex-direction: row-reverse;\n      order: 1; }\n      md-fab-speed-dial.md-left md-fab-actions .md-fab-action-item {\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-right {\n    flex-direction: row; }\n    md-fab-speed-dial.md-right md-fab-trigger {\n      order: 1; }\n    md-fab-speed-dial.md-right md-fab-actions {\n      flex-direction: row;\n      order: 2; }\n      md-fab-speed-dial.md-right md-fab-actions .md-fab-action-item {\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-scale .md-fab-action-item {\n    opacity: 0;\n    transform: scale(0);\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 0.14286s; }\n\nmd-fab-toolbar {\n  display: block;\n  /*\n   * Closed styling\n   */\n  /*\n   * Hover styling\n   */ }\n  md-fab-toolbar.md-fab-bottom-right {\n    top: auto;\n    right: 20px;\n    bottom: 20px;\n    left: auto;\n    position: absolute; }\n  md-fab-toolbar.md-fab-bottom-left {\n    top: auto;\n    right: auto;\n    bottom: 20px;\n    left: 20px;\n    position: absolute; }\n  md-fab-toolbar.md-fab-top-right {\n    top: 20px;\n    right: 20px;\n    bottom: auto;\n    left: auto;\n    position: absolute; }\n  md-fab-toolbar.md-fab-top-left {\n    top: 20px;\n    right: auto;\n    bottom: auto;\n    left: 20px;\n    position: absolute; }\n  md-fab-toolbar .md-fab-toolbar-wrapper {\n    display: block;\n    position: relative;\n    overflow: hidden;\n    height: 68px; }\n  md-fab-toolbar md-fab-trigger {\n    position: absolute;\n    z-index: 20; }\n    md-fab-toolbar md-fab-trigger button {\n      overflow: visible !important; }\n    md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {\n      display: block;\n      position: absolute;\n      z-index: 21;\n      opacity: 1;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n    md-fab-toolbar md-fab-trigger md-icon {\n      position: relative;\n      z-index: 22;\n      opacity: 1;\n      transition: all 200ms ease-in; }\n  md-fab-toolbar.md-left md-fab-trigger {\n    right: 0; }\n  md-fab-toolbar.md-left .md-toolbar-tools {\n    flex-direction: row-reverse; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:first-child {\n      margin-right: 0.6rem; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:first-child {\n      margin-left: -0.8rem; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:last-child {\n      margin-right: 8px; }\n  md-fab-toolbar.md-right md-fab-trigger {\n    left: 0; }\n  md-fab-toolbar.md-right .md-toolbar-tools {\n    flex-direction: row; }\n  md-fab-toolbar md-toolbar {\n    background-color: transparent !important;\n    pointer-events: none;\n    z-index: 23; }\n    md-fab-toolbar md-toolbar .md-toolbar-tools {\n      padding: 0 20px;\n      margin-top: 3px; }\n    md-fab-toolbar md-toolbar .md-fab-action-item {\n      opacity: 0;\n      transform: scale(0);\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-duration: 0.15s; }\n  md-fab-toolbar.md-is-open md-fab-trigger > button {\n    box-shadow: none; }\n    md-fab-toolbar.md-is-open md-fab-trigger > button md-icon {\n      opacity: 0; }\n  md-fab-toolbar.md-is-open .md-fab-action-item {\n    opacity: 1;\n    transform: scale(1); }\n\nmd-grid-list {\n  box-sizing: border-box;\n  display: block;\n  position: relative; }\n  md-grid-list md-grid-tile,\n  md-grid-list md-grid-tile > figure,\n  md-grid-list md-grid-tile-header,\n  md-grid-list md-grid-tile-footer {\n    box-sizing: border-box; }\n  md-grid-list md-grid-tile {\n    display: block;\n    position: absolute; }\n    md-grid-list md-grid-tile figure {\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      height: 100%;\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      padding: 0;\n      margin: 0; }\n    md-grid-list md-grid-tile md-grid-tile-header,\n    md-grid-list md-grid-tile md-grid-tile-footer {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      height: 48px;\n      color: #fff;\n      background: rgba(0, 0, 0, 0.18);\n      overflow: hidden;\n      position: absolute;\n      left: 0;\n      right: 0; }\n      md-grid-list md-grid-tile md-grid-tile-header h3,\n      md-grid-list md-grid-tile md-grid-tile-header h4,\n      md-grid-list md-grid-tile md-grid-tile-footer h3,\n      md-grid-list md-grid-tile md-grid-tile-footer h4 {\n        font-weight: 400;\n        margin: 0 0 0 16px; }\n      md-grid-list md-grid-tile md-grid-tile-header h3,\n      md-grid-list md-grid-tile md-grid-tile-footer h3 {\n        font-size: 14px; }\n      md-grid-list md-grid-tile md-grid-tile-header h4,\n      md-grid-list md-grid-tile md-grid-tile-footer h4 {\n        font-size: 12px; }\n    md-grid-list md-grid-tile md-grid-tile-header {\n      top: 0; }\n    md-grid-list md-grid-tile md-grid-tile-footer {\n      bottom: 0; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-grid-tile {\n    border: 1px solid #fff; }\n  md-grid-tile-footer {\n    border-top: 1px solid #fff; } }\n\nmd-icon {\n  margin: auto;\n  background-repeat: no-repeat no-repeat;\n  display: inline-block;\n  vertical-align: middle;\n  fill: currentColor;\n  height: 24px;\n  width: 24px; }\n  md-icon svg {\n    pointer-events: none; }\n  md-icon[md-font-icon] {\n    line-height: 1;\n    width: auto; }\n\nmd-list {\n  display: block;\n  padding: 8px 0px 8px 0px; }\n  md-list .md-subheader {\n    font-size: 14px;\n    font-weight: 500;\n    letter-spacing: 0.010em;\n    line-height: 1.2em; }\n\nmd-list-item.md-proxy-focus.md-focused .md-no-style {\n  transition: background-color 0.15s linear; }\n\nmd-list-item.md-no-proxy,\nmd-list-item .md-no-style {\n  position: relative;\n  padding: 0px 16px;\n  flex: 1; }\n  md-list-item.md-no-proxy.md-button,\n  md-list-item .md-no-style.md-button {\n    font-size: inherit;\n    height: inherit;\n    text-align: left;\n    text-transform: none;\n    width: 100%;\n    white-space: normal;\n    flex-direction: inherit;\n    align-items: inherit; }\n  md-list-item.md-no-proxy:focus,\n  md-list-item .md-no-style:focus {\n    outline: none; }\n\nmd-list-item.md-with-secondary {\n  position: relative; }\n\nmd-list-item.md-clickable:hover {\n  cursor: pointer; }\n\nmd-list-item md-divider {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%; }\n  md-list-item md-divider[md-inset] {\n    left: 96px;\n    width: calc(100% - 96px);\n    margin: 0; }\n\nmd-list-item, md-list-item .md-list-item-inner {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  min-height: 48px; }\n  md-list-item > div.md-primary > md-icon,\n  md-list-item > div.md-secondary > md-icon,\n  md-list-item > md-icon:first-child,\n  md-list-item > md-icon.md-secondary, md-list-item .md-list-item-inner > div.md-primary > md-icon,\n  md-list-item .md-list-item-inner > div.md-secondary > md-icon,\n  md-list-item .md-list-item-inner > md-icon:first-child,\n  md-list-item .md-list-item-inner > md-icon.md-secondary {\n    width: 24px;\n    margin-top: 16px;\n    margin-bottom: 12px;\n    box-sizing: content-box; }\n  md-list-item > div.md-primary > md-checkbox,\n  md-list-item > div.md-secondary > md-checkbox,\n  md-list-item > md-checkbox:first-child,\n  md-list-item md-checkbox.md-secondary, md-list-item .md-list-item-inner > div.md-primary > md-checkbox,\n  md-list-item .md-list-item-inner > div.md-secondary > md-checkbox,\n  md-list-item .md-list-item-inner > md-checkbox:first-child,\n  md-list-item .md-list-item-inner md-checkbox.md-secondary {\n    align-self: center; }\n    md-list-item > div.md-primary > md-checkbox .md-label,\n    md-list-item > div.md-secondary > md-checkbox .md-label,\n    md-list-item > md-checkbox:first-child .md-label,\n    md-list-item md-checkbox.md-secondary .md-label, md-list-item .md-list-item-inner > div.md-primary > md-checkbox .md-label,\n    md-list-item .md-list-item-inner > div.md-secondary > md-checkbox .md-label,\n    md-list-item .md-list-item-inner > md-checkbox:first-child .md-label,\n    md-list-item .md-list-item-inner md-checkbox.md-secondary .md-label {\n      display: none; }\n  md-list-item > md-icon:first-child, md-list-item .md-list-item-inner > md-icon:first-child {\n    margin-right: 32px; }\n  md-list-item > md-checkbox:first-child, md-list-item .md-list-item-inner > md-checkbox:first-child {\n    width: 24px;\n    margin-left: 3px;\n    margin-right: 29px; }\n  md-list-item > .md-avatar:first-child, md-list-item .md-list-item-inner > .md-avatar:first-child {\n    width: 40px;\n    height: 40px;\n    margin-top: 8px;\n    margin-bottom: 8px;\n    margin-right: 16px;\n    border-radius: 50%;\n    box-sizing: content-box; }\n  md-list-item md-checkbox.md-secondary,\n  md-list-item md-switch.md-secondary, md-list-item .md-list-item-inner md-checkbox.md-secondary,\n  md-list-item .md-list-item-inner md-switch.md-secondary {\n    margin-right: 0;\n    margin-top: 0;\n    margin-bottom: 0; }\n  md-list-item button.md-button.md-secondary-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container {\n    background-color: transparent;\n    align-self: center;\n    border-radius: 50%;\n    margin: 0px;\n    min-width: 0px; }\n    md-list-item button.md-button.md-secondary-container .md-ripple,\n    md-list-item button.md-button.md-secondary-container .md-ripple-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container .md-ripple,\n    md-list-item .md-list-item-inner button.md-button.md-secondary-container .md-ripple-container {\n      border-radius: 50%; }\n  md-list-item .md-secondary-container,\n  md-list-item .md-secondary, md-list-item .md-list-item-inner .md-secondary-container,\n  md-list-item .md-list-item-inner .md-secondary {\n    margin-left: 16px;\n    position: absolute;\n    right: 16px;\n    top: 50%;\n    transform: translate3d(0, -50%, 0); }\n  md-list-item > .md-button.md-secondary-container > .md-secondary, md-list-item .md-list-item-inner > .md-button.md-secondary-container > .md-secondary {\n    margin-left: 0px;\n    position: static; }\n  md-list-item > p, md-list-item > .md-list-item-inner > p, md-list-item .md-list-item-inner > p, md-list-item .md-list-item-inner > .md-list-item-inner > p {\n    flex: 1;\n    margin: 0; }\n\nmd-list-item.md-2-line,\nmd-list-item.md-2-line > .md-no-style,\nmd-list-item.md-3-line,\nmd-list-item.md-3-line > .md-no-style {\n  align-items: flex-start;\n  justify-content: center; }\n  md-list-item.md-2-line .md-list-item-text,\n  md-list-item.md-2-line > .md-no-style .md-list-item-text,\n  md-list-item.md-3-line .md-list-item-text,\n  md-list-item.md-3-line > .md-no-style .md-list-item-text {\n    flex: 1;\n    margin: auto;\n    text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text.md-offset,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text.md-offset,\n    md-list-item.md-3-line .md-list-item-text.md-offset,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text.md-offset {\n      margin-left: 56px; }\n    md-list-item.md-2-line .md-list-item-text h3,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text h3,\n    md-list-item.md-3-line .md-list-item-text h3,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text h3 {\n      font-size: 16px;\n      font-weight: 400;\n      letter-spacing: 0.010em;\n      margin: 0 0 0px 0;\n      line-height: 1.2em;\n      overflow: hidden;\n      white-space: nowrap;\n      text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text h4,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text h4,\n    md-list-item.md-3-line .md-list-item-text h4,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text h4 {\n      font-size: 14px;\n      letter-spacing: 0.010em;\n      margin: 3px 0 1px 0;\n      font-weight: 400;\n      line-height: 1.2em;\n      overflow: hidden;\n      white-space: nowrap;\n      text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text p,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text p,\n    md-list-item.md-3-line .md-list-item-text p,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text p {\n      font-size: 14px;\n      font-weight: 500;\n      letter-spacing: 0.010em;\n      margin: 0 0 0 0;\n      line-height: 1.6em; }\n\nmd-list-item.md-2-line,\nmd-list-item.md-2-line > .md-no-style {\n  height: 72px; }\n  md-list-item.md-2-line > .md-avatar:first-child,\n  md-list-item.md-2-line > .md-no-style > .md-avatar:first-child {\n    margin-top: 12px; }\n  md-list-item.md-2-line > md-icon:first-child,\n  md-list-item.md-2-line > .md-no-style > md-icon:first-child {\n    align-self: flex-start; }\n  md-list-item.md-2-line .md-list-item-text,\n  md-list-item.md-2-line > .md-no-style .md-list-item-text {\n    flex: 1; }\n\nmd-list-item.md-3-line,\nmd-list-item.md-3-line > .md-no-style {\n  height: 88px; }\n  md-list-item.md-3-line > md-icon:first-child,\n  md-list-item.md-3-line > .md-avatar:first-child,\n  md-list-item.md-3-line > .md-no-style > md-icon:first-child,\n  md-list-item.md-3-line > .md-no-style > .md-avatar:first-child {\n    margin-top: 16px; }\n\nmd-input-container {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  padding: 2px;\n  padding-bottom: 26px;\n  /*\n   * The .md-input class is added to the input/textarea\n   */ }\n  md-input-container.md-input-has-messages {\n    padding-bottom: 2px; }\n  md-input-container > md-icon {\n    position: absolute;\n    top: 5px;\n    left: 2px; }\n    md-input-container > md-icon + input {\n      margin-left: 36px; }\n  md-input-container textarea,\n  md-input-container input[type=\"text\"],\n  md-input-container input[type=\"password\"],\n  md-input-container input[type=\"datetime\"],\n  md-input-container input[type=\"datetime-local\"],\n  md-input-container input[type=\"date\"],\n  md-input-container input[type=\"month\"],\n  md-input-container input[type=\"time\"],\n  md-input-container input[type=\"week\"],\n  md-input-container input[type=\"number\"],\n  md-input-container input[type=\"email\"],\n  md-input-container input[type=\"url\"],\n  md-input-container input[type=\"search\"],\n  md-input-container input[type=\"tel\"],\n  md-input-container input[type=\"color\"] {\n    /* remove default appearance from all input/textarea */\n    -moz-appearance: none;\n    -webkit-appearance: none; }\n  md-input-container input[type=\"date\"],\n  md-input-container input[type=\"datetime-local\"],\n  md-input-container input[type=\"month\"],\n  md-input-container input[type=\"time\"],\n  md-input-container input[type=\"week\"] {\n    min-height: 26px; }\n  md-input-container textarea {\n    resize: none;\n    overflow: hidden; }\n  md-input-container textarea.md-input {\n    min-height: 26px;\n    -ms-flex-preferred-size: auto; }\n  md-input-container label {\n    position: relative;\n    top: -2px; }\n  md-input-container label:not(.md-no-float),\n  md-input-container .md-placeholder {\n    order: 1;\n    pointer-events: none;\n    -webkit-font-smoothing: antialiased;\n    padding-left: 2px;\n    z-index: 1;\n    transform: translate3d(0, 28px, 0) scale(1);\n    transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;\n    transform-origin: left top; }\n    html[dir=rtl] md-input-container label:not(.md-no-float),\n    html[dir=rtl] md-input-container .md-placeholder {\n      transform-origin: right top;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-input-container label:not(.md-no-float),\n    body[dir=rtl] md-input-container .md-placeholder {\n      transform-origin: right top;\n      unicode-bidi: embed; }\n    md-input-container label:not(.md-no-float) bdo[dir=rtl],\n    md-input-container .md-placeholder bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-input-container label:not(.md-no-float) bdo[dir=ltr],\n    md-input-container .md-placeholder bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n  md-input-container .md-placeholder {\n    position: absolute;\n    top: 0;\n    opacity: 0;\n    transition-property: opacity, transform;\n    transform: translate3d(0, 30px, 0); }\n    md-input-container .md-placeholder.md-static {\n      position: static; }\n  md-input-container.md-input-focused .md-placeholder {\n    opacity: 1;\n    transform: translate3d(0, 24px, 0); }\n  md-input-container.md-input-has-value .md-placeholder {\n    transition: none;\n    opacity: 0; }\n  md-input-container:not(.md-input-has-value) input:not(:focus),\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-ampm-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-day-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-hour-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-millisecond-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-minute-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-month-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-second-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-week-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-year-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text {\n    color: transparent; }\n  md-input-container .md-input {\n    order: 2;\n    display: block;\n    margin-top: auto;\n    background: none;\n    padding-top: 2px;\n    padding-bottom: 1px;\n    padding-left: 2px;\n    padding-right: 2px;\n    border-width: 0 0 1px 0;\n    line-height: 26px;\n    -ms-flex-preferred-size: 26px;\n    border-radius: 0;\n    width: auto; }\n    md-input-container .md-input:focus {\n      outline: none; }\n    md-input-container .md-input:invalid {\n      outline: none;\n      box-shadow: none; }\n    md-input-container .md-input.md-no-flex {\n      flex: none !important; }\n  md-input-container .md-char-counter {\n    position: relative;\n    text-align: right;\n    order: 3; }\n  md-input-container ng-messages, md-input-container data-ng-messages, md-input-container x-ng-messages,\n  md-input-container [ng-messages], md-input-container [data-ng-messages], md-input-container [x-ng-messages] {\n    position: relative;\n    order: 4;\n    min-height: 24px; }\n    md-input-container ng-messages .md-char-counter, md-input-container data-ng-messages .md-char-counter, md-input-container x-ng-messages .md-char-counter,\n    md-input-container [ng-messages] .md-char-counter, md-input-container [data-ng-messages] .md-char-counter, md-input-container [x-ng-messages] .md-char-counter {\n      position: absolute;\n      top: 0;\n      right: 0; }\n  md-input-container ng-message, md-input-container data-ng-message, md-input-container x-ng-message,\n  md-input-container [ng-message], md-input-container [data-ng-message], md-input-container [x-ng-message],\n  md-input-container [ng-message-exp], md-input-container [data-ng-message-exp], md-input-container [x-ng-message-exp],\n  md-input-container .md-char-counter {\n    font-size: 12px;\n    line-height: 14px;\n    overflow: hidden;\n    padding-top: 5px; }\n    md-input-container ng-message:not(.md-char-counter), md-input-container data-ng-message:not(.md-char-counter), md-input-container x-ng-message:not(.md-char-counter),\n    md-input-container [ng-message]:not(.md-char-counter), md-input-container [data-ng-message]:not(.md-char-counter), md-input-container [x-ng-message]:not(.md-char-counter),\n    md-input-container [ng-message-exp]:not(.md-char-counter), md-input-container [data-ng-message-exp]:not(.md-char-counter), md-input-container [x-ng-message-exp]:not(.md-char-counter),\n    md-input-container .md-char-counter:not(.md-char-counter) {\n      padding-right: 50px; }\n    md-input-container ng-message.ng-enter, md-input-container data-ng-message.ng-enter, md-input-container x-ng-message.ng-enter,\n    md-input-container [ng-message].ng-enter, md-input-container [data-ng-message].ng-enter, md-input-container [x-ng-message].ng-enter,\n    md-input-container [ng-message-exp].ng-enter, md-input-container [data-ng-message-exp].ng-enter, md-input-container [x-ng-message-exp].ng-enter,\n    md-input-container .md-char-counter.ng-enter {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-delay: 0.2s;\n      transition-duration: 0.2s; }\n    md-input-container ng-message.ng-leave, md-input-container data-ng-message.ng-leave, md-input-container x-ng-message.ng-leave,\n    md-input-container [ng-message].ng-leave, md-input-container [data-ng-message].ng-leave, md-input-container [x-ng-message].ng-leave,\n    md-input-container [ng-message-exp].ng-leave, md-input-container [data-ng-message-exp].ng-leave, md-input-container [x-ng-message-exp].ng-leave,\n    md-input-container .md-char-counter.ng-leave {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transition-duration: 0.26667s; }\n    md-input-container ng-message.ng-enter,\n    md-input-container ng-message.ng-leave.ng-leave-active, md-input-container data-ng-message.ng-enter,\n    md-input-container data-ng-message.ng-leave.ng-leave-active, md-input-container x-ng-message.ng-enter,\n    md-input-container x-ng-message.ng-leave.ng-leave-active,\n    md-input-container [ng-message].ng-enter,\n    md-input-container [ng-message].ng-leave.ng-leave-active, md-input-container [data-ng-message].ng-enter,\n    md-input-container [data-ng-message].ng-leave.ng-leave-active, md-input-container [x-ng-message].ng-enter,\n    md-input-container [x-ng-message].ng-leave.ng-leave-active,\n    md-input-container [ng-message-exp].ng-enter,\n    md-input-container [ng-message-exp].ng-leave.ng-leave-active, md-input-container [data-ng-message-exp].ng-enter,\n    md-input-container [data-ng-message-exp].ng-leave.ng-leave-active, md-input-container [x-ng-message-exp].ng-enter,\n    md-input-container [x-ng-message-exp].ng-leave.ng-leave-active,\n    md-input-container .md-char-counter.ng-enter,\n    md-input-container .md-char-counter.ng-leave.ng-leave-active {\n      margin-top: -19px;\n      opacity: 0; }\n    md-input-container ng-message.ng-leave,\n    md-input-container ng-message.ng-enter.ng-enter-active, md-input-container data-ng-message.ng-leave,\n    md-input-container data-ng-message.ng-enter.ng-enter-active, md-input-container x-ng-message.ng-leave,\n    md-input-container x-ng-message.ng-enter.ng-enter-active,\n    md-input-container [ng-message].ng-leave,\n    md-input-container [ng-message].ng-enter.ng-enter-active, md-input-container [data-ng-message].ng-leave,\n    md-input-container [data-ng-message].ng-enter.ng-enter-active, md-input-container [x-ng-message].ng-leave,\n    md-input-container [x-ng-message].ng-enter.ng-enter-active,\n    md-input-container [ng-message-exp].ng-leave,\n    md-input-container [ng-message-exp].ng-enter.ng-enter-active, md-input-container [data-ng-message-exp].ng-leave,\n    md-input-container [data-ng-message-exp].ng-enter.ng-enter-active, md-input-container [x-ng-message-exp].ng-leave,\n    md-input-container [x-ng-message-exp].ng-enter.ng-enter-active,\n    md-input-container .md-char-counter.ng-leave,\n    md-input-container .md-char-counter.ng-enter.ng-enter-active {\n      margin-top: 0;\n      opacity: 1; }\n  md-input-container.md-input-focused label:not(.md-no-float),\n  md-input-container.md-input-has-placeholder label:not(.md-no-float),\n  md-input-container.md-input-has-value label:not(.md-no-float) {\n    transform: translate3d(0, 6px, 0) scale(0.75); }\n  md-input-container.md-input-has-value label {\n    transition: none; }\n  md-input-container.md-input-focused .md-input,\n  md-input-container .md-input.ng-invalid.ng-dirty {\n    padding-bottom: 0;\n    border-width: 0 0 2px 0; }\n  md-input-container .md-input[disabled],\n  [disabled] md-input-container .md-input {\n    background-position: 0 bottom;\n    background-size: 4px 1px;\n    background-repeat: repeat-x;\n    margin-bottom: -1px; }\n\nmd-input-container.md-icon-float {\n  margin-top: -16px;\n  transition: margin-top 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-input-container.md-icon-float > label {\n    pointer-events: none;\n    position: absolute;\n    margin-left: 36px; }\n  md-input-container.md-icon-float > md-icon {\n    top: 26px;\n    left: 2px; }\n    md-input-container.md-icon-float > md-icon + input,\n    md-input-container.md-icon-float > md-icon + textarea {\n      margin-left: 36px; }\n  md-input-container.md-icon-float > input,\n  md-input-container.md-icon-float > textarea {\n    padding-top: 24px; }\n  md-input-container.md-icon-float.md-input-focused,\n  md-input-container.md-icon-float.md-input-has-value {\n    margin-top: -8px; }\n    md-input-container.md-icon-float.md-input-focused label,\n    md-input-container.md-icon-float.md-input-has-value label {\n      transform: translate3d(0, 6px, 0) scale(0.75);\n      transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-input-container.md-default-theme > md-icon {\n    fill: #fff; } }\n\n.md-open-menu-container {\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: 99;\n  opacity: 0;\n  border-radius: 2px; }\n  .md-open-menu-container md-menu-divider {\n    margin-top: 4px;\n    margin-bottom: 4px;\n    height: 1px;\n    width: 100%; }\n  .md-open-menu-container md-menu-content > * {\n    opacity: 0; }\n  .md-open-menu-container:not(.md-clickable) {\n    pointer-events: none; }\n  .md-open-menu-container.md-active {\n    opacity: 1;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transition-duration: 200ms; }\n    .md-open-menu-container.md-active > md-menu-content > * {\n      opacity: 1;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-duration: 200ms;\n      transition-delay: 100ms; }\n  .md-open-menu-container.md-leave {\n    opacity: 0;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 250ms; }\n\nmd-menu-content {\n  display: flex;\n  flex-direction: column;\n  padding: 8px 0;\n  max-height: 304px;\n  overflow-y: auto; }\n  md-menu-content.md-dense {\n    max-height: 208px; }\n    md-menu-content.md-dense md-menu-item {\n      height: 32px;\n      min-height: 0px; }\n\nmd-menu-item {\n  display: flex;\n  flex-direction: row;\n  min-height: 48px;\n  height: 48px;\n  align-content: center;\n  justify-content: flex-start; }\n  md-menu-item > * {\n    width: 100%;\n    margin: auto 0;\n    padding-left: 16px;\n    padding-right: 16px; }\n  md-menu-item > a.md-button {\n    display: flex; }\n  md-menu-item > .md-button {\n    border-radius: 0;\n    margin: auto 0;\n    font-size: 15px;\n    text-transform: none;\n    font-weight: 400;\n    text-align: start;\n    height: 100%;\n    padding-left: 16px;\n    padding-right: 16px;\n    display: inline-block;\n    align-items: baseline;\n    align-content: left;\n    width: 100%; }\n    md-menu-item > .md-button md-icon {\n      margin: auto 16px auto 0; }\n    md-menu-item > .md-button p {\n      display: inline-block;\n      margin: auto; }\n    md-menu-item > .md-button span {\n      margin-top: auto;\n      margin-bottom: auto; }\n    md-menu-item > .md-button .md-ripple-container {\n      border-radius: inherit; }\n\n.md-menu {\n  padding: 8px 0; }\n\nmd-toolbar .md-menu {\n  height: auto;\n  margin: auto; }\n\n@media (max-width: 599px) {\n  md-menu-content {\n    min-width: 112px; }\n  md-menu-content[width=\"3\"] {\n    min-width: 168px; }\n  md-menu-content[width=\"4\"] {\n    min-width: 224px; }\n  md-menu-content[width=\"5\"] {\n    min-width: 280px; }\n  md-menu-content[width=\"6\"] {\n    min-width: 336px; }\n  md-menu-content[width=\"7\"] {\n    min-width: 392px; } }\n\n@media (min-width: 600px) {\n  md-menu-content {\n    min-width: 96px; }\n  md-menu-content[width=\"3\"] {\n    min-width: 192px; }\n  md-menu-content[width=\"4\"] {\n    min-width: 256px; }\n  md-menu-content[width=\"5\"] {\n    min-width: 320px; }\n  md-menu-content[width=\"6\"] {\n    min-width: 384px; }\n  md-menu-content[width=\"7\"] {\n    min-width: 448px; } }\n\nmd-toolbar.md-menu-toolbar h2.md-toolbar-tools {\n  line-height: 1rem;\n  height: auto;\n  padding: 28px;\n  padding-bottom: 12px; }\n\nmd-menu-bar {\n  padding: 0 20px;\n  display: block;\n  position: relative;\n  z-index: 2; }\n  md-menu-bar .md-menu {\n    display: inline-block;\n    padding: 0;\n    position: relative; }\n  md-menu-bar button {\n    font-size: 14px;\n    padding: 0 10px;\n    margin: 0;\n    border: 0;\n    background-color: transparent;\n    height: 40px; }\n  md-menu-bar md-backdrop.md-menu-backdrop {\n    z-index: -2; }\n\nmd-menu-content.md-menu-bar-menu.md-dense {\n  max-height: none;\n  padding: 16px 0; }\n  md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent {\n    position: relative; }\n    md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent > md-icon {\n      position: absolute;\n      padding: 0;\n      width: 24px;\n      top: 6px;\n      left: 24px; }\n    md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent > .md-button, md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent .md-menu > .md-button {\n      padding: 0 32px 0 64px; }\n  md-menu-content.md-menu-bar-menu.md-dense .md-button {\n    min-height: 0;\n    height: 32px;\n    display: flex; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-button span {\n      flex-grow: 1; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-button span.md-alt-text {\n      flex-grow: 0;\n      align-self: flex-end;\n      margin: 0 8px; }\n  md-menu-content.md-menu-bar-menu.md-dense md-menu-divider {\n    margin: 8px 0; }\n  md-menu-content.md-menu-bar-menu.md-dense .md-menu {\n    padding: 0; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button {\n      position: relative;\n      margin: 0;\n      width: 100%;\n      text-align: left;\n      text-align: start;\n      text-transform: none;\n      font-weight: normal;\n      border-radius: 0px;\n      padding-left: 16px; }\n      md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button:after {\n        display: block;\n        content: '\\25BC';\n        position: absolute;\n        top: 0px;\n        speak: none;\n        transform: rotate(270deg) scaleY(0.45) scaleX(0.9);\n        right: 28px; }\n\nmd-progress-circular {\n  display: block;\n  position: relative;\n  width: 100px;\n  height: 100px;\n  padding-top: 0 !important;\n  margin-bottom: 0 !important;\n  transform: scale(0.5); }\n  md-progress-circular .md-spinner-wrapper {\n    display: block;\n    position: relative;\n    overflow: hidden; }\n    md-progress-circular .md-spinner-wrapper .md-inner {\n      width: 100px;\n      height: 100px;\n      position: relative; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-gap {\n        position: absolute;\n        left: 49px;\n        right: 49px;\n        top: 0;\n        bottom: 0;\n        border-top-width: 10px;\n        border-top-style: solid;\n        box-sizing: border-box; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-left, md-progress-circular .md-spinner-wrapper .md-inner .md-right {\n        position: absolute;\n        top: 0;\n        height: 100px;\n        width: 50px;\n        overflow: hidden; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-left .md-half-circle, md-progress-circular .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n          position: absolute;\n          top: 0;\n          width: 100px;\n          height: 100px;\n          box-sizing: border-box;\n          border-width: 10px;\n          border-style: solid;\n          border-bottom-color: transparent;\n          border-radius: 50%; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-left {\n        left: 0; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-left .md-half-circle {\n          left: 0;\n          border-right-color: transparent; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-right {\n        right: 0; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n          right: 0;\n          border-left-color: transparent; }\n  md-progress-circular .md-spinner-wrapper.md-mode-indeterminate {\n    animation: outer-rotate 2.91667s linear infinite; }\n    md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner {\n      animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-left .md-half-circle, md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-right .md-half-circle {\n        animation-iteration-count: infinite;\n        animation-duration: 1.3125s;\n        animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1); }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-left .md-half-circle {\n        animation-name: left-wobble; }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-right .md-half-circle {\n        animation-name: right-wobble; }\n  md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper {\n    animation: none; }\n    md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner {\n      animation: none; }\n      md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner .md-left .md-half-circle {\n        animation-name: none; }\n      md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n        animation-name: none; }\n  md-progress-circular .md-spinner-wrapper.ng-hide {\n    animation: none; }\n    md-progress-circular .md-spinner-wrapper.ng-hide .md-inner {\n      animation: none; }\n      md-progress-circular .md-spinner-wrapper.ng-hide .md-inner .md-left .md-half-circle {\n        animation-name: none; }\n      md-progress-circular .md-spinner-wrapper.ng-hide .md-inner .md-right .md-half-circle {\n        animation-name: none; }\n\n@keyframes outer-rotate {\n  100% {\n    transform: rotate(360deg); } }\n\n@keyframes left-wobble {\n  0%, 100% {\n    transform: rotate(130deg); }\n  50% {\n    transform: rotate(-5deg); } }\n\n@keyframes right-wobble {\n  0%, 100% {\n    transform: rotate(-130deg); }\n  50% {\n    transform: rotate(5deg); } }\n\n@keyframes sporadic-rotate {\n  12.5% {\n    transform: rotate(135deg); }\n  25% {\n    transform: rotate(270deg); }\n  37.5% {\n    transform: rotate(405deg); }\n  50% {\n    transform: rotate(540deg); }\n  62.5% {\n    transform: rotate(675deg); }\n  75% {\n    transform: rotate(810deg); }\n  87.5% {\n    transform: rotate(945deg); }\n  100% {\n    transform: rotate(1080deg); } }\n\nmd-progress-linear {\n  display: block;\n  position: relative;\n  width: 100%;\n  height: 5px;\n  padding-top: 0 !important;\n  margin-bottom: 0 !important; }\n  md-progress-linear .md-container {\n    display: block;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n    height: 5px;\n    transform: translate(0, 0) scale(1, 1); }\n    md-progress-linear .md-container .md-bar {\n      position: absolute;\n      left: 0;\n      top: 0;\n      bottom: 0;\n      width: 100%;\n      height: 5px; }\n    md-progress-linear .md-container .md-dashed:before {\n      content: \"\";\n      display: none;\n      position: absolute;\n      margin-top: 0;\n      height: 5px;\n      width: 100%;\n      background-color: transparent;\n      background-size: 10px 10px !important;\n      background-position: 0px -23px; }\n    md-progress-linear .md-container .md-bar1, md-progress-linear .md-container .md-bar2 {\n      transition: transform 0.2s linear; }\n    md-progress-linear .md-container.md-mode-query .md-bar1 {\n      display: none; }\n    md-progress-linear .md-container.md-mode-query .md-bar2 {\n      transition: all 0.2s linear;\n      animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1); }\n    md-progress-linear .md-container.md-mode-determinate .md-bar1 {\n      display: none; }\n    md-progress-linear .md-container.md-mode-indeterminate .md-bar1 {\n      animation: md-progress-linear-indeterminate-scale-1 4s infinite, md-progress-linear-indeterminate-1 4s infinite; }\n    md-progress-linear .md-container.md-mode-indeterminate .md-bar2 {\n      animation: md-progress-linear-indeterminate-scale-2 4s infinite, md-progress-linear-indeterminate-2 4s infinite; }\n    md-progress-linear .md-container.ng-hide {\n      animation: none; }\n      md-progress-linear .md-container.ng-hide .md-bar1 {\n        animation-name: none; }\n      md-progress-linear .md-container.ng-hide .md-bar2 {\n        animation-name: none; }\n  md-progress-linear .md-container.md-mode-buffer {\n    background-color: transparent !important;\n    transition: all 0.2s linear; }\n    md-progress-linear .md-container.md-mode-buffer .md-dashed:before {\n      display: block;\n      animation: buffer 3s infinite linear; }\n\n@keyframes query {\n  0% {\n    opacity: 1;\n    transform: translateX(35%) scale(0.3, 1); }\n  100% {\n    opacity: 0;\n    transform: translateX(-50%) scale(0, 1); } }\n\n@keyframes buffer {\n  0% {\n    opacity: 1;\n    background-position: 0px -23px; }\n  50% {\n    opacity: 0; }\n  100% {\n    opacity: 1;\n    background-position: -200px -23px; } }\n\n@keyframes md-progress-linear-indeterminate-scale-1 {\n  0% {\n    transform: scaleX(0.1);\n    animation-timing-function: linear; }\n  36.6% {\n    transform: scaleX(0.1);\n    animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1); }\n  69.15% {\n    transform: scaleX(0.83);\n    animation-timing-function: cubic-bezier(0.22573, 0, 0.23365, 1.37098); }\n  100% {\n    transform: scaleX(0.1); } }\n\n@keyframes md-progress-linear-indeterminate-1 {\n  0% {\n    left: -105.16667%;\n    animation-timing-function: linear; }\n  20% {\n    left: -105.16667%;\n    animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582); }\n  69.15% {\n    left: 21.5%;\n    animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635); }\n  100% {\n    left: 95.44444%; } }\n\n@keyframes md-progress-linear-indeterminate-scale-2 {\n  0% {\n    transform: scaleX(0.1);\n    animation-timing-function: cubic-bezier(0.20503, 0.05705, 0.57661, 0.45397); }\n  19.15% {\n    transform: scaleX(0.57);\n    animation-timing-function: cubic-bezier(0.15231, 0.19643, 0.64837, 1.00432); }\n  44.15% {\n    transform: scaleX(0.91);\n    animation-timing-function: cubic-bezier(0.25776, -0.00316, 0.21176, 1.38179); }\n  100% {\n    transform: scaleX(0.1); } }\n\n@keyframes md-progress-linear-indeterminate-2 {\n  0% {\n    left: -54.88889%;\n    animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40968); }\n  25% {\n    left: -17.25%;\n    animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73372); }\n  48.35% {\n    left: 29.5%;\n    animation-timing-function: cubic-bezier(0.4, 0.62703, 0.6, 0.90203); }\n  100% {\n    left: 117.38889%; } }\n\nmd-radio-button,\n.md-switch-thumb {\n  box-sizing: border-box;\n  display: block;\n  margin: 15px;\n  white-space: nowrap;\n  cursor: pointer; }\n  md-radio-button .md-container,\n  .md-switch-thumb .md-container {\n    box-sizing: border-box;\n    position: relative;\n    top: 4px;\n    display: inline-block;\n    width: 16px;\n    height: 16px;\n    cursor: pointer; }\n    md-radio-button .md-container .md-ripple-container,\n    .md-switch-thumb .md-container .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: 48px;\n      height: 48px;\n      left: -16px;\n      top: -16px; }\n    md-radio-button .md-container:before,\n    .md-switch-thumb .md-container:before {\n      box-sizing: border-box;\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n  md-radio-button.md-align-top-left > div.md-container,\n  .md-switch-thumb.md-align-top-left > div.md-container {\n    top: -15px; }\n  md-radio-button .md-off,\n  .md-switch-thumb .md-off {\n    box-sizing: border-box;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 16px;\n    height: 16px;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 50%;\n    transition: border-color ease 0.28s; }\n  md-radio-button .md-on,\n  .md-switch-thumb .md-on {\n    box-sizing: border-box;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 16px;\n    height: 16px;\n    border-radius: 50%;\n    transition: transform ease 0.28s;\n    transform: scale(0); }\n  md-radio-button.md-checked .md-on,\n  .md-switch-thumb.md-checked .md-on {\n    transform: scale(0.5); }\n  md-radio-button .md-label,\n  .md-switch-thumb .md-label {\n    box-sizing: border-box;\n    position: relative;\n    display: inline-block;\n    margin-left: 10px;\n    margin-right: 0;\n    vertical-align: middle;\n    white-space: normal;\n    pointer-events: none;\n    width: auto; }\n    html[dir=rtl] md-radio-button .md-label,\n    html[dir=rtl] .md-switch-thumb .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-radio-button .md-label,\n    body[dir=rtl] .md-switch-thumb .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    md-radio-button .md-label bdo[dir=rtl],\n    .md-switch-thumb .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-radio-button .md-label bdo[dir=ltr],\n    .md-switch-thumb .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-radio-button .md-label,\n    html[dir=rtl] .md-switch-thumb .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-radio-button .md-label,\n    body[dir=rtl] .md-switch-thumb .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    md-radio-button .md-label bdo[dir=rtl],\n    .md-switch-thumb .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-radio-button .md-label bdo[dir=ltr],\n    .md-switch-thumb .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n  md-radio-button .circle,\n  .md-switch-thumb .circle {\n    border-radius: 50%; }\n\nmd-radio-group:focus {\n  outline: none; }\n\nmd-radio-group.md-focused .md-checked .md-container:before {\n  left: -8px;\n  top: -8px;\n  right: -8px;\n  bottom: -8px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-radio-button.md-default-theme .md-on {\n    background-color: #fff; } }\n\n.md-select-menu-container {\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: 99;\n  opacity: 0; }\n  .md-select-menu-container:not(.md-clickable) {\n    pointer-events: none; }\n  .md-select-menu-container md-progress-circular {\n    display: table;\n    margin: 24px auto !important; }\n  .md-select-menu-container.md-active {\n    opacity: 1; }\n    .md-select-menu-container.md-active md-select-menu {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transition-duration: 150ms; }\n      .md-select-menu-container.md-active md-select-menu > * {\n        opacity: 1;\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n        transition-duration: 150ms;\n        transition-delay: 100ms; }\n  .md-select-menu-container.md-leave {\n    opacity: 0;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 250ms; }\n\nmd-input-container > md-select {\n  margin: auto 0 0 0;\n  order: 2; }\n\nmd-select {\n  display: flex;\n  margin: 20px 0 26px 0; }\n  md-select[disabled] .md-select-value {\n    background-position: 0 bottom;\n    background-size: 4px 1px;\n    background-repeat: repeat-x;\n    margin-bottom: -1px; }\n  md-select:focus {\n    outline: none; }\n  md-select[disabled]:hover {\n    cursor: default; }\n  md-select:not([disabled]):hover {\n    cursor: pointer; }\n  md-select:not([disabled]).ng-invalid.ng-dirty .md-select-value {\n    border-bottom: 2px solid;\n    padding-bottom: 0; }\n  md-select:not([disabled]):focus .md-select-value {\n    border-bottom-width: 2px;\n    border-bottom-style: solid;\n    padding-bottom: 0; }\n\n.md-select-value {\n  display: flex;\n  align-items: center;\n  padding: 2px 2px 1px;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  background-color: transparent;\n  position: relative;\n  box-sizing: content-box;\n  min-width: 64px;\n  min-height: 26px;\n  flex-grow: 1; }\n  .md-select-value *:first-child {\n    flex: 1;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n    max-width: calc(100% - 2*8px);\n    transform: translate3d(0, 2px, 0); }\n  .md-select-value .md-select-icon {\n    display: block;\n    align-items: flex-end;\n    text-align: end;\n    width: 24px;\n    margin: 0 4px;\n    transform: translate3d(0, 1px, 0); }\n  .md-select-value .md-select-icon:after {\n    display: block;\n    content: '\\25BC';\n    position: relative;\n    top: 2px;\n    speak: none;\n    transform: scaleY(0.6) scaleX(1); }\n  .md-select-value.md-select-placeholder {\n    display: flex;\n    order: 1;\n    pointer-events: none;\n    -webkit-font-smoothing: antialiased;\n    padding-left: 2px;\n    z-index: 1; }\n\nmd-select-menu {\n  display: flex;\n  flex-direction: column;\n  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);\n  max-height: 256px;\n  min-height: 48px;\n  overflow-y: hidden;\n  transform-origin: left top;\n  transform: scale(1); }\n  md-select-menu.md-reverse {\n    flex-direction: column-reverse; }\n  md-select-menu:not(.md-overflow) md-content {\n    padding-top: 8px;\n    padding-bottom: 8px; }\n  html[dir=rtl] md-select-menu {\n    transform-origin: right top;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-select-menu {\n    transform-origin: right top;\n    unicode-bidi: embed; }\n  md-select-menu bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-select-menu bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  md-select-menu md-content {\n    min-width: 136px;\n    min-height: 48px;\n    max-height: 256px;\n    overflow-y: auto; }\n  md-select-menu > * {\n    opacity: 0; }\n\nmd-option {\n  cursor: pointer;\n  position: relative;\n  display: flex;\n  align-items: center;\n  width: auto;\n  padding: 0 16px 0 16px;\n  height: 48px; }\n  md-option:focus {\n    outline: none; }\n  md-option .md-text {\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    width: auto;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    font-size: 16px; }\n\nmd-optgroup {\n  display: block; }\n  md-optgroup label {\n    display: block;\n    font-size: 14px;\n    text-transform: uppercase;\n    padding: 16px;\n    font-weight: 500; }\n  md-optgroup md-option {\n    padding-left: 32px;\n    padding-right: 32px; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-select-backdrop {\n    background-color: transparent; }\n  md-select-menu {\n    border: 1px solid #fff; } }\n\nmd-sidenav {\n  box-sizing: border-box;\n  position: absolute;\n  flex-direction: column;\n  z-index: 60;\n  width: 304px;\n  min-width: 304px;\n  max-width: 304px;\n  bottom: 0;\n  background-color: white;\n  overflow: auto; }\n  md-sidenav ul {\n    list-style: none; }\n  md-sidenav.md-closed {\n    display: none; }\n  md-sidenav.md-closed-add,\n  md-sidenav.md-closed-remove {\n    display: flex;\n    transition: 0.2s ease-in all; }\n  md-sidenav.md-closed-add.md-closed-add-active,\n  md-sidenav.md-closed-remove.md-closed-remove-active {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-sidenav.md-locked-open-add,\n  md-sidenav.md-locked-open-remove {\n    position: static;\n    display: flex;\n    transform: translate3d(0, 0, 0); }\n  md-sidenav.md-locked-open {\n    width: 304px;\n    min-width: 304px;\n    max-width: 304px; }\n  md-sidenav.md-locked-open,\n  md-sidenav.md-locked-open.md-closed,\n  md-sidenav.md-locked-open.md-closed.md-sidenav-left,\n  md-sidenav.md-locked-open.md-closed,\n  md-sidenav.md-locked-open.md-closed.md-sidenav-right,\n  md-sidenav.md-locked-open-remove.md-closed {\n    position: static;\n    display: flex;\n    transform: translate3d(0, 0, 0); }\n  md-sidenav.md-locked-open-remove-active {\n    transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    width: 0;\n    min-width: 0; }\n  md-sidenav.md-closed.md-locked-open-add {\n    width: 0;\n    min-width: 0;\n    transform: translate3d(0%, 0, 0); }\n  md-sidenav.md-closed.md-locked-open-add-active {\n    transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    width: 304px;\n    min-width: 304px;\n    transform: translate3d(0%, 0, 0); }\n\n.md-sidenav-backdrop.md-locked-open {\n  display: none; }\n\n.md-sidenav-left, md-sidenav {\n  left: 0;\n  top: 0;\n  transform: translate3d(0%, 0, 0); }\n  .md-sidenav-left.md-closed, md-sidenav.md-closed {\n    transform: translate3d(-100%, 0, 0); }\n\n.md-sidenav-right {\n  left: 100%;\n  top: 0;\n  transform: translate3d(-100%, 0, 0); }\n  .md-sidenav-right.md-closed {\n    transform: translate3d(0%, 0, 0); }\n\n@media (max-width: 360px) {\n  md-sidenav {\n    width: 85%; } }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-sidenav-left, md-sidenav {\n    border-right: 1px solid #fff; }\n  .md-sidenav-right {\n    border-left: 1px solid #fff; } }\n\n@keyframes sliderFocusThumb {\n  0% {\n    opacity: 0;\n    transform: scale(0); }\n  50% {\n    transform: scale(1);\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\nmd-slider {\n  height: 48px;\n  position: relative;\n  display: block;\n  margin-left: 4px;\n  margin-right: 4px;\n  padding: 0;\n  /**\n   * Track\n   */\n  /**\n   * Slider thumb\n   */\n  /* The sign that's focused in discrete mode */\n  /**\n   * The border/background that comes in when focused in non-discrete mode\n   */\n  /* Don't animate left/right while panning */ }\n  md-slider *, md-slider *:after {\n    box-sizing: border-box; }\n  md-slider .md-slider-wrapper {\n    position: relative; }\n  md-slider .md-track-container {\n    width: 100%;\n    position: absolute;\n    top: 23px;\n    height: 2px; }\n  md-slider .md-track {\n    position: absolute;\n    left: 0;\n    right: 0;\n    height: 100%; }\n  md-slider .md-track-fill {\n    transition: width 0.05s linear; }\n  md-slider .md-track-ticks {\n    position: absolute;\n    left: 0;\n    right: 0;\n    height: 100%; }\n  md-slider .md-track-ticks canvas {\n    width: 100%; }\n  md-slider .md-thumb-container {\n    position: absolute;\n    left: 0;\n    top: 50%;\n    transform: translate3d(-50%, -50%, 0);\n    transition: left 0.1s linear; }\n  md-slider .md-thumb {\n    z-index: 1;\n    position: absolute;\n    left: -19px;\n    top: 5px;\n    width: 38px;\n    height: 38px;\n    border-radius: 38px;\n    transform: scale(0.5);\n    transition: all 0.1s linear; }\n    md-slider .md-thumb:after {\n      content: '';\n      position: absolute;\n      left: 3px;\n      top: 3px;\n      width: 32px;\n      height: 32px;\n      border-radius: 32px;\n      border-width: 3px;\n      border-style: solid; }\n  md-slider .md-sign {\n    /* Center the children (slider-thumb-text) */\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: absolute;\n    left: -14px;\n    top: -20px;\n    width: 28px;\n    height: 28px;\n    border-radius: 28px;\n    transform: scale(0.4) translate3d(0, 70px, 0);\n    transition: all 0.2s ease-in-out;\n    /* The arrow pointing down under the sign */ }\n    md-slider .md-sign:after {\n      position: absolute;\n      content: '';\n      left: 0px;\n      border-radius: 16px;\n      top: 19px;\n      border-left: 14px solid transparent;\n      border-right: 14px solid transparent;\n      border-top-width: 16px;\n      border-top-style: solid;\n      opacity: 0;\n      transform: translate3d(0, -8px, 0);\n      transition: all 0.2s ease-in-out; }\n    md-slider .md-sign .md-thumb-text {\n      z-index: 1;\n      font-size: 12px;\n      font-weight: bold; }\n  md-slider .md-focus-thumb {\n    position: absolute;\n    left: -24px;\n    top: 0px;\n    width: 48px;\n    height: 48px;\n    border-radius: 48px;\n    display: none;\n    opacity: 0;\n    background-color: #C0C0C0;\n    animation: sliderFocusThumb 0.4s linear; }\n  md-slider .md-focus-ring {\n    position: absolute;\n    left: -24px;\n    top: 0px;\n    width: 48px;\n    height: 48px;\n    border-radius: 48px;\n    transform: scale(0);\n    transition: all 0.2s linear;\n    opacity: 0.26; }\n  md-slider .md-disabled-thumb {\n    position: absolute;\n    left: -22px;\n    top: 2px;\n    width: 44px;\n    height: 44px;\n    border-radius: 44px;\n    transform: scale(0.35);\n    border-width: 6px;\n    border-style: solid;\n    display: none; }\n  md-slider.md-min .md-thumb:after {\n    background-color: white; }\n  md-slider.md-min .md-sign {\n    opacity: 0; }\n  md-slider:focus {\n    outline: none; }\n  md-slider.md-dragging .md-thumb-container,\n  md-slider.md-dragging .md-track-fill {\n    transition: none; }\n  md-slider:not([md-discrete]) {\n    /* Hide the sign and ticks in non-discrete mode */ }\n    md-slider:not([md-discrete]) .md-track-ticks,\n    md-slider:not([md-discrete]) .md-sign {\n      display: none; }\n    md-slider:not([md-discrete]):not([disabled]):hover .md-thumb {\n      transform: scale(0.6); }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-thumb,\n    md-slider:not([md-discrete]):not([disabled]).md-active .md-focus-thumb {\n      display: block; }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-ring,\n    md-slider:not([md-discrete]):not([disabled]).md-active .md-focus-ring {\n      transform: scale(1); }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-thumb,\n    md-slider:not([md-discrete]):not([disabled]).md-active .md-thumb {\n      transform: scale(0.85); }\n  md-slider[md-discrete] {\n    /* Hide the focus thumb in discrete mode */ }\n    md-slider[md-discrete] .md-focus-thumb,\n    md-slider[md-discrete] .md-focus-ring {\n      display: none; }\n    md-slider[md-discrete]:not([disabled]):focus .md-sign,\n    md-slider[md-discrete]:not([disabled]):focus .md-sign:after,\n    md-slider[md-discrete]:not([disabled]).md-active .md-sign,\n    md-slider[md-discrete]:not([disabled]).md-active .md-sign:after {\n      opacity: 1;\n      transform: translate3d(0, 0, 0) scale(1); }\n  md-slider[disabled] .md-track-fill {\n    display: none; }\n  md-slider[disabled] .md-sign {\n    display: none; }\n  md-slider[disabled] .md-thumb {\n    transform: scale(0.35); }\n  md-slider[disabled] .md-disabled-thumb {\n    display: block; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-slider.md-default-theme .md-track {\n    border-bottom: 1px solid #fff; } }\n\n@keyframes subheaderStickyHoverIn {\n  0% {\n    box-shadow: 0 0 0 0 transparent; }\n  100% {\n    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16); } }\n\n@keyframes subheaderStickyHoverOut {\n  0% {\n    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16); }\n  100% {\n    box-shadow: 0 0 0 0 transparent; } }\n\n.md-subheader-wrapper:not(.md-sticky-no-effect) {\n  transition: 0.2s ease-out margin; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect) .md-subheader {\n    margin: 0; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect).md-sticky-clone {\n    z-index: 2; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect)[sticky-state=\"active\"] {\n    margin-top: -2px; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect):not(.md-sticky-clone)[sticky-prev-state=\"active\"] .md-subheader-inner:after {\n    animation: subheaderStickyHoverOut 0.3s ease-out both; }\n\n.md-subheader {\n  display: block;\n  font-size: 14px;\n  font-weight: 500;\n  line-height: 1em;\n  margin: 0 0 0 0;\n  margin-right: 16px;\n  position: relative; }\n  .md-subheader .md-subheader-inner {\n    display: block;\n    padding: 16px 0px 16px 16px; }\n  .md-subheader .md-subheader-content {\n    display: block;\n    z-index: 1;\n    position: relative; }\n\nmd-switch {\n  display: flex;\n  align-items: center;\n  margin: 15px;\n  white-space: nowrap;\n  cursor: pointer;\n  outline: none;\n  user-select: none; }\n  md-switch .md-container {\n    cursor: grab;\n    width: 36px;\n    height: 24px;\n    position: relative;\n    user-select: none;\n    margin-right: 8px; }\n  md-switch:not([disabled]) .md-dragging,\n  md-switch:not([disabled]).md-dragging .md-container {\n    cursor: grabbing; }\n  md-switch.md-focused:not([disabled]) .md-thumb:before {\n    left: -8px;\n    top: -8px;\n    right: -8px;\n    bottom: -8px; }\n  md-switch.md-focused:not([disabled]):not(.md-checked) .md-thumb:before {\n    background-color: rgba(0, 0, 0, 0.12); }\n  md-switch .md-label {\n    border-color: transparent;\n    border-width: 0; }\n  md-switch .md-bar {\n    left: 1px;\n    width: 34px;\n    top: 5px;\n    height: 14px;\n    border-radius: 8px;\n    position: absolute; }\n  md-switch .md-thumb-container {\n    top: 2px;\n    left: 0;\n    width: 16px;\n    position: absolute;\n    transform: translate3d(0, 0, 0);\n    z-index: 1; }\n  md-switch.md-checked .md-thumb-container {\n    transform: translate3d(100%, 0, 0); }\n  md-switch .md-thumb {\n    position: absolute;\n    margin: 0;\n    left: 0;\n    top: 0;\n    outline: none;\n    height: 20px;\n    width: 20px;\n    border-radius: 50%;\n    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }\n    md-switch .md-thumb:before {\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n    md-switch .md-thumb .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: auto;\n      height: auto;\n      left: -20px;\n      top: -20px;\n      right: -20px;\n      bottom: -20px; }\n  md-switch:not(.md-dragging) .md-bar,\n  md-switch:not(.md-dragging) .md-thumb-container,\n  md-switch:not(.md-dragging) .md-thumb {\n    transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n    transition-property: transform, background-color; }\n  md-switch:not(.md-dragging) .md-bar,\n  md-switch:not(.md-dragging) .md-thumb {\n    transition-delay: 0.05s; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-switch.md-default-theme .md-bar {\n    background-color: #666; }\n  md-switch.md-default-theme.md-checked .md-bar {\n    background-color: #9E9E9E; }\n  md-switch.md-default-theme .md-thumb {\n    background-color: #fff; } }\n\n@keyframes md-tab-content-hide {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\nmd-tab-data {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: -1;\n  opacity: 0; }\n\nmd-tabs {\n  display: block;\n  margin: 0;\n  border-radius: 2px;\n  overflow: hidden;\n  position: relative;\n  flex-shrink: 0; }\n  md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {\n    min-height: 248px; }\n  md-tabs[md-align-tabs=\"bottom\"] md-tabs-wrapper {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    height: 48px; }\n  md-tabs[md-align-tabs=\"bottom\"] md-tabs-content-wrapper {\n    top: 0;\n    bottom: 48px; }\n  md-tabs.md-dynamic-height md-tabs-content-wrapper {\n    min-height: 0;\n    position: relative;\n    top: auto;\n    left: auto;\n    right: auto;\n    bottom: auto;\n    overflow: visible; }\n  md-tabs.md-dynamic-height md-tab-content.md-active {\n    position: relative; }\n  md-tabs[md-border-bottom] md-tabs-wrapper {\n    border-width: 0 0 1px;\n    border-style: solid; }\n  md-tabs[md-border-bottom]:not(.md-dynamic-height) md-tabs-content-wrapper {\n    top: 49px; }\n\nmd-tabs-wrapper {\n  display: block;\n  position: relative; }\n  md-tabs-wrapper md-prev-button, md-tabs-wrapper md-next-button {\n    height: 100%;\n    width: 32px;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    line-height: 1em;\n    z-index: 2;\n    cursor: pointer;\n    font-size: 16px;\n    background: transparent no-repeat center center;\n    transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1); }\n    md-tabs-wrapper md-prev-button:focus, md-tabs-wrapper md-next-button:focus {\n      outline: none; }\n    md-tabs-wrapper md-prev-button.md-disabled, md-tabs-wrapper md-next-button.md-disabled {\n      opacity: 0.25;\n      cursor: default; }\n    md-tabs-wrapper md-prev-button.ng-leave, md-tabs-wrapper md-next-button.ng-leave {\n      transition: none; }\n    md-tabs-wrapper md-prev-button md-icon, md-tabs-wrapper md-next-button md-icon {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate3d(-50%, -50%, 0); }\n  md-tabs-wrapper md-prev-button {\n    left: 0;\n    background-image: url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMjA4IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTUuNCw3LjQgMTQsNiA4LDEyIDE0LDE4IDE1LjQsMTYuNiAxMC44LDEyIAkJIiBzdHlsZT0iZmlsbDp3aGl0ZTsiLz4gPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+IDwvZz4gPC9nPiA8ZyBpZD0iR3JpZCIgZGlzcGxheT0ibm9uZSI+IDxnIGRpc3BsYXk9ImlubGluZSI+IDwvZz4gPC9nPiA8L3N2Zz4NCg==\"); }\n  md-tabs-wrapper md-next-button {\n    right: 0;\n    background-image: url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMzM2IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTAsNiA4LjYsNy40IDEzLjIsMTIgOC42LDE2LjYgMTAsMTggMTYsMTIgCQkiIHN0eWxlPSJmaWxsOndoaXRlOyIvPiA8cmVjdCBmaWxsPSJub25lIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4gPC9nPiA8L2c+IDxnIGlkPSJHcmlkIiBkaXNwbGF5PSJub25lIj4gPGcgZGlzcGxheT0iaW5saW5lIj4gPC9nPiA8L2c+IDwvc3ZnPg0K\"); }\n    md-tabs-wrapper md-next-button md-icon {\n      transform: translate3d(-50%, -50%, 0) rotate(180deg); }\n  md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper {\n    width: 100%;\n    display: flex;\n    flex-direction: row; }\n    md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {\n      flex-grow: 1; }\n\nmd-tabs-canvas {\n  position: relative;\n  overflow: hidden;\n  display: block;\n  height: 48px; }\n  md-tabs-canvas:after {\n    content: '';\n    display: table;\n    clear: both; }\n  md-tabs-canvas .md-dummy-wrapper {\n    position: absolute;\n    top: 0;\n    left: 0; }\n  md-tabs-canvas.md-paginated {\n    margin: 0 32px; }\n  md-tabs-canvas.md-center-tabs {\n    display: flex;\n    flex-direction: column;\n    text-align: center; }\n    md-tabs-canvas.md-center-tabs .md-tab {\n      float: none;\n      display: inline-block; }\n\nmd-pagination-wrapper {\n  height: 48px;\n  display: block;\n  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n  position: absolute;\n  width: 999999px;\n  left: 0;\n  transform: translate3d(0, 0, 0); }\n  md-pagination-wrapper:after {\n    content: '';\n    display: table;\n    clear: both; }\n  md-pagination-wrapper.md-center-tabs {\n    position: relative;\n    width: initial;\n    flex: 1;\n    margin: 0 auto; }\n\nmd-tabs-content-wrapper {\n  display: block;\n  position: absolute;\n  top: 48px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden; }\n\nmd-tab-content {\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  transform: translateX(0);\n  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n  overflow: auto; }\n  md-tab-content.md-no-scroll {\n    bottom: auto;\n    overflow: hidden; }\n  md-tab-content.ng-leave, md-tab-content.md-no-transition {\n    transition: none; }\n  md-tab-content.md-left {\n    transform: translateX(-100%);\n    animation: 1s md-tab-content-hide;\n    opacity: 0; }\n    md-tab-content.md-left * {\n      transition: visibility 0s linear;\n      transition-delay: 0.5s;\n      visibility: hidden; }\n  md-tab-content.md-right {\n    transform: translateX(100%);\n    animation: 1s md-tab-content-hide;\n    opacity: 0; }\n    md-tab-content.md-right * {\n      transition: visibility 0s linear;\n      transition-delay: 0.5s;\n      visibility: hidden; }\n  md-tab-content > div.ng-leave {\n    animation: 1s md-tab-content-hide; }\n\nmd-ink-bar {\n  position: absolute;\n  left: auto;\n  right: auto;\n  bottom: 0;\n  height: 2px; }\n  md-ink-bar.md-left {\n    transition: left 0.125s cubic-bezier(0.35, 0, 0.25, 1), right 0.25s cubic-bezier(0.35, 0, 0.25, 1); }\n  md-ink-bar.md-right {\n    transition: left 0.25s cubic-bezier(0.35, 0, 0.25, 1), right 0.125s cubic-bezier(0.35, 0, 0.25, 1); }\n\nmd-tab {\n  position: absolute;\n  z-index: -1;\n  left: -9999px; }\n\n.md-tab {\n  font-size: 14px;\n  text-align: center;\n  line-height: 24px;\n  padding: 12px 24px;\n  transition: background-color 0.35s cubic-bezier(0.35, 0, 0.25, 1);\n  cursor: pointer;\n  white-space: nowrap;\n  position: relative;\n  text-transform: uppercase;\n  float: left;\n  font-weight: 500;\n  box-sizing: border-box;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n  .md-tab.md-focused {\n    box-shadow: none;\n    outline: none; }\n  .md-tab.md-active {\n    cursor: default; }\n  .md-tab.md-disabled {\n    pointer-events: none;\n    touch-action: pan-y;\n    user-select: none;\n    -webkit-user-drag: none;\n    opacity: 0.5;\n    cursor: default; }\n  .md-tab.ng-leave {\n    transition: none; }\n\nmd-toolbar + md-tabs {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0; }\n\n.md-sticky-clone {\n  z-index: 2;\n  top: 0;\n  left: 0;\n  right: 0;\n  position: absolute !important;\n  transform: translate3d(-9999px, -9999px, 0); }\n  .md-sticky-clone[sticky-state=\"active\"] {\n    transform: translate3d(0, 0, 0); }\n    .md-sticky-clone[sticky-state=\"active\"]:not(.md-sticky-no-effect) .md-subheader-inner {\n      animation: subheaderStickyHoverIn 0.3s ease-out both; }\n\nmd-toast {\n  display: flex;\n  position: absolute;\n  z-index: 90;\n  box-sizing: border-box;\n  align-items: center;\n  min-height: 48px;\n  padding-left: 24px;\n  padding-right: 24px;\n  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n  border-radius: 2px;\n  font-size: 14px;\n  cursor: default;\n  height: auto;\n  max-height: 168px;\n  max-width: 100%;\n  overflow: hidden;\n  opacity: 1;\n  transform: translate3d(0, 0, 0) rotateZ(0deg);\n  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  /* Transition differently when swiping */ }\n  md-toast.md-capsule {\n    border-radius: 24px; }\n  md-toast.ng-leave-active {\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-toast.md-swipeleft,\n  md-toast.md-swiperight,\n  md-toast.md-swipeup,\n  md-toast.md-swipedown {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-toast.ng-enter {\n    transform: translate3d(0, 100%, 0);\n    opacity: 0; }\n    md-toast.ng-enter.md-top {\n      transform: translate3d(0, -100%, 0); }\n    md-toast.ng-enter.ng-enter-active {\n      transform: translate3d(0, 0, 0);\n      opacity: 1; }\n  md-toast.ng-leave.ng-leave-active {\n    opacity: 0;\n    transform: translate3d(0, 100%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-top {\n      transform: translate3d(0, -100%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-swipeleft {\n      transform: translate3d(-100%, 0%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-swiperight {\n      transform: translate3d(100%, 0%, 0); }\n  md-toast .md-action {\n    line-height: 19px;\n    margin-left: 24px;\n    cursor: pointer;\n    text-transform: uppercase;\n    float: right; }\n    md-toast .md-action.md-button {\n      min-width: 0; }\n\n@media (max-width: 600px) {\n  md-toast {\n    left: 0;\n    right: 0;\n    width: 100%;\n    max-width: 100%;\n    min-width: 0;\n    border-radius: 0;\n    bottom: 0; }\n    md-toast.md-top {\n      bottom: auto;\n      top: 0; } }\n\n@media (min-width: 600px) {\n  md-toast {\n    min-width: 288px;\n    /*\n     * When the toast doesn't take up the whole screen,\n     * make it rotate when the user swipes it away\n     */ }\n    md-toast.md-bottom {\n      bottom: 8px; }\n    md-toast.md-left {\n      left: 8px; }\n    md-toast.md-right {\n      right: 8px; }\n    md-toast.md-top {\n      top: 8px; }\n    md-toast.ng-leave.ng-leave-active.md-swipeleft {\n      transform: translate3d(-100%, 25%, 0) rotateZ(-15deg); }\n    md-toast.ng-leave.ng-leave-active.md-swiperight {\n      transform: translate3d(100%, 25%, 0) rotateZ(15deg); }\n    md-toast.ng-leave.ng-leave-active.md-top.md-swipeleft {\n      transform: translate3d(-100%, 0, 0) rotateZ(-15deg); }\n    md-toast.ng-leave.ng-leave-active.md-top.md-swiperight {\n      transform: translate3d(100%, 0, 0) rotateZ(15deg); } }\n\n@media (min-width: 1200px) {\n  md-toast {\n    max-width: 568px; } }\n\n@media screen and (-ms-high-contrast: active) {\n  md-toast {\n    border: 1px solid #fff; } }\n\nmd-toolbar {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  z-index: 2;\n  font-size: 20px;\n  min-height: 64px;\n  width: 100%; }\n  md-toolbar.md-whiteframe-z1-add, md-toolbar.md-whiteframe-z1-remove {\n    transition: box-shadow 0.5s linear; }\n  md-toolbar md-toolbar-filler {\n    width: 72px; }\n  md-toolbar *,\n  md-toolbar *:before,\n  md-toolbar *:after {\n    box-sizing: border-box; }\n  md-toolbar.md-tall {\n    height: 128px;\n    min-height: 128px;\n    max-height: 128px; }\n  md-toolbar.md-medium-tall {\n    height: 88px;\n    min-height: 88px;\n    max-height: 88px; }\n    md-toolbar.md-medium-tall .md-toolbar-tools {\n      height: 48px;\n      min-height: 48px;\n      max-height: 48px; }\n  md-toolbar > .md-indent {\n    margin-left: 64px; }\n  md-toolbar ~ md-content > md-list {\n    padding: 0; }\n    md-toolbar ~ md-content > md-list md-list-item:last-child md-divider {\n      display: none; }\n\n.md-toolbar-tools {\n  font-size: 20px;\n  letter-spacing: 0.005em;\n  box-sizing: border-box;\n  font-weight: 400;\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  max-height: 64px;\n  padding: 0 16px;\n  margin: 0; }\n  .md-toolbar-tools h1, .md-toolbar-tools h2, .md-toolbar-tools h3 {\n    font-size: inherit;\n    font-weight: inherit;\n    margin: inherit; }\n  .md-toolbar-tools a {\n    color: inherit;\n    text-decoration: none; }\n  .md-toolbar-tools .fill-height {\n    display: flex;\n    align-items: center; }\n  .md-toolbar-tools .md-button {\n    margin-top: 0;\n    margin-bottom: 0; }\n  .md-toolbar-tools > .md-button:first-child {\n    margin-left: -8px; }\n  .md-toolbar-tools > .md-button:last-child {\n    margin-right: -8px; }\n  .md-toolbar-tools > md-menu:last-child {\n    margin-right: -8px; }\n    .md-toolbar-tools > md-menu:last-child > .md-button {\n      margin-right: 0; }\n  @media screen and (-ms-high-contrast: active) {\n    .md-toolbar-tools {\n      border-bottom: 1px solid #fff; } }\n\n@media only screen and (min-width: 0) and (max-width: 600px) and (orientation: portrait) {\n  md-toolbar {\n    min-height: 56px; }\n  .md-toolbar-tools {\n    height: 56px;\n    max-height: 56px; } }\n\n@media only screen and (min-width: 0) and (max-width: 600px) and (orientation: landscape) {\n  md-toolbar {\n    min-height: 48px; }\n  .md-toolbar-tools {\n    height: 48px;\n    max-height: 48px; } }\n\nmd-tooltip {\n  position: absolute;\n  z-index: 100;\n  overflow: hidden;\n  pointer-events: none;\n  border-radius: 4px;\n  font-weight: 500;\n  font-size: 14px; }\n  @media screen and (min-width: 600px) {\n    md-tooltip {\n      font-size: 10px; } }\n  md-tooltip .md-background {\n    position: absolute;\n    border-radius: 50%;\n    transform: translate(-50%, -50%) scale(0);\n    opacity: 1; }\n    md-tooltip .md-background.md-show-add {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transform: translate(-50%, -50%) scale(0);\n      opacity: 0; }\n    md-tooltip .md-background.md-show, md-tooltip .md-background.md-show-add-active {\n      transform: translate(-50%, -50%) scale(1);\n      opacity: 1; }\n    md-tooltip .md-background.md-show-remove {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n      md-tooltip .md-background.md-show-remove.md-show-remove-active {\n        transform: translate(-50%, -50%) scale(0);\n        opacity: 0; }\n  md-tooltip .md-content {\n    position: relative;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    background: transparent;\n    opacity: 0;\n    height: 32px;\n    line-height: 32px;\n    padding-left: 16px;\n    padding-right: 16px; }\n    @media screen and (min-width: 600px) {\n      md-tooltip .md-content {\n        height: 22px;\n        line-height: 22px;\n        padding-left: 8px;\n        padding-right: 8px; } }\n    md-tooltip .md-content.md-show-add {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      opacity: 0; }\n    md-tooltip .md-content.md-show, md-tooltip .md-content.md-show-add-active {\n      opacity: 1; }\n    md-tooltip .md-content.md-show-remove {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n      md-tooltip .md-content.md-show-remove.md-show-remove-active {\n        opacity: 0; }\n  md-tooltip.md-hide {\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-tooltip.md-show {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    pointer-events: auto;\n    transform: translate3d(0, 0, 0); }\n\n.md-virtual-repeat-container {\n  box-sizing: border-box;\n  display: block;\n  margin: 0;\n  overflow: hidden;\n  padding: 0;\n  position: relative; }\n  .md-virtual-repeat-container .md-virtual-repeat-scroller {\n    bottom: 0;\n    box-sizing: border-box;\n    left: 0;\n    margin: 0;\n    overflow-x: hidden;\n    padding: 0;\n    position: absolute;\n    right: 0;\n    top: 0; }\n  .md-virtual-repeat-container .md-virtual-repeat-sizer {\n    box-sizing: border-box;\n    height: 1px;\n    display: inline-block;\n    margin: 0;\n    padding: 0;\n    width: 1px; }\n  .md-virtual-repeat-container .md-virtual-repeat-offsetter {\n    box-sizing: border-box;\n    left: 0;\n    margin: 0;\n    padding: 0;\n    position: absolute;\n    right: 16px;\n    top: 0; }\n\n.md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-scroller {\n  overflow-x: auto;\n  overflow-y: hidden; }\n\n.md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-offsetter {\n  bottom: 16px;\n  right: auto;\n  white-space: nowrap; }\n\n.md-whiteframe-1dp, .md-whiteframe-z1 {\n  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-2dp {\n  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-3dp {\n  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-4dp, .md-whiteframe-z2 {\n  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-5dp {\n  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-6dp {\n  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-7dp, .md-whiteframe-z3 {\n  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-8dp {\n  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-9dp {\n  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-10dp, .md-whiteframe-z4 {\n  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-11dp {\n  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2), 0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-12dp {\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-13dp, .md-whiteframe-z5 {\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-14dp {\n  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-15dp {\n  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2), 0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-16dp {\n  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-17dp {\n  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2), 0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-18dp {\n  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2), 0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-19dp {\n  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-20dp {\n  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-21dp {\n  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-22dp {\n  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2), 0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-23dp {\n  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-24dp {\n  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12); }\n\n@media screen and (-ms-high-contrast: active) {\n  md-whiteframe {\n    border: 1px solid #fff; } }\n\nhtml,\nbody {\n  color: #fff;\n  background: #B71C1C; }\n\nmd-content,\n.md-subheader {\n  background-color: transparent;\n  color: #fff; }\n\nmd-list md-list-item button.md-button:not([disabled]):hover {\n  background-color: #F57F17; }\n\nmd-checkbox .md-icon {\n  border-color: #fff; }\n\na.md-button.md-accent.md-raised,\na.md-button.md-accent.md-fab,\n.md-button.md-accent.md-raised,\n.md-button.md-accent.md-fab {\n  color: #fff; }\n\n.md-fab ng-md-icon,\nmd-menu-item ng-md-icon {\n  position: relative;\n  top: 4px; }\n\nmd-input-container .md-input {\n  color: #fff; }\n\nmd-dialog md-input-container .md-input,\nmd-dialog .md-actions .md-button {\n  color: #333; }\n\nmd-menu-content {\n  padding: 0; }\n\nmd-menu-item {\n  min-height: 35px;\n  height: 35px; }\n\n.md-button ng-md-icon {\n  position: relative;\n  top: 3px; }\n\n.incoming-toggle {\n  position: absolute;\n  bottom: 0;\n  right: 0; }\n\n.edit-button {\n  min-height: 0;\n  min-width: 0;\n  margin: 0;\n  padding: 0;\n  line-height: 1.2em; }\n\n.add-button {\n  float: right;\n  position: relative;\n  top: -12px; }\n\n.contacts {\n  background-color: #C62828; }\n  .contacts .contact-list h3, .contacts .contact-list h4, .contacts .contact-list p {\n    margin: 0; }\n\n.scripts {\n  background-color: #D32F2F; }\n  .scripts h4 {\n    margin: 0; }\n  .scripts p {\n    margin-top: 0;\n    line-height: 1.2em; }\n\n.outgoing {\n  background-color: #E53935; }\n  .outgoing .md-button {\n    float: right; }\n", ""]);
 
 	// exports
 
@@ -462,7 +462,7 @@
 /***/ function(module, exports) {
 
 	/**
-	 * @license AngularJS v1.4.6
+	 * @license AngularJS v1.4.7
 	 * (c) 2010-2015 Google, Inc. http://angularjs.org
 	 * License: MIT
 	 */
@@ -520,7 +520,7 @@
 	      return match;
 	    });
 
-	    message += '\nhttp://errors.angularjs.org/1.4.6/' +
+	    message += '\nhttp://errors.angularjs.org/1.4.7/' +
 	      (module ? module + '/' : '') + code;
 
 	    for (i = SKIP_INDEXES, paramPrefix = '?'; i < templateArgs.length; i++, paramPrefix = '&') {
@@ -2804,6 +2804,7 @@
 	  $HttpParamSerializerProvider,
 	  $HttpParamSerializerJQLikeProvider,
 	  $HttpBackendProvider,
+	  $xhrFactoryProvider,
 	  $LocationProvider,
 	  $LogProvider,
 	  $ParseProvider,
@@ -2841,11 +2842,11 @@
 	 * - `codeName` – `{string}` – Code name of the release, such as "jiggling-armfat".
 	 */
 	var version = {
-	  full: '1.4.6',    // all of these placeholder strings will be replaced by grunt's
+	  full: '1.4.7',    // all of these placeholder strings will be replaced by grunt's
 	  major: 1,    // package task
 	  minor: 4,
-	  dot: 6,
-	  codeName: 'multiplicative-elevation'
+	  dot: 7,
+	  codeName: 'dark-luminescence'
 	};
 
 
@@ -2962,6 +2963,7 @@
 	        $httpParamSerializer: $HttpParamSerializerProvider,
 	        $httpParamSerializerJQLike: $HttpParamSerializerJQLikeProvider,
 	        $httpBackend: $HttpBackendProvider,
+	        $xhrFactory: $xhrFactoryProvider,
 	        $location: $LocationProvider,
 	        $log: $LogProvider,
 	        $parse: $ParseProvider,
@@ -3136,10 +3138,10 @@
 	    replace(MOZ_HACK_REGEXP, 'Moz$1');
 	}
 
-	var SINGLE_TAG_REGEXP = /^<(\w+)\s*\/?>(?:<\/\1>|)$/;
+	var SINGLE_TAG_REGEXP = /^<([\w-]+)\s*\/?>(?:<\/\1>|)$/;
 	var HTML_REGEXP = /<|&#?\w+;/;
-	var TAG_NAME_REGEXP = /<([\w:]+)/;
-	var XHTML_TAG_REGEXP = /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:]+)[^>]*)\/>/gi;
+	var TAG_NAME_REGEXP = /<([\w:-]+)/;
+	var XHTML_TAG_REGEXP = /<(?!area|br|col|embed|hr|img|input|link|meta|param)(([\w:-]+)[^>]*)\/>/gi;
 
 	var wrapMap = {
 	  'option': [1, '<select multiple="multiple">', '</select>'],
@@ -5871,6 +5873,13 @@
 	    };
 
 	    return function(element, options) {
+	      // there is no point in applying the styles since
+	      // there is no animation that goes on at all in
+	      // this version of $animateCss.
+	      if (options.cleanupStyles) {
+	        options.from = options.to = null;
+	      }
+
 	      if (options.from) {
 	        element.css(options.from);
 	        options.from = null;
@@ -6338,10 +6347,10 @@
 	           $scope.keys = [];
 	           $scope.cache = $cacheFactory('cacheId');
 	           $scope.put = function(key, value) {
-	             if (isUndefined($scope.cache.get(key))) {
+	             if (angular.isUndefined($scope.cache.get(key))) {
 	               $scope.keys.push(key);
 	             }
-	             $scope.cache.put(key, isUndefined(value) ? null : value);
+	             $scope.cache.put(key, angular.isUndefined(value) ? null : value);
 	           };
 	         }]);
 	     </file>
@@ -9098,7 +9107,7 @@
 	        compile: function() {
 	            return {
 	              pre: function attrInterpolatePreLinkFn(scope, element, attr) {
-	                var $$observers = (attr.$$observers || (attr.$$observers = {}));
+	                var $$observers = (attr.$$observers || (attr.$$observers = createMap()));
 
 	                if (EVENT_HANDLER_ATTR_REGEXP.test(name)) {
 	                  throw $compileMinErr('nodomevents',
@@ -10150,28 +10159,18 @@
 	     *
 	     *
 	     * ## General usage
-	     * The `$http` service is a function which takes a single argument — a configuration object —
+	     * The `$http` service is a function which takes a single argument — a {@link $http#usage configuration object} —
 	     * that is used to generate an HTTP request and returns  a {@link ng.$q promise}.
 	     *
 	     * ```js
-	     *   // Simple GET request example :
-	     *   $http.get('/someUrl').
-	     *     then(function(response) {
+	     *   // Simple GET request example:
+	     *   $http({
+	     *     method: 'GET',
+	     *     url: '/someUrl'
+	     *   }).then(function successCallback(response) {
 	     *       // this callback will be called asynchronously
 	     *       // when the response is available
-	     *     }, function(response) {
-	     *       // called asynchronously if an error occurs
-	     *       // or server returns response with an error status.
-	     *     });
-	     * ```
-	     *
-	     * ```js
-	     *   // Simple POST request example (passing data) :
-	     *   $http.post('/someUrl', {msg:'hello word!'}).
-	     *     then(function(response) {
-	     *       // this callback will be called asynchronously
-	     *       // when the response is available
-	     *     }, function(response) {
+	     *     }, function errorCallback(response) {
 	     *       // called asynchronously if an error occurs
 	     *       // or server returns response with an error status.
 	     *     });
@@ -10191,25 +10190,16 @@
 	     * XMLHttpRequest will transparently follow it, meaning that the error callback will not be
 	     * called for such responses.
 	     *
-	     * ## Writing Unit Tests that use $http
-	     * When unit testing (using {@link ngMock ngMock}), it is necessary to call
-	     * {@link ngMock.$httpBackend#flush $httpBackend.flush()} to flush each pending
-	     * request using trained responses.
-	     *
-	     * ```
-	     * $httpBackend.expectGET(...);
-	     * $http.get(...);
-	     * $httpBackend.flush();
-	     * ```
 	     *
 	     * ## Shortcut methods
 	     *
 	     * Shortcut methods are also available. All shortcut methods require passing in the URL, and
-	     * request data must be passed in for POST/PUT requests.
+	     * request data must be passed in for POST/PUT requests. An optional config can be passed as the
+	     * last argument.
 	     *
 	     * ```js
-	     *   $http.get('/someUrl').then(successCallback);
-	     *   $http.post('/someUrl', data).then(successCallback);
+	     *   $http.get('/someUrl', config).then(successCallback, errorCallback);
+	     *   $http.post('/someUrl', data, config).then(successCallback, errorCallback);
 	     * ```
 	     *
 	     * Complete list of shortcut methods:
@@ -10222,6 +10212,17 @@
 	     * - {@link ng.$http#jsonp $http.jsonp}
 	     * - {@link ng.$http#patch $http.patch}
 	     *
+	     *
+	     * ## Writing Unit Tests that use $http
+	     * When unit testing (using {@link ngMock ngMock}), it is necessary to call
+	     * {@link ngMock.$httpBackend#flush $httpBackend.flush()} to flush each pending
+	     * request using trained responses.
+	     *
+	     * ```
+	     * $httpBackend.expectGET(...);
+	     * $http.get(...);
+	     * $httpBackend.flush();
+	     * ```
 	     *
 	     * ## Deprecation Notice
 	     * <div class="alert alert-danger">
@@ -10380,7 +10381,7 @@
 	     *
 	     * There are two kinds of interceptors (and two kinds of rejection interceptors):
 	     *
-	     *   * `request`: interceptors get called with a http `config` object. The function is free to
+	     *   * `request`: interceptors get called with a http {@link $http#usage config} object. The function is free to
 	     *     modify the `config` object or create a new one. The function needs to return the `config`
 	     *     object directly, or a promise containing the `config` or a new `config` object.
 	     *   * `requestError`: interceptor gets called when a previous interceptor threw an error or
@@ -11046,8 +11047,33 @@
 	  }];
 	}
 
-	function createXhr() {
-	    return new window.XMLHttpRequest();
+	/**
+	 * @ngdoc service
+	 * @name $xhrFactory
+	 *
+	 * @description
+	 * Factory function used to create XMLHttpRequest objects.
+	 *
+	 * Replace or decorate this service to create your own custom XMLHttpRequest objects.
+	 *
+	 * ```
+	 * angular.module('myApp', [])
+	 * .factory('$xhrFactory', function() {
+	 *   return function createXhr(method, url) {
+	 *     return new window.XMLHttpRequest({mozSystem: true});
+	 *   };
+	 * });
+	 * ```
+	 *
+	 * @param {string} method HTTP method of the request (GET, POST, PUT, ..)
+	 * @param {string} url URL of the request.
+	 */
+	function $xhrFactoryProvider() {
+	  this.$get = function() {
+	    return function createXhr() {
+	      return new window.XMLHttpRequest();
+	    };
+	  };
 	}
 
 	/**
@@ -11055,6 +11081,7 @@
 	 * @name $httpBackend
 	 * @requires $window
 	 * @requires $document
+	 * @requires $xhrFactory
 	 *
 	 * @description
 	 * HTTP backend used by the {@link ng.$http service} that delegates to
@@ -11067,8 +11094,8 @@
 	 * $httpBackend} which can be trained with responses.
 	 */
 	function $HttpBackendProvider() {
-	  this.$get = ['$browser', '$window', '$document', function($browser, $window, $document) {
-	    return createHttpBackend($browser, createXhr, $browser.defer, $window.angular.callbacks, $document[0]);
+	  this.$get = ['$browser', '$window', '$document', '$xhrFactory', function($browser, $window, $document, $xhrFactory) {
+	    return createHttpBackend($browser, $xhrFactory, $browser.defer, $window.angular.callbacks, $document[0]);
 	  }];
 	}
 
@@ -11092,7 +11119,7 @@
 	      });
 	    } else {
 
-	      var xhr = createXhr();
+	      var xhr = createXhr(method, url);
 
 	      xhr.open(method, url, true);
 	      forEach(headers, function(value, key) {
@@ -12961,20 +12988,30 @@
 
 
 	function ensureSafeMemberName(name, fullExpression) {
+	  if (name === "__defineGetter__" || name === "__defineSetter__"
+	      || name === "__lookupGetter__" || name === "__lookupSetter__"
+	      || name === "__proto__") {
+	    throw $parseMinErr('isecfld',
+	        'Attempting to access a disallowed field in Angular expressions! '
+	        + 'Expression: {0}', fullExpression);
+	  }
+	  return name;
+	}
+
+	function getStringValue(name, fullExpression) {
 	  // From the JavaScript docs:
 	  // Property names must be strings. This means that non-string objects cannot be used
 	  // as keys in an object. Any non-string object, including a number, is typecasted
 	  // into a string via the toString method.
 	  //
 	  // So, to ensure that we are checking the same `name` that JavaScript would use,
-	  // we cast it to a string, if possible
-	  name =  (isObject(name) && name.toString) ? name.toString() : name;
-
-	  if (name === "__defineGetter__" || name === "__defineSetter__"
-	      || name === "__lookupGetter__" || name === "__lookupSetter__"
-	      || name === "__proto__") {
-	    throw $parseMinErr('isecfld',
-	        'Attempting to access a disallowed field in Angular expressions! '
+	  // we cast it to a string, if possible.
+	  // Doing `name + ''` can cause a repl error if the result to `toString` is not a string,
+	  // this is, this will handle objects that misbehave.
+	  name = name + '';
+	  if (!isString(name)) {
+	    throw $parseMinErr('iseccst',
+	        'Cannot convert object to primitive value! '
 	        + 'Expression: {0}', fullExpression);
 	  }
 	  return name;
@@ -13021,6 +13058,16 @@
 	      throw $parseMinErr('isecff',
 	        'Referencing call, apply or bind in Angular expressions is disallowed! Expression: {0}',
 	        fullExpression);
+	    }
+	  }
+	}
+
+	function ensureSafeAssignContext(obj, fullExpression) {
+	  if (obj) {
+	    if (obj === (0).constructor || obj === (false).constructor || obj === ''.constructor ||
+	        obj === {}.constructor || obj === [].constructor || obj === Function.constructor) {
+	      throw $parseMinErr('isecaf',
+	        'Assigning to a constructor is disallowed! Expression: {0}', fullExpression);
 	    }
 	  }
 	}
@@ -13739,6 +13786,8 @@
 	        'ensureSafeMemberName',
 	        'ensureSafeObject',
 	        'ensureSafeFunction',
+	        'getStringValue',
+	        'ensureSafeAssignContext',
 	        'ifDefined',
 	        'plus',
 	        'text',
@@ -13747,6 +13796,8 @@
 	          ensureSafeMemberName,
 	          ensureSafeObject,
 	          ensureSafeFunction,
+	          getStringValue,
+	          ensureSafeAssignContext,
 	          ifDefined,
 	          plusFn,
 	          expression);
@@ -13890,6 +13941,7 @@
 	          if (ast.computed) {
 	            right = self.nextId();
 	            self.recurse(ast.property, right);
+	            self.getStringValue(right);
 	            self.addEnsureSafeMemberName(right);
 	            if (create && create !== 1) {
 	              self.if_(self.not(self.computedMember(left, right)), self.lazyAssign(self.computedMember(left, right), '{}'));
@@ -13973,6 +14025,7 @@
 	        self.if_(self.notNull(left.context), function() {
 	          self.recurse(ast.right, right);
 	          self.addEnsureSafeObject(self.member(left.context, left.name, left.computed));
+	          self.addEnsureSafeAssignContext(left.context);
 	          expression = self.member(left.context, left.name, left.computed) + ast.operator + right;
 	          self.assign(intoId, expression);
 	          recursionFn(intoId || expression);
@@ -14098,6 +14151,10 @@
 	    this.current().body.push(this.ensureSafeFunction(item), ';');
 	  },
 
+	  addEnsureSafeAssignContext: function(item) {
+	    this.current().body.push(this.ensureSafeAssignContext(item), ';');
+	  },
+
 	  ensureSafeObject: function(item) {
 	    return 'ensureSafeObject(' + item + ',text)';
 	  },
@@ -14108,6 +14165,14 @@
 
 	  ensureSafeFunction: function(item) {
 	    return 'ensureSafeFunction(' + item + ',text)';
+	  },
+
+	  getStringValue: function(item) {
+	    this.assign(item, 'getStringValue(' + item + ',text)');
+	  },
+
+	  ensureSafeAssignContext: function(item) {
+	    return 'ensureSafeAssignContext(' + item + ',text)';
 	  },
 
 	  lazyRecurse: function(ast, intoId, nameId, recursionFn, create, skipWatchIdCheck) {
@@ -14287,6 +14352,7 @@
 	        var lhs = left(scope, locals, assign, inputs);
 	        var rhs = right(scope, locals, assign, inputs);
 	        ensureSafeObject(lhs.value, self.expression);
+	        ensureSafeAssignContext(lhs.context);
 	        lhs.context[lhs.name] = rhs;
 	        return context ? {value: rhs} : rhs;
 	      };
@@ -14484,6 +14550,7 @@
 	      var value;
 	      if (lhs != null) {
 	        rhs = right(scope, locals, assign, inputs);
+	        rhs = getStringValue(rhs);
 	        ensureSafeMemberName(rhs, expression);
 	        if (create && create !== 1 && lhs && !(lhs[rhs])) {
 	          lhs[rhs] = {};
@@ -19120,6 +19187,7 @@
 	    if (fractionSize > 0 && number < 1) {
 	      formatedText = number.toFixed(fractionSize);
 	      number = parseFloat(formatedText);
+	      formatedText = formatedText.replace(DECIMAL_SEP, decimalSep);
 	    }
 	  }
 
@@ -24915,7 +24983,7 @@
 	 *   </file>
 	 * </example>
 	 *
-	 * ### Example - splitting on whitespace
+	 * ### Example - splitting on newline
 	 * <example name="ngList-directive-newlines">
 	 *   <file name="index.html">
 	 *    <textarea ng-model="list" ng-list="&#10;" ng-trim="false"></textarea>
@@ -25000,7 +25068,9 @@
 	 * @ngdoc type
 	 * @name ngModel.NgModelController
 	 *
-	 * @property {string} $viewValue Actual string value in the view.
+	 * @property {*} $viewValue The actual value from the control's view. For `input` elements, this is a
+	 * String. See {@link ngModel.NgModelController#$setViewValue} for information about when the $viewValue
+	 * is set.
 	 * @property {*} $modelValue The value in the model that the control is bound to.
 	 * @property {Array.<Function>} $parsers Array of functions to execute, as a pipeline, whenever
 	       the control reads value from the DOM. The functions are called in array order, each passing
@@ -26951,11 +27021,16 @@
 	      function updateOptionElement(option, element) {
 	        option.element = element;
 	        element.disabled = option.disabled;
-	        if (option.value !== element.value) element.value = option.selectValue;
+	        // NOTE: The label must be set before the value, otherwise IE10/11/EDGE create unresponsive
+	        // selects in certain circumstances when multiple selects are next to each other and display
+	        // the option list in listbox style, i.e. the select is [multiple], or specifies a [size].
+	        // See https://github.com/angular/angular.js/issues/11314 for more info.
+	        // This is unfortunately untestable with unit / e2e tests
 	        if (option.label !== element.label) {
 	          element.label = option.label;
 	          element.textContent = option.label;
 	        }
+	        if (option.value !== element.value) element.value = option.selectValue;
 	      }
 
 	      function addOrReuseElement(parent, current, type, templateElement) {
@@ -26996,7 +27071,10 @@
 	        if (emptyOption_ || unknownOption_) {
 	          while (current &&
 	                (current === emptyOption_ ||
-	                current === unknownOption_)) {
+	                current === unknownOption_ ||
+	                emptyOption_ && emptyOption_.nodeType === NODE_TYPE_COMMENT)) {
+	            // Empty options might have directives that transclude
+	            // and insert comments (e.g. ngIf)
 	            current = current.nextSibling;
 	          }
 	        }
@@ -28744,7 +28822,7 @@
 	 *     </select><br>
 	 *
 	 *     <label for="singleSelect"> Single select with "not selected" option and dynamic option values: </label><br>
-	 *     <select name="singleSelect" ng-model="data.singleSelect">
+	 *     <select name="singleSelect" id="singleSelect" ng-model="data.singleSelect">
 	 *       <option value="">---Please select---</option> <!-- not selected / blank option -->
 	 *       <option value="{{data.option1}}">Option 1</option> <!-- interpolation -->
 	 *       <option value="option-2">Option 2</option>
@@ -28785,7 +28863,7 @@
 	 * <div ng-controller="ExampleController">
 	 *   <form name="myForm">
 	 *     <label for="repeatSelect"> Repeat select: </label>
-	 *     <select name="repeatSelect" ng-model="data.repeatSelect">
+	 *     <select name="repeatSelect" id="repeatSelect" ng-model="data.repeatSelect">
 	 *       <option ng-repeat="option in data.availableOptions" value="{{option.id}}">{{option.name}}</option>
 	 *     </select>
 	 *   </form>
@@ -28797,7 +28875,7 @@
 	 *  angular.module('ngrepeatSelect', [])
 	 *    .controller('ExampleController', ['$scope', function($scope) {
 	 *      $scope.data = {
-	 *       singleSelect: null,
+	 *       repeatSelect: null,
 	 *       availableOptions: [
 	 *         {id: '1', name: 'Option A'},
 	 *         {id: '2', name: 'Option B'},
@@ -29301,7 +29379,7 @@
 /***/ function(module, exports) {
 
 	/**
-	 * @license AngularJS v1.4.6
+	 * @license AngularJS v1.4.7
 	 * (c) 2010-2015 Google, Inc. http://angularjs.org
 	 * License: MIT
 	 */
@@ -30008,7 +30086,7 @@
 /***/ function(module, exports) {
 
 	/**
-	 * @license AngularJS v1.4.6
+	 * @license AngularJS v1.4.7
 	 * (c) 2010-2015 Google, Inc. http://angularjs.org
 	 * License: MIT
 	 */
@@ -30382,12 +30460,6 @@
 	  return a + ' ' + b;
 	}
 
-	function $$BodyProvider() {
-	  this.$get = ['$document', function($document) {
-	    return jqLite($document[0].body);
-	  }];
-	}
-
 	var $$rAFSchedulerFactory = ['$$rAF', function($$rAF) {
 	  var queue, cancelFn;
 
@@ -30638,7 +30710,7 @@
 	 * * `event` - The DOM event (e.g. enter, leave, move). When used, a generated CSS class of `ng-EVENT` and `ng-EVENT-active` will be applied
 	 * to the element during the animation. Multiple events can be provided when spaces are used as a separator. (Note that this will not perform any DOM operation.)
 	 * * `easing` - The CSS easing value that will be applied to the transition or keyframe animation (or both).
-	 * * `transition` - The raw CSS transition style that will be used (e.g. `1s linear all`).
+	 * * `transitionStyle` - The raw CSS transition style that will be used (e.g. `1s linear all`).
 	 * * `keyframeStyle` - The raw CSS keyframe animation style that will be used (e.g. `1s my_animation linear`).
 	 * * `from` - The starting CSS styles (a key/value object) that will be applied at the start of the animation.
 	 * * `to` - The ending CSS styles (a key/value object) that will be applied across the animation via a CSS transition.
@@ -30655,6 +30727,10 @@
 	 * * `staggerIndex` - The numeric index representing the stagger item (e.g. a value of 5 is equal to the sixth item in the stagger; therefore when a
 	 * * `stagger` option value of `0.1` is used then there will be a stagger delay of `600ms`)
 	 * * `applyClassesEarly` - Whether or not the classes being added or removed will be used when detecting the animation. This is set by `$animate` when enter/leave/move animations are fired to ensure that the CSS classes are resolved in time. (Note that this will prevent any transitions from occuring on the classes being added and removed.)
+	 * * `cleanupStyles` - Whether or not the provided `from` and `to` styles will be removed once
+	 *    the animation is closed. This is useful for when the styles are used purely for the sake of
+	 *    the animation and do not have a lasting visual effect on the element (e.g. a colapse and open animation).
+	 *    By default this value is set to `false`.
 	 *
 	 * @return {object} an object with start and end methods and details about the animation.
 	 *
@@ -30775,6 +30851,23 @@
 	  };
 	}
 
+	// we do not reassign an already present style value since
+	// if we detect the style property value again we may be
+	// detecting styles that were added via the `from` styles.
+	// We make use of `isDefined` here since an empty string
+	// or null value (which is what getPropertyValue will return
+	// for a non-existing style) will still be marked as a valid
+	// value for the style (a falsy value implies that the style
+	// is to be removed at the end of the animation). If we had a simple
+	// "OR" statement then it would not be enough to catch that.
+	function registerRestorableStyles(backup, node, properties) {
+	  forEach(properties, function(prop) {
+	    backup[prop] = isDefined(backup[prop])
+	        ? backup[prop]
+	        : node.style.getPropertyValue(prop);
+	  });
+	}
+
 	var $AnimateCssProvider = ['$animateProvider', function($animateProvider) {
 	  var gcsLookup = createLocalCacheLookup();
 	  var gcsStaggerLookup = createLocalCacheLookup();
@@ -30875,6 +30968,7 @@
 	    }
 
 	    return function init(element, options) {
+	      var restoreStyles = {};
 	      var node = getDomNode(element);
 	      if (!node
 	          || !node.parentNode
@@ -31076,7 +31170,12 @@
 	                                       stagger.animationDuration === 0;
 	      }
 
-	      applyAnimationFromStyles(element, options);
+	      if (options.from) {
+	        if (options.cleanupStyles) {
+	          registerRestorableStyles(restoreStyles, node, Object.keys(options.from));
+	        }
+	        applyAnimationFromStyles(element, options);
+	      }
 
 	      if (flags.blockTransition || flags.blockKeyframeAnimation) {
 	        applyBlocking(maxDuration);
@@ -31142,6 +31241,13 @@
 
 	        applyAnimationClasses(element, options);
 	        applyAnimationStyles(element, options);
+
+	        if (Object.keys(restoreStyles).length) {
+	          forEach(restoreStyles, function(value, prop) {
+	            value ? node.style.setProperty(prop, value)
+	                  : node.style.removeProperty(prop);
+	          });
+	        }
 
 	        // the reason why we have this option is to allow a synchronous closing callback
 	        // that is fired as SOON as the animation ends (when the CSS is removed) or if
@@ -31337,7 +31443,12 @@
 	          }
 
 	          element.on(events.join(' '), onAnimationProgress);
-	          applyAnimationToStyles(element, options);
+	          if (options.to) {
+	            if (options.cleanupStyles) {
+	              registerRestorableStyles(restoreStyles, node, Object.keys(options.to));
+	            }
+	            applyAnimationToStyles(element, options);
+	          }
 	        }
 
 	        function onAnimationExpired() {
@@ -31391,16 +31502,25 @@
 	  var NG_OUT_ANCHOR_CLASS_NAME = 'ng-anchor-out';
 	  var NG_IN_ANCHOR_CLASS_NAME = 'ng-anchor-in';
 
-	  this.$get = ['$animateCss', '$rootScope', '$$AnimateRunner', '$rootElement', '$$body', '$sniffer', '$$jqLite',
-	       function($animateCss,   $rootScope,   $$AnimateRunner,   $rootElement,   $$body,   $sniffer,   $$jqLite) {
+	  function isDocumentFragment(node) {
+	    return node.parentNode && node.parentNode.nodeType === 11;
+	  }
+
+	  this.$get = ['$animateCss', '$rootScope', '$$AnimateRunner', '$rootElement', '$sniffer', '$$jqLite', '$document',
+	       function($animateCss,   $rootScope,   $$AnimateRunner,   $rootElement,   $sniffer,   $$jqLite,   $document) {
 
 	    // only browsers that support these properties can render animations
 	    if (!$sniffer.animations && !$sniffer.transitions) return noop;
 
-	    var bodyNode = getDomNode($$body);
+	    var bodyNode = $document[0].body;
 	    var rootNode = getDomNode($rootElement);
 
-	    var rootBodyElement = jqLite(bodyNode.parentNode === rootNode ? bodyNode : rootNode);
+	    var rootBodyElement = jqLite(
+	      // this is to avoid using something that exists outside of the body
+	      // we also special case the doc fragement case because our unit test code
+	      // appends the $rootElement to the body after the app has been bootstrapped
+	      isDocumentFragment(rootNode) || bodyNode.contains(rootNode) ? rootNode : bodyNode
+	    );
 
 	    var applyAnimationClasses = applyAnimationClassesFactory($$jqLite);
 
@@ -32027,14 +32147,32 @@
 	    return (nO.addClass && nO.addClass === cO.removeClass) || (nO.removeClass && nO.removeClass === cO.addClass);
 	  });
 
-	  this.$get = ['$$rAF', '$rootScope', '$rootElement', '$document', '$$body', '$$HashMap',
+	  this.$get = ['$$rAF', '$rootScope', '$rootElement', '$document', '$$HashMap',
 	               '$$animation', '$$AnimateRunner', '$templateRequest', '$$jqLite', '$$forceReflow',
-	       function($$rAF,   $rootScope,   $rootElement,   $document,   $$body,   $$HashMap,
+	       function($$rAF,   $rootScope,   $rootElement,   $document,   $$HashMap,
 	                $$animation,   $$AnimateRunner,   $templateRequest,   $$jqLite,   $$forceReflow) {
 
 	    var activeAnimationsLookup = new $$HashMap();
 	    var disabledElementsLookup = new $$HashMap();
 	    var animationsEnabled = null;
+
+	    function postDigestTaskFactory() {
+	      var postDigestCalled = false;
+	      return function(fn) {
+	        // we only issue a call to postDigest before
+	        // it has first passed. This prevents any callbacks
+	        // from not firing once the animation has completed
+	        // since it will be out of the digest cycle.
+	        if (postDigestCalled) {
+	          fn();
+	        } else {
+	          $rootScope.$$postDigest(function() {
+	            postDigestCalled = true;
+	            fn();
+	          });
+	        }
+	      };
+	    }
 
 	    // Wait until all directive and route-related templates are downloaded and
 	    // compiled. The $templateRequest.totalPendingRequests variable keeps track of
@@ -32096,14 +32234,6 @@
 	      }
 
 	      return matches;
-	    }
-
-	    function triggerCallback(event, element, phase, data) {
-	      $$rAF(function() {
-	        forEach(findCallbacks(element, event), function(callback) {
-	          callback(element, phase, data);
-	        });
-	      });
 	    }
 
 	    return {
@@ -32199,6 +32329,9 @@
 	      // we create a fake runner with a working promise.
 	      // These methods will become available after the digest has passed
 	      var runner = new $$AnimateRunner();
+
+	      // this is used to trigger callbacks in postDigest mode
+	      var runInNextPostDigestOrNow = postDigestTaskFactory();
 
 	      if (isArray(options.addClass)) {
 	        options.addClass = options.addClass.join(' ');
@@ -32420,7 +32553,20 @@
 	      return runner;
 
 	      function notifyProgress(runner, event, phase, data) {
-	        triggerCallback(event, element, phase, data);
+	        runInNextPostDigestOrNow(function() {
+	          var callbacks = findCallbacks(element, event);
+	          if (callbacks.length) {
+	            // do not optimize this call here to RAF because
+	            // we don't know how heavy the callback code here will
+	            // be and if this code is buffered then this can
+	            // lead to a performance regression.
+	            $$rAF(function() {
+	              forEach(callbacks, function(callback) {
+	                callback(element, phase, data);
+	              });
+	            });
+	          }
+	        });
 	        runner.progress(event, phase, data);
 	      }
 
@@ -32463,7 +32609,8 @@
 	    }
 
 	    function areAnimationsAllowed(element, parentElement, event) {
-	      var bodyElementDetected = isMatchingElement(element, $$body) || element[0].nodeName === 'HTML';
+	      var bodyElement = jqLite($document[0].body);
+	      var bodyElementDetected = isMatchingElement(element, bodyElement) || element[0].nodeName === 'HTML';
 	      var rootElementDetected = isMatchingElement(element, $rootElement);
 	      var parentAnimationDetected = false;
 	      var animateChildren;
@@ -32519,7 +32666,7 @@
 	        if (!bodyElementDetected) {
 	          // we also need to ensure that the element is or will be apart of the body element
 	          // otherwise it is pointless to even issue an animation to be rendered
-	          bodyElementDetected = isMatchingElement(parentElement, $$body);
+	          bodyElementDetected = isMatchingElement(parentElement, bodyElement);
 	        }
 
 	        parentElement = parentElement.parent();
@@ -33110,7 +33257,6 @@
 
 	/* global angularAnimateModule: true,
 
-	   $$BodyProvider,
 	   $$AnimateAsyncRunFactory,
 	   $$rAFSchedulerFactory,
 	   $$AnimateChildrenDirective,
@@ -33850,8 +33996,6 @@
 	 * Click here {@link ng.$animate to learn more about animations with `$animate`}.
 	 */
 	angular.module('ngAnimate', [])
-	  .provider('$$body', $$BodyProvider)
-
 	  .directive('ngAnimateChildren', $$AnimateChildrenDirective)
 	  .factory('$$rAFScheduler', $$rAFSchedulerFactory)
 
@@ -33884,7 +34028,7 @@
 /***/ function(module, exports) {
 
 	/**
-	 * @license AngularJS v1.4.6
+	 * @license AngularJS v1.4.7
 	 * (c) 2010-2015 Google, Inc. http://angularjs.org
 	 * License: MIT
 	 */
@@ -34290,7 +34434,7 @@
 	 * Angular Material Design
 	 * https://github.com/angular/material
 	 * @license MIT
-	 * v0.11.0
+	 * v0.11.2
 	 */
 	(function( window, angular, undefined ){
 	"use strict";
@@ -34298,7 +34442,7 @@
 	(function(){
 	"use strict";
 
-	angular.module('ngMaterial', ["ng","ngAnimate","ngAria","material.core","material.core.gestures","material.core.layout","material.core.theming.palette","material.core.theming","material.core.animate","material.components.autocomplete","material.components.bottomSheet","material.components.backdrop","material.components.button","material.components.card","material.components.checkbox","material.components.chips","material.components.content","material.components.datepicker","material.components.dialog","material.components.divider","material.components.fabActions","material.components.fabShared","material.components.fabSpeedDial","material.components.fabToolbar","material.components.gridList","material.components.fabTrigger","material.components.icon","material.components.input","material.components.list","material.components.menu","material.components.menuBar","material.components.progressCircular","material.components.radioButton","material.components.progressLinear","material.components.select","material.components.slider","material.components.sidenav","material.components.sticky","material.components.subheader","material.components.swipe","material.components.switch","material.components.tabs","material.components.toast","material.components.toolbar","material.components.tooltip","material.components.virtualRepeat","material.components.whiteframe"]);
+	angular.module('ngMaterial', ["ng","ngAnimate","ngAria","material.core","material.core.gestures","material.core.layout","material.core.theming.palette","material.core.theming","material.core.animate","material.components.autocomplete","material.components.backdrop","material.components.bottomSheet","material.components.button","material.components.card","material.components.chips","material.components.checkbox","material.components.content","material.components.datepicker","material.components.dialog","material.components.divider","material.components.fabActions","material.components.fabShared","material.components.fabSpeedDial","material.components.fabToolbar","material.components.gridList","material.components.fabTrigger","material.components.icon","material.components.list","material.components.input","material.components.menu","material.components.menuBar","material.components.progressCircular","material.components.progressLinear","material.components.radioButton","material.components.select","material.components.sidenav","material.components.slider","material.components.subheader","material.components.swipe","material.components.switch","material.components.tabs","material.components.sticky","material.components.toast","material.components.toolbar","material.components.tooltip","material.components.virtualRepeat","material.components.whiteframe"]);
 	})();
 	(function(){
 	"use strict";
@@ -34934,23 +35078,51 @@
 	     *  </md-list>
 	     * </md-bottom-sheet>
 	     *</hljs>
-	     *
 	     **/
 	    findFocusTarget: function(containerEl, attributeVal) {
-	      var elToFocus, items = containerEl[0].querySelectorAll(attributeVal || '[md-autofocus]');
+	      var AUTO_FOCUS = '[md-autofocus]';
+	      var elToFocus;
 
-	      // Find the last child element with the focus attribute
-	      items.length && angular.forEach(items, function(it) {
-	        it = angular.element(it);
+	      elToFocus = scanForFocusable(containerEl, attributeVal || AUTO_FOCUS);
 
-	        // If the expression evaluates to FALSE, then it is not focusable target
-	        var focusExpression = it[0].getAttribute('md-autofocus');
-	        var isFocusable = focusExpression ? (it.scope().$eval(focusExpression) !== false ) : true;
+	      if ( !elToFocus && attributeVal != AUTO_FOCUS) {
+	        // Scan for deprecated attribute
+	        elToFocus = scanForFocusable(containerEl, '[md-auto-focus]');
 
-	        if (isFocusable) elToFocus = it;
-	      });
+	        if ( !elToFocus ) {
+	          // Scan for fallback to 'universal' API
+	          elToFocus = scanForFocusable(containerEl, AUTO_FOCUS);
+	        }
+	      }
 
 	      return elToFocus;
+
+	      /**
+	       * Can target and nested children for specified Selector (attribute)
+	       * whose value may be an expression that evaluates to True/False.
+	       */
+	      function scanForFocusable(target, selector) {
+	        var elFound, items = target[0].querySelectorAll(selector);
+
+	        // Find the last child element with the focus attribute
+	        if ( items && items.length ){
+	          var EXP_ATTR = /\s*\[?([\-a-z]*)\]?\s*/i;
+	          var matches = EXP_ATTR.exec(selector);
+	          var attribute = matches ? matches[1] : null;
+
+	          items.length && angular.forEach(items, function(it) {
+	            it = angular.element(it);
+
+	            // If the expression evaluates to FALSE, then it is not focusable target
+	            var focusExpression = it[0].getAttribute(attribute);
+	            var isFocusable = !focusExpression || !$mdUtil.validateScope(it) ? true :
+	                              (it.scope().$eval(focusExpression) !== false );
+
+	            if (isFocusable) elFound = it;
+	          });
+	        }
+	        return elFound;
+	      }
 	    },
 
 	    // Disables scroll around the passed element.
@@ -34998,11 +35170,10 @@
 	        // (arrow keys, spacebar, tab, etc).
 	        function disableKeyNav(e) {
 	          //-- temporarily removed this logic, will possibly re-add at a later date
-	          return;
-	          if (!element[0].contains(e.target)) {
-	            e.preventDefault();
-	            e.stopImmediatePropagation();
-	          }
+	          //if (!element[0].contains(e.target)) {
+	          //  e.preventDefault();
+	          //  e.stopImmediatePropagation();
+	          //}
 	        }
 
 	        function preventDefault(e) {
@@ -35102,7 +35273,9 @@
 	          r = values;
 	        try {
 	          for (var s in p) {
-	            r = r[p[s]];
+	            if (p.hasOwnProperty(s) ) {
+	              r = r[p[s]];
+	            }
 	          }
 	        } catch (e) {
 	          r = a;
@@ -35206,6 +35379,22 @@
 	      return '' + nextUniqueId++;
 	    },
 
+	    /**
+	     * By default AngularJS attaches information about binding and scopes to DOM nodes,
+	     * and adds CSS classes to data-bound elements. But this information is NOT available
+	     * when `$compileProvider.debugInfoEnabled(false);`
+	     *
+	     * @see https://docs.angularjs.org/guide/production
+	     */
+	    validateScope : function(element) {
+	      var hasScope = element && angular.isDefined(element.scope());
+	      if ( !hasScope ) {
+	        $log.warn("element.scope() is not available when 'debug mode' == false. @see https://docs.angularjs.org/guide/production!");
+	      }
+
+	      return hasScope;
+	    },
+
 	    // Stop watchers and events from firing on a scope without destroying it,
 	    // by disconnecting it from its parent and its siblings' linked lists.
 	    disconnectScope: function disconnectScope(scope) {
@@ -35285,16 +35474,59 @@
 	    /**
 	     * Functional equivalent for $element.filter(‘md-bottom-sheet’)
 	     * useful with interimElements where the element and its container are important...
+	     *
+	     * @param {[]} elements to scan
+	     * @param {string} name of node to find (e.g. 'md-dialog')
+	     * @param {boolean=} optional flag to allow deep scans; defaults to 'false'.
+	     * @param {boolean=} optional flag to enable log warnings; defaults to false
 	     */
-	    extractElementByName: function(element, nodeName) {
-	      for (var i = 0, len = element.length; i < len; i++) {
-	        if (element[i].nodeName.toLowerCase() === nodeName) {
-	          return angular.element(element[i]);
-	        }
+	    extractElementByName: function(element, nodeName, scanDeep, warnNotFound) {
+	      var found = scanTree(element);
+	      if (!found && !!warnNotFound) {
+	        $log.warn( $mdUtil.supplant("Unable to find node '{0}' in element '{1}'.",[nodeName, element[0].outerHTML]) );
 	      }
 
-	      $log.warn( $mdUtil.supplant("Unable to find node '{0}' in element.",[nodeName]) );
-	      return element;
+	      return angular.element(found || element);
+
+	      /**
+	       * Breadth-First tree scan for element with matching `nodeName`
+	       */
+	      function scanTree(element) {
+	        return scanLevel(element) || (!!scanDeep ? scanChildren(element) : null);
+	      }
+
+	      /**
+	       * Case-insensitive scan of current elements only (do not descend).
+	       */
+	      function scanLevel(element) {
+	        if ( element ) {
+	          for (var i = 0, len = element.length; i < len; i++) {
+	            if (element[i].nodeName.toLowerCase() === nodeName) {
+	              return element[i];
+	            }
+	          }
+	        }
+	        return null;
+	      }
+
+	      /**
+	       * Scan children of specified node
+	       */
+	      function scanChildren(element) {
+	        var found;
+	        if ( element ) {
+	          for (var i = 0, len = element.length; i < len; i++) {
+	            var target = element[i];
+	            if ( !found ) {
+	              for (var j = 0, numChild = target.childNodes.length; j < numChild; j++) {
+	                found = found || scanTree([target.childNodes[j]]);
+	              }
+	            }
+	          }
+	        }
+	        return found;
+	      }
+
 	    },
 
 	    /**
@@ -35319,7 +35551,7 @@
 	     * @param digest
 	     * @returns {*}
 	     */
-	    nextTick: function(callback, digest) {
+	    nextTick: function(callback, digest, scope) {
 	      //-- grab function reference for storing state details
 	      var nextTick = $mdUtil.nextTick;
 	      var timeout = nextTick.timeout;
@@ -35345,8 +35577,9 @@
 	       * Trigger digest if necessary
 	       */
 	      function processQueue() {
-	        var queue = nextTick.queue;
-	        var digest = nextTick.digest;
+	        var skip = scope && scope.$$destroyed;
+	        var queue = !skip ? nextTick.queue : [];
+	        var digest = !skip ? nextTick.digest : null;
 
 	        nextTick.queue = [];
 	        nextTick.timeout = null;
@@ -36323,7 +36556,7 @@
 
 	function InterimElementProvider() {
 	  createInterimElementProvider.$get = InterimElementFactory;
-	  InterimElementFactory.$inject = ["$document", "$q", "$rootScope", "$timeout", "$rootElement", "$animate", "$mdUtil", "$mdCompiler", "$mdTheming", "$log"];
+	  InterimElementFactory.$inject = ["$document", "$q", "$$q", "$rootScope", "$timeout", "$rootElement", "$animate", "$mdUtil", "$mdCompiler", "$mdTheming", "$log"];
 	  return createInterimElementProvider;
 
 	  /**
@@ -36414,8 +36647,13 @@
 	      var publicService = {
 	        hide: interimElementService.hide,
 	        cancel: interimElementService.cancel,
-	        show: showInterimElement
+	        show: showInterimElement,
+
+	        // Special internal method to destroy an interim element without animations
+	        // used when navigation changes causes a $scope.$destroy() action
+	        destroy : destroyInterimElement
 	      };
+
 
 	      defaultMethods = providerConfig.methods || [];
 	      // This must be invoked after the publicService is initialized
@@ -36476,9 +36714,11 @@
 	          //
 	          // @example `$mdToast.simple('hello')` // sets options.content to hello
 	          //                                     // because argOption === 'content'
-	          if (arguments.length && definition.argOption && !angular.isObject(arg) &&
-	              !angular.isArray(arg)) {
+	          if (arguments.length && definition.argOption &&
+	              !angular.isObject(arg) && !angular.isArray(arg))  {
+
 	            return (new Preset())[definition.argOption](arg);
+
 	          } else {
 	            return new Preset(arg);
 	          }
@@ -36488,6 +36728,9 @@
 
 	      return publicService;
 
+	      /**
+	       *
+	       */
 	      function showInterimElement(opts) {
 	        // opts is either a preset which stores its options on an _options field,
 	        // or just an object made up of options
@@ -36497,6 +36740,17 @@
 	        return interimElementService.show(
 	          angular.extend({}, defaultOptions, opts)
 	        );
+	      }
+
+	      /**
+	       *  Special method to hide and destroy an interimElement WITHOUT
+	       *  any 'leave` or hide animations ( an immediate force hide/remove )
+	       *
+	       *  NOTE: This calls the onRemove() subclass method for each component...
+	       *  which must have code to respond to `options.$destroy == true`
+	       */
+	      function destroyInterimElement(opts) {
+	          return interimElementService.destroy(opts);
 	      }
 
 	      /**
@@ -36517,7 +36771,7 @@
 	  }
 
 	  /* @ngInject */
-	  function InterimElementFactory($document, $q, $rootScope, $timeout, $rootElement, $animate,
+	  function InterimElementFactory($document, $q, $$q, $rootScope, $timeout, $rootElement, $animate,
 	                                 $mdUtil, $mdCompiler, $mdTheming, $log ) {
 	    return function createInterimElementService() {
 	      var SHOW_CANCELLED = false;
@@ -36539,7 +36793,8 @@
 	      return service = {
 	        show: show,
 	        hide: hide,
-	        cancel: cancel
+	        cancel: cancel,
+	        destroy : destroy
 	      };
 
 	      /*
@@ -36557,7 +36812,7 @@
 	       */
 	      function show(options) {
 	        options = options || {};
-	        var interimElement = new InterimElement(options);
+	        var interimElement = new InterimElement(options || {});
 	        var hideExisting = !options.skipHide && stack.length ? service.hide() : $q.when(true);
 
 	        // This hide()s only the current interim element before showing the next, new one
@@ -36569,7 +36824,8 @@
 	          interimElement
 	            .show()
 	            .catch(function( reason ) {
-	              // $log.error("InterimElement.show() error: " + reason );
+	              //$log.error("InterimElement.show() error: " + reason );
+	              return reason;
 	            });
 
 	        });
@@ -36609,9 +36865,10 @@
 
 	        function closeElement(interim) {
 	          interim
-	            .remove(reason || SHOW_CLOSED, false)
+	            .remove(reason || SHOW_CLOSED, false, options || { })
 	            .catch(function( reason ) {
-	              // $log.error("InterimElement.hide() error: " + reason );
+	              //$log.error("InterimElement.hide() error: " + reason );
+	              return reason;
 	            });
 	          return interim.deferred.promise;
 	        }
@@ -36629,17 +36886,28 @@
 	       * @returns Promise that will be resolved after the element has been removed.
 	       *
 	       */
-	      function cancel(reason) {
+	      function cancel(reason, options) {
 	        var interim = stack.shift();
 	        if ( !interim ) return $q.when(reason || SHOW_CANCELLED);
 
 	        interim
-	          .remove(reason || SHOW_CANCELLED, true)
+	          .remove(reason || SHOW_CANCELLED, true, options || { })
 	          .catch(function( reason ) {
-	            // $log.error("InterimElement.cancel() error: " + reason );
+	            //$log.error("InterimElement.cancel() error: " + reason );
+	            return reason;
 	          });
 
 	        return interim.deferred.promise;
+	      }
+
+	      /*
+	       * Special method to quick-remove the interim element without animations
+	       */
+	      function destroy() {
+	        var interim = stack.shift();
+
+	        return interim ? interim.remove(SHOW_CANCELLED, false, {'$destroy':true}) :
+	               $q.when(SHOW_CANCELLED);
 	      }
 
 
@@ -36673,7 +36941,7 @@
 	                showAction = showElement(element, options, compiledData.controller)
 	                  .then(resolve, rejectAll );
 
-	              });
+	              }, rejectAll);
 
 	            function rejectAll(fault) {
 	              // Force the '$md<xxx>.show()' promise to reject
@@ -36691,39 +36959,48 @@
 	         * - perform the transition-out, and
 	         * - perform optional clean up scope.
 	         */
-	        function transitionOutAndRemove(response, isCancelled) {
+	        function transitionOutAndRemove(response, isCancelled, opts) {
+
+	          // abort if the show() and compile failed
+	          if ( !element ) return $q.when(false);
+
+	          options = angular.extend(options || {}, opts || {});
 	          options.cancelAutoHide && options.cancelAutoHide();
+	          options.element.triggerHandler('$mdInterimElementRemove');
 
-	          return $q(function(resolve, reject){
+	          if ( options.$destroy === true ) {
 
-	            $q.when(showAction).finally(function(){
-	              options.element.triggerHandler('$mdInterimElementRemove');
-	              hideElement(options.element, options).then( function() {
+	            return hideElement(options.element, options);
 
-	                (isCancelled && rejectAll(response)) || resolveAll();
+	          } else {
 
-	              }, rejectAll );
+	            $q.when(showAction)
+	                .finally(function() {
+	                  hideElement(options.element, options).then(function() {
 
-	            });
+	                    (isCancelled && rejectAll(response)) || resolveAll(response);
 
-	            function resolveAll() {
-	              // The `show()` returns a promise that will be resolved when the interim
-	              // element is hidden or cancelled...
-	              self.deferred.resolve(response);
+	                  }, rejectAll);
+	                });
 
-	              // Now resolve the `.hide()` promise itself (optional)
-	              resolve(response);
-	            }
+	            return self.deferred.promise;
+	          }
 
-	            function rejectAll(fault) {
-	              // Force the '$md<xxx>.show()' promise to reject
-	              self.deferred.reject(fault);
 
-	              // Continue rejection propagation
-	              reject(fault);
-	            }
+	          /**
+	           * The `show()` returns a promise that will be resolved when the interim
+	           * element is hidden or cancelled...
+	           */
+	          function resolveAll(response) {
+	            self.deferred.resolve(response);
+	          }
 
-	          });
+	          /**
+	           * Force the '$md<xxx>.show()' promise to reject
+	           */
+	          function rejectAll(fault) {
+	            self.deferred.reject(fault);
+	          }
 	        }
 
 	        /**
@@ -36859,7 +37136,6 @@
 	              // Start transitionIn
 	              $q.when(options.onShow(options.scope, element, options, controller))
 	                .then(function () {
-
 	                  notifyComplete(options.scope, element, options);
 	                  startAutoHide();
 
@@ -36876,21 +37152,32 @@
 	        function hideElement(element, options) {
 	          var announceRemoving = options.onRemoving || angular.noop;
 
-	          return $q(function (resolve, reject) {
+	          return $$q(function (resolve, reject) {
 	            try {
 	              // Start transitionIn
-	              var action = $q.when(element ? options.onRemove(options.scope, element, options) : true);
+	              var action = $$q.when( options.onRemove(options.scope, element, options) || true );
 
 	              // Trigger callback *before* the remove operation starts
 	              announceRemoving(element, action);
 
-	              // Wait until transition-out is done
-	              action.then(function () {
+	              if ( options.$destroy == true ) {
 
-	                !options.preserveScope && options.scope.$destroy();
+	                // For $destroy, onRemove should be synchronous
 	                resolve(element);
 
-	              }, reject );
+	              } else {
+
+	                // Wait until transition-out is done
+	                action.then(function () {
+
+	                  if (!options.preserveScope && options.scope ) {
+	                    options.scope.$destroy();
+	                  }
+
+	                  resolve(element);
+
+	                }, reject );
+	              }
 
 	            } catch(e) {
 	              reject(e.message);
@@ -36904,251 +37191,6 @@
 	  }
 
 	}
-
-	})();
-	(function(){
-	"use strict";
-
-	(function () {
-	  'use strict';
-
-	    /**
-	     *
-	     *   The original ngMaterial Layout solution used attribute selectors and CSS.
-	     *
-	     *  ```html
-	     *  <div layout="column"> My Content </div>
-	     *  ```
-	     *
-	     *  ```css
-	     *  [layout] {
-	     *    box-sizing: border-box;
-	     *    display:flex;
-	     *  }
-	     *  [layout=column] {
-	     *    flex-direction : column
-	     *  }
-	     *  ```
-	     *
-	     *  Use of attribute selectors creates significant performance impacts in some
-	     *  browsers... mainly IE.
-	     *
-	     *  This module registers directives that allow the same layout attributes to be
-	     *  interpreted and converted to class selectors. The directive will add equivalent classes to each element that
-	     *  contains a Layout directive.
-	     *
-	     * ```html
-	     *   <div layout="column" class="layout layout-column"> My Content </div>
-	     *```
-	     *
-	     *  ```css
-	     *  .layout {
-	     *    box-sizing: border-box;
-	     *    display:flex;
-	     *  }
-	     *  .layout-column {
-	     *    flex-direction : column
-	     *  }
-	     *  ```
-	     */
-	    angular.module('material.core.layout', [ 'ng' ])
-
-	      // Attribute directives with optional value(s)
-
-	      .directive('layout'              , attributeWithObserve('layout' , true)       )
-	      .directive('layoutSm'            , attributeWithObserve('layout-sm'   , true)  )
-	      .directive('layoutGtSm'          , attributeWithObserve('layout-gt-sm', true)  )
-	      .directive('layoutLtMd'          , warnAttrNotSupported('layout-lt-md',true)   )
-	      .directive('layoutMd'            , attributeWithObserve('layout-md'   , true)  )
-	      .directive('layoutGtMd'          , attributeWithObserve('layout-gt-md', true)  )
-	      .directive('layoutLtLg'          , warnAttrNotSupported('layout-lt-lg',true)   )
-	      .directive('layoutLg'            , attributeWithObserve('layout-lg'   , true)  )
-	      .directive('layoutGtLg'          , attributeWithObserve('layout-gt-lg', true)  )
-
-	      .directive('flex'                , attributeWithObserve('flex'        , true)  )
-	      .directive('flexSm'              , attributeWithObserve('flex-sm'     , true)  )
-	      .directive('flexGtSm'            , attributeWithObserve('flex-gt-sm'  , true)  )
-	      .directive('flexLtMd'            , warnAttrNotSupported('flex-lt-md'  ,true)   )
-	      .directive('flexMd'              , attributeWithObserve('flex-md'     , true)  )
-	      .directive('flexGtMd'            , attributeWithObserve('flex-gt-md'  , true)  )
-	      .directive('flexLtLg'            , warnAttrNotSupported('flex-lt-lg'  ,true)   )
-	      .directive('flexLg'              , attributeWithObserve('flex-lg'     , true)  )
-	      .directive('flexGtLg'            , attributeWithObserve('flex-gt-lg'  , true)  )
-
-	      // Attribute directives with optional value(s) but directiveName is NOT added as a class
-
-	      .directive('layoutAlign'         , attributeWithObserve('layout-align')        )
-	      .directive('layoutAlignSm'       , attributeWithObserve('layout-align-sm')     )
-	      .directive('layoutAlignGtSm'     , attributeWithObserve('layout-align-gt-sm')  )
-	      .directive('layoutAlignLtMd'     , warnAttrNotSupported('layout-align-lt-md')  )
-	      .directive('layoutAlignMd'       , attributeWithObserve('layout-align-md')     )
-	      .directive('layoutAlignGtMd'     , attributeWithObserve('layout-align-gt-md')  )
-	      .directive('layoutAlignLtLg'     , warnAttrNotSupported('layout-align-lt-lg')  )
-	      .directive('layoutAlignLg'       , attributeWithObserve('layout-align-lg')     )
-	      .directive('layoutAlignGtLg'     , attributeWithObserve('layout-align-gt-lg')  )
-
-	      .directive('flexOrder'           , attributeWithObserve('flex-order')          )
-	      .directive('flexOrderSm'         , attributeWithObserve('flex-order-sm')       )
-	      .directive('flexOrderGtSm'       , attributeWithObserve('flex-order-gt-sm')    )
-	      .directive('flexOrderLtMd'       , warnAttrNotSupported('flex-order-lt-md')    )
-	      .directive('flexOrderMd'         , attributeWithObserve('flex-order-md')       )
-	      .directive('flexOrderGtMd'       , attributeWithObserve('flex-order-gt-md')    )
-	      .directive('flexOrderLtLg'       , warnAttrNotSupported('flex-order-lt-lg')    )
-	      .directive('flexOrderLg'         , attributeWithObserve('flex-order-lg')       )
-	      .directive('flexOrderGtLg'       , attributeWithObserve('flex-order-gt-lg')    )
-
-	      .directive('offset'              , attributeWithObserve('offset')              )
-	      .directive('offsetSm'            , attributeWithObserve('offset-sm')           )
-	      .directive('offsetGtSm'          , attributeWithObserve('offset-gt-sm')        )
-	      .directive('offsetLtMd'          , warnAttrNotSupported('offset-lt-md')        )
-	      .directive('offsetMd'            , attributeWithObserve('offset-md')           )
-	      .directive('offsetGtMd'          , attributeWithObserve('offset-gt-md')        )
-	      .directive('offsetLtLg'          , warnAttrNotSupported('offset-lt-lg')        )
-	      .directive('offsetLg'            , attributeWithObserve('offset-lg')           )
-	      .directive('offsetGtLg'          , attributeWithObserve('offset-gt-lg')        )
-
-	      // Attribute directives with no value(s)
-
-	      .directive('layoutMargin'        , attributeWithoutValue('layout-margin')      )
-	      .directive('layoutPadding'       , attributeWithoutValue('layout-padding')     )
-	      .directive('layoutWrap'          , attributeWithoutValue('layout-wrap')        )
-	      .directive('layoutFill'          , attributeWithoutValue('layout-fill')        )
-
-	      .directive('hide'                , attributeWithoutValue('hide')               )
-	      .directive('hideSm'              , attributeWithoutValue('hide-sm')            )
-	      .directive('hideGtSm'            , attributeWithoutValue('hide-gt-sm')         )
-	      .directive('hideLtMd'            , warnAttrNotSupported ('hide-lt-md')         )
-	      .directive('hideMd'              , attributeWithoutValue('hide-md')            )
-	      .directive('hideGtMd'            , attributeWithoutValue('hide-gt-md')         )
-	      .directive('hideLtLg'            , warnAttrNotSupported ('hide-lt-lg')         )
-	      .directive('hideLg'              , attributeWithoutValue('hide-lg')            )
-	      .directive('hideGtLg'            , attributeWithoutValue('hide-gt-lg')         )
-	      .directive('show'                , attributeWithoutValue('show')               )
-	      .directive('showSm'              , attributeWithoutValue('show-sm')            )
-	      .directive('showGtSm'            , attributeWithoutValue('show-gt-sm')         )
-	      .directive('showLtMd'            , warnAttrNotSupported ('show-lt-md')         )
-	      .directive('showMd'              , attributeWithoutValue('show-md')            )
-	      .directive('showGtMd'            , attributeWithoutValue('show-gt-md')         )
-	      .directive('showLtLg'            , warnAttrNotSupported ('show-lt-lg')         )
-	      .directive('showLg'              , attributeWithoutValue('show-lg')            )
-	      .directive('showGtLg'            , attributeWithoutValue('show-gt-lg')         );
-
-	    /**
-	     * These functions create registration functions for ngMaterial Layout attribute directives
-	     * This provides easy translation to switch ngMaterial attribute selectors to
-	     * CLASS selectors and directives; which has huge performance implications
-	     * for IE Browsers
-	     */
-
-	    /**
-	     * Creates a directive registration function where a possbile dynamic attribute value will
-	     * be observed/watched.
-	     * @param {string} className attribute name; eg `md-layout-gt-md` with value ="row"
-	     * @param {boolean=} addDirectiveAsClass
-	     */
-	    function attributeWithObserve(className, addDirectiveAsClass) {
-	      return function() {
-	        return {
-	            compile: function(element, attr) {
-	              attributeValueToClass(null, element, attr);
-
-	              // Use for postLink to account for transforms after ng-transclude.
-	              return attributeValueToClass;
-	            }
-	        };
-	      };
-
-	      /**
-	       * Add as transformed class selector(s), then
-	       * remove the deprecated attribute selector
-	       */
-	      function attributeValueToClass(scope, element, attr) {
-	        var directive = attr.$normalize(className);
-
-	        // Add transformed class selector(s)
-	        if (addDirectiveAsClass) {
-	          element.addClass(className);
-	        }
-
-	        if (attr[directive]) {
-	          element.addClass(className + "-" + attr[directive].replace(/\s+/g, "-"));
-	        }
-
-	        if ( scope ) {
-	          /**
-	           * After link-phase, do NOT remove deprecated layout attribute selector.
-	           * Instead watch the attribute so interpolated data-bindings to layout
-	           * selectors will continue to be supported.
-	           *
-	           * $observe the className and update with new class (after removing the last one)
-	           *
-	           * e.g. `layout="{{layoutDemo.direction}}"` will update...
-	           */
-	          var lastClass;
-
-	          attr.$observe(function() {
-
-	            return attr[className];
-
-	          }, function(newVal) {
-
-	            element.removeClass(lastClass);
-
-	              lastClass = className + "-" + String(newVal).replace(/\s+/g, "-");
-
-	            element.addClass(lastClass);
-
-	          });
-
-	        }
-
-	      }
-	    }
-
-	    /**
-	     * Creates a registration function with for ngMaterial Layout attribute directive.
-	     * This is a `simple` transpose of attribute usage to class usage
-	     */
-	    function attributeWithoutValue(className) {
-	      return function() {
-	        return {
-	          compile: function(element, attr) {
-	            attributeToClass(null, element);
-
-	            // Use for postLink to account for transforms after ng-transclude.
-	            return attributeToClass;
-	          }
-	        };
-	      };
-
-	      /**
-	       * Add as transformed class selector, then
-	       * remove the deprecated attribute selector
-	       */
-	      function attributeToClass(scope, element) {
-	        element.addClass(className);
-
-	        if ( scope ) {
-	          // After link-phase, remove deprecated layout attribute selector
-	          element.removeAttr(className);
-	        }
-	      }
-	    }
-
-	    /**
-	     * Provide console warning that this layout attribute has been deprecated
-	     */
-	    function warnAttrNotSupported(className) {
-	      var parts = className.split("-");
-
-	      return ["$log", function($log) {
-	        $log.warn( className + "has been deprecated. Please use a `" + parts[0] + "-gt-<xxx>` variant.");
-	        return angular.noop;
-	      }];
-
-	    }
-
-	})();
 
 	})();
 	(function(){
@@ -37279,6 +37321,330 @@
 	(function(){
 	"use strict";
 
+	(function () {
+	  'use strict';
+
+	  var $mdUtil, $$mdLayout, $parse, $interpolate;
+
+	    /**
+	     *
+	     *   The original ngMaterial Layout solution used attribute selectors and CSS.
+	     *
+	     *  ```html
+	     *  <div layout="column"> My Content </div>
+	     *  ```
+	     *
+	     *  ```css
+	     *  [layout] {
+	     *    box-sizing: border-box;
+	     *    display:flex;
+	     *  }
+	     *  [layout=column] {
+	     *    flex-direction : column
+	     *  }
+	     *  ```
+	     *
+	     *  Use of attribute selectors creates significant performance impacts in some
+	     *  browsers... mainly IE.
+	     *
+	     *  This module registers directives that allow the same layout attributes to be
+	     *  interpreted and converted to class selectors. The directive will add equivalent classes to each element that
+	     *  contains a Layout directive.
+	     *
+	     * ```html
+	     *   <div layout="column" class="layout layout-column"> My Content </div>
+	     *```
+	     *
+	     *  ```css
+	     *  .layout {
+	     *    box-sizing: border-box;
+	     *    display:flex;
+	     *  }
+	     *  .layout-column {
+	     *    flex-direction : column
+	     *  }
+	     *  ```
+	     */
+	    angular.module('material.core.layout', [ 'ng' ])
+
+	      /**
+	       * Model of flags used by the Layout directives
+	       * Allows changes while running tests or runtime app changes
+	       */
+	      .factory("$$mdLayout", function() {
+	        return {
+	          removeAttributes : true
+
+	        };
+	      })
+
+	      // Attribute directives with optional value(s)
+
+	      .directive('layout'              , attributeWithObserve('layout'      )  )
+	      .directive('layoutSm'            , attributeWithObserve('layout-sm'   )  )
+	      .directive('layoutGtSm'          , attributeWithObserve('layout-gt-sm')  )
+	      .directive('layoutMd'            , attributeWithObserve('layout-md'   )  )
+	      .directive('layoutGtMd'          , attributeWithObserve('layout-gt-md')  )
+	      .directive('layoutLg'            , attributeWithObserve('layout-lg'   )  )
+	      .directive('layoutGtLg'          , attributeWithObserve('layout-gt-lg')  )
+
+	      .directive('flex'                , attributeWithObserve('flex'        )  )
+	      .directive('flexSm'              , attributeWithObserve('flex-sm'     )  )
+	      .directive('flexGtSm'            , attributeWithObserve('flex-gt-sm'  )  )
+	      .directive('flexMd'              , attributeWithObserve('flex-md'     )  )
+	      .directive('flexGtMd'            , attributeWithObserve('flex-gt-md'  )  )
+	      .directive('flexLg'              , attributeWithObserve('flex-lg'     )  )
+	      .directive('flexGtLg'            , attributeWithObserve('flex-gt-lg'  )  )
+
+	      // Attribute directives with optional value(s) but directiveName is NOT added as a class
+
+	      .directive('layoutAlign'         , attributeWithObserve('layout-align')        )
+	      .directive('layoutAlignSm'       , attributeWithObserve('layout-align-sm')     )
+	      .directive('layoutAlignGtSm'     , attributeWithObserve('layout-align-gt-sm')  )
+	      .directive('layoutAlignMd'       , attributeWithObserve('layout-align-md')     )
+	      .directive('layoutAlignGtMd'     , attributeWithObserve('layout-align-gt-md')  )
+	      .directive('layoutAlignLg'       , attributeWithObserve('layout-align-lg')     )
+	      .directive('layoutAlignGtLg'     , attributeWithObserve('layout-align-gt-lg')  )
+
+	      .directive('flexOrder'           , attributeWithObserve('flex-order')          )
+	      .directive('flexOrderSm'         , attributeWithObserve('flex-order-sm')       )
+	      .directive('flexOrderGtSm'       , attributeWithObserve('flex-order-gt-sm')    )
+	      .directive('flexOrderMd'         , attributeWithObserve('flex-order-md')       )
+	      .directive('flexOrderGtMd'       , attributeWithObserve('flex-order-gt-md')    )
+	      .directive('flexOrderLg'         , attributeWithObserve('flex-order-lg')       )
+	      .directive('flexOrderGtLg'       , attributeWithObserve('flex-order-gt-lg')    )
+
+	      .directive('offset'              , attributeWithObserve('offset')              )
+	      .directive('offsetSm'            , attributeWithObserve('offset-sm')           )
+	      .directive('offsetGtSm'          , attributeWithObserve('offset-gt-sm')        )
+	      .directive('offsetMd'            , attributeWithObserve('offset-md')           )
+	      .directive('offsetGtMd'          , attributeWithObserve('offset-gt-md')        )
+	      .directive('offsetLg'            , attributeWithObserve('offset-lg')           )
+	      .directive('offsetGtLg'          , attributeWithObserve('offset-gt-lg')        )
+
+	      // Attribute directives with no value(s)
+
+	      .directive('layoutMargin'        , attributeWithoutValue('layout-margin')      )
+	      .directive('layoutPadding'       , attributeWithoutValue('layout-padding')     )
+	      .directive('layoutWrap'          , attributeWithoutValue('layout-wrap')        )
+	      .directive('layoutFill'          , attributeWithoutValue('layout-fill')        )
+
+	      .directive('hide'                , attributeWithoutValue('hide')               )
+	      .directive('hideSm'              , attributeWithoutValue('hide-sm')            )
+	      .directive('hideGtSm'            , attributeWithoutValue('hide-gt-sm')         )
+	      .directive('hideMd'              , attributeWithoutValue('hide-md')            )
+	      .directive('hideGtMd'            , attributeWithoutValue('hide-gt-md')         )
+	      .directive('hideLg'              , attributeWithoutValue('hide-lg')            )
+	      .directive('hideGtLg'            , attributeWithoutValue('hide-gt-lg')         )
+	      .directive('show'                , attributeWithoutValue('show')               )
+	      .directive('showSm'              , attributeWithoutValue('show-sm')            )
+	      .directive('showGtSm'            , attributeWithoutValue('show-gt-sm')         )
+	      .directive('showMd'              , attributeWithoutValue('show-md')            )
+	      .directive('showGtMd'            , attributeWithoutValue('show-gt-md')         )
+	      .directive('showLg'              , attributeWithoutValue('show-lg')            )
+	      .directive('showGtLg'            , attributeWithoutValue('show-gt-lg')         )
+
+	      // !! Deprecated attributes: use the `-lt` (aka less-than) notations
+
+	      .directive('layoutLtMd'          , warnAttrNotSupported('layout-lt-md',true)   )
+	      .directive('layoutLtLg'          , warnAttrNotSupported('layout-lt-lg',true)   )
+	      .directive('flexLtMd'            , warnAttrNotSupported('flex-lt-md'  ,true)   )
+	      .directive('flexLtLg'            , warnAttrNotSupported('flex-lt-lg'  ,true)   )
+
+	      .directive('layoutAlignLtMd'     , warnAttrNotSupported('layout-align-lt-md')  )
+	      .directive('layoutAlignLtLg'     , warnAttrNotSupported('layout-align-lt-lg')  )
+	      .directive('flexOrderLtMd'       , warnAttrNotSupported('flex-order-lt-md')    )
+	      .directive('flexOrderLtLg'       , warnAttrNotSupported('flex-order-lt-lg')    )
+	      .directive('offsetLtMd'          , warnAttrNotSupported('offset-lt-md')        )
+	      .directive('offsetLtLg'          , warnAttrNotSupported('offset-lt-lg')        )
+
+	      .directive('hideLtMd'            , warnAttrNotSupported ('hide-lt-md')         )
+	      .directive('hideLtLg'            , warnAttrNotSupported ('hide-lt-lg')         )
+	      .directive('showLtMd'            , warnAttrNotSupported ('show-lt-md')         )
+	      .directive('showLtLg'            , warnAttrNotSupported ('show-lt-lg')         );
+
+	    /**
+	     * These functions create registration functions for ngMaterial Layout attribute directives
+	     * This provides easy translation to switch ngMaterial attribute selectors to
+	     * CLASS selectors and directives; which has huge performance implications
+	     * for IE Browsers
+	     */
+
+	    /**
+	     * Creates a directive registration function where a possbile dynamic attribute value will
+	     * be observed/watched.
+	     * @param {string} className attribute name; eg `md-layout-gt-md` with value ="row"
+	     */
+	    function attributeWithObserve(className) {
+
+	      return ['$mdUtil', '$$mdLayout', '$document', '$parse', '$interpolate', function(_$mdUtil_, _$$mdLayout_, $document, _$parse_, _$interpolate_) {
+	        $mdUtil = _$mdUtil_;
+	        $$mdLayout = _$$mdLayout_;
+	        $parse = _$parse_;
+	        $interpolate = _$interpolate_;
+
+	        return {
+	            restrict : 'A',
+	            compile: function(element, attr) {
+	              // Use for postLink to account for transforms after ng-transclude.
+
+	              if ( !injectLayoutSpecifier(element, attr) ) {
+	                attributeValueToClass(null, element, attr);
+	                return attributeValueToClass;
+	              }
+
+	              return angular.noop;
+	            }
+	        };
+	      }];
+
+	      /**
+	       * To avoid large sets of CSS rules
+	       * for layout-gt-md-row, layout-sm-column, etc...
+	       *
+	       * Instead create either a md-layout-row or md-layout-column
+	       * class that acts as a generic specifier.
+	       *
+	       */
+	      function injectLayoutSpecifier(element, attrs) {
+	        var injected = false;
+	        var breakpoints = ['','-sm','-gt-sm','-md','-gt-md','-lg','-gt-lg'];
+	        angular.forEach(breakpoints, function(it){
+	          if ( className === "layout"+it ) {
+
+	            var updateClassFn = updateClassWithValue(element,"md-layout"+it, attrs);
+	            var normalizedAttr = attrs.$normalize(className);
+	            var attrValue = attrs[normalizedAttr] ? attrs[normalizedAttr].replace(/\s+/g, "-") : "row";
+	            var addImmediate = attrValue ? !needsInterpolation(attrValue) : false;
+	            var watchValue   = needsInterpolation(attrValue);
+
+
+	            // Add special layout class: either '.md-layout-row' or '.md-layout-column'
+	            if ( addImmediate ) element.addClass( $mdUtil.supplant('md-layout{0}-{1}',[it,attrValue]) );
+	            if ( watchValue ) attrs.$observe( normalizedAttr, updateClassFn );
+	            if ( $$mdLayout.removeAttributes ) element.removeAttr(className);
+
+	            injected = true;
+	          }
+	        });
+
+	        return injected;
+	      }
+
+	      /**
+	       * Add as transformed class selector(s), then
+	       * remove the deprecated attribute selector
+	       */
+	      function attributeValueToClass(scope, element, attrs) {
+	        var updateClassFn = updateClassWithValue(element,className, attrs);
+	        var normalizedAttr = attrs.$normalize(className);
+	        var attrValue = attrs[normalizedAttr] ? attrs[normalizedAttr].replace(/\s+/g, "-") : null;
+	        var addImmediate = attrValue ? !needsInterpolation(attrValue) : false;
+	        var watchValue   = needsInterpolation(attrValue);
+
+	        // Add transformed class selector(s)
+
+	        if ( addImmediate ) element.addClass(className + "-" + attrValue);
+	        if ( watchValue ) attrs.$observe( normalizedAttr, updateClassFn );
+	        if ( !addImmediate && !watchValue )  element.addClass(className);
+
+	        if ( $$mdLayout.removeAttributes ) element.removeAttr(className);
+	      }
+
+	    }
+
+	    /**
+	     * See if the original value has interpolation symbols:
+	     * e.g.  flex-gt-md="{{triggerPoint}}"
+	     */
+	    function needsInterpolation(value) {
+	      return (value ||"").indexOf($interpolate.startSymbol()) > -1;
+	    }
+
+	    /**
+	     * After link-phase, do NOT remove deprecated layout attribute selector.
+	     * Instead watch the attribute so interpolated data-bindings to layout
+	     * selectors will continue to be supported.
+	     *
+	     * $observe() the className and update with new class (after removing the last one)
+	     *
+	     * e.g. `layout="{{layoutDemo.direction}}"` will update...
+	     *
+	     * NOTE: The value must match one of the specified styles in the CSS.
+	     * For example `flex-gt-md="{{size}}`  where `scope.size == 47` will NOT work since
+	     * only breakpoints for 0, 5, 10, 15... 100, 33, 34, 66, 67 are defined.
+	     *
+	     */
+	    function updateClassWithValue(element, className, attr) {
+	      var lastClass;
+
+	      return function updateClassWithValue(newValue) {
+	        var value = String(newValue || "").replace(/\s+/g, "-");
+
+	        element.removeClass(lastClass);
+	        lastClass = !value ? className : className + "-" + value;
+	        element.addClass(lastClass);
+
+	        // Conditionally remove the attribute selector in case the browser attempts to
+	        // read it and suffers a performance downgrade (IE).
+
+	        if ( $$mdLayout.removeAttributes ) element.removeAttr(className);
+	      };
+	    }
+
+	    /**
+	     * Creates a registration function with for ngMaterial Layout attribute directive.
+	     * This is a `simple` transpose of attribute usage to class usage
+	     */
+	    function attributeWithoutValue(className) {
+	      return ['$$mdLayout', '$document', function(_$$mdLayout_, $document) {
+	        $$mdLayout = _$$mdLayout_;
+	        return {
+	          restrict : 'A',
+	          compile: function(element, attrs) {
+
+	            attributeToClass(null, element);
+
+	            // Use for postLink to account for transforms after ng-transclude.
+	            return attributeToClass;
+	          }
+	        };
+	      }];
+
+	      /**
+	       * Add as transformed class selector, then
+	       * remove the deprecated attribute selector
+	       */
+	      function attributeToClass(scope, element) {
+	        element.addClass(className);
+
+	        if ( $$mdLayout.removeAttributes ) {
+	          // After link-phase, remove deprecated layout attribute selector
+	          element.removeAttr(className);
+	        }
+	      }
+	    }
+
+	    /**
+	     * Provide console warning that this layout attribute has been deprecated
+	     *
+	     */
+	    function warnAttrNotSupported(className) {
+	      var parts = className.split("-");
+
+	      return ["$log", function($log) {
+	        $log.warn( className + "has been deprecated. Please use a `" + parts[0] + "-gt-<xxx>` variant.");
+	        return angular.noop;
+	      }];
+
+	    }
+
+	})();
+
+	})();
+	(function(){
+	"use strict";
+
 	(function() {
 	  'use strict';
 
@@ -37292,7 +37658,7 @@
 	   *
 	   * @param {object=} scope Scope within the current context
 	   * @param {object=} element The element the ripple effect should be applied to
-	   * @param {object=} options (Optional) Configuration options to override the defaultripple configuration
+	   * @param {object=} options (Optional) Configuration options to override the default ripple configuration
 	   */
 
 	  angular.module('material.core')
@@ -37300,12 +37666,11 @@
 
 	  function MdButtonInkRipple($mdInkRipple) {
 	    return {
-	      attach: attach
-	    };
+	      attach: function attachRipple(scope, element, options) {
+	        options = angular.extend(optionsForElement(element), options);
 
-	    function attach(scope, element, options) {
-	      var elementOptions = optionsForElement(element);
-	      return $mdInkRipple.attach(scope, element, angular.extend(elementOptions, options));
+	        return $mdInkRipple.attach(scope, element, options);
+	      }
 	    };
 
 	    function optionsForElement(element) {
@@ -37554,6 +37919,8 @@
 	 * @param event {MouseEvent}
 	 */
 	InkRippleCtrl.prototype.handleMousedown = function (event) {
+	  if ( this.mousedown ) return;
+
 	  // When jQuery is loaded, we have to get the original event
 	  if (event.hasOwnProperty('originalEvent')) event = event.originalEvent;
 	  this.mousedown = true;
@@ -37570,9 +37937,13 @@
 	 * mouseup or mouseleave event)
 	 */
 	InkRippleCtrl.prototype.handleMouseup = function () {
-	  var ctrl       = this;
-	  this.mousedown = false;
-	  this.$mdUtil.nextTick(function () { ctrl.clearRipples(); }, false);
+	  if ( this.mousedown || this.lastRipple ) {
+	    var ctrl       = this;
+	    this.mousedown = false;
+	    this.$mdUtil.nextTick(function () {
+	      ctrl.clearRipples();
+	    }, false);
+	  }
 	};
 
 	/**
@@ -37580,7 +37951,9 @@
 	 * Depending on logic within `fadeInComplete`, some removals will be postponed.
 	 */
 	InkRippleCtrl.prototype.clearRipples = function () {
-	  for (var i = 0; i < this.ripples.length; i++) this.fadeInComplete(this.ripples[ i ]);
+	  for (var i = 0; i < this.ripples.length; i++) {
+	    this.fadeInComplete(this.ripples[ i ]);
+	  }
 	};
 
 	/**
@@ -37600,12 +37973,23 @@
 	  }
 	};
 
+	InkRippleCtrl.prototype.isRippleAllowed = function () {
+	  var element = this.$element[0];
+	  do {
+	    if (!element.tagName || element.tagName === 'BODY') break;
+	    if (element && element.hasAttribute && element.hasAttribute('disabled')) return false;
+	  } while (element = element.parentNode);
+	  return true;
+	};
+
 	/**
 	 * Creates a new ripple and adds it to the container.  Also tracks ripple in `this.ripples`.
 	 * @param left
 	 * @param top
 	 */
 	InkRippleCtrl.prototype.createRipple = function (left, top) {
+	  if (!this.isRippleAllowed()) return;
+
 	  var ctrl        = this;
 	  var ripple      = angular.element('<div class="md-ripple"></div>');
 	  var width       = this.$element.prop('clientWidth');
@@ -37636,9 +38020,14 @@
 	  this.container.append(ripple);
 	  this.ripples.push(ripple);
 	  ripple.addClass('md-ripple-placed');
+
 	  this.$mdUtil.nextTick(function () {
+
 	    ripple.addClass('md-ripple-scaled md-ripple-active');
-	    ctrl.$timeout(function () { ctrl.clearRipples(); }, DURATION, false);
+	    ctrl.$timeout(function () {
+	      ctrl.clearRipples();
+	    }, DURATION, false);
+
 	  }, false);
 
 	  function rgbaToRGB (color) {
@@ -37660,7 +38049,9 @@
 	 */
 	InkRippleCtrl.prototype.fadeInComplete = function (ripple) {
 	  if (this.lastRipple === ripple) {
-	    if (!this.timeout && !this.mousedown) this.removeRipple(ripple);
+	    if (!this.timeout && !this.mousedown) {
+	      this.removeRipple(ripple);
+	    }
 	  } else {
 	    this.removeRipple(ripple);
 	  }
@@ -37679,14 +38070,19 @@
 	  if (this.ripples.length === 0) this.container.css({ backgroundColor: '' });
 	  // use a 2-second timeout in order to allow for the animation to finish
 	  // we don't actually care how long the animation takes
-	  this.$timeout(function () { ctrl.fadeOutComplete(ripple); }, DURATION, false);
+	  this.$timeout(function () {
+	    ctrl.fadeOutComplete(ripple);
+	  }, DURATION, false);
 	};
 
 	/**
 	 * Removes the provided ripple from the DOM
 	 * @param ripple
 	 */
-	InkRippleCtrl.prototype.fadeOutComplete = function (ripple) { ripple.remove(); };
+	InkRippleCtrl.prototype.fadeOutComplete = function (ripple) {
+	  ripple.remove();
+	  this.lastRipple = null;
+	};
 
 	/**
 	 * Used to create an empty directive.  This is used to track flag-directives whose children may have
@@ -38209,8 +38605,8 @@
 	var DARK_DEFAULT_HUES = {
 	  'background': {
 	    'default': '800',
-	    'hue-1': '300',
-	    'hue-2': '600',
+	    'hue-1': '600',
+	    'hue-2': '300',
 	    'hue-3': '900'
 	  }
 	};
@@ -38977,7 +39373,7 @@
 
 	  var forEach = angular.forEach;
 
-	  var WEBKIT = window.ontransitionend === undefined && window.onwebkittransitionend !== undefined;
+	  var WEBKIT = angular.isDefined(document.documentElement.style.WebkitAppearance);
 	  var TRANSITION_PROP = WEBKIT ? 'WebkitTransition' : 'transition';
 	  var ANIMATION_PROP = WEBKIT ? 'WebkitAnimation' : 'animation';
 	  var PREFIX = WEBKIT ? '-webkit-' : '';
@@ -39285,7 +39681,7 @@
 
 	      function parseMaxTime(str) {
 	        var maxValue = 0;
-	        var values = str.split(/\s*,\s*/);
+	        var values = (str || "").split(/\s*,\s*/);
 	        forEach(values, function(value) {
 	          // it's always safe to consider only second values and omit `ms` values since
 	          // getComputedStyle will always handle the conversion for us
@@ -39392,6 +39788,74 @@
 	(function(){
 	"use strict";
 
+	/*
+	 * @ngdoc module
+	 * @name material.components.backdrop
+	 * @description Backdrop
+	 */
+
+	/**
+	 * @ngdoc directive
+	 * @name mdBackdrop
+	 * @module material.components.backdrop
+	 *
+	 * @restrict E
+	 *
+	 * @description
+	 * `<md-backdrop>` is a backdrop element used by other components, such as dialog and bottom sheet.
+	 * Apply class `opaque` to make the backdrop use the theme backdrop color.
+	 *
+	 */
+
+	angular
+	  .module('material.components.backdrop', ['material.core'])
+	  .directive('mdBackdrop', ["$mdTheming", "$animate", "$rootElement", "$window", "$log", "$$rAF", "$document", function BackdropDirective($mdTheming, $animate, $rootElement, $window, $log, $$rAF, $document) {
+	    var ERROR_CSS_POSITION = "<md-backdrop> may not work properly in a scrolled, static-positioned parent container.";
+
+	    return {
+	      restrict: 'E',
+	      link: postLink
+	    };
+
+	    function postLink(scope, element, attrs) {
+
+	      // If body scrolling has been disabled using mdUtil.disableBodyScroll(),
+	      // adjust the 'backdrop' height to account for the fixed 'body' top offset
+	      var body = $window.getComputedStyle($document[0].body);
+	      if (body.position == 'fixed') {
+	        var hViewport = parseInt(body.height, 10) + Math.abs(parseInt(body.top, 10));
+	        element.css({
+	          height: hViewport + 'px'
+	        });
+	      }
+
+	      // backdrop may be outside the $rootElement, tell ngAnimate to animate regardless
+	      if ($animate.pin) $animate.pin(element, $rootElement);
+
+	      $$rAF(function () {
+
+	        // Often $animate.enter() is used to append the backDrop element
+	        // so let's wait until $animate is done...
+	        var parent = element.parent()[0];
+	        if (parent) {
+	          var styles = $window.getComputedStyle(parent);
+	          if (styles.position == 'static') {
+	            // backdrop uses position:absolute and will not work properly with parent position:static (default)
+	            $log.warn(ERROR_CSS_POSITION);
+	          }
+	        }
+
+	        $mdTheming.inherit(element, element.parent());
+	      });
+
+	    }
+
+	  }]);
+
+	})();
+	(function(){
+	"use strict";
+
 	/**
 	 * @ngdoc module
 	 * @name material.components.bottomSheet
@@ -39406,11 +39870,20 @@
 	  .directive('mdBottomSheet', MdBottomSheetDirective)
 	  .provider('$mdBottomSheet', MdBottomSheetProvider);
 
-	function MdBottomSheetDirective() {
+	/* @ngInject */
+	function MdBottomSheetDirective($mdBottomSheet) {
 	  return {
-	    restrict: 'E'
+	    restrict: 'E',
+	    link : function postLink(scope, element, attr) {
+	      // When navigation force destroys an interimElement, then
+	      // listen and $destroy() that interim instance...
+	      scope.$on('$destroy', function() {
+	        $mdBottomSheet.destroy();
+	      });
+	    }
 	  };
 	}
+	MdBottomSheetDirective.$inject = ["$mdBottomSheet"];
 
 
 	/**
@@ -39654,74 +40127,6 @@
 	(function(){
 	"use strict";
 
-	/*
-	 * @ngdoc module
-	 * @name material.components.backdrop
-	 * @description Backdrop
-	 */
-
-	/**
-	 * @ngdoc directive
-	 * @name mdBackdrop
-	 * @module material.components.backdrop
-	 *
-	 * @restrict E
-	 *
-	 * @description
-	 * `<md-backdrop>` is a backdrop element used by other components, such as dialog and bottom sheet.
-	 * Apply class `opaque` to make the backdrop use the theme backdrop color.
-	 *
-	 */
-
-	angular
-	  .module('material.components.backdrop', ['material.core'])
-	  .directive('mdBackdrop', ["$mdTheming", "$animate", "$rootElement", "$window", "$log", "$$rAF", "$document", function BackdropDirective($mdTheming, $animate, $rootElement, $window, $log, $$rAF, $document) {
-	    var ERROR_CSS_POSITION = "<md-backdrop> may not work properly in a scrolled, static-positioned parent container.";
-
-	    return {
-	      restrict: 'E',
-	      link: postLink
-	    };
-
-	    function postLink(scope, element, attrs) {
-
-	      // If body scrolling has been disabled using mdUtil.disableBodyScroll(),
-	      // adjust the 'backdrop' height to account for the fixed 'body' top offset
-	      var body = $window.getComputedStyle($document[0].body);
-	      if (body.position == 'fixed') {
-	        var hViewport = parseInt(body.height, 10) + Math.abs(parseInt(body.top, 10));
-	        element.css({
-	          height: hViewport + 'px'
-	        });
-	      }
-
-	      // backdrop may be outside the $rootElement, tell ngAnimate to animate regardless
-	      if ($animate.pin) $animate.pin(element, $rootElement);
-
-	      $$rAF(function () {
-
-	        // Often $animate.enter() is used to append the backDrop element
-	        // so let's wait until $animate is done...
-	        var parent = element.parent()[0];
-	        if (parent) {
-	          var styles = $window.getComputedStyle(parent);
-	          if (styles.position == 'static') {
-	            // backdrop uses position:absolute and will not work properly with parent position:static (default)
-	            $log.warn(ERROR_CSS_POSITION);
-	          }
-	        }
-
-	        $mdTheming.inherit(element, element.parent());
-	      });
-
-	    }
-
-	  }]);
-
-	})();
-	(function(){
-	"use strict";
-
 	/**
 	 * @ngdoc module
 	 * @name material.components.button
@@ -39840,9 +40245,13 @@
 	        }, 100);
 	      })
 	      .on('focus', function() {
-	        if (scope.mouseActive === false) { element.addClass('md-focused'); }
+	        if (scope.mouseActive === false) {
+	          element.addClass('md-focused');
+	        }
 	      })
-	      .on('blur', function() { element.removeClass('md-focused'); });
+	      .on('blur', function(ev) {
+	        element.removeClass('md-focused');
+	      });
 	  }
 
 	}
@@ -39933,6 +40342,22 @@
 
 	/**
 	 * @ngdoc module
+	 * @name material.components.chips
+	 */
+	/*
+	 * @see js folder for chips implementation
+	 */
+	angular.module('material.components.chips', [
+	  'material.core',
+	  'material.components.autocomplete'
+	]);
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
 	 * @name material.components.checkbox
 	 * @description Checkbox module!
 	 */
@@ -39987,7 +40412,7 @@
 	    restrict: 'E',
 	    transclude: true,
 	    require: '?ngModel',
-	    priority:210, // Run before ngAria
+	    priority: 210, // Run before ngAria
 	    template: 
 	      '<div class="md-container" md-ink-ripple md-ink-ripple-checkbox>' +
 	        '<div class="md-icon"></div>' +
@@ -40006,6 +40431,14 @@
 	    tAttrs.tabindex = tAttrs.tabindex || '0';
 	    tElement.attr('role', tAttrs.type);
 
+	    // Attach a click handler in compile in order to immediately stop propagation
+	    // (especially for ng-click) when the checkbox is disabled.
+	    tElement.on('click', function(event) {
+	      if (this.hasAttribute('disabled')) {
+	        event.stopImmediatePropagation();
+	      }
+	    });
+
 	    return function postLink(scope, element, attr, ngModelCtrl) {
 	      ngModelCtrl = ngModelCtrl || $mdUtil.fakeNgModel();
 	      $mdTheming(element);
@@ -40016,10 +40449,12 @@
 	            ngModelCtrl.$setViewValue.bind(ngModelCtrl)
 	        );
 	      }
+
 	      $$watchExpr('ngDisabled', 'tabindex', {
 	        true: '-1',
 	        false: attr.tabindex
 	      });
+
 	      $mdAria.expectWithText(element, 'aria-label');
 
 	      // Reuse the original input[type=checkbox] directive from Angular core.
@@ -40035,14 +40470,18 @@
 	        .on('keypress', keypressHandler)
 	        .on('mousedown', function() {
 	          scope.mouseActive = true;
-	          $timeout(function(){
+	          $timeout(function() {
 	            scope.mouseActive = false;
 	          }, 100);
 	        })
 	        .on('focus', function() {
-	          if(scope.mouseActive === false) { element.addClass('md-focused'); }
+	          if (scope.mouseActive === false) {
+	            element.addClass('md-focused');
+	          }
 	        })
-	        .on('blur', function() { element.removeClass('md-focused'); });
+	        .on('blur', function() {
+	          element.removeClass('md-focused');
+	        });
 
 	      ngModelCtrl.$render = render;
 
@@ -40060,12 +40499,18 @@
 	        var keyCode = ev.which || ev.keyCode;
 	        if (keyCode === $mdConstant.KEY_CODE.SPACE || keyCode === $mdConstant.KEY_CODE.ENTER) {
 	          ev.preventDefault();
-	          if (!element.hasClass('md-focused')) { element.addClass('md-focused'); }
+
+	          if (!element.hasClass('md-focused')) {
+	            element.addClass('md-focused');
+	          }
+
 	          listener(ev);
 	        }
 	      }
 	      function listener(ev) {
-	        if (element[0].hasAttribute('disabled')) return;
+	        if (element[0].hasAttribute('disabled')) {
+	          return;
+	        }
 
 	        scope.$apply(function() {
 	          // Toggle the checkbox value...
@@ -40087,22 +40532,6 @@
 	  }
 	}
 	MdCheckboxDirective.$inject = ["inputDirective", "$mdAria", "$mdConstant", "$mdTheming", "$mdUtil", "$timeout"];
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
-	 * @name material.components.chips
-	 */
-	/*
-	 * @see js folder for chips implementation
-	 */
-	angular.module('material.components.chips', [
-	  'material.core',
-	  'material.components.autocomplete'
-	]);
 
 	})();
 	(function(){
@@ -40692,10 +41121,13 @@
 	   * This should only need to be called once during initialization.
 	   */
 	  CalendarCtrl.prototype.buildWeekHeader = function() {
+	    var firstDayOfWeek = this.dateLocale.firstDayOfWeek;
+	    var shortDays = this.dateLocale.shortDays;
+
 	    var row = document.createElement('tr');
 	    for (var i = 0; i < 7; i++) {
 	      var th = document.createElement('th');
-	      th.textContent = this.dateLocale.shortDays[i];
+	      th.textContent = shortDays[(i + firstDayOfWeek) % 7];
 	      row.appendChild(th);
 	    }
 
@@ -40898,7 +41330,7 @@
 	    var date = this.dateUtil.isValidDate(opt_dateInMonth) ? opt_dateInMonth : new Date();
 
 	    var firstDayOfMonth = this.dateUtil.getFirstDateOfMonth(date);
-	    var firstDayOfTheWeek = firstDayOfMonth.getDay();
+	    var firstDayOfTheWeek = this.getLocaleDay_(firstDayOfMonth);
 	    var numberOfDaysInMonth = this.dateUtil.getNumberOfDaysInMonth(date);
 
 	    // Store rows for the month in a document fragment so that we can append them all at once.
@@ -40989,6 +41421,15 @@
 	    return monthBody;
 	  };
 
+	  /**
+	   * Gets the day-of-the-week index for a date for the current locale.
+	   * @private
+	   * @param {Date} date
+	   * @returns {number} The column index of the date in the calendar.
+	   */
+	  CalendarMonthCtrl.prototype.getLocaleDay_ = function(date) {
+	    return (date.getDay() + (7 - this.dateLocale.firstDayOfWeek)) % 7
+	  };
 	})();
 
 	})();
@@ -41015,6 +41456,8 @@
 	   * @property {(Array<string>)=} shortDays Array of abbreviated dayes of the week.
 	   * @property {(Array<string>)=} dates Array of dates of the month. Only necessary for locales
 	   *     using a numeral system other than [1, 2, 3...].
+	   * @property {(Array<string>)=} firstDayOfWeek The first day of the week. Sunday = 0, Monday = 1,
+	   *    etc.
 	   * @property {(function(string): Date)=} parseDate Function to parse a date object from a string.
 	   * @property {(function(Date): string)=} formatDate Function to format a date object to a string.
 	   * @property {(function(Date): string)=} monthHeaderFormatter Function that returns the label for
@@ -41035,12 +41478,16 @@
 	   *     $mdDateLocaleProvider.days = ['dimanche', 'lundi', 'mardi', ...];
 	   *     $mdDateLocaleProvider.shortDays = ['Di', 'Lu', 'Ma', ...];
 	   *
+	   *     // Can change week display to start on Monday.
+	   *     $mdDateLocaleProvider.firstDayOfWeek = 1;
+	   *
 	   *     // Optional.
 	   *     $mdDateLocaleProvider.dates = [1, 2, 3, 4, 5, 6, ...];
 	   *
 	   *     // Example uses moment.js to parse and format dates.
 	   *     $mdDateLocaleProvider.parseDate = function(dateString) {
-	   *       return moment(dateString).toDate();
+	   *       var m = moment(dateString, 'L', true);
+	   *       return m.isValid() ? m.toDate() : new Date(NaN);
 	   *     };
 	   *
 	   *     $mdDateLocaleProvider.formatDate = function(date) {
@@ -41048,7 +41495,7 @@
 	   *     };
 	   *
 	   *     $mdDateLocaleProvider.monthHeaderFormatter = function(date) {
-	   *       myShortMonths[date.getMonth()] + ' ' + date.getFullYear();
+	   *       return myShortMonths[date.getMonth()] + ' ' + date.getFullYear();
 	   *     };
 	   *
 	   *     // In addition to date display, date components also need localized messages
@@ -41085,6 +41532,9 @@
 
 	      /** Array of dates of a month (1 - 31). Characters might be different in some locales. */
 	      this.dates = null;
+
+	      /** Index of the first day of the week. 0 = Sunday, 1 = Monday, etc. */
+	      this.firstDayOfWeek = 0;
 
 	      /**
 	       * Function that converts the date portion of a Date to a string.
@@ -41143,7 +41593,23 @@
 	       * @returns {string}
 	       */
 	      function defaultFormatDate(date) {
-	        return date ? date.toLocaleDateString() : '';
+	        if (!date) {
+	          return '';
+	        }
+
+	        // All of the dates created through ng-material *should* be set to midnight.
+	        // If we encounter a date where the localeTime shows at 11pm instead of midnight,
+	        // we have run into an issue with DST where we need to increment the hour by one:
+	        // var d = new Date(1992, 9, 8, 0, 0, 0);
+	        // d.toLocaleString(); // == "10/7/1992, 11:00:00 PM"
+	        var localeTime = date.toLocaleTimeString();
+	        var formatDate = date;
+	        if (date.getHours() == 0 &&
+	            (localeTime.indexOf('11:') !== -1 || localeTime.indexOf('23:') !== -1)) {
+	          formatDate = new Date(date.getFullYear(), date.getMonth(), date.getDate(), 1, 0, 0);
+	        }
+
+	        return formatDate.toLocaleDateString();
 	      }
 
 	      /**
@@ -41228,6 +41694,7 @@
 	        days: this.days || $locale.DATETIME_FORMATS.DAY,
 	        shortDays: this.shortDays || defaultShortDays,
 	        dates: this.dates || defaultDates,
+	        firstDayOfWeek: this.firstDayOfWeek || 0,
 	        formatDate: this.formatDate || defaultFormatDate,
 	        parseDate: this.parseDate || defaultParseDate,
 	        isDateComplete: this.isDateComplete || defaultIsDateComplete,
@@ -41274,14 +41741,21 @@
 	   *
 	   * @param {Date} ng-model The component's model. Expects a JavaScript Date object.
 	   * @param {expression=} ng-change Expression evaluated when the model value changes.
-	   * @param {expression=} md-min-date Expression representing a min date (inclusive).
-	   * @param {expression=} md-max-date Expression representing a max date (inclusive).
+	   * @param {Date=} md-min-date Expression representing a min date (inclusive).
+	   * @param {Date=} md-max-date Expression representing a max date (inclusive).
 	   * @param {boolean=} disabled Whether the datepicker is disabled.
+	   * @param {boolean=} required Whether a value is required for the datepicker.
 	   *
 	   * @description
 	   * `<md-datepicker>` is a component used to select a single date.
 	   * For information on how to configure internationalization for the date picker,
 	   * see `$mdDateLocaleProvider`.
+	   *
+	   * This component supports [ngMessages](https://docs.angularjs.org/api/ngMessages/directive/ngMessages).
+	   * Supported attributes are:
+	   * * `required`: whether a required date is not set.
+	   * * `mindate`: whether the selected date is before the minimum allowed date.
+	   * * `maxdate`: whether the selected date is after the maximum allowed date.
 	   *
 	   * @usage
 	   * <hljs lang="html">
@@ -41352,17 +41826,40 @@
 	  var DEFAULT_DEBOUNCE_INTERVAL = 500;
 
 	  /**
+	   * Height of the calendar pane used to check if the pane is going outside the boundary of
+	   * the viewport. See calendar.scss for how $md-calendar-height is computed; an extra 20px is
+	   * also added to space the pane away from the exact edge of the screen.
+	   *
+	   *  This is computed statically now, but can be changed to be measured if the circumstances
+	   *  of calendar sizing are changed.
+	   */
+	  var CALENDAR_PANE_HEIGHT = 368;
+
+	  /**
+	   * Width of the calendar pane used to check if the pane is going outside the boundary of
+	   * the viewport. See calendar.scss for how $md-calendar-width is computed; an extra 20px is
+	   * also added to space the pane away from the exact edge of the screen.
+	   *
+	   *  This is computed statically now, but can be changed to be measured if the circumstances
+	   *  of calendar sizing are changed.
+	   */
+	  var CALENDAR_PANE_WIDTH = 360;
+
+	  /**
 	   * Controller for md-datepicker.
 	   *
 	   * @ngInject @constructor
 	   */
-	  function DatePickerCtrl($scope, $element, $attrs, $compile, $timeout, $mdConstant, $mdTheming,
-	      $mdUtil, $mdDateLocale, $$mdDateUtil, $$rAF) {
+	  function DatePickerCtrl($scope, $element, $attrs, $compile, $timeout, $window,
+	      $mdConstant, $mdTheming, $mdUtil, $mdDateLocale, $$mdDateUtil, $$rAF) {
 	    /** @final */
 	    this.$compile = $compile;
 
 	    /** @final */
 	    this.$timeout = $timeout;
+
+	    /** @final */
+	    this.$window = $window;
 
 	    /** @final */
 	    this.dateLocale = $mdDateLocale;
@@ -41439,6 +41936,9 @@
 	    /** Pre-bound click handler is saved so that the event listener can be removed. */
 	    this.bodyClickHandler = angular.bind(this, this.handleBodyClick);
 
+	    /** Pre-bound resize handler so that the event listener can be removed. */
+	    this.windowResizeHandler = $mdUtil.debounce(angular.bind(this, this.closeCalendarPane), 100);
+
 	    // Unless the user specifies so, the datepicker should not be a tab stop.
 	    // This is necessary because ngAria might add a tabindex to anything with an ng-model
 	    // (based on whether or not the user has turned that particular feature on/off).
@@ -41455,7 +41955,7 @@
 	      self.detachCalendarPane();
 	    });
 	  }
-	  DatePickerCtrl.$inject = ["$scope", "$element", "$attrs", "$compile", "$timeout", "$mdConstant", "$mdTheming", "$mdUtil", "$mdDateLocale", "$$mdDateUtil", "$$rAF"];
+	  DatePickerCtrl.$inject = ["$scope", "$element", "$attrs", "$compile", "$timeout", "$window", "$mdConstant", "$mdTheming", "$mdUtil", "$mdDateLocale", "$$mdDateUtil", "$$rAF"];
 
 	  /**
 	   * Sets up the controller's reference to ngModelController.
@@ -41469,6 +41969,7 @@
 	      self.date = self.ngModelCtrl.$viewValue;
 	      self.inputElement.value = self.dateLocale.formatDate(self.date);
 	      self.resizeInputElement();
+	      self.setErrorFlags();
 	    };
 	  };
 
@@ -41524,9 +42025,13 @@
 	    if (this.$attrs['ngDisabled']) {
 	      // The expression is to be evaluated against the directive element's scope and not
 	      // the directive's isolate scope.
-	      this.$element.scope().$watch(this.$attrs['ngDisabled'], function(isDisabled) {
-	        self.setDisabled(isDisabled);
-	      });
+	      var scope = this.$mdUtil.validateScope(this.$element) ? this.$element.scope() : null;
+
+	      if ( scope ) {
+	        scope.$watch(this.$attrs['ngDisabled'], function(isDisabled) {
+	          self.setDisabled(isDisabled);
+	        });
+	      }
 	    }
 
 	    Object.defineProperty(this, 'placeholder', {
@@ -41546,8 +42051,23 @@
 	  };
 
 	  /**
-	   * Resizes the input element based on the size of its content.
+	   * Sets the custom ngModel.$error flags to be consumed by ngMessages. Flags are:
+	   *   - mindate: whether the selected date is before the minimum date.
+	   *   - maxdate: whether the selected flag is after the maximum date.
 	   */
+	  DatePickerCtrl.prototype.setErrorFlags = function() {
+	    if (this.dateUtil.isValidDate(this.date)) {
+	      if (this.dateUtil.isValidDate(this.minDate)) {
+	        this.ngModelCtrl.$error['mindate'] = this.date < this.minDate;
+	      }
+
+	      if (this.dateUtil.isValidDate(this.maxDate)) {
+	        this.ngModelCtrl.$error['maxdate'] = this.date > this.maxDate;
+	      }
+	    }
+	  };
+
+	  /** Resizes the input element based on the size of its content. */
 	  DatePickerCtrl.prototype.resizeInputElement = function() {
 	    this.inputElement.size = this.inputElement.value.length + EXTRA_INPUT_SIZE;
 	  };
@@ -41560,8 +42080,11 @@
 	    var inputString = this.inputElement.value;
 	    var parsedDate = this.dateLocale.parseDate(inputString);
 	    this.dateUtil.setDateTimeToMidnight(parsedDate);
-
-	    if (this.dateUtil.isValidDate(parsedDate) &&
+	    if (inputString === '') {
+	      this.ngModelCtrl.$setViewValue(null);
+	      this.date = null;
+	      this.inputContainer.classList.remove(INVALID_CLASS);
+	    } else if (this.dateUtil.isValidDate(parsedDate) &&
 	        this.dateLocale.isDateComplete(inputString) &&
 	        this.dateUtil.isDateWithinRange(parsedDate, this.minDate, this.maxDate)) {
 	      this.ngModelCtrl.$setViewValue(parsedDate);
@@ -41576,17 +42099,53 @@
 	  /** Position and attach the floating calendar to the document. */
 	  DatePickerCtrl.prototype.attachCalendarPane = function() {
 	    var calendarPane = this.calendarPane;
+	    calendarPane.style.transform = '';
 	    this.$element.addClass('md-datepicker-open');
 
 	    var elementRect = this.inputContainer.getBoundingClientRect();
 	    var bodyRect = document.body.getBoundingClientRect();
 
-	    calendarPane.style.left = (elementRect.left - bodyRect.left) + 'px';
-	    calendarPane.style.top = (elementRect.top - bodyRect.top) + 'px';
-	    document.body.appendChild(this.calendarPane);
+	    // Check to see if the calendar pane would go off the screen. If so, adjust position
+	    // accordingly to keep it within the viewport.
+	    var paneTop = elementRect.top - bodyRect.top;
+	    var paneLeft = elementRect.left - bodyRect.left;
+
+	    var viewportTop = document.body.scrollTop;
+	    var viewportBottom = viewportTop + this.$window.innerHeight;
+
+	    var viewportLeft = document.body.scrollLeft;
+	    var viewportRight = document.body.scrollLeft + this.$window.innerWidth;
+
+	    // If the right edge of the pane would be off the screen and shifting it left by the
+	    // difference would not go past the left edge of the screen. If the calendar pane is too
+	    // big to fit on the screen at all, move it to the left of the screen and scale the entire
+	    // element down to fit.
+	    if (paneLeft + CALENDAR_PANE_WIDTH > viewportRight) {
+	      if (viewportRight - CALENDAR_PANE_WIDTH > 0) {
+	        paneLeft = viewportRight - CALENDAR_PANE_WIDTH;
+	      } else {
+	        paneLeft = viewportLeft;
+	        var scale = this.$window.innerWidth / CALENDAR_PANE_WIDTH;
+	        calendarPane.style.transform = 'scale(' + scale + ')';
+	      }
+
+	      calendarPane.classList.add('md-datepicker-pos-adjusted');
+	    }
+
+	    // If the bottom edge of the pane would be off the screen and shifting it up by the
+	    // difference would not go past the top edge of the screen.
+	    if (paneTop + CALENDAR_PANE_HEIGHT > viewportBottom &&
+	        viewportBottom - CALENDAR_PANE_HEIGHT > viewportTop) {
+	      paneTop = viewportBottom - CALENDAR_PANE_HEIGHT;
+	      calendarPane.classList.add('md-datepicker-pos-adjusted');
+	    }
+
+	    calendarPane.style.left = paneLeft + 'px';
+	    calendarPane.style.top = paneTop + 'px';
+	    document.body.appendChild(calendarPane);
 
 	    // The top of the calendar pane is a transparent box that shows the text input underneath.
-	    // Since the pane is flowing, though, the page underneath the pane *adjacent* to the input is
+	    // Since the pane is floating, though, the page underneath the pane *adjacent* to the input is
 	    // also shown unless we cover it up. The inputMask does this by filling up the remaining space
 	    // based on the width of the input.
 	    this.inputMask.style.left = elementRect.width + 'px';
@@ -41601,6 +42160,7 @@
 	  DatePickerCtrl.prototype.detachCalendarPane = function() {
 	    this.$element.removeClass('md-datepicker-open');
 	    this.calendarPane.classList.remove('md-pane-open');
+	    this.calendarPane.classList.remove('md-datepicker-pos-adjusted');
 
 	    if (this.calendarPane.parentNode) {
 	      // Use native DOM removal because we do not want any of the angular state of this element
@@ -41633,18 +42193,23 @@
 	      this.$mdUtil.nextTick(function() {
 	        document.body.addEventListener('click', self.bodyClickHandler);
 	      }, false);
+
+	      window.addEventListener('resize', this.windowResizeHandler);
 	    }
 	  };
 
 	  /** Close the floating calendar pane. */
 	  DatePickerCtrl.prototype.closeCalendarPane = function() {
-	    this.isCalendarOpen = false;
-	    this.detachCalendarPane();
-	    this.calendarPaneOpenedFrom.focus();
-	    this.calendarPaneOpenedFrom = null;
-	    this.$mdUtil.enableScrolling();
+	    if (this.isCalendarOpen) {
+	      this.isCalendarOpen = false;
+	      this.detachCalendarPane();
+	      this.calendarPaneOpenedFrom.focus();
+	      this.calendarPaneOpenedFrom = null;
+	      this.$mdUtil.enableScrolling();
 
-	    document.body.removeEventListener('click', this.bodyClickHandler);
+	      document.body.removeEventListener('click', this.bodyClickHandler);
+	      window.removeEventListener('resize', this.windowResizeHandler);
+	    }
 	  };
 
 	  /** Gets the controller instance for the calendar in the floating pane. */
@@ -41888,7 +42453,9 @@
 	     * @param {Date} date
 	     */
 	    function setDateTimeToMidnight(date) {
-	      date.setHours(0, 0, 0, 0);
+	      if (isValidDate(date)) {
+	        date.setHours(0, 0, 0, 0);
+	      }
 	    }
 
 	    /**
@@ -41940,7 +42507,7 @@
 	  .directive('mdDialog', MdDialogDirective)
 	  .provider('$mdDialog', MdDialogProvider);
 
-	function MdDialogDirective($$rAF, $mdTheming) {
+	function MdDialogDirective($$rAF, $mdTheming, $mdDialog) {
 	  return {
 	    restrict: 'E',
 	    link: function(scope, element, attr) {
@@ -41955,14 +42522,24 @@
 	          //-- delayed image loading may impact scroll height, check after images are loaded
 	          angular.element(images).on('load', addOverflowClass);
 	        }
+
+	        scope.$on('$destroy', function() {
+	          $mdDialog.destroy();
+	        });
+
+	        /**
+	         *
+	         */
 	        function addOverflowClass() {
 	          element.toggleClass('md-content-overflow', content.scrollHeight > content.clientHeight);
 	        }
+
+
 	      });
 	    }
 	  };
 	}
-	MdDialogDirective.$inject = ["$$rAF", "$mdTheming"];
+	MdDialogDirective.$inject = ["$$rAF", "$mdTheming", "$mdDialog"];
 
 	/**
 	 * @ngdoc service
@@ -42325,11 +42902,11 @@
 	      options: dialogDefaultOptions
 	    })
 	    .addPreset('alert', {
-	      methods: ['title', 'content', 'ariaLabel', 'ok', 'theme'],
+	      methods: ['title', 'content', 'ariaLabel', 'ok', 'theme', 'css'],
 	      options: advancedDialogOptions
 	    })
 	    .addPreset('confirm', {
-	      methods: ['title', 'content', 'ariaLabel', 'ok', 'cancel', 'theme'],
+	      methods: ['title', 'content', 'ariaLabel', 'ok', 'cancel', 'theme', 'css'],
 	      options: advancedDialogOptions
 	    });
 
@@ -42337,10 +42914,10 @@
 	  function advancedDialogOptions($mdDialog, $mdTheming) {
 	    return {
 	      template: [
-	        '<md-dialog md-theme="{{ dialog.theme }}" aria-label="{{ dialog.ariaLabel }}">',
+	        '<md-dialog md-theme="{{ dialog.theme }}" aria-label="{{ dialog.ariaLabel }}" class="{{ dialog.css }}">',
 	        ' <md-dialog-content role="document" tabIndex="-1">',
 	        '   <h2 class="md-title">{{ dialog.title }}</h2>',
-	        '   <div class="md-dialog-content-body" md-template="::dialog.content"></div>',
+	        '   <div class="md-dialog-content-body" md-template="::dialog.mdContent"></div>',
 	        ' </md-dialog-content>',
 	        ' <div class="md-actions">',
 	        '   <md-button ng-if="dialog.$type == \'confirm\'"' +
@@ -42396,7 +42973,6 @@
 	     * Show method for dialogs
 	     */
 	    function onShow(scope, element, options, controller) {
-	      element = $mdUtil.extractElementByName(element, 'md-dialog');
 	      angular.element($document[0].body).addClass('md-dialog-is-showing');
 
 	      wrapSimpleContent();
@@ -42444,7 +43020,7 @@
 	      function wrapSimpleContent() {
 	        if ( controller ) {
 	          var HTML_END_TAG = /<\/[\w-]*>/gm;
-	          var content = controller.content || "";
+	          var content = controller.content || options.content || "";
 
 	          var hasHTML = HTML_END_TAG.test(content);
 	          if (!hasHTML) {
@@ -42452,7 +43028,7 @@
 	          }
 
 	          // Publish updated dialog content body... to be compiled by mdTemplate directive
-	          controller.content = content;
+	          controller.mdContent = content;
 	        }
 	      }
 
@@ -42464,16 +43040,30 @@
 	    function onRemove(scope, element, options) {
 	      options.deactivateListeners();
 	      options.unlockScreenReader();
+	      options.hideBackdrop(options.$destroy);
 
-	      options.hideBackdrop();
+	      // For navigation $destroy events, do a quick, non-animated removal,
+	      // but for normal closes (from clicks, etc) animate the removal
 
-	      return dialogPopOut(element, options)
-	        .finally(function() {
-	          angular.element($document[0].body).removeClass('md-dialog-is-showing');
-	          element.remove();
+	      return !!options.$destroy ? detachAndClean() : animateRemoval().then( detachAndClean );
 
-	          options.origin.focus();
-	        });
+	      /**
+	       * For normal closes, animate the removal.
+	       * For forced closes (like $destroy events), skip the animations
+	       */
+	      function animateRemoval() {
+	        return dialogPopOut(element, options);
+	      }
+
+	      /**
+	       * Detach the element
+	       */
+	      function detachAndClean() {
+	        angular.element($document[0].body).removeClass('md-dialog-is-showing');
+	        element.remove();
+
+	        if (!options.$destroy) options.origin.focus();
+	      }
 	    }
 
 	    /**
@@ -42482,8 +43072,11 @@
 	     * unless overridden in the options.parent
 	     */
 	    function captureSourceAndParent(element, options) {
-	      var origin = {element: null, bounds: null, focus: angular.noop};
-	      options.origin = angular.extend({}, origin, options.origin || {});
+	      options.origin = angular.extend({
+	        element: null,
+	        bounds: null,
+	        focus: angular.noop
+	      }, options.origin || {});
 
 	      var source = angular.element((options.targetEvent || {}).target);
 	      if (source && source.length) {
@@ -42497,7 +43090,14 @@
 	        }
 	      }
 
-	      // In case the user provides a raw dom element, always wrap it in jqLite
+	      // If the parent specifier is a simple string selector, then query for
+	      // the DOM element.
+	      if ( angular.isString(options.parent) ) {
+	        var simpleSelector = options.parent,
+	            container = $document[0].querySelectorAll(simpleSelector);
+	        options.parent = container.length ? container[0] : null;
+	      }
+	      // If we have a reference to a raw dom element, always wrap it in jqLite
 	      options.parent = angular.element(options.parent || $rootElement);
 
 	    }
@@ -42506,12 +43106,16 @@
 	     * Listen for escape keys and outside clicks to auto close
 	     */
 	    function activateListeners(element, options) {
+	      var window = angular.element($window);
+	      var onWindowResize = $mdUtil.debounce(function(){
+	        stretchDialogContainerToViewport(element, options);
+	      }, 60);
+
 	      var removeListeners = [];
 	      var smartClose = function() {
 	        // Only 'confirm' dialogs have a cancel button... escape/clickOutside will
 	        // cancel or fallback to hide.
 	        var closeFn = ( options.$type == 'alert' ) ? $mdDialog.hide : $mdDialog.cancel;
-
 	        $mdUtil.nextTick(closeFn, true);
 	      };
 
@@ -42529,11 +43133,15 @@
 	        // Add keyup listeners
 	        element.on('keyup', keyHandlerFn);
 	        target.on('keyup', keyHandlerFn);
+	        window.on('resize', onWindowResize);
 
 	        // Queue remove listeners function
 	        removeListeners.push(function() {
+
 	          element.off('keyup', keyHandlerFn);
 	          target.off('keyup', keyHandlerFn);
+	          window.off('resize', onWindowResize);
+
 	        });
 	      }
 	      if (options.clickOutsideToClose) {
@@ -42585,10 +43193,12 @@
 	      /**
 	       * Hide modal backdrop element...
 	       */
-	      options.hideBackdrop = function hideBackdrop() {
+	      options.hideBackdrop = function hideBackdrop($destroy) {
 	        if (options.backdrop) {
-	          $animate.leave(options.backdrop);
+	          if ( !!$destroy ) options.backdrop.remove();
+	          else              $animate.leave(options.backdrop);
 	        }
+
 	        if (options.disableParentScroll) {
 	          options.restoreScroll();
 	          delete options.restoreScroll;
@@ -42679,10 +43289,10 @@
 
 	      var isFixed = $window.getComputedStyle($document[0].body).position == 'fixed';
 	      var backdrop = options.backdrop ? $window.getComputedStyle(options.backdrop[0]) : null;
-	      var height = backdrop ? Math.ceil(Math.abs(parseInt(backdrop.height, 10))) : 0;
+	      var height = backdrop ? Math.min($document[0].body.clientHeight, Math.ceil(Math.abs(parseInt(backdrop.height, 10)))) : 0;
 
 	      container.css({
-	        top: (isFixed ? $mdUtil.scrollTop(options.parent) / 2 : 0) + 'px',
+	        top: (isFixed ? $mdUtil.scrollTop(options.parent) : 0) + 'px',
 	        height: height ? height + 'px' : '100%'
 	      });
 
@@ -42708,6 +43318,9 @@
 	      return animator
 	        .translate3d(dialogEl, from, to, translateOptions)
 	        .then(function(animateReversal) {
+
+
+
 	          // Build a reversal translate function synched to this translation...
 	          options.reverseAnimate = function() {
 
@@ -42908,6 +43521,9 @@
 	        angular.forEach(eventTypes, function(eventType) {
 	          $element.off(eventType, parseEvents);
 	        });
+	        // remove any attached keyboard handlers in case element is removed while
+	        // speed dial is open
+	        disableKeyboard();
 	      });
 	    }
 
@@ -43174,6 +43790,7 @@
 	  }
 	  FabController.$inject = ["$scope", "$element", "$animate", "$mdUtil", "$mdConstant"];
 	})();
+
 	})();
 	(function(){
 	"use strict";
@@ -43796,7 +44413,7 @@
 	                return {
 	                  element: angular.element(tiles[i]),
 	                  style: getTileStyle(ps.position, ps.spans,
-	                      props.colCount, props.rowCount,
+	                      props.colCount, rowCount,
 	                      props.gutter, props.rowMode, props.rowHeight)
 	                }
 	              })
@@ -44419,426 +45036,6 @@
 
 	/**
 	 * @ngdoc module
-	 * @name material.components.input
-	 */
-
-	angular.module('material.components.input', [
-	  'material.core'
-	])
-	  .directive('mdInputContainer', mdInputContainerDirective)
-	  .directive('label', labelDirective)
-	  .directive('input', inputTextareaDirective)
-	  .directive('textarea', inputTextareaDirective)
-	  .directive('mdMaxlength', mdMaxlengthDirective)
-	  .directive('placeholder', placeholderDirective);
-
-	/**
-	 * @ngdoc directive
-	 * @name mdInputContainer
-	 * @module material.components.input
-	 *
-	 * @restrict E
-	 *
-	 * @description
-	 * `<md-input-container>` is the parent of any input or textarea element.
-	 *
-	 * Input and textarea elements will not behave properly unless the md-input-container
-	 * parent is provided.
-	 *
-	 * @param md-is-error {expression=} When the given expression evaluates to true, the input container will go into error state. Defaults to erroring if the input has been touched and is invalid.
-	 * @param md-no-float {boolean=} When present, placeholders will not be converted to floating labels
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 *
-	 * <md-input-container>
-	 *   <label>Username</label>
-	 *   <input type="text" ng-model="user.name">
-	 * </md-input-container>
-	 *
-	 * <md-input-container>
-	 *   <label>Description</label>
-	 *   <textarea ng-model="user.description"></textarea>
-	 * </md-input-container>
-	 *
-	 * </hljs>
-	 */
-	function mdInputContainerDirective($mdTheming, $parse) {
-	  ContainerCtrl.$inject = ["$scope", "$element", "$attrs"];
-	  return {
-	    restrict: 'E',
-	    link: postLink,
-	    controller: ContainerCtrl
-	  };
-
-	  function postLink(scope, element, attr) {
-	    $mdTheming(element);
-	  }
-	  function ContainerCtrl($scope, $element, $attrs) {
-	    var self = this;
-
-	    self.isErrorGetter = $attrs.mdIsError && $parse($attrs.mdIsError);
-
-	    self.delegateClick = function() {
-	      self.input.focus();
-	    };
-	    self.element = $element;
-	    self.setFocused = function(isFocused) {
-	      $element.toggleClass('md-input-focused', !!isFocused);
-	    };
-	    self.setHasValue = function(hasValue) {
-	      $element.toggleClass('md-input-has-value', !!hasValue);
-	    };
-	    self.setInvalid = function(isInvalid) {
-	      $element.toggleClass('md-input-invalid', !!isInvalid);
-	    };
-	    $scope.$watch(function() {
-	      return self.label && self.input;
-	    }, function(hasLabelAndInput) {
-	      if (hasLabelAndInput && !self.label.attr('for')) {
-	        self.label.attr('for', self.input.attr('id'));
-	      }
-	    });
-	  }
-	}
-	mdInputContainerDirective.$inject = ["$mdTheming", "$parse"];
-
-	function labelDirective() {
-	  return {
-	    restrict: 'E',
-	    require: '^?mdInputContainer',
-	    link: function(scope, element, attr, containerCtrl) {
-	      if (!containerCtrl || attr.mdNoFloat) return;
-
-	      containerCtrl.label = element;
-	      scope.$on('$destroy', function() {
-	        containerCtrl.label = null;
-	      });
-	    }
-	  };
-	}
-
-	/**
-	 * @ngdoc directive
-	 * @name mdInput
-	 * @restrict E
-	 * @module material.components.input
-	 *
-	 * @description
-	 * Use the `<input>` or the  `<textarea>` as a child of an `<md-input-container>`.
-	 *
-	 * @param {number=} md-maxlength The maximum number of characters allowed in this input. If this is specified, a character counter will be shown underneath the input.<br/><br/>
-	 * The purpose of **`md-maxlength`** is exactly to show the max length counter text. If you don't want the counter text and only need "plain" validation, you can use the "simple" `ng-maxlength` or maxlength attributes.
-	 * @param {string=} aria-label Aria-label is required when no label is present.  A warning message will be logged in the console if not present.
-	 * @param {string=} placeholder An alternative approach to using aria-label when the label is not present.  The placeholder text is copied to the aria-label attribute.
-	 * @param md-no-autogrow {boolean=} When present, textareas will not grow automatically.
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 * <md-input-container>
-	 *   <label>Color</label>
-	 *   <input type="text" ng-model="color" required md-maxlength="10">
-	 * </md-input-container>
-	 * </hljs>
-	 * <h3>With Errors</h3>
-	 *
-	 * <hljs lang="html">
-	 * <form name="userForm">
-	 *   <md-input-container>
-	 *     <label>Last Name</label>
-	 *     <input name="lastName" ng-model="lastName" required md-maxlength="10" minlength="4">
-	 *     <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
-	 *       <div ng-message="required">This is required!</div>
-	 *       <div ng-message="md-maxlength">That's too long!</div>
-	 *       <div ng-message="minlength">That's too short!</div>
-	 *     </div>
-	 *   </md-input-container>
-	 *   <md-input-container>
-	 *     <label>Biography</label>
-	 *     <textarea name="bio" ng-model="biography" required md-maxlength="150"></textarea>
-	 *     <div ng-messages="userForm.bio.$error" ng-show="userForm.bio.$dirty">
-	 *       <div ng-message="required">This is required!</div>
-	 *       <div ng-message="md-maxlength">That's too long!</div>
-	 *     </div>
-	 *   </md-input-container>
-	 *   <md-input-container>
-	 *     <input aria-label='title' ng-model='title'>
-	 *   </md-input-container>
-	 *   <md-input-container>
-	 *     <input placeholder='title' ng-model='title'>
-	 *   </md-input-container>
-	 * </form>
-	 * </hljs>
-	 *
-	 * Requires [ngMessages](https://docs.angularjs.org/api/ngMessages).
-	 * Behaves like the [AngularJS input directive](https://docs.angularjs.org/api/ng/directive/input).
-	 *
-	 */
-
-	function inputTextareaDirective($mdUtil, $window, $mdAria) {
-	  return {
-	    restrict: 'E',
-	    require: ['^?mdInputContainer', '?ngModel'],
-	    link: postLink
-	  };
-
-	  function postLink(scope, element, attr, ctrls) {
-
-	    var containerCtrl = ctrls[0];
-	    var hasNgModel = !!ctrls[1];
-	    var ngModelCtrl = ctrls[1] || $mdUtil.fakeNgModel();
-	    var isReadonly = angular.isDefined(attr.readonly);
-
-	    if ( !containerCtrl ) return;
-	    if (containerCtrl.input) {
-	      throw new Error("<md-input-container> can only have *one* <input>, <textarea> or <md-select> child element!");
-	    }
-	    containerCtrl.input = element;
-
-	    if(!containerCtrl.label) {
-	      $mdAria.expect(element, 'aria-label', element.attr('placeholder'));
-	    }
-
-	    element.addClass('md-input');
-	    if (!element.attr('id')) {
-	      element.attr('id', 'input_' + $mdUtil.nextUid());
-	    }
-
-	    if (element[0].tagName.toLowerCase() === 'textarea') {
-	      setupTextarea();
-	    }
-
-	    // If the input doesn't have an ngModel, it may have a static value. For that case,
-	    // we have to do one initial check to determine if the container should be in the
-	    // "has a value" state.
-	    if (!hasNgModel) {
-	      inputCheckValue();
-	    }
-
-	    var isErrorGetter = containerCtrl.isErrorGetter || function() {
-	      return ngModelCtrl.$invalid && ngModelCtrl.$touched;
-	    };
-	    scope.$watch(isErrorGetter, containerCtrl.setInvalid);
-
-	    ngModelCtrl.$parsers.push(ngModelPipelineCheckValue);
-	    ngModelCtrl.$formatters.push(ngModelPipelineCheckValue);
-
-	    element.on('input', inputCheckValue);
-
-	    if (!isReadonly) {
-	      element
-	        .on('focus', function(ev) {
-	          containerCtrl.setFocused(true);
-	        })
-	        .on('blur', function(ev) {
-	          containerCtrl.setFocused(false);
-	          inputCheckValue();
-	        });
-
-	    }
-
-	    //ngModelCtrl.$setTouched();
-	    //if( ngModelCtrl.$invalid ) containerCtrl.setInvalid();
-
-	    scope.$on('$destroy', function() {
-	      containerCtrl.setFocused(false);
-	      containerCtrl.setHasValue(false);
-	      containerCtrl.input = null;
-	    });
-
-	    /**
-	     *
-	     */
-	    function ngModelPipelineCheckValue(arg) {
-	      containerCtrl.setHasValue(!ngModelCtrl.$isEmpty(arg));
-	      return arg;
-	    }
-	    function inputCheckValue() {
-	      // An input's value counts if its length > 0,
-	      // or if the input's validity state says it has bad input (eg string in a number input)
-	      containerCtrl.setHasValue(element.val().length > 0 || (element[0].validity||{}).badInput);
-	    }
-
-	    function setupTextarea() {
-	      if(angular.isDefined(element.attr('md-no-autogrow'))) {
-	        return;
-	      }
-
-	      var node = element[0];
-	      var container = containerCtrl.element[0];
-
-	      var min_rows = NaN;
-	      var lineHeight = null;
-	      // can't check if height was or not explicity set,
-	      // so rows attribute will take precedence if present
-	      if(node.hasAttribute('rows')) {
-	        min_rows = parseInt(node.getAttribute('rows'));
-	      }
-
-	      var onChangeTextarea = $mdUtil.debounce(growTextarea, 1);
-
-	      function pipelineListener(value) {
-	        onChangeTextarea();
-	        return value;
-	      }
-
-	      if (ngModelCtrl) {
-	        ngModelCtrl.$formatters.push(pipelineListener);
-	        ngModelCtrl.$viewChangeListeners.push(pipelineListener);
-	      } else {
-	        onChangeTextarea();
-	      }
-	      element.on('keydown input', onChangeTextarea);
-
-	      if(isNaN(min_rows)) {
-	        element.attr('rows', '1');
-
-	        element.on('scroll', onScroll);
-	      }
-
-	      angular.element($window).on('resize', onChangeTextarea);
-
-	      scope.$on('$destroy', function() {
-	        angular.element($window).off('resize', onChangeTextarea);
-	      });
-
-	      function growTextarea() {
-	        // sets the md-input-container height to avoid jumping around
-	        container.style.height = container.offsetHeight + 'px';
-
-	        // temporarily disables element's flex so its height 'runs free'
-	        element.addClass('md-no-flex');
-
-	        if(isNaN(min_rows)) {
-	          node.style.height = "auto";
-	          node.scrollTop = 0;
-	          var height = getHeight();
-	          if (height) node.style.height = height + 'px';
-	        } else {
-	          node.setAttribute("rows", 1);
-
-	          if(!lineHeight) {
-	            node.style.minHeight = '0';
-
-	            lineHeight = element.prop('clientHeight');
-
-	            node.style.minHeight = null;
-	          }
-
-	          var rows = Math.max(min_rows, Math.round(node.scrollHeight / lineHeight));
-	          node.setAttribute("rows", rows);
-	        }
-
-	        // reset everything back to normal
-	        element.removeClass('md-no-flex');
-	        container.style.height = 'auto';
-	      }
-
-	      function getHeight () {
-	        var line = node.scrollHeight - node.offsetHeight;
-	        return node.offsetHeight + (line > 0 ? line : 0);
-	      }
-
-	      function onScroll(e) {
-	        node.scrollTop = 0;
-	        // for smooth new line adding
-	        var line = node.scrollHeight - node.offsetHeight;
-	        var height = node.offsetHeight + line;
-	        node.style.height = height + 'px';
-	      }
-	    }
-	  }
-	}
-	inputTextareaDirective.$inject = ["$mdUtil", "$window", "$mdAria"];
-
-	function mdMaxlengthDirective($animate) {
-	  return {
-	    restrict: 'A',
-	    require: ['ngModel', '^mdInputContainer'],
-	    link: postLink
-	  };
-
-	  function postLink(scope, element, attr, ctrls) {
-	    var maxlength;
-	    var ngModelCtrl = ctrls[0];
-	    var containerCtrl = ctrls[1];
-	    var charCountEl = angular.element('<div class="md-char-counter">');
-
-	    // Stop model from trimming. This makes it so whitespace
-	    // over the maxlength still counts as invalid.
-	    attr.$set('ngTrim', 'false');
-	    containerCtrl.element.append(charCountEl);
-
-	    ngModelCtrl.$formatters.push(renderCharCount);
-	    ngModelCtrl.$viewChangeListeners.push(renderCharCount);
-	    element.on('input keydown', function() {
-	      renderCharCount(); //make sure it's called with no args
-	    });
-
-	    scope.$watch(attr.mdMaxlength, function(value) {
-	      maxlength = value;
-	      if (angular.isNumber(value) && value > 0) {
-	        if (!charCountEl.parent().length) {
-	          $animate.enter(charCountEl, containerCtrl.element,
-	                         angular.element(containerCtrl.element[0].lastElementChild));
-	        }
-	        renderCharCount();
-	      } else {
-	        $animate.leave(charCountEl);
-	      }
-	    });
-
-	    ngModelCtrl.$validators['md-maxlength'] = function(modelValue, viewValue) {
-	      if (!angular.isNumber(maxlength) || maxlength < 0) {
-	        return true;
-	      }
-	      return ( modelValue || element.val() || viewValue || '' ).length <= maxlength;
-	    };
-
-	    function renderCharCount(value) {
-	      charCountEl.text( ( element.val() || value || '' ).length + '/' + maxlength );
-	      return value;
-	    }
-	  }
-	}
-	mdMaxlengthDirective.$inject = ["$animate"];
-
-	function placeholderDirective($log) {
-	  return {
-	    restrict: 'A',
-	    require: '^^?mdInputContainer',
-	    priority: 200,
-	    link: postLink
-	  };
-
-	  function postLink(scope, element, attr, inputContainer) {
-	    if (!inputContainer) return;
-	    if (angular.isDefined(inputContainer.element.attr('md-no-float'))) return;
-
-	    var placeholderText = attr.placeholder;
-	    element.removeAttr('placeholder');
-
-	    if ( inputContainer.element.find('label').length == 0 ) {
-	      if (inputContainer.input && inputContainer.input[0].nodeName != 'MD-SELECT') {
-	        var placeholder = '<label ng-click="delegateClick()">' + placeholderText + '</label>';
-
-	        inputContainer.element.addClass('md-icon-float');
-	        inputContainer.element.prepend(placeholder);
-	      }
-	    } else if (element[0].nodeName != 'MD-SELECT') {
-	      $log.warn("The placeholder='" + placeholderText + "' will be ignored since this md-input-container has a child label element.");
-	    }
-
-	  }
-	}
-	placeholderDirective.$inject = ["$log"];
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
 	 * @name material.components.list
 	 * @description
 	 * List module
@@ -44904,7 +45101,7 @@
 	 * </hljs>
 	 *
 	 */
-	function mdListItemDirective($mdAria, $mdConstant, $timeout) {
+	function mdListItemDirective($mdAria, $mdConstant, $mdUtil, $timeout) {
 	  var proxiedTypes = ['md-checkbox', 'md-switch'];
 	  return {
 	    restrict: 'E',
@@ -45067,7 +45264,8 @@
 
 	        if (proxies.length && firstChild) {
 	          $element.children().eq(0).on('click', function(e) {
-	            if (firstChild.contains(e.target)) {
+	            var parentButton = $mdUtil.getClosest(e.target, 'BUTTON');
+	            if (!parentButton && firstChild.contains(e.target)) {
 	              angular.forEach(proxies, function(proxy) {
 	                if (e.target !== proxy && !proxy.contains(e.target)) {
 	                  angular.element(proxy).triggerHandler('click');
@@ -45080,7 +45278,7 @@
 	    }
 	  };
 	}
-	mdListItemDirective.$inject = ["$mdAria", "$mdConstant", "$timeout"];
+	mdListItemDirective.$inject = ["$mdAria", "$mdConstant", "$mdUtil", "$timeout"];
 
 	/*
 	 * @private
@@ -45100,6 +45298,490 @@
 	}
 	MdListController.$inject = ["$scope", "$element", "$mdListInkRipple"];
 
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
+	 * @name material.components.input
+	 */
+
+	angular.module('material.components.input', [
+	  'material.core'
+	])
+	  .directive('mdInputContainer', mdInputContainerDirective)
+	  .directive('label', labelDirective)
+	  .directive('input', inputTextareaDirective)
+	  .directive('textarea', inputTextareaDirective)
+	  .directive('mdMaxlength', mdMaxlengthDirective)
+	  .directive('placeholder', placeholderDirective)
+	  .directive('ngMessages', ngMessagesDirective);
+
+	/**
+	 * @ngdoc directive
+	 * @name mdInputContainer
+	 * @module material.components.input
+	 *
+	 * @restrict E
+	 *
+	 * @description
+	 * `<md-input-container>` is the parent of any input or textarea element.
+	 *
+	 * Input and textarea elements will not behave properly unless the md-input-container
+	 * parent is provided.
+	 *
+	 * @param md-is-error {expression=} When the given expression evaluates to true, the input container
+	 *   will go into error state. Defaults to erroring if the input has been touched and is invalid.
+	 * @param md-no-float {boolean=} When present, placeholders will not be converted to floating
+	 *   labels.
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 *
+	 * <md-input-container>
+	 *   <label>Username</label>
+	 *   <input type="text" ng-model="user.name">
+	 * </md-input-container>
+	 *
+	 * <md-input-container>
+	 *   <label>Description</label>
+	 *   <textarea ng-model="user.description"></textarea>
+	 * </md-input-container>
+	 *
+	 * </hljs>
+	 */
+	function mdInputContainerDirective($mdTheming, $parse) {
+	  ContainerCtrl.$inject = ["$scope", "$element", "$attrs"];
+	  return {
+	    restrict: 'E',
+	    link: postLink,
+	    controller: ContainerCtrl
+	  };
+
+	  function postLink(scope, element, attr) {
+	    $mdTheming(element);
+	  }
+
+	  function ContainerCtrl($scope, $element, $attrs) {
+	    var self = this;
+
+	    self.isErrorGetter = $attrs.mdIsError && $parse($attrs.mdIsError);
+
+	    self.delegateClick = function() {
+	      self.input.focus();
+	    };
+	    self.element = $element;
+	    self.setFocused = function(isFocused) {
+	      $element.toggleClass('md-input-focused', !!isFocused);
+	    };
+	    self.setHasValue = function(hasValue) {
+	      $element.toggleClass('md-input-has-value', !!hasValue);
+	    };
+	    self.setHasMessages = function(hasMessages) {
+	      $element.toggleClass('md-input-has-messages', !!hasMessages);
+	    };
+	    self.setHasPlaceholder = function(hasPlaceholder) {
+	      $element.toggleClass('md-input-has-placeholder', !!hasPlaceholder);
+	    };
+	    self.setInvalid = function(isInvalid) {
+	      $element.toggleClass('md-input-invalid', !!isInvalid);
+	    };
+	    $scope.$watch(function() {
+	      return self.label && self.input;
+	    }, function(hasLabelAndInput) {
+	      if (hasLabelAndInput && !self.label.attr('for')) {
+	        self.label.attr('for', self.input.attr('id'));
+	      }
+	    });
+	  }
+	}
+	mdInputContainerDirective.$inject = ["$mdTheming", "$parse"];
+
+	function labelDirective() {
+	  return {
+	    restrict: 'E',
+	    require: '^?mdInputContainer',
+	    link: function(scope, element, attr, containerCtrl) {
+	      if (!containerCtrl || attr.mdNoFloat) return;
+
+	      containerCtrl.label = element;
+	      scope.$on('$destroy', function() {
+	        containerCtrl.label = null;
+	      });
+	    }
+	  };
+	}
+
+	/**
+	 * @ngdoc directive
+	 * @name mdInput
+	 * @restrict E
+	 * @module material.components.input
+	 *
+	 * @description
+	 * Use the `<input>` or the  `<textarea>` as a child of an `<md-input-container>`.
+	 *
+	 * @param {number=} md-maxlength The maximum number of characters allowed in this input. If this is
+	 *   specified, a character counter will be shown underneath the input.<br/><br/>
+	 *   The purpose of **`md-maxlength`** is exactly to show the max length counter text. If you don't
+	 *   want the counter text and only need "plain" validation, you can use the "simple" `ng-maxlength`
+	 *   or maxlength attributes.
+	 * @param {string=} aria-label Aria-label is required when no label is present.  A warning message
+	 *   will be logged in the console if not present.
+	 * @param {string=} placeholder An alternative approach to using aria-label when the label is not
+	 *   PRESENT. The placeholder text is copied to the aria-label attribute.
+	 * @param md-no-autogrow {boolean=} When present, textareas will not grow automatically.
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 * <md-input-container>
+	 *   <label>Color</label>
+	 *   <input type="text" ng-model="color" required md-maxlength="10">
+	 * </md-input-container>
+	 * </hljs>
+	 * <h3>With Errors</h3>
+	 *
+	 * <hljs lang="html">
+	 * <form name="userForm">
+	 *   <md-input-container>
+	 *     <label>Last Name</label>
+	 *     <input name="lastName" ng-model="lastName" required md-maxlength="10" minlength="4">
+	 *     <div ng-messages="userForm.lastName.$error" ng-show="userForm.lastName.$dirty">
+	 *       <div ng-message="required">This is required!</div>
+	 *       <div ng-message="md-maxlength">That's too long!</div>
+	 *       <div ng-message="minlength">That's too short!</div>
+	 *     </div>
+	 *   </md-input-container>
+	 *   <md-input-container>
+	 *     <label>Biography</label>
+	 *     <textarea name="bio" ng-model="biography" required md-maxlength="150"></textarea>
+	 *     <div ng-messages="userForm.bio.$error" ng-show="userForm.bio.$dirty">
+	 *       <div ng-message="required">This is required!</div>
+	 *       <div ng-message="md-maxlength">That's too long!</div>
+	 *     </div>
+	 *   </md-input-container>
+	 *   <md-input-container>
+	 *     <input aria-label='title' ng-model='title'>
+	 *   </md-input-container>
+	 *   <md-input-container>
+	 *     <input placeholder='title' ng-model='title'>
+	 *   </md-input-container>
+	 * </form>
+	 * </hljs>
+	 *
+	 * Requires [ngMessages](https://docs.angularjs.org/api/ngMessages).
+	 * Behaves like the [AngularJS input directive](https://docs.angularjs.org/api/ng/directive/input).
+	 *
+	 */
+
+	function inputTextareaDirective($mdUtil, $window, $mdAria) {
+	  return {
+	    restrict: 'E',
+	    require: ['^?mdInputContainer', '?ngModel'],
+	    link: postLink
+	  };
+
+	  function postLink(scope, element, attr, ctrls) {
+
+	    var containerCtrl = ctrls[0];
+	    var hasNgModel = !!ctrls[1];
+	    var ngModelCtrl = ctrls[1] || $mdUtil.fakeNgModel();
+	    var isReadonly = angular.isDefined(attr.readonly);
+
+	    if (!containerCtrl) return;
+	    if (containerCtrl.input) {
+	      throw new Error("<md-input-container> can only have *one* <input>, <textarea> or <md-select> child element!");
+	    }
+	    containerCtrl.input = element;
+
+	    if (!containerCtrl.label) {
+	      $mdAria.expect(element, 'aria-label', element.attr('placeholder'));
+	    }
+
+	    element.addClass('md-input');
+	    if (!element.attr('id')) {
+	      element.attr('id', 'input_' + $mdUtil.nextUid());
+	    }
+
+	    if (element[0].tagName.toLowerCase() === 'textarea') {
+	      setupTextarea();
+	    }
+
+	    // If the input doesn't have an ngModel, it may have a static value. For that case,
+	    // we have to do one initial check to determine if the container should be in the
+	    // "has a value" state.
+	    if (!hasNgModel) {
+	      inputCheckValue();
+	    }
+
+	    var isErrorGetter = containerCtrl.isErrorGetter || function() {
+	        return ngModelCtrl.$invalid && ngModelCtrl.$touched;
+	      };
+	    scope.$watch(isErrorGetter, containerCtrl.setInvalid);
+
+	    ngModelCtrl.$parsers.push(ngModelPipelineCheckValue);
+	    ngModelCtrl.$formatters.push(ngModelPipelineCheckValue);
+
+	    element.on('input', inputCheckValue);
+
+	    if (!isReadonly) {
+	      element
+	        .on('focus', function(ev) {
+	          containerCtrl.setFocused(true);
+	        })
+	        .on('blur', function(ev) {
+	          containerCtrl.setFocused(false);
+	          inputCheckValue();
+	        });
+
+	    }
+
+	    //ngModelCtrl.$setTouched();
+	    //if( ngModelCtrl.$invalid ) containerCtrl.setInvalid();
+
+	    scope.$on('$destroy', function() {
+	      containerCtrl.setFocused(false);
+	      containerCtrl.setHasValue(false);
+	      containerCtrl.input = null;
+	    });
+
+	    /**
+	     *
+	     */
+	    function ngModelPipelineCheckValue(arg) {
+	      containerCtrl.setHasValue(!ngModelCtrl.$isEmpty(arg));
+	      return arg;
+	    }
+
+	    function inputCheckValue() {
+	      // An input's value counts if its length > 0,
+	      // or if the input's validity state says it has bad input (eg string in a number input)
+	      containerCtrl.setHasValue(element.val().length > 0 || (element[0].validity || {}).badInput);
+	    }
+
+	    function setupTextarea() {
+	      if (angular.isDefined(element.attr('md-no-autogrow'))) {
+	        return;
+	      }
+
+	      var node = element[0];
+	      var container = containerCtrl.element[0];
+
+	      var min_rows = NaN;
+	      var lineHeight = null;
+	      // can't check if height was or not explicity set,
+	      // so rows attribute will take precedence if present
+	      if (node.hasAttribute('rows')) {
+	        min_rows = parseInt(node.getAttribute('rows'));
+	      }
+
+	      var onChangeTextarea = $mdUtil.debounce(growTextarea, 1);
+
+	      function pipelineListener(value) {
+	        onChangeTextarea();
+	        return value;
+	      }
+
+	      if (ngModelCtrl) {
+	        ngModelCtrl.$formatters.push(pipelineListener);
+	        ngModelCtrl.$viewChangeListeners.push(pipelineListener);
+	      } else {
+	        onChangeTextarea();
+	      }
+	      element.on('keydown input', onChangeTextarea);
+
+	      if (isNaN(min_rows)) {
+	        element.attr('rows', '1');
+
+	        element.on('scroll', onScroll);
+	      }
+
+	      angular.element($window).on('resize', onChangeTextarea);
+
+	      scope.$on('$destroy', function() {
+	        angular.element($window).off('resize', onChangeTextarea);
+	      });
+
+	      function growTextarea() {
+	        // sets the md-input-container height to avoid jumping around
+	        container.style.height = container.offsetHeight + 'px';
+
+	        // temporarily disables element's flex so its height 'runs free'
+	        element.addClass('md-no-flex');
+
+	        if (isNaN(min_rows)) {
+	          node.style.height = "auto";
+	          node.scrollTop = 0;
+	          var height = getHeight();
+	          if (height) node.style.height = height + 'px';
+	        } else {
+	          node.setAttribute("rows", 1);
+
+	          if (!lineHeight) {
+	            node.style.minHeight = '0';
+
+	            lineHeight = element.prop('clientHeight');
+
+	            node.style.minHeight = null;
+	          }
+
+	          var rows = Math.max(min_rows, Math.round(node.scrollHeight / lineHeight));
+	          node.setAttribute("rows", rows);
+	        }
+
+	        // reset everything back to normal
+	        element.removeClass('md-no-flex');
+	        container.style.height = 'auto';
+	      }
+
+	      function getHeight() {
+	        var line = node.scrollHeight - node.offsetHeight;
+	        return node.offsetHeight + (line > 0 ? line : 0);
+	      }
+
+	      function onScroll(e) {
+	        node.scrollTop = 0;
+	        // for smooth new line adding
+	        var line = node.scrollHeight - node.offsetHeight;
+	        var height = node.offsetHeight + line;
+	        node.style.height = height + 'px';
+	      }
+	    }
+	  }
+	}
+	inputTextareaDirective.$inject = ["$mdUtil", "$window", "$mdAria"];
+
+	function mdMaxlengthDirective($animate) {
+	  return {
+	    restrict: 'A',
+	    require: ['ngModel', '^mdInputContainer'],
+	    link: postLink
+	  };
+
+	  function postLink(scope, element, attr, ctrls) {
+	    var maxlength;
+	    var ngModelCtrl = ctrls[0];
+	    var containerCtrl = ctrls[1];
+	    var charCountEl = angular.element('<div class="md-char-counter">');
+	    var input = angular.element(containerCtrl.element[0].querySelector('[md-maxlength]'));
+
+	    // Stop model from trimming. This makes it so whitespace
+	    // over the maxlength still counts as invalid.
+	    attr.$set('ngTrim', 'false');
+
+	    var ngMessagesSelectors = [
+	      'ng-messages',
+	      'data-ng-messages',
+	      'x-ng-messages',
+	      '[ng-messages]',
+	      '[data-ng-messages]',
+	      '[x-ng-messages]'
+	    ];
+
+	    var ngMessages = containerCtrl.element[0].querySelector(ngMessagesSelectors.join(','));
+
+	    // If we have an ngMessages container, put the counter at the top; otherwise, put it after the
+	    // input so it will be positioned properly in the SCSS
+	    if (ngMessages) {
+	      angular.element(ngMessages).prepend(charCountEl);
+	    } else {
+	      input.after(charCountEl);
+	    }
+
+	    ngModelCtrl.$formatters.push(renderCharCount);
+	    ngModelCtrl.$viewChangeListeners.push(renderCharCount);
+	    element.on('input keydown', function() {
+	      renderCharCount(); //make sure it's called with no args
+	    });
+
+	    scope.$watch(attr.mdMaxlength, function(value) {
+	      maxlength = value;
+	      if (angular.isNumber(value) && value > 0) {
+	        if (!charCountEl.parent().length) {
+	          $animate.enter(charCountEl, containerCtrl.element, input);
+	        }
+	        renderCharCount();
+	      } else {
+	        $animate.leave(charCountEl);
+	      }
+	    });
+
+	    ngModelCtrl.$validators['md-maxlength'] = function(modelValue, viewValue) {
+	      if (!angular.isNumber(maxlength) || maxlength < 0) {
+	        return true;
+	      }
+	      return ( modelValue || element.val() || viewValue || '' ).length <= maxlength;
+	    };
+
+	    function renderCharCount(value) {
+	      charCountEl.text(( element.val() || value || '' ).length + '/' + maxlength);
+	      return value;
+	    }
+	  }
+	}
+	mdMaxlengthDirective.$inject = ["$animate"];
+
+	function placeholderDirective($log) {
+	  return {
+	    restrict: 'A',
+	    require: '^^?mdInputContainer',
+	    priority: 200,
+	    link: postLink
+	  };
+
+	  function postLink(scope, element, attr, inputContainer) {
+	    // If there is no input container, just return
+	    if (!inputContainer) return;
+
+	    // Add a placeholder class so we can target it in the CSS
+	    inputContainer.setHasPlaceholder(true);
+
+	    var label = inputContainer.element.find('label');
+	    var hasNoFloat = angular.isDefined(inputContainer.element.attr('md-no-float'));
+
+	    // If we have a label, or they specify the md-no-float attribute, just return
+	    if ((label && label.length) || hasNoFloat) return;
+
+	    // Otherwise, grab/remove the placeholder
+	    var placeholderText = attr.placeholder;
+	    element.removeAttr('placeholder');
+
+	    // And add the placeholder text as a separate label
+	    if (inputContainer.input && inputContainer.input[0].nodeName != 'MD-SELECT') {
+	      var placeholder = '<label ng-click="delegateClick()">' + placeholderText + '</label>';
+
+	      inputContainer.element.addClass('md-icon-float');
+	      inputContainer.element.prepend(placeholder);
+	    }
+	  }
+	}
+	placeholderDirective.$inject = ["$log"];
+
+	function ngMessagesDirective() {
+	  return {
+	    restrict: 'EA',
+	    link: postLink,
+
+	    // This is optional because we don't want target *all* ngMessage instances, just those inside of
+	    // mdInputContainer.
+	    require: '^^?mdInputContainer'
+	  };
+
+	  function postLink(scope, element, attr, inputContainer) {
+	    // If we are not a child of an input container, don't do anything
+	    if (!inputContainer) return;
+
+	    // Tell our parent input container we have messages so we can set the proper classes
+	    inputContainer.setHasMessages(true);
+
+	    // When destroyed, inform our input container
+	    scope.$on('$destroy', function() {
+	      inputContainer.setHasMessages(false);
+	    });
+	  }
+	}
 
 	})();
 	(function(){
@@ -45230,6 +45912,8 @@
 	    var spinnerWrapper =  angular.element(element.children()[0]);
 	    var lastMode, toVendorCSS = $mdUtil.dom.animator.toCss;
 
+	    element.attr('md-mode', mode());
+
 	    updateScale();
 	    validateMode();
 	    watchAttributes();
@@ -45345,7 +46029,7 @@
 	     * Is the md-mode a valid option?
 	     */
 	    function mode() {
-	      var value = attr.mdMode;
+	      var value = (attr.mdMode || "").trim();
 	      if ( value ) {
 	        switch(value) {
 	          case MODE_DETERMINATE :
@@ -45381,313 +46065,6 @@
 	  }
 	}
 	MdProgressCircularDirective.$inject = ["$mdTheming", "$mdUtil", "$log"];
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
-	 * @name material.components.radioButton
-	 * @description radioButton module!
-	 */
-	angular.module('material.components.radioButton', [
-	  'material.core'
-	])
-	  .directive('mdRadioGroup', mdRadioGroupDirective)
-	  .directive('mdRadioButton', mdRadioButtonDirective);
-
-	/**
-	 * @ngdoc directive
-	 * @module material.components.radioButton
-	 * @name mdRadioGroup
-	 *
-	 * @restrict E
-	 *
-	 * @description
-	 * The `<md-radio-group>` directive identifies a grouping
-	 * container for the 1..n grouped radio buttons; specified using nested
-	 * `<md-radio-button>` tags.
-	 *
-	 * As per the [material design spec](http://www.google.com/design/spec/style/color.html#color-ui-color-application)
-	 * the radio button is in the accent color by default. The primary color palette may be used with
-	 * the `md-primary` class.
-	 *
-	 * Note: `<md-radio-group>` and `<md-radio-button>` handle tabindex differently
-	 * than the native `<input type='radio'>` controls. Whereas the native controls
-	 * force the user to tab through all the radio buttons, `<md-radio-group>`
-	 * is focusable, and by default the `<md-radio-button>`s are not.
-	 *
-	 * @param {string} ng-model Assignable angular expression to data-bind to.
-	 * @param {boolean=} md-no-ink Use of attribute indicates flag to disable ink ripple effects.
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 * <md-radio-group ng-model="selected">
-	 *
-	 *   <md-radio-button
-	 *        ng-repeat="d in colorOptions"
-	 *        ng-value="d.value" aria-label="{{ d.label }}">
-	 *
-	 *          {{ d.label }}
-	 *
-	 *   </md-radio-button>
-	 *
-	 * </md-radio-group>
-	 * </hljs>
-	 *
-	 */
-	function mdRadioGroupDirective($mdUtil, $mdConstant, $mdTheming, $timeout) {
-	  RadioGroupController.prototype = createRadioGroupControllerProto();
-
-	  return {
-	    restrict: 'E',
-	    controller: ['$element', RadioGroupController],
-	    require: ['mdRadioGroup', '?ngModel'],
-	    link: { pre: linkRadioGroup }
-	  };
-
-	  function linkRadioGroup(scope, element, attr, ctrls) {
-	    $mdTheming(element);
-	    var rgCtrl = ctrls[0];
-	    var ngModelCtrl = ctrls[1] || $mdUtil.fakeNgModel();
-
-	    function setFocus() {
-	      if (!element.hasClass('md-focused')) { element.addClass('md-focused'); }
-	    }
-
-	    function keydownListener(ev) {
-	      var keyCode = ev.which || ev.keyCode;
-	      switch(keyCode) {
-	        case $mdConstant.KEY_CODE.LEFT_ARROW:
-	        case $mdConstant.KEY_CODE.UP_ARROW:
-	          ev.preventDefault();
-	          rgCtrl.selectPrevious();
-	          setFocus();
-	          break;
-
-	        case $mdConstant.KEY_CODE.RIGHT_ARROW:
-	        case $mdConstant.KEY_CODE.DOWN_ARROW:
-	          ev.preventDefault();
-	          rgCtrl.selectNext();
-	          setFocus();
-	          break;
-
-	        case $mdConstant.KEY_CODE.ENTER:
-	          var form = angular.element($mdUtil.getClosest(element[0], 'form'));
-	          if (form.length > 0) {
-	            form.triggerHandler('submit');
-	          }
-	          break;
-	      }
-	    }
-
-	    rgCtrl.init(ngModelCtrl);
-
-	    scope.mouseActive = false;
-	    element.attr({
-	              'role': 'radiogroup',
-	              'tabIndex': element.attr('tabindex') || '0'
-	            })
-	            .on('keydown', keydownListener)
-	            .on('mousedown', function(event) {
-	              scope.mouseActive = true;
-	              $timeout(function() {
-	                scope.mouseActive = false;
-	              }, 100);
-	            })
-	            .on('focus', function() {
-	              if(scope.mouseActive === false) { rgCtrl.$element.addClass('md-focused'); }
-	            })
-	            .on('blur', function() { rgCtrl.$element.removeClass('md-focused'); });
-	  }
-
-	  function RadioGroupController($element) {
-	    this._radioButtonRenderFns = [];
-	    this.$element = $element;
-	  }
-
-	  function createRadioGroupControllerProto() {
-	    return {
-	      init: function(ngModelCtrl) {
-	        this._ngModelCtrl = ngModelCtrl;
-	        this._ngModelCtrl.$render = angular.bind(this, this.render);
-	      },
-	      add: function(rbRender) {
-	        this._radioButtonRenderFns.push(rbRender);
-	      },
-	      remove: function(rbRender) {
-	        var index = this._radioButtonRenderFns.indexOf(rbRender);
-	        if (index !== -1) {
-	          this._radioButtonRenderFns.splice(index, 1);
-	        }
-	      },
-	      render: function() {
-	        this._radioButtonRenderFns.forEach(function(rbRender) {
-	          rbRender();
-	        });
-	      },
-	      setViewValue: function(value, eventType) {
-	        this._ngModelCtrl.$setViewValue(value, eventType);
-	        // update the other radio buttons as well
-	        this.render();
-	      },
-	      getViewValue: function() {
-	        return this._ngModelCtrl.$viewValue;
-	      },
-	      selectNext: function() {
-	        return changeSelectedButton(this.$element, 1);
-	      },
-	      selectPrevious: function() {
-	        return changeSelectedButton(this.$element, -1);
-	      },
-	      setActiveDescendant: function (radioId) {
-	        this.$element.attr('aria-activedescendant', radioId);
-	      }
-	    };
-	  }
-	  /**
-	   * Change the radio group's selected button by a given increment.
-	   * If no button is selected, select the first button.
-	   */
-	  function changeSelectedButton(parent, increment) {
-	    // Coerce all child radio buttons into an array, then wrap then in an iterator
-	    var buttons = $mdUtil.iterator(parent[0].querySelectorAll('md-radio-button'), true);
-
-	    if (buttons.count()) {
-	      var validate = function (button) {
-	        // If disabled, then NOT valid
-	        return !angular.element(button).attr("disabled");
-	      };
-	      var selected = parent[0].querySelector('md-radio-button.md-checked');
-	      var target = buttons[increment < 0 ? 'previous' : 'next'](selected, validate) || buttons.first();
-	      // Activate radioButton's click listener (triggerHandler won't create a real click event)
-	      angular.element(target).triggerHandler('click');
-
-
-	    }
-	  }
-
-	}
-	mdRadioGroupDirective.$inject = ["$mdUtil", "$mdConstant", "$mdTheming", "$timeout"];
-
-	/**
-	 * @ngdoc directive
-	 * @module material.components.radioButton
-	 * @name mdRadioButton
-	 *
-	 * @restrict E
-	 *
-	 * @description
-	 * The `<md-radio-button>`directive is the child directive required to be used within `<md-radio-group>` elements.
-	 *
-	 * While similar to the `<input type="radio" ng-model="" value="">` directive,
-	 * the `<md-radio-button>` directive provides ink effects, ARIA support, and
-	 * supports use within named radio groups.
-	 *
-	 * @param {string} ngModel Assignable angular expression to data-bind to.
-	 * @param {string=} ngChange Angular expression to be executed when input changes due to user
-	 *    interaction with the input element.
-	 * @param {string} ngValue Angular expression which sets the value to which the expression should
-	 *    be set when selected.*
-	 * @param {string} value The value to which the expression should be set when selected.
-	 * @param {string=} name Property name of the form under which the control is published.
-	 * @param {string=} aria-label Adds label to radio button for accessibility.
-	 * Defaults to radio button's text. If no text content is available, a warning will be logged.
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 *
-	 * <md-radio-button value="1" aria-label="Label 1">
-	 *   Label 1
-	 * </md-radio-button>
-	 *
-	 * <md-radio-button ng-model="color" ng-value="specialValue" aria-label="Green">
-	 *   Green
-	 * </md-radio-button>
-	 *
-	 * </hljs>
-	 *
-	 */
-	function mdRadioButtonDirective($mdAria, $mdUtil, $mdTheming) {
-
-	  var CHECKED_CSS = 'md-checked';
-
-	  return {
-	    restrict: 'E',
-	    require: '^mdRadioGroup',
-	    transclude: true,
-	    template: '<div class="md-container" md-ink-ripple md-ink-ripple-checkbox>' +
-	                '<div class="md-off"></div>' +
-	                '<div class="md-on"></div>' +
-	              '</div>' +
-	              '<div ng-transclude class="md-label"></div>',
-	    link: link
-	  };
-
-	  function link(scope, element, attr, rgCtrl) {
-	    var lastChecked;
-
-	    $mdTheming(element);
-	    configureAria(element, scope);
-
-	    rgCtrl.add(render);
-	    attr.$observe('value', render);
-
-	    element
-	      .on('click', listener)
-	      .on('$destroy', function() {
-	        rgCtrl.remove(render);
-	      });
-
-	    function listener(ev) {
-	      if (element[0].hasAttribute('disabled')) return;
-
-	      scope.$apply(function() {
-	        rgCtrl.setViewValue(attr.value, ev && ev.type);
-	      });
-	    }
-
-	    function render() {
-	      var checked = (rgCtrl.getViewValue() == attr.value);
-	      if (checked === lastChecked) {
-	        return;
-	      }
-	      lastChecked = checked;
-	      element.attr('aria-checked', checked);
-	      if (checked) {
-	        element.addClass(CHECKED_CSS);
-	        rgCtrl.setActiveDescendant(element.attr('id'));
-	      } else {
-	        element.removeClass(CHECKED_CSS);
-	      }
-	    }
-	    /**
-	     * Inject ARIA-specific attributes appropriate for each radio button
-	     */
-	    function configureAria( element, scope ){
-	      scope.ariaId = buildAriaID();
-
-	      element.attr({
-	        'id' :  scope.ariaId,
-	        'role' : 'radio',
-	        'aria-checked' : 'false'
-	      });
-
-	      $mdAria.expectWithText(element, 'aria-label');
-
-	      /**
-	       * Build a unique ID for each radio button that will be used with aria-activedescendant.
-	       * Preserve existing ID if already specified.
-	       * @returns {*|string}
-	       */
-	      function buildAriaID() {
-	        return attr.id || ( 'radio' + "_" + $mdUtil.nextUid() );
-	      }
-	    }
-	  }
-	}
-	mdRadioButtonDirective.$inject = ["$mdAria", "$mdUtil", "$mdTheming"];
 
 	})();
 	(function(){
@@ -45776,10 +46153,13 @@
 	  }
 	  function postLink(scope, element, attr) {
 	    $mdTheming(element);
+
 	    var lastMode, toVendorCSS = $mdUtil.dom.animator.toCss;
 	    var bar1 = angular.element(element[0].querySelector('.md-bar1')),
 	        bar2 = angular.element(element[0].querySelector('.md-bar2')),
 	        container = angular.element(element[0].querySelector('.md-container'));
+
+	    element.attr('md-mode', mode());
 
 	    validateMode();
 	    watchAttributes();
@@ -45805,8 +46185,7 @@
 	          case MODE_BUFFER:
 	          case MODE_DETERMINATE:
 	          case MODE_INDETERMINATE:
-	            container.removeClass('ng-hide');
-	            container.removeClass( lastMode );
+	            container.removeClass( 'ng-hide' + ' ' + lastMode );
 	            container.addClass( lastMode = "md-mode-" + mode );
 	            break;
 	          default:
@@ -45838,7 +46217,7 @@
 	     * Is the md-mode a valid option?
 	     */
 	    function mode() {
-	      var value = attr.mdMode;
+	      var value = (attr.mdMode || "").trim();
 	      if ( value ) {
 	        switch(value) {
 	          case MODE_DETERMINATE:
@@ -45878,6 +46257,356 @@
 	}
 	MdProgressLinearDirective.$inject = ["$mdTheming", "$mdUtil", "$log"];
 
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
+	 * @name material.components.radioButton
+	 * @description radioButton module!
+	 */
+	angular.module('material.components.radioButton', [
+	  'material.core'
+	])
+	  .directive('mdRadioGroup', mdRadioGroupDirective)
+	  .directive('mdRadioButton', mdRadioButtonDirective);
+
+	/**
+	 * @ngdoc directive
+	 * @module material.components.radioButton
+	 * @name mdRadioGroup
+	 *
+	 * @restrict E
+	 *
+	 * @description
+	 * The `<md-radio-group>` directive identifies a grouping
+	 * container for the 1..n grouped radio buttons; specified using nested
+	 * `<md-radio-button>` tags.
+	 *
+	 * As per the [material design spec](http://www.google.com/design/spec/style/color.html#color-ui-color-application)
+	 * the radio button is in the accent color by default. The primary color palette may be used with
+	 * the `md-primary` class.
+	 *
+	 * Note: `<md-radio-group>` and `<md-radio-button>` handle tabindex differently
+	 * than the native `<input type='radio'>` controls. Whereas the native controls
+	 * force the user to tab through all the radio buttons, `<md-radio-group>`
+	 * is focusable, and by default the `<md-radio-button>`s are not.
+	 *
+	 * @param {string} ng-model Assignable angular expression to data-bind to.
+	 * @param {boolean=} md-no-ink Use of attribute indicates flag to disable ink ripple effects.
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 * <md-radio-group ng-model="selected">
+	 *
+	 *   <md-radio-button
+	 *        ng-repeat="d in colorOptions"
+	 *        ng-value="d.value" aria-label="{{ d.label }}">
+	 *
+	 *          {{ d.label }}
+	 *
+	 *   </md-radio-button>
+	 *
+	 * </md-radio-group>
+	 * </hljs>
+	 *
+	 */
+	function mdRadioGroupDirective($mdUtil, $mdConstant, $mdTheming, $timeout) {
+	  RadioGroupController.prototype = createRadioGroupControllerProto();
+
+	  return {
+	    restrict: 'E',
+	    controller: ['$element', RadioGroupController],
+	    require: ['mdRadioGroup', '?ngModel'],
+	    link: { pre: linkRadioGroup }
+	  };
+
+	  function linkRadioGroup(scope, element, attr, ctrls) {
+	    $mdTheming(element);
+	    var rgCtrl = ctrls[0];
+	    var ngModelCtrl = ctrls[1] || $mdUtil.fakeNgModel();
+
+	    rgCtrl.init(ngModelCtrl);
+
+	    scope.mouseActive = false;
+	    element.attr({
+	              'role': 'radiogroup',
+	              'tabIndex': element.attr('tabindex') || '0'
+	            })
+	            .on('keydown', keydownListener)
+	            .on('mousedown', function(event) {
+	              scope.mouseActive = true;
+	              $timeout(function() {
+	                scope.mouseActive = false;
+	              }, 100);
+	            })
+	            .on('focus', function() {
+	              if(scope.mouseActive === false) { rgCtrl.$element.addClass('md-focused'); }
+	            })
+	            .on('blur', function() { rgCtrl.$element.removeClass('md-focused'); });
+
+	    /**
+	     *
+	     */
+	    function setFocus() {
+	      if (!element.hasClass('md-focused')) { element.addClass('md-focused'); }
+	    }
+
+	    /**
+	     *
+	     */
+	    function keydownListener(ev) {
+	      var keyCode = ev.which || ev.keyCode;
+	      switch(keyCode) {
+	        case $mdConstant.KEY_CODE.LEFT_ARROW:
+	        case $mdConstant.KEY_CODE.UP_ARROW:
+	          ev.preventDefault();
+	          rgCtrl.selectPrevious();
+	          setFocus();
+	          break;
+
+	        case $mdConstant.KEY_CODE.RIGHT_ARROW:
+	        case $mdConstant.KEY_CODE.DOWN_ARROW:
+	          ev.preventDefault();
+	          rgCtrl.selectNext();
+	          setFocus();
+	          break;
+
+	        case $mdConstant.KEY_CODE.ENTER:
+	          var form = angular.element($mdUtil.getClosest(element[0], 'form'));
+	          if (form.length > 0) {
+	            form.triggerHandler('submit');
+	          }
+	          break;
+	      }
+	    }
+	  }
+
+	  function RadioGroupController($element) {
+	    this._radioButtonRenderFns = [];
+	    this.$element = $element;
+	  }
+
+	  function createRadioGroupControllerProto() {
+	    return {
+	      init: function(ngModelCtrl) {
+	        this._ngModelCtrl = ngModelCtrl;
+	        this._ngModelCtrl.$render = angular.bind(this, this.render);
+	      },
+	      add: function(rbRender) {
+	        this._radioButtonRenderFns.push(rbRender);
+	      },
+	      remove: function(rbRender) {
+	        var index = this._radioButtonRenderFns.indexOf(rbRender);
+	        if (index !== -1) {
+	          this._radioButtonRenderFns.splice(index, 1);
+	        }
+	      },
+	      render: function() {
+	        this._radioButtonRenderFns.forEach(function(rbRender) {
+	          rbRender();
+	        });
+	      },
+	      setViewValue: function(value, eventType) {
+	        this._ngModelCtrl.$setViewValue(value, eventType);
+	        // update the other radio buttons as well
+	        this.render();
+	      },
+	      getViewValue: function() {
+	        return this._ngModelCtrl.$viewValue;
+	      },
+	      selectNext: function() {
+	        return changeSelectedButton(this.$element, 1);
+	      },
+	      selectPrevious: function() {
+	        return changeSelectedButton(this.$element, -1);
+	      },
+	      setActiveDescendant: function (radioId) {
+	        this.$element.attr('aria-activedescendant', radioId);
+	      }
+	    };
+	  }
+	  /**
+	   * Change the radio group's selected button by a given increment.
+	   * If no button is selected, select the first button.
+	   */
+	  function changeSelectedButton(parent, increment) {
+	    // Coerce all child radio buttons into an array, then wrap then in an iterator
+	    var buttons = $mdUtil.iterator(parent[0].querySelectorAll('md-radio-button'), true);
+
+	    if (buttons.count()) {
+	      var validate = function (button) {
+	        // If disabled, then NOT valid
+	        return !angular.element(button).attr("disabled");
+	      };
+
+	      var selected = parent[0].querySelector('md-radio-button.md-checked');
+	      var target = buttons[increment < 0 ? 'previous' : 'next'](selected, validate) || buttons.first();
+
+	      // Activate radioButton's click listener (triggerHandler won't create a real click event)
+	      angular.element(target).triggerHandler('click');
+
+
+	    }
+	  }
+
+	}
+	mdRadioGroupDirective.$inject = ["$mdUtil", "$mdConstant", "$mdTheming", "$timeout"];
+
+	/**
+	 * @ngdoc directive
+	 * @module material.components.radioButton
+	 * @name mdRadioButton
+	 *
+	 * @restrict E
+	 *
+	 * @description
+	 * The `<md-radio-button>`directive is the child directive required to be used within `<md-radio-group>` elements.
+	 *
+	 * While similar to the `<input type="radio" ng-model="" value="">` directive,
+	 * the `<md-radio-button>` directive provides ink effects, ARIA support, and
+	 * supports use within named radio groups.
+	 *
+	 * @param {string} ngModel Assignable angular expression to data-bind to.
+	 * @param {string=} ngChange Angular expression to be executed when input changes due to user
+	 *    interaction with the input element.
+	 * @param {string} ngValue Angular expression which sets the value to which the expression should
+	 *    be set when selected.*
+	 * @param {string} value The value to which the expression should be set when selected.
+	 * @param {string=} name Property name of the form under which the control is published.
+	 * @param {string=} aria-label Adds label to radio button for accessibility.
+	 * Defaults to radio button's text. If no text content is available, a warning will be logged.
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 *
+	 * <md-radio-button value="1" aria-label="Label 1">
+	 *   Label 1
+	 * </md-radio-button>
+	 *
+	 * <md-radio-button ng-model="color" ng-value="specialValue" aria-label="Green">
+	 *   Green
+	 * </md-radio-button>
+	 *
+	 * </hljs>
+	 *
+	 */
+	function mdRadioButtonDirective($mdAria, $mdUtil, $mdTheming) {
+
+	  var CHECKED_CSS = 'md-checked';
+
+	  return {
+	    restrict: 'E',
+	    require: '^mdRadioGroup',
+	    transclude: true,
+	    template: '<div class="md-container" md-ink-ripple md-ink-ripple-checkbox>' +
+	                '<div class="md-off"></div>' +
+	                '<div class="md-on"></div>' +
+	              '</div>' +
+	              '<div ng-transclude class="md-label"></div>',
+	    link: link
+	  };
+
+	  function link(scope, element, attr, rgCtrl) {
+	    var lastChecked;
+
+	    $mdTheming(element);
+	    configureAria(element, scope);
+
+	    initialize();
+
+	    /**
+	     *
+	     */
+	    function initialize(controller) {
+	      if ( !rgCtrl ) {
+	        throw 'RadioGroupController not found.';
+	      }
+
+	      rgCtrl.add(render);
+	      attr.$observe('value', render);
+
+	      element
+	        .on('click', listener)
+	        .on('$destroy', function() {
+	          rgCtrl.remove(render);
+	        });
+	    }
+
+	    /**
+	     *
+	     */
+	    function listener(ev) {
+	      if (element[0].hasAttribute('disabled')) return;
+
+	      scope.$apply(function() {
+	        rgCtrl.setViewValue(attr.value, ev && ev.type);
+	      });
+	    }
+
+	    /**
+	     *  Add or remove the `.md-checked` class from the RadioButton (and conditionally its parent).
+	     *  Update the `aria-activedescendant` attribute.
+	     */
+	    function render() {
+	      var checked = (rgCtrl.getViewValue() == attr.value);
+	      if (checked === lastChecked) {
+	        return;
+	      }
+
+	      lastChecked = checked;
+	      element.attr('aria-checked', checked);
+
+	      if (checked) {
+	        markParentAsChecked(true);
+	        element.addClass(CHECKED_CSS);
+
+	        rgCtrl.setActiveDescendant(element.attr('id'));
+
+	      } else {
+	        markParentAsChecked(false);
+	        element.removeClass(CHECKED_CSS);
+	      }
+
+	      /**
+	       * If the radioButton is inside a div, then add class so highlighting will work...
+	       */
+	      function markParentAsChecked(addClass ) {
+	        if ( element.parent()[0].nodeName != "MD-RADIO-GROUP") {
+	          element.parent()[ !!addClass ? 'addClass' : 'removeClass'](CHECKED_CSS);
+	        }
+
+	      }
+	    }
+
+	    /**
+	     * Inject ARIA-specific attributes appropriate for each radio button
+	     */
+	    function configureAria( element, scope ){
+	      scope.ariaId = buildAriaID();
+
+	      element.attr({
+	        'id' :  scope.ariaId,
+	        'role' : 'radio',
+	        'aria-checked' : 'false'
+	      });
+
+	      $mdAria.expectWithText(element, 'aria-label');
+
+	      /**
+	       * Build a unique ID for each radio button that will be used with aria-activedescendant.
+	       * Preserve existing ID if already specified.
+	       * @returns {*|string}
+	       */
+	      function buildAriaID() {
+	        return attr.id || ( 'radio' + "_" + $mdUtil.nextUid() );
+	      }
+	    }
+	  }
+	}
+	mdRadioButtonDirective.$inject = ["$mdAria", "$mdUtil", "$mdTheming"];
 
 	})();
 	(function(){
@@ -45955,7 +46684,7 @@
 	 *   </md-input-container>
 	 * </hljs>
 	 */
-	function SelectDirective($mdSelect, $mdUtil, $mdTheming, $mdAria, $rootElement, $compile, $parse) {
+	function SelectDirective($mdSelect, $mdUtil, $mdTheming, $mdAria, $compile, $parse) {
 	  return {
 	    restrict: 'E',
 	    require: ['^?mdInputContainer', 'mdSelect', 'ngModel', '?^form'],
@@ -46029,7 +46758,6 @@
 	    attr.tabindex = attr.tabindex || '0';
 
 	    return function postLink(scope, element, attr, ctrls) {
-	      var isOpen;
 	      var isDisabled;
 
 	      var containerCtrl = ctrls[0];
@@ -46070,12 +46798,20 @@
 	        }
 	      }
 
+	      if (formCtrl) {
+	        $mdUtil.nextTick(function() {
+	          formCtrl.$setPristine();
+	        });
+	      }
+
 	      var originalRender = ngModelCtrl.$render;
 	      ngModelCtrl.$render = function() {
 	        originalRender();
 	        syncLabelText();
 	        inputCheckValue();
 	      };
+
+	      attr.$observe('placeholder', ngModelCtrl.$render);
 
 	      mdSelectCtrl.setLabelText = function(text) {
 	        mdSelectCtrl.setIsPlaceholder(!text);
@@ -46166,7 +46902,7 @@
 	      });
 
 	      attr.$observe('disabled', function(disabled) {
-	        if (typeof disabled == "string") {
+	        if (angular.isString(disabled)) {
 	          disabled = true;
 	        }
 	        // Prevent click event being registered twice
@@ -46201,19 +46937,22 @@
 	      element.attr(ariaAttrs);
 
 	      scope.$on('$destroy', function() {
-	        if (isOpen) {
-	          $mdSelect.hide().finally(function() {
-	            selectContainer.remove();
+	        $mdSelect
+	          .destroy()
+	          .finally(function() {
+	            if ( selectContainer ) {
+	              selectContainer.remove();
+	            }
+
+	            if (containerCtrl) {
+	              containerCtrl.setFocused(false);
+	              containerCtrl.setHasValue(false);
+	              containerCtrl.input = null;
+	            }
 	          });
-	        } else {
-	          selectContainer.remove();
-	        }
-	        if (containerCtrl) {
-	          containerCtrl.setFocused(false);
-	          containerCtrl.setHasValue(false);
-	          containerCtrl.input = null;
-	        }
 	      });
+
+
 
 	      function inputCheckValue() {
 	        // The select counts as having a value if one or more options are selected,
@@ -46229,7 +46968,10 @@
 	        selectEl.data('$mdSelectController', mdSelectCtrl);
 	        selectScope = scope.$new();
 	        $mdTheming.inherit(selectContainer, element);
-	        selectContainer[0].setAttribute('class', selectContainer[0].getAttribute('class') + ' ' + element.attr('md-container-class'));
+	        if (element.attr('md-container-class')) {
+	          var value = selectContainer[0].getAttribute('class') + ' ' + element.attr('md-container-class');
+	          selectContainer[0].setAttribute('class', value);
+	        }
 	        selectContainer = $compile(selectContainer)(selectScope);
 	        selectMenuCtrl = selectContainer.find('md-select-menu').controller('mdSelectMenu');
 	      }
@@ -46257,7 +46999,7 @@
 	      }
 
 	      function openSelect() {
-	        scope.$apply('isOpen = true');
+	        selectScope.isOpen = true;
 
 	        $mdSelect.show({
 	          scope: selectScope,
@@ -46268,13 +47010,13 @@
 	          hasBackdrop: true,
 	          loadingAsync: attr.mdOnOpen ? scope.$eval(attr.mdOnOpen) || true : false
 	        }).then(function() {
-	          isOpen = false;
+	          selectScope.isOpen = false;
 	        });
 	      }
 	    };
 	  }
 	}
-	SelectDirective.$inject = ["$mdSelect", "$mdUtil", "$mdTheming", "$mdAria", "$rootElement", "$compile", "$parse"];
+	SelectDirective.$inject = ["$mdSelect", "$mdUtil", "$mdTheming", "$mdAria", "$compile", "$parse"];
 
 	function SelectMenuDirective($parse, $mdUtil, $mdTheming) {
 
@@ -46371,6 +47113,7 @@
 	        // reference. This allowed the developer to also push and pop from their array.
 	        $scope.$watchCollection($attrs.ngModel, function(value) {
 	          if (validateArray(value)) renderMultiple(value);
+	          self.ngModel.$setPristine();
 	        });
 	      } else {
 	        delete ngModel.$validators['md-multiple'];
@@ -46548,7 +47291,7 @@
 	    if (angular.isDefined(attr.ngValue)) {
 	      scope.$watch(attr.ngValue, setOptionValue);
 	    } else if (angular.isDefined(attr.value)) {
-	      setOptionValue(isNaN(attr.value) ? attr.value : Number(attr.value));
+	      setOptionValue(attr.value);
 	    } else {
 	      scope.$watch(function() {
 	        return element.text();
@@ -46671,38 +47414,42 @@
 	     * Interim-element onRemove logic....
 	     */
 	    function onRemove(scope, element, opts) {
+	      opts = opts || { };
 	      opts.cleanupInteraction();
 	      opts.cleanupResizing();
 	      opts.hideBackdrop();
 
-	      return $animateCss(element, {addClass: 'md-leave'})
-	         .start()
-	         .then(function(response) {
+	      // For navigation $destroy events, do a quick, non-animated removal,
+	      // but for normal closes (from clicks, etc) animate the removal
 
-	           configureAria(opts.target, false);
-	           element.removeClass('md-active');
+	      return  (opts.$destroy === true) ? detachAndClean() : animateRemoval().then( detachAndClean );
 
-	           announceClosed(opts);
-	           detachElement(element, opts);
+	      /**
+	       * For normal closes (eg clicks), animate the removal.
+	       * For forced closes (like $destroy events from navigation),
+	       * skip the animations
+	       */
+	      function animateRemoval() {
+	        return $animateCss(element, {addClass: 'md-leave'}).start();
+	      }
 
-	           return response;
-	         })
-	         .finally(function() {
-	           opts.restoreFocus && opts.target.focus();
-	         });
+	      /**
+	       * Detach the element and cleanup prior changes
+	       */
+	      function detachAndClean() {
+	        configureAria(opts.target, false);
 
-	      // If we want to ignore leave animations (and remove immediately):
-	      //
-	      //     configureAria(opts.target, false);
-	      //
-	      //     element.addClass('md-leave');
-	      //     element.removeClass('md-active');
-	      //
-	      //     announceClosed(opts);
-	      //     detachElement(element, opts);
-	      //     opts.restoreFocus && opts.target.focus();
-	      //
-	      //     return $q.when(true);
+	        element.attr('opacity', 0);
+	        element.removeClass('md-active');
+	        detachElement(element, opts);
+
+	        announceClosed(opts);
+
+	        if (!opts.$destroy && opts.restoreFocus) {
+	          opts.target.focus();
+	        }
+	      }
+
 	    }
 
 	    /**
@@ -46800,14 +47547,10 @@
 	         * Hide modal backdrop element...
 	         */
 	        return function hideBackdrop() {
-	          if (options.backdrop) {
-	            // Override duration to immediately remove invisible backdrop
-	            $animate.leave(options.backdrop, {duration: 0});
-	          }
-	          if (options.disableParentScroll) {
-	            options.restoreScroll();
-	            delete options.restoreScroll;
-	          }
+	          if (options.backdrop) options.backdrop.remove();
+	          if (options.disableParentScroll) options.restoreScroll();
+
+	          delete options.restoreScroll;
 	        }
 	      }
 
@@ -47015,12 +47758,12 @@
 	           */
 	          function mouseOnScrollbar() {
 	            var clickOnScrollbar = false;
-	            if(ev && (ev.currentTarget.children.length > 0)) {
+	            if (ev && (ev.currentTarget.children.length > 0)) {
 	              var child = ev.currentTarget.children[0];
 	              var hasScrollbar = child.scrollHeight > child.clientHeight;
 	              if (hasScrollbar && child.children.length > 0) {
 	                var relPosX = ev.pageX - ev.currentTarget.getBoundingClientRect().left;
-	                if(relPosX > child.children[0].offsetWidth)
+	                if (relPosX > child.querySelector('md-option').offsetWidth)
 	                  clickOnScrollbar = true;
 	              }
 	            }
@@ -47053,7 +47796,7 @@
 	    }
 
 	    /**
-	     * Use browser to remove this element without triggering a $destory event
+	     * Use browser to remove this element without triggering a $destroy event
 	     */
 	    function detachElement(element, opts) {
 	      if (element[0].parentNode === opts.parent[0]) {
@@ -47231,6 +47974,424 @@
 	(function(){
 	"use strict";
 
+	/**
+	 * @ngdoc module
+	 * @name material.components.sidenav
+	 *
+	 * @description
+	 * A Sidenav QP component.
+	 */
+	angular
+	  .module('material.components.sidenav', [
+	    'material.core',
+	    'material.components.backdrop'
+	  ])
+	  .factory('$mdSidenav', SidenavService )
+	  .directive('mdSidenav', SidenavDirective)
+	  .directive('mdSidenavFocus', SidenavFocusDirective)
+	  .controller('$mdSidenavController', SidenavController);
+
+
+	/**
+	 * @ngdoc service
+	 * @name $mdSidenav
+	 * @module material.components.sidenav
+	 *
+	 * @description
+	 * `$mdSidenav` makes it easy to interact with multiple sidenavs
+	 * in an app.
+	 *
+	 * @usage
+	 * <hljs lang="js">
+	 * // Async lookup for sidenav instance; will resolve when the instance is available
+	 * $mdSidenav(componentId).then(function(instance) {
+	 *   $log.debug( componentId + "is now ready" );
+	 * });
+	 * // Async toggle the given sidenav;
+	 * // when instance is known ready and lazy lookup is not needed.
+	 * $mdSidenav(componentId)
+	 *    .toggle()
+	 *    .then(function(){
+	 *      $log.debug('toggled');
+	 *    });
+	 * // Async open the given sidenav
+	 * $mdSidenav(componentId)
+	 *    .open()
+	 *    .then(function(){
+	 *      $log.debug('opened');
+	 *    });
+	 * // Async close the given sidenav
+	 * $mdSidenav(componentId)
+	 *    .close()
+	 *    .then(function(){
+	 *      $log.debug('closed');
+	 *    });
+	 * // Sync check to see if the specified sidenav is set to be open
+	 * $mdSidenav(componentId).isOpen();
+	 * // Sync check to whether given sidenav is locked open
+	 * // If this is true, the sidenav will be open regardless of close()
+	 * $mdSidenav(componentId).isLockedOpen();
+	 * </hljs>
+	 */
+	function SidenavService($mdComponentRegistry, $q) {
+	  return function(handle) {
+
+	    // Lookup the controller instance for the specified sidNav instance
+	    var self;
+	    var errorMsg = "SideNav '" + handle + "' is not available!";
+	    var instance = $mdComponentRegistry.get(handle);
+
+	    if(!instance) {
+	      $mdComponentRegistry.notFoundError(handle);
+	    }
+
+	    return self = {
+	      // -----------------
+	      // Sync methods
+	      // -----------------
+	      isOpen: function() {
+	        return instance && instance.isOpen();
+	      },
+	      isLockedOpen: function() {
+	        return instance && instance.isLockedOpen();
+	      },
+	      // -----------------
+	      // Async methods
+	      // -----------------
+	      toggle: function() {
+	        return instance ? instance.toggle() : $q.reject(errorMsg);
+	      },
+	      open: function() {
+	        return instance ? instance.open() : $q.reject(errorMsg);
+	      },
+	      close: function() {
+	        return instance ? instance.close() : $q.reject(errorMsg);
+	      },
+	      then : function( callbackFn ) {
+	        var promise = instance ? $q.when(instance) : waitForInstance();
+	        return promise.then( callbackFn || angular.noop );
+	      }
+	    };
+
+	    /**
+	     * Deferred lookup of component instance using $component registry
+	     */
+	    function waitForInstance() {
+	      return $mdComponentRegistry
+	                .when(handle)
+	                .then(function( it ){
+	                  instance = it;
+	                  return it;
+	                });
+	    }
+	  };
+	}
+	SidenavService.$inject = ["$mdComponentRegistry", "$q"];
+	/**
+	 * @ngdoc directive
+	 * @name mdSidenavFocus
+	 * @module material.components.sidenav
+	 *
+	 * @restrict A
+	 *
+	 * @description
+	 * `mdSidenavFocus` provides a way to specify the focused element when a sidenav opens.
+	 * This is completely optional, as the sidenav itself is focused by default.
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 * <md-sidenav>
+	 *   <form>
+	 *     <md-input-container>
+	 *       <label for="testInput">Label</label>
+	 *       <input id="testInput" type="text" md-sidenav-focus>
+	 *     </md-input-container>
+	 *   </form>
+	 * </md-sidenav>
+	 * </hljs>
+	 **/
+	function SidenavFocusDirective() {
+	  return {
+	    restrict: 'A',
+	    require: '^mdSidenav',
+	    link: function(scope, element, attr, sidenavCtrl) {
+	      // @see $mdUtil.findFocusTarget(...)
+	    }
+	  };
+	}
+	/**
+	 * @ngdoc directive
+	 * @name mdSidenav
+	 * @module material.components.sidenav
+	 * @restrict E
+	 *
+	 * @description
+	 *
+	 * A Sidenav component that can be opened and closed programatically.
+	 *
+	 * By default, upon opening it will slide out on top of the main content area.
+	 *
+	 * For keyboard and screen reader accessibility, focus is sent to the sidenav wrapper by default.
+	 * It can be overridden with the `md-autofocus` directive on the child element you want focused.
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 * <div layout="row" ng-controller="MyController">
+	 *   <md-sidenav md-component-id="left" class="md-sidenav-left">
+	 *     Left Nav!
+	 *   </md-sidenav>
+	 *
+	 *   <md-content>
+	 *     Center Content
+	 *     <md-button ng-click="openLeftMenu()">
+	 *       Open Left Menu
+	 *     </md-button>
+	 *   </md-content>
+	 *
+	 *   <md-sidenav md-component-id="right"
+	 *     md-is-locked-open="$mdMedia('min-width: 333px')"
+	 *     class="md-sidenav-right">
+	 *     <form>
+	 *       <md-input-container>
+	 *         <label for="testInput">Test input</label>
+	 *         <input id="testInput" type="text"
+	 *                ng-model="data" md-autofocus>
+	 *       </md-input-container>
+	 *     </form>
+	 *   </md-sidenav>
+	 * </div>
+	 * </hljs>
+	 *
+	 * <hljs lang="js">
+	 * var app = angular.module('myApp', ['ngMaterial']);
+	 * app.controller('MyController', function($scope, $mdSidenav) {
+	 *   $scope.openLeftMenu = function() {
+	 *     $mdSidenav('left').toggle();
+	 *   };
+	 * });
+	 * </hljs>
+	 *
+	 * @param {expression=} md-is-open A model bound to whether the sidenav is opened.
+	 * @param {string=} md-component-id componentId to use with $mdSidenav service.
+	 * @param {expression=} md-is-locked-open When this expression evalutes to true,
+	 * the sidenav 'locks open': it falls into the content's flow instead
+	 * of appearing over it. This overrides the `is-open` attribute.
+	 *
+	 * The $mdMedia() service is exposed to the is-locked-open attribute, which
+	 * can be given a media query or one of the `sm`, `gt-sm`, `md`, `gt-md`, `lg` or `gt-lg` presets.
+	 * Examples:
+	 *
+	 *   - `<md-sidenav md-is-locked-open="shouldLockOpen"></md-sidenav>`
+	 *   - `<md-sidenav md-is-locked-open="$mdMedia('min-width: 1000px')"></md-sidenav>`
+	 *   - `<md-sidenav md-is-locked-open="$mdMedia('sm')"></md-sidenav>` (locks open on small screens)
+	 */
+	function SidenavDirective($mdMedia, $mdUtil, $mdConstant, $mdTheming, $animate, $compile, $parse, $log, $q, $document) {
+	  return {
+	    restrict: 'E',
+	    scope: {
+	      isOpen: '=?mdIsOpen'
+	    },
+	    controller: '$mdSidenavController',
+	    compile: function(element) {
+	      element.addClass('md-closed');
+	      element.attr('tabIndex', '-1');
+	      return postLink;
+	    }
+	  };
+
+	  /**
+	   * Directive Post Link function...
+	   */
+	  function postLink(scope, element, attr, sidenavCtrl) {
+	    var lastParentOverFlow;
+	    var triggeringElement = null;
+	    var promise = $q.when(true);
+
+	    var isLockedOpenParsed = $parse(attr.mdIsLockedOpen);
+	    var isLocked = function() {
+	      return isLockedOpenParsed(scope.$parent, {
+	        $media: function(arg) {
+	          $log.warn("$media is deprecated for is-locked-open. Use $mdMedia instead.");
+	          return $mdMedia(arg);
+	        },
+	        $mdMedia: $mdMedia
+	      });
+	    };
+	    var backdrop = $mdUtil.createBackdrop(scope, "md-sidenav-backdrop md-opaque ng-enter");
+
+	    $mdTheming.inherit(backdrop, element);
+
+	    element.on('$destroy', function() {
+	      backdrop.remove();
+	      sidenavCtrl.destroy();
+	    });
+
+	    scope.$on('$destroy', function(){
+	      backdrop.remove()
+	    });
+
+	    scope.$watch(isLocked, updateIsLocked);
+	    scope.$watch('isOpen', updateIsOpen);
+
+
+	    // Publish special accessor for the Controller instance
+	    sidenavCtrl.$toggleOpen = toggleOpen;
+
+	    /**
+	     * Toggle the DOM classes to indicate `locked`
+	     * @param isLocked
+	     */
+	    function updateIsLocked(isLocked, oldValue) {
+	      scope.isLockedOpen = isLocked;
+	      if (isLocked === oldValue) {
+	        element.toggleClass('md-locked-open', !!isLocked);
+	      } else {
+	        $animate[isLocked ? 'addClass' : 'removeClass'](element, 'md-locked-open');
+	      }
+	      backdrop.toggleClass('md-locked-open', !!isLocked);
+	    }
+
+	    /**
+	     * Toggle the SideNav view and attach/detach listeners
+	     * @param isOpen
+	     */
+	    function updateIsOpen(isOpen) {
+	      // Support deprecated md-sidenav-focus attribute as fallback
+	      var focusEl = $mdUtil.findFocusTarget(element) || $mdUtil.findFocusTarget(element,'[md-sidenav-focus]') || element;
+	      var parent = element.parent();
+
+	      parent[isOpen ? 'on' : 'off']('keydown', onKeyDown);
+	      backdrop[isOpen ? 'on' : 'off']('click', close);
+
+	      if ( isOpen ) {
+	        // Capture upon opening..
+	        triggeringElement = $document[0].activeElement;
+	      }
+
+	      disableParentScroll(isOpen);
+
+	      return promise = $q.all([
+	                isOpen ? $animate.enter(backdrop, parent) : $animate.leave(backdrop),
+	                $animate[isOpen ? 'removeClass' : 'addClass'](element, 'md-closed')
+	              ])
+	              .then(function() {
+	                // Perform focus when animations are ALL done...
+	                if (scope.isOpen) {
+	                  focusEl && focusEl.focus();
+	                }
+	              });
+	    }
+
+	    /**
+	     * Prevent parent scrolling (when the SideNav is open)
+	     */
+	    function disableParentScroll(disabled) {
+	      var parent = element.parent();
+	      if ( disabled && !lastParentOverFlow ) {
+
+	        lastParentOverFlow = parent.css('overflow');
+	        parent.css('overflow', 'hidden');
+
+	      } else if (angular.isDefined(lastParentOverFlow)) {
+
+	        parent.css('overflow', lastParentOverFlow);
+	        lastParentOverFlow = undefined;
+
+	      }
+	    }
+
+	    /**
+	     * Toggle the sideNav view and publish a promise to be resolved when
+	     * the view animation finishes.
+	     *
+	     * @param isOpen
+	     * @returns {*}
+	     */
+	    function toggleOpen( isOpen ) {
+	      if (scope.isOpen == isOpen ) {
+
+	        return $q.when(true);
+
+	      } else {
+	        return $q(function(resolve){
+	          // Toggle value to force an async `updateIsOpen()` to run
+	          scope.isOpen = isOpen;
+
+	          $mdUtil.nextTick(function() {
+	            // When the current `updateIsOpen()` animation finishes
+	            promise.then(function(result) {
+
+	              if ( !scope.isOpen ) {
+	                // reset focus to originating element (if available) upon close
+	                triggeringElement && triggeringElement.focus();
+	                triggeringElement = null;
+	              }
+
+	              resolve(result);
+	            });
+	          });
+
+	        });
+
+	      }
+	    }
+
+	    /**
+	     * Auto-close sideNav when the `escape` key is pressed.
+	     * @param evt
+	     */
+	    function onKeyDown(ev) {
+	      var isEscape = (ev.keyCode === $mdConstant.KEY_CODE.ESCAPE);
+	      return isEscape ? close(ev) : $q.when(true);
+	    }
+
+	    /**
+	     * With backdrop `clicks` or `escape` key-press, immediately
+	     * apply the CSS close transition... Then notify the controller
+	     * to close() and perform its own actions.
+	     */
+	    function close(ev) {
+	      ev.preventDefault();
+	      ev.stopPropagation();
+
+	      return sidenavCtrl.close();
+	    }
+
+	  }
+	}
+	SidenavDirective.$inject = ["$mdMedia", "$mdUtil", "$mdConstant", "$mdTheming", "$animate", "$compile", "$parse", "$log", "$q", "$document"];
+
+	/*
+	 * @private
+	 * @ngdoc controller
+	 * @name SidenavController
+	 * @module material.components.sidenav
+	 *
+	 */
+	function SidenavController($scope, $element, $attrs, $mdComponentRegistry, $q) {
+
+	  var self = this;
+
+	  // Use Default internal method until overridden by directive postLink
+
+	  // Synchronous getters
+	  self.isOpen = function() { return !!$scope.isOpen; };
+	  self.isLockedOpen = function() { return !!$scope.isLockedOpen; };
+
+	  // Async actions
+	  self.open   = function() { return self.$toggleOpen( true );  };
+	  self.close  = function() { return self.$toggleOpen( false ); };
+	  self.toggle = function() { return self.$toggleOpen( !$scope.isOpen );  };
+	  self.$toggleOpen = function(value) { return $q.when($scope.isOpen = value); };
+
+	  self.destroy = $mdComponentRegistry.register(self, $attrs.mdComponentId);
+	}
+	SidenavController.$inject = ["$scope", "$element", "$attrs", "$mdComponentRegistry", "$q"];
+
+	})();
+	(function(){
+	"use strict";
+
 	  /**
 	   * @ngdoc module
 	   * @name material.components.slider
@@ -47283,22 +48444,22 @@
 	    scope: {},
 	    require: '?ngModel',
 	    template:
-	      '<div class="md-slider-wrapper">\
-	        <div class="md-track-container">\
-	          <div class="md-track"></div>\
-	          <div class="md-track md-track-fill"></div>\
-	          <div class="md-track-ticks"></div>\
-	        </div>\
-	        <div class="md-thumb-container">\
-	          <div class="md-thumb"></div>\
-	          <div class="md-focus-thumb"></div>\
-	          <div class="md-focus-ring"></div>\
-	          <div class="md-sign">\
-	            <span class="md-thumb-text"></span>\
-	          </div>\
-	          <div class="md-disabled-thumb"></div>\
-	        </div>\
-	      </div>',
+	      '<div class="md-slider-wrapper">' +
+	        '<div class="md-track-container">' +
+	          '<div class="md-track"></div>' +
+	          '<div class="md-track md-track-fill"></div>' +
+	          '<div class="md-track-ticks"></div>' +
+	        '</div>' +
+	        '<div class="md-thumb-container">' +
+	          '<div class="md-thumb"></div>' +
+	          '<div class="md-focus-thumb"></div>' +
+	          '<div class="md-focus-ring"></div>' +
+	          '<div class="md-sign">' +
+	            '<span class="md-thumb-text"></span>' +
+	          '</div>' +
+	          '<div class="md-disabled-thumb"></div>' +
+	        '</div>' +
+	      '</div>',
 	    compile: compile
 	  };
 
@@ -47331,10 +48492,13 @@
 	      $viewChangeListeners: []
 	    };
 
-	    var isDisabledParsed = attr.ngDisabled && $parse(attr.ngDisabled);
-	    var isDisabledGetter = isDisabledParsed ?
-	      function() { return isDisabledParsed(scope.$parent); } :
-	      angular.noop;
+	    var isDisabledGetter = angular.noop;
+	    if (attr.disabled != null) {
+	      isDisabledGetter = function() { return true; };
+	    } else if (attr.ngDisabled) {
+	      isDisabledGetter = angular.bind(null, $parse(attr.ngDisabled), scope.$parent);
+	    }
+
 	    var thumb = angular.element(element[0].querySelector('.md-thumb'));
 	    var thumbText = angular.element(element[0].querySelector('.md-thumb-text'));
 	    var thumbContainer = thumb.parent();
@@ -47372,7 +48536,7 @@
 	      ngModelRender();
 	      redrawTicks();
 	    }
-	    setTimeout(updateAll);
+	    setTimeout(updateAll, 0);
 
 	    var debouncedUpdateAll = $$rAF.throttle(updateAll);
 	    angular.element($window).on('resize', debouncedUpdateAll);
@@ -47539,7 +48703,7 @@
 	    function onPressDown(ev) {
 	      if (isDisabledGetter()) return;
 
-	      element.addClass('active');
+	      element.addClass('md-active');
 	      element[0].focus();
 	      refreshSliderDimensions();
 
@@ -47553,7 +48717,7 @@
 	    function onPressUp(ev) {
 	      if (isDisabledGetter()) return;
 
-	      element.removeClass('dragging active');
+	      element.removeClass('md-dragging md-active');
 
 	      var exactVal = percentToValue( positionToPercent( ev.pointer.x ));
 	      var closestVal = minMaxValidator( stepValidator(exactVal) );
@@ -47567,7 +48731,7 @@
 	      isDragging = true;
 	      ev.stopPropagation();
 
-	      element.addClass('dragging');
+	      element.addClass('md-dragging');
 	      setSliderFromEvent(ev);
 	    }
 	    function onDrag(ev) {
@@ -47640,409 +48804,364 @@
 
 	/**
 	 * @ngdoc module
-	 * @name material.components.sidenav
-	 *
+	 * @name material.components.subheader
 	 * @description
-	 * A Sidenav QP component.
+	 * SubHeader module
+	 *
+	 *  Subheaders are special list tiles that delineate distinct sections of a
+	 *  list or grid list and are typically related to the current filtering or
+	 *  sorting criteria. Subheader tiles are either displayed inline with tiles or
+	 *  can be associated with content, for example, in an adjacent column.
+	 *
+	 *  Upon scrolling, subheaders remain pinned to the top of the screen and remain
+	 *  pinned until pushed on or off screen by the next subheader. @see [Material
+	 *  Design Specifications](https://www.google.com/design/spec/components/subheaders.html)
+	 *
+	 *  > To improve the visual grouping of content, use the system color for your subheaders.
+	 *
 	 */
 	angular
-	  .module('material.components.sidenav', [
+	  .module('material.components.subheader', [
 	    'material.core',
-	    'material.components.backdrop'
+	    'material.components.sticky'
 	  ])
-	  .factory('$mdSidenav', SidenavService )
-	  .directive('mdSidenav', SidenavDirective)
-	  .directive('mdSidenavFocus', SidenavFocusDirective)
-	  .controller('$mdSidenavController', SidenavController);
+	  .directive('mdSubheader', MdSubheaderDirective);
 
-
-	/**
-	 * @ngdoc service
-	 * @name $mdSidenav
-	 * @module material.components.sidenav
-	 *
-	 * @description
-	 * `$mdSidenav` makes it easy to interact with multiple sidenavs
-	 * in an app.
-	 *
-	 * @usage
-	 * <hljs lang="js">
-	 * // Async lookup for sidenav instance; will resolve when the instance is available
-	 * $mdSidenav(componentId).then(function(instance) {
-	 *   $log.debug( componentId + "is now ready" );
-	 * });
-	 * // Async toggle the given sidenav;
-	 * // when instance is known ready and lazy lookup is not needed.
-	 * $mdSidenav(componentId)
-	 *    .toggle()
-	 *    .then(function(){
-	 *      $log.debug('toggled');
-	 *    });
-	 * // Async open the given sidenav
-	 * $mdSidenav(componentId)
-	 *    .open()
-	 *    .then(function(){
-	 *      $log.debug('opened');
-	 *    });
-	 * // Async close the given sidenav
-	 * $mdSidenav(componentId)
-	 *    .close()
-	 *    .then(function(){
-	 *      $log.debug('closed');
-	 *    });
-	 * // Sync check to see if the specified sidenav is set to be open
-	 * $mdSidenav(componentId).isOpen();
-	 * // Sync check to whether given sidenav is locked open
-	 * // If this is true, the sidenav will be open regardless of close()
-	 * $mdSidenav(componentId).isLockedOpen();
-	 * </hljs>
-	 */
-	function SidenavService($mdComponentRegistry, $q) {
-	  return function(handle) {
-
-	    // Lookup the controller instance for the specified sidNav instance
-	    var self;
-	    var errorMsg = "SideNav '" + handle + "' is not available!";
-	    var instance = $mdComponentRegistry.get(handle);
-
-	    if(!instance) {
-	      $mdComponentRegistry.notFoundError(handle);
-	    }
-
-	    return self = {
-	      // -----------------
-	      // Sync methods
-	      // -----------------
-	      isOpen: function() {
-	        return instance && instance.isOpen();
-	      },
-	      isLockedOpen: function() {
-	        return instance && instance.isLockedOpen();
-	      },
-	      // -----------------
-	      // Async methods
-	      // -----------------
-	      toggle: function() {
-	        return instance ? instance.toggle() : $q.reject(errorMsg);
-	      },
-	      open: function() {
-	        return instance ? instance.open() : $q.reject(errorMsg);
-	      },
-	      close: function() {
-	        return instance ? instance.close() : $q.reject(errorMsg);
-	      },
-	      then : function( callbackFn ) {
-	        var promise = instance ? $q.when(instance) : waitForInstance();
-	        return promise.then( callbackFn || angular.noop );
-	      }
-	    };
-
-	    /**
-	     * Deferred lookup of component instance using $component registry
-	     */
-	    function waitForInstance() {
-	      return $mdComponentRegistry
-	                .when(handle)
-	                .then(function( it ){
-	                  instance = it;
-	                  return it;
-	                });
-	    }
-	  };
-	}
-	SidenavService.$inject = ["$mdComponentRegistry", "$q"];
 	/**
 	 * @ngdoc directive
-	 * @name mdSidenavFocus
-	 * @module material.components.sidenav
+	 * @name mdSubheader
+	 * @module material.components.subheader
+	 *
+	 * @restrict E
+	 *
+	 * @description
+	 * The `<md-subheader>` directive is a subheader for a section. By default it is sticky.
+	 * You can make it not sticky by applying the `md-no-sticky` class to the subheader.
+	 *
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 * <md-subheader>Online Friends</md-subheader>
+	 * </hljs>
+	 */
+
+	function MdSubheaderDirective($mdSticky, $compile, $mdTheming, $mdUtil) {
+	  return {
+	    restrict: 'E',
+	    replace: true,
+	    transclude: true,
+	    template: (
+	    '<div class="md-subheader">' +
+	    '  <div class="md-subheader-inner">' +
+	    '    <span class="md-subheader-content"></span>' +
+	    '  </div>' +
+	    '</div>'
+	    ),
+	    link: function postLink(scope, element, attr, controllers, transclude) {
+	      $mdTheming(element);
+	      var outerHTML = element[0].outerHTML;
+
+	      function getContent(el) {
+	        return angular.element(el[0].querySelector('.md-subheader-content'));
+	      }
+
+	      // Transclude the user-given contents of the subheader
+	      // the conventional way.
+	      transclude(scope, function(clone) {
+	        getContent(element).append(clone);
+	      });
+
+	      // Create another clone, that uses the outer and inner contents
+	      // of the element, that will be 'stickied' as the user scrolls.
+	      if (!element.hasClass('md-no-sticky')) {
+	        transclude(scope, function(clone) {
+	          // If the user adds an ng-if or ng-repeat directly to the md-subheader element, the
+	          // compiled clone below will only be a comment tag (since they replace their elements with
+	          // a comment) which cannot be properly passed to the $mdSticky; so we wrap it in our own
+	          // DIV to ensure we have something $mdSticky can use
+	          var wrapperHtml = '<div class="md-subheader-wrapper">' + outerHTML + '</div>';
+	          var stickyClone = $compile(wrapperHtml)(scope);
+
+	          // Append the sticky
+	          $mdSticky(scope, element, stickyClone);
+
+	          // Delay initialization until after any `ng-if`/`ng-repeat`/etc has finished before
+	          // attempting to create the clone
+	          $mdUtil.nextTick(function() {
+	            getContent(stickyClone).append(clone);
+	          });
+	        });
+	      }
+	    }
+	  }
+	}
+	MdSubheaderDirective.$inject = ["$mdSticky", "$compile", "$mdTheming", "$mdUtil"];
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
+	 * @name material.components.swipe
+	 * @description Swipe module!
+	 */
+	/**
+	 * @ngdoc directive
+	 * @module material.components.swipe
+	 * @name mdSwipeLeft
 	 *
 	 * @restrict A
 	 *
 	 * @description
-	 * `mdSidenavFocus` provides a way to specify the focused element when a sidenav opens.
-	 * This is completely optional, as the sidenav itself is focused by default.
+	 * The md-swipe-left directives allows you to specify custom behavior when an element is swiped
+	 * left.
 	 *
 	 * @usage
 	 * <hljs lang="html">
-	 * <md-sidenav>
-	 *   <form>
-	 *     <md-input-container>
-	 *       <label for="testInput">Label</label>
-	 *       <input id="testInput" type="text" md-sidenav-focus>
-	 *     </md-input-container>
-	 *   </form>
-	 * </md-sidenav>
+	 * <div md-swipe-left="onSwipeLeft()">Swipe me left!</div>
 	 * </hljs>
-	 **/
-	function SidenavFocusDirective() {
-	  return {
-	    restrict: 'A',
-	    require: '^mdSidenav',
-	    link: function(scope, element, attr, sidenavCtrl) {
-	      // @see $mdUtil.findFocusTarget(...)
-	    }
-	  };
-	}
+	 */
 	/**
 	 * @ngdoc directive
-	 * @name mdSidenav
-	 * @module material.components.sidenav
-	 * @restrict E
+	 * @module material.components.swipe
+	 * @name mdSwipeRight
+	 *
+	 * @restrict A
 	 *
 	 * @description
-	 *
-	 * A Sidenav component that can be opened and closed programatically.
-	 *
-	 * By default, upon opening it will slide out on top of the main content area.
-	 *
-	 * For keyboard and screen reader accessibility, focus is sent to the sidenav wrapper by default.
-	 * It can be overridden with the `md-sidenav-focus` directive on the child element you want focused.
+	 * The md-swipe-right directives allows you to specify custom behavior when an element is swiped
+	 * right.
 	 *
 	 * @usage
 	 * <hljs lang="html">
-	 * <div layout="row" ng-controller="MyController">
-	 *   <md-sidenav md-component-id="left" class="md-sidenav-left">
-	 *     Left Nav!
-	 *   </md-sidenav>
-	 *
-	 *   <md-content>
-	 *     Center Content
-	 *     <md-button ng-click="openLeftMenu()">
-	 *       Open Left Menu
-	 *     </md-button>
-	 *   </md-content>
-	 *
-	 *   <md-sidenav md-component-id="right"
-	 *     md-is-locked-open="$mdMedia('min-width: 333px')"
-	 *     class="md-sidenav-right">
-	 *     <form>
-	 *       <md-input-container>
-	 *         <label for="testInput">Test input</label>
-	 *         <input id="testInput" type="text"
-	 *                ng-model="data" md-sidenav-focus>
-	 *       </md-input-container>
-	 *     </form>
-	 *   </md-sidenav>
-	 * </div>
+	 * <div md-swipe-right="onSwipeRight()">Swipe me right!</div>
 	 * </hljs>
-	 *
-	 * <hljs lang="js">
-	 * var app = angular.module('myApp', ['ngMaterial']);
-	 * app.controller('MyController', function($scope, $mdSidenav) {
-	 *   $scope.openLeftMenu = function() {
-	 *     $mdSidenav('left').toggle();
-	 *   };
-	 * });
-	 * </hljs>
-	 *
-	 * @param {expression=} md-is-open A model bound to whether the sidenav is opened.
-	 * @param {string=} md-component-id componentId to use with $mdSidenav service.
-	 * @param {expression=} md-is-locked-open When this expression evalutes to true,
-	 * the sidenav 'locks open': it falls into the content's flow instead
-	 * of appearing over it. This overrides the `is-open` attribute.
-	 *
-	 * The $mdMedia() service is exposed to the is-locked-open attribute, which
-	 * can be given a media query or one of the `sm`, `gt-sm`, `md`, `gt-md`, `lg` or `gt-lg` presets.
-	 * Examples:
-	 *
-	 *   - `<md-sidenav md-is-locked-open="shouldLockOpen"></md-sidenav>`
-	 *   - `<md-sidenav md-is-locked-open="$mdMedia('min-width: 1000px')"></md-sidenav>`
-	 *   - `<md-sidenav md-is-locked-open="$mdMedia('sm')"></md-sidenav>` (locks open on small screens)
 	 */
-	function SidenavDirective($mdMedia, $mdUtil, $mdConstant, $mdTheming, $animate, $compile, $parse, $log, $q, $document) {
+
+	angular.module('material.components.swipe', ['material.core'])
+	    .directive('mdSwipeLeft', getDirective('SwipeLeft'))
+	    .directive('mdSwipeRight', getDirective('SwipeRight'));
+
+	function getDirective(name) {
+	  var directiveName = 'md' + name;
+	  var eventName = '$md.' + name.toLowerCase();
+
+	    DirectiveFactory.$inject = ["$parse"];
+	  return DirectiveFactory;
+
+	  /* @ngInject */
+	  function DirectiveFactory($parse) {
+	      return { restrict: 'A', link: postLink };
+	      function postLink(scope, element, attr) {
+	        var fn = $parse(attr[directiveName]);
+	        element.on(eventName, function(ev) {
+	          scope.$apply(function() { fn(scope, { $event: ev }); });
+	        });
+	      }
+	    }
+	}
+
+
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @private
+	 * @ngdoc module
+	 * @name material.components.switch
+	 */
+
+	angular.module('material.components.switch', [
+	  'material.core',
+	  'material.components.checkbox'
+	])
+	  .directive('mdSwitch', MdSwitch);
+
+	/**
+	 * @private
+	 * @ngdoc directive
+	 * @module material.components.switch
+	 * @name mdSwitch
+	 * @restrict E
+	 *
+	 * The switch directive is used very much like the normal [angular checkbox](https://docs.angularjs.org/api/ng/input/input%5Bcheckbox%5D).
+	 *
+	 * As per the [material design spec](http://www.google.com/design/spec/style/color.html#color-ui-color-application)
+	 * the switch is in the accent color by default. The primary color palette may be used with
+	 * the `md-primary` class.
+	 *
+	 * @param {string} ng-model Assignable angular expression to data-bind to.
+	 * @param {string=} name Property name of the form under which the control is published.
+	 * @param {expression=} ng-true-value The value to which the expression should be set when selected.
+	 * @param {expression=} ng-false-value The value to which the expression should be set when not selected.
+	 * @param {string=} ng-change Angular expression to be executed when input changes due to user interaction with the input element.
+	 * @param {boolean=} md-no-ink Use of attribute indicates use of ripple ink effects.
+	 * @param {string=} aria-label Publish the button label used by screen-readers for accessibility. Defaults to the switch's text.
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 * <md-switch ng-model="isActive" aria-label="Finished?">
+	 *   Finished ?
+	 * </md-switch>
+	 *
+	 * <md-switch md-no-ink ng-model="hasInk" aria-label="No Ink Effects">
+	 *   No Ink Effects
+	 * </md-switch>
+	 *
+	 * <md-switch ng-disabled="true" ng-model="isDisabled" aria-label="Disabled">
+	 *   Disabled
+	 * </md-switch>
+	 *
+	 * </hljs>
+	 */
+	function MdSwitch(mdCheckboxDirective, $mdUtil, $mdConstant, $parse, $$rAF, $mdGesture) {
+	  var checkboxDirective = mdCheckboxDirective[0];
+
 	  return {
 	    restrict: 'E',
-	    scope: {
-	      isOpen: '=?mdIsOpen'
-	    },
-	    controller: '$mdSidenavController',
-	    compile: function(element) {
-	      element.addClass('md-closed');
-	      element.attr('tabIndex', '-1');
-	      return postLink;
-	    }
+	    priority: 210, // Run before ngAria
+	    transclude: true,
+	    template:
+	      '<div class="md-container">' +
+	        '<div class="md-bar"></div>' +
+	        '<div class="md-thumb-container">' +
+	          '<div class="md-thumb" md-ink-ripple md-ink-ripple-checkbox></div>' +
+	        '</div>'+
+	      '</div>' +
+	      '<div ng-transclude class="md-label"></div>',
+	    require: '?ngModel',
+	    compile: mdSwitchCompile
 	  };
 
-	  /**
-	   * Directive Post Link function...
-	   */
-	  function postLink(scope, element, attr, sidenavCtrl) {
-	    var lastParentOverFlow;
-	    var triggeringElement = null;
-	    var promise = $q.when(true);
+	  function mdSwitchCompile(element, attr) {
+	    var checkboxLink = checkboxDirective.compile(element, attr);
+	    // No transition on initial load.
+	    element.addClass('md-dragging');
 
-	    var isLockedOpenParsed = $parse(attr.mdIsLockedOpen);
-	    var isLocked = function() {
-	      return isLockedOpenParsed(scope.$parent, {
-	        $media: function(arg) {
-	          $log.warn("$media is deprecated for is-locked-open. Use $mdMedia instead.");
-	          return $mdMedia(arg);
-	        },
-	        $mdMedia: $mdMedia
+	    return function (scope, element, attr, ngModel) {
+	      ngModel = ngModel || $mdUtil.fakeNgModel();
+
+	      var disabledGetter = null;
+	      if (attr.disabled != null) {
+	        disabledGetter = function() { return true; };
+	      } else if (attr.ngDisabled) {
+	        disabledGetter = $parse(attr.ngDisabled);
+	      }
+
+	      var thumbContainer = angular.element(element[0].querySelector('.md-thumb-container'));
+	      var switchContainer = angular.element(element[0].querySelector('.md-container'));
+
+	      // no transition on initial load
+	      $$rAF(function() {
+	        element.removeClass('md-dragging');
 	      });
-	    };
-	    var backdrop = $mdUtil.createBackdrop(scope, "md-sidenav-backdrop md-opaque ng-enter");
 
-	    element.on('$destroy', sidenavCtrl.destroy);
-	    $mdTheming.inherit(backdrop, element);
+	      checkboxLink(scope, element, attr, ngModel);
 
-	    scope.$watch(isLocked, updateIsLocked);
-	    scope.$watch('isOpen', updateIsOpen);
-
-
-	    // Publish special accessor for the Controller instance
-	    sidenavCtrl.$toggleOpen = toggleOpen;
-
-	    /**
-	     * Toggle the DOM classes to indicate `locked`
-	     * @param isLocked
-	     */
-	    function updateIsLocked(isLocked, oldValue) {
-	      scope.isLockedOpen = isLocked;
-	      if (isLocked === oldValue) {
-	        element.toggleClass('md-locked-open', !!isLocked);
-	      } else {
-	        $animate[isLocked ? 'addClass' : 'removeClass'](element, 'md-locked-open');
-	      }
-	      backdrop.toggleClass('md-locked-open', !!isLocked);
-	    }
-
-	    /**
-	     * Toggle the SideNav view and attach/detach listeners
-	     * @param isOpen
-	     */
-	    function updateIsOpen(isOpen) {
-	      // Support deprecated md-sidenav-focus attribute as fallback
-	      var focusEl = $mdUtil.findFocusTarget(element) || $mdUtil.findFocusTarget(element,'[md-sidenav-focus]') || element;
-	      var parent = element.parent();
-
-	      parent[isOpen ? 'on' : 'off']('keydown', onKeyDown);
-	      backdrop[isOpen ? 'on' : 'off']('click', close);
-
-	      if ( isOpen ) {
-	        // Capture upon opening..
-	        triggeringElement = $document[0].activeElement;
-	      }
-
-	      disableParentScroll(isOpen);
-
-	      return promise = $q.all([
-	                isOpen ? $animate.enter(backdrop, parent) : $animate.leave(backdrop),
-	                $animate[isOpen ? 'removeClass' : 'addClass'](element, 'md-closed')
-	              ])
-	              .then(function() {
-	                // Perform focus when animations are ALL done...
-	                if (scope.isOpen) {
-	                  focusEl && focusEl.focus();
-	                }
-	              });
-	    }
-
-	    /**
-	     * Prevent parent scrolling (when the SideNav is open)
-	     */
-	    function disableParentScroll(disabled) {
-	      var parent = element.parent();
-	      if ( disabled && !lastParentOverFlow ) {
-
-	        lastParentOverFlow = parent.css('overflow');
-	        parent.css('overflow', 'hidden');
-
-	      } else if (angular.isDefined(lastParentOverFlow)) {
-
-	        parent.css('overflow', lastParentOverFlow);
-	        lastParentOverFlow = undefined;
-
-	      }
-	    }
-
-	    /**
-	     * Toggle the sideNav view and publish a promise to be resolved when
-	     * the view animation finishes.
-	     *
-	     * @param isOpen
-	     * @returns {*}
-	     */
-	    function toggleOpen( isOpen ) {
-	      if (scope.isOpen == isOpen ) {
-
-	        return $q.when(true);
-
-	      } else {
-	        return $q(function(resolve){
-	          // Toggle value to force an async `updateIsOpen()` to run
-	          scope.isOpen = isOpen;
-
-	          $mdUtil.nextTick(function() {
-	            // When the current `updateIsOpen()` animation finishes
-	            promise.then(function(result) {
-
-	              if ( !scope.isOpen ) {
-	                // reset focus to originating element (if available) upon close
-	                triggeringElement && triggeringElement.focus();
-	                triggeringElement = null;
-	              }
-
-	              resolve(result);
-	            });
-	          });
-
+	      if (disabledGetter) {
+	        scope.$watch(disabledGetter, function(isDisabled) {
+	          element.attr('tabindex', isDisabled ? -1 : 0);
 	        });
-
 	      }
-	    }
 
-	    /**
-	     * Auto-close sideNav when the `escape` key is pressed.
-	     * @param evt
-	     */
-	    function onKeyDown(ev) {
-	      var isEscape = (ev.keyCode === $mdConstant.KEY_CODE.ESCAPE);
-	      return isEscape ? close(ev) : $q.when(true);
-	    }
+	      // These events are triggered by setup drag
+	      $mdGesture.register(switchContainer, 'drag');
+	      switchContainer
+	        .on('$md.dragstart', onDragStart)
+	        .on('$md.drag', onDrag)
+	        .on('$md.dragend', onDragEnd);
 
-	    /**
-	     * With backdrop `clicks` or `escape` key-press, immediately
-	     * apply the CSS close transition... Then notify the controller
-	     * to close() and perform its own actions.
-	     */
-	    function close(ev) {
-	      ev.preventDefault();
-	      ev.stopPropagation();
+	      var drag;
+	      function onDragStart(ev) {
+	        // Don't go if the switch is disabled.
+	        if (disabledGetter && disabledGetter(scope)) return;
+	        ev.stopPropagation();
 
-	      return sidenavCtrl.close();
-	    }
+	        element.addClass('md-dragging');
+	        drag = {width: thumbContainer.prop('offsetWidth')};
+	        element.removeClass('transition');
+	      }
 
+	      function onDrag(ev) {
+	        if (!drag) return;
+	        ev.stopPropagation();
+	        ev.srcEvent && ev.srcEvent.preventDefault();
+
+	        var percent = ev.pointer.distanceX / drag.width;
+
+	        //if checked, start from right. else, start from left
+	        var translate = ngModel.$viewValue ?  1 + percent : percent;
+	        // Make sure the switch stays inside its bounds, 0-1%
+	        translate = Math.max(0, Math.min(1, translate));
+
+	        thumbContainer.css($mdConstant.CSS.TRANSFORM, 'translate3d(' + (100*translate) + '%,0,0)');
+	        drag.translate = translate;
+	      }
+
+	      function onDragEnd(ev) {
+	        if (!drag) return;
+	        ev.stopPropagation();
+
+	        element.removeClass('md-dragging');
+	        thumbContainer.css($mdConstant.CSS.TRANSFORM, '');
+
+	        // We changed if there is no distance (this is a click a click),
+	        // or if the drag distance is >50% of the total.
+	        var isChanged = ngModel.$viewValue ? drag.translate > 0.5 : drag.translate < 0.5;
+	        if (isChanged) {
+	          applyModelValue(!ngModel.$viewValue);
+	        }
+	        drag = null;
+	      }
+
+	      function applyModelValue(newValue) {
+	        scope.$apply(function() {
+	          ngModel.$setViewValue(newValue);
+	          ngModel.$render();
+	        });
+	      }
+
+	    };
 	  }
-	}
-	SidenavDirective.$inject = ["$mdMedia", "$mdUtil", "$mdConstant", "$mdTheming", "$animate", "$compile", "$parse", "$log", "$q", "$document"];
 
-	/*
-	 * @private
-	 * @ngdoc controller
-	 * @name SidenavController
-	 * @module material.components.sidenav
+
+	}
+	MdSwitch.$inject = ["mdCheckboxDirective", "$mdUtil", "$mdConstant", "$parse", "$$rAF", "$mdGesture"];
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
+	 * @name material.components.tabs
+	 * @description
+	 *
+	 *  Tabs, created with the `<md-tabs>` directive provide *tabbed* navigation with different styles.
+	 *  The Tabs component consists of clickable tabs that are aligned horizontally side-by-side.
+	 *
+	 *  Features include support for:
+	 *
+	 *  - static or dynamic tabs,
+	 *  - responsive designs,
+	 *  - accessibility support (ARIA),
+	 *  - tab pagination,
+	 *  - external or internal tab content,
+	 *  - focus indicators and arrow-key navigations,
+	 *  - programmatic lookup and access to tab controllers, and
+	 *  - dynamic transitions through different tab contents.
 	 *
 	 */
-	function SidenavController($scope, $element, $attrs, $mdComponentRegistry, $q) {
-
-	  var self = this;
-
-	  // Use Default internal method until overridden by directive postLink
-
-	  // Synchronous getters
-	  self.isOpen = function() { return !!$scope.isOpen; };
-	  self.isLockedOpen = function() { return !!$scope.isLockedOpen; };
-
-	  // Async actions
-	  self.open   = function() { return self.$toggleOpen( true );  };
-	  self.close  = function() { return self.$toggleOpen( false ); };
-	  self.toggle = function() { return self.$toggleOpen( !$scope.isOpen );  };
-	  self.$toggleOpen = function(value) { return $q.when($scope.isOpen = value); };
-
-	  self.destroy = $mdComponentRegistry.register(self, $attrs.mdComponentId);
-	}
-	SidenavController.$inject = ["$scope", "$element", "$attrs", "$mdComponentRegistry", "$q"];
+	/*
+	 * @see js folder for tabs implementation
+	 */
+	angular.module('material.components.tabs', [
+	  'material.core',
+	  'material.components.icon'
+	]);
 
 	})();
 	(function(){
@@ -48346,7 +49465,7 @@
 	    element.on('scroll touchmove', function() {
 	      if (!isScrolling) {
 	        isScrolling = true;
-	        $$rAF(loopScrollEvent);
+	        $$rAF.throttle(loopScrollEvent);
 	        element.triggerHandler('$scrollstart');
 	      }
 	      element.triggerHandler('$scroll');
@@ -48359,374 +49478,13 @@
 	        element.triggerHandler('$scrollend');
 	      } else {
 	        element.triggerHandler('$scroll');
-	        $$rAF(loopScrollEvent);
+	        $$rAF.throttle(loopScrollEvent);
 	      }
 	    }
 	  }
 
 	}
 	MdSticky.$inject = ["$document", "$mdConstant", "$$rAF", "$mdUtil"];
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
-	 * @name material.components.subheader
-	 * @description
-	 * SubHeader module
-	 *
-	 *  Subheaders are special list tiles that delineate distinct sections of a
-	 *  list or grid list and are typically related to the current filtering or
-	 *  sorting criteria. Subheader tiles are either displayed inline with tiles or
-	 *  can be associated with content, for example, in an adjacent column.
-	 *
-	 *  Upon scrolling, subheaders remain pinned to the top of the screen and remain
-	 *  pinned until pushed on or off screen by the next subheader. @see [Material
-	 *  Design Specifications](https://www.google.com/design/spec/components/subheaders.html)
-	 *
-	 *  > To improve the visual grouping of content, use the system color for your subheaders.
-	 *
-	 */
-	angular
-	  .module('material.components.subheader', [
-	    'material.core',
-	    'material.components.sticky'
-	  ])
-	  .directive('mdSubheader', MdSubheaderDirective);
-
-	/**
-	 * @ngdoc directive
-	 * @name mdSubheader
-	 * @module material.components.subheader
-	 *
-	 * @restrict E
-	 *
-	 * @description
-	 * The `<md-subheader>` directive is a subheader for a section. By default it is sticky.
-	 * You can make it not sticky by applying the `md-no-sticky` class to the subheader.
-	 *
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 * <md-subheader>Online Friends</md-subheader>
-	 * </hljs>
-	 */
-
-	function MdSubheaderDirective($mdSticky, $compile, $mdTheming, $mdUtil) {
-	  return {
-	    restrict: 'E',
-	    replace: true,
-	    transclude: true,
-	    template: (
-	    '<div class="md-subheader">' +
-	    '  <div class="md-subheader-inner">' +
-	    '    <span class="md-subheader-content"></span>' +
-	    '  </div>' +
-	    '</div>'
-	    ),
-	    link: function postLink(scope, element, attr, controllers, transclude) {
-	      $mdTheming(element);
-	      var outerHTML = element[0].outerHTML;
-
-	      function getContent(el) {
-	        return angular.element(el[0].querySelector('.md-subheader-content'));
-	      }
-
-	      // Transclude the user-given contents of the subheader
-	      // the conventional way.
-	      transclude(scope, function(clone) {
-	        getContent(element).append(clone);
-	      });
-
-	      // Create another clone, that uses the outer and inner contents
-	      // of the element, that will be 'stickied' as the user scrolls.
-	      if (!element.hasClass('md-no-sticky')) {
-	        transclude(scope, function(clone) {
-	          // If the user adds an ng-if or ng-repeat directly to the md-subheader element, the
-	          // compiled clone below will only be a comment tag (since they replace their elements with
-	          // a comment) which cannot be properly passed to the $mdSticky; so we wrap it in our own
-	          // DIV to ensure we have something $mdSticky can use
-	          var wrapperHtml = '<div class="md-subheader-wrapper">' + outerHTML + '</div>';
-	          var stickyClone = $compile(wrapperHtml)(scope);
-
-	          // Append the sticky
-	          $mdSticky(scope, element, stickyClone);
-
-	          // Delay initialization until after any `ng-if`/`ng-repeat`/etc has finished before
-	          // attempting to create the clone
-	          $mdUtil.nextTick(function() {
-	            getContent(stickyClone).append(clone);
-	          });
-	        });
-	      }
-	    }
-	  }
-	}
-	MdSubheaderDirective.$inject = ["$mdSticky", "$compile", "$mdTheming", "$mdUtil"];
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
-	 * @name material.components.swipe
-	 * @description Swipe module!
-	 */
-	/**
-	 * @ngdoc directive
-	 * @module material.components.swipe
-	 * @name mdSwipeLeft
-	 *
-	 * @restrict A
-	 *
-	 * @description
-	 * The md-swipe-left directives allows you to specify custom behavior when an element is swiped
-	 * left.
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 * <div md-swipe-left="onSwipeLeft()">Swipe me left!</div>
-	 * </hljs>
-	 */
-	/**
-	 * @ngdoc directive
-	 * @module material.components.swipe
-	 * @name mdSwipeRight
-	 *
-	 * @restrict A
-	 *
-	 * @description
-	 * The md-swipe-right directives allows you to specify custom behavior when an element is swiped
-	 * right.
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 * <div md-swipe-right="onSwipeRight()">Swipe me right!</div>
-	 * </hljs>
-	 */
-
-	angular.module('material.components.swipe', ['material.core'])
-	    .directive('mdSwipeLeft', getDirective('SwipeLeft'))
-	    .directive('mdSwipeRight', getDirective('SwipeRight'));
-
-	function getDirective(name) {
-	  var directiveName = 'md' + name;
-	  var eventName = '$md.' + name.toLowerCase();
-
-	    DirectiveFactory.$inject = ["$parse"];
-	  return DirectiveFactory;
-
-	  /* @ngInject */
-	  function DirectiveFactory($parse) {
-	      return { restrict: 'A', link: postLink };
-	      function postLink(scope, element, attr) {
-	        var fn = $parse(attr[directiveName]);
-	        element.on(eventName, function(ev) {
-	          scope.$apply(function() { fn(scope, { $event: ev }); });
-	        });
-	      }
-	    }
-	}
-
-
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @private
-	 * @ngdoc module
-	 * @name material.components.switch
-	 */
-
-	angular.module('material.components.switch', [
-	  'material.core',
-	  'material.components.checkbox'
-	])
-	  .directive('mdSwitch', MdSwitch);
-
-	/**
-	 * @private
-	 * @ngdoc directive
-	 * @module material.components.switch
-	 * @name mdSwitch
-	 * @restrict E
-	 *
-	 * The switch directive is used very much like the normal [angular checkbox](https://docs.angularjs.org/api/ng/input/input%5Bcheckbox%5D).
-	 *
-	 * As per the [material design spec](http://www.google.com/design/spec/style/color.html#color-ui-color-application)
-	 * the switch is in the accent color by default. The primary color palette may be used with
-	 * the `md-primary` class.
-	 *
-	 * @param {string} ng-model Assignable angular expression to data-bind to.
-	 * @param {string=} name Property name of the form under which the control is published.
-	 * @param {expression=} ng-true-value The value to which the expression should be set when selected.
-	 * @param {expression=} ng-false-value The value to which the expression should be set when not selected.
-	 * @param {string=} ng-change Angular expression to be executed when input changes due to user interaction with the input element.
-	 * @param {boolean=} md-no-ink Use of attribute indicates use of ripple ink effects.
-	 * @param {string=} aria-label Publish the button label used by screen-readers for accessibility. Defaults to the switch's text.
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 * <md-switch ng-model="isActive" aria-label="Finished?">
-	 *   Finished ?
-	 * </md-switch>
-	 *
-	 * <md-switch md-no-ink ng-model="hasInk" aria-label="No Ink Effects">
-	 *   No Ink Effects
-	 * </md-switch>
-	 *
-	 * <md-switch ng-disabled="true" ng-model="isDisabled" aria-label="Disabled">
-	 *   Disabled
-	 * </md-switch>
-	 *
-	 * </hljs>
-	 */
-	function MdSwitch(mdCheckboxDirective, $mdTheming, $mdUtil, $document, $mdConstant, $parse, $$rAF, $mdGesture) {
-	  var checkboxDirective = mdCheckboxDirective[0];
-
-	  return {
-	    restrict: 'E',
-	    priority:210, // Run before ngAria
-	    transclude: true,
-	    template:
-	      '<div class="md-container">' +
-	        '<div class="md-bar"></div>' +
-	        '<div class="md-thumb-container">' +
-	          '<div class="md-thumb" md-ink-ripple md-ink-ripple-checkbox></div>' +
-	        '</div>'+
-	      '</div>' +
-	      '<div ng-transclude class="md-label">' +
-	      '</div>',
-	    require: '?ngModel',
-	    compile: compile
-	  };
-
-	  function compile(element, attr) {
-	    var checkboxLink = checkboxDirective.compile(element, attr);
-	    // no transition on initial load
-	    element.addClass('md-dragging');
-
-	    return function (scope, element, attr, ngModel) {
-	      ngModel = ngModel || $mdUtil.fakeNgModel();
-	      var disabledGetter = $parse(attr.ngDisabled);
-	      var thumbContainer = angular.element(element[0].querySelector('.md-thumb-container'));
-	      var switchContainer = angular.element(element[0].querySelector('.md-container'));
-
-	      // no transition on initial load
-	      $$rAF(function() {
-	        element.removeClass('md-dragging');
-	      });
-
-	      checkboxLink(scope, element, attr, ngModel);
-
-	      if (angular.isDefined(attr.ngDisabled)) {
-	        scope.$watch(disabledGetter, function(isDisabled) {
-	          element.attr('tabindex', isDisabled ? -1 : 0);
-	        });
-	      }
-
-	      // These events are triggered by setup drag
-	      $mdGesture.register(switchContainer, 'drag');
-	      switchContainer
-	        .on('$md.dragstart', onDragStart)
-	        .on('$md.drag', onDrag)
-	        .on('$md.dragend', onDragEnd);
-
-	      var drag;
-	      function onDragStart(ev) {
-	        // Don't go if ng-disabled===true
-	        if (disabledGetter(scope)) return;
-	        ev.stopPropagation();
-
-	        element.addClass('md-dragging');
-	        drag = {
-	          width: thumbContainer.prop('offsetWidth')
-	        };
-	        element.removeClass('transition');
-	      }
-
-	      function onDrag(ev) {
-	        if (!drag) return;
-	        ev.stopPropagation();
-	        ev.srcEvent && ev.srcEvent.preventDefault();
-
-	        var percent = ev.pointer.distanceX / drag.width;
-
-	        //if checked, start from right. else, start from left
-	        var translate = ngModel.$viewValue ?  1 + percent : percent;
-	        // Make sure the switch stays inside its bounds, 0-1%
-	        translate = Math.max(0, Math.min(1, translate));
-
-	        thumbContainer.css($mdConstant.CSS.TRANSFORM, 'translate3d(' + (100*translate) + '%,0,0)');
-	        drag.translate = translate;
-	      }
-
-	      function onDragEnd(ev) {
-	        if (!drag) return;
-	        ev.stopPropagation();
-
-	        element.removeClass('md-dragging');
-	        thumbContainer.css($mdConstant.CSS.TRANSFORM, '');
-
-	        // We changed if there is no distance (this is a click a click),
-	        // or if the drag distance is >50% of the total.
-	        var isChanged = ngModel.$viewValue ? drag.translate < 0.5 : drag.translate > 0.5;
-	        if (isChanged) {
-	          applyModelValue(!ngModel.$viewValue);
-	        }
-	        drag = null;
-	      }
-
-	      function applyModelValue(newValue) {
-	        scope.$apply(function() {
-	          ngModel.$setViewValue(newValue);
-	          ngModel.$render();
-	        });
-	      }
-
-	    };
-	  }
-
-
-	}
-	MdSwitch.$inject = ["mdCheckboxDirective", "$mdTheming", "$mdUtil", "$document", "$mdConstant", "$parse", "$$rAF", "$mdGesture"];
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
-	 * @name material.components.tabs
-	 * @description
-	 *
-	 *  Tabs, created with the `<md-tabs>` directive provide *tabbed* navigation with different styles.
-	 *  The Tabs component consists of clickable tabs that are aligned horizontally side-by-side.
-	 *
-	 *  Features include support for:
-	 *
-	 *  - static or dynamic tabs,
-	 *  - responsive designs,
-	 *  - accessibility support (ARIA),
-	 *  - tab pagination,
-	 *  - external or internal tab content,
-	 *  - focus indicators and arrow-key navigations,
-	 *  - programmatic lookup and access to tab controllers, and
-	 *  - dynamic transitions through different tab contents.
-	 *
-	 */
-	/*
-	 * @see js folder for tabs implementation
-	 */
-	angular.module('material.components.tabs', [
-	  'material.core',
-	  'material.components.icon'
-	]);
 
 	})();
 	(function(){
@@ -48745,11 +49503,20 @@
 	  .directive('mdToast', MdToastDirective)
 	  .provider('$mdToast', MdToastProvider);
 
-	function MdToastDirective() {
+	/* @ngInject */
+	function MdToastDirective($mdToast) {
 	  return {
-	    restrict: 'E'
+	    restrict: 'E',
+	    link: function postLink(scope, element, attr) {
+	      // When navigation force destroys an interimElement, then
+	      // listen and $destroy() that interim instance...
+	      scope.$on('$destroy', function() {
+	        $mdToast.destroy();
+	      });
+	    }
 	  };
 	}
+	MdToastDirective.$inject = ["$mdToast"];
 
 	/**
 	 * @ngdoc service
@@ -48857,7 +49624,7 @@
 	 *   - `position` - `{string=}`: Where to place the toast. Available: any combination
 	 *     of 'bottom', 'left', 'top', 'right', 'fit'. Default: 'bottom left'.
 	 *   - `controller` - `{string=}`: The controller to associate with this toast.
-	 *     The controller will be injected the local `$hideToast`, which is a function
+	 *     The controller will be injected the local `$mdToast.hide( )`, which is a function
 	 *     used to hide the toast.
 	 *   - `locals` - `{string=}`: An object containing key/value pairs. The keys will
 	 *     be used as names of values to inject into the controller. For example,
@@ -48966,7 +49733,7 @@
 	    function onShow(scope, element, options) {
 	      activeToastContent = options.content;
 
-	      element = $mdUtil.extractElementByName(element, 'md-toast');
+	      element = $mdUtil.extractElementByName(element, 'md-toast', true);
 	      options.onSwipe = function(ev, gesture) {
 	        //Add swipeleft/swiperight class to element so it can animate correctly
 	        element.addClass('md-' + ev.type.replace('$md.',''));
@@ -48989,7 +49756,7 @@
 	      element.off(SWIPE_EVENTS, options.onSwipe);
 	      options.parent.removeClass(options.openClass);
 
-	      return $animate.leave(element);
+	      return (options.$destroy == true) ? element.remove() : $animate.leave(element);
 	    }
 
 	    function toastOpenClass(position) {
@@ -49278,9 +50045,8 @@
 	    restrict: 'E',
 	    transclude: true,
 	    priority:210, // Before ngAria
-	    template: '\
-	        <div class="md-background"></div>\
-	        <div class="md-content" ng-transclude></div>',
+	    template: '<div class="md-background"></div>' +
+	              '<div class="md-content" ng-transclude></div>',
 	    scope: {
 	      visible: '=?mdVisible',
 	      delay: '=?mdDelay',
@@ -49342,9 +50108,12 @@
 	     */
 	    function getParentWithPointerEvents () {
 	      var parent = element.parent();
-	      while (parent && hasComputedStyleValue('pointer-events','none', parent[0])) {
+
+	      // jqLite might return a non-null, but still empty, parent; so check for parent and length
+	      while (hasComputedStyleValue('pointer-events','none', parent)) {
 	        parent = parent.parent();
 	      }
+
 	      return parent;
 	    }
 
@@ -49359,12 +50128,17 @@
 
 
 	    function hasComputedStyleValue(key, value, target) {
-	      key    = attr.$normalize(key);
-	      target = target || element[0];
+	      var hasValue = false;
 
-	      var computedStyles = $window.getComputedStyle(target);
+	      if ( target && target.length  ) {
+	        key    = attr.$normalize(key);
+	        target = target[0] || element[0];
 
-	      return angular.isDefined(computedStyles[key]) && (computedStyles[key] == value);
+	        var computedStyles = $window.getComputedStyle(target);
+	        hasValue = angular.isDefined(computedStyles[key]) && (computedStyles[key] == value);
+	      }
+
+	      return hasValue;
 	    }
 
 	    function bindEvents () {
@@ -49395,6 +50169,7 @@
 	        var autohide = scope.hasOwnProperty('autohide') ? scope.autohide : attr.hasOwnProperty('mdAutohide');
 	        if (autohide || mouseActive || ($document[0].activeElement !== parent[0]) ) {
 	          parent.off('blur mouseleave touchend touchcancel', leaveHandler );
+	          parent.triggerHandler("blur");
 	          setVisible(false);
 	        }
 	        mouseActive = false;
@@ -50016,7 +50791,7 @@
 	            this.$$rAF(angular.bind(this, this.readItemSize_));
 	          }
 	        }));
-	    this.$scope.$digest();
+	    if (!this.$scope.$root.$$phase) this.$scope.$digest();
 
 	    return;
 	  } else if (!this.sized) {
@@ -50397,7 +51172,7 @@
 	   * @returns {*}
 	   */
 	  function positionDropdown () {
-	    if (!elements) return $mdUtil.nextTick(positionDropdown, false);
+	    if (!elements) return $mdUtil.nextTick(positionDropdown, false, $scope);
 	    var hrect  = elements.wrap.getBoundingClientRect(),
 	        vrect  = elements.snap.getBoundingClientRect(),
 	        root   = elements.root.getBoundingClientRect(),
@@ -50472,7 +51247,12 @@
 	   */
 	  function cleanup () {
 	    angular.element($window).off('resize', positionDropdown);
-	    elements.$.scrollContainer.remove();
+	    if ( elements ){
+	      var items = 'ul scroller scrollContainer input'.split(' ');
+	      angular.forEach(items, function(key){
+	        elements.$[key].remove();
+	      });
+	    }
 	  }
 
 	  /**
@@ -50527,10 +51307,20 @@
 	  function handleHiddenChange (hidden, oldHidden) {
 	    if (!hidden && oldHidden) {
 	      positionDropdown();
-	      if (elements) $mdUtil.nextTick(function () { $mdUtil.disableScrollAround(elements.ul); }, false);
-	    } else if (hidden && !oldHidden) {
-	      $mdUtil.nextTick(function () { $mdUtil.enableScrolling(); }, false);
-	    }
+
+	      if (elements)
+	        $mdUtil.nextTick(function () {
+
+	          $mdUtil.disableScrollAround(elements.ul);
+
+	        }, false, $scope);
+	      } else if (hidden && !oldHidden) {
+	        $mdUtil.nextTick(function () {
+
+	          $mdUtil.enableScrolling();
+
+	        }, false, $scope);
+	      }
 	  }
 
 	  /**
@@ -50852,7 +51642,7 @@
 	        if (items.success) items.success(handleResults);
 	        if (items.then)    items.then(handleResults);
 	        if (items.finally) items.finally(function () { ctrl.loading = false; });
-	      });
+	      },true, $scope);
 	    }
 	    function handleResults (matches) {
 	      cache[ term ] = matches;
@@ -51143,7 +51933,7 @@
 	        var templateTag = element.find('md-item-template').detach(),
 	            html = templateTag.length ? templateTag.html() : element.html();
 	        if (!templateTag.length) element.empty();
-	        return html;
+	        return '<md-autocomplete-parent-scope md-autocomplete-replace>' + html + '</md-autocomplete-parent-scope>';
 	      }
 
 	      function getNoItemsTemplate() {
@@ -51216,6 +52006,56 @@
 	  };
 	}
 
+	})();
+	(function(){
+	"use strict";
+
+	angular
+	  .module('material.components.autocomplete')
+	  .directive('mdAutocompleteParentScope', MdAutocompleteItemScopeDirective);
+
+	function MdAutocompleteItemScopeDirective($compile, $mdUtil) {
+	  return {
+	    restrict: 'AE',
+	    link: postLink,
+	    terminal: true
+	  };
+
+	  function postLink(scope, element, attr) {
+	    var ctrl = scope.$mdAutocompleteCtrl;
+	    var newScope = ctrl.parent.$new();
+	    var itemName = ctrl.itemName;
+
+	    // Watch for changes to our scope's variables and copy them to the new scope
+	    watchVariable('$index', '$index');
+	    watchVariable('item', itemName);
+
+	    // Recompile the contents with the new/modified scope
+	    $compile(element.contents())(newScope);
+
+	    // Replace it if required
+	    if (attr.hasOwnProperty('mdAutocompleteReplace')) {
+	      element.after(element.contents());
+	      element.remove();
+	    }
+
+	    /**
+	     * Creates a watcher for variables that are copied from the parent scope
+	     * @param variable
+	     * @param alias
+	     */
+	    function watchVariable(variable, alias) {
+	      newScope[alias] = scope[variable];
+
+	      scope.$watch(variable, function(value) {
+	        $mdUtil.nextTick(function() {
+	          newScope[alias] = value;
+	        });
+	      });
+	    }
+	  }
+	}
+	MdAutocompleteItemScopeDirective.$inject = ["$compile", "$mdUtil"];
 	})();
 	(function(){
 	"use strict";
@@ -51315,35 +52155,6 @@
 	  };
 	}
 	MdHighlight.$inject = ["$interpolate", "$parse"];
-
-	})();
-	(function(){
-	"use strict";
-
-	angular
-	    .module('material.components.autocomplete')
-	    .directive('mdAutocompleteParentScope', MdAutocompleteParentScope);
-
-	function MdAutocompleteParentScope ($compile) {
-	  return {
-	    restrict: 'A',
-	    terminal: true,
-	    link:     postLink,
-	    scope:    false
-	  };
-	  function postLink (scope, element, attr) {
-	    var ctrl = scope.$parent.$mdAutocompleteCtrl;
-
-	    // TODO: transclude self might make it possible to do this without
-	    // re-compiling, which is slow.
-	    $compile(element.contents())(ctrl.parent);
-	    if (attr.hasOwnProperty('mdAutocompleteReplace')) {
-	      element.after(element.contents());
-	      element.remove();
-	    }
-	  }
-	}
-	MdAutocompleteParentScope.$inject = ["$compile"];
 
 	})();
 	(function(){
@@ -51898,17 +52709,19 @@
 	};
 
 	MdChipsCtrl.prototype.configureAutocomplete = function(ctrl) {
-	  this.hasAutocomplete = true;
-	  ctrl.registerSelectedItemWatcher(angular.bind(this, function (item) {
-	    if (item) {
-	      this.appendChip(item);
-	      this.resetChipBuffer();
-	    }
-	  }));
+	  if ( ctrl ){
+	    this.hasAutocomplete = true;
+	    ctrl.registerSelectedItemWatcher(angular.bind(this, function (item) {
+	      if (item) {
+	        this.appendChip(item);
+	        this.resetChipBuffer();
+	      }
+	    }));
 
-	  this.$element.find('input')
-	      .on('focus',angular.bind(this, this.onInputFocus) )
-	      .on('blur', angular.bind(this, this.onInputBlur) );
+	    this.$element.find('input')
+	        .on('focus',angular.bind(this, this.onInputFocus) )
+	        .on('blur', angular.bind(this, this.onInputBlur) );
+	  }
 	};
 
 	MdChipsCtrl.prototype.hasFocus = function () {
@@ -53314,7 +54127,7 @@
 	      preserveElement: self.isInMenuBar || self.nestedMenus.length > 0,
 	      parent: self.isInMenuBar ? $element : 'body'
 	    });
-	  }
+	  };
 
 	  // Expose a open function to the child scope for html to use
 	  $scope.$mdOpenMenu = this.open;
@@ -53347,6 +54160,10 @@
 	    this.containerProxy && this.containerProxy(ev);
 	  };
 
+	  this.destroy = function() {
+	    return $mdMenu.destroy();
+	  };
+
 	  // Use the $mdMenu interim element service to close the menu contents
 	  this.close = function closeMenu(skipFocus, closeOpts) {
 	    if ( !self.isOpen ) return;
@@ -53354,12 +54171,13 @@
 
 	    $scope.$emit('$mdMenuClose', $element);
 	    $mdMenu.hide(null, closeOpts);
+
 	    if (!skipFocus) {
 	      var el = self.restoreFocusTo || $element.find('button')[0];
 	      if (el instanceof angular.element) el = el[0];
-	      el.focus();
+	      if (el) el.focus();
 	    }
-	  }
+	  };
 
 	  /**
 	   * Build a nice object out of our string attribute which specifies the
@@ -53600,8 +54418,11 @@
 	    mdMenuCtrl.init(menuContainer, { isInMenuBar: isInMenuBar });
 
 	    scope.$on('$destroy', function() {
-	      menuContainer.remove();
-	      mdMenuCtrl.close();
+	      mdMenuCtrl
+	        .destroy()
+	        .finally(function(){
+	          menuContainer.remove();
+	        });
 	    });
 
 	  }
@@ -53629,7 +54450,7 @@
 	function MenuProvider($$interimElementProvider) {
 	  var MENU_EDGE_MARGIN = 8;
 
-	  menuDefaultOptions.$inject = ["$mdUtil", "$mdTheming", "$mdConstant", "$document", "$window", "$q", "$$rAF", "$animateCss", "$animate", "$timeout"];
+	  menuDefaultOptions.$inject = ["$mdUtil", "$mdTheming", "$mdConstant", "$document", "$window", "$q", "$$rAF", "$animateCss", "$animate"];
 	  return $$interimElementProvider('$mdMenu')
 	    .setDefaults({
 	      methods: ['target'],
@@ -53637,7 +54458,7 @@
 	    });
 
 	  /* @ngInject */
-	  function menuDefaultOptions($mdUtil, $mdTheming, $mdConstant, $document, $window, $q, $$rAF, $animateCss, $animate, $timeout) {
+	  function menuDefaultOptions($mdUtil, $mdTheming, $mdConstant, $document, $window, $q, $$rAF, $animateCss, $animate) {
 	    var animator = $mdUtil.dom.animator;
 
 	    return {
@@ -53678,14 +54499,8 @@
 	       * Hide and destroys the backdrop created by showBackdrop()
 	       */
 	      return function hideBackdrop() {
-	        if (options.backdrop) {
-	          // Override duration to immediately remove invisible backdrop
-	          options.backdrop.off('click');
-	          $animate.leave(options.backdrop, {duration:0});
-	        }
-	        if (options.disableParentScroll) {
-	          options.restoreScroll();
-	        }
+	        if (options.backdrop) options.backdrop.remove();
+	        if (options.disableParentScroll) options.restoreScroll();
 	      };
 	    }
 
@@ -53698,14 +54513,28 @@
 	      opts.cleanupResizing();
 	      opts.hideBackdrop();
 
-	      return $animateCss(element, {addClass: 'md-leave'})
-	        .start()
-	        .then(function() {
-	          element.removeClass('md-active');
+	      // For navigation $destroy events, do a quick, non-animated removal,
+	      // but for normal closes (from clicks, etc) animate the removal
 
-	          detachElement(element, opts);
-	          opts.alreadyOpen = false;
-	        });
+	      return (opts.$destroy === true) ? detachAndClean() : animateRemoval().then( detachAndClean );
+
+	      /**
+	       * For normal closes, animate the removal.
+	       * For forced closes (like $destroy events), skip the animations
+	       */
+	      function animateRemoval() {
+	        return $animateCss(element, {addClass: 'md-leave'}).start();
+	      }
+
+	      /**
+	       * Detach the element
+	       */
+	      function detachAndClean() {
+	        element.removeClass('md-active');
+	        detachElement(element, opts);
+	        opts.alreadyOpen = false;
+	      }
+
 	    }
 
 	    /**
@@ -53820,10 +54649,14 @@
 	        opts.menuContentEl[0].addEventListener('click', captureClickListener, true);
 
 	        // kick off initial focus in the menu on the first element
-	        var focusTarget = opts.menuContentEl[0].querySelector('[md-menu-focus-target]') ||
-	          opts.menuContentEl[0].firstElementChild.querySelector('[tabindex]') ||
-	          opts.menuContentEl[0].firstElementChild.firstElementChild;
-	        focusTarget.focus();
+	        var focusTarget = opts.menuContentEl[0].querySelector('[md-menu-focus-target]');
+	        if ( !focusTarget && firstChild ) {
+	          var firstChild = opts.menuContentEl[0].firstElementChild;
+
+	          focusTarget = firstChild.querySelector('[tabindex]') || firstChild.firstElementChild;
+	        }
+
+	        focusTarget && focusTarget.focus();
 
 	        return function cleanupInteraction() {
 	          element.removeClass('md-clickable');
@@ -53976,7 +54809,7 @@
 	    }
 
 	    /**
-	     * Use browser to remove this element without triggering a $destory event
+	     * Use browser to remove this element without triggering a $destroy event
 	     */
 	    function detachElement(element, opts) {
 	      if (!opts.preserveElement) {
@@ -54013,24 +54846,22 @@
 	        right: boundryNodeRect.right - MENU_EDGE_MARGIN
 	      };
 
-	      var alignTarget, alignTargetRect, existingOffsets;
+	      var alignTarget, alignTargetRect = { top:0, left : 0, right:0, bottom:0 }, existingOffsets  = { top:0, left : 0, right:0, bottom:0  };
 	      var positionMode = opts.mdMenuCtrl.positionMode();
 
 	      if (positionMode.top == 'target' || positionMode.left == 'target' || positionMode.left == 'target-right') {
-	        // TODO: Allow centering on an arbitrary node, for now center on first menu-item's child
 	        alignTarget = firstVisibleChild();
-	        if (!alignTarget) {
-	          throw Error('Error positioning menu. No visible children.');
+	        if ( alignTarget ) {
+	          // TODO: Allow centering on an arbitrary node, for now center on first menu-item's child
+	          alignTarget = alignTarget.firstElementChild || alignTarget;
+	          alignTarget = alignTarget.querySelector('[md-menu-align-target]') || alignTarget;
+	          alignTargetRect = alignTarget.getBoundingClientRect();
+
+	          existingOffsets = {
+	            top: parseFloat(containerNode.style.top || 0),
+	            left: parseFloat(containerNode.style.left || 0)
+	          };
 	        }
-
-	        alignTarget = alignTarget.firstElementChild || alignTarget;
-	        alignTarget = alignTarget.querySelector('[md-menu-align-target]') || alignTarget;
-	        alignTargetRect = alignTarget.getBoundingClientRect();
-
-	        existingOffsets = {
-	          top: parseFloat(containerNode.style.top || 0),
-	          left: parseFloat(containerNode.style.left || 0)
-	        };
 	      }
 
 	      var position = {};
@@ -55112,7 +55943,6 @@
 	          handleResizeWhenVisible.watcher();
 	          handleResizeWhenVisible.watcher = null;
 
-	          // we have to trigger our own $apply so that the DOM bindings will update
 	          handleWindowResize();
 	        }
 	      }, false);
@@ -55198,11 +56028,11 @@
 	   * Update size calculations when the window is resized.
 	   */
 	  function handleWindowResize () {
-	    $scope.$apply(function () {
-	      ctrl.lastSelectedIndex = ctrl.selectedIndex;
-	      ctrl.offsetLeft        = fixOffset(ctrl.offsetLeft);
-	      $mdUtil.nextTick(ctrl.updateInkBarStyles, false);
-	      $mdUtil.nextTick(updatePagination);
+	    ctrl.lastSelectedIndex = ctrl.selectedIndex;
+	    ctrl.offsetLeft        = fixOffset(ctrl.offsetLeft);
+	    $mdUtil.nextTick(function () {
+	      ctrl.updateInkBarStyles();
+	      updatePagination();
 	    });
 	  }
 
@@ -55350,7 +56180,7 @@
 	   */
 	  function shouldPaginate () {
 	    if (ctrl.noPagination || !loaded) return false;
-	    var canvasWidth = Math.min($element.prop('clientWidth'), ctrl.maxTabWidth);
+	    var canvasWidth = $element.prop('clientWidth');
 	    angular.forEach(elements.dummies, function (tab) { canvasWidth -= tab.offsetWidth; });
 	    return canvasWidth < 0;
 	  }
@@ -55453,7 +56283,7 @@
 	    var tab         = elements.tabs[ index ],
 	        left        = tab.offsetLeft,
 	        right       = tab.offsetWidth + left;
-	    ctrl.offsetLeft = Math.max(ctrl.offsetLeft, fixOffset(right - elements.canvas.clientWidth));
+	    ctrl.offsetLeft = Math.max(ctrl.offsetLeft, fixOffset(right - elements.canvas.clientWidth + 32 * 2));
 	    ctrl.offsetLeft = Math.min(ctrl.offsetLeft, fixOffset(left));
 	  }
 
@@ -55704,105 +56534,104 @@
 	    },
 	    template:         function (element, attr) {
 	      attr[ "$mdTabsTemplate" ] = element.html();
-	      return '\
-	        <md-tabs-wrapper>\
-	          <md-tab-data></md-tab-data>\
-	          <md-prev-button\
-	              tabindex="-1"\
-	              role="button"\
-	              aria-label="Previous Page"\
-	              aria-disabled="{{!$mdTabsCtrl.canPageBack()}}"\
-	              ng-class="{ \'md-disabled\': !$mdTabsCtrl.canPageBack() }"\
-	              ng-if="$mdTabsCtrl.shouldPaginate"\
-	              ng-click="$mdTabsCtrl.previousPage()">\
-	            <md-icon md-svg-icon="md-tabs-arrow"></md-icon>\
-	          </md-prev-button>\
-	          <md-next-button\
-	              tabindex="-1"\
-	              role="button"\
-	              aria-label="Next Page"\
-	              aria-disabled="{{!$mdTabsCtrl.canPageForward()}}"\
-	              ng-class="{ \'md-disabled\': !$mdTabsCtrl.canPageForward() }"\
-	              ng-if="$mdTabsCtrl.shouldPaginate"\
-	              ng-click="$mdTabsCtrl.nextPage()">\
-	            <md-icon md-svg-icon="md-tabs-arrow"></md-icon>\
-	          </md-next-button>\
-	          <md-tabs-canvas\
-	              tabindex="0"\
-	              aria-activedescendant="tab-item-{{$mdTabsCtrl.tabs[$mdTabsCtrl.focusIndex].id}}"\
-	              ng-focus="$mdTabsCtrl.redirectFocus()"\
-	              ng-class="{\
-	                  \'md-paginated\': $mdTabsCtrl.shouldPaginate,\
-	                  \'md-center-tabs\': $mdTabsCtrl.shouldCenterTabs\
-	              }"\
-	              ng-keydown="$mdTabsCtrl.keydown($event)"\
-	              role="tablist">\
-	            <md-pagination-wrapper\
-	                ng-class="{ \'md-center-tabs\': $mdTabsCtrl.shouldCenterTabs }"\
-	                md-tab-scroll="$mdTabsCtrl.scroll($event)">\
-	              <md-tab-item\
-	                  tabindex="-1"\
-	                  class="md-tab"\
-	                  style="max-width: {{ $mdTabsCtrl.maxTabWidth + \'px\' }}"\
-	                  ng-repeat="tab in $mdTabsCtrl.tabs"\
-	                  role="tab"\
-	                  aria-controls="tab-content-{{::tab.id}}"\
-	                  aria-selected="{{tab.isActive()}}"\
-	                  aria-disabled="{{tab.scope.disabled || \'false\'}}"\
-	                  ng-click="$mdTabsCtrl.select(tab.getIndex())"\
-	                  ng-class="{\
-	                      \'md-active\':    tab.isActive(),\
-	                      \'md-focused\':   tab.hasFocus(),\
-	                      \'md-disabled\':  tab.scope.disabled\
-	                  }"\
-	                  ng-disabled="tab.scope.disabled"\
-	                  md-swipe-left="$mdTabsCtrl.nextPage()"\
-	                  md-swipe-right="$mdTabsCtrl.previousPage()"\
-	                  md-tabs-template="::tab.label"\
-	                  md-scope="::tab.parent"></md-tab-item>\
-	              <md-ink-bar></md-ink-bar>\
-	            </md-pagination-wrapper>\
-	            <div class="md-visually-hidden md-dummy-wrapper">\
-	              <md-dummy-tab\
-	                  class="md-tab"\
-	                  tabindex="-1"\
-	                  id="tab-item-{{::tab.id}}"\
-	                  role="tab"\
-	                  aria-controls="tab-content-{{::tab.id}}"\
-	                  aria-selected="{{tab.isActive()}}"\
-	                  aria-disabled="{{tab.scope.disabled || \'false\'}}"\
-	                  ng-focus="$mdTabsCtrl.hasFocus = true"\
-	                  ng-blur="$mdTabsCtrl.hasFocus = false"\
-	                  ng-repeat="tab in $mdTabsCtrl.tabs"\
-	                  md-tabs-template="::tab.label"\
-	                  md-scope="::tab.parent"></md-dummy-tab>\
-	            </div>\
-	          </md-tabs-canvas>\
-	        </md-tabs-wrapper>\
-	        <md-tabs-content-wrapper ng-show="$mdTabsCtrl.hasContent && $mdTabsCtrl.selectedIndex >= 0">\
-	          <md-tab-content\
-	              id="tab-content-{{::tab.id}}"\
-	              role="tabpanel"\
-	              aria-labelledby="tab-item-{{::tab.id}}"\
-	              md-swipe-left="$mdTabsCtrl.swipeContent && $mdTabsCtrl.incrementIndex(1)"\
-	              md-swipe-right="$mdTabsCtrl.swipeContent && $mdTabsCtrl.incrementIndex(-1)"\
-	              ng-if="$mdTabsCtrl.hasContent"\
-	              ng-repeat="(index, tab) in $mdTabsCtrl.tabs"\
-	              ng-class="{\
-	                \'md-no-transition\': $mdTabsCtrl.lastSelectedIndex == null,\
-	                \'md-active\':        tab.isActive(),\
-	                \'md-left\':          tab.isLeft(),\
-	                \'md-right\':         tab.isRight(),\
-	                \'md-no-scroll\':     $mdTabsCtrl.dynamicHeight\
-	              }">\
-	            <div\
-	                md-tabs-template="::tab.template"\
-	                md-connected-if="tab.isActive()"\
-	                md-scope="::tab.parent"\
-	                ng-if="$mdTabsCtrl.enableDisconnect || tab.shouldRender()"></div>\
-	          </md-tab-content>\
-	        </md-tabs-content-wrapper>\
-	      ';
+	      return '' +
+	        '<md-tabs-wrapper> ' +
+	          '<md-tab-data></md-tab-data> ' +
+	          '<md-prev-button ' +
+	              'tabindex="-1" ' +
+	              'role="button" ' +
+	              'aria-label="Previous Page" ' +
+	              'aria-disabled="{{!$mdTabsCtrl.canPageBack()}}" ' +
+	              'ng-class="{ \'md-disabled\': !$mdTabsCtrl.canPageBack() }" ' +
+	              'ng-if="$mdTabsCtrl.shouldPaginate" ' +
+	              'ng-click="$mdTabsCtrl.previousPage()"> ' +
+	            '<md-icon md-svg-icon="md-tabs-arrow"></md-icon> ' +
+	          '</md-prev-button> ' +
+	          '<md-next-button ' +
+	              'tabindex="-1" ' +
+	              'role="button" ' +
+	              'aria-label="Next Page" ' +
+	              'aria-disabled="{{!$mdTabsCtrl.canPageForward()}}" ' +
+	              'ng-class="{ \'md-disabled\': !$mdTabsCtrl.canPageForward() }" ' +
+	              'ng-if="$mdTabsCtrl.shouldPaginate" ' +
+	              'ng-click="$mdTabsCtrl.nextPage()"> ' +
+	            '<md-icon md-svg-icon="md-tabs-arrow"></md-icon> ' +
+	          '</md-next-button> ' +
+	          '<md-tabs-canvas ' +
+	              'tabindex="0" ' +
+	              'aria-activedescendant="tab-item-{{$mdTabsCtrl.tabs[$mdTabsCtrl.focusIndex].id}}" ' +
+	              'ng-focus="$mdTabsCtrl.redirectFocus()" ' +
+	              'ng-class="{ ' +
+	                  '\'md-paginated\': $mdTabsCtrl.shouldPaginate, ' +
+	                  '\'md-center-tabs\': $mdTabsCtrl.shouldCenterTabs ' +
+	              '}" ' +
+	              'ng-keydown="$mdTabsCtrl.keydown($event)" ' +
+	              'role="tablist"> ' +
+	            '<md-pagination-wrapper ' +
+	                'ng-class="{ \'md-center-tabs\': $mdTabsCtrl.shouldCenterTabs }" ' +
+	                'md-tab-scroll="$mdTabsCtrl.scroll($event)"> ' +
+	              '<md-tab-item ' +
+	                  'tabindex="-1" ' +
+	                  'class="md-tab" ' +
+	                  'style="max-width: {{ $mdTabsCtrl.maxTabWidth + \'px\' }}" ' +
+	                  'ng-repeat="tab in $mdTabsCtrl.tabs" ' +
+	                  'role="tab" ' +
+	                  'aria-controls="tab-content-{{::tab.id}}" ' +
+	                  'aria-selected="{{tab.isActive()}}" ' +
+	                  'aria-disabled="{{tab.scope.disabled || \'false\'}}" ' +
+	                  'ng-click="$mdTabsCtrl.select(tab.getIndex())" ' +
+	                  'ng-class="{ ' +
+	                      '\'md-active\':    tab.isActive(), ' +
+	                      '\'md-focused\':   tab.hasFocus(), ' +
+	                      '\'md-disabled\':  tab.scope.disabled ' +
+	                  '}" ' +
+	                  'ng-disabled="tab.scope.disabled" ' +
+	                  'md-swipe-left="$mdTabsCtrl.nextPage()" ' +
+	                  'md-swipe-right="$mdTabsCtrl.previousPage()" ' +
+	                  'md-tabs-template="::tab.label" ' +
+	                  'md-scope="::tab.parent"></md-tab-item> ' +
+	              '<md-ink-bar></md-ink-bar> ' +
+	            '</md-pagination-wrapper> ' +
+	            '<div class="md-visually-hidden md-dummy-wrapper"> ' +
+	              '<md-dummy-tab ' +
+	                  'class="md-tab" ' +
+	                  'tabindex="-1" ' +
+	                  'id="tab-item-{{::tab.id}}" ' +
+	                  'role="tab" ' +
+	                  'aria-controls="tab-content-{{::tab.id}}" ' +
+	                  'aria-selected="{{tab.isActive()}}" ' +
+	                  'aria-disabled="{{tab.scope.disabled || \'false\'}}" ' +
+	                  'ng-focus="$mdTabsCtrl.hasFocus = true" ' +
+	                  'ng-blur="$mdTabsCtrl.hasFocus = false" ' +
+	                  'ng-repeat="tab in $mdTabsCtrl.tabs" ' +
+	                  'md-tabs-template="::tab.label" ' +
+	                  'md-scope="::tab.parent"></md-dummy-tab> ' +
+	            '</div> ' +
+	          '</md-tabs-canvas> ' +
+	        '</md-tabs-wrapper> ' +
+	        '<md-tabs-content-wrapper ng-show="$mdTabsCtrl.hasContent && $mdTabsCtrl.selectedIndex >= 0"> ' +
+	          '<md-tab-content ' +
+	              'id="tab-content-{{::tab.id}}" ' +
+	              'role="tabpanel" ' +
+	              'aria-labelledby="tab-item-{{::tab.id}}" ' +
+	              'md-swipe-left="$mdTabsCtrl.swipeContent && $mdTabsCtrl.incrementIndex(1)" ' +
+	              'md-swipe-right="$mdTabsCtrl.swipeContent && $mdTabsCtrl.incrementIndex(-1)" ' +
+	              'ng-if="$mdTabsCtrl.hasContent" ' +
+	              'ng-repeat="(index, tab) in $mdTabsCtrl.tabs" ' +
+	              'ng-class="{ ' +
+	                '\'md-no-transition\': $mdTabsCtrl.lastSelectedIndex == null, ' +
+	                '\'md-active\':        tab.isActive(), ' +
+	                '\'md-left\':          tab.isLeft(), ' +
+	                '\'md-right\':         tab.isRight(), ' +
+	                '\'md-no-scroll\':     $mdTabsCtrl.dynamicHeight ' +
+	              '}"> ' +
+	            '<div ' +
+	                'md-tabs-template="::tab.template" ' +
+	                'md-connected-if="tab.isActive()" ' +
+	                'md-scope="::tab.parent" ' +
+	                'ng-if="$mdTabsCtrl.enableDisconnect || tab.shouldRender()"></div> ' +
+	          '</md-tab-content> ' +
+	        '</md-tabs-content-wrapper>';
 	    },
 	    controller:       'MdTabsController',
 	    controllerAs:     '$mdTabsCtrl',
@@ -55858,7 +56687,7 @@
 
 	})();
 	(function(){ 
-	angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-THEME_NAME-theme {  background: '{{background-50}}'; }  md-autocomplete.md-THEME_NAME-theme[disabled] {    background: '{{background-100}}'; }  md-autocomplete.md-THEME_NAME-theme button md-icon path {    fill: '{{background-600}}'; }  md-autocomplete.md-THEME_NAME-theme button:after {    background: '{{background-600-0.3}}'; }.md-autocomplete-suggestions-container.md-THEME_NAME-theme {  background: '{{background-50}}'; }  .md-autocomplete-suggestions-container.md-THEME_NAME-theme li {    color: '{{background-900}}'; }    .md-autocomplete-suggestions-container.md-THEME_NAME-theme li .highlight {      color: '{{background-600}}'; }    .md-autocomplete-suggestions-container.md-THEME_NAME-theme li:hover, .md-autocomplete-suggestions-container.md-THEME_NAME-theme li.selected {      background: '{{background-200}}'; }md-bottom-sheet.md-THEME_NAME-theme {  background-color: '{{background-50}}';  border-top-color: '{{background-300}}'; }  md-bottom-sheet.md-THEME_NAME-theme.md-list md-list-item {    color: '{{foreground-1}}'; }  md-bottom-sheet.md-THEME_NAME-theme .md-subheader {    background-color: '{{background-50}}'; }  md-bottom-sheet.md-THEME_NAME-theme .md-subheader {    color: '{{foreground-1}}'; }md-backdrop {  background-color: '{{background-900-0.0}}'; }  md-backdrop.md-opaque.md-THEME_NAME-theme {    background-color: '{{background-900-1.0}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]):hover, .md-button.md-THEME_NAME-theme:not([disabled]):hover {  background-color: '{{background-500-0.2}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme:not([disabled]).md-focused {  background-color: '{{background-500-0.2}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]).md-icon-button:hover, .md-button.md-THEME_NAME-theme:not([disabled]).md-icon-button:hover {  background-color: transparent; }a.md-button.md-THEME_NAME-theme.md-fab, .md-button.md-THEME_NAME-theme.md-fab {  background-color: '{{accent-color}}';  color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab md-icon, .md-button.md-THEME_NAME-theme.md-fab md-icon {    color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover {    background-color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused {    background-color: '{{accent-A700}}'; }a.md-button.md-THEME_NAME-theme.md-primary, .md-button.md-THEME_NAME-theme.md-primary {  color: '{{primary-color}}'; }  a.md-button.md-THEME_NAME-theme.md-primary.md-raised, a.md-button.md-THEME_NAME-theme.md-primary.md-fab, .md-button.md-THEME_NAME-theme.md-primary.md-raised, .md-button.md-THEME_NAME-theme.md-primary.md-fab {    color: '{{primary-contrast}}';    background-color: '{{primary-color}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]) md-icon {      color: '{{primary-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]):hover {      background-color: '{{primary-color}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]).md-focused {      background-color: '{{primary-600}}'; }  a.md-button.md-THEME_NAME-theme.md-primary:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary:not([disabled]) md-icon {    color: '{{primary-color}}'; }a.md-button.md-THEME_NAME-theme.md-fab, .md-button.md-THEME_NAME-theme.md-fab {  background-color: '{{accent-color}}';  color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]) .md-icon, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]) .md-icon {    color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover {    background-color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused {    background-color: '{{accent-A700}}'; }a.md-button.md-THEME_NAME-theme.md-raised, .md-button.md-THEME_NAME-theme.md-raised {  color: '{{background-contrast}}';  background-color: '{{background-50}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]) .md-icon, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]) .md-icon {    color: '{{background-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]):hover {    background-color: '{{background-50}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]).md-focused {    background-color: '{{background-200}}'; }a.md-button.md-THEME_NAME-theme.md-warn, .md-button.md-THEME_NAME-theme.md-warn {  color: '{{warn-color}}'; }  a.md-button.md-THEME_NAME-theme.md-warn.md-raised, a.md-button.md-THEME_NAME-theme.md-warn.md-fab, .md-button.md-THEME_NAME-theme.md-warn.md-raised, .md-button.md-THEME_NAME-theme.md-warn.md-fab {    color: '{{warn-contrast}}';    background-color: '{{warn-color}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]) md-icon {      color: '{{warn-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]):hover {      background-color: '{{warn-color}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]).md-focused {      background-color: '{{warn-700}}'; }  a.md-button.md-THEME_NAME-theme.md-warn:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn:not([disabled]) md-icon {    color: '{{warn-color}}'; }a.md-button.md-THEME_NAME-theme.md-accent, .md-button.md-THEME_NAME-theme.md-accent {  color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-accent.md-raised, a.md-button.md-THEME_NAME-theme.md-accent.md-fab, .md-button.md-THEME_NAME-theme.md-accent.md-raised, .md-button.md-THEME_NAME-theme.md-accent.md-fab {    color: '{{accent-contrast}}';    background-color: '{{accent-color}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]) md-icon {      color: '{{accent-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]):hover {      background-color: '{{accent-color}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]).md-focused {      background-color: '{{accent-700}}'; }  a.md-button.md-THEME_NAME-theme.md-accent:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent:not([disabled]) md-icon {    color: '{{accent-color}}'; }a.md-button.md-THEME_NAME-theme[disabled], a.md-button.md-THEME_NAME-theme.md-raised[disabled], a.md-button.md-THEME_NAME-theme.md-fab[disabled], a.md-button.md-THEME_NAME-theme.md-accent[disabled], a.md-button.md-THEME_NAME-theme.md-warn[disabled], .md-button.md-THEME_NAME-theme[disabled], .md-button.md-THEME_NAME-theme.md-raised[disabled], .md-button.md-THEME_NAME-theme.md-fab[disabled], .md-button.md-THEME_NAME-theme.md-accent[disabled], .md-button.md-THEME_NAME-theme.md-warn[disabled] {  color: '{{foreground-3}}';  cursor: not-allowed; }  a.md-button.md-THEME_NAME-theme[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-raised[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-fab[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-accent[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-warn[disabled] md-icon, .md-button.md-THEME_NAME-theme[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-raised[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-fab[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-accent[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-warn[disabled] md-icon {    color: '{{foreground-3}}'; }a.md-button.md-THEME_NAME-theme.md-raised[disabled], a.md-button.md-THEME_NAME-theme.md-fab[disabled], .md-button.md-THEME_NAME-theme.md-raised[disabled], .md-button.md-THEME_NAME-theme.md-fab[disabled] {  background-color: '{{foreground-4}}'; }a.md-button.md-THEME_NAME-theme[disabled], .md-button.md-THEME_NAME-theme[disabled] {  background-color: transparent; }md-card.md-THEME_NAME-theme {  background-color: '{{background-color}}';  border-radius: 2px; }  md-card.md-THEME_NAME-theme .md-card-image {    border-radius: 2px 2px 0 0; }md-checkbox.md-THEME_NAME-theme .md-ripple {  color: '{{accent-600}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-ripple {  color: '{{background-600}}'; }md-checkbox.md-THEME_NAME-theme.md-checked.md-focused .md-container:before {  background-color: '{{accent-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-icon {  background-color: '{{accent-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary .md-ripple {  color: '{{primary-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ripple {  color: '{{background-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-icon {  background-color: '{{primary-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked.md-focused .md-container:before {  background-color: '{{primary-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn .md-ripple {  color: '{{warn-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-icon {  background-color: '{{warn-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked.md-focused:not([disabled]) .md-container:before {  background-color: '{{warn-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme[disabled] .md-icon {  border-color: '{{foreground-3}}'; }md-checkbox.md-THEME_NAME-theme[disabled].md-checked .md-icon {  background-color: '{{foreground-3}}'; }md-checkbox.md-THEME_NAME-theme[disabled] .md-label {  color: '{{foreground-3}}'; }md-chips.md-THEME_NAME-theme .md-chips {  box-shadow: 0 1px '{{background-300}}'; }  md-chips.md-THEME_NAME-theme .md-chips.md-focused {    box-shadow: 0 2px '{{primary-color}}'; }md-chips.md-THEME_NAME-theme .md-chip {  background: '{{background-300}}';  color: '{{background-800}}'; }  md-chips.md-THEME_NAME-theme .md-chip.md-focused {    background: '{{primary-color}}';    color: '{{primary-contrast}}'; }    md-chips.md-THEME_NAME-theme .md-chip.md-focused md-icon {      color: '{{primary-contrast}}'; }md-chips.md-THEME_NAME-theme md-chip-remove .md-button md-icon path {  fill: '{{background-500}}'; }.md-contact-suggestion span.md-contact-email {  color: '{{background-400}}'; }md-content.md-THEME_NAME-theme {  color: '{{foreground-1}}';  background-color: '{{background-color}}'; }/** Theme styles for mdCalendar. */.md-calendar.md-THEME_NAME-theme {  color: '{{foreground-2}}'; }  .md-calendar.md-THEME_NAME-theme tr:last-child td {    border-bottom-color: '{{background-200}}'; }.md-THEME_NAME-theme .md-calendar-day-header {  background: '{{background-200}}';  color: '{{foreground-2}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-date-today {  color: '{{primary-500}}'; }  .md-THEME_NAME-theme .md-calendar-date.md-calendar-date-today.md-calendar-date-disabled {    color: '{{primary-500-0.6}}'; }.md-THEME_NAME-theme .md-calendar-date.md-focus .md-calendar-date-selection-indicator {  background: '{{background-300}}'; }.md-THEME_NAME-theme .md-calendar-date-selection-indicator:hover {  background: '{{background-300}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-THEME_NAME-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {  background: '{{primary-500}}';  color: '{{primary-500-contrast}}'; }.md-THEME_NAME-theme .md-calendar-date-disabled, .md-THEME_NAME-theme .md-calendar-month-label-disabled {  color: '{{background-400}}'; }/** Theme styles for mdDatepicker. */md-datepicker.md-THEME_NAME-theme {  background: white; }.md-THEME_NAME-theme .md-datepicker-input-container {  border-bottom-color: '{{background-300}}'; }  .md-THEME_NAME-theme .md-datepicker-input-container.md-datepicker-focused {    border-bottom-color: '{{primary-500}}'; }  .md-THEME_NAME-theme .md-datepicker-input-container.md-datepicker-invalid {    border-bottom-color: '{{warn-500}}'; }.md-THEME_NAME-theme .md-datepicker-calendar-pane {  border-color: '{{background-300}}'; }.md-THEME_NAME-theme .md-datepicker-triangle-button:hover .md-datepicker-expand-triangle {  border-top-color: '{{foreground-2}}'; }.md-THEME_NAME-theme .md-datepicker-open .md-datepicker-calendar-icon {  fill: '{{primary-500}}'; }.md-THEME_NAME-theme .md-datepicker-calendar {  background: white; }md-dialog.md-THEME_NAME-theme {  border-radius: 4px;  background-color: '{{background-color}}'; }  md-dialog.md-THEME_NAME-theme.md-content-overflow .md-actions {    border-top-color: '{{foreground-4}}'; }md-divider.md-THEME_NAME-theme {  border-top-color: '{{foreground-4}}'; }md-icon.md-THEME_NAME-theme {  color: '{{foreground-2}}'; }  md-icon.md-THEME_NAME-theme.md-primary {    color: '{{primary-color}}'; }  md-icon.md-THEME_NAME-theme.md-accent {    color: '{{accent-color}}'; }  md-icon.md-THEME_NAME-theme.md-warn {    color: '{{warn-color}}'; }md-input-container.md-THEME_NAME-theme .md-input {  color: '{{foreground-1}}';  border-color: '{{foreground-4}}';  text-shadow: '{{foreground-shadow}}'; }  md-input-container.md-THEME_NAME-theme .md-input::-webkit-input-placeholder, md-input-container.md-THEME_NAME-theme .md-input::-moz-placeholder, md-input-container.md-THEME_NAME-theme .md-input:-moz-placeholder, md-input-container.md-THEME_NAME-theme .md-input:-ms-input-placeholder {    color: '{{foreground-3}}'; }md-input-container.md-THEME_NAME-theme > md-icon {  color: '{{foreground-1}}'; }md-input-container.md-THEME_NAME-theme label, md-input-container.md-THEME_NAME-theme .md-placeholder {  text-shadow: '{{foreground-shadow}}';  color: '{{foreground-3}}'; }md-input-container.md-THEME_NAME-theme ng-messages, md-input-container.md-THEME_NAME-theme [ng-message], md-input-container.md-THEME_NAME-theme [data-ng-message], md-input-container.md-THEME_NAME-theme [x-ng-message] {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-has-value label {  color: '{{foreground-2}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused .md-input {  border-color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused label {  color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused md-icon {  color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-accent .md-input {  border-color: '{{accent-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-accent label {  color: '{{accent-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-warn .md-input {  border-color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-warn label {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid .md-input {  border-color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid.md-input-focused label {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid data-ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid x-ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid [ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [data-ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [x-ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid .md-char-counter {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme .md-input[disabled], [disabled] md-input-container.md-THEME_NAME-theme .md-input {  border-bottom-color: transparent;  color: '{{foreground-3}}';  background-image: linear-gradient(to right, '{{foreground-3}}' 0%, '{{foreground-3}}' 33%, transparent 0%);  background-image: -ms-linear-gradient(left, transparent 0%, '{{foreground-3}}' 100%); }md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text h3, md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text h4, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text h3, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text h4 {  color: '{{foreground-1}}'; }md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text p, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text p {  color: '{{foreground-2}}'; }md-list.md-THEME_NAME-theme .md-proxy-focus.md-focused div.md-no-style {  background-color: '{{background-100}}'; }md-list.md-THEME_NAME-theme md-list-item > md-icon {  color: '{{foreground-2}}'; }  md-list.md-THEME_NAME-theme md-list-item > md-icon.md-highlight {    color: '{{primary-color}}'; }    md-list.md-THEME_NAME-theme md-list-item > md-icon.md-highlight.md-accent {      color: '{{accent-color}}'; }md-list.md-THEME_NAME-theme md-list-item button {  background-color: '{{background-color}}'; }  md-list.md-THEME_NAME-theme md-list-item button.md-button:not([disabled]):hover {    background-color: '{{background-color}}'; }md-menu-content.md-THEME_NAME-theme {  background-color: '{{background-color}}'; }  md-menu-content.md-THEME_NAME-theme md-menu-divider {    background-color: '{{foreground-4}}'; }md-menu-bar.md-THEME_NAME-theme > button.md-button {  color: '{{foreground-2}}';  border-radius: 2px; }md-menu-bar.md-THEME_NAME-theme md-menu.md-open > button, md-menu-bar.md-THEME_NAME-theme md-menu > button:focus {  outline: none;  background: '{{background-200}}'; }md-menu-bar.md-THEME_NAME-theme.md-open:not(.md-keyboard-mode) md-menu:hover > button {  background-color: '{{ background-500-0.2}}'; }md-menu-bar.md-THEME_NAME-theme:not(.md-keyboard-mode):not(.md-open) md-menu button:hover, md-menu-bar.md-THEME_NAME-theme:not(.md-keyboard-mode):not(.md-open) md-menu button:focus {  background: transparent; }md-menu-content.md-THEME_NAME-theme .md-menu > .md-button:after {  color: '{{foreground-2}}'; }md-menu-content.md-THEME_NAME-theme .md-menu.md-open > .md-button {  background-color: '{{ background-500-0.2}}'; }md-toolbar.md-THEME_NAME-theme.md-menu-toolbar {  background-color: '{{background-color}}';  color: '{{foreground-1}}'; }  md-toolbar.md-THEME_NAME-theme.md-menu-toolbar md-toolbar-filler {    background-color: '{{primary-color}}';    color: '{{primary-contrast}}'; }    md-toolbar.md-THEME_NAME-theme.md-menu-toolbar md-toolbar-filler md-icon {      color: '{{primary-contrast}}'; }md-progress-circular.md-THEME_NAME-theme {  background-color: transparent; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-gap {    border-top-color: '{{primary-color}}';    border-bottom-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme .md-inner .md-right .md-half-circle {    border-top-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-right .md-half-circle {    border-right-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-left .md-half-circle {    border-left-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-gap {    border-top-color: '{{warn-color}}';    border-bottom-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-right .md-half-circle {    border-top-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-right .md-half-circle {    border-right-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-left .md-half-circle {    border-left-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-gap {    border-top-color: '{{accent-color}}';    border-bottom-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-right .md-half-circle {    border-top-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-right .md-half-circle {    border-right-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-left .md-half-circle {    border-left-color: '{{accent-color}}'; }md-radio-button.md-THEME_NAME-theme .md-off {  border-color: '{{foreground-2}}'; }md-radio-button.md-THEME_NAME-theme .md-on {  background-color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme.md-checked .md-off {  border-color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme.md-checked .md-ink-ripple {  color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme .md-container .md-ripple {  color: '{{accent-600}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-on, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-on {  background-color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-off {  border-color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ink-ripple {  color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-container .md-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-container .md-ripple {  color: '{{primary-600}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-on, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-on {  background-color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-off {  border-color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-ink-ripple {  color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-container .md-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-container .md-ripple {  color: '{{warn-600}}'; }md-radio-group.md-THEME_NAME-theme[disabled], md-radio-button.md-THEME_NAME-theme[disabled] {  color: '{{foreground-3}}'; }  md-radio-group.md-THEME_NAME-theme[disabled] .md-container .md-off, md-radio-button.md-THEME_NAME-theme[disabled] .md-container .md-off {    border-color: '{{foreground-3}}'; }  md-radio-group.md-THEME_NAME-theme[disabled] .md-container .md-on, md-radio-button.md-THEME_NAME-theme[disabled] .md-container .md-on {    border-color: '{{foreground-3}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked .md-container:before {  background-color: '{{accent-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked:not([disabled]).md-primary .md-container:before {  background-color: '{{primary-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked.md-primary .md-container:before {  background-color: '{{warn-color-0.26}}'; }md-progress-linear.md-THEME_NAME-theme .md-container {  background-color: '{{primary-100}}'; }md-progress-linear.md-THEME_NAME-theme .md-bar {  background-color: '{{primary-color}}'; }md-progress-linear.md-THEME_NAME-theme.md-warn .md-container {  background-color: '{{warn-100}}'; }md-progress-linear.md-THEME_NAME-theme.md-warn .md-bar {  background-color: '{{warn-color}}'; }md-progress-linear.md-THEME_NAME-theme.md-accent .md-container {  background-color: '{{accent-100}}'; }md-progress-linear.md-THEME_NAME-theme.md-accent .md-bar {  background-color: '{{accent-color}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-warn .md-bar1 {  background-color: '{{warn-100}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-warn .md-dashed:before {  background: radial-gradient('{{warn-100}}' 0%, '{{warn-100}}' 16%, transparent 42%); }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-accent .md-bar1 {  background-color: '{{accent-100}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-accent .md-dashed:before {  background: radial-gradient('{{accent-100}}' 0%, '{{accent-100}}' 16%, transparent 42%); }md-select.md-THEME_NAME-theme .md-select-value {  border-bottom-color: '{{foreground-4}}'; }  md-select.md-THEME_NAME-theme .md-select-value.md-select-placeholder {    color: '{{foreground-3}}'; }md-select.md-THEME_NAME-theme.ng-invalid.ng-dirty .md-select-value {  color: '{{warn-500}}' !important;  border-bottom-color: '{{warn-500}}' !important; }md-select.md-THEME_NAME-theme:not([disabled]):focus .md-select-value {  border-bottom-color: '{{primary-color}}';  color: '{{ foreground-1 }}'; }  md-select.md-THEME_NAME-theme:not([disabled]):focus .md-select-value.md-select-placeholder {    color: '{{ foreground-1 }}'; }md-select.md-THEME_NAME-theme:not([disabled]):focus.md-accent .md-select-value {  border-bottom-color: '{{accent-color}}'; }md-select.md-THEME_NAME-theme:not([disabled]):focus.md-warn .md-select-value {  border-bottom-color: '{{warn-color}}'; }md-select.md-THEME_NAME-theme[disabled] .md-select-value {  color: '{{foreground-3}}'; }  md-select.md-THEME_NAME-theme[disabled] .md-select-value.md-select-placeholder {    color: '{{foreground-3}}'; }md-select-menu.md-THEME_NAME-theme md-option[disabled] {  color: '{{foreground-3}}'; }md-select-menu.md-THEME_NAME-theme md-optgroup {  color: '{{foreground-2}}'; }  md-select-menu.md-THEME_NAME-theme md-optgroup md-option {    color: '{{foreground-1}}'; }md-select-menu.md-THEME_NAME-theme md-option[selected] {  color: '{{primary-500}}'; }  md-select-menu.md-THEME_NAME-theme md-option[selected]:focus {    color: '{{primary-600}}'; }  md-select-menu.md-THEME_NAME-theme md-option[selected].md-accent {    color: '{{accent-500}}'; }    md-select-menu.md-THEME_NAME-theme md-option[selected].md-accent:focus {      color: '{{accent-600}}'; }md-select-menu.md-THEME_NAME-theme md-option:focus:not([selected]) {  background: '{{background-200}}'; }md-slider.md-THEME_NAME-theme .md-track {  background-color: '{{foreground-3}}'; }md-slider.md-THEME_NAME-theme .md-track-ticks {  background-color: '{{foreground-4}}'; }md-slider.md-THEME_NAME-theme .md-focus-thumb {  background-color: '{{foreground-2}}'; }md-slider.md-THEME_NAME-theme .md-focus-ring {  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-disabled-thumb {  border-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme.md-min .md-thumb:after {  background-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme .md-track.md-track-fill {  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-thumb:after {  border-color: '{{accent-color}}';  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-sign {  background-color: '{{accent-color}}'; }  md-slider.md-THEME_NAME-theme .md-sign:after {    border-top-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-thumb-text {  color: '{{accent-contrast}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-focus-ring {  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-track.md-track-fill {  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-thumb:after {  border-color: '{{warn-color}}';  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-sign {  background-color: '{{warn-color}}'; }  md-slider.md-THEME_NAME-theme.md-warn .md-sign:after {    border-top-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-thumb-text {  color: '{{warn-contrast}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-focus-ring {  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-track.md-track-fill {  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-thumb:after {  border-color: '{{primary-color}}';  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-sign {  background-color: '{{primary-color}}'; }  md-slider.md-THEME_NAME-theme.md-primary .md-sign:after {    border-top-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-thumb-text {  color: '{{primary-contrast}}'; }md-slider.md-THEME_NAME-theme[disabled] .md-thumb:after {  border-color: '{{foreground-3}}'; }md-slider.md-THEME_NAME-theme[disabled]:not(.md-min) .md-thumb:after {  background-color: '{{foreground-3}}'; }md-sidenav.md-THEME_NAME-theme {  background-color: '{{background-color}}'; }.md-subheader.md-THEME_NAME-theme {  color: '{{ foreground-2-0.23 }}';  background-color: '{{background-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-primary {    color: '{{primary-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-accent {    color: '{{accent-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-warn {    color: '{{warn-color}}'; }md-switch.md-THEME_NAME-theme .md-thumb {  background-color: '{{background-50}}'; }md-switch.md-THEME_NAME-theme .md-bar {  background-color: '{{background-500}}'; }md-switch.md-THEME_NAME-theme.md-checked .md-thumb {  background-color: '{{accent-color}}'; }md-switch.md-THEME_NAME-theme.md-checked .md-bar {  background-color: '{{accent-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-focused .md-thumb:before {  background-color: '{{accent-color-0.26}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary .md-thumb {  background-color: '{{primary-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary .md-bar {  background-color: '{{primary-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary.md-focused .md-thumb:before {  background-color: '{{primary-color-0.26}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn .md-thumb {  background-color: '{{warn-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn .md-bar {  background-color: '{{warn-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn.md-focused .md-thumb:before {  background-color: '{{warn-color-0.26}}'; }md-switch.md-THEME_NAME-theme[disabled] .md-thumb {  background-color: '{{background-400}}'; }md-switch.md-THEME_NAME-theme[disabled] .md-bar {  background-color: '{{foreground-4}}'; }md-tabs.md-THEME_NAME-theme md-tabs-wrapper {  background-color: transparent;  border-color: '{{foreground-4}}'; }md-tabs.md-THEME_NAME-theme .md-paginator md-icon {  color: '{{primary-color}}'; }md-tabs.md-THEME_NAME-theme md-ink-bar {  color: '{{accent-color}}';  background: '{{accent-color}}'; }md-tabs.md-THEME_NAME-theme .md-tab {  color: '{{foreground-2}}'; }  md-tabs.md-THEME_NAME-theme .md-tab[disabled] {    color: '{{foreground-3}}'; }  md-tabs.md-THEME_NAME-theme .md-tab.md-active, md-tabs.md-THEME_NAME-theme .md-tab.md-focused {    color: '{{primary-color}}'; }  md-tabs.md-THEME_NAME-theme .md-tab.md-focused {    background: '{{primary-color-0.1}}'; }  md-tabs.md-THEME_NAME-theme .md-tab .md-ripple-container {    color: '{{accent-100}}'; }md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper {  background-color: '{{accent-color}}'; }  md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{accent-100}}'; }    md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{accent-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{accent-contrast-0.1}}'; }  md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-ink-bar {    color: '{{primary-600-1}}';    background: '{{primary-600-1}}'; }md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper {  background-color: '{{primary-color}}'; }  md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{primary-100}}'; }    md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{primary-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{primary-contrast-0.1}}'; }md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper {  background-color: '{{warn-color}}'; }  md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{warn-100}}'; }    md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{warn-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{warn-contrast-0.1}}'; }md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{primary-color}}'; }  md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{primary-100}}'; }    md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{primary-contrast}}'; }    md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{primary-contrast-0.1}}'; }md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{accent-color}}'; }  md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{accent-100}}'; }    md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{accent-contrast}}'; }    md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{accent-contrast-0.1}}'; }  md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-ink-bar {    color: '{{primary-600-1}}';    background: '{{primary-600-1}}'; }md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{warn-color}}'; }  md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{warn-100}}'; }    md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{warn-contrast}}'; }    md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{warn-contrast-0.1}}'; }md-toast.md-THEME_NAME-theme {  background-color: #323232;  color: '{{background-50}}'; }  md-toast.md-THEME_NAME-theme .md-button {    color: '{{background-50}}'; }    md-toast.md-THEME_NAME-theme .md-button.md-highlight {      color: '{{primary-A200}}'; }      md-toast.md-THEME_NAME-theme .md-button.md-highlight.md-accent {        color: '{{accent-A200}}'; }      md-toast.md-THEME_NAME-theme .md-button.md-highlight.md-warn {        color: '{{warn-A200}}'; }md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) {  background-color: '{{primary-color}}';  color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) md-icon {    color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) .md-button {    color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar).md-accent {    background-color: '{{accent-color}}';    color: '{{accent-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar).md-warn {    background-color: '{{warn-color}}';    color: '{{warn-contrast}}'; }md-tooltip.md-THEME_NAME-theme {  color: '{{background-A100}}'; }  md-tooltip.md-THEME_NAME-theme .md-background {    background-color: '{{foreground-2}}'; }"); 
+	angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-THEME_NAME-theme {  background: '{{background-50}}'; }  md-autocomplete.md-THEME_NAME-theme[disabled] {    background: '{{background-100}}'; }  md-autocomplete.md-THEME_NAME-theme button md-icon path {    fill: '{{background-600}}'; }  md-autocomplete.md-THEME_NAME-theme button:after {    background: '{{background-600-0.3}}'; }.md-autocomplete-suggestions-container.md-THEME_NAME-theme {  background: '{{background-50}}'; }  .md-autocomplete-suggestions-container.md-THEME_NAME-theme li {    color: '{{background-900}}'; }    .md-autocomplete-suggestions-container.md-THEME_NAME-theme li .highlight {      color: '{{background-600}}'; }    .md-autocomplete-suggestions-container.md-THEME_NAME-theme li:hover, .md-autocomplete-suggestions-container.md-THEME_NAME-theme li.selected {      background: '{{background-200}}'; }md-backdrop {  background-color: '{{background-900-0.0}}'; }  md-backdrop.md-opaque.md-THEME_NAME-theme {    background-color: '{{background-900-1.0}}'; }md-bottom-sheet.md-THEME_NAME-theme {  background-color: '{{background-50}}';  border-top-color: '{{background-300}}'; }  md-bottom-sheet.md-THEME_NAME-theme.md-list md-list-item {    color: '{{foreground-1}}'; }  md-bottom-sheet.md-THEME_NAME-theme .md-subheader {    background-color: '{{background-50}}'; }  md-bottom-sheet.md-THEME_NAME-theme .md-subheader {    color: '{{foreground-1}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]):hover, .md-button.md-THEME_NAME-theme:not([disabled]):hover {  background-color: '{{background-500-0.2}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme:not([disabled]).md-focused {  background-color: '{{background-500-0.2}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]).md-icon-button:hover, .md-button.md-THEME_NAME-theme:not([disabled]).md-icon-button:hover {  background-color: transparent; }a.md-button.md-THEME_NAME-theme.md-fab, .md-button.md-THEME_NAME-theme.md-fab {  background-color: '{{accent-color}}';  color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab md-icon, .md-button.md-THEME_NAME-theme.md-fab md-icon {    color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover {    background-color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused {    background-color: '{{accent-A700}}'; }a.md-button.md-THEME_NAME-theme.md-primary, .md-button.md-THEME_NAME-theme.md-primary {  color: '{{primary-color}}'; }  a.md-button.md-THEME_NAME-theme.md-primary.md-raised, a.md-button.md-THEME_NAME-theme.md-primary.md-fab, .md-button.md-THEME_NAME-theme.md-primary.md-raised, .md-button.md-THEME_NAME-theme.md-primary.md-fab {    color: '{{primary-contrast}}';    background-color: '{{primary-color}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]) md-icon {      color: '{{primary-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]):hover {      background-color: '{{primary-color}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]).md-focused {      background-color: '{{primary-600}}'; }  a.md-button.md-THEME_NAME-theme.md-primary:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary:not([disabled]) md-icon {    color: '{{primary-color}}'; }a.md-button.md-THEME_NAME-theme.md-fab, .md-button.md-THEME_NAME-theme.md-fab {  background-color: '{{accent-color}}';  color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]) .md-icon, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]) .md-icon {    color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover {    background-color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused {    background-color: '{{accent-A700}}'; }a.md-button.md-THEME_NAME-theme.md-raised, .md-button.md-THEME_NAME-theme.md-raised {  color: '{{background-contrast}}';  background-color: '{{background-50}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]) .md-icon, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]) .md-icon {    color: '{{background-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]):hover {    background-color: '{{background-50}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]).md-focused {    background-color: '{{background-200}}'; }a.md-button.md-THEME_NAME-theme.md-warn, .md-button.md-THEME_NAME-theme.md-warn {  color: '{{warn-color}}'; }  a.md-button.md-THEME_NAME-theme.md-warn.md-raised, a.md-button.md-THEME_NAME-theme.md-warn.md-fab, .md-button.md-THEME_NAME-theme.md-warn.md-raised, .md-button.md-THEME_NAME-theme.md-warn.md-fab {    color: '{{warn-contrast}}';    background-color: '{{warn-color}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]) md-icon {      color: '{{warn-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]):hover {      background-color: '{{warn-color}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]).md-focused {      background-color: '{{warn-700}}'; }  a.md-button.md-THEME_NAME-theme.md-warn:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn:not([disabled]) md-icon {    color: '{{warn-color}}'; }a.md-button.md-THEME_NAME-theme.md-accent, .md-button.md-THEME_NAME-theme.md-accent {  color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-accent.md-raised, a.md-button.md-THEME_NAME-theme.md-accent.md-fab, .md-button.md-THEME_NAME-theme.md-accent.md-raised, .md-button.md-THEME_NAME-theme.md-accent.md-fab {    color: '{{accent-contrast}}';    background-color: '{{accent-color}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]) md-icon {      color: '{{accent-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]):hover {      background-color: '{{accent-color}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]).md-focused {      background-color: '{{accent-700}}'; }  a.md-button.md-THEME_NAME-theme.md-accent:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent:not([disabled]) md-icon {    color: '{{accent-color}}'; }a.md-button.md-THEME_NAME-theme[disabled], a.md-button.md-THEME_NAME-theme.md-raised[disabled], a.md-button.md-THEME_NAME-theme.md-fab[disabled], a.md-button.md-THEME_NAME-theme.md-accent[disabled], a.md-button.md-THEME_NAME-theme.md-warn[disabled], .md-button.md-THEME_NAME-theme[disabled], .md-button.md-THEME_NAME-theme.md-raised[disabled], .md-button.md-THEME_NAME-theme.md-fab[disabled], .md-button.md-THEME_NAME-theme.md-accent[disabled], .md-button.md-THEME_NAME-theme.md-warn[disabled] {  color: '{{foreground-3}}';  cursor: not-allowed; }  a.md-button.md-THEME_NAME-theme[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-raised[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-fab[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-accent[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-warn[disabled] md-icon, .md-button.md-THEME_NAME-theme[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-raised[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-fab[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-accent[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-warn[disabled] md-icon {    color: '{{foreground-3}}'; }a.md-button.md-THEME_NAME-theme.md-raised[disabled], a.md-button.md-THEME_NAME-theme.md-fab[disabled], .md-button.md-THEME_NAME-theme.md-raised[disabled], .md-button.md-THEME_NAME-theme.md-fab[disabled] {  background-color: '{{foreground-4}}'; }a.md-button.md-THEME_NAME-theme[disabled], .md-button.md-THEME_NAME-theme[disabled] {  background-color: transparent; }md-card.md-THEME_NAME-theme {  background-color: '{{background-color}}';  border-radius: 2px; }  md-card.md-THEME_NAME-theme .md-card-image {    border-radius: 2px 2px 0 0; }md-chips.md-THEME_NAME-theme .md-chips {  box-shadow: 0 1px '{{background-300}}'; }  md-chips.md-THEME_NAME-theme .md-chips.md-focused {    box-shadow: 0 2px '{{primary-color}}'; }md-chips.md-THEME_NAME-theme .md-chip {  background: '{{background-300}}';  color: '{{background-800}}'; }  md-chips.md-THEME_NAME-theme .md-chip.md-focused {    background: '{{primary-color}}';    color: '{{primary-contrast}}'; }    md-chips.md-THEME_NAME-theme .md-chip.md-focused md-icon {      color: '{{primary-contrast}}'; }md-chips.md-THEME_NAME-theme md-chip-remove .md-button md-icon path {  fill: '{{background-500}}'; }.md-contact-suggestion span.md-contact-email {  color: '{{background-400}}'; }md-checkbox.md-THEME_NAME-theme .md-ripple {  color: '{{accent-600}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-ripple {  color: '{{background-600}}'; }md-checkbox.md-THEME_NAME-theme.md-checked.md-focused .md-container:before {  background-color: '{{accent-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-icon {  background-color: '{{accent-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary .md-ripple {  color: '{{primary-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ripple {  color: '{{background-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-icon {  background-color: '{{primary-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked.md-focused .md-container:before {  background-color: '{{primary-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn .md-ripple {  color: '{{warn-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-icon {  background-color: '{{warn-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked.md-focused:not([disabled]) .md-container:before {  background-color: '{{warn-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme[disabled] .md-icon {  border-color: '{{foreground-3}}'; }md-checkbox.md-THEME_NAME-theme[disabled].md-checked .md-icon {  background-color: '{{foreground-3}}'; }md-checkbox.md-THEME_NAME-theme[disabled] .md-label {  color: '{{foreground-3}}'; }md-content.md-THEME_NAME-theme {  color: '{{foreground-1}}';  background-color: '{{background-color}}'; }/** Theme styles for mdCalendar. */.md-calendar.md-THEME_NAME-theme {  color: '{{foreground-1}}'; }  .md-calendar.md-THEME_NAME-theme tr:last-child td {    border-bottom-color: '{{background-200}}'; }.md-THEME_NAME-theme .md-calendar-day-header {  background: '{{background-hue-1}}';  color: '{{foreground-1}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator {  border: 1px solid '{{primary-500}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-date-today.md-calendar-date-disabled {  color: '{{primary-500-0.6}}'; }.md-THEME_NAME-theme .md-calendar-date.md-focus .md-calendar-date-selection-indicator {  background: '{{background-hue-1}}'; }.md-THEME_NAME-theme .md-calendar-date-selection-indicator:hover {  background: '{{background-hue-1}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-THEME_NAME-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {  background: '{{primary-500}}';  color: '{{primary-500-contrast}}';  border-color: transparent; }.md-THEME_NAME-theme .md-calendar-date-disabled, .md-THEME_NAME-theme .md-calendar-month-label-disabled {  color: '{{foreground-3}}'; }/** Theme styles for mdDatepicker. */md-datepicker.md-THEME_NAME-theme {  background: '{{background-color}}'; }.md-THEME_NAME-theme .md-datepicker-input {  color: '{{background-contrast}}';  background: '{{background-color}}'; }  .md-THEME_NAME-theme .md-datepicker-input::-webkit-input-placeholder, .md-THEME_NAME-theme .md-datepicker-input::-moz-placeholder, .md-THEME_NAME-theme .md-datepicker-input:-moz-placeholder, .md-THEME_NAME-theme .md-datepicker-input:-ms-input-placeholder {    color: '{{foreground-3}}'; }.md-THEME_NAME-theme .md-datepicker-input-container {  border-bottom-color: '{{background-300}}'; }  .md-THEME_NAME-theme .md-datepicker-input-container.md-datepicker-focused {    border-bottom-color: '{{primary-500}}'; }  .md-THEME_NAME-theme .md-datepicker-input-container.md-datepicker-invalid {    border-bottom-color: '{{warn-500}}'; }.md-THEME_NAME-theme .md-datepicker-calendar-pane {  border-color: '{{background-300}}'; }.md-THEME_NAME-theme .md-datepicker-triangle-button .md-datepicker-expand-triangle {  border-top-color: '{{foreground-3}}'; }.md-THEME_NAME-theme .md-datepicker-triangle-button:hover .md-datepicker-expand-triangle {  border-top-color: '{{foreground-2}}'; }.md-THEME_NAME-theme .md-datepicker-open .md-datepicker-calendar-icon {  fill: '{{primary-500}}'; }.md-THEME_NAME-theme .md-datepicker-calendar, .md-THEME_NAME-theme .md-datepicker-input-mask-opaque {  background: '{{background-color}}'; }md-dialog.md-THEME_NAME-theme {  border-radius: 4px;  background-color: '{{background-color}}'; }  md-dialog.md-THEME_NAME-theme.md-content-overflow .md-actions {    border-top-color: '{{foreground-4}}'; }md-divider.md-THEME_NAME-theme {  border-top-color: '{{foreground-4}}'; }md-icon.md-THEME_NAME-theme {  color: '{{foreground-2}}'; }  md-icon.md-THEME_NAME-theme.md-primary {    color: '{{primary-color}}'; }  md-icon.md-THEME_NAME-theme.md-accent {    color: '{{accent-color}}'; }  md-icon.md-THEME_NAME-theme.md-warn {    color: '{{warn-color}}'; }md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text h3, md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text h4, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text h3, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text h4 {  color: '{{foreground-1}}'; }md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text p, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text p {  color: '{{foreground-2}}'; }md-list.md-THEME_NAME-theme .md-proxy-focus.md-focused div.md-no-style {  background-color: '{{background-100}}'; }md-list.md-THEME_NAME-theme md-list-item > md-icon {  color: '{{foreground-2}}'; }  md-list.md-THEME_NAME-theme md-list-item > md-icon.md-highlight {    color: '{{primary-color}}'; }    md-list.md-THEME_NAME-theme md-list-item > md-icon.md-highlight.md-accent {      color: '{{accent-color}}'; }md-list.md-THEME_NAME-theme md-list-item button {  background-color: '{{background-color}}'; }  md-list.md-THEME_NAME-theme md-list-item button.md-button:not([disabled]):hover {    background-color: '{{background-color}}'; }md-input-container.md-THEME_NAME-theme .md-input {  color: '{{foreground-1}}';  border-color: '{{foreground-4}}';  text-shadow: '{{foreground-shadow}}'; }  md-input-container.md-THEME_NAME-theme .md-input::-webkit-input-placeholder, md-input-container.md-THEME_NAME-theme .md-input::-moz-placeholder, md-input-container.md-THEME_NAME-theme .md-input:-moz-placeholder, md-input-container.md-THEME_NAME-theme .md-input:-ms-input-placeholder {    color: '{{foreground-3}}'; }md-input-container.md-THEME_NAME-theme > md-icon {  color: '{{foreground-1}}'; }md-input-container.md-THEME_NAME-theme label, md-input-container.md-THEME_NAME-theme .md-placeholder {  text-shadow: '{{foreground-shadow}}';  color: '{{foreground-3}}'; }md-input-container.md-THEME_NAME-theme ng-messages :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [ng-messages] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme ng-message :not(.md-char-counter), md-input-container.md-THEME_NAME-theme data-ng-message :not(.md-char-counter), md-input-container.md-THEME_NAME-theme x-ng-message :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [ng-message] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [data-ng-message] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [x-ng-message] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [ng-message-exp] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [data-ng-message-exp] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [x-ng-message-exp] :not(.md-char-counter) {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-has-value label {  color: '{{foreground-2}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused .md-input {  border-color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused label {  color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused md-icon {  color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-accent .md-input {  border-color: '{{accent-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-accent label {  color: '{{accent-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-warn .md-input {  border-color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-warn label {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid .md-input {  border-color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid.md-input-focused label {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid data-ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid x-ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid [ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [data-ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [x-ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [ng-message-exp], md-input-container.md-THEME_NAME-theme.md-input-invalid [data-ng-message-exp], md-input-container.md-THEME_NAME-theme.md-input-invalid [x-ng-message-exp], md-input-container.md-THEME_NAME-theme.md-input-invalid .md-char-counter {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme .md-input[disabled], [disabled] md-input-container.md-THEME_NAME-theme .md-input {  border-bottom-color: transparent;  color: '{{foreground-3}}';  background-image: linear-gradient(to right, '{{foreground-3}}' 0%, '{{foreground-3}}' 33%, transparent 0%);  background-image: -ms-linear-gradient(left, transparent 0%, '{{foreground-3}}' 100%); }md-menu-content.md-THEME_NAME-theme {  background-color: '{{background-color}}'; }  md-menu-content.md-THEME_NAME-theme md-menu-divider {    background-color: '{{foreground-4}}'; }md-menu-bar.md-THEME_NAME-theme > button.md-button {  color: '{{foreground-2}}';  border-radius: 2px; }md-menu-bar.md-THEME_NAME-theme md-menu.md-open > button, md-menu-bar.md-THEME_NAME-theme md-menu > button:focus {  outline: none;  background: '{{background-200}}'; }md-menu-bar.md-THEME_NAME-theme.md-open:not(.md-keyboard-mode) md-menu:hover > button {  background-color: '{{ background-500-0.2}}'; }md-menu-bar.md-THEME_NAME-theme:not(.md-keyboard-mode):not(.md-open) md-menu button:hover, md-menu-bar.md-THEME_NAME-theme:not(.md-keyboard-mode):not(.md-open) md-menu button:focus {  background: transparent; }md-menu-content.md-THEME_NAME-theme .md-menu > .md-button:after {  color: '{{foreground-2}}'; }md-menu-content.md-THEME_NAME-theme .md-menu.md-open > .md-button {  background-color: '{{ background-500-0.2}}'; }md-toolbar.md-THEME_NAME-theme.md-menu-toolbar {  background-color: '{{background-color}}';  color: '{{foreground-1}}'; }  md-toolbar.md-THEME_NAME-theme.md-menu-toolbar md-toolbar-filler {    background-color: '{{primary-color}}';    color: '{{primary-contrast}}'; }    md-toolbar.md-THEME_NAME-theme.md-menu-toolbar md-toolbar-filler md-icon {      color: '{{primary-contrast}}'; }md-progress-circular.md-THEME_NAME-theme {  background-color: transparent; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-gap {    border-top-color: '{{primary-color}}';    border-bottom-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme .md-inner .md-right .md-half-circle {    border-top-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-right .md-half-circle {    border-right-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-left .md-half-circle {    border-left-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-gap {    border-top-color: '{{warn-color}}';    border-bottom-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-right .md-half-circle {    border-top-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-right .md-half-circle {    border-right-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-left .md-half-circle {    border-left-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-gap {    border-top-color: '{{accent-color}}';    border-bottom-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-right .md-half-circle {    border-top-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-right .md-half-circle {    border-right-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-left .md-half-circle {    border-left-color: '{{accent-color}}'; }md-progress-linear.md-THEME_NAME-theme .md-container {  background-color: '{{primary-100}}'; }md-progress-linear.md-THEME_NAME-theme .md-bar {  background-color: '{{primary-color}}'; }md-progress-linear.md-THEME_NAME-theme.md-warn .md-container {  background-color: '{{warn-100}}'; }md-progress-linear.md-THEME_NAME-theme.md-warn .md-bar {  background-color: '{{warn-color}}'; }md-progress-linear.md-THEME_NAME-theme.md-accent .md-container {  background-color: '{{accent-100}}'; }md-progress-linear.md-THEME_NAME-theme.md-accent .md-bar {  background-color: '{{accent-color}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-warn .md-bar1 {  background-color: '{{warn-100}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-warn .md-dashed:before {  background: radial-gradient('{{warn-100}}' 0%, '{{warn-100}}' 16%, transparent 42%); }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-accent .md-bar1 {  background-color: '{{accent-100}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-accent .md-dashed:before {  background: radial-gradient('{{accent-100}}' 0%, '{{accent-100}}' 16%, transparent 42%); }md-radio-button.md-THEME_NAME-theme .md-off {  border-color: '{{foreground-2}}'; }md-radio-button.md-THEME_NAME-theme .md-on {  background-color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme.md-checked .md-off {  border-color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme.md-checked .md-ink-ripple {  color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme .md-container .md-ripple {  color: '{{accent-600}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-on, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-on {  background-color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-off {  border-color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ink-ripple {  color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-container .md-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-container .md-ripple {  color: '{{primary-600}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-on, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-on {  background-color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-off {  border-color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-ink-ripple {  color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-container .md-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-container .md-ripple {  color: '{{warn-600}}'; }md-radio-group.md-THEME_NAME-theme[disabled], md-radio-button.md-THEME_NAME-theme[disabled] {  color: '{{foreground-3}}'; }  md-radio-group.md-THEME_NAME-theme[disabled] .md-container .md-off, md-radio-button.md-THEME_NAME-theme[disabled] .md-container .md-off {    border-color: '{{foreground-3}}'; }  md-radio-group.md-THEME_NAME-theme[disabled] .md-container .md-on, md-radio-button.md-THEME_NAME-theme[disabled] .md-container .md-on {    border-color: '{{foreground-3}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked .md-container:before {  background-color: '{{accent-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked:not([disabled]).md-primary .md-container:before {  background-color: '{{primary-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked.md-primary .md-container:before {  background-color: '{{warn-color-0.26}}'; }md-select.md-THEME_NAME-theme[disabled] .md-select-value {  border-bottom-color: transparent;  background-image: linear-gradient(to right, '{{foreground-3}}' 0%, '{{foreground-3}}' 33%, transparent 0%);  background-image: -ms-linear-gradient(left, transparent 0%, '{{foreground-3}}' 100%); }md-select.md-THEME_NAME-theme .md-select-value {  border-bottom-color: '{{foreground-4}}'; }  md-select.md-THEME_NAME-theme .md-select-value.md-select-placeholder {    color: '{{foreground-3}}'; }md-select.md-THEME_NAME-theme.ng-invalid.ng-dirty .md-select-value {  color: '{{warn-500}}' !important;  border-bottom-color: '{{warn-500}}' !important; }md-select.md-THEME_NAME-theme:not([disabled]):focus .md-select-value {  border-bottom-color: '{{primary-color}}';  color: '{{ foreground-1 }}'; }  md-select.md-THEME_NAME-theme:not([disabled]):focus .md-select-value.md-select-placeholder {    color: '{{ foreground-1 }}'; }md-select.md-THEME_NAME-theme:not([disabled]):focus.md-accent .md-select-value {  border-bottom-color: '{{accent-color}}'; }md-select.md-THEME_NAME-theme:not([disabled]):focus.md-warn .md-select-value {  border-bottom-color: '{{warn-color}}'; }md-select.md-THEME_NAME-theme[disabled] .md-select-value {  color: '{{foreground-3}}'; }  md-select.md-THEME_NAME-theme[disabled] .md-select-value.md-select-placeholder {    color: '{{foreground-3}}'; }md-select-menu.md-THEME_NAME-theme md-option[disabled] {  color: '{{foreground-3}}'; }md-select-menu.md-THEME_NAME-theme md-optgroup {  color: '{{foreground-2}}'; }  md-select-menu.md-THEME_NAME-theme md-optgroup md-option {    color: '{{foreground-1}}'; }md-select-menu.md-THEME_NAME-theme md-option[selected] {  color: '{{primary-500}}'; }  md-select-menu.md-THEME_NAME-theme md-option[selected]:focus {    color: '{{primary-600}}'; }  md-select-menu.md-THEME_NAME-theme md-option[selected].md-accent {    color: '{{accent-500}}'; }    md-select-menu.md-THEME_NAME-theme md-option[selected].md-accent:focus {      color: '{{accent-600}}'; }md-select-menu.md-THEME_NAME-theme md-option:focus:not([selected]) {  background: '{{background-200}}'; }md-sidenav.md-THEME_NAME-theme {  background-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme .md-track {  background-color: '{{foreground-3}}'; }md-slider.md-THEME_NAME-theme .md-track-ticks {  background-color: '{{foreground-4}}'; }md-slider.md-THEME_NAME-theme .md-focus-thumb {  background-color: '{{foreground-2}}'; }md-slider.md-THEME_NAME-theme .md-focus-ring {  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-disabled-thumb {  border-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme.md-min .md-thumb:after {  background-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme .md-track.md-track-fill {  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-thumb:after {  border-color: '{{accent-color}}';  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-sign {  background-color: '{{accent-color}}'; }  md-slider.md-THEME_NAME-theme .md-sign:after {    border-top-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-thumb-text {  color: '{{accent-contrast}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-focus-ring {  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-track.md-track-fill {  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-thumb:after {  border-color: '{{warn-color}}';  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-sign {  background-color: '{{warn-color}}'; }  md-slider.md-THEME_NAME-theme.md-warn .md-sign:after {    border-top-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-thumb-text {  color: '{{warn-contrast}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-focus-ring {  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-track.md-track-fill {  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-thumb:after {  border-color: '{{primary-color}}';  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-sign {  background-color: '{{primary-color}}'; }  md-slider.md-THEME_NAME-theme.md-primary .md-sign:after {    border-top-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-thumb-text {  color: '{{primary-contrast}}'; }md-slider.md-THEME_NAME-theme[disabled] .md-thumb:after {  border-color: '{{foreground-3}}'; }md-slider.md-THEME_NAME-theme[disabled]:not(.md-min) .md-thumb:after {  background-color: '{{foreground-3}}'; }.md-subheader.md-THEME_NAME-theme {  color: '{{ foreground-2-0.23 }}';  background-color: '{{background-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-primary {    color: '{{primary-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-accent {    color: '{{accent-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-warn {    color: '{{warn-color}}'; }md-switch.md-THEME_NAME-theme .md-thumb {  background-color: '{{background-50}}'; }md-switch.md-THEME_NAME-theme .md-bar {  background-color: '{{background-500}}'; }md-switch.md-THEME_NAME-theme.md-checked .md-thumb {  background-color: '{{accent-color}}'; }md-switch.md-THEME_NAME-theme.md-checked .md-bar {  background-color: '{{accent-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-focused .md-thumb:before {  background-color: '{{accent-color-0.26}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary .md-thumb {  background-color: '{{primary-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary .md-bar {  background-color: '{{primary-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary.md-focused .md-thumb:before {  background-color: '{{primary-color-0.26}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn .md-thumb {  background-color: '{{warn-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn .md-bar {  background-color: '{{warn-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn.md-focused .md-thumb:before {  background-color: '{{warn-color-0.26}}'; }md-switch.md-THEME_NAME-theme[disabled] .md-thumb {  background-color: '{{background-400}}'; }md-switch.md-THEME_NAME-theme[disabled] .md-bar {  background-color: '{{foreground-4}}'; }md-tabs.md-THEME_NAME-theme md-tabs-wrapper {  background-color: transparent;  border-color: '{{foreground-4}}'; }md-tabs.md-THEME_NAME-theme .md-paginator md-icon {  color: '{{primary-color}}'; }md-tabs.md-THEME_NAME-theme md-ink-bar {  color: '{{accent-color}}';  background: '{{accent-color}}'; }md-tabs.md-THEME_NAME-theme .md-tab {  color: '{{foreground-2}}'; }  md-tabs.md-THEME_NAME-theme .md-tab[disabled] {    color: '{{foreground-3}}'; }  md-tabs.md-THEME_NAME-theme .md-tab.md-active, md-tabs.md-THEME_NAME-theme .md-tab.md-focused {    color: '{{primary-color}}'; }  md-tabs.md-THEME_NAME-theme .md-tab.md-focused {    background: '{{primary-color-0.1}}'; }  md-tabs.md-THEME_NAME-theme .md-tab .md-ripple-container {    color: '{{accent-100}}'; }md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper {  background-color: '{{accent-color}}'; }  md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{accent-100}}'; }    md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{accent-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{accent-contrast-0.1}}'; }  md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-ink-bar {    color: '{{primary-600-1}}';    background: '{{primary-600-1}}'; }md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper {  background-color: '{{primary-color}}'; }  md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{primary-100}}'; }    md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{primary-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{primary-contrast-0.1}}'; }md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper {  background-color: '{{warn-color}}'; }  md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{warn-100}}'; }    md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{warn-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{warn-contrast-0.1}}'; }md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{primary-color}}'; }  md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{primary-100}}'; }    md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{primary-contrast}}'; }    md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{primary-contrast-0.1}}'; }md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{accent-color}}'; }  md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{accent-100}}'; }    md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{accent-contrast}}'; }    md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{accent-contrast-0.1}}'; }  md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-ink-bar {    color: '{{primary-600-1}}';    background: '{{primary-600-1}}'; }md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{warn-color}}'; }  md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{warn-100}}'; }    md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{warn-contrast}}'; }    md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{warn-contrast-0.1}}'; }md-toast.md-THEME_NAME-theme {  background-color: #323232;  color: '{{background-50}}'; }  md-toast.md-THEME_NAME-theme .md-button {    color: '{{background-50}}'; }    md-toast.md-THEME_NAME-theme .md-button.md-highlight {      color: '{{primary-A200}}'; }      md-toast.md-THEME_NAME-theme .md-button.md-highlight.md-accent {        color: '{{accent-A200}}'; }      md-toast.md-THEME_NAME-theme .md-button.md-highlight.md-warn {        color: '{{warn-A200}}'; }md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) {  background-color: '{{primary-color}}';  color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) md-icon {    color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) .md-button {    color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar).md-accent {    background-color: '{{accent-color}}';    color: '{{accent-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar).md-warn {    background-color: '{{warn-color}}';    color: '{{warn-contrast}}'; }md-tooltip.md-THEME_NAME-theme {  color: '{{background-A100}}'; }  md-tooltip.md-THEME_NAME-theme .md-background {    background-color: '{{foreground-2}}'; }"); 
 	})();
 
 
@@ -61322,11 +62151,11 @@
 
 	module.exports = angular.module('Texter', [])
 	        .controller('TexterCtrl', __webpack_require__(22))
-	        .controller('ContactDialogCtrl', __webpack_require__(26))
-	        .controller('ScriptDialogCtrl', __webpack_require__(27))
-	        .service('Text', __webpack_require__(28))
-	        .factory('Contact', __webpack_require__(29))
-	        .factory('Script', __webpack_require__(30));
+	        .controller('ContactDialogCtrl', __webpack_require__(27))
+	        .controller('ScriptDialogCtrl', __webpack_require__(28))
+	        .service('Text', __webpack_require__(29))
+	        .factory('Contact', __webpack_require__(30))
+	        .factory('Script', __webpack_require__(31));
 
 
 /***/ },
@@ -61355,8 +62184,7 @@
 
 	            $scope.incoming = [];
 
-	            var script = Script({});
-	            console.log(script, Script);
+	            $scope.scripts = Script.$query();
 
 	            // $scope.scripts = Script().$query();
 
@@ -61377,6 +62205,7 @@
 
 	            handkeSocket.forward('incoming', $scope);
 	            $scope.$on('socket:incoming', function (ev, data) {
+	                console.log('incoming', data);
 	                data.timestamp = new Date();
 	                $scope.incoming.push(data);
 	            });
@@ -61388,18 +62217,29 @@
 	        };
 
 	        $scope.loadScript = function (script) {
-	            $scope.outgoing.text = script.text;
+	            $scope.outgoing.text = script.content;
 	        };
 
-	        $scope.send = function (content) {
-	            var text = new Text({
+	        $scope.send = function () {
+
+	            var options = {
 	                to: $scope.contacts.filter(function (contact) {
 	                    return contact.selected;
-	                }),
+	                })[0].phone,
 	                body: $scope.outgoing.text
-	            });
+	            };
 
-	            text.$save();
+	            var text = new Text(options);
+
+	            text.$save()
+	                .then(
+	                    function (data) {
+	                        console.log('text sent', data);
+	                    },
+	                    function (data) {
+	                        console.error('text error', data);
+	                    }
+	                );
 	        };
 
 	        $scope.toggleIncoming = function () {
@@ -61420,7 +62260,8 @@
 	                clickOutsideToClose: true
 	            })
 	            .then(function (contact) {
-	                ContactService.save(contact);
+	                Contact.$save(contact);
+	                $scope.contacts = Contact.$query();
 	            });
 	        };
 
@@ -61437,12 +62278,14 @@
 	            })
 	            .then(function (results) {
 	                if (results.action === 'update') {
-	                    $scope.contacts = ContactService.update(results.contact);
+	                    Contact.$update(results.contact);
+	                    $scope.contacts = Contact.$query();
 	                    return;
 	                }
 
 	                if (results.action === 'remove') {
-	                    $scope.contacts = ContactService.remove(results.contact);
+	                    Contact.$remove(results.contact);
+	                    $scope.contacts = Contact.$query();
 	                    return;
 	                }
 	            });
@@ -61454,23 +62297,21 @@
 	        $scope.openAddScriptDialog = function () {
 	            $mdDialog.show({
 	                controller: 'ScriptDialogCtrl',
-	                template: __webpack_require__(33),
+	                template: __webpack_require__(25),
 	                parent: angular.element(document.body),
 	                clickOutsideToClose: true
 	            })
 	            .then(function (script) {
 	                console.log('script', script);
-	                Script.$save({}, script)
-	                    .then(function () {
-	                        $scope.scripts = Script.$query();
-	                    });
+	                Script.$save(script);
+	                $scope.scripts = Script.$query();
 	            });
 	        };
 
 	        $scope.openEditScriptDialog = function (script) {
 	            $mdDialog.show({
 	                controller: 'ScriptDialogCtrl',
-	                template: __webpack_require__(25),
+	                template: __webpack_require__(26),
 	                parent: angular.element(document.body),
 	                clickOutsideToClose: true,
 	                locals: {
@@ -61479,13 +62320,16 @@
 	                bindToController: true
 	            })
 	            .then(function (results) {
+	                console.log(results);
 	                if (results.action === 'update') {
-	                    $scope.scripts = Script.update(results.script);
+	                    Script.$update(results.script);
+	                    $scope.scripts = Script.$query();
 	                    return;
 	                }
 
 	                if (results.action === 'remove') {
-	                    $scope.scripts = Script.remove(results.script);
+	                    Script.$remove(results.script);
+	                    $scope.scripts = Script.$query();
 	                    return;
 	                }
 	            });
@@ -61512,10 +62356,16 @@
 /* 25 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <md-input-container>\n            <label>Title</label>\n            <input type=\"text\" ng-model=\"script.title\">\n        </md-input-container>\n        <md-input-container>\n            <label>Text</label>\n            <textarea ng-model=\"script.text\"></textarea>\n        </md-input-container>\n        <div class=\"md-actions\">\n            <md-button ng-click=\"update()\">Update</md-button>\n            <md-button ng-click=\"remove()\">Delete</md-button>\n        </div>\n    </md-dialog-content>\n</md-dialog>\n"
+	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <md-input-container>\n            <label>Title</label>\n            <input type=\"text\" ng-model=\"script.title\">\n        </md-input-container>\n        <md-input-container>\n            <label>Text</label>\n            <textarea ng-model=\"script.content\"></textarea>\n        </md-input-container>\n        <div class=\"md-actions\">\n            <md-button ng-click=\"save()\">Save</md-button>\n        </div>\n    </md-dialog-content>\n</md-dialog>\n"
 
 /***/ },
 /* 26 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <md-input-container>\n            <label>Title</label>\n            <input type=\"text\" ng-model=\"script.title\">\n        </md-input-container>\n        <md-input-container>\n            <label>Content</label>\n            <textarea ng-model=\"script.content\"></textarea>\n        </md-input-container>\n        <div class=\"md-actions\">\n            <md-button ng-click=\"update()\">Update</md-button>\n            <md-button ng-click=\"remove()\">Delete</md-button>\n        </div>\n    </md-dialog-content>\n</md-dialog>\n"
+
+/***/ },
+/* 27 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -61562,7 +62412,7 @@
 
 
 /***/ },
-/* 27 */
+/* 28 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -61609,79 +62459,12 @@
 
 
 /***/ },
-/* 28 */
-/***/ function(module, exports) {
-
-	module.exports = ['$resource', 'API', function Text ($resource, API) {
-	    return $resource(API.root + API.sendText);
-	}];
-
-
-/***/ },
 /* 29 */
 /***/ function(module, exports) {
 
-	'use strict';
-
-	module.exports = [
-	    'API',
-	    '$resource',
-	    '$window',
-	    function (API, $resource, $window) {
-	        var apiUrl = API.protocol + '://localhost:' + API.port;
-
-	        if (!/localhost/.test($window.location.href)) {
-	            apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
-	        }
-
-	        var Contact = $resource(apiUrl + '/api/contacts/:id',
-	            {
-	                id: '@id'
-	            },
-	            {
-	                update: {
-	                    method: 'PUT'
-	                }
-	            }
-	        );
-
-	        return new Contact();
-	        // var contacts = [
-	        //     {
-	        //         id: 1,
-	        //         name: 'testuser',
-	        //         phone: '555555555'
-	        //     }
-	        // ];
-	        //
-	        // return {
-	        //     get: function () {
-	        //         return contacts;
-	        //     },
-	        //     save: function (contact) {
-	        //         contact.id = contacts.length + 1;
-	        //         contacts.push(contact);
-	        //     },
-	        //     update: function (contact) {
-	        //         var oldContact = contacts.filter(function (c) {
-	        //             return c.id === contact.id;
-	        //         });
-	        //
-	        //         oldContact.name = contact.name;
-	        //         oldContact.number = contact.number;
-	        //
-	        //         return contacts;
-	        //     },
-	        //     remove: function (contact) {
-	        //         contacts = contacts.filter(function (c) {
-	        //             return c.id !== contact.id;
-	        //         });
-	        //
-	        //         return contacts;
-	        //     }
-	        // };
-	    }
-	];
+	module.exports = ['$resource', 'API', function Text ($resource, API) {
+	    return $resource('http://localhost:8000/api/sms/send');
+	}];
 
 
 /***/ },
@@ -61695,22 +62478,126 @@
 	    '$resource',
 	    '$window',
 	    function (API, $resource, $window) {
-	        var apiUrl = API.protocol + '://localhost:' + API.port;
-
-	        if (!/localhost/.test($window.location.href)) {
-	            apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
-	        }
-
-	        return $resource(apiUrl + '/api/scripts/:id',
+	        // var apiUrl = API.protocol + '://localhost:' + API.port;
+	        //
+	        // if (!/localhost/.test($window.location.href)) {
+	        //     apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
+	        // }
+	        //
+	        // var Contact = $resource(apiUrl + '/api/contacts/:id',
+	        //     {
+	        //         id: '@id'
+	        //     },
+	        //     {
+	        //         update: {
+	        //             method: 'PUT'
+	        //         }
+	        //     }
+	        // );
+	        //
+	        // return new Contact();
+	        var contacts = [
 	            {
-	                id: '@id'
-	            },
-	            {
-	                update: {
-	                    method: 'PUT'
-	                }
+	                id: 1,
+	                name: 'testuser',
+	                phone: '+15034197245'
 	            }
-	        );
+	        ];
+
+	        return {
+	            $query: function () {
+	                return contacts;
+	            },
+	            $save: function (contact) {
+	                contact.id = contacts.length + 1;
+	                contacts.push(contact);
+	            },
+	            $update: function (contact) {
+	                var oldContact = contacts.filter(function (c) {
+	                    return c.id === contact.id;
+	                });
+
+	                oldContact.name = contact.name;
+	                oldContact.number = contact.number;
+
+	                return contacts;
+	            },
+	            $remove: function (contact) {
+	                contacts = contacts.filter(function (c) {
+	                    return c.id !== contact.id;
+	                });
+
+	                return contacts;
+	            }
+	        };
+	    }
+	];
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    'API',
+	    '$resource',
+	    '$window',
+	    function (API, $resource, $window) {
+	        // var apiUrl = API.protocol + '://localhost:' + API.port;
+	        //
+	        // if (!/localhost/.test($window.location.href)) {
+	        //     apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
+	        // }
+
+	        var scripts = [
+	            {
+	                id: 1,
+	                title: 'This is a title',
+	                content: 'This is a script'
+	            }
+	        ];
+
+	        var self = this;
+
+	        return {
+	            $query: function () {
+	                return scripts;
+	            },
+	            $save: function (script) {
+	                script.id = scripts.length + 1;
+	                scripts.push(script);
+	            },
+	            $update: function (script) {
+	                var oldScript = scripts.filter(function (c) {
+	                    return c.id === script.id;
+	                });
+
+	                oldScript.name = script.title;
+	                oldScript.number = script.content;
+
+	                return scripts;
+	            },
+	            $remove: function (script) {
+	                scripts = scripts.filter(function (c) {
+	                    return c.id !== script.id;
+	                });
+
+	                return scripts;
+	            }
+	        };
+
+	        // return $resource(apiUrl + '/api/scripts/:id',
+	        //     {
+	        //         id: '@id'
+	        //     },
+	        //     {
+	        //         update: {
+	        //             method: 'PUT'
+	        //         }
+	        //     }
+	        // );
 
 	        // return new Script();
 
@@ -61758,22 +62645,16 @@
 
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "<md-content layout=\"column\" flex=\"33\" offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login()\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"credentials.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"credentials.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
 
 /***/ },
-/* 32 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-content class=\"texter\" layout=\"row\" flex>\n    <div class=\"contacts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Contacts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Contact\"\n                ng-click=\"openAddContactDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n        </md-subheader>\n\n        <md-list class=\"contact-list\">\n            <md-list-item ng-repeat=\"contact in contacts\">\n                <md-list-item-text flex=\"90\" layout=\"row\" layout-align=\"start center\">\n                    <div flex>\n                        <h4>{{ contact.name }}</h4>\n                        <p>{{ contact.phone }}</p>\n                        <p>\n                            <md-button class=\"edit-button md-accent md-mini\"\n                                ng-click=\"openEditContactDialog(contact)\">\n                                <ng-md-icon icon=\"edit\"\n                                    style=\"fill: #FF9800\"\n                                    size=\"17\"></ng-md-icon>\n                                Edit\n                            </md-button>\n                        </p>\n                    </div>\n\n                    <div flex=\"10\">\n                        <md-checkbox class=\"md-accent\"\n                            ng-model=\"contact.selected\"></md-checkbox>\n                    </div>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"scripts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Scripts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Script\"\n                ng-click=\"openAddScriptDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n        </md-subheader>\n\n        <md-list>\n            <md-list-item class=\"md-2-line\"\n                ng-repeat=\"script in scripts\"\n                ng-click=\"loadScript(script)\">\n                <md-list-item-text>\n                    <h4>{{ script.title }}</h4>\n                    <p>\n                        {{ script.content }}\n                        <md-button class=\"edit-button md-accent md-mini\"\n                            ng-click=\"openEditScriptDialog(contact)\">\n                            <ng-md-icon icon=\"edit\"\n                                style=\"fill: #FF9800\"\n                                size=\"17\"></ng-md-icon>\n                            Edit\n                        </md-button>\n                    </p>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"outgoing\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Outgoing\n        </md-subheader>\n\n        <md-content layout-padding>\n            <form name=\"outgoingForm\" ng-submit=\"send()\">\n                <md-input-container>\n                    <label for=\"text\">Text</label>\n                    <textarea name=\"text\" ng-model=\"outgoing.text\">\n                    </textarea>\n                </md-input-container>\n\n                <md-button class=\"md-accent\"\n                    type=\"submit\">Send</md-button>\n            </form>\n        </md-content>\n\n        <md-button class=\"incoming-toggle\"\n            ng-click=\"toggleIncoming()\">\n                <ng-md-icon icon=\"chevron_left\"\n                    style=\"fill: #fff\"\n                    size=\"17\"></ng-md-icon>\n                {{ incoming.length }} Incoming\n        </md-button>\n    </div>\n\n    <md-sidenav class=\"md-sidenav-right md-whiteframe-z2\"\n        md-component-id=\"incoming\">\n        <md-toolbar class=\"md-theme-light\">\n            <h1 class=\"md-toolbar-tools\">Incoming Texts</h1>\n        </md-toolbar>\n        <md-list>\n            <md-list-item class=\"md-3-line\"\n                ng-repeat=\"text in incoming\">\n\n                <ng-md-icon class=\"md-avatar\"\n                    icon=\"account_circle\"\n                    style=\"fill: #fff\"\n                    size=\"40\"></ng-md-icon>\n\n                    <div class=\"md-list-item-text\" layout=\"column\">\n                        <h3>From: {{ text.From }}</h3>\n                        <h4>Sent: {{ text.timestamp | date:'short' }}</h4>\n                        <p>{{ text.Body }}</p>\n                    </div>\n            </md-list-item>\n        </md-list>\n    </md-sidenav>\n</md-content>\n"
-
-/***/ },
 /* 33 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <md-input-container>\n            <label>Title</label>\n            <input type=\"text\" ng-model=\"script.title\">\n        </md-input-container>\n        <md-input-container>\n            <label>Text</label>\n            <textarea ng-model=\"script.content\"></textarea>\n        </md-input-container>\n        <div class=\"md-actions\">\n            <md-button ng-click=\"save()\">Save</md-button>\n        </div>\n    </md-dialog-content>\n</md-dialog>\n"
+	module.exports = "<md-content class=\"texter\" layout=\"row\" flex>\n    <div class=\"contacts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Contacts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Contact\"\n                ng-click=\"openAddContactDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n        </md-subheader>\n\n        <md-list class=\"contact-list\">\n            <md-list-item ng-repeat=\"contact in contacts\">\n                <md-list-item-text flex=\"90\" layout=\"row\" layout-align=\"start center\">\n                    <div flex>\n                        <h4>{{ contact.name }}</h4>\n                        <p>{{ contact.phone }}</p>\n                        <p>\n                            <md-button class=\"edit-button md-accent md-mini\"\n                                ng-click=\"openEditContactDialog(contact)\">\n                                <ng-md-icon icon=\"edit\"\n                                    style=\"fill: #FF9800\"\n                                    size=\"17\"></ng-md-icon>\n                                Edit\n                            </md-button>\n                        </p>\n                    </div>\n\n                    <div flex=\"10\">\n                        <md-checkbox class=\"md-accent\"\n                            ng-model=\"contact.selected\"></md-checkbox>\n                    </div>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"scripts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Scripts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Script\"\n                ng-click=\"openAddScriptDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n        </md-subheader>\n\n        <md-list>\n            <md-list-item class=\"md-2-line\"\n                ng-repeat=\"script in scripts\"\n                ng-click=\"loadScript(script)\">\n                <md-list-item-text>\n                    <h4>{{ script.title }}</h4>\n                    <p>\n                        {{ script.content }}\n                        <md-button class=\"edit-button md-accent md-mini\"\n                            ng-click=\"openEditScriptDialog(script)\">\n                            <ng-md-icon icon=\"edit\"\n                                style=\"fill: #FF9800\"\n                                size=\"17\"></ng-md-icon>\n                            Edit\n                        </md-button>\n                    </p>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"outgoing\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Outgoing\n        </md-subheader>\n\n        <md-content layout-padding>\n            <form name=\"outgoingForm\" ng-submit=\"send()\">\n                <md-input-container>\n                    <label for=\"text\">Text</label>\n                    <textarea name=\"text\" ng-model=\"outgoing.text\">\n                    </textarea>\n                </md-input-container>\n\n                <md-button class=\"md-accent\"\n                    type=\"submit\">Send</md-button>\n            </form>\n        </md-content>\n\n        <md-button class=\"incoming-toggle\"\n            ng-click=\"toggleIncoming()\">\n                <ng-md-icon icon=\"chevron_left\"\n                    style=\"fill: #fff\"\n                    size=\"17\"></ng-md-icon>\n                {{ incoming.length }} Incoming\n        </md-button>\n    </div>\n\n    <md-sidenav class=\"md-sidenav-right md-whiteframe-z2\"\n        md-component-id=\"incoming\">\n        <md-toolbar class=\"md-theme-light\">\n            <h1 class=\"md-toolbar-tools\">Incoming Texts</h1>\n        </md-toolbar>\n        <md-list>\n            <md-list-item class=\"md-3-line\"\n                ng-repeat=\"text in incoming\">\n\n                <ng-md-icon class=\"md-avatar\"\n                    icon=\"account_circle\"\n                    style=\"fill: #fff\"\n                    size=\"40\"></ng-md-icon>\n\n                    <div class=\"md-list-item-text\" layout=\"column\">\n                        <h3>From: {{ text.From }}</h3>\n                        <h4>Sent: {{ text.timestamp | date:'short' }}</h4>\n                        <p>{{ text.Body }}</p>\n                    </div>\n            </md-list-item>\n        </md-list>\n    </md-sidenav>\n</md-content>\n"
 
 /***/ }
 /******/ ]);

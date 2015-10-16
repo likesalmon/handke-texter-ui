@@ -20,8 +20,7 @@ module.exports = [
 
             $scope.incoming = [];
 
-            var script = Script({});
-            console.log(script, Script);
+            $scope.scripts = Script.$query();
 
             // $scope.scripts = Script().$query();
 
@@ -42,6 +41,7 @@ module.exports = [
 
             handkeSocket.forward('incoming', $scope);
             $scope.$on('socket:incoming', function (ev, data) {
+                console.log('incoming', data);
                 data.timestamp = new Date();
                 $scope.incoming.push(data);
             });
@@ -53,18 +53,29 @@ module.exports = [
         };
 
         $scope.loadScript = function (script) {
-            $scope.outgoing.text = script.text;
+            $scope.outgoing.text = script.content;
         };
 
-        $scope.send = function (content) {
-            var text = new Text({
+        $scope.send = function () {
+
+            var options = {
                 to: $scope.contacts.filter(function (contact) {
                     return contact.selected;
-                }),
+                })[0].phone,
                 body: $scope.outgoing.text
-            });
+            };
 
-            text.$save();
+            var text = new Text(options);
+
+            text.$save()
+                .then(
+                    function (data) {
+                        console.log('text sent', data);
+                    },
+                    function (data) {
+                        console.error('text error', data);
+                    }
+                );
         };
 
         $scope.toggleIncoming = function () {
@@ -85,7 +96,8 @@ module.exports = [
                 clickOutsideToClose: true
             })
             .then(function (contact) {
-                ContactService.save(contact);
+                Contact.$save(contact);
+                $scope.contacts = Contact.$query();
             });
         };
 
@@ -102,12 +114,14 @@ module.exports = [
             })
             .then(function (results) {
                 if (results.action === 'update') {
-                    $scope.contacts = ContactService.update(results.contact);
+                    Contact.$update(results.contact);
+                    $scope.contacts = Contact.$query();
                     return;
                 }
 
                 if (results.action === 'remove') {
-                    $scope.contacts = ContactService.remove(results.contact);
+                    Contact.$remove(results.contact);
+                    $scope.contacts = Contact.$query();
                     return;
                 }
             });
@@ -125,10 +139,8 @@ module.exports = [
             })
             .then(function (script) {
                 console.log('script', script);
-                Script.$save({}, script)
-                    .then(function () {
-                        $scope.scripts = Script.$query();
-                    });
+                Script.$save(script);
+                $scope.scripts = Script.$query();
             });
         };
 
@@ -144,13 +156,16 @@ module.exports = [
                 bindToController: true
             })
             .then(function (results) {
+                console.log(results);
                 if (results.action === 'update') {
-                    $scope.scripts = Script.update(results.script);
+                    Script.$update(results.script);
+                    $scope.scripts = Script.$query();
                     return;
                 }
 
                 if (results.action === 'remove') {
-                    $scope.scripts = Script.remove(results.script);
+                    Script.$remove(results.script);
+                    $scope.scripts = Script.$query();
                     return;
                 }
             });
