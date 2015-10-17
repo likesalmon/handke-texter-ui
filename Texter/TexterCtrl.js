@@ -97,7 +97,11 @@ module.exports = [
             };
 
             Text.save(text, function (response) {
-                console.log('contact saved', response);
+                return $mdToast.show(
+                  $mdToast.simple()
+                    .content('Your text was sent')
+                    .hideDelay(3000)
+                );
             });
         };
 

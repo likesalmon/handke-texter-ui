@@ -1,19 +1,11 @@
 'use strict';
 
 module.exports = [
-    'API',
+    'Helper',
     '$resource',
     '$window',
-    function (API, $resource, $window) {
-        var apiUrl = '';
-
-        if (/localhost/.test($window.location.href)) {
-            apiUrl = API.protocol + '://localhost:' + API.port;
-        } else {
-            apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
-        }
-
-        return $resource(apiUrl + '/api/contacts/:id',
+    function (Helper, $resource, $window) {
+        return $resource(Helper.getAPIUrl() + '/api/contacts/:id',
             {
                 id: '@id'
             },
