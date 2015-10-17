@@ -8,6 +8,7 @@ module.exports = [
         $scope
     ) {
         var self = this;
+
         $scope.init = function () {
             if (self.script) {
                 $scope.script = self.script;
