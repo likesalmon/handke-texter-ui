@@ -163,7 +163,7 @@
 
 
 	// module
-	exports.push([module.id, "html, body {\n  height: 100%;\n  color: rgba(0, 0, 0, 0.87);\n  background: white;\n  position: relative; }\n\nbody {\n  margin: 0;\n  padding: 0; }\n\n[tabindex='-1']:focus {\n  outline: none; }\n\n.inset {\n  padding: 10px; }\n\nbutton.md-no-style {\n  font-weight: normal;\n  background-color: inherit;\n  text-align: left;\n  border: none;\n  padding: 0;\n  margin: 0; }\n\nselect,\nbutton,\ntextarea,\ninput {\n  vertical-align: baseline; }\n\ninput[type=\"reset\"],\ninput[type=\"submit\"],\nhtml input[type=\"button\"],\nbutton {\n  cursor: pointer;\n  -webkit-appearance: button; }\n  input[type=\"reset\"][disabled],\n  input[type=\"submit\"][disabled],\n  html input[type=\"button\"][disabled],\n  button[disabled] {\n    cursor: default; }\n\ntextarea {\n  vertical-align: top;\n  overflow: auto; }\n\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  box-sizing: content-box;\n  -webkit-box-sizing: content-box; }\n  input[type=\"search\"]::-webkit-search-decoration,\n  input[type=\"search\"]::-webkit-search-cancel-button {\n    -webkit-appearance: none; }\n\n.md-visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  text-transform: none;\n  width: 1px; }\n\n.md-shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  border-radius: inherit;\n  pointer-events: none; }\n\n.md-shadow-bottom-z-1 {\n  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n\n.md-shadow-bottom-z-2 {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }\n\n.md-shadow-animated.md-shadow {\n  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }\n\n/*\n * A container inside of a rippling element (eg a button),\n * which contains all of the individual ripples\n */\n.md-ripple-container {\n  pointer-events: none;\n  position: absolute;\n  overflow: hidden;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  transition: all 0.55s cubic-bezier(0.25, 0.8, 0.25, 1); }\n\n.md-ripple {\n  position: absolute;\n  transform: translate(-50%, -50%) scale(0);\n  transform-origin: 50% 50%;\n  opacity: 0;\n  border-radius: 50%; }\n  .md-ripple.md-ripple-placed {\n    transition: margin 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), border 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), height 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-ripple.md-ripple-scaled {\n    transform: translate(-50%, -50%) scale(1); }\n  .md-ripple.md-ripple-active, .md-ripple.md-ripple-full, .md-ripple.md-ripple-visible {\n    opacity: 0.20; }\n\n.md-padding {\n  padding: 8px; }\n\n.md-margin {\n  margin: 8px; }\n\n.md-scroll-mask {\n  position: absolute;\n  background-color: transparent;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0; }\n  .md-scroll-mask > .md-scroll-mask-bar {\n    display: block;\n    position: absolute;\n    background-color: #fafafa;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    z-index: 65;\n    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.3); }\n\n@media (min-width: 600px) {\n  .md-padding {\n    padding: 16px; } }\n\nhtml, body {\n  -webkit-tap-highlight-color: transparent;\n  -webkit-touch-callout: none;\n  min-height: 100%;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n/************\n * Headings\n ************/\n.md-display-4 {\n  font-size: 112px;\n  font-weight: 300;\n  letter-spacing: -0.010em;\n  line-height: 112px; }\n\n.md-display-3 {\n  font-size: 56px;\n  font-weight: 400;\n  letter-spacing: -0.005em;\n  line-height: 56px; }\n\n.md-display-2 {\n  font-size: 45px;\n  font-weight: 400;\n  line-height: 64px; }\n\n.md-display-1 {\n  font-size: 34px;\n  font-weight: 400;\n  line-height: 40px; }\n\n.md-headline {\n  font-size: 24px;\n  font-weight: 400;\n  line-height: 32px; }\n\n.md-title {\n  font-size: 20px;\n  font-weight: 500;\n  letter-spacing: 0.005em; }\n\n.md-subhead {\n  font-size: 16px;\n  font-weight: 400;\n  letter-spacing: 0.010em;\n  line-height: 24px; }\n\n/************\n * Body Copy\n ************/\n.md-body-1 {\n  font-size: 14px;\n  font-weight: 400;\n  letter-spacing: 0.010em;\n  line-height: 20px; }\n\n.md-body-2 {\n  font-size: 14px;\n  font-weight: 500;\n  letter-spacing: 0.010em;\n  line-height: 24px; }\n\n.md-caption {\n  font-size: 12px;\n  letter-spacing: 0.020em; }\n\n.md-button {\n  letter-spacing: 0.010em; }\n\n/************\n * Defaults\n ************/\nbutton,\nselect,\nhtml,\ntextarea,\ninput {\n  font-family: Roboto, \"Helvetica Neue\", sans-serif; }\n\nselect,\nbutton,\ntextarea,\ninput {\n  font-size: 100%; }\n\n/*\n*\n*  Responsive attributes\n*\n*  References:\n*  1) https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties#flex\n*  2) https://css-tricks.com/almanac/properties/f/flex/\n*  3) https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items\n*  4) http://godban.com.ua/projects/flexgrid\n*\n*/\n@-moz-document url-prefix() {\n  .layout-fill, [layout-fill] {\n    margin: 0;\n    width: 100%;\n    min-height: 100%;\n    height: 100%; } }\n\n/*\n *  Apply Mixins to create Layout/Flexbox styles\n *\n */\n.flex-order, [flex-order] {\n  order: 0; }\n\n.flex-order-0, [flex-order=\"0\"] {\n  order: 0; }\n\n.flex-order-1, [flex-order=\"1\"] {\n  order: 1; }\n\n.flex-order-2, [flex-order=\"2\"] {\n  order: 2; }\n\n.flex-order-3, [flex-order=\"3\"] {\n  order: 3; }\n\n.flex-order-4, [flex-order=\"4\"] {\n  order: 4; }\n\n.flex-order-5, [flex-order=\"5\"] {\n  order: 5; }\n\n.flex-order-6, [flex-order=\"6\"] {\n  order: 6; }\n\n.flex-order-7, [flex-order=\"7\"] {\n  order: 7; }\n\n.flex-order-8, [flex-order=\"8\"] {\n  order: 8; }\n\n.flex-order-9, [flex-order=\"9\"] {\n  order: 9; }\n\n.flex-order-10, [flex-order=\"10\"] {\n  order: 10; }\n\n.flex-order-11, [flex-order=\"11\"] {\n  order: 11; }\n\n.flex-order-12, [flex-order=\"12\"] {\n  order: 12; }\n\n.flex-order-13, [flex-order=\"13\"] {\n  order: 13; }\n\n.flex-order-14, [flex-order=\"14\"] {\n  order: 14; }\n\n.flex-order-15, [flex-order=\"15\"] {\n  order: 15; }\n\n.flex-order-16, [flex-order=\"16\"] {\n  order: 16; }\n\n.flex-order-17, [flex-order=\"17\"] {\n  order: 17; }\n\n.flex-order-18, [flex-order=\"18\"] {\n  order: 18; }\n\n.flex-order-19, [flex-order=\"19\"] {\n  order: 19; }\n\n.offset-0, [offset=\"0\"] {\n  margin-left: 0%; }\n\n.offset-5, [offset=\"5\"] {\n  margin-left: 5%; }\n\n.offset-10, [offset=\"10\"] {\n  margin-left: 10%; }\n\n.offset-15, [offset=\"15\"] {\n  margin-left: 15%; }\n\n.offset-20, [offset=\"20\"] {\n  margin-left: 20%; }\n\n.offset-25, [offset=\"25\"] {\n  margin-left: 25%; }\n\n.offset-30, [offset=\"30\"] {\n  margin-left: 30%; }\n\n.offset-35, [offset=\"35\"] {\n  margin-left: 35%; }\n\n.offset-40, [offset=\"40\"] {\n  margin-left: 40%; }\n\n.offset-45, [offset=\"45\"] {\n  margin-left: 45%; }\n\n.offset-50, [offset=\"50\"] {\n  margin-left: 50%; }\n\n.offset-55, [offset=\"55\"] {\n  margin-left: 55%; }\n\n.offset-60, [offset=\"60\"] {\n  margin-left: 60%; }\n\n.offset-65, [offset=\"65\"] {\n  margin-left: 65%; }\n\n.offset-70, [offset=\"70\"] {\n  margin-left: 70%; }\n\n.offset-75, [offset=\"75\"] {\n  margin-left: 75%; }\n\n.offset-80, [offset=\"80\"] {\n  margin-left: 80%; }\n\n.offset-85, [offset=\"85\"] {\n  margin-left: 85%; }\n\n.offset-90, [offset=\"90\"] {\n  margin-left: 90%; }\n\n.offset-95, [offset=\"95\"] {\n  margin-left: 95%; }\n\n.offset-33, [offset-=\"33\"], .offset-34, [offset-=\"34\"] {\n  margin-left: 33%; }\n\n.offset-66, [offset-=\"66\"], .offset-67, [offset-=\"67\"] {\n  margin-left: 67%; }\n\n.layout-align-center, .layout-align-center-center,\n.layout-align-center-start,\n.layout-align-center-end,\n[layout-align=\"center\"],\n[layout-align=\"center center\"],\n[layout-align=\"center start\"],\n[layout-align=\"center end\"] {\n  justify-content: center; }\n\n.layout-align-end, .layout-align-end-center,\n.layout-align-end-start,\n.layout-align-end-end,\n[layout-align=\"end\"], [layout-align=\"end center\"],\n[layout-align=\"end start\"],\n[layout-align=\"end end\"] {\n  justify-content: flex-end; }\n\n.layout-align-space-around, .layout-align-space-around-center,\n.layout-align-space-around-start,\n.layout-align-space-around-end,\n[layout-align=\"space-around\"], [layout-align=\"space-around center\"],\n[layout-align=\"space-around start\"],\n[layout-align=\"space-around end\"] {\n  justify-content: space-around; }\n\n.layout-align-space-between, .layout-align-space-between-center,\n.layout-align-space-between-start,\n.layout-align-space-between-end,\n[layout-align=\"space-between\"], [layout-align=\"space-between center\"],\n[layout-align=\"space-between start\"],\n[layout-align=\"space-between end\"] {\n  justify-content: space-between; }\n\n.layout-align-center-start,\n.layout-align-start-start,\n.layout-align-end-start,\n.layout-align-space-between-start,\n.layout-align-space-around-start,\n[layout-align=\"center start\"],\n[layout-align=\"start start\"],\n[layout-align=\"end start\"],\n[layout-align=\"space-between start\"],\n[layout-align=\"space-around start\"] {\n  align-items: flex-start; }\n\n.layout-align-center-center,\n.layout-align-start-center,\n.layout-align-end-center,\n.layout-align-space-between-center,\n.layout-align-space-around-center,\n[layout-align=\"center center\"],\n[layout-align=\"start center\"],\n[layout-align=\"end center\"],\n[layout-align=\"space-between center\"],\n[layout-align=\"space-around center\"] {\n  align-items: center;\n  max-width: 100%; }\n\n.layout-align-center-end,\n.layout-align-start-end,\n.layout-align-end-end,\n.layout-align-space-between-end,\n.layout-align-space-around-end,\n[layout-align=\"center end\"],\n[layout-align=\"start end\"],\n[layout-align=\"end end\"],\n[layout-align=\"space-between end\"],\n[layout-align=\"space-around end\"] {\n  align-items: flex-end; }\n\n.flex {\n  box-sizing: border-box; }\n\n.flex {\n  flex: 1; }\n\n.flex-grow {\n  flex: 1 1 100%; }\n\n.flex-initial {\n  flex: 0 1 auto; }\n\n.flex-auto {\n  flex: 1 1 auto; }\n\n.flex-none {\n  flex: 0 0 auto; }\n\n.flex-0 {\n  box-sizing: border-box;\n  flex: 0 0 0%; }\n\n.md-layout-row > .flex-0,\n.md-layout-row > .flex-0 {\n  flex: 0 0 0%;\n  max-width: 0%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-0,\n.md-layout-column > .flex-0 {\n  flex: 0 0 0%;\n  max-width: 100%;\n  max-height: 0%; }\n\n.flex-5 {\n  box-sizing: border-box;\n  flex: 0 0 5%; }\n\n.md-layout-row > .flex-5,\n.md-layout-row > .flex-5 {\n  flex: 0 0 5%;\n  max-width: 5%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-5,\n.md-layout-column > .flex-5 {\n  flex: 0 0 5%;\n  max-width: 100%;\n  max-height: 5%; }\n\n.flex-10 {\n  box-sizing: border-box;\n  flex: 0 0 10%; }\n\n.md-layout-row > .flex-10,\n.md-layout-row > .flex-10 {\n  flex: 0 0 10%;\n  max-width: 10%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-10,\n.md-layout-column > .flex-10 {\n  flex: 0 0 10%;\n  max-width: 100%;\n  max-height: 10%; }\n\n.flex-15 {\n  box-sizing: border-box;\n  flex: 0 0 15%; }\n\n.md-layout-row > .flex-15,\n.md-layout-row > .flex-15 {\n  flex: 0 0 15%;\n  max-width: 15%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-15,\n.md-layout-column > .flex-15 {\n  flex: 0 0 15%;\n  max-width: 100%;\n  max-height: 15%; }\n\n.flex-20 {\n  box-sizing: border-box;\n  flex: 0 0 20%; }\n\n.md-layout-row > .flex-20,\n.md-layout-row > .flex-20 {\n  flex: 0 0 20%;\n  max-width: 20%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-20,\n.md-layout-column > .flex-20 {\n  flex: 0 0 20%;\n  max-width: 100%;\n  max-height: 20%; }\n\n.flex-25 {\n  box-sizing: border-box;\n  flex: 0 0 25%; }\n\n.md-layout-row > .flex-25,\n.md-layout-row > .flex-25 {\n  flex: 0 0 25%;\n  max-width: 25%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-25,\n.md-layout-column > .flex-25 {\n  flex: 0 0 25%;\n  max-width: 100%;\n  max-height: 25%; }\n\n.flex-30 {\n  box-sizing: border-box;\n  flex: 0 0 30%; }\n\n.md-layout-row > .flex-30,\n.md-layout-row > .flex-30 {\n  flex: 0 0 30%;\n  max-width: 30%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-30,\n.md-layout-column > .flex-30 {\n  flex: 0 0 30%;\n  max-width: 100%;\n  max-height: 30%; }\n\n.flex-35 {\n  box-sizing: border-box;\n  flex: 0 0 35%; }\n\n.md-layout-row > .flex-35,\n.md-layout-row > .flex-35 {\n  flex: 0 0 35%;\n  max-width: 35%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-35,\n.md-layout-column > .flex-35 {\n  flex: 0 0 35%;\n  max-width: 100%;\n  max-height: 35%; }\n\n.flex-40 {\n  box-sizing: border-box;\n  flex: 0 0 40%; }\n\n.md-layout-row > .flex-40,\n.md-layout-row > .flex-40 {\n  flex: 0 0 40%;\n  max-width: 40%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-40,\n.md-layout-column > .flex-40 {\n  flex: 0 0 40%;\n  max-width: 100%;\n  max-height: 40%; }\n\n.flex-45 {\n  box-sizing: border-box;\n  flex: 0 0 45%; }\n\n.md-layout-row > .flex-45,\n.md-layout-row > .flex-45 {\n  flex: 0 0 45%;\n  max-width: 45%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-45,\n.md-layout-column > .flex-45 {\n  flex: 0 0 45%;\n  max-width: 100%;\n  max-height: 45%; }\n\n.flex-50 {\n  box-sizing: border-box;\n  flex: 0 0 50%; }\n\n.md-layout-row > .flex-50,\n.md-layout-row > .flex-50 {\n  flex: 0 0 50%;\n  max-width: 50%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-50,\n.md-layout-column > .flex-50 {\n  flex: 0 0 50%;\n  max-width: 100%;\n  max-height: 50%; }\n\n.flex-55 {\n  box-sizing: border-box;\n  flex: 0 0 55%; }\n\n.md-layout-row > .flex-55,\n.md-layout-row > .flex-55 {\n  flex: 0 0 55%;\n  max-width: 55%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-55,\n.md-layout-column > .flex-55 {\n  flex: 0 0 55%;\n  max-width: 100%;\n  max-height: 55%; }\n\n.flex-60 {\n  box-sizing: border-box;\n  flex: 0 0 60%; }\n\n.md-layout-row > .flex-60,\n.md-layout-row > .flex-60 {\n  flex: 0 0 60%;\n  max-width: 60%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-60,\n.md-layout-column > .flex-60 {\n  flex: 0 0 60%;\n  max-width: 100%;\n  max-height: 60%; }\n\n.flex-65 {\n  box-sizing: border-box;\n  flex: 0 0 65%; }\n\n.md-layout-row > .flex-65,\n.md-layout-row > .flex-65 {\n  flex: 0 0 65%;\n  max-width: 65%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-65,\n.md-layout-column > .flex-65 {\n  flex: 0 0 65%;\n  max-width: 100%;\n  max-height: 65%; }\n\n.flex-70 {\n  box-sizing: border-box;\n  flex: 0 0 70%; }\n\n.md-layout-row > .flex-70,\n.md-layout-row > .flex-70 {\n  flex: 0 0 70%;\n  max-width: 70%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-70,\n.md-layout-column > .flex-70 {\n  flex: 0 0 70%;\n  max-width: 100%;\n  max-height: 70%; }\n\n.flex-75 {\n  box-sizing: border-box;\n  flex: 0 0 75%; }\n\n.md-layout-row > .flex-75,\n.md-layout-row > .flex-75 {\n  flex: 0 0 75%;\n  max-width: 75%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-75,\n.md-layout-column > .flex-75 {\n  flex: 0 0 75%;\n  max-width: 100%;\n  max-height: 75%; }\n\n.flex-80 {\n  box-sizing: border-box;\n  flex: 0 0 80%; }\n\n.md-layout-row > .flex-80,\n.md-layout-row > .flex-80 {\n  flex: 0 0 80%;\n  max-width: 80%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-80,\n.md-layout-column > .flex-80 {\n  flex: 0 0 80%;\n  max-width: 100%;\n  max-height: 80%; }\n\n.flex-85 {\n  box-sizing: border-box;\n  flex: 0 0 85%; }\n\n.md-layout-row > .flex-85,\n.md-layout-row > .flex-85 {\n  flex: 0 0 85%;\n  max-width: 85%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-85,\n.md-layout-column > .flex-85 {\n  flex: 0 0 85%;\n  max-width: 100%;\n  max-height: 85%; }\n\n.flex-90 {\n  box-sizing: border-box;\n  flex: 0 0 90%; }\n\n.md-layout-row > .flex-90,\n.md-layout-row > .flex-90 {\n  flex: 0 0 90%;\n  max-width: 90%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-90,\n.md-layout-column > .flex-90 {\n  flex: 0 0 90%;\n  max-width: 100%;\n  max-height: 90%; }\n\n.flex-95 {\n  box-sizing: border-box;\n  flex: 0 0 95%; }\n\n.md-layout-row > .flex-95,\n.md-layout-row > .flex-95 {\n  flex: 0 0 95%;\n  max-width: 95%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-95,\n.md-layout-column > .flex-95 {\n  flex: 0 0 95%;\n  max-width: 100%;\n  max-height: 95%; }\n\n.flex-100 {\n  box-sizing: border-box;\n  flex: 0 0 100%; }\n\n.md-layout-row > .flex-100,\n.md-layout-row > .flex-100 {\n  flex: 0 0 100%;\n  max-width: 100%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-100,\n.md-layout-column > .flex-100 {\n  flex: 0 0 100%;\n  max-width: 100%;\n  max-height: 100%; }\n\n.md-layout-row > .flex-33, .md-layout-row > .flex-34, .md-layout-row > .flex-33, .md-layout-row > .flex-34 {\n  flex: 0 0 33%;\n  max-width: 33%;\n  max-height: 100%; }\n\n.md-layout-row > .flex-66, .md-layout-row > .flex-67, .md-layout-row > .flex-66, .md-layout-row > .flex-67 {\n  flex: 0 0 67%;\n  max-width: 67%;\n  max-height: 100%; }\n\n.md-layout-column > .flex-33, .md-layout-column > .flex-34, .md-layout-column > .flex-33, .md-layout-column > .flex-34 {\n  flex: 0 0 33%;\n  max-width: 100%;\n  max-height: 33%; }\n\n.md-layout-column > .flex-66, .md-layout-column > .flex-67, .md-layout-column > .flex-66, .md-layout-column > .flex-67 {\n  flex: 0 0 67%;\n  max-width: 100%;\n  max-height: 67%; }\n\n.md-layout, .md-layout-column, .md-layout-row {\n  box-sizing: border-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex; }\n\n.md-layout-column {\n  flex-direction: column; }\n\n.md-layout-row {\n  flex-direction: row; }\n\n.layout-padding > .flex-sm, .layout-padding > .flex-lt-md {\n  padding: 4px; }\n\n.layout-padding,\n.layout-padding > .flex,\n.layout-padding > .flex-gt-sm,\n.layout-padding > .flex-md,\n.layout-padding > .flex-lt-lg {\n  padding: 8px; }\n\n.layout-padding > .flex-gt-md,\n.layout-padding > .flex-lg {\n  padding: 16px; }\n\n.layout-margin > .flex-sm,\n.layout-margin > .flex-lt-md {\n  margin: 4px; }\n\n.layout-margin,\n.layout-margin > .flex,\n.layout-margin > .flex-gt-sm,\n.layout-margin > .flex-md,\n.layout-margin > .flex-lt-lg {\n  margin: 8px; }\n\n.layout-margin > .flex-gt-md,\n.layout-margin > .flex-lg {\n  margin: 16px; }\n\n.layout-wrap, [layout-wrap] {\n  flex-wrap: wrap; }\n\n.layout-nowrap, [layout-nowrap] {\n  flex-wrap: nowrap; }\n\n.layout-fill, [layout-fill] {\n  margin: 0;\n  width: 100%;\n  min-height: 100%;\n  height: 100%; }\n\n/**\n * `hide-gt-sm show-gt-lg` should hide from 600px to 1200px\n * `show-md hide-gt-sm` should show from 0px to 960px and hide at >960px\n * `hide-gt-md show-gt-sm` should show everywhere (show overrides hide)`\n *\n *  hide means hide everywhere\n *  Sizes:\n *         0    <= size < 600  Phone\n *         600  <= size < 960  Tablet\n *         960  <= size < 1200 Tablet-Landscape\n */\n@media (max-width: 599px) {\n  .hide-sm:not(.show-sm):not(.show), .hide:not(.show-sm):not(.show) {\n    display: none; }\n  .flex-order-sm-0, [flex-order-sm=\"0\"] {\n    order: 0; }\n  .flex-order-sm-1, [flex-order-sm=\"1\"] {\n    order: 1; }\n  .flex-order-sm-2, [flex-order-sm=\"2\"] {\n    order: 2; }\n  .flex-order-sm-3, [flex-order-sm=\"3\"] {\n    order: 3; }\n  .flex-order-sm-4, [flex-order-sm=\"4\"] {\n    order: 4; }\n  .flex-order-sm-5, [flex-order-sm=\"5\"] {\n    order: 5; }\n  .flex-order-sm-6, [flex-order-sm=\"6\"] {\n    order: 6; }\n  .flex-order-sm-7, [flex-order-sm=\"7\"] {\n    order: 7; }\n  .flex-order-sm-8, [flex-order-sm=\"8\"] {\n    order: 8; }\n  .flex-order-sm-9, [flex-order-sm=\"9\"] {\n    order: 9; }\n  .flex-order-sm-10, [flex-order-sm=\"10\"] {\n    order: 10; }\n  .flex-order-sm-11, [flex-order-sm=\"11\"] {\n    order: 11; }\n  .flex-order-sm-12, [flex-order-sm=\"12\"] {\n    order: 12; }\n  .flex-order-sm-13, [flex-order-sm=\"13\"] {\n    order: 13; }\n  .flex-order-sm-14, [flex-order-sm=\"14\"] {\n    order: 14; }\n  .flex-order-sm-15, [flex-order-sm=\"15\"] {\n    order: 15; }\n  .flex-order-sm-16, [flex-order-sm=\"16\"] {\n    order: 16; }\n  .flex-order-sm-17, [flex-order-sm=\"17\"] {\n    order: 17; }\n  .flex-order-sm-18, [flex-order-sm=\"18\"] {\n    order: 18; }\n  .flex-order-sm-19, [flex-order-sm=\"19\"] {\n    order: 19; }\n  .offset-sm-0, [offset-sm=\"0\"] {\n    margin-left: 0%; }\n  .offset-sm-5, [offset-sm=\"5\"] {\n    margin-left: 5%; }\n  .offset-sm-10, [offset-sm=\"10\"] {\n    margin-left: 10%; }\n  .offset-sm-15, [offset-sm=\"15\"] {\n    margin-left: 15%; }\n  .offset-sm-20, [offset-sm=\"20\"] {\n    margin-left: 20%; }\n  .offset-sm-25, [offset-sm=\"25\"] {\n    margin-left: 25%; }\n  .offset-sm-30, [offset-sm=\"30\"] {\n    margin-left: 30%; }\n  .offset-sm-35, [offset-sm=\"35\"] {\n    margin-left: 35%; }\n  .offset-sm-40, [offset-sm=\"40\"] {\n    margin-left: 40%; }\n  .offset-sm-45, [offset-sm=\"45\"] {\n    margin-left: 45%; }\n  .offset-sm-50, [offset-sm=\"50\"] {\n    margin-left: 50%; }\n  .offset-sm-55, [offset-sm=\"55\"] {\n    margin-left: 55%; }\n  .offset-sm-60, [offset-sm=\"60\"] {\n    margin-left: 60%; }\n  .offset-sm-65, [offset-sm=\"65\"] {\n    margin-left: 65%; }\n  .offset-sm-70, [offset-sm=\"70\"] {\n    margin-left: 70%; }\n  .offset-sm-75, [offset-sm=\"75\"] {\n    margin-left: 75%; }\n  .offset-sm-80, [offset-sm=\"80\"] {\n    margin-left: 80%; }\n  .offset-sm-85, [offset-sm=\"85\"] {\n    margin-left: 85%; }\n  .offset-sm-90, [offset-sm=\"90\"] {\n    margin-left: 90%; }\n  .offset-sm-95, [offset-sm=\"95\"] {\n    margin-left: 95%; }\n  .offset-sm-33, [offset-sm=\"33\"], .offset-sm-34, [offset-sm=\"34\"] {\n    margin-left: 33%; }\n  .offset-sm-66, [offset-sm=\"66\"], .offset-sm-67, [offset-sm=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-sm-center, .layout-align-sm-center-center,\n  .layout-align-sm-center-start,\n  .layout-align-sm-center-end,\n  [layout-align-sm=\"center\"],\n  [layout-align-sm=\"center center\"],\n  [layout-align-sm=\"center start\"],\n  [layout-align-sm=\"center end\"] {\n    justify-content: center; }\n  .layout-align-sm-end, .layout-align-sm-end-center,\n  .layout-align-sm-end-start,\n  .layout-align-sm-end-end,\n  [layout-align-sm=\"end\"], [layout-align-sm=\"end center\"],\n  [layout-align-sm=\"end start\"],\n  [layout-align-sm=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-sm-space-around, .layout-align-sm-space-around-center,\n  .layout-align-sm-space-around-start,\n  .layout-align-sm-space-around-end,\n  [layout-align-sm=\"space-around\"], [layout-align-sm=\"space-around center\"],\n  [layout-align-sm=\"space-around start\"],\n  [layout-align-sm=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-sm-space-between, .layout-align-sm-space-between-center,\n  .layout-align-sm-space-between-start,\n  .layout-align-sm-space-between-end,\n  [layout-align-sm=\"space-between\"], [layout-align-sm=\"space-between center\"],\n  [layout-align-sm=\"space-between start\"],\n  [layout-align-sm=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-sm-center-start,\n  .layout-align-sm-start-start,\n  .layout-align-sm-end-start,\n  .layout-align-sm-space-between-start,\n  .layout-align-sm-space-around-start,\n  [layout-align-sm=\"center start\"],\n  [layout-align-sm=\"start start\"],\n  [layout-align-sm=\"end start\"],\n  [layout-align-sm=\"space-between start\"],\n  [layout-align-sm=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-sm-center-center,\n  .layout-align-sm-start-center,\n  .layout-align-sm-end-center,\n  .layout-align-sm-space-between-center,\n  .layout-align-sm-space-around-center,\n  [layout-align-sm=\"center center\"],\n  [layout-align-sm=\"start center\"],\n  [layout-align-sm=\"end center\"],\n  [layout-align-sm=\"space-between center\"],\n  [layout-align-sm=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-sm-center-end,\n  .layout-align-sm-start-end,\n  .layout-align-sm-end-end,\n  .layout-align-sm-space-between-end,\n  .layout-align-sm-space-around-end,\n  [layout-align-sm=\"center end\"],\n  [layout-align-sm=\"start end\"],\n  [layout-align-sm=\"end end\"],\n  [layout-align-sm=\"space-between end\"],\n  [layout-align-sm=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-sm {\n    box-sizing: border-box; }\n  .flex-sm {\n    flex: 1; }\n  .flex-sm-grow {\n    flex: 1 1 100%; }\n  .flex-sm-initial {\n    flex: 0 1 auto; }\n  .flex-sm-auto {\n    flex: 1 1 auto; }\n  .flex-sm-none {\n    flex: 0 0 auto; }\n  .flex-sm-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-sm-0,\n  .md-layout-sm-row > .flex-sm-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-0,\n  .md-layout-sm-column > .flex-sm-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-sm-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-sm-5,\n  .md-layout-sm-row > .flex-sm-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-5,\n  .md-layout-sm-column > .flex-sm-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-sm-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-sm-10,\n  .md-layout-sm-row > .flex-sm-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-10,\n  .md-layout-sm-column > .flex-sm-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-sm-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-sm-15,\n  .md-layout-sm-row > .flex-sm-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-15,\n  .md-layout-sm-column > .flex-sm-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-sm-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-sm-20,\n  .md-layout-sm-row > .flex-sm-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-20,\n  .md-layout-sm-column > .flex-sm-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-sm-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-sm-25,\n  .md-layout-sm-row > .flex-sm-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-25,\n  .md-layout-sm-column > .flex-sm-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-sm-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-sm-30,\n  .md-layout-sm-row > .flex-sm-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-30,\n  .md-layout-sm-column > .flex-sm-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-sm-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-sm-35,\n  .md-layout-sm-row > .flex-sm-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-35,\n  .md-layout-sm-column > .flex-sm-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-sm-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-sm-40,\n  .md-layout-sm-row > .flex-sm-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-40,\n  .md-layout-sm-column > .flex-sm-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-sm-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-sm-45,\n  .md-layout-sm-row > .flex-sm-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-45,\n  .md-layout-sm-column > .flex-sm-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-sm-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-sm-50,\n  .md-layout-sm-row > .flex-sm-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-50,\n  .md-layout-sm-column > .flex-sm-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-sm-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-sm-55,\n  .md-layout-sm-row > .flex-sm-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-55,\n  .md-layout-sm-column > .flex-sm-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-sm-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-sm-60,\n  .md-layout-sm-row > .flex-sm-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-60,\n  .md-layout-sm-column > .flex-sm-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-sm-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-sm-65,\n  .md-layout-sm-row > .flex-sm-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-65,\n  .md-layout-sm-column > .flex-sm-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-sm-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-sm-70,\n  .md-layout-sm-row > .flex-sm-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-70,\n  .md-layout-sm-column > .flex-sm-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-sm-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-sm-75,\n  .md-layout-sm-row > .flex-sm-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-75,\n  .md-layout-sm-column > .flex-sm-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-sm-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-sm-80,\n  .md-layout-sm-row > .flex-sm-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-80,\n  .md-layout-sm-column > .flex-sm-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-sm-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-sm-85,\n  .md-layout-sm-row > .flex-sm-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-85,\n  .md-layout-sm-column > .flex-sm-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-sm-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-sm-90,\n  .md-layout-sm-row > .flex-sm-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-90,\n  .md-layout-sm-column > .flex-sm-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-sm-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-sm-95,\n  .md-layout-sm-row > .flex-sm-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-95,\n  .md-layout-sm-column > .flex-sm-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-sm-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-sm-100,\n  .md-layout-sm-row > .flex-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-100,\n  .md-layout-sm-column > .flex-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-sm-33, .md-layout-row > .flex-sm-34, .md-layout-sm-row > .flex-sm-33, .md-layout-sm-row > .flex-sm-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-sm-66, .md-layout-row > .flex-sm-67, .md-layout-sm-row > .flex-sm-66, .md-layout-sm-row > .flex-sm-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-sm-33, .md-layout-column > .flex-sm-34, .md-layout-sm-column > .flex-sm-33, .md-layout-sm-column > .flex-sm-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-sm-66, .md-layout-column > .flex-sm-67, .md-layout-sm-column > .flex-sm-66, .md-layout-sm-column > .flex-sm-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-sm, .md-layout-sm-column, .md-layout-sm-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-sm-column {\n    flex-direction: column; }\n  .md-layout-sm-row {\n    flex-direction: row; } }\n\n@media (min-width: 600px) {\n  .flex-order-gt-sm-0, [flex-order-gt-sm=\"0\"] {\n    order: 0; }\n  .flex-order-gt-sm-1, [flex-order-gt-sm=\"1\"] {\n    order: 1; }\n  .flex-order-gt-sm-2, [flex-order-gt-sm=\"2\"] {\n    order: 2; }\n  .flex-order-gt-sm-3, [flex-order-gt-sm=\"3\"] {\n    order: 3; }\n  .flex-order-gt-sm-4, [flex-order-gt-sm=\"4\"] {\n    order: 4; }\n  .flex-order-gt-sm-5, [flex-order-gt-sm=\"5\"] {\n    order: 5; }\n  .flex-order-gt-sm-6, [flex-order-gt-sm=\"6\"] {\n    order: 6; }\n  .flex-order-gt-sm-7, [flex-order-gt-sm=\"7\"] {\n    order: 7; }\n  .flex-order-gt-sm-8, [flex-order-gt-sm=\"8\"] {\n    order: 8; }\n  .flex-order-gt-sm-9, [flex-order-gt-sm=\"9\"] {\n    order: 9; }\n  .flex-order-gt-sm-10, [flex-order-gt-sm=\"10\"] {\n    order: 10; }\n  .flex-order-gt-sm-11, [flex-order-gt-sm=\"11\"] {\n    order: 11; }\n  .flex-order-gt-sm-12, [flex-order-gt-sm=\"12\"] {\n    order: 12; }\n  .flex-order-gt-sm-13, [flex-order-gt-sm=\"13\"] {\n    order: 13; }\n  .flex-order-gt-sm-14, [flex-order-gt-sm=\"14\"] {\n    order: 14; }\n  .flex-order-gt-sm-15, [flex-order-gt-sm=\"15\"] {\n    order: 15; }\n  .flex-order-gt-sm-16, [flex-order-gt-sm=\"16\"] {\n    order: 16; }\n  .flex-order-gt-sm-17, [flex-order-gt-sm=\"17\"] {\n    order: 17; }\n  .flex-order-gt-sm-18, [flex-order-gt-sm=\"18\"] {\n    order: 18; }\n  .flex-order-gt-sm-19, [flex-order-gt-sm=\"19\"] {\n    order: 19; }\n  .offset-gt-sm-0, [offset-gt-sm=\"0\"] {\n    margin-left: 0%; }\n  .offset-gt-sm-5, [offset-gt-sm=\"5\"] {\n    margin-left: 5%; }\n  .offset-gt-sm-10, [offset-gt-sm=\"10\"] {\n    margin-left: 10%; }\n  .offset-gt-sm-15, [offset-gt-sm=\"15\"] {\n    margin-left: 15%; }\n  .offset-gt-sm-20, [offset-gt-sm=\"20\"] {\n    margin-left: 20%; }\n  .offset-gt-sm-25, [offset-gt-sm=\"25\"] {\n    margin-left: 25%; }\n  .offset-gt-sm-30, [offset-gt-sm=\"30\"] {\n    margin-left: 30%; }\n  .offset-gt-sm-35, [offset-gt-sm=\"35\"] {\n    margin-left: 35%; }\n  .offset-gt-sm-40, [offset-gt-sm=\"40\"] {\n    margin-left: 40%; }\n  .offset-gt-sm-45, [offset-gt-sm=\"45\"] {\n    margin-left: 45%; }\n  .offset-gt-sm-50, [offset-gt-sm=\"50\"] {\n    margin-left: 50%; }\n  .offset-gt-sm-55, [offset-gt-sm=\"55\"] {\n    margin-left: 55%; }\n  .offset-gt-sm-60, [offset-gt-sm=\"60\"] {\n    margin-left: 60%; }\n  .offset-gt-sm-65, [offset-gt-sm=\"65\"] {\n    margin-left: 65%; }\n  .offset-gt-sm-70, [offset-gt-sm=\"70\"] {\n    margin-left: 70%; }\n  .offset-gt-sm-75, [offset-gt-sm=\"75\"] {\n    margin-left: 75%; }\n  .offset-gt-sm-80, [offset-gt-sm=\"80\"] {\n    margin-left: 80%; }\n  .offset-gt-sm-85, [offset-gt-sm=\"85\"] {\n    margin-left: 85%; }\n  .offset-gt-sm-90, [offset-gt-sm=\"90\"] {\n    margin-left: 90%; }\n  .offset-gt-sm-95, [offset-gt-sm=\"95\"] {\n    margin-left: 95%; }\n  .offset-gt-sm-33, [offset-gt-sm=\"33\"], .offset-gt-sm-34, [offset-gt-sm=\"34\"] {\n    margin-left: 33%; }\n  .offset-gt-sm-66, [offset-gt-sm=\"66\"], .offset-gt-sm-67, [offset-gt-sm=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-gt-sm-center, .layout-align-gt-sm-center-center,\n  .layout-align-gt-sm-center-start,\n  .layout-align-gt-sm-center-end,\n  [layout-align-gt-sm=\"center\"],\n  [layout-align-gt-sm=\"center center\"],\n  [layout-align-gt-sm=\"center start\"],\n  [layout-align-gt-sm=\"center end\"] {\n    justify-content: center; }\n  .layout-align-gt-sm-end, .layout-align-gt-sm-end-center,\n  .layout-align-gt-sm-end-start,\n  .layout-align-gt-sm-end-end,\n  [layout-align-gt-sm=\"end\"], [layout-align-gt-sm=\"end center\"],\n  [layout-align-gt-sm=\"end start\"],\n  [layout-align-gt-sm=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-gt-sm-space-around, .layout-align-gt-sm-space-around-center,\n  .layout-align-gt-sm-space-around-start,\n  .layout-align-gt-sm-space-around-end,\n  [layout-align-gt-sm=\"space-around\"], [layout-align-gt-sm=\"space-around center\"],\n  [layout-align-gt-sm=\"space-around start\"],\n  [layout-align-gt-sm=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-gt-sm-space-between, .layout-align-gt-sm-space-between-center,\n  .layout-align-gt-sm-space-between-start,\n  .layout-align-gt-sm-space-between-end,\n  [layout-align-gt-sm=\"space-between\"], [layout-align-gt-sm=\"space-between center\"],\n  [layout-align-gt-sm=\"space-between start\"],\n  [layout-align-gt-sm=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-gt-sm-center-start,\n  .layout-align-gt-sm-start-start,\n  .layout-align-gt-sm-end-start,\n  .layout-align-gt-sm-space-between-start,\n  .layout-align-gt-sm-space-around-start,\n  [layout-align-gt-sm=\"center start\"],\n  [layout-align-gt-sm=\"start start\"],\n  [layout-align-gt-sm=\"end start\"],\n  [layout-align-gt-sm=\"space-between start\"],\n  [layout-align-gt-sm=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-gt-sm-center-center,\n  .layout-align-gt-sm-start-center,\n  .layout-align-gt-sm-end-center,\n  .layout-align-gt-sm-space-between-center,\n  .layout-align-gt-sm-space-around-center,\n  [layout-align-gt-sm=\"center center\"],\n  [layout-align-gt-sm=\"start center\"],\n  [layout-align-gt-sm=\"end center\"],\n  [layout-align-gt-sm=\"space-between center\"],\n  [layout-align-gt-sm=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-gt-sm-center-end,\n  .layout-align-gt-sm-start-end,\n  .layout-align-gt-sm-end-end,\n  .layout-align-gt-sm-space-between-end,\n  .layout-align-gt-sm-space-around-end,\n  [layout-align-gt-sm=\"center end\"],\n  [layout-align-gt-sm=\"start end\"],\n  [layout-align-gt-sm=\"end end\"],\n  [layout-align-gt-sm=\"space-between end\"],\n  [layout-align-gt-sm=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-gt-sm {\n    box-sizing: border-box; }\n  .flex-gt-sm {\n    flex: 1; }\n  .flex-gt-sm-grow {\n    flex: 1 1 100%; }\n  .flex-gt-sm-initial {\n    flex: 0 1 auto; }\n  .flex-gt-sm-auto {\n    flex: 1 1 auto; }\n  .flex-gt-sm-none {\n    flex: 0 0 auto; }\n  .flex-gt-sm-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-gt-sm-0,\n  .md-layout-gt-sm-row > .flex-gt-sm-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-0,\n  .md-layout-gt-sm-column > .flex-gt-sm-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-gt-sm-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-gt-sm-5,\n  .md-layout-gt-sm-row > .flex-gt-sm-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-5,\n  .md-layout-gt-sm-column > .flex-gt-sm-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-gt-sm-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-gt-sm-10,\n  .md-layout-gt-sm-row > .flex-gt-sm-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-10,\n  .md-layout-gt-sm-column > .flex-gt-sm-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-gt-sm-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-gt-sm-15,\n  .md-layout-gt-sm-row > .flex-gt-sm-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-15,\n  .md-layout-gt-sm-column > .flex-gt-sm-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-gt-sm-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-gt-sm-20,\n  .md-layout-gt-sm-row > .flex-gt-sm-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-20,\n  .md-layout-gt-sm-column > .flex-gt-sm-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-gt-sm-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-gt-sm-25,\n  .md-layout-gt-sm-row > .flex-gt-sm-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-25,\n  .md-layout-gt-sm-column > .flex-gt-sm-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-gt-sm-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-gt-sm-30,\n  .md-layout-gt-sm-row > .flex-gt-sm-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-30,\n  .md-layout-gt-sm-column > .flex-gt-sm-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-gt-sm-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-gt-sm-35,\n  .md-layout-gt-sm-row > .flex-gt-sm-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-35,\n  .md-layout-gt-sm-column > .flex-gt-sm-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-gt-sm-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-gt-sm-40,\n  .md-layout-gt-sm-row > .flex-gt-sm-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-40,\n  .md-layout-gt-sm-column > .flex-gt-sm-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-gt-sm-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-gt-sm-45,\n  .md-layout-gt-sm-row > .flex-gt-sm-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-45,\n  .md-layout-gt-sm-column > .flex-gt-sm-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-gt-sm-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-gt-sm-50,\n  .md-layout-gt-sm-row > .flex-gt-sm-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-50,\n  .md-layout-gt-sm-column > .flex-gt-sm-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-gt-sm-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-gt-sm-55,\n  .md-layout-gt-sm-row > .flex-gt-sm-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-55,\n  .md-layout-gt-sm-column > .flex-gt-sm-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-gt-sm-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-gt-sm-60,\n  .md-layout-gt-sm-row > .flex-gt-sm-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-60,\n  .md-layout-gt-sm-column > .flex-gt-sm-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-gt-sm-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-gt-sm-65,\n  .md-layout-gt-sm-row > .flex-gt-sm-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-65,\n  .md-layout-gt-sm-column > .flex-gt-sm-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-gt-sm-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-gt-sm-70,\n  .md-layout-gt-sm-row > .flex-gt-sm-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-70,\n  .md-layout-gt-sm-column > .flex-gt-sm-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-gt-sm-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-gt-sm-75,\n  .md-layout-gt-sm-row > .flex-gt-sm-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-75,\n  .md-layout-gt-sm-column > .flex-gt-sm-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-gt-sm-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-gt-sm-80,\n  .md-layout-gt-sm-row > .flex-gt-sm-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-80,\n  .md-layout-gt-sm-column > .flex-gt-sm-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-gt-sm-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-gt-sm-85,\n  .md-layout-gt-sm-row > .flex-gt-sm-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-85,\n  .md-layout-gt-sm-column > .flex-gt-sm-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-gt-sm-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-gt-sm-90,\n  .md-layout-gt-sm-row > .flex-gt-sm-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-90,\n  .md-layout-gt-sm-column > .flex-gt-sm-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-gt-sm-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-gt-sm-95,\n  .md-layout-gt-sm-row > .flex-gt-sm-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-95,\n  .md-layout-gt-sm-column > .flex-gt-sm-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-gt-sm-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-gt-sm-100,\n  .md-layout-gt-sm-row > .flex-gt-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-100,\n  .md-layout-gt-sm-column > .flex-gt-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-sm-33, .md-layout-row > .flex-gt-sm-34, .md-layout-gt-sm-row > .flex-gt-sm-33, .md-layout-gt-sm-row > .flex-gt-sm-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-sm-66, .md-layout-row > .flex-gt-sm-67, .md-layout-gt-sm-row > .flex-gt-sm-66, .md-layout-gt-sm-row > .flex-gt-sm-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-sm-33, .md-layout-column > .flex-gt-sm-34, .md-layout-gt-sm-column > .flex-gt-sm-33, .md-layout-gt-sm-column > .flex-gt-sm-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-gt-sm-66, .md-layout-column > .flex-gt-sm-67, .md-layout-gt-sm-column > .flex-gt-sm-66, .md-layout-gt-sm-column > .flex-gt-sm-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-gt-sm, .md-layout-gt-sm-column, .md-layout-gt-sm-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-gt-sm-column {\n    flex-direction: column; }\n  .md-layout-gt-sm-row {\n    flex-direction: row; } }\n\n@media (min-width: 600px) and (max-width: 959px) {\n  .hide:not(.show-gt-sm):not(.show-md):not(.show), .hide-gt-sm:not(.show-gt-sm):not(.show-md):not(.show) {\n    display: none; }\n  .hide-md:not(.show-md):not(.show) {\n    display: none; }\n  .flex-order-md-0, [flex-order-md=\"0\"] {\n    order: 0; }\n  .flex-order-md-1, [flex-order-md=\"1\"] {\n    order: 1; }\n  .flex-order-md-2, [flex-order-md=\"2\"] {\n    order: 2; }\n  .flex-order-md-3, [flex-order-md=\"3\"] {\n    order: 3; }\n  .flex-order-md-4, [flex-order-md=\"4\"] {\n    order: 4; }\n  .flex-order-md-5, [flex-order-md=\"5\"] {\n    order: 5; }\n  .flex-order-md-6, [flex-order-md=\"6\"] {\n    order: 6; }\n  .flex-order-md-7, [flex-order-md=\"7\"] {\n    order: 7; }\n  .flex-order-md-8, [flex-order-md=\"8\"] {\n    order: 8; }\n  .flex-order-md-9, [flex-order-md=\"9\"] {\n    order: 9; }\n  .flex-order-md-10, [flex-order-md=\"10\"] {\n    order: 10; }\n  .flex-order-md-11, [flex-order-md=\"11\"] {\n    order: 11; }\n  .flex-order-md-12, [flex-order-md=\"12\"] {\n    order: 12; }\n  .flex-order-md-13, [flex-order-md=\"13\"] {\n    order: 13; }\n  .flex-order-md-14, [flex-order-md=\"14\"] {\n    order: 14; }\n  .flex-order-md-15, [flex-order-md=\"15\"] {\n    order: 15; }\n  .flex-order-md-16, [flex-order-md=\"16\"] {\n    order: 16; }\n  .flex-order-md-17, [flex-order-md=\"17\"] {\n    order: 17; }\n  .flex-order-md-18, [flex-order-md=\"18\"] {\n    order: 18; }\n  .flex-order-md-19, [flex-order-md=\"19\"] {\n    order: 19; }\n  .offset-md-0, [offset-md=\"0\"] {\n    margin-left: 0%; }\n  .offset-md-5, [offset-md=\"5\"] {\n    margin-left: 5%; }\n  .offset-md-10, [offset-md=\"10\"] {\n    margin-left: 10%; }\n  .offset-md-15, [offset-md=\"15\"] {\n    margin-left: 15%; }\n  .offset-md-20, [offset-md=\"20\"] {\n    margin-left: 20%; }\n  .offset-md-25, [offset-md=\"25\"] {\n    margin-left: 25%; }\n  .offset-md-30, [offset-md=\"30\"] {\n    margin-left: 30%; }\n  .offset-md-35, [offset-md=\"35\"] {\n    margin-left: 35%; }\n  .offset-md-40, [offset-md=\"40\"] {\n    margin-left: 40%; }\n  .offset-md-45, [offset-md=\"45\"] {\n    margin-left: 45%; }\n  .offset-md-50, [offset-md=\"50\"] {\n    margin-left: 50%; }\n  .offset-md-55, [offset-md=\"55\"] {\n    margin-left: 55%; }\n  .offset-md-60, [offset-md=\"60\"] {\n    margin-left: 60%; }\n  .offset-md-65, [offset-md=\"65\"] {\n    margin-left: 65%; }\n  .offset-md-70, [offset-md=\"70\"] {\n    margin-left: 70%; }\n  .offset-md-75, [offset-md=\"75\"] {\n    margin-left: 75%; }\n  .offset-md-80, [offset-md=\"80\"] {\n    margin-left: 80%; }\n  .offset-md-85, [offset-md=\"85\"] {\n    margin-left: 85%; }\n  .offset-md-90, [offset-md=\"90\"] {\n    margin-left: 90%; }\n  .offset-md-95, [offset-md=\"95\"] {\n    margin-left: 95%; }\n  .offset-md-33, [offset-md=\"33\"], .offset-md-34, [offset-md=\"34\"] {\n    margin-left: 33%; }\n  .offset-md-66, [offset-md=\"66\"], .offset-md-67, [offset-md=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-md-center, .layout-align-md-center-center,\n  .layout-align-md-center-start,\n  .layout-align-md-center-end,\n  [layout-align-md=\"center\"],\n  [layout-align-md=\"center center\"],\n  [layout-align-md=\"center start\"],\n  [layout-align-md=\"center end\"] {\n    justify-content: center; }\n  .layout-align-md-end, .layout-align-md-end-center,\n  .layout-align-md-end-start,\n  .layout-align-md-end-end,\n  [layout-align-md=\"end\"], [layout-align-md=\"end center\"],\n  [layout-align-md=\"end start\"],\n  [layout-align-md=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-md-space-around, .layout-align-md-space-around-center,\n  .layout-align-md-space-around-start,\n  .layout-align-md-space-around-end,\n  [layout-align-md=\"space-around\"], [layout-align-md=\"space-around center\"],\n  [layout-align-md=\"space-around start\"],\n  [layout-align-md=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-md-space-between, .layout-align-md-space-between-center,\n  .layout-align-md-space-between-start,\n  .layout-align-md-space-between-end,\n  [layout-align-md=\"space-between\"], [layout-align-md=\"space-between center\"],\n  [layout-align-md=\"space-between start\"],\n  [layout-align-md=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-md-center-start,\n  .layout-align-md-start-start,\n  .layout-align-md-end-start,\n  .layout-align-md-space-between-start,\n  .layout-align-md-space-around-start,\n  [layout-align-md=\"center start\"],\n  [layout-align-md=\"start start\"],\n  [layout-align-md=\"end start\"],\n  [layout-align-md=\"space-between start\"],\n  [layout-align-md=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-md-center-center,\n  .layout-align-md-start-center,\n  .layout-align-md-end-center,\n  .layout-align-md-space-between-center,\n  .layout-align-md-space-around-center,\n  [layout-align-md=\"center center\"],\n  [layout-align-md=\"start center\"],\n  [layout-align-md=\"end center\"],\n  [layout-align-md=\"space-between center\"],\n  [layout-align-md=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-md-center-end,\n  .layout-align-md-start-end,\n  .layout-align-md-end-end,\n  .layout-align-md-space-between-end,\n  .layout-align-md-space-around-end,\n  [layout-align-md=\"center end\"],\n  [layout-align-md=\"start end\"],\n  [layout-align-md=\"end end\"],\n  [layout-align-md=\"space-between end\"],\n  [layout-align-md=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-md {\n    box-sizing: border-box; }\n  .flex-md {\n    flex: 1; }\n  .flex-md-grow {\n    flex: 1 1 100%; }\n  .flex-md-initial {\n    flex: 0 1 auto; }\n  .flex-md-auto {\n    flex: 1 1 auto; }\n  .flex-md-none {\n    flex: 0 0 auto; }\n  .flex-md-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-md-0,\n  .md-layout-md-row > .flex-md-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-0,\n  .md-layout-md-column > .flex-md-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-md-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-md-5,\n  .md-layout-md-row > .flex-md-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-5,\n  .md-layout-md-column > .flex-md-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-md-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-md-10,\n  .md-layout-md-row > .flex-md-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-10,\n  .md-layout-md-column > .flex-md-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-md-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-md-15,\n  .md-layout-md-row > .flex-md-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-15,\n  .md-layout-md-column > .flex-md-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-md-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-md-20,\n  .md-layout-md-row > .flex-md-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-20,\n  .md-layout-md-column > .flex-md-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-md-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-md-25,\n  .md-layout-md-row > .flex-md-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-25,\n  .md-layout-md-column > .flex-md-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-md-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-md-30,\n  .md-layout-md-row > .flex-md-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-30,\n  .md-layout-md-column > .flex-md-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-md-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-md-35,\n  .md-layout-md-row > .flex-md-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-35,\n  .md-layout-md-column > .flex-md-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-md-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-md-40,\n  .md-layout-md-row > .flex-md-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-40,\n  .md-layout-md-column > .flex-md-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-md-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-md-45,\n  .md-layout-md-row > .flex-md-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-45,\n  .md-layout-md-column > .flex-md-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-md-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-md-50,\n  .md-layout-md-row > .flex-md-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-50,\n  .md-layout-md-column > .flex-md-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-md-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-md-55,\n  .md-layout-md-row > .flex-md-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-55,\n  .md-layout-md-column > .flex-md-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-md-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-md-60,\n  .md-layout-md-row > .flex-md-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-60,\n  .md-layout-md-column > .flex-md-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-md-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-md-65,\n  .md-layout-md-row > .flex-md-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-65,\n  .md-layout-md-column > .flex-md-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-md-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-md-70,\n  .md-layout-md-row > .flex-md-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-70,\n  .md-layout-md-column > .flex-md-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-md-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-md-75,\n  .md-layout-md-row > .flex-md-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-75,\n  .md-layout-md-column > .flex-md-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-md-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-md-80,\n  .md-layout-md-row > .flex-md-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-80,\n  .md-layout-md-column > .flex-md-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-md-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-md-85,\n  .md-layout-md-row > .flex-md-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-85,\n  .md-layout-md-column > .flex-md-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-md-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-md-90,\n  .md-layout-md-row > .flex-md-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-90,\n  .md-layout-md-column > .flex-md-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-md-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-md-95,\n  .md-layout-md-row > .flex-md-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-95,\n  .md-layout-md-column > .flex-md-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-md-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-md-100,\n  .md-layout-md-row > .flex-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-100,\n  .md-layout-md-column > .flex-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-md-33, .md-layout-row > .flex-md-34, .md-layout-md-row > .flex-md-33, .md-layout-md-row > .flex-md-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-md-66, .md-layout-row > .flex-md-67, .md-layout-md-row > .flex-md-66, .md-layout-md-row > .flex-md-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-md-33, .md-layout-column > .flex-md-34, .md-layout-md-column > .flex-md-33, .md-layout-md-column > .flex-md-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-md-66, .md-layout-column > .flex-md-67, .md-layout-md-column > .flex-md-66, .md-layout-md-column > .flex-md-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-md, .md-layout-md-column, .md-layout-md-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-md-column {\n    flex-direction: column; }\n  .md-layout-md-row {\n    flex-direction: row; } }\n\n@media (min-width: 960px) {\n  .flex-order-gt-md-0, [flex-order-gt-md=\"0\"] {\n    order: 0; }\n  .flex-order-gt-md-1, [flex-order-gt-md=\"1\"] {\n    order: 1; }\n  .flex-order-gt-md-2, [flex-order-gt-md=\"2\"] {\n    order: 2; }\n  .flex-order-gt-md-3, [flex-order-gt-md=\"3\"] {\n    order: 3; }\n  .flex-order-gt-md-4, [flex-order-gt-md=\"4\"] {\n    order: 4; }\n  .flex-order-gt-md-5, [flex-order-gt-md=\"5\"] {\n    order: 5; }\n  .flex-order-gt-md-6, [flex-order-gt-md=\"6\"] {\n    order: 6; }\n  .flex-order-gt-md-7, [flex-order-gt-md=\"7\"] {\n    order: 7; }\n  .flex-order-gt-md-8, [flex-order-gt-md=\"8\"] {\n    order: 8; }\n  .flex-order-gt-md-9, [flex-order-gt-md=\"9\"] {\n    order: 9; }\n  .flex-order-gt-md-10, [flex-order-gt-md=\"10\"] {\n    order: 10; }\n  .flex-order-gt-md-11, [flex-order-gt-md=\"11\"] {\n    order: 11; }\n  .flex-order-gt-md-12, [flex-order-gt-md=\"12\"] {\n    order: 12; }\n  .flex-order-gt-md-13, [flex-order-gt-md=\"13\"] {\n    order: 13; }\n  .flex-order-gt-md-14, [flex-order-gt-md=\"14\"] {\n    order: 14; }\n  .flex-order-gt-md-15, [flex-order-gt-md=\"15\"] {\n    order: 15; }\n  .flex-order-gt-md-16, [flex-order-gt-md=\"16\"] {\n    order: 16; }\n  .flex-order-gt-md-17, [flex-order-gt-md=\"17\"] {\n    order: 17; }\n  .flex-order-gt-md-18, [flex-order-gt-md=\"18\"] {\n    order: 18; }\n  .flex-order-gt-md-19, [flex-order-gt-md=\"19\"] {\n    order: 19; }\n  .offset-gt-md-0, [offset-gt-md=\"0\"] {\n    margin-left: 0%; }\n  .offset-gt-md-5, [offset-gt-md=\"5\"] {\n    margin-left: 5%; }\n  .offset-gt-md-10, [offset-gt-md=\"10\"] {\n    margin-left: 10%; }\n  .offset-gt-md-15, [offset-gt-md=\"15\"] {\n    margin-left: 15%; }\n  .offset-gt-md-20, [offset-gt-md=\"20\"] {\n    margin-left: 20%; }\n  .offset-gt-md-25, [offset-gt-md=\"25\"] {\n    margin-left: 25%; }\n  .offset-gt-md-30, [offset-gt-md=\"30\"] {\n    margin-left: 30%; }\n  .offset-gt-md-35, [offset-gt-md=\"35\"] {\n    margin-left: 35%; }\n  .offset-gt-md-40, [offset-gt-md=\"40\"] {\n    margin-left: 40%; }\n  .offset-gt-md-45, [offset-gt-md=\"45\"] {\n    margin-left: 45%; }\n  .offset-gt-md-50, [offset-gt-md=\"50\"] {\n    margin-left: 50%; }\n  .offset-gt-md-55, [offset-gt-md=\"55\"] {\n    margin-left: 55%; }\n  .offset-gt-md-60, [offset-gt-md=\"60\"] {\n    margin-left: 60%; }\n  .offset-gt-md-65, [offset-gt-md=\"65\"] {\n    margin-left: 65%; }\n  .offset-gt-md-70, [offset-gt-md=\"70\"] {\n    margin-left: 70%; }\n  .offset-gt-md-75, [offset-gt-md=\"75\"] {\n    margin-left: 75%; }\n  .offset-gt-md-80, [offset-gt-md=\"80\"] {\n    margin-left: 80%; }\n  .offset-gt-md-85, [offset-gt-md=\"85\"] {\n    margin-left: 85%; }\n  .offset-gt-md-90, [offset-gt-md=\"90\"] {\n    margin-left: 90%; }\n  .offset-gt-md-95, [offset-gt-md=\"95\"] {\n    margin-left: 95%; }\n  .offset-gt-md-33, [offset-gt-md=\"33\"], .offset-gt-md-34, [offset-gt-md=\"34\"] {\n    margin-left: 33%; }\n  .offset-gt-md-66, [offset-gt-md=\"66\"], .offset-gt-md-67, [offset-gt-md=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-gt-md-center, .layout-align-gt-md-center-center,\n  .layout-align-gt-md-center-start,\n  .layout-align-gt-md-center-end,\n  [layout-align-gt-md=\"center\"],\n  [layout-align-gt-md=\"center center\"],\n  [layout-align-gt-md=\"center start\"],\n  [layout-align-gt-md=\"center end\"] {\n    justify-content: center; }\n  .layout-align-gt-md-end, .layout-align-gt-md-end-center,\n  .layout-align-gt-md-end-start,\n  .layout-align-gt-md-end-end,\n  [layout-align-gt-md=\"end\"], [layout-align-gt-md=\"end center\"],\n  [layout-align-gt-md=\"end start\"],\n  [layout-align-gt-md=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-gt-md-space-around, .layout-align-gt-md-space-around-center,\n  .layout-align-gt-md-space-around-start,\n  .layout-align-gt-md-space-around-end,\n  [layout-align-gt-md=\"space-around\"], [layout-align-gt-md=\"space-around center\"],\n  [layout-align-gt-md=\"space-around start\"],\n  [layout-align-gt-md=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-gt-md-space-between, .layout-align-gt-md-space-between-center,\n  .layout-align-gt-md-space-between-start,\n  .layout-align-gt-md-space-between-end,\n  [layout-align-gt-md=\"space-between\"], [layout-align-gt-md=\"space-between center\"],\n  [layout-align-gt-md=\"space-between start\"],\n  [layout-align-gt-md=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-gt-md-center-start,\n  .layout-align-gt-md-start-start,\n  .layout-align-gt-md-end-start,\n  .layout-align-gt-md-space-between-start,\n  .layout-align-gt-md-space-around-start,\n  [layout-align-gt-md=\"center start\"],\n  [layout-align-gt-md=\"start start\"],\n  [layout-align-gt-md=\"end start\"],\n  [layout-align-gt-md=\"space-between start\"],\n  [layout-align-gt-md=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-gt-md-center-center,\n  .layout-align-gt-md-start-center,\n  .layout-align-gt-md-end-center,\n  .layout-align-gt-md-space-between-center,\n  .layout-align-gt-md-space-around-center,\n  [layout-align-gt-md=\"center center\"],\n  [layout-align-gt-md=\"start center\"],\n  [layout-align-gt-md=\"end center\"],\n  [layout-align-gt-md=\"space-between center\"],\n  [layout-align-gt-md=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-gt-md-center-end,\n  .layout-align-gt-md-start-end,\n  .layout-align-gt-md-end-end,\n  .layout-align-gt-md-space-between-end,\n  .layout-align-gt-md-space-around-end,\n  [layout-align-gt-md=\"center end\"],\n  [layout-align-gt-md=\"start end\"],\n  [layout-align-gt-md=\"end end\"],\n  [layout-align-gt-md=\"space-between end\"],\n  [layout-align-gt-md=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-gt-md {\n    box-sizing: border-box; }\n  .flex-gt-md {\n    flex: 1; }\n  .flex-gt-md-grow {\n    flex: 1 1 100%; }\n  .flex-gt-md-initial {\n    flex: 0 1 auto; }\n  .flex-gt-md-auto {\n    flex: 1 1 auto; }\n  .flex-gt-md-none {\n    flex: 0 0 auto; }\n  .flex-gt-md-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-gt-md-0,\n  .md-layout-gt-md-row > .flex-gt-md-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-0,\n  .md-layout-gt-md-column > .flex-gt-md-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-gt-md-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-gt-md-5,\n  .md-layout-gt-md-row > .flex-gt-md-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-5,\n  .md-layout-gt-md-column > .flex-gt-md-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-gt-md-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-gt-md-10,\n  .md-layout-gt-md-row > .flex-gt-md-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-10,\n  .md-layout-gt-md-column > .flex-gt-md-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-gt-md-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-gt-md-15,\n  .md-layout-gt-md-row > .flex-gt-md-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-15,\n  .md-layout-gt-md-column > .flex-gt-md-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-gt-md-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-gt-md-20,\n  .md-layout-gt-md-row > .flex-gt-md-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-20,\n  .md-layout-gt-md-column > .flex-gt-md-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-gt-md-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-gt-md-25,\n  .md-layout-gt-md-row > .flex-gt-md-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-25,\n  .md-layout-gt-md-column > .flex-gt-md-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-gt-md-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-gt-md-30,\n  .md-layout-gt-md-row > .flex-gt-md-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-30,\n  .md-layout-gt-md-column > .flex-gt-md-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-gt-md-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-gt-md-35,\n  .md-layout-gt-md-row > .flex-gt-md-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-35,\n  .md-layout-gt-md-column > .flex-gt-md-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-gt-md-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-gt-md-40,\n  .md-layout-gt-md-row > .flex-gt-md-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-40,\n  .md-layout-gt-md-column > .flex-gt-md-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-gt-md-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-gt-md-45,\n  .md-layout-gt-md-row > .flex-gt-md-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-45,\n  .md-layout-gt-md-column > .flex-gt-md-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-gt-md-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-gt-md-50,\n  .md-layout-gt-md-row > .flex-gt-md-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-50,\n  .md-layout-gt-md-column > .flex-gt-md-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-gt-md-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-gt-md-55,\n  .md-layout-gt-md-row > .flex-gt-md-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-55,\n  .md-layout-gt-md-column > .flex-gt-md-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-gt-md-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-gt-md-60,\n  .md-layout-gt-md-row > .flex-gt-md-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-60,\n  .md-layout-gt-md-column > .flex-gt-md-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-gt-md-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-gt-md-65,\n  .md-layout-gt-md-row > .flex-gt-md-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-65,\n  .md-layout-gt-md-column > .flex-gt-md-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-gt-md-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-gt-md-70,\n  .md-layout-gt-md-row > .flex-gt-md-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-70,\n  .md-layout-gt-md-column > .flex-gt-md-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-gt-md-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-gt-md-75,\n  .md-layout-gt-md-row > .flex-gt-md-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-75,\n  .md-layout-gt-md-column > .flex-gt-md-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-gt-md-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-gt-md-80,\n  .md-layout-gt-md-row > .flex-gt-md-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-80,\n  .md-layout-gt-md-column > .flex-gt-md-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-gt-md-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-gt-md-85,\n  .md-layout-gt-md-row > .flex-gt-md-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-85,\n  .md-layout-gt-md-column > .flex-gt-md-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-gt-md-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-gt-md-90,\n  .md-layout-gt-md-row > .flex-gt-md-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-90,\n  .md-layout-gt-md-column > .flex-gt-md-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-gt-md-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-gt-md-95,\n  .md-layout-gt-md-row > .flex-gt-md-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-95,\n  .md-layout-gt-md-column > .flex-gt-md-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-gt-md-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-gt-md-100,\n  .md-layout-gt-md-row > .flex-gt-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-100,\n  .md-layout-gt-md-column > .flex-gt-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-md-33, .md-layout-row > .flex-gt-md-34, .md-layout-gt-md-row > .flex-gt-md-33, .md-layout-gt-md-row > .flex-gt-md-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-md-66, .md-layout-row > .flex-gt-md-67, .md-layout-gt-md-row > .flex-gt-md-66, .md-layout-gt-md-row > .flex-gt-md-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-md-33, .md-layout-column > .flex-gt-md-34, .md-layout-gt-md-column > .flex-gt-md-33, .md-layout-gt-md-column > .flex-gt-md-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-gt-md-66, .md-layout-column > .flex-gt-md-67, .md-layout-gt-md-column > .flex-gt-md-66, .md-layout-gt-md-column > .flex-gt-md-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-gt-md, .md-layout-gt-md-column, .md-layout-gt-md-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-gt-md-column {\n    flex-direction: column; }\n  .md-layout-gt-md-row {\n    flex-direction: row; } }\n\n@media (min-width: 960px) and (max-width: 1199px) {\n  .hide:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show), .hide-gt-sm:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show), .hide-gt-md:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show) {\n    display: none; }\n  .hide-lg:not(.show-lg):not(.show) {\n    display: none; }\n  .flex-order-lg-0, [flex-order-lg=\"0\"] {\n    order: 0; }\n  .flex-order-lg-1, [flex-order-lg=\"1\"] {\n    order: 1; }\n  .flex-order-lg-2, [flex-order-lg=\"2\"] {\n    order: 2; }\n  .flex-order-lg-3, [flex-order-lg=\"3\"] {\n    order: 3; }\n  .flex-order-lg-4, [flex-order-lg=\"4\"] {\n    order: 4; }\n  .flex-order-lg-5, [flex-order-lg=\"5\"] {\n    order: 5; }\n  .flex-order-lg-6, [flex-order-lg=\"6\"] {\n    order: 6; }\n  .flex-order-lg-7, [flex-order-lg=\"7\"] {\n    order: 7; }\n  .flex-order-lg-8, [flex-order-lg=\"8\"] {\n    order: 8; }\n  .flex-order-lg-9, [flex-order-lg=\"9\"] {\n    order: 9; }\n  .flex-order-lg-10, [flex-order-lg=\"10\"] {\n    order: 10; }\n  .flex-order-lg-11, [flex-order-lg=\"11\"] {\n    order: 11; }\n  .flex-order-lg-12, [flex-order-lg=\"12\"] {\n    order: 12; }\n  .flex-order-lg-13, [flex-order-lg=\"13\"] {\n    order: 13; }\n  .flex-order-lg-14, [flex-order-lg=\"14\"] {\n    order: 14; }\n  .flex-order-lg-15, [flex-order-lg=\"15\"] {\n    order: 15; }\n  .flex-order-lg-16, [flex-order-lg=\"16\"] {\n    order: 16; }\n  .flex-order-lg-17, [flex-order-lg=\"17\"] {\n    order: 17; }\n  .flex-order-lg-18, [flex-order-lg=\"18\"] {\n    order: 18; }\n  .flex-order-lg-19, [flex-order-lg=\"19\"] {\n    order: 19; }\n  .offset-lg-0, [offset-lg=\"0\"] {\n    margin-left: 0%; }\n  .offset-lg-5, [offset-lg=\"5\"] {\n    margin-left: 5%; }\n  .offset-lg-10, [offset-lg=\"10\"] {\n    margin-left: 10%; }\n  .offset-lg-15, [offset-lg=\"15\"] {\n    margin-left: 15%; }\n  .offset-lg-20, [offset-lg=\"20\"] {\n    margin-left: 20%; }\n  .offset-lg-25, [offset-lg=\"25\"] {\n    margin-left: 25%; }\n  .offset-lg-30, [offset-lg=\"30\"] {\n    margin-left: 30%; }\n  .offset-lg-35, [offset-lg=\"35\"] {\n    margin-left: 35%; }\n  .offset-lg-40, [offset-lg=\"40\"] {\n    margin-left: 40%; }\n  .offset-lg-45, [offset-lg=\"45\"] {\n    margin-left: 45%; }\n  .offset-lg-50, [offset-lg=\"50\"] {\n    margin-left: 50%; }\n  .offset-lg-55, [offset-lg=\"55\"] {\n    margin-left: 55%; }\n  .offset-lg-60, [offset-lg=\"60\"] {\n    margin-left: 60%; }\n  .offset-lg-65, [offset-lg=\"65\"] {\n    margin-left: 65%; }\n  .offset-lg-70, [offset-lg=\"70\"] {\n    margin-left: 70%; }\n  .offset-lg-75, [offset-lg=\"75\"] {\n    margin-left: 75%; }\n  .offset-lg-80, [offset-lg=\"80\"] {\n    margin-left: 80%; }\n  .offset-lg-85, [offset-lg=\"85\"] {\n    margin-left: 85%; }\n  .offset-lg-90, [offset-lg=\"90\"] {\n    margin-left: 90%; }\n  .offset-lg-95, [offset-lg=\"95\"] {\n    margin-left: 95%; }\n  .offset-lg-33, [offset-lg=\"33\"], .offset-lg-34, [offset-lg=\"34\"] {\n    margin-left: 33%; }\n  .offset-lg-66, [offset-lg=\"66\"], .offset-lg-67, [offset-lg=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-lg-center, .layout-align-lg-center-center,\n  .layout-align-lg-center-start,\n  .layout-align-lg-center-end,\n  [layout-align-lg=\"center\"],\n  [layout-align-lg=\"center center\"],\n  [layout-align-lg=\"center start\"],\n  [layout-align-lg=\"center end\"] {\n    justify-content: center; }\n  .layout-align-lg-end, .layout-align-lg-end-center,\n  .layout-align-lg-end-start,\n  .layout-align-lg-end-end,\n  [layout-align-lg=\"end\"], [layout-align-lg=\"end center\"],\n  [layout-align-lg=\"end start\"],\n  [layout-align-lg=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-lg-space-around, .layout-align-lg-space-around-center,\n  .layout-align-lg-space-around-start,\n  .layout-align-lg-space-around-end,\n  [layout-align-lg=\"space-around\"], [layout-align-lg=\"space-around center\"],\n  [layout-align-lg=\"space-around start\"],\n  [layout-align-lg=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-lg-space-between, .layout-align-lg-space-between-center,\n  .layout-align-lg-space-between-start,\n  .layout-align-lg-space-between-end,\n  [layout-align-lg=\"space-between\"], [layout-align-lg=\"space-between center\"],\n  [layout-align-lg=\"space-between start\"],\n  [layout-align-lg=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-lg-center-start,\n  .layout-align-lg-start-start,\n  .layout-align-lg-end-start,\n  .layout-align-lg-space-between-start,\n  .layout-align-lg-space-around-start,\n  [layout-align-lg=\"center start\"],\n  [layout-align-lg=\"start start\"],\n  [layout-align-lg=\"end start\"],\n  [layout-align-lg=\"space-between start\"],\n  [layout-align-lg=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-lg-center-center,\n  .layout-align-lg-start-center,\n  .layout-align-lg-end-center,\n  .layout-align-lg-space-between-center,\n  .layout-align-lg-space-around-center,\n  [layout-align-lg=\"center center\"],\n  [layout-align-lg=\"start center\"],\n  [layout-align-lg=\"end center\"],\n  [layout-align-lg=\"space-between center\"],\n  [layout-align-lg=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-lg-center-end,\n  .layout-align-lg-start-end,\n  .layout-align-lg-end-end,\n  .layout-align-lg-space-between-end,\n  .layout-align-lg-space-around-end,\n  [layout-align-lg=\"center end\"],\n  [layout-align-lg=\"start end\"],\n  [layout-align-lg=\"end end\"],\n  [layout-align-lg=\"space-between end\"],\n  [layout-align-lg=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-lg {\n    box-sizing: border-box; }\n  .flex-lg {\n    flex: 1; }\n  .flex-lg-grow {\n    flex: 1 1 100%; }\n  .flex-lg-initial {\n    flex: 0 1 auto; }\n  .flex-lg-auto {\n    flex: 1 1 auto; }\n  .flex-lg-none {\n    flex: 0 0 auto; }\n  .flex-lg-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-lg-0,\n  .md-layout-lg-row > .flex-lg-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-0,\n  .md-layout-lg-column > .flex-lg-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-lg-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-lg-5,\n  .md-layout-lg-row > .flex-lg-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-5,\n  .md-layout-lg-column > .flex-lg-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-lg-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-lg-10,\n  .md-layout-lg-row > .flex-lg-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-10,\n  .md-layout-lg-column > .flex-lg-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-lg-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-lg-15,\n  .md-layout-lg-row > .flex-lg-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-15,\n  .md-layout-lg-column > .flex-lg-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-lg-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-lg-20,\n  .md-layout-lg-row > .flex-lg-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-20,\n  .md-layout-lg-column > .flex-lg-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-lg-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-lg-25,\n  .md-layout-lg-row > .flex-lg-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-25,\n  .md-layout-lg-column > .flex-lg-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-lg-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-lg-30,\n  .md-layout-lg-row > .flex-lg-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-30,\n  .md-layout-lg-column > .flex-lg-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-lg-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-lg-35,\n  .md-layout-lg-row > .flex-lg-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-35,\n  .md-layout-lg-column > .flex-lg-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-lg-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-lg-40,\n  .md-layout-lg-row > .flex-lg-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-40,\n  .md-layout-lg-column > .flex-lg-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-lg-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-lg-45,\n  .md-layout-lg-row > .flex-lg-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-45,\n  .md-layout-lg-column > .flex-lg-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-lg-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-lg-50,\n  .md-layout-lg-row > .flex-lg-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-50,\n  .md-layout-lg-column > .flex-lg-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-lg-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-lg-55,\n  .md-layout-lg-row > .flex-lg-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-55,\n  .md-layout-lg-column > .flex-lg-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-lg-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-lg-60,\n  .md-layout-lg-row > .flex-lg-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-60,\n  .md-layout-lg-column > .flex-lg-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-lg-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-lg-65,\n  .md-layout-lg-row > .flex-lg-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-65,\n  .md-layout-lg-column > .flex-lg-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-lg-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-lg-70,\n  .md-layout-lg-row > .flex-lg-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-70,\n  .md-layout-lg-column > .flex-lg-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-lg-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-lg-75,\n  .md-layout-lg-row > .flex-lg-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-75,\n  .md-layout-lg-column > .flex-lg-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-lg-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-lg-80,\n  .md-layout-lg-row > .flex-lg-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-80,\n  .md-layout-lg-column > .flex-lg-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-lg-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-lg-85,\n  .md-layout-lg-row > .flex-lg-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-85,\n  .md-layout-lg-column > .flex-lg-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-lg-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-lg-90,\n  .md-layout-lg-row > .flex-lg-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-90,\n  .md-layout-lg-column > .flex-lg-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-lg-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-lg-95,\n  .md-layout-lg-row > .flex-lg-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-95,\n  .md-layout-lg-column > .flex-lg-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-lg-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-lg-100,\n  .md-layout-lg-row > .flex-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-100,\n  .md-layout-lg-column > .flex-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-lg-33, .md-layout-row > .flex-lg-34, .md-layout-lg-row > .flex-lg-33, .md-layout-lg-row > .flex-lg-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-lg-66, .md-layout-row > .flex-lg-67, .md-layout-lg-row > .flex-lg-66, .md-layout-lg-row > .flex-lg-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-lg-33, .md-layout-column > .flex-lg-34, .md-layout-lg-column > .flex-lg-33, .md-layout-lg-column > .flex-lg-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-lg-66, .md-layout-column > .flex-lg-67, .md-layout-lg-column > .flex-lg-66, .md-layout-lg-column > .flex-lg-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-lg, .md-layout-lg-column, .md-layout-lg-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-lg-column {\n    flex-direction: column; }\n  .md-layout-lg-row {\n    flex-direction: row; } }\n\n@media (min-width: 1200px) {\n  .hide-gt-sm:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide-gt-md:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide-gt-lg:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show) {\n    display: none; }\n  .flex-order-gt-lg-0, [flex-order-gt-lg=\"0\"] {\n    order: 0; }\n  .flex-order-gt-lg-1, [flex-order-gt-lg=\"1\"] {\n    order: 1; }\n  .flex-order-gt-lg-2, [flex-order-gt-lg=\"2\"] {\n    order: 2; }\n  .flex-order-gt-lg-3, [flex-order-gt-lg=\"3\"] {\n    order: 3; }\n  .flex-order-gt-lg-4, [flex-order-gt-lg=\"4\"] {\n    order: 4; }\n  .flex-order-gt-lg-5, [flex-order-gt-lg=\"5\"] {\n    order: 5; }\n  .flex-order-gt-lg-6, [flex-order-gt-lg=\"6\"] {\n    order: 6; }\n  .flex-order-gt-lg-7, [flex-order-gt-lg=\"7\"] {\n    order: 7; }\n  .flex-order-gt-lg-8, [flex-order-gt-lg=\"8\"] {\n    order: 8; }\n  .flex-order-gt-lg-9, [flex-order-gt-lg=\"9\"] {\n    order: 9; }\n  .flex-order-gt-lg-10, [flex-order-gt-lg=\"10\"] {\n    order: 10; }\n  .flex-order-gt-lg-11, [flex-order-gt-lg=\"11\"] {\n    order: 11; }\n  .flex-order-gt-lg-12, [flex-order-gt-lg=\"12\"] {\n    order: 12; }\n  .flex-order-gt-lg-13, [flex-order-gt-lg=\"13\"] {\n    order: 13; }\n  .flex-order-gt-lg-14, [flex-order-gt-lg=\"14\"] {\n    order: 14; }\n  .flex-order-gt-lg-15, [flex-order-gt-lg=\"15\"] {\n    order: 15; }\n  .flex-order-gt-lg-16, [flex-order-gt-lg=\"16\"] {\n    order: 16; }\n  .flex-order-gt-lg-17, [flex-order-gt-lg=\"17\"] {\n    order: 17; }\n  .flex-order-gt-lg-18, [flex-order-gt-lg=\"18\"] {\n    order: 18; }\n  .flex-order-gt-lg-19, [flex-order-gt-lg=\"19\"] {\n    order: 19; }\n  .offset-gt-lg-0, [offset-gt-lg=\"0\"] {\n    margin-left: 0%; }\n  .offset-gt-lg-5, [offset-gt-lg=\"5\"] {\n    margin-left: 5%; }\n  .offset-gt-lg-10, [offset-gt-lg=\"10\"] {\n    margin-left: 10%; }\n  .offset-gt-lg-15, [offset-gt-lg=\"15\"] {\n    margin-left: 15%; }\n  .offset-gt-lg-20, [offset-gt-lg=\"20\"] {\n    margin-left: 20%; }\n  .offset-gt-lg-25, [offset-gt-lg=\"25\"] {\n    margin-left: 25%; }\n  .offset-gt-lg-30, [offset-gt-lg=\"30\"] {\n    margin-left: 30%; }\n  .offset-gt-lg-35, [offset-gt-lg=\"35\"] {\n    margin-left: 35%; }\n  .offset-gt-lg-40, [offset-gt-lg=\"40\"] {\n    margin-left: 40%; }\n  .offset-gt-lg-45, [offset-gt-lg=\"45\"] {\n    margin-left: 45%; }\n  .offset-gt-lg-50, [offset-gt-lg=\"50\"] {\n    margin-left: 50%; }\n  .offset-gt-lg-55, [offset-gt-lg=\"55\"] {\n    margin-left: 55%; }\n  .offset-gt-lg-60, [offset-gt-lg=\"60\"] {\n    margin-left: 60%; }\n  .offset-gt-lg-65, [offset-gt-lg=\"65\"] {\n    margin-left: 65%; }\n  .offset-gt-lg-70, [offset-gt-lg=\"70\"] {\n    margin-left: 70%; }\n  .offset-gt-lg-75, [offset-gt-lg=\"75\"] {\n    margin-left: 75%; }\n  .offset-gt-lg-80, [offset-gt-lg=\"80\"] {\n    margin-left: 80%; }\n  .offset-gt-lg-85, [offset-gt-lg=\"85\"] {\n    margin-left: 85%; }\n  .offset-gt-lg-90, [offset-gt-lg=\"90\"] {\n    margin-left: 90%; }\n  .offset-gt-lg-95, [offset-gt-lg=\"95\"] {\n    margin-left: 95%; }\n  .offset-gt-lg-33, [offset-gt-lg=\"33\"], .offset-gt-lg-34, [offset-gt-lg=\"34\"] {\n    margin-left: 33%; }\n  .offset-gt-lg-66, [offset-gt-lg=\"66\"], .offset-gt-lg-67, [offset-gt-lg=\"67\"] {\n    margin-left: 67%; }\n  .layout-align-gt-lg-center, .layout-align-gt-lg-center-center,\n  .layout-align-gt-lg-center-start,\n  .layout-align-gt-lg-center-end,\n  [layout-align-gt-lg=\"center\"],\n  [layout-align-gt-lg=\"center center\"],\n  [layout-align-gt-lg=\"center start\"],\n  [layout-align-gt-lg=\"center end\"] {\n    justify-content: center; }\n  .layout-align-gt-lg-end, .layout-align-gt-lg-end-center,\n  .layout-align-gt-lg-end-start,\n  .layout-align-gt-lg-end-end,\n  [layout-align-gt-lg=\"end\"], [layout-align-gt-lg=\"end center\"],\n  [layout-align-gt-lg=\"end start\"],\n  [layout-align-gt-lg=\"end end\"] {\n    justify-content: flex-end; }\n  .layout-align-gt-lg-space-around, .layout-align-gt-lg-space-around-center,\n  .layout-align-gt-lg-space-around-start,\n  .layout-align-gt-lg-space-around-end,\n  [layout-align-gt-lg=\"space-around\"], [layout-align-gt-lg=\"space-around center\"],\n  [layout-align-gt-lg=\"space-around start\"],\n  [layout-align-gt-lg=\"space-around end\"] {\n    justify-content: space-around; }\n  .layout-align-gt-lg-space-between, .layout-align-gt-lg-space-between-center,\n  .layout-align-gt-lg-space-between-start,\n  .layout-align-gt-lg-space-between-end,\n  [layout-align-gt-lg=\"space-between\"], [layout-align-gt-lg=\"space-between center\"],\n  [layout-align-gt-lg=\"space-between start\"],\n  [layout-align-gt-lg=\"space-between end\"] {\n    justify-content: space-between; }\n  .layout-align-gt-lg-center-start,\n  .layout-align-gt-lg-start-start,\n  .layout-align-gt-lg-end-start,\n  .layout-align-gt-lg-space-between-start,\n  .layout-align-gt-lg-space-around-start,\n  [layout-align-gt-lg=\"center start\"],\n  [layout-align-gt-lg=\"start start\"],\n  [layout-align-gt-lg=\"end start\"],\n  [layout-align-gt-lg=\"space-between start\"],\n  [layout-align-gt-lg=\"space-around start\"] {\n    align-items: flex-start; }\n  .layout-align-gt-lg-center-center,\n  .layout-align-gt-lg-start-center,\n  .layout-align-gt-lg-end-center,\n  .layout-align-gt-lg-space-between-center,\n  .layout-align-gt-lg-space-around-center,\n  [layout-align-gt-lg=\"center center\"],\n  [layout-align-gt-lg=\"start center\"],\n  [layout-align-gt-lg=\"end center\"],\n  [layout-align-gt-lg=\"space-between center\"],\n  [layout-align-gt-lg=\"space-around center\"] {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-gt-lg-center-end,\n  .layout-align-gt-lg-start-end,\n  .layout-align-gt-lg-end-end,\n  .layout-align-gt-lg-space-between-end,\n  .layout-align-gt-lg-space-around-end,\n  [layout-align-gt-lg=\"center end\"],\n  [layout-align-gt-lg=\"start end\"],\n  [layout-align-gt-lg=\"end end\"],\n  [layout-align-gt-lg=\"space-between end\"],\n  [layout-align-gt-lg=\"space-around end\"] {\n    align-items: flex-end; }\n  .flex-gt-lg {\n    box-sizing: border-box; }\n  .flex-gt-lg {\n    flex: 1; }\n  .flex-gt-lg-grow {\n    flex: 1 1 100%; }\n  .flex-gt-lg-initial {\n    flex: 0 1 auto; }\n  .flex-gt-lg-auto {\n    flex: 1 1 auto; }\n  .flex-gt-lg-none {\n    flex: 0 0 auto; }\n  .flex-gt-lg-0 {\n    box-sizing: border-box;\n    flex: 0 0 0%; }\n  .md-layout-row > .flex-gt-lg-0,\n  .md-layout-gt-lg-row > .flex-gt-lg-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-0,\n  .md-layout-gt-lg-column > .flex-gt-lg-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%; }\n  .flex-gt-lg-5 {\n    box-sizing: border-box;\n    flex: 0 0 5%; }\n  .md-layout-row > .flex-gt-lg-5,\n  .md-layout-gt-lg-row > .flex-gt-lg-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-5,\n  .md-layout-gt-lg-column > .flex-gt-lg-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%; }\n  .flex-gt-lg-10 {\n    box-sizing: border-box;\n    flex: 0 0 10%; }\n  .md-layout-row > .flex-gt-lg-10,\n  .md-layout-gt-lg-row > .flex-gt-lg-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-10,\n  .md-layout-gt-lg-column > .flex-gt-lg-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%; }\n  .flex-gt-lg-15 {\n    box-sizing: border-box;\n    flex: 0 0 15%; }\n  .md-layout-row > .flex-gt-lg-15,\n  .md-layout-gt-lg-row > .flex-gt-lg-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-15,\n  .md-layout-gt-lg-column > .flex-gt-lg-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%; }\n  .flex-gt-lg-20 {\n    box-sizing: border-box;\n    flex: 0 0 20%; }\n  .md-layout-row > .flex-gt-lg-20,\n  .md-layout-gt-lg-row > .flex-gt-lg-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-20,\n  .md-layout-gt-lg-column > .flex-gt-lg-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%; }\n  .flex-gt-lg-25 {\n    box-sizing: border-box;\n    flex: 0 0 25%; }\n  .md-layout-row > .flex-gt-lg-25,\n  .md-layout-gt-lg-row > .flex-gt-lg-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-25,\n  .md-layout-gt-lg-column > .flex-gt-lg-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%; }\n  .flex-gt-lg-30 {\n    box-sizing: border-box;\n    flex: 0 0 30%; }\n  .md-layout-row > .flex-gt-lg-30,\n  .md-layout-gt-lg-row > .flex-gt-lg-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-30,\n  .md-layout-gt-lg-column > .flex-gt-lg-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%; }\n  .flex-gt-lg-35 {\n    box-sizing: border-box;\n    flex: 0 0 35%; }\n  .md-layout-row > .flex-gt-lg-35,\n  .md-layout-gt-lg-row > .flex-gt-lg-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-35,\n  .md-layout-gt-lg-column > .flex-gt-lg-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%; }\n  .flex-gt-lg-40 {\n    box-sizing: border-box;\n    flex: 0 0 40%; }\n  .md-layout-row > .flex-gt-lg-40,\n  .md-layout-gt-lg-row > .flex-gt-lg-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-40,\n  .md-layout-gt-lg-column > .flex-gt-lg-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%; }\n  .flex-gt-lg-45 {\n    box-sizing: border-box;\n    flex: 0 0 45%; }\n  .md-layout-row > .flex-gt-lg-45,\n  .md-layout-gt-lg-row > .flex-gt-lg-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-45,\n  .md-layout-gt-lg-column > .flex-gt-lg-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%; }\n  .flex-gt-lg-50 {\n    box-sizing: border-box;\n    flex: 0 0 50%; }\n  .md-layout-row > .flex-gt-lg-50,\n  .md-layout-gt-lg-row > .flex-gt-lg-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-50,\n  .md-layout-gt-lg-column > .flex-gt-lg-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%; }\n  .flex-gt-lg-55 {\n    box-sizing: border-box;\n    flex: 0 0 55%; }\n  .md-layout-row > .flex-gt-lg-55,\n  .md-layout-gt-lg-row > .flex-gt-lg-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-55,\n  .md-layout-gt-lg-column > .flex-gt-lg-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%; }\n  .flex-gt-lg-60 {\n    box-sizing: border-box;\n    flex: 0 0 60%; }\n  .md-layout-row > .flex-gt-lg-60,\n  .md-layout-gt-lg-row > .flex-gt-lg-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-60,\n  .md-layout-gt-lg-column > .flex-gt-lg-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%; }\n  .flex-gt-lg-65 {\n    box-sizing: border-box;\n    flex: 0 0 65%; }\n  .md-layout-row > .flex-gt-lg-65,\n  .md-layout-gt-lg-row > .flex-gt-lg-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-65,\n  .md-layout-gt-lg-column > .flex-gt-lg-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%; }\n  .flex-gt-lg-70 {\n    box-sizing: border-box;\n    flex: 0 0 70%; }\n  .md-layout-row > .flex-gt-lg-70,\n  .md-layout-gt-lg-row > .flex-gt-lg-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-70,\n  .md-layout-gt-lg-column > .flex-gt-lg-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%; }\n  .flex-gt-lg-75 {\n    box-sizing: border-box;\n    flex: 0 0 75%; }\n  .md-layout-row > .flex-gt-lg-75,\n  .md-layout-gt-lg-row > .flex-gt-lg-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-75,\n  .md-layout-gt-lg-column > .flex-gt-lg-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%; }\n  .flex-gt-lg-80 {\n    box-sizing: border-box;\n    flex: 0 0 80%; }\n  .md-layout-row > .flex-gt-lg-80,\n  .md-layout-gt-lg-row > .flex-gt-lg-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-80,\n  .md-layout-gt-lg-column > .flex-gt-lg-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%; }\n  .flex-gt-lg-85 {\n    box-sizing: border-box;\n    flex: 0 0 85%; }\n  .md-layout-row > .flex-gt-lg-85,\n  .md-layout-gt-lg-row > .flex-gt-lg-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-85,\n  .md-layout-gt-lg-column > .flex-gt-lg-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%; }\n  .flex-gt-lg-90 {\n    box-sizing: border-box;\n    flex: 0 0 90%; }\n  .md-layout-row > .flex-gt-lg-90,\n  .md-layout-gt-lg-row > .flex-gt-lg-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-90,\n  .md-layout-gt-lg-column > .flex-gt-lg-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%; }\n  .flex-gt-lg-95 {\n    box-sizing: border-box;\n    flex: 0 0 95%; }\n  .md-layout-row > .flex-gt-lg-95,\n  .md-layout-gt-lg-row > .flex-gt-lg-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-95,\n  .md-layout-gt-lg-column > .flex-gt-lg-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%; }\n  .flex-gt-lg-100 {\n    box-sizing: border-box;\n    flex: 0 0 100%; }\n  .md-layout-row > .flex-gt-lg-100,\n  .md-layout-gt-lg-row > .flex-gt-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-100,\n  .md-layout-gt-lg-column > .flex-gt-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-lg-33, .md-layout-row > .flex-gt-lg-34, .md-layout-gt-lg-row > .flex-gt-lg-33, .md-layout-gt-lg-row > .flex-gt-lg-34 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%; }\n  .md-layout-row > .flex-gt-lg-66, .md-layout-row > .flex-gt-lg-67, .md-layout-gt-lg-row > .flex-gt-lg-66, .md-layout-gt-lg-row > .flex-gt-lg-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%; }\n  .md-layout-column > .flex-gt-lg-33, .md-layout-column > .flex-gt-lg-34, .md-layout-gt-lg-column > .flex-gt-lg-33, .md-layout-gt-lg-column > .flex-gt-lg-34 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%; }\n  .md-layout-column > .flex-gt-lg-66, .md-layout-column > .flex-gt-lg-67, .md-layout-gt-lg-column > .flex-gt-lg-66, .md-layout-gt-lg-column > .flex-gt-lg-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%; }\n  .md-layout-gt-lg, .md-layout-gt-lg-column, .md-layout-gt-lg-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .md-layout-gt-lg-column {\n    flex-direction: column; }\n  .md-layout-gt-lg-row {\n    flex-direction: row; } }\n\n@keyframes md-autocomplete-list-out {\n  0% {\n    animation-timing-function: linear; }\n  50% {\n    opacity: 0;\n    height: 40px;\n    animation-timing-function: ease-in; }\n  100% {\n    height: 0;\n    opacity: 0; } }\n\n@keyframes md-autocomplete-list-in {\n  0% {\n    opacity: 0;\n    height: 0;\n    animation-timing-function: ease-out; }\n  50% {\n    opacity: 0;\n    height: 40px; }\n  100% {\n    opacity: 1;\n    height: 40px; } }\n\nmd-autocomplete {\n  border-radius: 2px;\n  display: block;\n  height: 40px;\n  position: relative;\n  overflow: visible;\n  min-width: 190px; }\n  md-autocomplete[disabled] input {\n    cursor: not-allowed; }\n  md-autocomplete[md-floating-label] {\n    border-radius: 0;\n    background: transparent;\n    height: auto; }\n    md-autocomplete[md-floating-label] md-input-container {\n      padding-bottom: 26px; }\n      md-autocomplete[md-floating-label] md-input-container.md-input-has-messages {\n        padding-bottom: 2px; }\n    md-autocomplete[md-floating-label] md-autocomplete-wrap {\n      height: auto; }\n    md-autocomplete[md-floating-label] button {\n      position: absolute;\n      top: auto;\n      bottom: 0;\n      right: 0;\n      width: 30px;\n      height: 30px; }\n  md-autocomplete md-autocomplete-wrap {\n    display: block;\n    position: relative;\n    overflow: visible;\n    height: 40px; }\n    md-autocomplete md-autocomplete-wrap.md-menu-showing {\n      z-index: 51; }\n    md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate {\n      position: absolute;\n      top: 20px;\n      left: 0;\n      width: 100%;\n      height: 3px;\n      transition: none; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate .md-container {\n        transition: none;\n        height: 3px; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-enter {\n        transition: opacity 0.15s linear; }\n        md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-enter.ng-enter-active {\n          opacity: 1; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-leave {\n        transition: opacity 0.15s linear; }\n        md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-leave.ng-leave-active {\n          opacity: 0; }\n  md-autocomplete input:not(.md-input) {\n    font-size: 14px;\n    box-sizing: border-box;\n    border: none;\n    box-shadow: none;\n    outline: none;\n    background: transparent;\n    width: 100%;\n    padding: 0 15px;\n    line-height: 40px;\n    height: 40px; }\n    md-autocomplete input:not(.md-input)::-ms-clear {\n      display: none; }\n  md-autocomplete button {\n    position: relative;\n    line-height: 20px;\n    text-align: center;\n    width: 30px;\n    height: 30px;\n    cursor: pointer;\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n    font-size: 12px;\n    background: transparent;\n    margin: auto 5px; }\n    md-autocomplete button:after {\n      content: '';\n      position: absolute;\n      top: -6px;\n      right: -6px;\n      bottom: -6px;\n      left: -6px;\n      border-radius: 50%;\n      transform: scale(0);\n      opacity: 0;\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n    md-autocomplete button:focus {\n      outline: none; }\n      md-autocomplete button:focus:after {\n        transform: scale(1);\n        opacity: 1; }\n    md-autocomplete button md-icon {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate3d(-50%, -50%, 0) scale(0.9); }\n      md-autocomplete button md-icon path {\n        stroke-width: 0; }\n    md-autocomplete button.ng-enter {\n      transform: scale(0);\n      transition: transform 0.15s ease-out; }\n      md-autocomplete button.ng-enter.ng-enter-active {\n        transform: scale(1); }\n    md-autocomplete button.ng-leave {\n      transition: transform 0.15s ease-out; }\n      md-autocomplete button.ng-leave.ng-leave-active {\n        transform: scale(0); }\n  @media screen and (-ms-high-contrast: active) {\n    md-autocomplete input {\n      border: 1px solid #fff; }\n    md-autocomplete li:focus {\n      color: #fff; } }\n\n.md-virtual-repeat-container.md-autocomplete-suggestions-container {\n  position: absolute;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);\n  height: 225.5px;\n  max-height: 225.5px;\n  z-index: 100; }\n\n.md-autocomplete-suggestions {\n  margin: 0;\n  list-style: none;\n  padding: 0; }\n  .md-autocomplete-suggestions li {\n    cursor: pointer;\n    font-size: 14px;\n    overflow: hidden;\n    padding: 0 15px;\n    line-height: 48px;\n    height: 48px;\n    transition: background 0.15s linear;\n    margin: 0;\n    white-space: nowrap;\n    text-overflow: ellipsis; }\n    .md-autocomplete-suggestions li:focus {\n      outline: none; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-autocomplete,\n  .md-autocomplete-suggestions {\n    border: 1px solid #fff; } }\n\nmd-backdrop {\n  transition: opacity 450ms;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 50; }\n  md-backdrop.md-menu-backdrop {\n    position: fixed !important;\n    z-index: 98; }\n  md-backdrop.md-select-backdrop {\n    z-index: 81;\n    transition-duration: 0; }\n  md-backdrop.md-dialog-backdrop {\n    z-index: 79; }\n  md-backdrop.md-bottom-sheet-backdrop {\n    z-index: 69; }\n  md-backdrop.md-sidenav-backdrop {\n    z-index: 59; }\n  md-backdrop.md-click-catcher {\n    position: absolute; }\n  md-backdrop.md-opaque {\n    opacity: .48; }\n    md-backdrop.md-opaque.ng-enter {\n      opacity: 0; }\n    md-backdrop.md-opaque.ng-enter.md-opaque.ng-enter-active {\n      opacity: .48; }\n    md-backdrop.md-opaque.ng-leave {\n      opacity: .48;\n      transition: opacity 400ms; }\n    md-backdrop.md-opaque.ng-leave.md-opaque.ng-leave-active {\n      opacity: 0; }\n\nmd-bottom-sheet {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  padding: 8px 16px 88px 16px;\n  z-index: 70;\n  border-top-width: 1px;\n  border-top-style: solid;\n  transform: translate3d(0, 80px, 0);\n  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  transition-property: transform; }\n  md-bottom-sheet.md-has-header {\n    padding-top: 0; }\n  md-bottom-sheet.ng-enter {\n    opacity: 0;\n    transform: translate3d(0, 100%, 0); }\n  md-bottom-sheet.ng-enter-active {\n    opacity: 1;\n    display: block;\n    transform: translate3d(0, 80px, 0) !important; }\n  md-bottom-sheet.ng-leave-active {\n    transform: translate3d(0, 100%, 0) !important;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-bottom-sheet .md-subheader {\n    background-color: transparent;\n    font-family: Roboto, \"Helvetica Neue\", sans-serif;\n    line-height: 56px;\n    padding: 0;\n    white-space: nowrap; }\n  md-bottom-sheet md-inline-icon {\n    display: inline-block;\n    height: 24px;\n    width: 24px;\n    fill: #444; }\n  md-bottom-sheet md-list-item {\n    display: flex;\n    outline: none; }\n    md-bottom-sheet md-list-item:hover {\n      cursor: pointer; }\n  md-bottom-sheet.md-list md-list-item {\n    padding: 0;\n    align-items: center;\n    height: 48px; }\n    md-bottom-sheet.md-list md-list-item div.md-icon-container {\n      display: inline-block;\n      height: 24px;\n      margin-right: 32px; }\n  md-bottom-sheet.md-grid {\n    padding-left: 24px;\n    padding-right: 24px;\n    padding-top: 0; }\n    md-bottom-sheet.md-grid md-list {\n      display: flex;\n      flex-direction: row;\n      flex-wrap: wrap;\n      transition: all 0.5s;\n      align-items: center; }\n    md-bottom-sheet.md-grid md-list-item {\n      flex-direction: column;\n      align-items: center;\n      transition: all 0.5s;\n      height: 96px;\n      margin-top: 8px;\n      margin-bottom: 8px;\n      /* Mixin for how many grid items to show per row */ }\n      @media screen and (max-width: 600px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 33.33333%;\n          max-width: 33.33333%; }\n          md-bottom-sheet.md-grid md-list-item:nth-of-type(3n + 1) {\n            align-items: flex-start; }\n          md-bottom-sheet.md-grid md-list-item:nth-of-type(3n) {\n            align-items: flex-end; } }\n      @media screen and (min-width: 600px) and (max-width: 960px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 25%;\n          max-width: 25%; } }\n      @media screen and (min-width: 960px) and (max-width: 1200px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 16.66667%;\n          max-width: 16.66667%; } }\n      @media screen and (min-width: 1200px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 14.28571%;\n          max-width: 14.28571%; } }\n      md-bottom-sheet.md-grid md-list-item .md-list-item-content {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        width: 48px;\n        padding-bottom: 16px; }\n      md-bottom-sheet.md-grid md-list-item .md-grid-item-content {\n        border: 1px solid transparent;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        width: 80px; }\n      md-bottom-sheet.md-grid md-list-item .md-icon-container {\n        display: inline-block;\n        box-sizing: border-box;\n        height: 48px;\n        width: 48px;\n        margin: 0 0; }\n      md-bottom-sheet.md-grid md-list-item .md-grid-text {\n        font-weight: 400;\n        line-height: 16px;\n        font-size: 13px;\n        margin: 0;\n        white-space: nowrap;\n        width: 64px;\n        text-align: center;\n        text-transform: none;\n        padding-top: 8px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-bottom-sheet {\n    border: 1px solid #fff; } }\n\n.md-button {\n  border-radius: 3px;\n  box-sizing: border-box;\n  color: currentColor;\n  user-select: none;\n  position: relative;\n  outline: none;\n  border: 0;\n  display: inline-block;\n  align-items: center;\n  padding: 0 6px;\n  margin: 6px 8px;\n  line-height: 36px;\n  min-height: 36px;\n  background: transparent;\n  white-space: nowrap;\n  min-width: 88px;\n  text-align: center;\n  text-transform: uppercase;\n  font-weight: 500;\n  font-size: 14px;\n  font-style: inherit;\n  font-variant: inherit;\n  font-family: inherit;\n  text-decoration: none;\n  cursor: pointer;\n  overflow: hidden;\n  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-button:focus {\n    outline: none; }\n  .md-button:hover, .md-button:focus {\n    text-decoration: none; }\n  .md-button.ng-hide, .md-button.ng-leave {\n    transition: none; }\n  .md-button.md-cornered {\n    border-radius: 0; }\n  .md-button.md-icon {\n    padding: 0;\n    background: none; }\n  .md-button.md-raised:not([disabled]) {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n  .md-button.md-icon-button {\n    margin: 0 6px;\n    height: 48px;\n    min-width: 0;\n    line-height: 48px;\n    padding-left: 0;\n    padding-right: 0;\n    width: 48px;\n    border-radius: 50%; }\n    .md-button.md-icon-button .md-ripple-container {\n      border-radius: 50%;\n      background-clip: padding-box;\n      overflow: hidden;\n      -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n  .md-button.md-fab {\n    z-index: 20;\n    line-height: 56px;\n    min-width: 0;\n    width: 56px;\n    height: 56px;\n    vertical-align: middle;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n    border-radius: 50%;\n    background-clip: padding-box;\n    overflow: hidden;\n    transition: 0.2s linear;\n    transition-property: background-color, box-shadow; }\n    .md-button.md-fab.md-fab-bottom-right {\n      top: auto;\n      right: 20px;\n      bottom: 20px;\n      left: auto;\n      position: absolute; }\n    .md-button.md-fab.md-fab-bottom-left {\n      top: auto;\n      right: auto;\n      bottom: 20px;\n      left: 20px;\n      position: absolute; }\n    .md-button.md-fab.md-fab-top-right {\n      top: 20px;\n      right: 20px;\n      bottom: auto;\n      left: auto;\n      position: absolute; }\n    .md-button.md-fab.md-fab-top-left {\n      top: 20px;\n      right: auto;\n      bottom: auto;\n      left: 20px;\n      position: absolute; }\n    .md-button.md-fab .md-ripple-container {\n      border-radius: 50%;\n      background-clip: padding-box;\n      overflow: hidden;\n      -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n    .md-button.md-fab.md-mini {\n      line-height: 40px;\n      width: 40px;\n      height: 40px; }\n  .md-button:not([disabled]).md-raised.md-focused,\n  .md-button:not([disabled]).md-fab.md-focused {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n  .md-button:not([disabled]).md-raised:active,\n  .md-button:not([disabled]).md-fab:active {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }\n  .md-button .md-ripple-container {\n    border-radius: 3px;\n    background-clip: padding-box;\n    overflow: hidden;\n    -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n\n.md-toast-open-top .md-button.md-fab-top-left,\n.md-toast-open-top .md-button.md-fab-top-right {\n  transform: translate3d(0, 42px, 0); }\n  .md-toast-open-top .md-button.md-fab-top-left:not([disabled]).md-focused,\n  .md-toast-open-top .md-button.md-fab-top-left:not([disabled]):hover,\n  .md-toast-open-top .md-button.md-fab-top-right:not([disabled]).md-focused,\n  .md-toast-open-top .md-button.md-fab-top-right:not([disabled]):hover {\n    transform: translate3d(0, 41px, 0); }\n\n.md-toast-open-bottom .md-button.md-fab-bottom-left,\n.md-toast-open-bottom .md-button.md-fab-bottom-right {\n  transform: translate3d(0, -42px, 0); }\n  .md-toast-open-bottom .md-button.md-fab-bottom-left:not([disabled]).md-focused,\n  .md-toast-open-bottom .md-button.md-fab-bottom-left:not([disabled]):hover,\n  .md-toast-open-bottom .md-button.md-fab-bottom-right:not([disabled]).md-focused,\n  .md-toast-open-bottom .md-button.md-fab-bottom-right:not([disabled]):hover {\n    transform: translate3d(0, -43px, 0); }\n\n.md-button-group {\n  display: flex;\n  flex: 1;\n  width: 100%; }\n\n.md-button-group > .md-button {\n  flex: 1;\n  display: block;\n  overflow: hidden;\n  width: 0;\n  border-width: 1px 0px 1px 1px;\n  border-radius: 0;\n  text-align: center;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n  .md-button-group > .md-button:first-child {\n    border-radius: 2px 0px 0px 2px; }\n  .md-button-group > .md-button:last-child {\n    border-right-width: 1px;\n    border-radius: 0px 2px 2px 0px; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-button.md-raised,\n  .md-button.md-fab {\n    border: 1px solid #fff; } }\n\nmd-card {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }\n  md-card > img,\n  md-card > :not(md-card-content) img {\n    width: 100%; }\n  md-card md-card-content {\n    padding: 16px; }\n  md-card .md-actions {\n    margin: 0; }\n    md-card .md-actions .md-button {\n      margin-bottom: 8px;\n      margin-top: 8px;\n      margin-right: 4px;\n      margin-left: 4px; }\n  md-card md-card-footer {\n    padding: 16px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-card {\n    border: 1px solid #fff; } }\n\n.md-contact-chips .md-chips .md-chip {\n  padding: 0 25px 0 0; }\n  .md-contact-chips .md-chips .md-chip .md-contact-avatar {\n    float: left; }\n    .md-contact-chips .md-chips .md-chip .md-contact-avatar img {\n      height: 32px;\n      border-radius: 16px; }\n  .md-contact-chips .md-chips .md-chip .md-contact-name {\n    display: inline-block;\n    height: 32px;\n    margin-left: 8px; }\n\n.md-contact-suggestion {\n  height: 56px; }\n  .md-contact-suggestion img {\n    height: 40px;\n    border-radius: 20px;\n    margin-top: 8px; }\n  .md-contact-suggestion .md-contact-name {\n    margin-left: 8px;\n    width: 120px; }\n  .md-contact-suggestion .md-contact-name, .md-contact-suggestion .md-contact-email {\n    display: inline-block;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n\n.md-contact-chips-suggestions li {\n  height: 100%; }\n\n.md-chips {\n  display: block;\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\n  font-size: 16px;\n  padding: 0 0 8px 3px;\n  vertical-align: middle; }\n  .md-chips:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .md-chips:not(.md-readonly) {\n    cursor: text; }\n    .md-chips:not(.md-readonly) .md-chip {\n      padding-right: 22px; }\n  .md-chips .md-chip {\n    cursor: default;\n    border-radius: 16px;\n    display: block;\n    height: 32px;\n    line-height: 32px;\n    margin: 8px 8px 0 0;\n    padding: 0 12px 0 12px;\n    float: left;\n    box-sizing: border-box;\n    max-width: 100%;\n    position: relative; }\n    .md-chips .md-chip .md-chip-content {\n      display: block;\n      padding-right: 4px;\n      float: left;\n      white-space: nowrap;\n      max-width: 100%;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n      .md-chips .md-chip .md-chip-content:focus {\n        outline: none; }\n    .md-chips .md-chip .md-chip-remove-container {\n      position: absolute;\n      right: 0;\n      line-height: 22px; }\n    .md-chips .md-chip .md-chip-remove {\n      text-align: center;\n      width: 32px;\n      height: 32px;\n      min-width: 0;\n      padding: 0;\n      background: transparent;\n      border: none;\n      box-shadow: none;\n      margin: 0;\n      position: relative; }\n      .md-chips .md-chip .md-chip-remove md-icon {\n        height: 18px;\n        width: 18px;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate3d(-50%, -50%, 0); }\n  .md-chips .md-chip-input-container {\n    display: block;\n    line-height: 32px;\n    margin: 8px 8px 0 0;\n    padding: 0 12px 0 12px;\n    float: left; }\n    .md-chips .md-chip-input-container input:not([type]), .md-chips .md-chip-input-container input[type=\"email\"], .md-chips .md-chip-input-container input[type=\"number\"], .md-chips .md-chip-input-container input[type=\"tel\"], .md-chips .md-chip-input-container input[type=\"url\"], .md-chips .md-chip-input-container input[type=\"text\"] {\n      border: 0;\n      height: 32px;\n      line-height: 32px;\n      padding: 0; }\n      .md-chips .md-chip-input-container input:not([type]):focus, .md-chips .md-chip-input-container input[type=\"email\"]:focus, .md-chips .md-chip-input-container input[type=\"number\"]:focus, .md-chips .md-chip-input-container input[type=\"tel\"]:focus, .md-chips .md-chip-input-container input[type=\"url\"]:focus, .md-chips .md-chip-input-container input[type=\"text\"]:focus {\n        outline: none; }\n    .md-chips .md-chip-input-container md-autocomplete, .md-chips .md-chip-input-container md-autocomplete-wrap {\n      background: transparent;\n      height: 32px; }\n    .md-chips .md-chip-input-container md-autocomplete md-autocomplete-wrap {\n      box-shadow: none; }\n    .md-chips .md-chip-input-container md-autocomplete input {\n      position: relative; }\n    .md-chips .md-chip-input-container input {\n      border: 0;\n      height: 32px;\n      line-height: 32px;\n      padding: 0; }\n      .md-chips .md-chip-input-container input:focus {\n        outline: none; }\n    .md-chips .md-chip-input-container md-autocomplete, .md-chips .md-chip-input-container md-autocomplete-wrap {\n      height: 32px; }\n    .md-chips .md-chip-input-container md-autocomplete {\n      box-shadow: none; }\n      .md-chips .md-chip-input-container md-autocomplete input {\n        position: relative; }\n    .md-chips .md-chip-input-container:not(:first-child) {\n      margin: 8px 8px 0 0; }\n    .md-chips .md-chip-input-container input {\n      background: transparent;\n      border-width: 0; }\n  .md-chips md-autocomplete button {\n    display: none; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-chip-input-container,\n  md-chip {\n    border: 1px solid #fff; }\n  .md-chip-input-container md-autocomplete {\n    border: none; } }\n\nmd-checkbox {\n  box-sizing: border-box;\n  display: block;\n  margin: 8px;\n  white-space: nowrap;\n  cursor: pointer;\n  outline: none;\n  user-select: none;\n  padding-left: 18px;\n  padding-right: 0;\n  position: relative;\n  line-height: 26px;\n  min-width: 18px;\n  min-height: 18px; }\n  html[dir=rtl] md-checkbox {\n    padding-left: 0;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-checkbox {\n    padding-left: 0;\n    unicode-bidi: embed; }\n  md-checkbox bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-checkbox bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  html[dir=rtl] md-checkbox {\n    padding-right: 18px;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-checkbox {\n    padding-right: 18px;\n    unicode-bidi: embed; }\n  md-checkbox bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-checkbox bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  md-checkbox.md-focused:not([disabled]) .md-container:before {\n    left: -8px;\n    top: -8px;\n    right: -8px;\n    bottom: -8px; }\n  md-checkbox.md-focused:not([disabled]):not(.md-checked) .md-container:before {\n    background-color: rgba(0, 0, 0, 0.12); }\n  md-checkbox .md-container {\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    box-sizing: border-box;\n    display: inline-block;\n    width: 18px;\n    height: 18px;\n    left: 0;\n    right: auto; }\n    html[dir=rtl] md-checkbox .md-container {\n      left: auto;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-container {\n      left: auto;\n      unicode-bidi: embed; }\n    md-checkbox .md-container bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-checkbox .md-container {\n      right: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-container {\n      right: 0;\n      unicode-bidi: embed; }\n    md-checkbox .md-container bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container:before {\n      box-sizing: border-box;\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n    md-checkbox .md-container:after {\n      box-sizing: border-box;\n      content: '';\n      position: absolute;\n      top: -10px;\n      right: -10px;\n      bottom: -10px;\n      left: -10px; }\n    md-checkbox .md-container .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: auto;\n      height: auto;\n      left: -15px;\n      top: -15px;\n      right: -15px;\n      bottom: -15px; }\n  md-checkbox.md-align-top-left > div.md-container {\n    top: 12px; }\n  md-checkbox .md-icon {\n    box-sizing: border-box;\n    transition: 240ms;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 18px;\n    height: 18px;\n    border-width: 2px;\n    border-style: solid;\n    border-radius: 2px; }\n  md-checkbox.md-checked .md-icon {\n    border: none; }\n  md-checkbox[disabled] {\n    cursor: no-drop; }\n  md-checkbox.md-checked .md-icon:after {\n    box-sizing: border-box;\n    transform: rotate(45deg);\n    position: absolute;\n    left: 6px;\n    top: 2px;\n    display: table;\n    width: 6px;\n    height: 12px;\n    border-width: 2px;\n    border-style: solid;\n    border-top: 0;\n    border-left: 0;\n    content: ''; }\n  md-checkbox .md-label {\n    box-sizing: border-box;\n    position: relative;\n    display: inline-block;\n    vertical-align: middle;\n    white-space: normal;\n    user-select: text;\n    margin-left: 10px;\n    margin-right: 0; }\n    html[dir=rtl] md-checkbox .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    md-checkbox .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-checkbox .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    md-checkbox .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n\nmd-content {\n  display: block;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n  md-content[md-scroll-y] {\n    overflow-y: auto;\n    overflow-x: hidden; }\n  md-content[md-scroll-x] {\n    overflow-x: auto;\n    overflow-y: hidden; }\n  md-content.autoScroll {\n    -webkit-overflow-scrolling: auto; }\n\n/** Styles for mdCalendar. */\nmd-calendar {\n  font-size: 13px;\n  user-select: none; }\n\n.md-calendar-scroll-mask {\n  display: inline-block;\n  overflow: hidden;\n  height: 308px; }\n  .md-calendar-scroll-mask .md-virtual-repeat-scroller {\n    overflow-y: scroll;\n    -webkit-overflow-scrolling: touch; }\n    .md-calendar-scroll-mask .md-virtual-repeat-scroller::-webkit-scrollbar {\n      display: none; }\n  .md-calendar-scroll-mask .md-virtual-repeat-offsetter {\n    width: 100%; }\n\n.md-calendar-scroll-container {\n  box-shadow: inset -3px 3px 6px rgba(0, 0, 0, 0.2);\n  display: inline-block;\n  height: 308px;\n  width: 346px; }\n\n.md-calendar-date {\n  height: 44px;\n  width: 44px;\n  text-align: center;\n  padding: 0;\n  border: none; }\n  .md-calendar-date:first-child {\n    padding-left: 16px; }\n  .md-calendar-date:last-child {\n    padding-right: 16px; }\n  .md-calendar-date.md-calendar-date-disabled {\n    cursor: default; }\n\n.md-calendar-date-selection-indicator {\n  transition: background-color, color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  border-radius: 50%;\n  display: inline-block;\n  width: 40px;\n  height: 40px;\n  line-height: 40px; }\n  .md-calendar-date:not(.md-disabled) .md-calendar-date-selection-indicator {\n    cursor: pointer; }\n\n.md-calendar-month-label {\n  height: 44px;\n  font-size: 14px;\n  font-weight: 500;\n  padding: 0 0 0 24px; }\n\n.md-calendar-day-header {\n  table-layout: fixed;\n  border-spacing: 0;\n  border-collapse: collapse; }\n  .md-calendar-day-header th {\n    height: 44px;\n    width: 44px;\n    text-align: center;\n    padding: 0;\n    border: none;\n    font-weight: normal;\n    height: 40px; }\n    .md-calendar-day-header th:first-child {\n      padding-left: 16px; }\n    .md-calendar-day-header th:last-child {\n      padding-right: 16px; }\n\n.md-calendar {\n  table-layout: fixed;\n  border-spacing: 0;\n  border-collapse: collapse; }\n  .md-calendar tr:last-child td {\n    border-bottom-width: 1px;\n    border-bottom-style: solid; }\n  .md-calendar:first-child {\n    border-top: 1px solid transparent; }\n\n/** Styles for mdDatepicker. */\nmd-datepicker {\n  white-space: nowrap; }\n\n.md-datepicker-button {\n  display: inline-block;\n  box-sizing: border-box;\n  background: none; }\n\n.md-datepicker-input {\n  font-size: 14px;\n  box-sizing: border-box;\n  border: none;\n  box-shadow: none;\n  outline: none;\n  background: transparent;\n  min-width: 120px;\n  max-width: 328px; }\n  .md-datepicker-input::-ms-clear {\n    display: none; }\n\n.md-datepicker-input-container {\n  position: relative;\n  padding-bottom: 5px;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  display: inline-block;\n  width: auto;\n  margin-left: 12px; }\n  .md-datepicker-input-container.md-datepicker-focused {\n    border-bottom-width: 2px; }\n\n.md-datepicker-calendar-pane {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 99;\n  border-width: 1px;\n  border-style: solid;\n  background: transparent;\n  transform: scale(0);\n  transform-origin: 0 0;\n  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-datepicker-calendar-pane.md-pane-open {\n    transform: scale(1); }\n\n.md-datepicker-input-mask {\n  height: 40px;\n  width: 340px;\n  position: relative;\n  background: transparent;\n  pointer-events: none;\n  cursor: text; }\n\n.md-datepicker-input-mask-opaque {\n  position: absolute;\n  right: 0;\n  left: 120px;\n  height: 100%; }\n\n.md-datepicker-calendar {\n  opacity: 0;\n  transition: opacity 0.2s cubic-bezier(0.5, 0, 0.25, 1); }\n  .md-pane-open .md-datepicker-calendar {\n    opacity: 1; }\n  .md-datepicker-calendar md-calendar:focus {\n    outline: none; }\n\n.md-datepicker-expand-triangle {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 0;\n  height: 0;\n  border-left: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-top: 5px solid; }\n\n.md-datepicker-triangle-button {\n  position: absolute;\n  right: 0;\n  top: 0;\n  transform: translateY(-25%) translateX(45%); }\n\n.md-datepicker-triangle-button.md-button.md-icon-button {\n  height: 100%;\n  width: 36px;\n  position: absolute; }\n\nmd-datepicker[disabled] .md-datepicker-input-container {\n  border-bottom-color: transparent; }\n\nmd-datepicker[disabled] .md-datepicker-triangle-button {\n  display: none; }\n\n.md-datepicker-open .md-datepicker-input-container {\n  margin-left: -12px;\n  border: none; }\n\n.md-datepicker-open .md-datepicker-input {\n  margin-left: 24px;\n  height: 40px; }\n\n.md-datepicker-open .md-datepicker-triangle-button {\n  display: none; }\n\n.md-datepicker-pos-adjusted .md-datepicker-input-mask {\n  display: none; }\n\n.md-datepicker-calendar-pane .md-calendar {\n  transform: translateY(-85px);\n  transition: transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);\n  transition-delay: 0.125s; }\n\n.md-datepicker-calendar-pane.md-pane-open .md-calendar {\n  transform: translateY(0); }\n\n.md-dialog-is-showing {\n  max-height: 100%; }\n\n.md-dialog-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 80;\n  overflow: hidden; }\n\nmd-dialog {\n  opacity: 0;\n  min-width: 240px;\n  max-width: 80%;\n  max-height: 80%;\n  position: relative;\n  overflow: auto;\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12);\n  display: flex;\n  flex-direction: column; }\n  md-dialog.md-transition-in {\n    opacity: 1;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transform: translate3d(0, 0, 0) scale(1); }\n  md-dialog.md-transition-out {\n    opacity: 0;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transform: translate3d(0, 100%, 0) scale(0.2); }\n  md-dialog > form {\n    display: flex;\n    flex-direction: column;\n    overflow: auto; }\n  md-dialog md-dialog-content {\n    order: 1;\n    flex-direction: column;\n    padding: 24px;\n    overflow: auto;\n    -webkit-overflow-scrolling: touch; }\n    md-dialog md-dialog-content:not([layout=row]) > *:first-child:not(.md-subheader) {\n      margin-top: 0; }\n    md-dialog md-dialog-content:focus {\n      outline: none; }\n    md-dialog md-dialog-content .md-subheader {\n      margin: 0; }\n      md-dialog md-dialog-content .md-subheader.sticky-clone {\n        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16); }\n    md-dialog md-dialog-content.sticky-container {\n      padding: 0; }\n      md-dialog md-dialog-content.sticky-container > div {\n        padding: 24px;\n        padding-top: 0; }\n    md-dialog md-dialog-content .md-dialog-content-body {\n      width: 100%; }\n  md-dialog .md-actions {\n    display: flex;\n    order: 2;\n    box-sizing: border-box;\n    align-items: center;\n    justify-content: flex-end;\n    margin-bottom: 0;\n    padding-right: 8px;\n    padding-left: 16px;\n    min-height: 52px;\n    overflow: hidden; }\n    md-dialog .md-actions .md-button {\n      margin-bottom: 8px;\n      margin-left: 8px;\n      margin-right: 0;\n      margin-top: 8px; }\n  md-dialog.md-content-overflow .md-actions {\n    border-top-width: 1px;\n    border-top-style: solid; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-dialog {\n    border: 1px solid #fff; } }\n\nmd-divider {\n  display: block;\n  border-top-width: 1px;\n  border-top-style: solid;\n  margin: 0; }\n  md-divider[md-inset] {\n    margin-left: 80px; }\n\nmd-fab-speed-dial {\n  position: relative;\n  display: flex;\n  align-items: center;\n  /*\n   * Handle the animations\n   */ }\n  md-fab-speed-dial.md-fab-bottom-right {\n    top: auto;\n    right: 20px;\n    bottom: 20px;\n    left: auto;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-bottom-left {\n    top: auto;\n    right: auto;\n    bottom: 20px;\n    left: 20px;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-top-right {\n    top: 20px;\n    right: 20px;\n    bottom: auto;\n    left: auto;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-top-left {\n    top: 20px;\n    right: auto;\n    bottom: auto;\n    left: 20px;\n    position: absolute; }\n  md-fab-speed-dial .md-css-variables {\n    z-index: 20; }\n  md-fab-speed-dial.md-is-open .md-fab-action-item {\n    visibility: visible;\n    align-items: center; }\n  md-fab-speed-dial md-fab-actions {\n    display: flex;\n    height: auto; }\n    md-fab-speed-dial md-fab-actions .md-fab-action-item {\n      visibility: hidden;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-down {\n    flex-direction: column; }\n    md-fab-speed-dial.md-down md-fab-trigger {\n      order: 1; }\n    md-fab-speed-dial.md-down md-fab-actions {\n      flex-direction: column;\n      order: 2; }\n  md-fab-speed-dial.md-up {\n    flex-direction: column; }\n    md-fab-speed-dial.md-up md-fab-trigger {\n      order: 2; }\n    md-fab-speed-dial.md-up md-fab-actions {\n      flex-direction: column-reverse;\n      order: 1; }\n  md-fab-speed-dial.md-left {\n    flex-direction: row; }\n    md-fab-speed-dial.md-left md-fab-trigger {\n      order: 2; }\n    md-fab-speed-dial.md-left md-fab-actions {\n      flex-direction: row-reverse;\n      order: 1; }\n      md-fab-speed-dial.md-left md-fab-actions .md-fab-action-item {\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-right {\n    flex-direction: row; }\n    md-fab-speed-dial.md-right md-fab-trigger {\n      order: 1; }\n    md-fab-speed-dial.md-right md-fab-actions {\n      flex-direction: row;\n      order: 2; }\n      md-fab-speed-dial.md-right md-fab-actions .md-fab-action-item {\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-scale .md-fab-action-item {\n    opacity: 0;\n    transform: scale(0);\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 0.14286s; }\n\nmd-fab-toolbar {\n  display: block;\n  /*\n   * Closed styling\n   */\n  /*\n   * Hover styling\n   */ }\n  md-fab-toolbar.md-fab-bottom-right {\n    top: auto;\n    right: 20px;\n    bottom: 20px;\n    left: auto;\n    position: absolute; }\n  md-fab-toolbar.md-fab-bottom-left {\n    top: auto;\n    right: auto;\n    bottom: 20px;\n    left: 20px;\n    position: absolute; }\n  md-fab-toolbar.md-fab-top-right {\n    top: 20px;\n    right: 20px;\n    bottom: auto;\n    left: auto;\n    position: absolute; }\n  md-fab-toolbar.md-fab-top-left {\n    top: 20px;\n    right: auto;\n    bottom: auto;\n    left: 20px;\n    position: absolute; }\n  md-fab-toolbar .md-fab-toolbar-wrapper {\n    display: block;\n    position: relative;\n    overflow: hidden;\n    height: 68px; }\n  md-fab-toolbar md-fab-trigger {\n    position: absolute;\n    z-index: 20; }\n    md-fab-toolbar md-fab-trigger button {\n      overflow: visible !important; }\n    md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {\n      display: block;\n      position: absolute;\n      z-index: 21;\n      opacity: 1;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n    md-fab-toolbar md-fab-trigger md-icon {\n      position: relative;\n      z-index: 22;\n      opacity: 1;\n      transition: all 200ms ease-in; }\n  md-fab-toolbar.md-left md-fab-trigger {\n    right: 0; }\n  md-fab-toolbar.md-left .md-toolbar-tools {\n    flex-direction: row-reverse; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:first-child {\n      margin-right: 0.6rem; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:first-child {\n      margin-left: -0.8rem; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:last-child {\n      margin-right: 8px; }\n  md-fab-toolbar.md-right md-fab-trigger {\n    left: 0; }\n  md-fab-toolbar.md-right .md-toolbar-tools {\n    flex-direction: row; }\n  md-fab-toolbar md-toolbar {\n    background-color: transparent !important;\n    pointer-events: none;\n    z-index: 23; }\n    md-fab-toolbar md-toolbar .md-toolbar-tools {\n      padding: 0 20px;\n      margin-top: 3px; }\n    md-fab-toolbar md-toolbar .md-fab-action-item {\n      opacity: 0;\n      transform: scale(0);\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-duration: 0.15s; }\n  md-fab-toolbar.md-is-open md-fab-trigger > button {\n    box-shadow: none; }\n    md-fab-toolbar.md-is-open md-fab-trigger > button md-icon {\n      opacity: 0; }\n  md-fab-toolbar.md-is-open .md-fab-action-item {\n    opacity: 1;\n    transform: scale(1); }\n\nmd-grid-list {\n  box-sizing: border-box;\n  display: block;\n  position: relative; }\n  md-grid-list md-grid-tile,\n  md-grid-list md-grid-tile > figure,\n  md-grid-list md-grid-tile-header,\n  md-grid-list md-grid-tile-footer {\n    box-sizing: border-box; }\n  md-grid-list md-grid-tile {\n    display: block;\n    position: absolute; }\n    md-grid-list md-grid-tile figure {\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      height: 100%;\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      padding: 0;\n      margin: 0; }\n    md-grid-list md-grid-tile md-grid-tile-header,\n    md-grid-list md-grid-tile md-grid-tile-footer {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      height: 48px;\n      color: #fff;\n      background: rgba(0, 0, 0, 0.18);\n      overflow: hidden;\n      position: absolute;\n      left: 0;\n      right: 0; }\n      md-grid-list md-grid-tile md-grid-tile-header h3,\n      md-grid-list md-grid-tile md-grid-tile-header h4,\n      md-grid-list md-grid-tile md-grid-tile-footer h3,\n      md-grid-list md-grid-tile md-grid-tile-footer h4 {\n        font-weight: 400;\n        margin: 0 0 0 16px; }\n      md-grid-list md-grid-tile md-grid-tile-header h3,\n      md-grid-list md-grid-tile md-grid-tile-footer h3 {\n        font-size: 14px; }\n      md-grid-list md-grid-tile md-grid-tile-header h4,\n      md-grid-list md-grid-tile md-grid-tile-footer h4 {\n        font-size: 12px; }\n    md-grid-list md-grid-tile md-grid-tile-header {\n      top: 0; }\n    md-grid-list md-grid-tile md-grid-tile-footer {\n      bottom: 0; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-grid-tile {\n    border: 1px solid #fff; }\n  md-grid-tile-footer {\n    border-top: 1px solid #fff; } }\n\nmd-icon {\n  margin: auto;\n  background-repeat: no-repeat no-repeat;\n  display: inline-block;\n  vertical-align: middle;\n  fill: currentColor;\n  height: 24px;\n  width: 24px; }\n  md-icon svg {\n    pointer-events: none; }\n  md-icon[md-font-icon] {\n    line-height: 1;\n    width: auto; }\n\nmd-list {\n  display: block;\n  padding: 8px 0px 8px 0px; }\n  md-list .md-subheader {\n    font-size: 14px;\n    font-weight: 500;\n    letter-spacing: 0.010em;\n    line-height: 1.2em; }\n\nmd-list-item.md-proxy-focus.md-focused .md-no-style {\n  transition: background-color 0.15s linear; }\n\nmd-list-item.md-no-proxy,\nmd-list-item .md-no-style {\n  position: relative;\n  padding: 0px 16px;\n  flex: 1; }\n  md-list-item.md-no-proxy.md-button,\n  md-list-item .md-no-style.md-button {\n    font-size: inherit;\n    height: inherit;\n    text-align: left;\n    text-transform: none;\n    width: 100%;\n    white-space: normal;\n    flex-direction: inherit;\n    align-items: inherit; }\n  md-list-item.md-no-proxy:focus,\n  md-list-item .md-no-style:focus {\n    outline: none; }\n\nmd-list-item.md-with-secondary {\n  position: relative; }\n\nmd-list-item.md-clickable:hover {\n  cursor: pointer; }\n\nmd-list-item md-divider {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%; }\n  md-list-item md-divider[md-inset] {\n    left: 96px;\n    width: calc(100% - 96px);\n    margin: 0; }\n\nmd-list-item, md-list-item .md-list-item-inner {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  min-height: 48px; }\n  md-list-item > div.md-primary > md-icon,\n  md-list-item > div.md-secondary > md-icon,\n  md-list-item > md-icon:first-child,\n  md-list-item > md-icon.md-secondary, md-list-item .md-list-item-inner > div.md-primary > md-icon,\n  md-list-item .md-list-item-inner > div.md-secondary > md-icon,\n  md-list-item .md-list-item-inner > md-icon:first-child,\n  md-list-item .md-list-item-inner > md-icon.md-secondary {\n    width: 24px;\n    margin-top: 16px;\n    margin-bottom: 12px;\n    box-sizing: content-box; }\n  md-list-item > div.md-primary > md-checkbox,\n  md-list-item > div.md-secondary > md-checkbox,\n  md-list-item > md-checkbox:first-child,\n  md-list-item md-checkbox.md-secondary, md-list-item .md-list-item-inner > div.md-primary > md-checkbox,\n  md-list-item .md-list-item-inner > div.md-secondary > md-checkbox,\n  md-list-item .md-list-item-inner > md-checkbox:first-child,\n  md-list-item .md-list-item-inner md-checkbox.md-secondary {\n    align-self: center; }\n    md-list-item > div.md-primary > md-checkbox .md-label,\n    md-list-item > div.md-secondary > md-checkbox .md-label,\n    md-list-item > md-checkbox:first-child .md-label,\n    md-list-item md-checkbox.md-secondary .md-label, md-list-item .md-list-item-inner > div.md-primary > md-checkbox .md-label,\n    md-list-item .md-list-item-inner > div.md-secondary > md-checkbox .md-label,\n    md-list-item .md-list-item-inner > md-checkbox:first-child .md-label,\n    md-list-item .md-list-item-inner md-checkbox.md-secondary .md-label {\n      display: none; }\n  md-list-item > md-icon:first-child, md-list-item .md-list-item-inner > md-icon:first-child {\n    margin-right: 32px; }\n  md-list-item > md-checkbox:first-child, md-list-item .md-list-item-inner > md-checkbox:first-child {\n    width: 24px;\n    margin-left: 3px;\n    margin-right: 29px; }\n  md-list-item > .md-avatar:first-child, md-list-item .md-list-item-inner > .md-avatar:first-child {\n    width: 40px;\n    height: 40px;\n    margin-top: 8px;\n    margin-bottom: 8px;\n    margin-right: 16px;\n    border-radius: 50%;\n    box-sizing: content-box; }\n  md-list-item md-checkbox.md-secondary,\n  md-list-item md-switch.md-secondary, md-list-item .md-list-item-inner md-checkbox.md-secondary,\n  md-list-item .md-list-item-inner md-switch.md-secondary {\n    margin-right: 0;\n    margin-top: 0;\n    margin-bottom: 0; }\n  md-list-item button.md-button.md-secondary-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container {\n    background-color: transparent;\n    align-self: center;\n    border-radius: 50%;\n    margin: 0px;\n    min-width: 0px; }\n    md-list-item button.md-button.md-secondary-container .md-ripple,\n    md-list-item button.md-button.md-secondary-container .md-ripple-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container .md-ripple,\n    md-list-item .md-list-item-inner button.md-button.md-secondary-container .md-ripple-container {\n      border-radius: 50%; }\n  md-list-item .md-secondary-container,\n  md-list-item .md-secondary, md-list-item .md-list-item-inner .md-secondary-container,\n  md-list-item .md-list-item-inner .md-secondary {\n    margin-left: 16px;\n    position: absolute;\n    right: 16px;\n    top: 50%;\n    transform: translate3d(0, -50%, 0); }\n  md-list-item > .md-button.md-secondary-container > .md-secondary, md-list-item .md-list-item-inner > .md-button.md-secondary-container > .md-secondary {\n    margin-left: 0px;\n    position: static; }\n  md-list-item > p, md-list-item > .md-list-item-inner > p, md-list-item .md-list-item-inner > p, md-list-item .md-list-item-inner > .md-list-item-inner > p {\n    flex: 1;\n    margin: 0; }\n\nmd-list-item.md-2-line,\nmd-list-item.md-2-line > .md-no-style,\nmd-list-item.md-3-line,\nmd-list-item.md-3-line > .md-no-style {\n  align-items: flex-start;\n  justify-content: center; }\n  md-list-item.md-2-line .md-list-item-text,\n  md-list-item.md-2-line > .md-no-style .md-list-item-text,\n  md-list-item.md-3-line .md-list-item-text,\n  md-list-item.md-3-line > .md-no-style .md-list-item-text {\n    flex: 1;\n    margin: auto;\n    text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text.md-offset,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text.md-offset,\n    md-list-item.md-3-line .md-list-item-text.md-offset,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text.md-offset {\n      margin-left: 56px; }\n    md-list-item.md-2-line .md-list-item-text h3,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text h3,\n    md-list-item.md-3-line .md-list-item-text h3,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text h3 {\n      font-size: 16px;\n      font-weight: 400;\n      letter-spacing: 0.010em;\n      margin: 0 0 0px 0;\n      line-height: 1.2em;\n      overflow: hidden;\n      white-space: nowrap;\n      text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text h4,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text h4,\n    md-list-item.md-3-line .md-list-item-text h4,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text h4 {\n      font-size: 14px;\n      letter-spacing: 0.010em;\n      margin: 3px 0 1px 0;\n      font-weight: 400;\n      line-height: 1.2em;\n      overflow: hidden;\n      white-space: nowrap;\n      text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text p,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text p,\n    md-list-item.md-3-line .md-list-item-text p,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text p {\n      font-size: 14px;\n      font-weight: 500;\n      letter-spacing: 0.010em;\n      margin: 0 0 0 0;\n      line-height: 1.6em; }\n\nmd-list-item.md-2-line,\nmd-list-item.md-2-line > .md-no-style {\n  height: 72px; }\n  md-list-item.md-2-line > .md-avatar:first-child,\n  md-list-item.md-2-line > .md-no-style > .md-avatar:first-child {\n    margin-top: 12px; }\n  md-list-item.md-2-line > md-icon:first-child,\n  md-list-item.md-2-line > .md-no-style > md-icon:first-child {\n    align-self: flex-start; }\n  md-list-item.md-2-line .md-list-item-text,\n  md-list-item.md-2-line > .md-no-style .md-list-item-text {\n    flex: 1; }\n\nmd-list-item.md-3-line,\nmd-list-item.md-3-line > .md-no-style {\n  height: 88px; }\n  md-list-item.md-3-line > md-icon:first-child,\n  md-list-item.md-3-line > .md-avatar:first-child,\n  md-list-item.md-3-line > .md-no-style > md-icon:first-child,\n  md-list-item.md-3-line > .md-no-style > .md-avatar:first-child {\n    margin-top: 16px; }\n\nmd-input-container {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  padding: 2px;\n  padding-bottom: 26px;\n  /*\n   * The .md-input class is added to the input/textarea\n   */ }\n  md-input-container.md-input-has-messages {\n    padding-bottom: 2px; }\n  md-input-container > md-icon {\n    position: absolute;\n    top: 5px;\n    left: 2px; }\n    md-input-container > md-icon + input {\n      margin-left: 36px; }\n  md-input-container textarea,\n  md-input-container input[type=\"text\"],\n  md-input-container input[type=\"password\"],\n  md-input-container input[type=\"datetime\"],\n  md-input-container input[type=\"datetime-local\"],\n  md-input-container input[type=\"date\"],\n  md-input-container input[type=\"month\"],\n  md-input-container input[type=\"time\"],\n  md-input-container input[type=\"week\"],\n  md-input-container input[type=\"number\"],\n  md-input-container input[type=\"email\"],\n  md-input-container input[type=\"url\"],\n  md-input-container input[type=\"search\"],\n  md-input-container input[type=\"tel\"],\n  md-input-container input[type=\"color\"] {\n    /* remove default appearance from all input/textarea */\n    -moz-appearance: none;\n    -webkit-appearance: none; }\n  md-input-container input[type=\"date\"],\n  md-input-container input[type=\"datetime-local\"],\n  md-input-container input[type=\"month\"],\n  md-input-container input[type=\"time\"],\n  md-input-container input[type=\"week\"] {\n    min-height: 26px; }\n  md-input-container textarea {\n    resize: none;\n    overflow: hidden; }\n  md-input-container textarea.md-input {\n    min-height: 26px;\n    -ms-flex-preferred-size: auto; }\n  md-input-container label {\n    position: relative;\n    top: -2px; }\n  md-input-container label:not(.md-no-float),\n  md-input-container .md-placeholder {\n    order: 1;\n    pointer-events: none;\n    -webkit-font-smoothing: antialiased;\n    padding-left: 2px;\n    z-index: 1;\n    transform: translate3d(0, 28px, 0) scale(1);\n    transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;\n    transform-origin: left top; }\n    html[dir=rtl] md-input-container label:not(.md-no-float),\n    html[dir=rtl] md-input-container .md-placeholder {\n      transform-origin: right top;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-input-container label:not(.md-no-float),\n    body[dir=rtl] md-input-container .md-placeholder {\n      transform-origin: right top;\n      unicode-bidi: embed; }\n    md-input-container label:not(.md-no-float) bdo[dir=rtl],\n    md-input-container .md-placeholder bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-input-container label:not(.md-no-float) bdo[dir=ltr],\n    md-input-container .md-placeholder bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n  md-input-container .md-placeholder {\n    position: absolute;\n    top: 0;\n    opacity: 0;\n    transition-property: opacity, transform;\n    transform: translate3d(0, 30px, 0); }\n    md-input-container .md-placeholder.md-static {\n      position: static; }\n  md-input-container.md-input-focused .md-placeholder {\n    opacity: 1;\n    transform: translate3d(0, 24px, 0); }\n  md-input-container.md-input-has-value .md-placeholder {\n    transition: none;\n    opacity: 0; }\n  md-input-container:not(.md-input-has-value) input:not(:focus),\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-ampm-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-day-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-hour-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-millisecond-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-minute-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-month-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-second-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-week-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-year-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text {\n    color: transparent; }\n  md-input-container .md-input {\n    order: 2;\n    display: block;\n    margin-top: auto;\n    background: none;\n    padding-top: 2px;\n    padding-bottom: 1px;\n    padding-left: 2px;\n    padding-right: 2px;\n    border-width: 0 0 1px 0;\n    line-height: 26px;\n    -ms-flex-preferred-size: 26px;\n    border-radius: 0;\n    width: auto; }\n    md-input-container .md-input:focus {\n      outline: none; }\n    md-input-container .md-input:invalid {\n      outline: none;\n      box-shadow: none; }\n    md-input-container .md-input.md-no-flex {\n      flex: none !important; }\n  md-input-container .md-char-counter {\n    position: relative;\n    text-align: right;\n    order: 3; }\n  md-input-container ng-messages, md-input-container data-ng-messages, md-input-container x-ng-messages,\n  md-input-container [ng-messages], md-input-container [data-ng-messages], md-input-container [x-ng-messages] {\n    position: relative;\n    order: 4;\n    min-height: 24px; }\n    md-input-container ng-messages .md-char-counter, md-input-container data-ng-messages .md-char-counter, md-input-container x-ng-messages .md-char-counter,\n    md-input-container [ng-messages] .md-char-counter, md-input-container [data-ng-messages] .md-char-counter, md-input-container [x-ng-messages] .md-char-counter {\n      position: absolute;\n      top: 0;\n      right: 0; }\n  md-input-container ng-message, md-input-container data-ng-message, md-input-container x-ng-message,\n  md-input-container [ng-message], md-input-container [data-ng-message], md-input-container [x-ng-message],\n  md-input-container [ng-message-exp], md-input-container [data-ng-message-exp], md-input-container [x-ng-message-exp],\n  md-input-container .md-char-counter {\n    font-size: 12px;\n    line-height: 14px;\n    overflow: hidden;\n    padding-top: 5px; }\n    md-input-container ng-message:not(.md-char-counter), md-input-container data-ng-message:not(.md-char-counter), md-input-container x-ng-message:not(.md-char-counter),\n    md-input-container [ng-message]:not(.md-char-counter), md-input-container [data-ng-message]:not(.md-char-counter), md-input-container [x-ng-message]:not(.md-char-counter),\n    md-input-container [ng-message-exp]:not(.md-char-counter), md-input-container [data-ng-message-exp]:not(.md-char-counter), md-input-container [x-ng-message-exp]:not(.md-char-counter),\n    md-input-container .md-char-counter:not(.md-char-counter) {\n      padding-right: 50px; }\n    md-input-container ng-message.ng-enter, md-input-container data-ng-message.ng-enter, md-input-container x-ng-message.ng-enter,\n    md-input-container [ng-message].ng-enter, md-input-container [data-ng-message].ng-enter, md-input-container [x-ng-message].ng-enter,\n    md-input-container [ng-message-exp].ng-enter, md-input-container [data-ng-message-exp].ng-enter, md-input-container [x-ng-message-exp].ng-enter,\n    md-input-container .md-char-counter.ng-enter {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-delay: 0.2s;\n      transition-duration: 0.2s; }\n    md-input-container ng-message.ng-leave, md-input-container data-ng-message.ng-leave, md-input-container x-ng-message.ng-leave,\n    md-input-container [ng-message].ng-leave, md-input-container [data-ng-message].ng-leave, md-input-container [x-ng-message].ng-leave,\n    md-input-container [ng-message-exp].ng-leave, md-input-container [data-ng-message-exp].ng-leave, md-input-container [x-ng-message-exp].ng-leave,\n    md-input-container .md-char-counter.ng-leave {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transition-duration: 0.26667s; }\n    md-input-container ng-message.ng-enter,\n    md-input-container ng-message.ng-leave.ng-leave-active, md-input-container data-ng-message.ng-enter,\n    md-input-container data-ng-message.ng-leave.ng-leave-active, md-input-container x-ng-message.ng-enter,\n    md-input-container x-ng-message.ng-leave.ng-leave-active,\n    md-input-container [ng-message].ng-enter,\n    md-input-container [ng-message].ng-leave.ng-leave-active, md-input-container [data-ng-message].ng-enter,\n    md-input-container [data-ng-message].ng-leave.ng-leave-active, md-input-container [x-ng-message].ng-enter,\n    md-input-container [x-ng-message].ng-leave.ng-leave-active,\n    md-input-container [ng-message-exp].ng-enter,\n    md-input-container [ng-message-exp].ng-leave.ng-leave-active, md-input-container [data-ng-message-exp].ng-enter,\n    md-input-container [data-ng-message-exp].ng-leave.ng-leave-active, md-input-container [x-ng-message-exp].ng-enter,\n    md-input-container [x-ng-message-exp].ng-leave.ng-leave-active,\n    md-input-container .md-char-counter.ng-enter,\n    md-input-container .md-char-counter.ng-leave.ng-leave-active {\n      margin-top: -19px;\n      opacity: 0; }\n    md-input-container ng-message.ng-leave,\n    md-input-container ng-message.ng-enter.ng-enter-active, md-input-container data-ng-message.ng-leave,\n    md-input-container data-ng-message.ng-enter.ng-enter-active, md-input-container x-ng-message.ng-leave,\n    md-input-container x-ng-message.ng-enter.ng-enter-active,\n    md-input-container [ng-message].ng-leave,\n    md-input-container [ng-message].ng-enter.ng-enter-active, md-input-container [data-ng-message].ng-leave,\n    md-input-container [data-ng-message].ng-enter.ng-enter-active, md-input-container [x-ng-message].ng-leave,\n    md-input-container [x-ng-message].ng-enter.ng-enter-active,\n    md-input-container [ng-message-exp].ng-leave,\n    md-input-container [ng-message-exp].ng-enter.ng-enter-active, md-input-container [data-ng-message-exp].ng-leave,\n    md-input-container [data-ng-message-exp].ng-enter.ng-enter-active, md-input-container [x-ng-message-exp].ng-leave,\n    md-input-container [x-ng-message-exp].ng-enter.ng-enter-active,\n    md-input-container .md-char-counter.ng-leave,\n    md-input-container .md-char-counter.ng-enter.ng-enter-active {\n      margin-top: 0;\n      opacity: 1; }\n  md-input-container.md-input-focused label:not(.md-no-float),\n  md-input-container.md-input-has-placeholder label:not(.md-no-float),\n  md-input-container.md-input-has-value label:not(.md-no-float) {\n    transform: translate3d(0, 6px, 0) scale(0.75); }\n  md-input-container.md-input-has-value label {\n    transition: none; }\n  md-input-container.md-input-focused .md-input,\n  md-input-container .md-input.ng-invalid.ng-dirty {\n    padding-bottom: 0;\n    border-width: 0 0 2px 0; }\n  md-input-container .md-input[disabled],\n  [disabled] md-input-container .md-input {\n    background-position: 0 bottom;\n    background-size: 4px 1px;\n    background-repeat: repeat-x;\n    margin-bottom: -1px; }\n\nmd-input-container.md-icon-float {\n  margin-top: -16px;\n  transition: margin-top 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-input-container.md-icon-float > label {\n    pointer-events: none;\n    position: absolute;\n    margin-left: 36px; }\n  md-input-container.md-icon-float > md-icon {\n    top: 26px;\n    left: 2px; }\n    md-input-container.md-icon-float > md-icon + input,\n    md-input-container.md-icon-float > md-icon + textarea {\n      margin-left: 36px; }\n  md-input-container.md-icon-float > input,\n  md-input-container.md-icon-float > textarea {\n    padding-top: 24px; }\n  md-input-container.md-icon-float.md-input-focused,\n  md-input-container.md-icon-float.md-input-has-value {\n    margin-top: -8px; }\n    md-input-container.md-icon-float.md-input-focused label,\n    md-input-container.md-icon-float.md-input-has-value label {\n      transform: translate3d(0, 6px, 0) scale(0.75);\n      transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-input-container.md-default-theme > md-icon {\n    fill: #fff; } }\n\n.md-open-menu-container {\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: 99;\n  opacity: 0;\n  border-radius: 2px; }\n  .md-open-menu-container md-menu-divider {\n    margin-top: 4px;\n    margin-bottom: 4px;\n    height: 1px;\n    width: 100%; }\n  .md-open-menu-container md-menu-content > * {\n    opacity: 0; }\n  .md-open-menu-container:not(.md-clickable) {\n    pointer-events: none; }\n  .md-open-menu-container.md-active {\n    opacity: 1;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transition-duration: 200ms; }\n    .md-open-menu-container.md-active > md-menu-content > * {\n      opacity: 1;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-duration: 200ms;\n      transition-delay: 100ms; }\n  .md-open-menu-container.md-leave {\n    opacity: 0;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 250ms; }\n\nmd-menu-content {\n  display: flex;\n  flex-direction: column;\n  padding: 8px 0;\n  max-height: 304px;\n  overflow-y: auto; }\n  md-menu-content.md-dense {\n    max-height: 208px; }\n    md-menu-content.md-dense md-menu-item {\n      height: 32px;\n      min-height: 0px; }\n\nmd-menu-item {\n  display: flex;\n  flex-direction: row;\n  min-height: 48px;\n  height: 48px;\n  align-content: center;\n  justify-content: flex-start; }\n  md-menu-item > * {\n    width: 100%;\n    margin: auto 0;\n    padding-left: 16px;\n    padding-right: 16px; }\n  md-menu-item > a.md-button {\n    display: flex; }\n  md-menu-item > .md-button {\n    border-radius: 0;\n    margin: auto 0;\n    font-size: 15px;\n    text-transform: none;\n    font-weight: 400;\n    text-align: start;\n    height: 100%;\n    padding-left: 16px;\n    padding-right: 16px;\n    display: inline-block;\n    align-items: baseline;\n    align-content: left;\n    width: 100%; }\n    md-menu-item > .md-button md-icon {\n      margin: auto 16px auto 0; }\n    md-menu-item > .md-button p {\n      display: inline-block;\n      margin: auto; }\n    md-menu-item > .md-button span {\n      margin-top: auto;\n      margin-bottom: auto; }\n    md-menu-item > .md-button .md-ripple-container {\n      border-radius: inherit; }\n\n.md-menu {\n  padding: 8px 0; }\n\nmd-toolbar .md-menu {\n  height: auto;\n  margin: auto; }\n\n@media (max-width: 599px) {\n  md-menu-content {\n    min-width: 112px; }\n  md-menu-content[width=\"3\"] {\n    min-width: 168px; }\n  md-menu-content[width=\"4\"] {\n    min-width: 224px; }\n  md-menu-content[width=\"5\"] {\n    min-width: 280px; }\n  md-menu-content[width=\"6\"] {\n    min-width: 336px; }\n  md-menu-content[width=\"7\"] {\n    min-width: 392px; } }\n\n@media (min-width: 600px) {\n  md-menu-content {\n    min-width: 96px; }\n  md-menu-content[width=\"3\"] {\n    min-width: 192px; }\n  md-menu-content[width=\"4\"] {\n    min-width: 256px; }\n  md-menu-content[width=\"5\"] {\n    min-width: 320px; }\n  md-menu-content[width=\"6\"] {\n    min-width: 384px; }\n  md-menu-content[width=\"7\"] {\n    min-width: 448px; } }\n\nmd-toolbar.md-menu-toolbar h2.md-toolbar-tools {\n  line-height: 1rem;\n  height: auto;\n  padding: 28px;\n  padding-bottom: 12px; }\n\nmd-menu-bar {\n  padding: 0 20px;\n  display: block;\n  position: relative;\n  z-index: 2; }\n  md-menu-bar .md-menu {\n    display: inline-block;\n    padding: 0;\n    position: relative; }\n  md-menu-bar button {\n    font-size: 14px;\n    padding: 0 10px;\n    margin: 0;\n    border: 0;\n    background-color: transparent;\n    height: 40px; }\n  md-menu-bar md-backdrop.md-menu-backdrop {\n    z-index: -2; }\n\nmd-menu-content.md-menu-bar-menu.md-dense {\n  max-height: none;\n  padding: 16px 0; }\n  md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent {\n    position: relative; }\n    md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent > md-icon {\n      position: absolute;\n      padding: 0;\n      width: 24px;\n      top: 6px;\n      left: 24px; }\n    md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent > .md-button, md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent .md-menu > .md-button {\n      padding: 0 32px 0 64px; }\n  md-menu-content.md-menu-bar-menu.md-dense .md-button {\n    min-height: 0;\n    height: 32px;\n    display: flex; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-button span {\n      flex-grow: 1; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-button span.md-alt-text {\n      flex-grow: 0;\n      align-self: flex-end;\n      margin: 0 8px; }\n  md-menu-content.md-menu-bar-menu.md-dense md-menu-divider {\n    margin: 8px 0; }\n  md-menu-content.md-menu-bar-menu.md-dense .md-menu {\n    padding: 0; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button {\n      position: relative;\n      margin: 0;\n      width: 100%;\n      text-align: left;\n      text-align: start;\n      text-transform: none;\n      font-weight: normal;\n      border-radius: 0px;\n      padding-left: 16px; }\n      md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button:after {\n        display: block;\n        content: '\\25BC';\n        position: absolute;\n        top: 0px;\n        speak: none;\n        transform: rotate(270deg) scaleY(0.45) scaleX(0.9);\n        right: 28px; }\n\nmd-progress-circular {\n  display: block;\n  position: relative;\n  width: 100px;\n  height: 100px;\n  padding-top: 0 !important;\n  margin-bottom: 0 !important;\n  transform: scale(0.5); }\n  md-progress-circular .md-spinner-wrapper {\n    display: block;\n    position: relative;\n    overflow: hidden; }\n    md-progress-circular .md-spinner-wrapper .md-inner {\n      width: 100px;\n      height: 100px;\n      position: relative; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-gap {\n        position: absolute;\n        left: 49px;\n        right: 49px;\n        top: 0;\n        bottom: 0;\n        border-top-width: 10px;\n        border-top-style: solid;\n        box-sizing: border-box; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-left, md-progress-circular .md-spinner-wrapper .md-inner .md-right {\n        position: absolute;\n        top: 0;\n        height: 100px;\n        width: 50px;\n        overflow: hidden; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-left .md-half-circle, md-progress-circular .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n          position: absolute;\n          top: 0;\n          width: 100px;\n          height: 100px;\n          box-sizing: border-box;\n          border-width: 10px;\n          border-style: solid;\n          border-bottom-color: transparent;\n          border-radius: 50%; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-left {\n        left: 0; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-left .md-half-circle {\n          left: 0;\n          border-right-color: transparent; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-right {\n        right: 0; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n          right: 0;\n          border-left-color: transparent; }\n  md-progress-circular .md-spinner-wrapper.md-mode-indeterminate {\n    animation: outer-rotate 2.91667s linear infinite; }\n    md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner {\n      animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-left .md-half-circle, md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-right .md-half-circle {\n        animation-iteration-count: infinite;\n        animation-duration: 1.3125s;\n        animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1); }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-left .md-half-circle {\n        animation-name: left-wobble; }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-right .md-half-circle {\n        animation-name: right-wobble; }\n  md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper {\n    animation: none; }\n    md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner {\n      animation: none; }\n      md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner .md-left .md-half-circle {\n        animation-name: none; }\n      md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n        animation-name: none; }\n  md-progress-circular .md-spinner-wrapper.ng-hide {\n    animation: none; }\n    md-progress-circular .md-spinner-wrapper.ng-hide .md-inner {\n      animation: none; }\n      md-progress-circular .md-spinner-wrapper.ng-hide .md-inner .md-left .md-half-circle {\n        animation-name: none; }\n      md-progress-circular .md-spinner-wrapper.ng-hide .md-inner .md-right .md-half-circle {\n        animation-name: none; }\n\n@keyframes outer-rotate {\n  100% {\n    transform: rotate(360deg); } }\n\n@keyframes left-wobble {\n  0%, 100% {\n    transform: rotate(130deg); }\n  50% {\n    transform: rotate(-5deg); } }\n\n@keyframes right-wobble {\n  0%, 100% {\n    transform: rotate(-130deg); }\n  50% {\n    transform: rotate(5deg); } }\n\n@keyframes sporadic-rotate {\n  12.5% {\n    transform: rotate(135deg); }\n  25% {\n    transform: rotate(270deg); }\n  37.5% {\n    transform: rotate(405deg); }\n  50% {\n    transform: rotate(540deg); }\n  62.5% {\n    transform: rotate(675deg); }\n  75% {\n    transform: rotate(810deg); }\n  87.5% {\n    transform: rotate(945deg); }\n  100% {\n    transform: rotate(1080deg); } }\n\nmd-progress-linear {\n  display: block;\n  position: relative;\n  width: 100%;\n  height: 5px;\n  padding-top: 0 !important;\n  margin-bottom: 0 !important; }\n  md-progress-linear .md-container {\n    display: block;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n    height: 5px;\n    transform: translate(0, 0) scale(1, 1); }\n    md-progress-linear .md-container .md-bar {\n      position: absolute;\n      left: 0;\n      top: 0;\n      bottom: 0;\n      width: 100%;\n      height: 5px; }\n    md-progress-linear .md-container .md-dashed:before {\n      content: \"\";\n      display: none;\n      position: absolute;\n      margin-top: 0;\n      height: 5px;\n      width: 100%;\n      background-color: transparent;\n      background-size: 10px 10px !important;\n      background-position: 0px -23px; }\n    md-progress-linear .md-container .md-bar1, md-progress-linear .md-container .md-bar2 {\n      transition: transform 0.2s linear; }\n    md-progress-linear .md-container.md-mode-query .md-bar1 {\n      display: none; }\n    md-progress-linear .md-container.md-mode-query .md-bar2 {\n      transition: all 0.2s linear;\n      animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1); }\n    md-progress-linear .md-container.md-mode-determinate .md-bar1 {\n      display: none; }\n    md-progress-linear .md-container.md-mode-indeterminate .md-bar1 {\n      animation: md-progress-linear-indeterminate-scale-1 4s infinite, md-progress-linear-indeterminate-1 4s infinite; }\n    md-progress-linear .md-container.md-mode-indeterminate .md-bar2 {\n      animation: md-progress-linear-indeterminate-scale-2 4s infinite, md-progress-linear-indeterminate-2 4s infinite; }\n    md-progress-linear .md-container.ng-hide {\n      animation: none; }\n      md-progress-linear .md-container.ng-hide .md-bar1 {\n        animation-name: none; }\n      md-progress-linear .md-container.ng-hide .md-bar2 {\n        animation-name: none; }\n  md-progress-linear .md-container.md-mode-buffer {\n    background-color: transparent !important;\n    transition: all 0.2s linear; }\n    md-progress-linear .md-container.md-mode-buffer .md-dashed:before {\n      display: block;\n      animation: buffer 3s infinite linear; }\n\n@keyframes query {\n  0% {\n    opacity: 1;\n    transform: translateX(35%) scale(0.3, 1); }\n  100% {\n    opacity: 0;\n    transform: translateX(-50%) scale(0, 1); } }\n\n@keyframes buffer {\n  0% {\n    opacity: 1;\n    background-position: 0px -23px; }\n  50% {\n    opacity: 0; }\n  100% {\n    opacity: 1;\n    background-position: -200px -23px; } }\n\n@keyframes md-progress-linear-indeterminate-scale-1 {\n  0% {\n    transform: scaleX(0.1);\n    animation-timing-function: linear; }\n  36.6% {\n    transform: scaleX(0.1);\n    animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1); }\n  69.15% {\n    transform: scaleX(0.83);\n    animation-timing-function: cubic-bezier(0.22573, 0, 0.23365, 1.37098); }\n  100% {\n    transform: scaleX(0.1); } }\n\n@keyframes md-progress-linear-indeterminate-1 {\n  0% {\n    left: -105.16667%;\n    animation-timing-function: linear; }\n  20% {\n    left: -105.16667%;\n    animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582); }\n  69.15% {\n    left: 21.5%;\n    animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635); }\n  100% {\n    left: 95.44444%; } }\n\n@keyframes md-progress-linear-indeterminate-scale-2 {\n  0% {\n    transform: scaleX(0.1);\n    animation-timing-function: cubic-bezier(0.20503, 0.05705, 0.57661, 0.45397); }\n  19.15% {\n    transform: scaleX(0.57);\n    animation-timing-function: cubic-bezier(0.15231, 0.19643, 0.64837, 1.00432); }\n  44.15% {\n    transform: scaleX(0.91);\n    animation-timing-function: cubic-bezier(0.25776, -0.00316, 0.21176, 1.38179); }\n  100% {\n    transform: scaleX(0.1); } }\n\n@keyframes md-progress-linear-indeterminate-2 {\n  0% {\n    left: -54.88889%;\n    animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40968); }\n  25% {\n    left: -17.25%;\n    animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73372); }\n  48.35% {\n    left: 29.5%;\n    animation-timing-function: cubic-bezier(0.4, 0.62703, 0.6, 0.90203); }\n  100% {\n    left: 117.38889%; } }\n\nmd-radio-button,\n.md-switch-thumb {\n  box-sizing: border-box;\n  display: block;\n  margin: 15px;\n  white-space: nowrap;\n  cursor: pointer; }\n  md-radio-button .md-container,\n  .md-switch-thumb .md-container {\n    box-sizing: border-box;\n    position: relative;\n    top: 4px;\n    display: inline-block;\n    width: 16px;\n    height: 16px;\n    cursor: pointer; }\n    md-radio-button .md-container .md-ripple-container,\n    .md-switch-thumb .md-container .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: 48px;\n      height: 48px;\n      left: -16px;\n      top: -16px; }\n    md-radio-button .md-container:before,\n    .md-switch-thumb .md-container:before {\n      box-sizing: border-box;\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n  md-radio-button.md-align-top-left > div.md-container,\n  .md-switch-thumb.md-align-top-left > div.md-container {\n    top: -15px; }\n  md-radio-button .md-off,\n  .md-switch-thumb .md-off {\n    box-sizing: border-box;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 16px;\n    height: 16px;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 50%;\n    transition: border-color ease 0.28s; }\n  md-radio-button .md-on,\n  .md-switch-thumb .md-on {\n    box-sizing: border-box;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 16px;\n    height: 16px;\n    border-radius: 50%;\n    transition: transform ease 0.28s;\n    transform: scale(0); }\n  md-radio-button.md-checked .md-on,\n  .md-switch-thumb.md-checked .md-on {\n    transform: scale(0.5); }\n  md-radio-button .md-label,\n  .md-switch-thumb .md-label {\n    box-sizing: border-box;\n    position: relative;\n    display: inline-block;\n    margin-left: 10px;\n    margin-right: 0;\n    vertical-align: middle;\n    white-space: normal;\n    pointer-events: none;\n    width: auto; }\n    html[dir=rtl] md-radio-button .md-label,\n    html[dir=rtl] .md-switch-thumb .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-radio-button .md-label,\n    body[dir=rtl] .md-switch-thumb .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    md-radio-button .md-label bdo[dir=rtl],\n    .md-switch-thumb .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-radio-button .md-label bdo[dir=ltr],\n    .md-switch-thumb .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-radio-button .md-label,\n    html[dir=rtl] .md-switch-thumb .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-radio-button .md-label,\n    body[dir=rtl] .md-switch-thumb .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    md-radio-button .md-label bdo[dir=rtl],\n    .md-switch-thumb .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-radio-button .md-label bdo[dir=ltr],\n    .md-switch-thumb .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n  md-radio-button .circle,\n  .md-switch-thumb .circle {\n    border-radius: 50%; }\n\nmd-radio-group:focus {\n  outline: none; }\n\nmd-radio-group.md-focused .md-checked .md-container:before {\n  left: -8px;\n  top: -8px;\n  right: -8px;\n  bottom: -8px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-radio-button.md-default-theme .md-on {\n    background-color: #fff; } }\n\n.md-select-menu-container {\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: 99;\n  opacity: 0; }\n  .md-select-menu-container:not(.md-clickable) {\n    pointer-events: none; }\n  .md-select-menu-container md-progress-circular {\n    display: table;\n    margin: 24px auto !important; }\n  .md-select-menu-container.md-active {\n    opacity: 1; }\n    .md-select-menu-container.md-active md-select-menu {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transition-duration: 150ms; }\n      .md-select-menu-container.md-active md-select-menu > * {\n        opacity: 1;\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n        transition-duration: 150ms;\n        transition-delay: 100ms; }\n  .md-select-menu-container.md-leave {\n    opacity: 0;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 250ms; }\n\nmd-input-container > md-select {\n  margin: auto 0 0 0;\n  order: 2; }\n\nmd-select {\n  display: flex;\n  margin: 20px 0 26px 0; }\n  md-select[disabled] .md-select-value {\n    background-position: 0 bottom;\n    background-size: 4px 1px;\n    background-repeat: repeat-x;\n    margin-bottom: -1px; }\n  md-select:focus {\n    outline: none; }\n  md-select[disabled]:hover {\n    cursor: default; }\n  md-select:not([disabled]):hover {\n    cursor: pointer; }\n  md-select:not([disabled]).ng-invalid.ng-dirty .md-select-value {\n    border-bottom: 2px solid;\n    padding-bottom: 0; }\n  md-select:not([disabled]):focus .md-select-value {\n    border-bottom-width: 2px;\n    border-bottom-style: solid;\n    padding-bottom: 0; }\n\n.md-select-value {\n  display: flex;\n  align-items: center;\n  padding: 2px 2px 1px;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  background-color: transparent;\n  position: relative;\n  box-sizing: content-box;\n  min-width: 64px;\n  min-height: 26px;\n  flex-grow: 1; }\n  .md-select-value *:first-child {\n    flex: 1;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n    max-width: calc(100% - 2*8px);\n    transform: translate3d(0, 2px, 0); }\n  .md-select-value .md-select-icon {\n    display: block;\n    align-items: flex-end;\n    text-align: end;\n    width: 24px;\n    margin: 0 4px;\n    transform: translate3d(0, 1px, 0); }\n  .md-select-value .md-select-icon:after {\n    display: block;\n    content: '\\25BC';\n    position: relative;\n    top: 2px;\n    speak: none;\n    transform: scaleY(0.6) scaleX(1); }\n  .md-select-value.md-select-placeholder {\n    display: flex;\n    order: 1;\n    pointer-events: none;\n    -webkit-font-smoothing: antialiased;\n    padding-left: 2px;\n    z-index: 1; }\n\nmd-select-menu {\n  display: flex;\n  flex-direction: column;\n  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);\n  max-height: 256px;\n  min-height: 48px;\n  overflow-y: hidden;\n  transform-origin: left top;\n  transform: scale(1); }\n  md-select-menu.md-reverse {\n    flex-direction: column-reverse; }\n  md-select-menu:not(.md-overflow) md-content {\n    padding-top: 8px;\n    padding-bottom: 8px; }\n  html[dir=rtl] md-select-menu {\n    transform-origin: right top;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-select-menu {\n    transform-origin: right top;\n    unicode-bidi: embed; }\n  md-select-menu bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-select-menu bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  md-select-menu md-content {\n    min-width: 136px;\n    min-height: 48px;\n    max-height: 256px;\n    overflow-y: auto; }\n  md-select-menu > * {\n    opacity: 0; }\n\nmd-option {\n  cursor: pointer;\n  position: relative;\n  display: flex;\n  align-items: center;\n  width: auto;\n  padding: 0 16px 0 16px;\n  height: 48px; }\n  md-option:focus {\n    outline: none; }\n  md-option .md-text {\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    width: auto;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    font-size: 16px; }\n\nmd-optgroup {\n  display: block; }\n  md-optgroup label {\n    display: block;\n    font-size: 14px;\n    text-transform: uppercase;\n    padding: 16px;\n    font-weight: 500; }\n  md-optgroup md-option {\n    padding-left: 32px;\n    padding-right: 32px; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-select-backdrop {\n    background-color: transparent; }\n  md-select-menu {\n    border: 1px solid #fff; } }\n\nmd-sidenav {\n  box-sizing: border-box;\n  position: absolute;\n  flex-direction: column;\n  z-index: 60;\n  width: 304px;\n  min-width: 304px;\n  max-width: 304px;\n  bottom: 0;\n  background-color: white;\n  overflow: auto; }\n  md-sidenav ul {\n    list-style: none; }\n  md-sidenav.md-closed {\n    display: none; }\n  md-sidenav.md-closed-add,\n  md-sidenav.md-closed-remove {\n    display: flex;\n    transition: 0.2s ease-in all; }\n  md-sidenav.md-closed-add.md-closed-add-active,\n  md-sidenav.md-closed-remove.md-closed-remove-active {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-sidenav.md-locked-open-add,\n  md-sidenav.md-locked-open-remove {\n    position: static;\n    display: flex;\n    transform: translate3d(0, 0, 0); }\n  md-sidenav.md-locked-open {\n    width: 304px;\n    min-width: 304px;\n    max-width: 304px; }\n  md-sidenav.md-locked-open,\n  md-sidenav.md-locked-open.md-closed,\n  md-sidenav.md-locked-open.md-closed.md-sidenav-left,\n  md-sidenav.md-locked-open.md-closed,\n  md-sidenav.md-locked-open.md-closed.md-sidenav-right,\n  md-sidenav.md-locked-open-remove.md-closed {\n    position: static;\n    display: flex;\n    transform: translate3d(0, 0, 0); }\n  md-sidenav.md-locked-open-remove-active {\n    transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    width: 0;\n    min-width: 0; }\n  md-sidenav.md-closed.md-locked-open-add {\n    width: 0;\n    min-width: 0;\n    transform: translate3d(0%, 0, 0); }\n  md-sidenav.md-closed.md-locked-open-add-active {\n    transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    width: 304px;\n    min-width: 304px;\n    transform: translate3d(0%, 0, 0); }\n\n.md-sidenav-backdrop.md-locked-open {\n  display: none; }\n\n.md-sidenav-left, md-sidenav {\n  left: 0;\n  top: 0;\n  transform: translate3d(0%, 0, 0); }\n  .md-sidenav-left.md-closed, md-sidenav.md-closed {\n    transform: translate3d(-100%, 0, 0); }\n\n.md-sidenav-right {\n  left: 100%;\n  top: 0;\n  transform: translate3d(-100%, 0, 0); }\n  .md-sidenav-right.md-closed {\n    transform: translate3d(0%, 0, 0); }\n\n@media (max-width: 360px) {\n  md-sidenav {\n    width: 85%; } }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-sidenav-left, md-sidenav {\n    border-right: 1px solid #fff; }\n  .md-sidenav-right {\n    border-left: 1px solid #fff; } }\n\n@keyframes sliderFocusThumb {\n  0% {\n    opacity: 0;\n    transform: scale(0); }\n  50% {\n    transform: scale(1);\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\nmd-slider {\n  height: 48px;\n  position: relative;\n  display: block;\n  margin-left: 4px;\n  margin-right: 4px;\n  padding: 0;\n  /**\n   * Track\n   */\n  /**\n   * Slider thumb\n   */\n  /* The sign that's focused in discrete mode */\n  /**\n   * The border/background that comes in when focused in non-discrete mode\n   */\n  /* Don't animate left/right while panning */ }\n  md-slider *, md-slider *:after {\n    box-sizing: border-box; }\n  md-slider .md-slider-wrapper {\n    position: relative; }\n  md-slider .md-track-container {\n    width: 100%;\n    position: absolute;\n    top: 23px;\n    height: 2px; }\n  md-slider .md-track {\n    position: absolute;\n    left: 0;\n    right: 0;\n    height: 100%; }\n  md-slider .md-track-fill {\n    transition: width 0.05s linear; }\n  md-slider .md-track-ticks {\n    position: absolute;\n    left: 0;\n    right: 0;\n    height: 100%; }\n  md-slider .md-track-ticks canvas {\n    width: 100%; }\n  md-slider .md-thumb-container {\n    position: absolute;\n    left: 0;\n    top: 50%;\n    transform: translate3d(-50%, -50%, 0);\n    transition: left 0.1s linear; }\n  md-slider .md-thumb {\n    z-index: 1;\n    position: absolute;\n    left: -19px;\n    top: 5px;\n    width: 38px;\n    height: 38px;\n    border-radius: 38px;\n    transform: scale(0.5);\n    transition: all 0.1s linear; }\n    md-slider .md-thumb:after {\n      content: '';\n      position: absolute;\n      left: 3px;\n      top: 3px;\n      width: 32px;\n      height: 32px;\n      border-radius: 32px;\n      border-width: 3px;\n      border-style: solid; }\n  md-slider .md-sign {\n    /* Center the children (slider-thumb-text) */\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: absolute;\n    left: -14px;\n    top: -20px;\n    width: 28px;\n    height: 28px;\n    border-radius: 28px;\n    transform: scale(0.4) translate3d(0, 70px, 0);\n    transition: all 0.2s ease-in-out;\n    /* The arrow pointing down under the sign */ }\n    md-slider .md-sign:after {\n      position: absolute;\n      content: '';\n      left: 0px;\n      border-radius: 16px;\n      top: 19px;\n      border-left: 14px solid transparent;\n      border-right: 14px solid transparent;\n      border-top-width: 16px;\n      border-top-style: solid;\n      opacity: 0;\n      transform: translate3d(0, -8px, 0);\n      transition: all 0.2s ease-in-out; }\n    md-slider .md-sign .md-thumb-text {\n      z-index: 1;\n      font-size: 12px;\n      font-weight: bold; }\n  md-slider .md-focus-thumb {\n    position: absolute;\n    left: -24px;\n    top: 0px;\n    width: 48px;\n    height: 48px;\n    border-radius: 48px;\n    display: none;\n    opacity: 0;\n    background-color: #C0C0C0;\n    animation: sliderFocusThumb 0.4s linear; }\n  md-slider .md-focus-ring {\n    position: absolute;\n    left: -24px;\n    top: 0px;\n    width: 48px;\n    height: 48px;\n    border-radius: 48px;\n    transform: scale(0);\n    transition: all 0.2s linear;\n    opacity: 0.26; }\n  md-slider .md-disabled-thumb {\n    position: absolute;\n    left: -22px;\n    top: 2px;\n    width: 44px;\n    height: 44px;\n    border-radius: 44px;\n    transform: scale(0.35);\n    border-width: 6px;\n    border-style: solid;\n    display: none; }\n  md-slider.md-min .md-thumb:after {\n    background-color: white; }\n  md-slider.md-min .md-sign {\n    opacity: 0; }\n  md-slider:focus {\n    outline: none; }\n  md-slider.md-dragging .md-thumb-container,\n  md-slider.md-dragging .md-track-fill {\n    transition: none; }\n  md-slider:not([md-discrete]) {\n    /* Hide the sign and ticks in non-discrete mode */ }\n    md-slider:not([md-discrete]) .md-track-ticks,\n    md-slider:not([md-discrete]) .md-sign {\n      display: none; }\n    md-slider:not([md-discrete]):not([disabled]):hover .md-thumb {\n      transform: scale(0.6); }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-thumb,\n    md-slider:not([md-discrete]):not([disabled]).md-active .md-focus-thumb {\n      display: block; }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-ring,\n    md-slider:not([md-discrete]):not([disabled]).md-active .md-focus-ring {\n      transform: scale(1); }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-thumb,\n    md-slider:not([md-discrete]):not([disabled]).md-active .md-thumb {\n      transform: scale(0.85); }\n  md-slider[md-discrete] {\n    /* Hide the focus thumb in discrete mode */ }\n    md-slider[md-discrete] .md-focus-thumb,\n    md-slider[md-discrete] .md-focus-ring {\n      display: none; }\n    md-slider[md-discrete]:not([disabled]):focus .md-sign,\n    md-slider[md-discrete]:not([disabled]):focus .md-sign:after,\n    md-slider[md-discrete]:not([disabled]).md-active .md-sign,\n    md-slider[md-discrete]:not([disabled]).md-active .md-sign:after {\n      opacity: 1;\n      transform: translate3d(0, 0, 0) scale(1); }\n  md-slider[disabled] .md-track-fill {\n    display: none; }\n  md-slider[disabled] .md-sign {\n    display: none; }\n  md-slider[disabled] .md-thumb {\n    transform: scale(0.35); }\n  md-slider[disabled] .md-disabled-thumb {\n    display: block; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-slider.md-default-theme .md-track {\n    border-bottom: 1px solid #fff; } }\n\n@keyframes subheaderStickyHoverIn {\n  0% {\n    box-shadow: 0 0 0 0 transparent; }\n  100% {\n    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16); } }\n\n@keyframes subheaderStickyHoverOut {\n  0% {\n    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16); }\n  100% {\n    box-shadow: 0 0 0 0 transparent; } }\n\n.md-subheader-wrapper:not(.md-sticky-no-effect) {\n  transition: 0.2s ease-out margin; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect) .md-subheader {\n    margin: 0; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect).md-sticky-clone {\n    z-index: 2; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect)[sticky-state=\"active\"] {\n    margin-top: -2px; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect):not(.md-sticky-clone)[sticky-prev-state=\"active\"] .md-subheader-inner:after {\n    animation: subheaderStickyHoverOut 0.3s ease-out both; }\n\n.md-subheader {\n  display: block;\n  font-size: 14px;\n  font-weight: 500;\n  line-height: 1em;\n  margin: 0 0 0 0;\n  margin-right: 16px;\n  position: relative; }\n  .md-subheader .md-subheader-inner {\n    display: block;\n    padding: 16px 0px 16px 16px; }\n  .md-subheader .md-subheader-content {\n    display: block;\n    z-index: 1;\n    position: relative; }\n\nmd-switch {\n  display: flex;\n  align-items: center;\n  margin: 15px;\n  white-space: nowrap;\n  cursor: pointer;\n  outline: none;\n  user-select: none; }\n  md-switch .md-container {\n    cursor: grab;\n    width: 36px;\n    height: 24px;\n    position: relative;\n    user-select: none;\n    margin-right: 8px; }\n  md-switch:not([disabled]) .md-dragging,\n  md-switch:not([disabled]).md-dragging .md-container {\n    cursor: grabbing; }\n  md-switch.md-focused:not([disabled]) .md-thumb:before {\n    left: -8px;\n    top: -8px;\n    right: -8px;\n    bottom: -8px; }\n  md-switch.md-focused:not([disabled]):not(.md-checked) .md-thumb:before {\n    background-color: rgba(0, 0, 0, 0.12); }\n  md-switch .md-label {\n    border-color: transparent;\n    border-width: 0; }\n  md-switch .md-bar {\n    left: 1px;\n    width: 34px;\n    top: 5px;\n    height: 14px;\n    border-radius: 8px;\n    position: absolute; }\n  md-switch .md-thumb-container {\n    top: 2px;\n    left: 0;\n    width: 16px;\n    position: absolute;\n    transform: translate3d(0, 0, 0);\n    z-index: 1; }\n  md-switch.md-checked .md-thumb-container {\n    transform: translate3d(100%, 0, 0); }\n  md-switch .md-thumb {\n    position: absolute;\n    margin: 0;\n    left: 0;\n    top: 0;\n    outline: none;\n    height: 20px;\n    width: 20px;\n    border-radius: 50%;\n    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }\n    md-switch .md-thumb:before {\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n    md-switch .md-thumb .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: auto;\n      height: auto;\n      left: -20px;\n      top: -20px;\n      right: -20px;\n      bottom: -20px; }\n  md-switch:not(.md-dragging) .md-bar,\n  md-switch:not(.md-dragging) .md-thumb-container,\n  md-switch:not(.md-dragging) .md-thumb {\n    transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n    transition-property: transform, background-color; }\n  md-switch:not(.md-dragging) .md-bar,\n  md-switch:not(.md-dragging) .md-thumb {\n    transition-delay: 0.05s; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-switch.md-default-theme .md-bar {\n    background-color: #666; }\n  md-switch.md-default-theme.md-checked .md-bar {\n    background-color: #9E9E9E; }\n  md-switch.md-default-theme .md-thumb {\n    background-color: #fff; } }\n\n@keyframes md-tab-content-hide {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\nmd-tab-data {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: -1;\n  opacity: 0; }\n\nmd-tabs {\n  display: block;\n  margin: 0;\n  border-radius: 2px;\n  overflow: hidden;\n  position: relative;\n  flex-shrink: 0; }\n  md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {\n    min-height: 248px; }\n  md-tabs[md-align-tabs=\"bottom\"] md-tabs-wrapper {\n    position: absolute;\n    bottom: 0;\n    left: 0;\n    right: 0;\n    height: 48px; }\n  md-tabs[md-align-tabs=\"bottom\"] md-tabs-content-wrapper {\n    top: 0;\n    bottom: 48px; }\n  md-tabs.md-dynamic-height md-tabs-content-wrapper {\n    min-height: 0;\n    position: relative;\n    top: auto;\n    left: auto;\n    right: auto;\n    bottom: auto;\n    overflow: visible; }\n  md-tabs.md-dynamic-height md-tab-content.md-active {\n    position: relative; }\n  md-tabs[md-border-bottom] md-tabs-wrapper {\n    border-width: 0 0 1px;\n    border-style: solid; }\n  md-tabs[md-border-bottom]:not(.md-dynamic-height) md-tabs-content-wrapper {\n    top: 49px; }\n\nmd-tabs-wrapper {\n  display: block;\n  position: relative; }\n  md-tabs-wrapper md-prev-button, md-tabs-wrapper md-next-button {\n    height: 100%;\n    width: 32px;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    line-height: 1em;\n    z-index: 2;\n    cursor: pointer;\n    font-size: 16px;\n    background: transparent no-repeat center center;\n    transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1); }\n    md-tabs-wrapper md-prev-button:focus, md-tabs-wrapper md-next-button:focus {\n      outline: none; }\n    md-tabs-wrapper md-prev-button.md-disabled, md-tabs-wrapper md-next-button.md-disabled {\n      opacity: 0.25;\n      cursor: default; }\n    md-tabs-wrapper md-prev-button.ng-leave, md-tabs-wrapper md-next-button.ng-leave {\n      transition: none; }\n    md-tabs-wrapper md-prev-button md-icon, md-tabs-wrapper md-next-button md-icon {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate3d(-50%, -50%, 0); }\n  md-tabs-wrapper md-prev-button {\n    left: 0;\n    background-image: url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMjA4IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTUuNCw3LjQgMTQsNiA4LDEyIDE0LDE4IDE1LjQsMTYuNiAxMC44LDEyIAkJIiBzdHlsZT0iZmlsbDp3aGl0ZTsiLz4gPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+IDwvZz4gPC9nPiA8ZyBpZD0iR3JpZCIgZGlzcGxheT0ibm9uZSI+IDxnIGRpc3BsYXk9ImlubGluZSI+IDwvZz4gPC9nPiA8L3N2Zz4NCg==\"); }\n  md-tabs-wrapper md-next-button {\n    right: 0;\n    background-image: url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMzM2IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTAsNiA4LjYsNy40IDEzLjIsMTIgOC42LDE2LjYgMTAsMTggMTYsMTIgCQkiIHN0eWxlPSJmaWxsOndoaXRlOyIvPiA8cmVjdCBmaWxsPSJub25lIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4gPC9nPiA8L2c+IDxnIGlkPSJHcmlkIiBkaXNwbGF5PSJub25lIj4gPGcgZGlzcGxheT0iaW5saW5lIj4gPC9nPiA8L2c+IDwvc3ZnPg0K\"); }\n    md-tabs-wrapper md-next-button md-icon {\n      transform: translate3d(-50%, -50%, 0) rotate(180deg); }\n  md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper {\n    width: 100%;\n    display: flex;\n    flex-direction: row; }\n    md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {\n      flex-grow: 1; }\n\nmd-tabs-canvas {\n  position: relative;\n  overflow: hidden;\n  display: block;\n  height: 48px; }\n  md-tabs-canvas:after {\n    content: '';\n    display: table;\n    clear: both; }\n  md-tabs-canvas .md-dummy-wrapper {\n    position: absolute;\n    top: 0;\n    left: 0; }\n  md-tabs-canvas.md-paginated {\n    margin: 0 32px; }\n  md-tabs-canvas.md-center-tabs {\n    display: flex;\n    flex-direction: column;\n    text-align: center; }\n    md-tabs-canvas.md-center-tabs .md-tab {\n      float: none;\n      display: inline-block; }\n\nmd-pagination-wrapper {\n  height: 48px;\n  display: block;\n  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n  position: absolute;\n  width: 999999px;\n  left: 0;\n  transform: translate3d(0, 0, 0); }\n  md-pagination-wrapper:after {\n    content: '';\n    display: table;\n    clear: both; }\n  md-pagination-wrapper.md-center-tabs {\n    position: relative;\n    width: initial;\n    flex: 1;\n    margin: 0 auto; }\n\nmd-tabs-content-wrapper {\n  display: block;\n  position: absolute;\n  top: 48px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden; }\n\nmd-tab-content {\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  transform: translateX(0);\n  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n  overflow: auto; }\n  md-tab-content.md-no-scroll {\n    bottom: auto;\n    overflow: hidden; }\n  md-tab-content.ng-leave, md-tab-content.md-no-transition {\n    transition: none; }\n  md-tab-content.md-left {\n    transform: translateX(-100%);\n    animation: 1s md-tab-content-hide;\n    opacity: 0; }\n    md-tab-content.md-left * {\n      transition: visibility 0s linear;\n      transition-delay: 0.5s;\n      visibility: hidden; }\n  md-tab-content.md-right {\n    transform: translateX(100%);\n    animation: 1s md-tab-content-hide;\n    opacity: 0; }\n    md-tab-content.md-right * {\n      transition: visibility 0s linear;\n      transition-delay: 0.5s;\n      visibility: hidden; }\n  md-tab-content > div.ng-leave {\n    animation: 1s md-tab-content-hide; }\n\nmd-ink-bar {\n  position: absolute;\n  left: auto;\n  right: auto;\n  bottom: 0;\n  height: 2px; }\n  md-ink-bar.md-left {\n    transition: left 0.125s cubic-bezier(0.35, 0, 0.25, 1), right 0.25s cubic-bezier(0.35, 0, 0.25, 1); }\n  md-ink-bar.md-right {\n    transition: left 0.25s cubic-bezier(0.35, 0, 0.25, 1), right 0.125s cubic-bezier(0.35, 0, 0.25, 1); }\n\nmd-tab {\n  position: absolute;\n  z-index: -1;\n  left: -9999px; }\n\n.md-tab {\n  font-size: 14px;\n  text-align: center;\n  line-height: 24px;\n  padding: 12px 24px;\n  transition: background-color 0.35s cubic-bezier(0.35, 0, 0.25, 1);\n  cursor: pointer;\n  white-space: nowrap;\n  position: relative;\n  text-transform: uppercase;\n  float: left;\n  font-weight: 500;\n  box-sizing: border-box;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n  .md-tab.md-focused {\n    box-shadow: none;\n    outline: none; }\n  .md-tab.md-active {\n    cursor: default; }\n  .md-tab.md-disabled {\n    pointer-events: none;\n    touch-action: pan-y;\n    user-select: none;\n    -webkit-user-drag: none;\n    opacity: 0.5;\n    cursor: default; }\n  .md-tab.ng-leave {\n    transition: none; }\n\nmd-toolbar + md-tabs {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0; }\n\n.md-sticky-clone {\n  z-index: 2;\n  top: 0;\n  left: 0;\n  right: 0;\n  position: absolute !important;\n  transform: translate3d(-9999px, -9999px, 0); }\n  .md-sticky-clone[sticky-state=\"active\"] {\n    transform: translate3d(0, 0, 0); }\n    .md-sticky-clone[sticky-state=\"active\"]:not(.md-sticky-no-effect) .md-subheader-inner {\n      animation: subheaderStickyHoverIn 0.3s ease-out both; }\n\nmd-toast {\n  display: flex;\n  position: absolute;\n  z-index: 90;\n  box-sizing: border-box;\n  align-items: center;\n  min-height: 48px;\n  padding-left: 24px;\n  padding-right: 24px;\n  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n  border-radius: 2px;\n  font-size: 14px;\n  cursor: default;\n  height: auto;\n  max-height: 168px;\n  max-width: 100%;\n  overflow: hidden;\n  opacity: 1;\n  transform: translate3d(0, 0, 0) rotateZ(0deg);\n  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  /* Transition differently when swiping */ }\n  md-toast.md-capsule {\n    border-radius: 24px; }\n  md-toast.ng-leave-active {\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-toast.md-swipeleft,\n  md-toast.md-swiperight,\n  md-toast.md-swipeup,\n  md-toast.md-swipedown {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-toast.ng-enter {\n    transform: translate3d(0, 100%, 0);\n    opacity: 0; }\n    md-toast.ng-enter.md-top {\n      transform: translate3d(0, -100%, 0); }\n    md-toast.ng-enter.ng-enter-active {\n      transform: translate3d(0, 0, 0);\n      opacity: 1; }\n  md-toast.ng-leave.ng-leave-active {\n    opacity: 0;\n    transform: translate3d(0, 100%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-top {\n      transform: translate3d(0, -100%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-swipeleft {\n      transform: translate3d(-100%, 0%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-swiperight {\n      transform: translate3d(100%, 0%, 0); }\n  md-toast .md-action {\n    line-height: 19px;\n    margin-left: 24px;\n    cursor: pointer;\n    text-transform: uppercase;\n    float: right; }\n    md-toast .md-action.md-button {\n      min-width: 0; }\n\n@media (max-width: 600px) {\n  md-toast {\n    left: 0;\n    right: 0;\n    width: 100%;\n    max-width: 100%;\n    min-width: 0;\n    border-radius: 0;\n    bottom: 0; }\n    md-toast.md-top {\n      bottom: auto;\n      top: 0; } }\n\n@media (min-width: 600px) {\n  md-toast {\n    min-width: 288px;\n    /*\n     * When the toast doesn't take up the whole screen,\n     * make it rotate when the user swipes it away\n     */ }\n    md-toast.md-bottom {\n      bottom: 8px; }\n    md-toast.md-left {\n      left: 8px; }\n    md-toast.md-right {\n      right: 8px; }\n    md-toast.md-top {\n      top: 8px; }\n    md-toast.ng-leave.ng-leave-active.md-swipeleft {\n      transform: translate3d(-100%, 25%, 0) rotateZ(-15deg); }\n    md-toast.ng-leave.ng-leave-active.md-swiperight {\n      transform: translate3d(100%, 25%, 0) rotateZ(15deg); }\n    md-toast.ng-leave.ng-leave-active.md-top.md-swipeleft {\n      transform: translate3d(-100%, 0, 0) rotateZ(-15deg); }\n    md-toast.ng-leave.ng-leave-active.md-top.md-swiperight {\n      transform: translate3d(100%, 0, 0) rotateZ(15deg); } }\n\n@media (min-width: 1200px) {\n  md-toast {\n    max-width: 568px; } }\n\n@media screen and (-ms-high-contrast: active) {\n  md-toast {\n    border: 1px solid #fff; } }\n\nmd-toolbar {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  z-index: 2;\n  font-size: 20px;\n  min-height: 64px;\n  width: 100%; }\n  md-toolbar.md-whiteframe-z1-add, md-toolbar.md-whiteframe-z1-remove {\n    transition: box-shadow 0.5s linear; }\n  md-toolbar md-toolbar-filler {\n    width: 72px; }\n  md-toolbar *,\n  md-toolbar *:before,\n  md-toolbar *:after {\n    box-sizing: border-box; }\n  md-toolbar.md-tall {\n    height: 128px;\n    min-height: 128px;\n    max-height: 128px; }\n  md-toolbar.md-medium-tall {\n    height: 88px;\n    min-height: 88px;\n    max-height: 88px; }\n    md-toolbar.md-medium-tall .md-toolbar-tools {\n      height: 48px;\n      min-height: 48px;\n      max-height: 48px; }\n  md-toolbar > .md-indent {\n    margin-left: 64px; }\n  md-toolbar ~ md-content > md-list {\n    padding: 0; }\n    md-toolbar ~ md-content > md-list md-list-item:last-child md-divider {\n      display: none; }\n\n.md-toolbar-tools {\n  font-size: 20px;\n  letter-spacing: 0.005em;\n  box-sizing: border-box;\n  font-weight: 400;\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  max-height: 64px;\n  padding: 0 16px;\n  margin: 0; }\n  .md-toolbar-tools h1, .md-toolbar-tools h2, .md-toolbar-tools h3 {\n    font-size: inherit;\n    font-weight: inherit;\n    margin: inherit; }\n  .md-toolbar-tools a {\n    color: inherit;\n    text-decoration: none; }\n  .md-toolbar-tools .fill-height {\n    display: flex;\n    align-items: center; }\n  .md-toolbar-tools .md-button {\n    margin-top: 0;\n    margin-bottom: 0; }\n  .md-toolbar-tools > .md-button:first-child {\n    margin-left: -8px; }\n  .md-toolbar-tools > .md-button:last-child {\n    margin-right: -8px; }\n  .md-toolbar-tools > md-menu:last-child {\n    margin-right: -8px; }\n    .md-toolbar-tools > md-menu:last-child > .md-button {\n      margin-right: 0; }\n  @media screen and (-ms-high-contrast: active) {\n    .md-toolbar-tools {\n      border-bottom: 1px solid #fff; } }\n\n@media only screen and (min-width: 0) and (max-width: 600px) and (orientation: portrait) {\n  md-toolbar {\n    min-height: 56px; }\n  .md-toolbar-tools {\n    height: 56px;\n    max-height: 56px; } }\n\n@media only screen and (min-width: 0) and (max-width: 600px) and (orientation: landscape) {\n  md-toolbar {\n    min-height: 48px; }\n  .md-toolbar-tools {\n    height: 48px;\n    max-height: 48px; } }\n\nmd-tooltip {\n  position: absolute;\n  z-index: 100;\n  overflow: hidden;\n  pointer-events: none;\n  border-radius: 4px;\n  font-weight: 500;\n  font-size: 14px; }\n  @media screen and (min-width: 600px) {\n    md-tooltip {\n      font-size: 10px; } }\n  md-tooltip .md-background {\n    position: absolute;\n    border-radius: 50%;\n    transform: translate(-50%, -50%) scale(0);\n    opacity: 1; }\n    md-tooltip .md-background.md-show-add {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transform: translate(-50%, -50%) scale(0);\n      opacity: 0; }\n    md-tooltip .md-background.md-show, md-tooltip .md-background.md-show-add-active {\n      transform: translate(-50%, -50%) scale(1);\n      opacity: 1; }\n    md-tooltip .md-background.md-show-remove {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n      md-tooltip .md-background.md-show-remove.md-show-remove-active {\n        transform: translate(-50%, -50%) scale(0);\n        opacity: 0; }\n  md-tooltip .md-content {\n    position: relative;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    background: transparent;\n    opacity: 0;\n    height: 32px;\n    line-height: 32px;\n    padding-left: 16px;\n    padding-right: 16px; }\n    @media screen and (min-width: 600px) {\n      md-tooltip .md-content {\n        height: 22px;\n        line-height: 22px;\n        padding-left: 8px;\n        padding-right: 8px; } }\n    md-tooltip .md-content.md-show-add {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      opacity: 0; }\n    md-tooltip .md-content.md-show, md-tooltip .md-content.md-show-add-active {\n      opacity: 1; }\n    md-tooltip .md-content.md-show-remove {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n      md-tooltip .md-content.md-show-remove.md-show-remove-active {\n        opacity: 0; }\n  md-tooltip.md-hide {\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-tooltip.md-show {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    pointer-events: auto;\n    transform: translate3d(0, 0, 0); }\n\n.md-virtual-repeat-container {\n  box-sizing: border-box;\n  display: block;\n  margin: 0;\n  overflow: hidden;\n  padding: 0;\n  position: relative; }\n  .md-virtual-repeat-container .md-virtual-repeat-scroller {\n    bottom: 0;\n    box-sizing: border-box;\n    left: 0;\n    margin: 0;\n    overflow-x: hidden;\n    padding: 0;\n    position: absolute;\n    right: 0;\n    top: 0; }\n  .md-virtual-repeat-container .md-virtual-repeat-sizer {\n    box-sizing: border-box;\n    height: 1px;\n    display: inline-block;\n    margin: 0;\n    padding: 0;\n    width: 1px; }\n  .md-virtual-repeat-container .md-virtual-repeat-offsetter {\n    box-sizing: border-box;\n    left: 0;\n    margin: 0;\n    padding: 0;\n    position: absolute;\n    right: 16px;\n    top: 0; }\n\n.md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-scroller {\n  overflow-x: auto;\n  overflow-y: hidden; }\n\n.md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-offsetter {\n  bottom: 16px;\n  right: auto;\n  white-space: nowrap; }\n\n.md-whiteframe-1dp, .md-whiteframe-z1 {\n  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-2dp {\n  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-3dp {\n  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-4dp, .md-whiteframe-z2 {\n  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-5dp {\n  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-6dp {\n  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-7dp, .md-whiteframe-z3 {\n  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-8dp {\n  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-9dp {\n  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-10dp, .md-whiteframe-z4 {\n  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-11dp {\n  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2), 0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-12dp {\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-13dp, .md-whiteframe-z5 {\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-14dp {\n  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-15dp {\n  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2), 0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-16dp {\n  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-17dp {\n  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2), 0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-18dp {\n  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2), 0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-19dp {\n  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-20dp {\n  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-21dp {\n  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-22dp {\n  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2), 0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-23dp {\n  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-24dp {\n  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12); }\n\n@media screen and (-ms-high-contrast: active) {\n  md-whiteframe {\n    border: 1px solid #fff; } }\n\nhtml,\nbody {\n  color: #fff;\n  background: #B71C1C; }\n\nmd-content,\n.md-subheader {\n  background-color: transparent;\n  color: #fff; }\n\nmd-list md-list-item button.md-button:not([disabled]):hover {\n  background-color: #F57F17; }\n\nmd-checkbox .md-icon {\n  border-color: #fff; }\n\na.md-button.md-accent.md-raised,\na.md-button.md-accent.md-fab,\n.md-button.md-accent.md-raised,\n.md-button.md-accent.md-fab {\n  color: #fff; }\n\n.md-fab ng-md-icon,\nmd-menu-item ng-md-icon {\n  position: relative;\n  top: 4px; }\n\nmd-input-container .md-input {\n  color: #fff; }\n\nmd-dialog md-input-container .md-input,\nmd-dialog .md-actions .md-button {\n  color: #333; }\n\nmd-menu-content {\n  padding: 0; }\n\nmd-menu-item {\n  min-height: 35px;\n  height: 35px; }\n\n.md-button ng-md-icon {\n  position: relative;\n  top: 3px; }\n\n.incoming-toggle {\n  position: absolute;\n  bottom: 0;\n  right: 0; }\n\n.edit-button {\n  min-height: 0;\n  min-width: 0;\n  margin: 0;\n  padding: 0;\n  line-height: 1.2em; }\n\n.add-button {\n  float: right;\n  position: relative;\n  top: -12px; }\n\n.contacts {\n  background-color: #C62828; }\n  .contacts .contact-list h3, .contacts .contact-list h4, .contacts .contact-list p {\n    margin: 0; }\n\n.scripts {\n  background-color: #D32F2F; }\n  .scripts h4 {\n    margin: 0; }\n  .scripts p {\n    margin-top: 0;\n    line-height: 1.2em; }\n\n.outgoing {\n  background-color: #E53935; }\n  .outgoing .md-button {\n    float: right; }\n", ""]);
+	exports.push([module.id, "html, body {\n  height: 100%;\n  color: rgba(0, 0, 0, 0.87);\n  background: white;\n  position: relative; }\n\nbody {\n  margin: 0;\n  padding: 0; }\n\n[tabindex='-1']:focus {\n  outline: none; }\n\n.inset {\n  padding: 10px; }\n\nbutton.md-no-style {\n  font-weight: normal;\n  background-color: inherit;\n  text-align: left;\n  border: none;\n  padding: 0;\n  margin: 0; }\n\nselect,\nbutton,\ntextarea,\ninput {\n  vertical-align: baseline; }\n\ninput[type=\"reset\"],\ninput[type=\"submit\"],\nhtml input[type=\"button\"],\nbutton {\n  cursor: pointer;\n  -webkit-appearance: button; }\n  input[type=\"reset\"][disabled],\n  input[type=\"submit\"][disabled],\n  html input[type=\"button\"][disabled],\n  button[disabled] {\n    cursor: default; }\n\ntextarea {\n  vertical-align: top;\n  overflow: auto; }\n\ninput[type=\"search\"] {\n  -webkit-appearance: textfield;\n  box-sizing: content-box;\n  -webkit-box-sizing: content-box; }\n  input[type=\"search\"]::-webkit-search-decoration,\n  input[type=\"search\"]::-webkit-search-cancel-button {\n    -webkit-appearance: none; }\n\n.md-visually-hidden {\n  border: 0;\n  clip: rect(0 0 0 0);\n  height: 1px;\n  margin: -1px;\n  overflow: hidden;\n  padding: 0;\n  position: absolute;\n  text-transform: none;\n  width: 1px; }\n\n.md-shadow {\n  position: absolute;\n  top: 0;\n  left: 0;\n  bottom: 0;\n  right: 0;\n  border-radius: inherit;\n  pointer-events: none; }\n\n.md-shadow-bottom-z-1 {\n  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n\n.md-shadow-bottom-z-2 {\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }\n\n.md-shadow-animated.md-shadow {\n  transition: box-shadow 0.28s cubic-bezier(0.4, 0, 0.2, 1); }\n\n/*\n * A container inside of a rippling element (eg a button),\n * which contains all of the individual ripples\n */\n.md-ripple-container {\n  pointer-events: none;\n  position: absolute;\n  overflow: hidden;\n  left: 0;\n  top: 0;\n  width: 100%;\n  height: 100%;\n  transition: all 0.55s cubic-bezier(0.25, 0.8, 0.25, 1); }\n\n.md-ripple {\n  position: absolute;\n  transform: translate(-50%, -50%) scale(0);\n  transform-origin: 50% 50%;\n  opacity: 0;\n  border-radius: 50%; }\n  .md-ripple.md-ripple-placed {\n    transition: margin 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), border 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), width 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), height 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), opacity 0.9s cubic-bezier(0.25, 0.8, 0.25, 1), transform 0.9s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-ripple.md-ripple-scaled {\n    transform: translate(-50%, -50%) scale(1); }\n  .md-ripple.md-ripple-active, .md-ripple.md-ripple-full, .md-ripple.md-ripple-visible {\n    opacity: 0.20; }\n\n.md-padding {\n  padding: 8px; }\n\n.md-margin {\n  margin: 8px; }\n\n.md-scroll-mask {\n  position: absolute;\n  background-color: transparent;\n  top: 0;\n  right: 0;\n  bottom: 0;\n  left: 0; }\n  .md-scroll-mask > .md-scroll-mask-bar {\n    display: block;\n    position: absolute;\n    background-color: #fafafa;\n    right: 0;\n    top: 0;\n    bottom: 0;\n    z-index: 65;\n    box-shadow: inset 0px 0px 1px rgba(0, 0, 0, 0.3); }\n\n@media (min-width: 600px) {\n  .md-padding {\n    padding: 16px; } }\n\nhtml, body {\n  -webkit-tap-highlight-color: transparent;\n  -webkit-touch-callout: none;\n  min-height: 100%;\n  -webkit-text-size-adjust: 100%;\n  -ms-text-size-adjust: 100%;\n  -webkit-font-smoothing: antialiased;\n  -moz-osx-font-smoothing: grayscale; }\n\n/************\n * Headings\n ************/\n.md-display-4 {\n  font-size: 112px;\n  font-weight: 300;\n  letter-spacing: -0.010em;\n  line-height: 112px; }\n\n.md-display-3 {\n  font-size: 56px;\n  font-weight: 400;\n  letter-spacing: -0.005em;\n  line-height: 56px; }\n\n.md-display-2 {\n  font-size: 45px;\n  font-weight: 400;\n  line-height: 64px; }\n\n.md-display-1 {\n  font-size: 34px;\n  font-weight: 400;\n  line-height: 40px; }\n\n.md-headline {\n  font-size: 24px;\n  font-weight: 400;\n  line-height: 32px; }\n\n.md-title {\n  font-size: 20px;\n  font-weight: 500;\n  letter-spacing: 0.005em; }\n\n.md-subhead {\n  font-size: 16px;\n  font-weight: 400;\n  letter-spacing: 0.010em;\n  line-height: 24px; }\n\n/************\n * Body Copy\n ************/\n.md-body-1 {\n  font-size: 14px;\n  font-weight: 400;\n  letter-spacing: 0.010em;\n  line-height: 20px; }\n\n.md-body-2 {\n  font-size: 14px;\n  font-weight: 500;\n  letter-spacing: 0.010em;\n  line-height: 24px; }\n\n.md-caption {\n  font-size: 12px;\n  letter-spacing: 0.020em; }\n\n.md-button {\n  letter-spacing: 0.010em; }\n\n/************\n * Defaults\n ************/\nbutton,\nselect,\nhtml,\ntextarea,\ninput {\n  font-family: Roboto, \"Helvetica Neue\", sans-serif; }\n\nselect,\nbutton,\ntextarea,\ninput {\n  font-size: 100%; }\n\n/*\n*\n*  Responsive attributes\n*\n*  References:\n*  1) https://scotch.io/tutorials/a-visual-guide-to-css3-flexbox-properties#flex\n*  2) https://css-tricks.com/almanac/properties/f/flex/\n*  3) https://github.com/philipwalton/flexbugs#3-min-height-on-a-flex-container-wont-apply-to-its-flex-items\n*  4) http://godban.com.ua/projects/flexgrid\n*\n*/\n@-moz-document url-prefix() {\n  .layout-fill {\n    margin: 0;\n    width: 100%;\n    min-height: 100%;\n    height: 100%; } }\n\n/*\n *  Apply Mixins to create Layout/Flexbox styles\n *\n */\n.flex-order {\n  order: 0; }\n\n.flex-order-0 {\n  order: 0; }\n\n.flex-order-1 {\n  order: 1; }\n\n.flex-order-2 {\n  order: 2; }\n\n.flex-order-3 {\n  order: 3; }\n\n.flex-order-4 {\n  order: 4; }\n\n.flex-order-5 {\n  order: 5; }\n\n.flex-order-6 {\n  order: 6; }\n\n.flex-order-7 {\n  order: 7; }\n\n.flex-order-8 {\n  order: 8; }\n\n.flex-order-9 {\n  order: 9; }\n\n.flex-order-10 {\n  order: 10; }\n\n.flex-order-11 {\n  order: 11; }\n\n.flex-order-12 {\n  order: 12; }\n\n.flex-order-13 {\n  order: 13; }\n\n.flex-order-14 {\n  order: 14; }\n\n.flex-order-15 {\n  order: 15; }\n\n.flex-order-16 {\n  order: 16; }\n\n.flex-order-17 {\n  order: 17; }\n\n.flex-order-18 {\n  order: 18; }\n\n.flex-order-19 {\n  order: 19; }\n\n.offset-0, .flex-offset-0 {\n  margin-left: 0%; }\n\n.offset-5, .flex-offset-5 {\n  margin-left: 5%; }\n\n.offset-10, .flex-offset-10 {\n  margin-left: 10%; }\n\n.offset-15, .flex-offset-15 {\n  margin-left: 15%; }\n\n.offset-20, .flex-offset-20 {\n  margin-left: 20%; }\n\n.offset-25, .flex-offset-25 {\n  margin-left: 25%; }\n\n.offset-30, .flex-offset-30 {\n  margin-left: 30%; }\n\n.offset-35, .flex-offset-35 {\n  margin-left: 35%; }\n\n.offset-40, .flex-offset-40 {\n  margin-left: 40%; }\n\n.offset-45, .flex-offset-45 {\n  margin-left: 45%; }\n\n.offset-50, .flex-offset-50 {\n  margin-left: 50%; }\n\n.offset-55, .flex-offset-55 {\n  margin-left: 55%; }\n\n.offset-60, .flex-offset-60 {\n  margin-left: 60%; }\n\n.offset-65, .flex-offset-65 {\n  margin-left: 65%; }\n\n.offset-70, .flex-offset-70 {\n  margin-left: 70%; }\n\n.offset-75, .flex-offset-75 {\n  margin-left: 75%; }\n\n.offset-80, .flex-offset-80 {\n  margin-left: 80%; }\n\n.offset-85, .flex-offset-85 {\n  margin-left: 85%; }\n\n.offset-90, .flex-offset-90 {\n  margin-left: 90%; }\n\n.offset-95, .flex-offset-95 {\n  margin-left: 95%; }\n\n.offset-33, .flex-offset-33 {\n  margin-left: 33%; }\n\n.offset-34, .flex-offset-34 {\n  margin-left: 34%; }\n\n.offset-66, .flex-offset-66 {\n  margin-left: 66%; }\n\n.offset-67, .flex-offset-67 {\n  margin-left: 67%; }\n\n.layout-align-center, .layout-align-center-center,\n.layout-align-center-start,\n.layout-align-center-end {\n  justify-content: center; }\n\n.layout-align-end, .layout-align-end-center,\n.layout-align-end-start,\n.layout-align-end-end {\n  justify-content: flex-end; }\n\n.layout-align-space-around, .layout-align-space-around-center,\n.layout-align-space-around-start,\n.layout-align-space-around-end {\n  justify-content: space-around; }\n\n.layout-align-space-between, .layout-align-space-between-center,\n.layout-align-space-between-start,\n.layout-align-space-between-end {\n  justify-content: space-between; }\n\n.layout-align-center-start,\n.layout-align-start-start,\n.layout-align-end-start,\n.layout-align-space-between-start,\n.layout-align-space-around-start {\n  align-items: flex-start; }\n\n.layout-align-center-center,\n.layout-align-start-center,\n.layout-align-end-center,\n.layout-align-space-between-center,\n.layout-align-space-around-center {\n  align-items: center;\n  max-width: 100%; }\n\n.layout-align-center-center > *,\n.layout-align-start-center > *,\n.layout-align-end-center > *,\n.layout-align-space-between-center > *,\n.layout-align-space-around-center > * {\n  max-width: 100%;\n  box-sizing: border-box; }\n\n.layout-align-center-end,\n.layout-align-start-end,\n.layout-align-end-end,\n.layout-align-space-between-end,\n.layout-align-space-around-end {\n  align-items: flex-end; }\n\n.flex {\n  flex: 1;\n  box-sizing: border-box; }\n\n.flex-grow {\n  flex: 1 1 100%;\n  box-sizing: border-box; }\n\n.flex-initial {\n  flex: 0 1 auto;\n  box-sizing: border-box; }\n\n.flex-auto {\n  flex: 1 1 auto;\n  box-sizing: border-box; }\n\n.flex-none {\n  flex: 0 0 auto;\n  box-sizing: border-box; }\n\n.flex-0 {\n  flex: 0 0 0%;\n  max-width: 0%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-0,\n.layout-row > .flex-0 {\n  flex: 0 0 0%;\n  max-width: 0%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-0,\n.layout-column > .flex-0 {\n  flex: 0 0 0%;\n  max-width: 100%;\n  max-height: 0%;\n  box-sizing: border-box; }\n\n.flex-5 {\n  flex: 0 0 5%;\n  max-width: 5%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-5,\n.layout-row > .flex-5 {\n  flex: 0 0 5%;\n  max-width: 5%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-5,\n.layout-column > .flex-5 {\n  flex: 0 0 5%;\n  max-width: 100%;\n  max-height: 5%;\n  box-sizing: border-box; }\n\n.flex-10 {\n  flex: 0 0 10%;\n  max-width: 10%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-10,\n.layout-row > .flex-10 {\n  flex: 0 0 10%;\n  max-width: 10%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-10,\n.layout-column > .flex-10 {\n  flex: 0 0 10%;\n  max-width: 100%;\n  max-height: 10%;\n  box-sizing: border-box; }\n\n.flex-15 {\n  flex: 0 0 15%;\n  max-width: 15%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-15,\n.layout-row > .flex-15 {\n  flex: 0 0 15%;\n  max-width: 15%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-15,\n.layout-column > .flex-15 {\n  flex: 0 0 15%;\n  max-width: 100%;\n  max-height: 15%;\n  box-sizing: border-box; }\n\n.flex-20 {\n  flex: 0 0 20%;\n  max-width: 20%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-20,\n.layout-row > .flex-20 {\n  flex: 0 0 20%;\n  max-width: 20%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-20,\n.layout-column > .flex-20 {\n  flex: 0 0 20%;\n  max-width: 100%;\n  max-height: 20%;\n  box-sizing: border-box; }\n\n.flex-25 {\n  flex: 0 0 25%;\n  max-width: 25%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-25,\n.layout-row > .flex-25 {\n  flex: 0 0 25%;\n  max-width: 25%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-25,\n.layout-column > .flex-25 {\n  flex: 0 0 25%;\n  max-width: 100%;\n  max-height: 25%;\n  box-sizing: border-box; }\n\n.flex-30 {\n  flex: 0 0 30%;\n  max-width: 30%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-30,\n.layout-row > .flex-30 {\n  flex: 0 0 30%;\n  max-width: 30%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-30,\n.layout-column > .flex-30 {\n  flex: 0 0 30%;\n  max-width: 100%;\n  max-height: 30%;\n  box-sizing: border-box; }\n\n.flex-35 {\n  flex: 0 0 35%;\n  max-width: 35%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-35,\n.layout-row > .flex-35 {\n  flex: 0 0 35%;\n  max-width: 35%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-35,\n.layout-column > .flex-35 {\n  flex: 0 0 35%;\n  max-width: 100%;\n  max-height: 35%;\n  box-sizing: border-box; }\n\n.flex-40 {\n  flex: 0 0 40%;\n  max-width: 40%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-40,\n.layout-row > .flex-40 {\n  flex: 0 0 40%;\n  max-width: 40%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-40,\n.layout-column > .flex-40 {\n  flex: 0 0 40%;\n  max-width: 100%;\n  max-height: 40%;\n  box-sizing: border-box; }\n\n.flex-45 {\n  flex: 0 0 45%;\n  max-width: 45%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-45,\n.layout-row > .flex-45 {\n  flex: 0 0 45%;\n  max-width: 45%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-45,\n.layout-column > .flex-45 {\n  flex: 0 0 45%;\n  max-width: 100%;\n  max-height: 45%;\n  box-sizing: border-box; }\n\n.flex-50 {\n  flex: 0 0 50%;\n  max-width: 50%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-50,\n.layout-row > .flex-50 {\n  flex: 0 0 50%;\n  max-width: 50%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-50,\n.layout-column > .flex-50 {\n  flex: 0 0 50%;\n  max-width: 100%;\n  max-height: 50%;\n  box-sizing: border-box; }\n\n.flex-55 {\n  flex: 0 0 55%;\n  max-width: 55%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-55,\n.layout-row > .flex-55 {\n  flex: 0 0 55%;\n  max-width: 55%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-55,\n.layout-column > .flex-55 {\n  flex: 0 0 55%;\n  max-width: 100%;\n  max-height: 55%;\n  box-sizing: border-box; }\n\n.flex-60 {\n  flex: 0 0 60%;\n  max-width: 60%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-60,\n.layout-row > .flex-60 {\n  flex: 0 0 60%;\n  max-width: 60%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-60,\n.layout-column > .flex-60 {\n  flex: 0 0 60%;\n  max-width: 100%;\n  max-height: 60%;\n  box-sizing: border-box; }\n\n.flex-65 {\n  flex: 0 0 65%;\n  max-width: 65%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-65,\n.layout-row > .flex-65 {\n  flex: 0 0 65%;\n  max-width: 65%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-65,\n.layout-column > .flex-65 {\n  flex: 0 0 65%;\n  max-width: 100%;\n  max-height: 65%;\n  box-sizing: border-box; }\n\n.flex-70 {\n  flex: 0 0 70%;\n  max-width: 70%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-70,\n.layout-row > .flex-70 {\n  flex: 0 0 70%;\n  max-width: 70%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-70,\n.layout-column > .flex-70 {\n  flex: 0 0 70%;\n  max-width: 100%;\n  max-height: 70%;\n  box-sizing: border-box; }\n\n.flex-75 {\n  flex: 0 0 75%;\n  max-width: 75%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-75,\n.layout-row > .flex-75 {\n  flex: 0 0 75%;\n  max-width: 75%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-75,\n.layout-column > .flex-75 {\n  flex: 0 0 75%;\n  max-width: 100%;\n  max-height: 75%;\n  box-sizing: border-box; }\n\n.flex-80 {\n  flex: 0 0 80%;\n  max-width: 80%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-80,\n.layout-row > .flex-80 {\n  flex: 0 0 80%;\n  max-width: 80%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-80,\n.layout-column > .flex-80 {\n  flex: 0 0 80%;\n  max-width: 100%;\n  max-height: 80%;\n  box-sizing: border-box; }\n\n.flex-85 {\n  flex: 0 0 85%;\n  max-width: 85%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-85,\n.layout-row > .flex-85 {\n  flex: 0 0 85%;\n  max-width: 85%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-85,\n.layout-column > .flex-85 {\n  flex: 0 0 85%;\n  max-width: 100%;\n  max-height: 85%;\n  box-sizing: border-box; }\n\n.flex-90 {\n  flex: 0 0 90%;\n  max-width: 90%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-90,\n.layout-row > .flex-90 {\n  flex: 0 0 90%;\n  max-width: 90%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-90,\n.layout-column > .flex-90 {\n  flex: 0 0 90%;\n  max-width: 100%;\n  max-height: 90%;\n  box-sizing: border-box; }\n\n.flex-95 {\n  flex: 0 0 95%;\n  max-width: 95%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-95,\n.layout-row > .flex-95 {\n  flex: 0 0 95%;\n  max-width: 95%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-95,\n.layout-column > .flex-95 {\n  flex: 0 0 95%;\n  max-width: 100%;\n  max-height: 95%;\n  box-sizing: border-box; }\n\n.flex-100 {\n  flex: 0 0 100%;\n  max-width: 100%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-100,\n.layout-row > .flex-100 {\n  flex: 0 0 100%;\n  max-width: 100%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-100,\n.layout-column > .flex-100 {\n  flex: 0 0 100%;\n  max-width: 100%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-33, .layout-row > .flex-33, .layout-row > .flex-33, .layout-row > .flex-33 {\n  flex: 0 0 33%;\n  max-width: 33%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-34, .layout-row > .flex-34, .layout-row > .flex-34, .layout-row > .flex-34 {\n  flex: 0 0 34%;\n  max-width: 34%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-66, .layout-row > .flex-66, .layout-row > .flex-66, .layout-row > .flex-66 {\n  flex: 0 0 66%;\n  max-width: 66%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-row > .flex-67, .layout-row > .flex-67, .layout-row > .flex-67, .layout-row > .flex-67 {\n  flex: 0 0 67%;\n  max-width: 67%;\n  max-height: 100%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-33, .layout-column > .flex-33, .layout-column > .flex-33, .layout-column > .flex-33 {\n  flex: 0 0 33%;\n  max-width: 100%;\n  max-height: 33%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-34, .layout-column > .flex-34, .layout-column > .flex-34, .layout-column > .flex-34 {\n  flex: 0 0 34%;\n  max-width: 100%;\n  max-height: 34%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-66, .layout-column > .flex-66, .layout-column > .flex-66, .layout-column > .flex-66 {\n  flex: 0 0 66%;\n  max-width: 100%;\n  max-height: 66%;\n  box-sizing: border-box; }\n\n.layout-column > .flex-67, .layout-column > .flex-67, .layout-column > .flex-67, .layout-column > .flex-67 {\n  flex: 0 0 67%;\n  max-width: 100%;\n  max-height: 67%;\n  box-sizing: border-box; }\n\n.layout, .layout-column, .layout-row {\n  box-sizing: border-box;\n  display: -webkit-box;\n  display: -webkit-flex;\n  display: -moz-box;\n  display: -ms-flexbox;\n  display: flex; }\n\n.layout-column {\n  flex-direction: column; }\n\n.layout-row {\n  flex-direction: row; }\n\n.layout-padding > .flex-sm, .layout-padding > .flex-lt-md {\n  padding: 4px; }\n\n.layout-padding,\n.layout-padding > .flex,\n.layout-padding > .flex-gt-sm,\n.layout-padding > .flex-md,\n.layout-padding > .flex-lt-lg {\n  padding: 8px; }\n\n.layout-padding > .flex-gt-md,\n.layout-padding > .flex-lg {\n  padding: 16px; }\n\n.layout-margin > .flex-sm,\n.layout-margin > .flex-lt-md {\n  margin: 4px; }\n\n.layout-margin,\n.layout-margin > .flex,\n.layout-margin > .flex-gt-sm,\n.layout-margin > .flex-md,\n.layout-margin > .flex-lt-lg {\n  margin: 8px; }\n\n.layout-margin > .flex-gt-md,\n.layout-margin > .flex-lg {\n  margin: 16px; }\n\n.layout-wrap {\n  flex-wrap: wrap; }\n\n.layout-nowrap {\n  flex-wrap: nowrap; }\n\n.layout-fill {\n  margin: 0;\n  width: 100%;\n  min-height: 100%;\n  height: 100%; }\n\n/**\n * `hide-gt-sm show-gt-lg` should hide from 600px to 1200px\n * `show-md hide-gt-sm` should show from 0px to 960px and hide at >960px\n * `hide-gt-md show-gt-sm` should show everywhere (show overrides hide)`\n *\n *  hide means hide everywhere\n *  Sizes:\n *         0    <= size < 600  Phone\n *         600  <= size < 960  Tablet\n *         960  <= size < 1200 Tablet-Landscape\n */\n@media (max-width: 599px) {\n  .hide-sm:not(.show-sm):not(.show), .hide:not(.show-sm):not(.show) {\n    display: none; }\n  .flex-order-sm-0 {\n    order: 0; }\n  .flex-order-sm-1 {\n    order: 1; }\n  .flex-order-sm-2 {\n    order: 2; }\n  .flex-order-sm-3 {\n    order: 3; }\n  .flex-order-sm-4 {\n    order: 4; }\n  .flex-order-sm-5 {\n    order: 5; }\n  .flex-order-sm-6 {\n    order: 6; }\n  .flex-order-sm-7 {\n    order: 7; }\n  .flex-order-sm-8 {\n    order: 8; }\n  .flex-order-sm-9 {\n    order: 9; }\n  .flex-order-sm-10 {\n    order: 10; }\n  .flex-order-sm-11 {\n    order: 11; }\n  .flex-order-sm-12 {\n    order: 12; }\n  .flex-order-sm-13 {\n    order: 13; }\n  .flex-order-sm-14 {\n    order: 14; }\n  .flex-order-sm-15 {\n    order: 15; }\n  .flex-order-sm-16 {\n    order: 16; }\n  .flex-order-sm-17 {\n    order: 17; }\n  .flex-order-sm-18 {\n    order: 18; }\n  .flex-order-sm-19 {\n    order: 19; }\n  .offset-sm-0, .flex-offset-sm-0 {\n    margin-left: 0%; }\n  .offset-sm-5, .flex-offset-sm-5 {\n    margin-left: 5%; }\n  .offset-sm-10, .flex-offset-sm-10 {\n    margin-left: 10%; }\n  .offset-sm-15, .flex-offset-sm-15 {\n    margin-left: 15%; }\n  .offset-sm-20, .flex-offset-sm-20 {\n    margin-left: 20%; }\n  .offset-sm-25, .flex-offset-sm-25 {\n    margin-left: 25%; }\n  .offset-sm-30, .flex-offset-sm-30 {\n    margin-left: 30%; }\n  .offset-sm-35, .flex-offset-sm-35 {\n    margin-left: 35%; }\n  .offset-sm-40, .flex-offset-sm-40 {\n    margin-left: 40%; }\n  .offset-sm-45, .flex-offset-sm-45 {\n    margin-left: 45%; }\n  .offset-sm-50, .flex-offset-sm-50 {\n    margin-left: 50%; }\n  .offset-sm-55, .flex-offset-sm-55 {\n    margin-left: 55%; }\n  .offset-sm-60, .flex-offset-sm-60 {\n    margin-left: 60%; }\n  .offset-sm-65, .flex-offset-sm-65 {\n    margin-left: 65%; }\n  .offset-sm-70, .flex-offset-sm-70 {\n    margin-left: 70%; }\n  .offset-sm-75, .flex-offset-sm-75 {\n    margin-left: 75%; }\n  .offset-sm-80, .flex-offset-sm-80 {\n    margin-left: 80%; }\n  .offset-sm-85, .flex-offset-sm-85 {\n    margin-left: 85%; }\n  .offset-sm-90, .flex-offset-sm-90 {\n    margin-left: 90%; }\n  .offset-sm-95, .flex-offset-sm-95 {\n    margin-left: 95%; }\n  .offset-sm-33, .flex-offset-sm-33 {\n    margin-left: 33%; }\n  .offset-sm-34, .flex-offset-sm-34 {\n    margin-left: 34%; }\n  .offset-sm-66, .flex-offset-sm-66 {\n    margin-left: 66%; }\n  .offset-sm-67, .flex-offset-sm-67 {\n    margin-left: 67%; }\n  .layout-align-sm-center, .layout-align-sm-center-center,\n  .layout-align-sm-center-start,\n  .layout-align-sm-center-end {\n    justify-content: center; }\n  .layout-align-sm-end, .layout-align-sm-end-center,\n  .layout-align-sm-end-start,\n  .layout-align-sm-end-end {\n    justify-content: flex-end; }\n  .layout-align-sm-space-around, .layout-align-sm-space-around-center,\n  .layout-align-sm-space-around-start,\n  .layout-align-sm-space-around-end {\n    justify-content: space-around; }\n  .layout-align-sm-space-between, .layout-align-sm-space-between-center,\n  .layout-align-sm-space-between-start,\n  .layout-align-sm-space-between-end {\n    justify-content: space-between; }\n  .layout-align-sm-center-start,\n  .layout-align-sm-start-start,\n  .layout-align-sm-end-start,\n  .layout-align-sm-space-between-start,\n  .layout-align-sm-space-around-start {\n    align-items: flex-start; }\n  .layout-align-sm-center-center,\n  .layout-align-sm-start-center,\n  .layout-align-sm-end-center,\n  .layout-align-sm-space-between-center,\n  .layout-align-sm-space-around-center {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-sm-center-center > *,\n  .layout-align-sm-start-center > *,\n  .layout-align-sm-end-center > *,\n  .layout-align-sm-space-between-center > *,\n  .layout-align-sm-space-around-center > * {\n    max-width: 100%;\n    box-sizing: border-box; }\n  .layout-align-sm-center-end,\n  .layout-align-sm-start-end,\n  .layout-align-sm-end-end,\n  .layout-align-sm-space-between-end,\n  .layout-align-sm-space-around-end {\n    align-items: flex-end; }\n  .flex-sm {\n    flex: 1;\n    box-sizing: border-box; }\n  .flex-sm-grow {\n    flex: 1 1 100%;\n    box-sizing: border-box; }\n  .flex-sm-initial {\n    flex: 0 1 auto;\n    box-sizing: border-box; }\n  .flex-sm-auto {\n    flex: 1 1 auto;\n    box-sizing: border-box; }\n  .flex-sm-none {\n    flex: 0 0 auto;\n    box-sizing: border-box; }\n  .flex-sm-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-0,\n  .layout-sm-row > .flex-sm-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-0,\n  .layout-sm-column > .flex-sm-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%;\n    box-sizing: border-box; }\n  .flex-sm-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-5,\n  .layout-sm-row > .flex-sm-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-5,\n  .layout-sm-column > .flex-sm-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%;\n    box-sizing: border-box; }\n  .flex-sm-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-10,\n  .layout-sm-row > .flex-sm-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-10,\n  .layout-sm-column > .flex-sm-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%;\n    box-sizing: border-box; }\n  .flex-sm-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-15,\n  .layout-sm-row > .flex-sm-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-15,\n  .layout-sm-column > .flex-sm-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%;\n    box-sizing: border-box; }\n  .flex-sm-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-20,\n  .layout-sm-row > .flex-sm-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-20,\n  .layout-sm-column > .flex-sm-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%;\n    box-sizing: border-box; }\n  .flex-sm-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-25,\n  .layout-sm-row > .flex-sm-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-25,\n  .layout-sm-column > .flex-sm-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%;\n    box-sizing: border-box; }\n  .flex-sm-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-30,\n  .layout-sm-row > .flex-sm-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-30,\n  .layout-sm-column > .flex-sm-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%;\n    box-sizing: border-box; }\n  .flex-sm-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-35,\n  .layout-sm-row > .flex-sm-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-35,\n  .layout-sm-column > .flex-sm-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%;\n    box-sizing: border-box; }\n  .flex-sm-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-40,\n  .layout-sm-row > .flex-sm-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-40,\n  .layout-sm-column > .flex-sm-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%;\n    box-sizing: border-box; }\n  .flex-sm-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-45,\n  .layout-sm-row > .flex-sm-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-45,\n  .layout-sm-column > .flex-sm-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%;\n    box-sizing: border-box; }\n  .flex-sm-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-50,\n  .layout-sm-row > .flex-sm-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-50,\n  .layout-sm-column > .flex-sm-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%;\n    box-sizing: border-box; }\n  .flex-sm-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-55,\n  .layout-sm-row > .flex-sm-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-55,\n  .layout-sm-column > .flex-sm-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%;\n    box-sizing: border-box; }\n  .flex-sm-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-60,\n  .layout-sm-row > .flex-sm-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-60,\n  .layout-sm-column > .flex-sm-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%;\n    box-sizing: border-box; }\n  .flex-sm-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-65,\n  .layout-sm-row > .flex-sm-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-65,\n  .layout-sm-column > .flex-sm-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%;\n    box-sizing: border-box; }\n  .flex-sm-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-70,\n  .layout-sm-row > .flex-sm-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-70,\n  .layout-sm-column > .flex-sm-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%;\n    box-sizing: border-box; }\n  .flex-sm-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-75,\n  .layout-sm-row > .flex-sm-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-75,\n  .layout-sm-column > .flex-sm-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%;\n    box-sizing: border-box; }\n  .flex-sm-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-80,\n  .layout-sm-row > .flex-sm-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-80,\n  .layout-sm-column > .flex-sm-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%;\n    box-sizing: border-box; }\n  .flex-sm-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-85,\n  .layout-sm-row > .flex-sm-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-85,\n  .layout-sm-column > .flex-sm-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%;\n    box-sizing: border-box; }\n  .flex-sm-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-90,\n  .layout-sm-row > .flex-sm-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-90,\n  .layout-sm-column > .flex-sm-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%;\n    box-sizing: border-box; }\n  .flex-sm-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-95,\n  .layout-sm-row > .flex-sm-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-95,\n  .layout-sm-column > .flex-sm-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%;\n    box-sizing: border-box; }\n  .flex-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-100,\n  .layout-sm-row > .flex-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-100,\n  .layout-sm-column > .flex-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-33, .layout-row > .flex-sm-33, .layout-sm-row > .flex-sm-33, .layout-sm-row > .flex-sm-33 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-34, .layout-row > .flex-sm-34, .layout-sm-row > .flex-sm-34, .layout-sm-row > .flex-sm-34 {\n    flex: 0 0 34%;\n    max-width: 34%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-66, .layout-row > .flex-sm-66, .layout-sm-row > .flex-sm-66, .layout-sm-row > .flex-sm-66 {\n    flex: 0 0 66%;\n    max-width: 66%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-sm-67, .layout-row > .flex-sm-67, .layout-sm-row > .flex-sm-67, .layout-sm-row > .flex-sm-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-33, .layout-column > .flex-sm-33, .layout-sm-column > .flex-sm-33, .layout-sm-column > .flex-sm-33 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-34, .layout-column > .flex-sm-34, .layout-sm-column > .flex-sm-34, .layout-sm-column > .flex-sm-34 {\n    flex: 0 0 34%;\n    max-width: 100%;\n    max-height: 34%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-66, .layout-column > .flex-sm-66, .layout-sm-column > .flex-sm-66, .layout-sm-column > .flex-sm-66 {\n    flex: 0 0 66%;\n    max-width: 100%;\n    max-height: 66%;\n    box-sizing: border-box; }\n  .layout-column > .flex-sm-67, .layout-column > .flex-sm-67, .layout-sm-column > .flex-sm-67, .layout-sm-column > .flex-sm-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%;\n    box-sizing: border-box; }\n  .layout-sm, .layout-sm-column, .layout-sm-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-sm-column {\n    flex-direction: column; }\n  .layout-sm-row {\n    flex-direction: row; } }\n\n@media (min-width: 600px) {\n  .flex-order-gt-sm-0 {\n    order: 0; }\n  .flex-order-gt-sm-1 {\n    order: 1; }\n  .flex-order-gt-sm-2 {\n    order: 2; }\n  .flex-order-gt-sm-3 {\n    order: 3; }\n  .flex-order-gt-sm-4 {\n    order: 4; }\n  .flex-order-gt-sm-5 {\n    order: 5; }\n  .flex-order-gt-sm-6 {\n    order: 6; }\n  .flex-order-gt-sm-7 {\n    order: 7; }\n  .flex-order-gt-sm-8 {\n    order: 8; }\n  .flex-order-gt-sm-9 {\n    order: 9; }\n  .flex-order-gt-sm-10 {\n    order: 10; }\n  .flex-order-gt-sm-11 {\n    order: 11; }\n  .flex-order-gt-sm-12 {\n    order: 12; }\n  .flex-order-gt-sm-13 {\n    order: 13; }\n  .flex-order-gt-sm-14 {\n    order: 14; }\n  .flex-order-gt-sm-15 {\n    order: 15; }\n  .flex-order-gt-sm-16 {\n    order: 16; }\n  .flex-order-gt-sm-17 {\n    order: 17; }\n  .flex-order-gt-sm-18 {\n    order: 18; }\n  .flex-order-gt-sm-19 {\n    order: 19; }\n  .offset-gt-sm-0, .flex-offset-gt-sm-0 {\n    margin-left: 0%; }\n  .offset-gt-sm-5, .flex-offset-gt-sm-5 {\n    margin-left: 5%; }\n  .offset-gt-sm-10, .flex-offset-gt-sm-10 {\n    margin-left: 10%; }\n  .offset-gt-sm-15, .flex-offset-gt-sm-15 {\n    margin-left: 15%; }\n  .offset-gt-sm-20, .flex-offset-gt-sm-20 {\n    margin-left: 20%; }\n  .offset-gt-sm-25, .flex-offset-gt-sm-25 {\n    margin-left: 25%; }\n  .offset-gt-sm-30, .flex-offset-gt-sm-30 {\n    margin-left: 30%; }\n  .offset-gt-sm-35, .flex-offset-gt-sm-35 {\n    margin-left: 35%; }\n  .offset-gt-sm-40, .flex-offset-gt-sm-40 {\n    margin-left: 40%; }\n  .offset-gt-sm-45, .flex-offset-gt-sm-45 {\n    margin-left: 45%; }\n  .offset-gt-sm-50, .flex-offset-gt-sm-50 {\n    margin-left: 50%; }\n  .offset-gt-sm-55, .flex-offset-gt-sm-55 {\n    margin-left: 55%; }\n  .offset-gt-sm-60, .flex-offset-gt-sm-60 {\n    margin-left: 60%; }\n  .offset-gt-sm-65, .flex-offset-gt-sm-65 {\n    margin-left: 65%; }\n  .offset-gt-sm-70, .flex-offset-gt-sm-70 {\n    margin-left: 70%; }\n  .offset-gt-sm-75, .flex-offset-gt-sm-75 {\n    margin-left: 75%; }\n  .offset-gt-sm-80, .flex-offset-gt-sm-80 {\n    margin-left: 80%; }\n  .offset-gt-sm-85, .flex-offset-gt-sm-85 {\n    margin-left: 85%; }\n  .offset-gt-sm-90, .flex-offset-gt-sm-90 {\n    margin-left: 90%; }\n  .offset-gt-sm-95, .flex-offset-gt-sm-95 {\n    margin-left: 95%; }\n  .offset-gt-sm-33, .flex-offset-gt-sm-33 {\n    margin-left: 33%; }\n  .offset-gt-sm-34, .flex-offset-gt-sm-34 {\n    margin-left: 34%; }\n  .offset-gt-sm-66, .flex-offset-gt-sm-66 {\n    margin-left: 66%; }\n  .offset-gt-sm-67, .flex-offset-gt-sm-67 {\n    margin-left: 67%; }\n  .layout-align-gt-sm-center, .layout-align-gt-sm-center-center,\n  .layout-align-gt-sm-center-start,\n  .layout-align-gt-sm-center-end {\n    justify-content: center; }\n  .layout-align-gt-sm-end, .layout-align-gt-sm-end-center,\n  .layout-align-gt-sm-end-start,\n  .layout-align-gt-sm-end-end {\n    justify-content: flex-end; }\n  .layout-align-gt-sm-space-around, .layout-align-gt-sm-space-around-center,\n  .layout-align-gt-sm-space-around-start,\n  .layout-align-gt-sm-space-around-end {\n    justify-content: space-around; }\n  .layout-align-gt-sm-space-between, .layout-align-gt-sm-space-between-center,\n  .layout-align-gt-sm-space-between-start,\n  .layout-align-gt-sm-space-between-end {\n    justify-content: space-between; }\n  .layout-align-gt-sm-center-start,\n  .layout-align-gt-sm-start-start,\n  .layout-align-gt-sm-end-start,\n  .layout-align-gt-sm-space-between-start,\n  .layout-align-gt-sm-space-around-start {\n    align-items: flex-start; }\n  .layout-align-gt-sm-center-center,\n  .layout-align-gt-sm-start-center,\n  .layout-align-gt-sm-end-center,\n  .layout-align-gt-sm-space-between-center,\n  .layout-align-gt-sm-space-around-center {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-gt-sm-center-center > *,\n  .layout-align-gt-sm-start-center > *,\n  .layout-align-gt-sm-end-center > *,\n  .layout-align-gt-sm-space-between-center > *,\n  .layout-align-gt-sm-space-around-center > * {\n    max-width: 100%;\n    box-sizing: border-box; }\n  .layout-align-gt-sm-center-end,\n  .layout-align-gt-sm-start-end,\n  .layout-align-gt-sm-end-end,\n  .layout-align-gt-sm-space-between-end,\n  .layout-align-gt-sm-space-around-end {\n    align-items: flex-end; }\n  .flex-gt-sm {\n    flex: 1;\n    box-sizing: border-box; }\n  .flex-gt-sm-grow {\n    flex: 1 1 100%;\n    box-sizing: border-box; }\n  .flex-gt-sm-initial {\n    flex: 0 1 auto;\n    box-sizing: border-box; }\n  .flex-gt-sm-auto {\n    flex: 1 1 auto;\n    box-sizing: border-box; }\n  .flex-gt-sm-none {\n    flex: 0 0 auto;\n    box-sizing: border-box; }\n  .flex-gt-sm-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-0,\n  .layout-gt-sm-row > .flex-gt-sm-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-0,\n  .layout-gt-sm-column > .flex-gt-sm-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%;\n    box-sizing: border-box; }\n  .flex-gt-sm-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-5,\n  .layout-gt-sm-row > .flex-gt-sm-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-5,\n  .layout-gt-sm-column > .flex-gt-sm-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%;\n    box-sizing: border-box; }\n  .flex-gt-sm-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-10,\n  .layout-gt-sm-row > .flex-gt-sm-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-10,\n  .layout-gt-sm-column > .flex-gt-sm-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%;\n    box-sizing: border-box; }\n  .flex-gt-sm-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-15,\n  .layout-gt-sm-row > .flex-gt-sm-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-15,\n  .layout-gt-sm-column > .flex-gt-sm-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%;\n    box-sizing: border-box; }\n  .flex-gt-sm-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-20,\n  .layout-gt-sm-row > .flex-gt-sm-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-20,\n  .layout-gt-sm-column > .flex-gt-sm-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%;\n    box-sizing: border-box; }\n  .flex-gt-sm-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-25,\n  .layout-gt-sm-row > .flex-gt-sm-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-25,\n  .layout-gt-sm-column > .flex-gt-sm-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%;\n    box-sizing: border-box; }\n  .flex-gt-sm-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-30,\n  .layout-gt-sm-row > .flex-gt-sm-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-30,\n  .layout-gt-sm-column > .flex-gt-sm-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%;\n    box-sizing: border-box; }\n  .flex-gt-sm-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-35,\n  .layout-gt-sm-row > .flex-gt-sm-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-35,\n  .layout-gt-sm-column > .flex-gt-sm-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%;\n    box-sizing: border-box; }\n  .flex-gt-sm-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-40,\n  .layout-gt-sm-row > .flex-gt-sm-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-40,\n  .layout-gt-sm-column > .flex-gt-sm-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%;\n    box-sizing: border-box; }\n  .flex-gt-sm-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-45,\n  .layout-gt-sm-row > .flex-gt-sm-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-45,\n  .layout-gt-sm-column > .flex-gt-sm-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%;\n    box-sizing: border-box; }\n  .flex-gt-sm-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-50,\n  .layout-gt-sm-row > .flex-gt-sm-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-50,\n  .layout-gt-sm-column > .flex-gt-sm-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%;\n    box-sizing: border-box; }\n  .flex-gt-sm-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-55,\n  .layout-gt-sm-row > .flex-gt-sm-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-55,\n  .layout-gt-sm-column > .flex-gt-sm-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%;\n    box-sizing: border-box; }\n  .flex-gt-sm-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-60,\n  .layout-gt-sm-row > .flex-gt-sm-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-60,\n  .layout-gt-sm-column > .flex-gt-sm-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%;\n    box-sizing: border-box; }\n  .flex-gt-sm-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-65,\n  .layout-gt-sm-row > .flex-gt-sm-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-65,\n  .layout-gt-sm-column > .flex-gt-sm-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%;\n    box-sizing: border-box; }\n  .flex-gt-sm-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-70,\n  .layout-gt-sm-row > .flex-gt-sm-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-70,\n  .layout-gt-sm-column > .flex-gt-sm-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%;\n    box-sizing: border-box; }\n  .flex-gt-sm-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-75,\n  .layout-gt-sm-row > .flex-gt-sm-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-75,\n  .layout-gt-sm-column > .flex-gt-sm-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%;\n    box-sizing: border-box; }\n  .flex-gt-sm-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-80,\n  .layout-gt-sm-row > .flex-gt-sm-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-80,\n  .layout-gt-sm-column > .flex-gt-sm-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%;\n    box-sizing: border-box; }\n  .flex-gt-sm-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-85,\n  .layout-gt-sm-row > .flex-gt-sm-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-85,\n  .layout-gt-sm-column > .flex-gt-sm-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%;\n    box-sizing: border-box; }\n  .flex-gt-sm-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-90,\n  .layout-gt-sm-row > .flex-gt-sm-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-90,\n  .layout-gt-sm-column > .flex-gt-sm-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%;\n    box-sizing: border-box; }\n  .flex-gt-sm-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-95,\n  .layout-gt-sm-row > .flex-gt-sm-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-95,\n  .layout-gt-sm-column > .flex-gt-sm-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%;\n    box-sizing: border-box; }\n  .flex-gt-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-100,\n  .layout-gt-sm-row > .flex-gt-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-100,\n  .layout-gt-sm-column > .flex-gt-sm-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-33, .layout-row > .flex-gt-sm-33, .layout-gt-sm-row > .flex-gt-sm-33, .layout-gt-sm-row > .flex-gt-sm-33 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-34, .layout-row > .flex-gt-sm-34, .layout-gt-sm-row > .flex-gt-sm-34, .layout-gt-sm-row > .flex-gt-sm-34 {\n    flex: 0 0 34%;\n    max-width: 34%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-66, .layout-row > .flex-gt-sm-66, .layout-gt-sm-row > .flex-gt-sm-66, .layout-gt-sm-row > .flex-gt-sm-66 {\n    flex: 0 0 66%;\n    max-width: 66%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-sm-67, .layout-row > .flex-gt-sm-67, .layout-gt-sm-row > .flex-gt-sm-67, .layout-gt-sm-row > .flex-gt-sm-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-33, .layout-column > .flex-gt-sm-33, .layout-gt-sm-column > .flex-gt-sm-33, .layout-gt-sm-column > .flex-gt-sm-33 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-34, .layout-column > .flex-gt-sm-34, .layout-gt-sm-column > .flex-gt-sm-34, .layout-gt-sm-column > .flex-gt-sm-34 {\n    flex: 0 0 34%;\n    max-width: 100%;\n    max-height: 34%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-66, .layout-column > .flex-gt-sm-66, .layout-gt-sm-column > .flex-gt-sm-66, .layout-gt-sm-column > .flex-gt-sm-66 {\n    flex: 0 0 66%;\n    max-width: 100%;\n    max-height: 66%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-sm-67, .layout-column > .flex-gt-sm-67, .layout-gt-sm-column > .flex-gt-sm-67, .layout-gt-sm-column > .flex-gt-sm-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%;\n    box-sizing: border-box; }\n  .layout-gt-sm, .layout-gt-sm-column, .layout-gt-sm-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-gt-sm-column {\n    flex-direction: column; }\n  .layout-gt-sm-row {\n    flex-direction: row; } }\n\n@media (min-width: 600px) and (max-width: 959px) {\n  .hide:not(.show-gt-sm):not(.show-md):not(.show), .hide-gt-sm:not(.show-gt-sm):not(.show-md):not(.show) {\n    display: none; }\n  .hide-md:not(.show-md):not(.show) {\n    display: none; }\n  .flex-order-md-0 {\n    order: 0; }\n  .flex-order-md-1 {\n    order: 1; }\n  .flex-order-md-2 {\n    order: 2; }\n  .flex-order-md-3 {\n    order: 3; }\n  .flex-order-md-4 {\n    order: 4; }\n  .flex-order-md-5 {\n    order: 5; }\n  .flex-order-md-6 {\n    order: 6; }\n  .flex-order-md-7 {\n    order: 7; }\n  .flex-order-md-8 {\n    order: 8; }\n  .flex-order-md-9 {\n    order: 9; }\n  .flex-order-md-10 {\n    order: 10; }\n  .flex-order-md-11 {\n    order: 11; }\n  .flex-order-md-12 {\n    order: 12; }\n  .flex-order-md-13 {\n    order: 13; }\n  .flex-order-md-14 {\n    order: 14; }\n  .flex-order-md-15 {\n    order: 15; }\n  .flex-order-md-16 {\n    order: 16; }\n  .flex-order-md-17 {\n    order: 17; }\n  .flex-order-md-18 {\n    order: 18; }\n  .flex-order-md-19 {\n    order: 19; }\n  .offset-md-0, .flex-offset-md-0 {\n    margin-left: 0%; }\n  .offset-md-5, .flex-offset-md-5 {\n    margin-left: 5%; }\n  .offset-md-10, .flex-offset-md-10 {\n    margin-left: 10%; }\n  .offset-md-15, .flex-offset-md-15 {\n    margin-left: 15%; }\n  .offset-md-20, .flex-offset-md-20 {\n    margin-left: 20%; }\n  .offset-md-25, .flex-offset-md-25 {\n    margin-left: 25%; }\n  .offset-md-30, .flex-offset-md-30 {\n    margin-left: 30%; }\n  .offset-md-35, .flex-offset-md-35 {\n    margin-left: 35%; }\n  .offset-md-40, .flex-offset-md-40 {\n    margin-left: 40%; }\n  .offset-md-45, .flex-offset-md-45 {\n    margin-left: 45%; }\n  .offset-md-50, .flex-offset-md-50 {\n    margin-left: 50%; }\n  .offset-md-55, .flex-offset-md-55 {\n    margin-left: 55%; }\n  .offset-md-60, .flex-offset-md-60 {\n    margin-left: 60%; }\n  .offset-md-65, .flex-offset-md-65 {\n    margin-left: 65%; }\n  .offset-md-70, .flex-offset-md-70 {\n    margin-left: 70%; }\n  .offset-md-75, .flex-offset-md-75 {\n    margin-left: 75%; }\n  .offset-md-80, .flex-offset-md-80 {\n    margin-left: 80%; }\n  .offset-md-85, .flex-offset-md-85 {\n    margin-left: 85%; }\n  .offset-md-90, .flex-offset-md-90 {\n    margin-left: 90%; }\n  .offset-md-95, .flex-offset-md-95 {\n    margin-left: 95%; }\n  .offset-md-33, .flex-offset-md-33 {\n    margin-left: 33%; }\n  .offset-md-34, .flex-offset-md-34 {\n    margin-left: 34%; }\n  .offset-md-66, .flex-offset-md-66 {\n    margin-left: 66%; }\n  .offset-md-67, .flex-offset-md-67 {\n    margin-left: 67%; }\n  .layout-align-md-center, .layout-align-md-center-center,\n  .layout-align-md-center-start,\n  .layout-align-md-center-end {\n    justify-content: center; }\n  .layout-align-md-end, .layout-align-md-end-center,\n  .layout-align-md-end-start,\n  .layout-align-md-end-end {\n    justify-content: flex-end; }\n  .layout-align-md-space-around, .layout-align-md-space-around-center,\n  .layout-align-md-space-around-start,\n  .layout-align-md-space-around-end {\n    justify-content: space-around; }\n  .layout-align-md-space-between, .layout-align-md-space-between-center,\n  .layout-align-md-space-between-start,\n  .layout-align-md-space-between-end {\n    justify-content: space-between; }\n  .layout-align-md-center-start,\n  .layout-align-md-start-start,\n  .layout-align-md-end-start,\n  .layout-align-md-space-between-start,\n  .layout-align-md-space-around-start {\n    align-items: flex-start; }\n  .layout-align-md-center-center,\n  .layout-align-md-start-center,\n  .layout-align-md-end-center,\n  .layout-align-md-space-between-center,\n  .layout-align-md-space-around-center {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-md-center-center > *,\n  .layout-align-md-start-center > *,\n  .layout-align-md-end-center > *,\n  .layout-align-md-space-between-center > *,\n  .layout-align-md-space-around-center > * {\n    max-width: 100%;\n    box-sizing: border-box; }\n  .layout-align-md-center-end,\n  .layout-align-md-start-end,\n  .layout-align-md-end-end,\n  .layout-align-md-space-between-end,\n  .layout-align-md-space-around-end {\n    align-items: flex-end; }\n  .flex-md {\n    flex: 1;\n    box-sizing: border-box; }\n  .flex-md-grow {\n    flex: 1 1 100%;\n    box-sizing: border-box; }\n  .flex-md-initial {\n    flex: 0 1 auto;\n    box-sizing: border-box; }\n  .flex-md-auto {\n    flex: 1 1 auto;\n    box-sizing: border-box; }\n  .flex-md-none {\n    flex: 0 0 auto;\n    box-sizing: border-box; }\n  .flex-md-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-0,\n  .layout-md-row > .flex-md-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-0,\n  .layout-md-column > .flex-md-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%;\n    box-sizing: border-box; }\n  .flex-md-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-5,\n  .layout-md-row > .flex-md-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-5,\n  .layout-md-column > .flex-md-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%;\n    box-sizing: border-box; }\n  .flex-md-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-10,\n  .layout-md-row > .flex-md-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-10,\n  .layout-md-column > .flex-md-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%;\n    box-sizing: border-box; }\n  .flex-md-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-15,\n  .layout-md-row > .flex-md-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-15,\n  .layout-md-column > .flex-md-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%;\n    box-sizing: border-box; }\n  .flex-md-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-20,\n  .layout-md-row > .flex-md-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-20,\n  .layout-md-column > .flex-md-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%;\n    box-sizing: border-box; }\n  .flex-md-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-25,\n  .layout-md-row > .flex-md-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-25,\n  .layout-md-column > .flex-md-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%;\n    box-sizing: border-box; }\n  .flex-md-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-30,\n  .layout-md-row > .flex-md-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-30,\n  .layout-md-column > .flex-md-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%;\n    box-sizing: border-box; }\n  .flex-md-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-35,\n  .layout-md-row > .flex-md-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-35,\n  .layout-md-column > .flex-md-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%;\n    box-sizing: border-box; }\n  .flex-md-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-40,\n  .layout-md-row > .flex-md-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-40,\n  .layout-md-column > .flex-md-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%;\n    box-sizing: border-box; }\n  .flex-md-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-45,\n  .layout-md-row > .flex-md-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-45,\n  .layout-md-column > .flex-md-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%;\n    box-sizing: border-box; }\n  .flex-md-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-50,\n  .layout-md-row > .flex-md-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-50,\n  .layout-md-column > .flex-md-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%;\n    box-sizing: border-box; }\n  .flex-md-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-55,\n  .layout-md-row > .flex-md-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-55,\n  .layout-md-column > .flex-md-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%;\n    box-sizing: border-box; }\n  .flex-md-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-60,\n  .layout-md-row > .flex-md-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-60,\n  .layout-md-column > .flex-md-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%;\n    box-sizing: border-box; }\n  .flex-md-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-65,\n  .layout-md-row > .flex-md-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-65,\n  .layout-md-column > .flex-md-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%;\n    box-sizing: border-box; }\n  .flex-md-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-70,\n  .layout-md-row > .flex-md-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-70,\n  .layout-md-column > .flex-md-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%;\n    box-sizing: border-box; }\n  .flex-md-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-75,\n  .layout-md-row > .flex-md-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-75,\n  .layout-md-column > .flex-md-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%;\n    box-sizing: border-box; }\n  .flex-md-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-80,\n  .layout-md-row > .flex-md-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-80,\n  .layout-md-column > .flex-md-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%;\n    box-sizing: border-box; }\n  .flex-md-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-85,\n  .layout-md-row > .flex-md-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-85,\n  .layout-md-column > .flex-md-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%;\n    box-sizing: border-box; }\n  .flex-md-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-90,\n  .layout-md-row > .flex-md-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-90,\n  .layout-md-column > .flex-md-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%;\n    box-sizing: border-box; }\n  .flex-md-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-95,\n  .layout-md-row > .flex-md-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-95,\n  .layout-md-column > .flex-md-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%;\n    box-sizing: border-box; }\n  .flex-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-100,\n  .layout-md-row > .flex-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-100,\n  .layout-md-column > .flex-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-33, .layout-row > .flex-md-33, .layout-md-row > .flex-md-33, .layout-md-row > .flex-md-33 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-34, .layout-row > .flex-md-34, .layout-md-row > .flex-md-34, .layout-md-row > .flex-md-34 {\n    flex: 0 0 34%;\n    max-width: 34%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-66, .layout-row > .flex-md-66, .layout-md-row > .flex-md-66, .layout-md-row > .flex-md-66 {\n    flex: 0 0 66%;\n    max-width: 66%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-md-67, .layout-row > .flex-md-67, .layout-md-row > .flex-md-67, .layout-md-row > .flex-md-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-33, .layout-column > .flex-md-33, .layout-md-column > .flex-md-33, .layout-md-column > .flex-md-33 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-34, .layout-column > .flex-md-34, .layout-md-column > .flex-md-34, .layout-md-column > .flex-md-34 {\n    flex: 0 0 34%;\n    max-width: 100%;\n    max-height: 34%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-66, .layout-column > .flex-md-66, .layout-md-column > .flex-md-66, .layout-md-column > .flex-md-66 {\n    flex: 0 0 66%;\n    max-width: 100%;\n    max-height: 66%;\n    box-sizing: border-box; }\n  .layout-column > .flex-md-67, .layout-column > .flex-md-67, .layout-md-column > .flex-md-67, .layout-md-column > .flex-md-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%;\n    box-sizing: border-box; }\n  .layout-md, .layout-md-column, .layout-md-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-md-column {\n    flex-direction: column; }\n  .layout-md-row {\n    flex-direction: row; } }\n\n@media (min-width: 960px) {\n  .flex-order-gt-md-0 {\n    order: 0; }\n  .flex-order-gt-md-1 {\n    order: 1; }\n  .flex-order-gt-md-2 {\n    order: 2; }\n  .flex-order-gt-md-3 {\n    order: 3; }\n  .flex-order-gt-md-4 {\n    order: 4; }\n  .flex-order-gt-md-5 {\n    order: 5; }\n  .flex-order-gt-md-6 {\n    order: 6; }\n  .flex-order-gt-md-7 {\n    order: 7; }\n  .flex-order-gt-md-8 {\n    order: 8; }\n  .flex-order-gt-md-9 {\n    order: 9; }\n  .flex-order-gt-md-10 {\n    order: 10; }\n  .flex-order-gt-md-11 {\n    order: 11; }\n  .flex-order-gt-md-12 {\n    order: 12; }\n  .flex-order-gt-md-13 {\n    order: 13; }\n  .flex-order-gt-md-14 {\n    order: 14; }\n  .flex-order-gt-md-15 {\n    order: 15; }\n  .flex-order-gt-md-16 {\n    order: 16; }\n  .flex-order-gt-md-17 {\n    order: 17; }\n  .flex-order-gt-md-18 {\n    order: 18; }\n  .flex-order-gt-md-19 {\n    order: 19; }\n  .offset-gt-md-0, .flex-offset-gt-md-0 {\n    margin-left: 0%; }\n  .offset-gt-md-5, .flex-offset-gt-md-5 {\n    margin-left: 5%; }\n  .offset-gt-md-10, .flex-offset-gt-md-10 {\n    margin-left: 10%; }\n  .offset-gt-md-15, .flex-offset-gt-md-15 {\n    margin-left: 15%; }\n  .offset-gt-md-20, .flex-offset-gt-md-20 {\n    margin-left: 20%; }\n  .offset-gt-md-25, .flex-offset-gt-md-25 {\n    margin-left: 25%; }\n  .offset-gt-md-30, .flex-offset-gt-md-30 {\n    margin-left: 30%; }\n  .offset-gt-md-35, .flex-offset-gt-md-35 {\n    margin-left: 35%; }\n  .offset-gt-md-40, .flex-offset-gt-md-40 {\n    margin-left: 40%; }\n  .offset-gt-md-45, .flex-offset-gt-md-45 {\n    margin-left: 45%; }\n  .offset-gt-md-50, .flex-offset-gt-md-50 {\n    margin-left: 50%; }\n  .offset-gt-md-55, .flex-offset-gt-md-55 {\n    margin-left: 55%; }\n  .offset-gt-md-60, .flex-offset-gt-md-60 {\n    margin-left: 60%; }\n  .offset-gt-md-65, .flex-offset-gt-md-65 {\n    margin-left: 65%; }\n  .offset-gt-md-70, .flex-offset-gt-md-70 {\n    margin-left: 70%; }\n  .offset-gt-md-75, .flex-offset-gt-md-75 {\n    margin-left: 75%; }\n  .offset-gt-md-80, .flex-offset-gt-md-80 {\n    margin-left: 80%; }\n  .offset-gt-md-85, .flex-offset-gt-md-85 {\n    margin-left: 85%; }\n  .offset-gt-md-90, .flex-offset-gt-md-90 {\n    margin-left: 90%; }\n  .offset-gt-md-95, .flex-offset-gt-md-95 {\n    margin-left: 95%; }\n  .offset-gt-md-33, .flex-offset-gt-md-33 {\n    margin-left: 33%; }\n  .offset-gt-md-34, .flex-offset-gt-md-34 {\n    margin-left: 34%; }\n  .offset-gt-md-66, .flex-offset-gt-md-66 {\n    margin-left: 66%; }\n  .offset-gt-md-67, .flex-offset-gt-md-67 {\n    margin-left: 67%; }\n  .layout-align-gt-md-center, .layout-align-gt-md-center-center,\n  .layout-align-gt-md-center-start,\n  .layout-align-gt-md-center-end {\n    justify-content: center; }\n  .layout-align-gt-md-end, .layout-align-gt-md-end-center,\n  .layout-align-gt-md-end-start,\n  .layout-align-gt-md-end-end {\n    justify-content: flex-end; }\n  .layout-align-gt-md-space-around, .layout-align-gt-md-space-around-center,\n  .layout-align-gt-md-space-around-start,\n  .layout-align-gt-md-space-around-end {\n    justify-content: space-around; }\n  .layout-align-gt-md-space-between, .layout-align-gt-md-space-between-center,\n  .layout-align-gt-md-space-between-start,\n  .layout-align-gt-md-space-between-end {\n    justify-content: space-between; }\n  .layout-align-gt-md-center-start,\n  .layout-align-gt-md-start-start,\n  .layout-align-gt-md-end-start,\n  .layout-align-gt-md-space-between-start,\n  .layout-align-gt-md-space-around-start {\n    align-items: flex-start; }\n  .layout-align-gt-md-center-center,\n  .layout-align-gt-md-start-center,\n  .layout-align-gt-md-end-center,\n  .layout-align-gt-md-space-between-center,\n  .layout-align-gt-md-space-around-center {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-gt-md-center-center > *,\n  .layout-align-gt-md-start-center > *,\n  .layout-align-gt-md-end-center > *,\n  .layout-align-gt-md-space-between-center > *,\n  .layout-align-gt-md-space-around-center > * {\n    max-width: 100%;\n    box-sizing: border-box; }\n  .layout-align-gt-md-center-end,\n  .layout-align-gt-md-start-end,\n  .layout-align-gt-md-end-end,\n  .layout-align-gt-md-space-between-end,\n  .layout-align-gt-md-space-around-end {\n    align-items: flex-end; }\n  .flex-gt-md {\n    flex: 1;\n    box-sizing: border-box; }\n  .flex-gt-md-grow {\n    flex: 1 1 100%;\n    box-sizing: border-box; }\n  .flex-gt-md-initial {\n    flex: 0 1 auto;\n    box-sizing: border-box; }\n  .flex-gt-md-auto {\n    flex: 1 1 auto;\n    box-sizing: border-box; }\n  .flex-gt-md-none {\n    flex: 0 0 auto;\n    box-sizing: border-box; }\n  .flex-gt-md-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-0,\n  .layout-gt-md-row > .flex-gt-md-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-0,\n  .layout-gt-md-column > .flex-gt-md-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%;\n    box-sizing: border-box; }\n  .flex-gt-md-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-5,\n  .layout-gt-md-row > .flex-gt-md-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-5,\n  .layout-gt-md-column > .flex-gt-md-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%;\n    box-sizing: border-box; }\n  .flex-gt-md-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-10,\n  .layout-gt-md-row > .flex-gt-md-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-10,\n  .layout-gt-md-column > .flex-gt-md-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%;\n    box-sizing: border-box; }\n  .flex-gt-md-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-15,\n  .layout-gt-md-row > .flex-gt-md-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-15,\n  .layout-gt-md-column > .flex-gt-md-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%;\n    box-sizing: border-box; }\n  .flex-gt-md-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-20,\n  .layout-gt-md-row > .flex-gt-md-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-20,\n  .layout-gt-md-column > .flex-gt-md-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%;\n    box-sizing: border-box; }\n  .flex-gt-md-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-25,\n  .layout-gt-md-row > .flex-gt-md-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-25,\n  .layout-gt-md-column > .flex-gt-md-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%;\n    box-sizing: border-box; }\n  .flex-gt-md-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-30,\n  .layout-gt-md-row > .flex-gt-md-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-30,\n  .layout-gt-md-column > .flex-gt-md-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%;\n    box-sizing: border-box; }\n  .flex-gt-md-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-35,\n  .layout-gt-md-row > .flex-gt-md-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-35,\n  .layout-gt-md-column > .flex-gt-md-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%;\n    box-sizing: border-box; }\n  .flex-gt-md-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-40,\n  .layout-gt-md-row > .flex-gt-md-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-40,\n  .layout-gt-md-column > .flex-gt-md-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%;\n    box-sizing: border-box; }\n  .flex-gt-md-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-45,\n  .layout-gt-md-row > .flex-gt-md-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-45,\n  .layout-gt-md-column > .flex-gt-md-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%;\n    box-sizing: border-box; }\n  .flex-gt-md-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-50,\n  .layout-gt-md-row > .flex-gt-md-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-50,\n  .layout-gt-md-column > .flex-gt-md-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%;\n    box-sizing: border-box; }\n  .flex-gt-md-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-55,\n  .layout-gt-md-row > .flex-gt-md-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-55,\n  .layout-gt-md-column > .flex-gt-md-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%;\n    box-sizing: border-box; }\n  .flex-gt-md-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-60,\n  .layout-gt-md-row > .flex-gt-md-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-60,\n  .layout-gt-md-column > .flex-gt-md-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%;\n    box-sizing: border-box; }\n  .flex-gt-md-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-65,\n  .layout-gt-md-row > .flex-gt-md-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-65,\n  .layout-gt-md-column > .flex-gt-md-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%;\n    box-sizing: border-box; }\n  .flex-gt-md-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-70,\n  .layout-gt-md-row > .flex-gt-md-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-70,\n  .layout-gt-md-column > .flex-gt-md-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%;\n    box-sizing: border-box; }\n  .flex-gt-md-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-75,\n  .layout-gt-md-row > .flex-gt-md-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-75,\n  .layout-gt-md-column > .flex-gt-md-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%;\n    box-sizing: border-box; }\n  .flex-gt-md-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-80,\n  .layout-gt-md-row > .flex-gt-md-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-80,\n  .layout-gt-md-column > .flex-gt-md-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%;\n    box-sizing: border-box; }\n  .flex-gt-md-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-85,\n  .layout-gt-md-row > .flex-gt-md-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-85,\n  .layout-gt-md-column > .flex-gt-md-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%;\n    box-sizing: border-box; }\n  .flex-gt-md-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-90,\n  .layout-gt-md-row > .flex-gt-md-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-90,\n  .layout-gt-md-column > .flex-gt-md-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%;\n    box-sizing: border-box; }\n  .flex-gt-md-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-95,\n  .layout-gt-md-row > .flex-gt-md-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-95,\n  .layout-gt-md-column > .flex-gt-md-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%;\n    box-sizing: border-box; }\n  .flex-gt-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-100,\n  .layout-gt-md-row > .flex-gt-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-100,\n  .layout-gt-md-column > .flex-gt-md-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-33, .layout-row > .flex-gt-md-33, .layout-gt-md-row > .flex-gt-md-33, .layout-gt-md-row > .flex-gt-md-33 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-34, .layout-row > .flex-gt-md-34, .layout-gt-md-row > .flex-gt-md-34, .layout-gt-md-row > .flex-gt-md-34 {\n    flex: 0 0 34%;\n    max-width: 34%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-66, .layout-row > .flex-gt-md-66, .layout-gt-md-row > .flex-gt-md-66, .layout-gt-md-row > .flex-gt-md-66 {\n    flex: 0 0 66%;\n    max-width: 66%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-md-67, .layout-row > .flex-gt-md-67, .layout-gt-md-row > .flex-gt-md-67, .layout-gt-md-row > .flex-gt-md-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-33, .layout-column > .flex-gt-md-33, .layout-gt-md-column > .flex-gt-md-33, .layout-gt-md-column > .flex-gt-md-33 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-34, .layout-column > .flex-gt-md-34, .layout-gt-md-column > .flex-gt-md-34, .layout-gt-md-column > .flex-gt-md-34 {\n    flex: 0 0 34%;\n    max-width: 100%;\n    max-height: 34%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-66, .layout-column > .flex-gt-md-66, .layout-gt-md-column > .flex-gt-md-66, .layout-gt-md-column > .flex-gt-md-66 {\n    flex: 0 0 66%;\n    max-width: 100%;\n    max-height: 66%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-md-67, .layout-column > .flex-gt-md-67, .layout-gt-md-column > .flex-gt-md-67, .layout-gt-md-column > .flex-gt-md-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%;\n    box-sizing: border-box; }\n  .layout-gt-md, .layout-gt-md-column, .layout-gt-md-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-gt-md-column {\n    flex-direction: column; }\n  .layout-gt-md-row {\n    flex-direction: row; } }\n\n@media (min-width: 960px) and (max-width: 1199px) {\n  .hide:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show), .hide-gt-sm:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show), .hide-gt-md:not(.show-gt-sm):not(.show-gt-md):not(.show-lg):not(.show) {\n    display: none; }\n  .hide-lg:not(.show-lg):not(.show) {\n    display: none; }\n  .flex-order-lg-0 {\n    order: 0; }\n  .flex-order-lg-1 {\n    order: 1; }\n  .flex-order-lg-2 {\n    order: 2; }\n  .flex-order-lg-3 {\n    order: 3; }\n  .flex-order-lg-4 {\n    order: 4; }\n  .flex-order-lg-5 {\n    order: 5; }\n  .flex-order-lg-6 {\n    order: 6; }\n  .flex-order-lg-7 {\n    order: 7; }\n  .flex-order-lg-8 {\n    order: 8; }\n  .flex-order-lg-9 {\n    order: 9; }\n  .flex-order-lg-10 {\n    order: 10; }\n  .flex-order-lg-11 {\n    order: 11; }\n  .flex-order-lg-12 {\n    order: 12; }\n  .flex-order-lg-13 {\n    order: 13; }\n  .flex-order-lg-14 {\n    order: 14; }\n  .flex-order-lg-15 {\n    order: 15; }\n  .flex-order-lg-16 {\n    order: 16; }\n  .flex-order-lg-17 {\n    order: 17; }\n  .flex-order-lg-18 {\n    order: 18; }\n  .flex-order-lg-19 {\n    order: 19; }\n  .offset-lg-0, .flex-offset-lg-0 {\n    margin-left: 0%; }\n  .offset-lg-5, .flex-offset-lg-5 {\n    margin-left: 5%; }\n  .offset-lg-10, .flex-offset-lg-10 {\n    margin-left: 10%; }\n  .offset-lg-15, .flex-offset-lg-15 {\n    margin-left: 15%; }\n  .offset-lg-20, .flex-offset-lg-20 {\n    margin-left: 20%; }\n  .offset-lg-25, .flex-offset-lg-25 {\n    margin-left: 25%; }\n  .offset-lg-30, .flex-offset-lg-30 {\n    margin-left: 30%; }\n  .offset-lg-35, .flex-offset-lg-35 {\n    margin-left: 35%; }\n  .offset-lg-40, .flex-offset-lg-40 {\n    margin-left: 40%; }\n  .offset-lg-45, .flex-offset-lg-45 {\n    margin-left: 45%; }\n  .offset-lg-50, .flex-offset-lg-50 {\n    margin-left: 50%; }\n  .offset-lg-55, .flex-offset-lg-55 {\n    margin-left: 55%; }\n  .offset-lg-60, .flex-offset-lg-60 {\n    margin-left: 60%; }\n  .offset-lg-65, .flex-offset-lg-65 {\n    margin-left: 65%; }\n  .offset-lg-70, .flex-offset-lg-70 {\n    margin-left: 70%; }\n  .offset-lg-75, .flex-offset-lg-75 {\n    margin-left: 75%; }\n  .offset-lg-80, .flex-offset-lg-80 {\n    margin-left: 80%; }\n  .offset-lg-85, .flex-offset-lg-85 {\n    margin-left: 85%; }\n  .offset-lg-90, .flex-offset-lg-90 {\n    margin-left: 90%; }\n  .offset-lg-95, .flex-offset-lg-95 {\n    margin-left: 95%; }\n  .offset-lg-33, .flex-offset-lg-33 {\n    margin-left: 33%; }\n  .offset-lg-34, .flex-offset-lg-34 {\n    margin-left: 34%; }\n  .offset-lg-66, .flex-offset-lg-66 {\n    margin-left: 66%; }\n  .offset-lg-67, .flex-offset-lg-67 {\n    margin-left: 67%; }\n  .layout-align-lg-center, .layout-align-lg-center-center,\n  .layout-align-lg-center-start,\n  .layout-align-lg-center-end {\n    justify-content: center; }\n  .layout-align-lg-end, .layout-align-lg-end-center,\n  .layout-align-lg-end-start,\n  .layout-align-lg-end-end {\n    justify-content: flex-end; }\n  .layout-align-lg-space-around, .layout-align-lg-space-around-center,\n  .layout-align-lg-space-around-start,\n  .layout-align-lg-space-around-end {\n    justify-content: space-around; }\n  .layout-align-lg-space-between, .layout-align-lg-space-between-center,\n  .layout-align-lg-space-between-start,\n  .layout-align-lg-space-between-end {\n    justify-content: space-between; }\n  .layout-align-lg-center-start,\n  .layout-align-lg-start-start,\n  .layout-align-lg-end-start,\n  .layout-align-lg-space-between-start,\n  .layout-align-lg-space-around-start {\n    align-items: flex-start; }\n  .layout-align-lg-center-center,\n  .layout-align-lg-start-center,\n  .layout-align-lg-end-center,\n  .layout-align-lg-space-between-center,\n  .layout-align-lg-space-around-center {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-lg-center-center > *,\n  .layout-align-lg-start-center > *,\n  .layout-align-lg-end-center > *,\n  .layout-align-lg-space-between-center > *,\n  .layout-align-lg-space-around-center > * {\n    max-width: 100%;\n    box-sizing: border-box; }\n  .layout-align-lg-center-end,\n  .layout-align-lg-start-end,\n  .layout-align-lg-end-end,\n  .layout-align-lg-space-between-end,\n  .layout-align-lg-space-around-end {\n    align-items: flex-end; }\n  .flex-lg {\n    flex: 1;\n    box-sizing: border-box; }\n  .flex-lg-grow {\n    flex: 1 1 100%;\n    box-sizing: border-box; }\n  .flex-lg-initial {\n    flex: 0 1 auto;\n    box-sizing: border-box; }\n  .flex-lg-auto {\n    flex: 1 1 auto;\n    box-sizing: border-box; }\n  .flex-lg-none {\n    flex: 0 0 auto;\n    box-sizing: border-box; }\n  .flex-lg-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-0,\n  .layout-lg-row > .flex-lg-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-0,\n  .layout-lg-column > .flex-lg-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%;\n    box-sizing: border-box; }\n  .flex-lg-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-5,\n  .layout-lg-row > .flex-lg-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-5,\n  .layout-lg-column > .flex-lg-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%;\n    box-sizing: border-box; }\n  .flex-lg-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-10,\n  .layout-lg-row > .flex-lg-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-10,\n  .layout-lg-column > .flex-lg-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%;\n    box-sizing: border-box; }\n  .flex-lg-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-15,\n  .layout-lg-row > .flex-lg-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-15,\n  .layout-lg-column > .flex-lg-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%;\n    box-sizing: border-box; }\n  .flex-lg-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-20,\n  .layout-lg-row > .flex-lg-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-20,\n  .layout-lg-column > .flex-lg-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%;\n    box-sizing: border-box; }\n  .flex-lg-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-25,\n  .layout-lg-row > .flex-lg-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-25,\n  .layout-lg-column > .flex-lg-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%;\n    box-sizing: border-box; }\n  .flex-lg-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-30,\n  .layout-lg-row > .flex-lg-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-30,\n  .layout-lg-column > .flex-lg-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%;\n    box-sizing: border-box; }\n  .flex-lg-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-35,\n  .layout-lg-row > .flex-lg-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-35,\n  .layout-lg-column > .flex-lg-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%;\n    box-sizing: border-box; }\n  .flex-lg-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-40,\n  .layout-lg-row > .flex-lg-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-40,\n  .layout-lg-column > .flex-lg-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%;\n    box-sizing: border-box; }\n  .flex-lg-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-45,\n  .layout-lg-row > .flex-lg-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-45,\n  .layout-lg-column > .flex-lg-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%;\n    box-sizing: border-box; }\n  .flex-lg-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-50,\n  .layout-lg-row > .flex-lg-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-50,\n  .layout-lg-column > .flex-lg-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%;\n    box-sizing: border-box; }\n  .flex-lg-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-55,\n  .layout-lg-row > .flex-lg-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-55,\n  .layout-lg-column > .flex-lg-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%;\n    box-sizing: border-box; }\n  .flex-lg-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-60,\n  .layout-lg-row > .flex-lg-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-60,\n  .layout-lg-column > .flex-lg-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%;\n    box-sizing: border-box; }\n  .flex-lg-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-65,\n  .layout-lg-row > .flex-lg-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-65,\n  .layout-lg-column > .flex-lg-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%;\n    box-sizing: border-box; }\n  .flex-lg-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-70,\n  .layout-lg-row > .flex-lg-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-70,\n  .layout-lg-column > .flex-lg-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%;\n    box-sizing: border-box; }\n  .flex-lg-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-75,\n  .layout-lg-row > .flex-lg-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-75,\n  .layout-lg-column > .flex-lg-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%;\n    box-sizing: border-box; }\n  .flex-lg-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-80,\n  .layout-lg-row > .flex-lg-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-80,\n  .layout-lg-column > .flex-lg-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%;\n    box-sizing: border-box; }\n  .flex-lg-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-85,\n  .layout-lg-row > .flex-lg-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-85,\n  .layout-lg-column > .flex-lg-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%;\n    box-sizing: border-box; }\n  .flex-lg-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-90,\n  .layout-lg-row > .flex-lg-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-90,\n  .layout-lg-column > .flex-lg-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%;\n    box-sizing: border-box; }\n  .flex-lg-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-95,\n  .layout-lg-row > .flex-lg-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-95,\n  .layout-lg-column > .flex-lg-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%;\n    box-sizing: border-box; }\n  .flex-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-100,\n  .layout-lg-row > .flex-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-100,\n  .layout-lg-column > .flex-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-33, .layout-row > .flex-lg-33, .layout-lg-row > .flex-lg-33, .layout-lg-row > .flex-lg-33 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-34, .layout-row > .flex-lg-34, .layout-lg-row > .flex-lg-34, .layout-lg-row > .flex-lg-34 {\n    flex: 0 0 34%;\n    max-width: 34%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-66, .layout-row > .flex-lg-66, .layout-lg-row > .flex-lg-66, .layout-lg-row > .flex-lg-66 {\n    flex: 0 0 66%;\n    max-width: 66%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-lg-67, .layout-row > .flex-lg-67, .layout-lg-row > .flex-lg-67, .layout-lg-row > .flex-lg-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-33, .layout-column > .flex-lg-33, .layout-lg-column > .flex-lg-33, .layout-lg-column > .flex-lg-33 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-34, .layout-column > .flex-lg-34, .layout-lg-column > .flex-lg-34, .layout-lg-column > .flex-lg-34 {\n    flex: 0 0 34%;\n    max-width: 100%;\n    max-height: 34%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-66, .layout-column > .flex-lg-66, .layout-lg-column > .flex-lg-66, .layout-lg-column > .flex-lg-66 {\n    flex: 0 0 66%;\n    max-width: 100%;\n    max-height: 66%;\n    box-sizing: border-box; }\n  .layout-column > .flex-lg-67, .layout-column > .flex-lg-67, .layout-lg-column > .flex-lg-67, .layout-lg-column > .flex-lg-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%;\n    box-sizing: border-box; }\n  .layout-lg, .layout-lg-column, .layout-lg-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-lg-column {\n    flex-direction: column; }\n  .layout-lg-row {\n    flex-direction: row; } }\n\n@media (min-width: 1200px) {\n  .hide-gt-sm:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide-gt-md:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide-gt-lg:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show), .hide:not(.show-gt-sm):not(.show-gt-md):not(.show-gt-lg):not(.show) {\n    display: none; }\n  .flex-order-gt-lg-0 {\n    order: 0; }\n  .flex-order-gt-lg-1 {\n    order: 1; }\n  .flex-order-gt-lg-2 {\n    order: 2; }\n  .flex-order-gt-lg-3 {\n    order: 3; }\n  .flex-order-gt-lg-4 {\n    order: 4; }\n  .flex-order-gt-lg-5 {\n    order: 5; }\n  .flex-order-gt-lg-6 {\n    order: 6; }\n  .flex-order-gt-lg-7 {\n    order: 7; }\n  .flex-order-gt-lg-8 {\n    order: 8; }\n  .flex-order-gt-lg-9 {\n    order: 9; }\n  .flex-order-gt-lg-10 {\n    order: 10; }\n  .flex-order-gt-lg-11 {\n    order: 11; }\n  .flex-order-gt-lg-12 {\n    order: 12; }\n  .flex-order-gt-lg-13 {\n    order: 13; }\n  .flex-order-gt-lg-14 {\n    order: 14; }\n  .flex-order-gt-lg-15 {\n    order: 15; }\n  .flex-order-gt-lg-16 {\n    order: 16; }\n  .flex-order-gt-lg-17 {\n    order: 17; }\n  .flex-order-gt-lg-18 {\n    order: 18; }\n  .flex-order-gt-lg-19 {\n    order: 19; }\n  .offset-gt-lg-0, .flex-offset-gt-lg-0 {\n    margin-left: 0%; }\n  .offset-gt-lg-5, .flex-offset-gt-lg-5 {\n    margin-left: 5%; }\n  .offset-gt-lg-10, .flex-offset-gt-lg-10 {\n    margin-left: 10%; }\n  .offset-gt-lg-15, .flex-offset-gt-lg-15 {\n    margin-left: 15%; }\n  .offset-gt-lg-20, .flex-offset-gt-lg-20 {\n    margin-left: 20%; }\n  .offset-gt-lg-25, .flex-offset-gt-lg-25 {\n    margin-left: 25%; }\n  .offset-gt-lg-30, .flex-offset-gt-lg-30 {\n    margin-left: 30%; }\n  .offset-gt-lg-35, .flex-offset-gt-lg-35 {\n    margin-left: 35%; }\n  .offset-gt-lg-40, .flex-offset-gt-lg-40 {\n    margin-left: 40%; }\n  .offset-gt-lg-45, .flex-offset-gt-lg-45 {\n    margin-left: 45%; }\n  .offset-gt-lg-50, .flex-offset-gt-lg-50 {\n    margin-left: 50%; }\n  .offset-gt-lg-55, .flex-offset-gt-lg-55 {\n    margin-left: 55%; }\n  .offset-gt-lg-60, .flex-offset-gt-lg-60 {\n    margin-left: 60%; }\n  .offset-gt-lg-65, .flex-offset-gt-lg-65 {\n    margin-left: 65%; }\n  .offset-gt-lg-70, .flex-offset-gt-lg-70 {\n    margin-left: 70%; }\n  .offset-gt-lg-75, .flex-offset-gt-lg-75 {\n    margin-left: 75%; }\n  .offset-gt-lg-80, .flex-offset-gt-lg-80 {\n    margin-left: 80%; }\n  .offset-gt-lg-85, .flex-offset-gt-lg-85 {\n    margin-left: 85%; }\n  .offset-gt-lg-90, .flex-offset-gt-lg-90 {\n    margin-left: 90%; }\n  .offset-gt-lg-95, .flex-offset-gt-lg-95 {\n    margin-left: 95%; }\n  .offset-gt-lg-33, .flex-offset-gt-lg-33 {\n    margin-left: 33%; }\n  .offset-gt-lg-34, .flex-offset-gt-lg-34 {\n    margin-left: 34%; }\n  .offset-gt-lg-66, .flex-offset-gt-lg-66 {\n    margin-left: 66%; }\n  .offset-gt-lg-67, .flex-offset-gt-lg-67 {\n    margin-left: 67%; }\n  .layout-align-gt-lg-center, .layout-align-gt-lg-center-center,\n  .layout-align-gt-lg-center-start,\n  .layout-align-gt-lg-center-end {\n    justify-content: center; }\n  .layout-align-gt-lg-end, .layout-align-gt-lg-end-center,\n  .layout-align-gt-lg-end-start,\n  .layout-align-gt-lg-end-end {\n    justify-content: flex-end; }\n  .layout-align-gt-lg-space-around, .layout-align-gt-lg-space-around-center,\n  .layout-align-gt-lg-space-around-start,\n  .layout-align-gt-lg-space-around-end {\n    justify-content: space-around; }\n  .layout-align-gt-lg-space-between, .layout-align-gt-lg-space-between-center,\n  .layout-align-gt-lg-space-between-start,\n  .layout-align-gt-lg-space-between-end {\n    justify-content: space-between; }\n  .layout-align-gt-lg-center-start,\n  .layout-align-gt-lg-start-start,\n  .layout-align-gt-lg-end-start,\n  .layout-align-gt-lg-space-between-start,\n  .layout-align-gt-lg-space-around-start {\n    align-items: flex-start; }\n  .layout-align-gt-lg-center-center,\n  .layout-align-gt-lg-start-center,\n  .layout-align-gt-lg-end-center,\n  .layout-align-gt-lg-space-between-center,\n  .layout-align-gt-lg-space-around-center {\n    align-items: center;\n    max-width: 100%; }\n  .layout-align-gt-lg-center-center > *,\n  .layout-align-gt-lg-start-center > *,\n  .layout-align-gt-lg-end-center > *,\n  .layout-align-gt-lg-space-between-center > *,\n  .layout-align-gt-lg-space-around-center > * {\n    max-width: 100%;\n    box-sizing: border-box; }\n  .layout-align-gt-lg-center-end,\n  .layout-align-gt-lg-start-end,\n  .layout-align-gt-lg-end-end,\n  .layout-align-gt-lg-space-between-end,\n  .layout-align-gt-lg-space-around-end {\n    align-items: flex-end; }\n  .flex-gt-lg {\n    flex: 1;\n    box-sizing: border-box; }\n  .flex-gt-lg-grow {\n    flex: 1 1 100%;\n    box-sizing: border-box; }\n  .flex-gt-lg-initial {\n    flex: 0 1 auto;\n    box-sizing: border-box; }\n  .flex-gt-lg-auto {\n    flex: 1 1 auto;\n    box-sizing: border-box; }\n  .flex-gt-lg-none {\n    flex: 0 0 auto;\n    box-sizing: border-box; }\n  .flex-gt-lg-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-0,\n  .layout-gt-lg-row > .flex-gt-lg-0 {\n    flex: 0 0 0%;\n    max-width: 0%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-0,\n  .layout-gt-lg-column > .flex-gt-lg-0 {\n    flex: 0 0 0%;\n    max-width: 100%;\n    max-height: 0%;\n    box-sizing: border-box; }\n  .flex-gt-lg-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-5,\n  .layout-gt-lg-row > .flex-gt-lg-5 {\n    flex: 0 0 5%;\n    max-width: 5%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-5,\n  .layout-gt-lg-column > .flex-gt-lg-5 {\n    flex: 0 0 5%;\n    max-width: 100%;\n    max-height: 5%;\n    box-sizing: border-box; }\n  .flex-gt-lg-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-10,\n  .layout-gt-lg-row > .flex-gt-lg-10 {\n    flex: 0 0 10%;\n    max-width: 10%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-10,\n  .layout-gt-lg-column > .flex-gt-lg-10 {\n    flex: 0 0 10%;\n    max-width: 100%;\n    max-height: 10%;\n    box-sizing: border-box; }\n  .flex-gt-lg-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-15,\n  .layout-gt-lg-row > .flex-gt-lg-15 {\n    flex: 0 0 15%;\n    max-width: 15%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-15,\n  .layout-gt-lg-column > .flex-gt-lg-15 {\n    flex: 0 0 15%;\n    max-width: 100%;\n    max-height: 15%;\n    box-sizing: border-box; }\n  .flex-gt-lg-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-20,\n  .layout-gt-lg-row > .flex-gt-lg-20 {\n    flex: 0 0 20%;\n    max-width: 20%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-20,\n  .layout-gt-lg-column > .flex-gt-lg-20 {\n    flex: 0 0 20%;\n    max-width: 100%;\n    max-height: 20%;\n    box-sizing: border-box; }\n  .flex-gt-lg-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-25,\n  .layout-gt-lg-row > .flex-gt-lg-25 {\n    flex: 0 0 25%;\n    max-width: 25%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-25,\n  .layout-gt-lg-column > .flex-gt-lg-25 {\n    flex: 0 0 25%;\n    max-width: 100%;\n    max-height: 25%;\n    box-sizing: border-box; }\n  .flex-gt-lg-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-30,\n  .layout-gt-lg-row > .flex-gt-lg-30 {\n    flex: 0 0 30%;\n    max-width: 30%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-30,\n  .layout-gt-lg-column > .flex-gt-lg-30 {\n    flex: 0 0 30%;\n    max-width: 100%;\n    max-height: 30%;\n    box-sizing: border-box; }\n  .flex-gt-lg-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-35,\n  .layout-gt-lg-row > .flex-gt-lg-35 {\n    flex: 0 0 35%;\n    max-width: 35%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-35,\n  .layout-gt-lg-column > .flex-gt-lg-35 {\n    flex: 0 0 35%;\n    max-width: 100%;\n    max-height: 35%;\n    box-sizing: border-box; }\n  .flex-gt-lg-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-40,\n  .layout-gt-lg-row > .flex-gt-lg-40 {\n    flex: 0 0 40%;\n    max-width: 40%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-40,\n  .layout-gt-lg-column > .flex-gt-lg-40 {\n    flex: 0 0 40%;\n    max-width: 100%;\n    max-height: 40%;\n    box-sizing: border-box; }\n  .flex-gt-lg-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-45,\n  .layout-gt-lg-row > .flex-gt-lg-45 {\n    flex: 0 0 45%;\n    max-width: 45%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-45,\n  .layout-gt-lg-column > .flex-gt-lg-45 {\n    flex: 0 0 45%;\n    max-width: 100%;\n    max-height: 45%;\n    box-sizing: border-box; }\n  .flex-gt-lg-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-50,\n  .layout-gt-lg-row > .flex-gt-lg-50 {\n    flex: 0 0 50%;\n    max-width: 50%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-50,\n  .layout-gt-lg-column > .flex-gt-lg-50 {\n    flex: 0 0 50%;\n    max-width: 100%;\n    max-height: 50%;\n    box-sizing: border-box; }\n  .flex-gt-lg-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-55,\n  .layout-gt-lg-row > .flex-gt-lg-55 {\n    flex: 0 0 55%;\n    max-width: 55%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-55,\n  .layout-gt-lg-column > .flex-gt-lg-55 {\n    flex: 0 0 55%;\n    max-width: 100%;\n    max-height: 55%;\n    box-sizing: border-box; }\n  .flex-gt-lg-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-60,\n  .layout-gt-lg-row > .flex-gt-lg-60 {\n    flex: 0 0 60%;\n    max-width: 60%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-60,\n  .layout-gt-lg-column > .flex-gt-lg-60 {\n    flex: 0 0 60%;\n    max-width: 100%;\n    max-height: 60%;\n    box-sizing: border-box; }\n  .flex-gt-lg-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-65,\n  .layout-gt-lg-row > .flex-gt-lg-65 {\n    flex: 0 0 65%;\n    max-width: 65%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-65,\n  .layout-gt-lg-column > .flex-gt-lg-65 {\n    flex: 0 0 65%;\n    max-width: 100%;\n    max-height: 65%;\n    box-sizing: border-box; }\n  .flex-gt-lg-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-70,\n  .layout-gt-lg-row > .flex-gt-lg-70 {\n    flex: 0 0 70%;\n    max-width: 70%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-70,\n  .layout-gt-lg-column > .flex-gt-lg-70 {\n    flex: 0 0 70%;\n    max-width: 100%;\n    max-height: 70%;\n    box-sizing: border-box; }\n  .flex-gt-lg-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-75,\n  .layout-gt-lg-row > .flex-gt-lg-75 {\n    flex: 0 0 75%;\n    max-width: 75%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-75,\n  .layout-gt-lg-column > .flex-gt-lg-75 {\n    flex: 0 0 75%;\n    max-width: 100%;\n    max-height: 75%;\n    box-sizing: border-box; }\n  .flex-gt-lg-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-80,\n  .layout-gt-lg-row > .flex-gt-lg-80 {\n    flex: 0 0 80%;\n    max-width: 80%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-80,\n  .layout-gt-lg-column > .flex-gt-lg-80 {\n    flex: 0 0 80%;\n    max-width: 100%;\n    max-height: 80%;\n    box-sizing: border-box; }\n  .flex-gt-lg-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-85,\n  .layout-gt-lg-row > .flex-gt-lg-85 {\n    flex: 0 0 85%;\n    max-width: 85%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-85,\n  .layout-gt-lg-column > .flex-gt-lg-85 {\n    flex: 0 0 85%;\n    max-width: 100%;\n    max-height: 85%;\n    box-sizing: border-box; }\n  .flex-gt-lg-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-90,\n  .layout-gt-lg-row > .flex-gt-lg-90 {\n    flex: 0 0 90%;\n    max-width: 90%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-90,\n  .layout-gt-lg-column > .flex-gt-lg-90 {\n    flex: 0 0 90%;\n    max-width: 100%;\n    max-height: 90%;\n    box-sizing: border-box; }\n  .flex-gt-lg-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-95,\n  .layout-gt-lg-row > .flex-gt-lg-95 {\n    flex: 0 0 95%;\n    max-width: 95%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-95,\n  .layout-gt-lg-column > .flex-gt-lg-95 {\n    flex: 0 0 95%;\n    max-width: 100%;\n    max-height: 95%;\n    box-sizing: border-box; }\n  .flex-gt-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-100,\n  .layout-gt-lg-row > .flex-gt-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-100,\n  .layout-gt-lg-column > .flex-gt-lg-100 {\n    flex: 0 0 100%;\n    max-width: 100%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-33, .layout-row > .flex-gt-lg-33, .layout-gt-lg-row > .flex-gt-lg-33, .layout-gt-lg-row > .flex-gt-lg-33 {\n    flex: 0 0 33%;\n    max-width: 33%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-34, .layout-row > .flex-gt-lg-34, .layout-gt-lg-row > .flex-gt-lg-34, .layout-gt-lg-row > .flex-gt-lg-34 {\n    flex: 0 0 34%;\n    max-width: 34%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-66, .layout-row > .flex-gt-lg-66, .layout-gt-lg-row > .flex-gt-lg-66, .layout-gt-lg-row > .flex-gt-lg-66 {\n    flex: 0 0 66%;\n    max-width: 66%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-row > .flex-gt-lg-67, .layout-row > .flex-gt-lg-67, .layout-gt-lg-row > .flex-gt-lg-67, .layout-gt-lg-row > .flex-gt-lg-67 {\n    flex: 0 0 67%;\n    max-width: 67%;\n    max-height: 100%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-33, .layout-column > .flex-gt-lg-33, .layout-gt-lg-column > .flex-gt-lg-33, .layout-gt-lg-column > .flex-gt-lg-33 {\n    flex: 0 0 33%;\n    max-width: 100%;\n    max-height: 33%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-34, .layout-column > .flex-gt-lg-34, .layout-gt-lg-column > .flex-gt-lg-34, .layout-gt-lg-column > .flex-gt-lg-34 {\n    flex: 0 0 34%;\n    max-width: 100%;\n    max-height: 34%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-66, .layout-column > .flex-gt-lg-66, .layout-gt-lg-column > .flex-gt-lg-66, .layout-gt-lg-column > .flex-gt-lg-66 {\n    flex: 0 0 66%;\n    max-width: 100%;\n    max-height: 66%;\n    box-sizing: border-box; }\n  .layout-column > .flex-gt-lg-67, .layout-column > .flex-gt-lg-67, .layout-gt-lg-column > .flex-gt-lg-67, .layout-gt-lg-column > .flex-gt-lg-67 {\n    flex: 0 0 67%;\n    max-width: 100%;\n    max-height: 67%;\n    box-sizing: border-box; }\n  .layout-gt-lg, .layout-gt-lg-column, .layout-gt-lg-row {\n    box-sizing: border-box;\n    display: -webkit-box;\n    display: -webkit-flex;\n    display: -moz-box;\n    display: -ms-flexbox;\n    display: flex; }\n  .layout-gt-lg-column {\n    flex-direction: column; }\n  .layout-gt-lg-row {\n    flex-direction: row; } }\n\n@keyframes md-autocomplete-list-out {\n  0% {\n    animation-timing-function: linear; }\n  50% {\n    opacity: 0;\n    height: 40px;\n    animation-timing-function: ease-in; }\n  100% {\n    height: 0;\n    opacity: 0; } }\n\n@keyframes md-autocomplete-list-in {\n  0% {\n    opacity: 0;\n    height: 0;\n    animation-timing-function: ease-out; }\n  50% {\n    opacity: 0;\n    height: 40px; }\n  100% {\n    opacity: 1;\n    height: 40px; } }\n\nmd-autocomplete {\n  border-radius: 2px;\n  display: block;\n  height: 40px;\n  position: relative;\n  overflow: visible;\n  min-width: 190px; }\n  md-autocomplete[disabled] input {\n    cursor: not-allowed; }\n  md-autocomplete[md-floating-label] {\n    border-radius: 0;\n    background: transparent;\n    height: auto; }\n    md-autocomplete[md-floating-label] md-input-container {\n      padding-bottom: 26px; }\n      md-autocomplete[md-floating-label] md-input-container.md-input-has-messages {\n        padding-bottom: 2px; }\n    md-autocomplete[md-floating-label] md-autocomplete-wrap {\n      height: auto; }\n    md-autocomplete[md-floating-label] button {\n      position: absolute;\n      top: auto;\n      bottom: 0;\n      right: 0;\n      width: 30px;\n      height: 30px; }\n  md-autocomplete md-autocomplete-wrap {\n    display: block;\n    position: relative;\n    overflow: visible;\n    height: 40px; }\n    md-autocomplete md-autocomplete-wrap.md-menu-showing {\n      z-index: 51; }\n    md-autocomplete md-autocomplete-wrap md-progress-linear {\n      position: absolute;\n      bottom: -2px;\n      left: 0; }\n      md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate {\n        position: absolute;\n        top: 0;\n        left: 0;\n        width: 100%;\n        height: 3px;\n        transition: none; }\n        md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate .md-container {\n          transition: none;\n          height: 3px; }\n        md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-enter {\n          transition: opacity 0.15s linear; }\n          md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-enter.ng-enter-active {\n            opacity: 1; }\n        md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-leave {\n          transition: opacity 0.15s linear; }\n          md-autocomplete md-autocomplete-wrap md-progress-linear .md-mode-indeterminate.ng-leave.ng-leave-active {\n            opacity: 0; }\n  md-autocomplete input:not(.md-input) {\n    font-size: 14px;\n    box-sizing: border-box;\n    border: none;\n    box-shadow: none;\n    outline: none;\n    background: transparent;\n    width: 100%;\n    padding: 0 15px;\n    line-height: 40px;\n    height: 40px; }\n    md-autocomplete input:not(.md-input)::-ms-clear {\n      display: none; }\n  md-autocomplete button {\n    position: relative;\n    line-height: 20px;\n    text-align: center;\n    width: 30px;\n    height: 30px;\n    cursor: pointer;\n    border: none;\n    border-radius: 50%;\n    padding: 0;\n    font-size: 12px;\n    background: transparent;\n    margin: auto 5px; }\n    md-autocomplete button:after {\n      content: '';\n      position: absolute;\n      top: -6px;\n      right: -6px;\n      bottom: -6px;\n      left: -6px;\n      border-radius: 50%;\n      transform: scale(0);\n      opacity: 0;\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n    md-autocomplete button:focus {\n      outline: none; }\n      md-autocomplete button:focus:after {\n        transform: scale(1);\n        opacity: 1; }\n    md-autocomplete button md-icon {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate3d(-50%, -50%, 0) scale(0.9); }\n      md-autocomplete button md-icon path {\n        stroke-width: 0; }\n    md-autocomplete button.ng-enter {\n      transform: scale(0);\n      transition: transform 0.15s ease-out; }\n      md-autocomplete button.ng-enter.ng-enter-active {\n        transform: scale(1); }\n    md-autocomplete button.ng-leave {\n      transition: transform 0.15s ease-out; }\n      md-autocomplete button.ng-leave.ng-leave-active {\n        transform: scale(0); }\n  @media screen and (-ms-high-contrast: active) {\n    md-autocomplete input {\n      border: 1px solid #fff; }\n    md-autocomplete li:focus {\n      color: #fff; } }\n\n.md-virtual-repeat-container.md-autocomplete-suggestions-container {\n  position: absolute;\n  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25);\n  height: 225.5px;\n  max-height: 225.5px;\n  z-index: 100; }\n\n.md-autocomplete-suggestions {\n  margin: 0;\n  list-style: none;\n  padding: 0; }\n  .md-autocomplete-suggestions li {\n    font-size: 14px;\n    overflow: hidden;\n    padding: 0 15px;\n    line-height: 48px;\n    height: 48px;\n    transition: background 0.15s linear;\n    margin: 0;\n    white-space: nowrap;\n    text-overflow: ellipsis; }\n    .md-autocomplete-suggestions li:focus {\n      outline: none; }\n    .md-autocomplete-suggestions li:not(.md-not-found-wrapper) {\n      cursor: pointer; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-autocomplete,\n  .md-autocomplete-suggestions {\n    border: 1px solid #fff; } }\n\nmd-backdrop {\n  transition: opacity 450ms;\n  position: absolute;\n  top: 0;\n  bottom: 0;\n  left: 0;\n  right: 0;\n  z-index: 50; }\n  md-backdrop.md-menu-backdrop {\n    position: fixed !important;\n    z-index: 98; }\n  md-backdrop.md-select-backdrop {\n    z-index: 81;\n    transition-duration: 0; }\n  md-backdrop.md-dialog-backdrop {\n    z-index: 79; }\n  md-backdrop.md-bottom-sheet-backdrop {\n    z-index: 69; }\n  md-backdrop.md-sidenav-backdrop {\n    z-index: 59; }\n  md-backdrop.md-click-catcher {\n    position: absolute; }\n  md-backdrop.md-opaque {\n    opacity: .48; }\n    md-backdrop.md-opaque.ng-enter {\n      opacity: 0; }\n    md-backdrop.md-opaque.ng-enter.md-opaque.ng-enter-active {\n      opacity: .48; }\n    md-backdrop.md-opaque.ng-leave {\n      opacity: .48;\n      transition: opacity 400ms; }\n    md-backdrop.md-opaque.ng-leave.md-opaque.ng-leave-active {\n      opacity: 0; }\n\nmd-bottom-sheet {\n  position: absolute;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  padding: 8px 16px 88px 16px;\n  z-index: 70;\n  border-top-width: 1px;\n  border-top-style: solid;\n  transform: translate3d(0, 80px, 0);\n  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  transition-property: transform; }\n  md-bottom-sheet.md-has-header {\n    padding-top: 0; }\n  md-bottom-sheet.ng-enter {\n    opacity: 0;\n    transform: translate3d(0, 100%, 0); }\n  md-bottom-sheet.ng-enter-active {\n    opacity: 1;\n    display: block;\n    transform: translate3d(0, 80px, 0) !important; }\n  md-bottom-sheet.ng-leave-active {\n    transform: translate3d(0, 100%, 0) !important;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-bottom-sheet .md-subheader {\n    background-color: transparent;\n    font-family: Roboto, \"Helvetica Neue\", sans-serif;\n    line-height: 56px;\n    padding: 0;\n    white-space: nowrap; }\n  md-bottom-sheet md-inline-icon {\n    display: inline-block;\n    height: 24px;\n    width: 24px;\n    fill: #444; }\n  md-bottom-sheet md-list-item {\n    display: flex;\n    outline: none; }\n    md-bottom-sheet md-list-item:hover {\n      cursor: pointer; }\n  md-bottom-sheet.md-list md-list-item {\n    padding: 0;\n    align-items: center;\n    height: 48px; }\n    md-bottom-sheet.md-list md-list-item div.md-icon-container {\n      display: inline-block;\n      height: 24px;\n      margin-right: 32px; }\n  md-bottom-sheet.md-grid {\n    padding-left: 24px;\n    padding-right: 24px;\n    padding-top: 0; }\n    md-bottom-sheet.md-grid md-list {\n      display: flex;\n      flex-direction: row;\n      flex-wrap: wrap;\n      transition: all 0.5s;\n      align-items: center; }\n    md-bottom-sheet.md-grid md-list-item {\n      flex-direction: column;\n      align-items: center;\n      transition: all 0.5s;\n      height: 96px;\n      margin-top: 8px;\n      margin-bottom: 8px;\n      /* Mixin for how many grid items to show per row */ }\n      @media screen and (max-width: 600px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 33.33333%;\n          max-width: 33.33333%; }\n          md-bottom-sheet.md-grid md-list-item:nth-of-type(3n + 1) {\n            align-items: flex-start; }\n          md-bottom-sheet.md-grid md-list-item:nth-of-type(3n) {\n            align-items: flex-end; } }\n      @media screen and (min-width: 600px) and (max-width: 960px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 25%;\n          max-width: 25%; } }\n      @media screen and (min-width: 960px) and (max-width: 1200px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 16.66667%;\n          max-width: 16.66667%; } }\n      @media screen and (min-width: 1200px) {\n        md-bottom-sheet.md-grid md-list-item {\n          flex: 1 1 14.28571%;\n          max-width: 14.28571%; } }\n      md-bottom-sheet.md-grid md-list-item .md-list-item-content {\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        width: 48px;\n        padding-bottom: 16px; }\n      md-bottom-sheet.md-grid md-list-item .md-grid-item-content {\n        border: 1px solid transparent;\n        display: flex;\n        flex-direction: column;\n        align-items: center;\n        width: 80px; }\n      md-bottom-sheet.md-grid md-list-item .md-icon-container {\n        display: inline-block;\n        box-sizing: border-box;\n        height: 48px;\n        width: 48px;\n        margin: 0 0; }\n      md-bottom-sheet.md-grid md-list-item .md-grid-text {\n        font-weight: 400;\n        line-height: 16px;\n        font-size: 13px;\n        margin: 0;\n        white-space: nowrap;\n        width: 64px;\n        text-align: center;\n        text-transform: none;\n        padding-top: 8px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-bottom-sheet {\n    border: 1px solid #fff; } }\n\nbutton.md-button::-moz-focus-inner {\n  border: 0; }\n\n.md-button {\n  border-radius: 3px;\n  box-sizing: border-box;\n  color: currentColor;\n  user-select: none;\n  position: relative;\n  outline: none;\n  border: 0;\n  display: inline-block;\n  align-items: center;\n  padding: 0 6px;\n  margin: 6px 8px;\n  line-height: 36px;\n  min-height: 36px;\n  background: transparent;\n  white-space: nowrap;\n  min-width: 88px;\n  text-align: center;\n  text-transform: uppercase;\n  font-weight: 500;\n  font-size: 14px;\n  font-style: inherit;\n  font-variant: inherit;\n  font-family: inherit;\n  text-decoration: none;\n  cursor: pointer;\n  overflow: hidden;\n  transition: box-shadow 0.4s cubic-bezier(0.25, 0.8, 0.25, 1), background-color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-button:focus {\n    outline: none; }\n  .md-button:hover, .md-button:focus {\n    text-decoration: none; }\n  .md-button.ng-hide, .md-button.ng-leave {\n    transition: none; }\n  .md-button.md-cornered {\n    border-radius: 0; }\n  .md-button.md-icon {\n    padding: 0;\n    background: none; }\n  .md-button.md-raised:not([disabled]) {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n  .md-button.md-icon-button {\n    margin: 0 6px;\n    height: 48px;\n    min-width: 0;\n    line-height: 48px;\n    padding-left: 0;\n    padding-right: 0;\n    width: 48px;\n    border-radius: 50%; }\n    .md-button.md-icon-button .md-ripple-container {\n      border-radius: 50%;\n      background-clip: padding-box;\n      overflow: hidden;\n      -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n  .md-button.md-fab {\n    z-index: 20;\n    line-height: 56px;\n    min-width: 0;\n    width: 56px;\n    height: 56px;\n    vertical-align: middle;\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n    border-radius: 50%;\n    background-clip: padding-box;\n    overflow: hidden;\n    transition: 0.2s linear;\n    transition-property: background-color, box-shadow; }\n    .md-button.md-fab.md-fab-bottom-right {\n      top: auto;\n      right: 20px;\n      bottom: 20px;\n      left: auto;\n      position: absolute; }\n    .md-button.md-fab.md-fab-bottom-left {\n      top: auto;\n      right: auto;\n      bottom: 20px;\n      left: 20px;\n      position: absolute; }\n    .md-button.md-fab.md-fab-top-right {\n      top: 20px;\n      right: 20px;\n      bottom: auto;\n      left: auto;\n      position: absolute; }\n    .md-button.md-fab.md-fab-top-left {\n      top: 20px;\n      right: auto;\n      bottom: auto;\n      left: 20px;\n      position: absolute; }\n    .md-button.md-fab .md-ripple-container {\n      border-radius: 50%;\n      background-clip: padding-box;\n      overflow: hidden;\n      -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n    .md-button.md-fab.md-mini {\n      line-height: 40px;\n      width: 40px;\n      height: 40px; }\n  .md-button:not([disabled]).md-raised.md-focused,\n  .md-button:not([disabled]).md-fab.md-focused {\n    box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26); }\n  .md-button:not([disabled]).md-raised:active,\n  .md-button:not([disabled]).md-fab:active {\n    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.4); }\n  .md-button .md-ripple-container {\n    border-radius: 3px;\n    background-clip: padding-box;\n    overflow: hidden;\n    -webkit-mask-image: url(\"data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAIAAACQd1PeAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAA5JREFUeNpiYGBgAAgwAAAEAAGbA+oJAAAAAElFTkSuQmCC\"); }\n\n.md-toast-open-top .md-button.md-fab-top-left,\n.md-toast-open-top .md-button.md-fab-top-right {\n  transform: translate3d(0, 42px, 0); }\n  .md-toast-open-top .md-button.md-fab-top-left:not([disabled]).md-focused,\n  .md-toast-open-top .md-button.md-fab-top-left:not([disabled]):hover,\n  .md-toast-open-top .md-button.md-fab-top-right:not([disabled]).md-focused,\n  .md-toast-open-top .md-button.md-fab-top-right:not([disabled]):hover {\n    transform: translate3d(0, 41px, 0); }\n\n.md-toast-open-bottom .md-button.md-fab-bottom-left,\n.md-toast-open-bottom .md-button.md-fab-bottom-right {\n  transform: translate3d(0, -42px, 0); }\n  .md-toast-open-bottom .md-button.md-fab-bottom-left:not([disabled]).md-focused,\n  .md-toast-open-bottom .md-button.md-fab-bottom-left:not([disabled]):hover,\n  .md-toast-open-bottom .md-button.md-fab-bottom-right:not([disabled]).md-focused,\n  .md-toast-open-bottom .md-button.md-fab-bottom-right:not([disabled]):hover {\n    transform: translate3d(0, -43px, 0); }\n\n.md-button-group {\n  display: flex;\n  flex: 1;\n  width: 100%; }\n\n.md-button-group > .md-button {\n  flex: 1;\n  display: block;\n  overflow: hidden;\n  width: 0;\n  border-width: 1px 0px 1px 1px;\n  border-radius: 0;\n  text-align: center;\n  text-overflow: ellipsis;\n  white-space: nowrap; }\n  .md-button-group > .md-button:first-child {\n    border-radius: 2px 0px 0px 2px; }\n  .md-button-group > .md-button:last-child {\n    border-right-width: 1px;\n    border-radius: 0px 2px 2px 0px; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-button.md-raised,\n  .md-button.md-fab {\n    border: 1px solid #fff; } }\n\nmd-card {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  margin: 8px;\n  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }\n  md-card > img,\n  md-card > :not(md-card-content) img {\n    display: flex;\n    flex: 0 0 auto;\n    width: 100%;\n    height: auto; }\n  md-card md-card-content {\n    padding: 16px; }\n  md-card .md-actions {\n    margin: 0; }\n    md-card .md-actions .md-button {\n      margin-bottom: 8px;\n      margin-top: 8px;\n      margin-right: 4px;\n      margin-left: 4px; }\n  md-card md-card-footer {\n    margin-top: auto;\n    padding: 16px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-card {\n    border: 1px solid #fff; } }\n\nmd-checkbox {\n  box-sizing: border-box;\n  display: block;\n  margin: 8px;\n  white-space: nowrap;\n  cursor: pointer;\n  outline: none;\n  user-select: none;\n  padding-left: 18px;\n  padding-right: 0;\n  position: relative;\n  line-height: 26px;\n  min-width: 18px;\n  min-height: 18px; }\n  html[dir=rtl] md-checkbox {\n    padding-left: 0;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-checkbox {\n    padding-left: 0;\n    unicode-bidi: embed; }\n  md-checkbox bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-checkbox bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  html[dir=rtl] md-checkbox {\n    padding-right: 18px;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-checkbox {\n    padding-right: 18px;\n    unicode-bidi: embed; }\n  md-checkbox bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-checkbox bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  md-checkbox.md-focused:not([disabled]) .md-container:before {\n    left: -8px;\n    top: -8px;\n    right: -8px;\n    bottom: -8px; }\n  md-checkbox.md-focused:not([disabled]):not(.md-checked) .md-container:before {\n    background-color: rgba(0, 0, 0, 0.12); }\n  md-checkbox .md-container {\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    box-sizing: border-box;\n    display: inline-block;\n    width: 18px;\n    height: 18px;\n    left: 0;\n    right: auto; }\n    html[dir=rtl] md-checkbox .md-container {\n      left: auto;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-container {\n      left: auto;\n      unicode-bidi: embed; }\n    md-checkbox .md-container bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-checkbox .md-container {\n      right: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-container {\n      right: 0;\n      unicode-bidi: embed; }\n    md-checkbox .md-container bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-container:before {\n      box-sizing: border-box;\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n    md-checkbox .md-container:after {\n      box-sizing: border-box;\n      content: '';\n      position: absolute;\n      top: -10px;\n      right: -10px;\n      bottom: -10px;\n      left: -10px; }\n    md-checkbox .md-container .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: auto;\n      height: auto;\n      left: -15px;\n      top: -15px;\n      right: -15px;\n      bottom: -15px; }\n  md-checkbox.md-align-top-left > div.md-container {\n    top: 12px; }\n  md-checkbox .md-icon {\n    box-sizing: border-box;\n    transition: 240ms;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 18px;\n    height: 18px;\n    border-width: 2px;\n    border-style: solid;\n    border-radius: 2px; }\n  md-checkbox.md-checked .md-icon {\n    border: none; }\n  md-checkbox[disabled] {\n    cursor: no-drop; }\n  md-checkbox.md-checked .md-icon:after {\n    box-sizing: border-box;\n    transform: rotate(45deg);\n    position: absolute;\n    left: 6px;\n    top: 2px;\n    display: table;\n    width: 6px;\n    height: 12px;\n    border-width: 2px;\n    border-style: solid;\n    border-top: 0;\n    border-left: 0;\n    content: ''; }\n  md-checkbox .md-label {\n    box-sizing: border-box;\n    position: relative;\n    display: inline-block;\n    vertical-align: middle;\n    white-space: normal;\n    user-select: text;\n    margin-left: 10px;\n    margin-right: 0; }\n    html[dir=rtl] md-checkbox .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    md-checkbox .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-checkbox .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-checkbox .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    md-checkbox .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-checkbox .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n\n.md-contact-chips .md-chips .md-chip {\n  padding: 0 25px 0 0; }\n  .md-contact-chips .md-chips .md-chip .md-contact-avatar {\n    float: left; }\n    .md-contact-chips .md-chips .md-chip .md-contact-avatar img {\n      height: 32px;\n      border-radius: 16px; }\n  .md-contact-chips .md-chips .md-chip .md-contact-name {\n    display: inline-block;\n    height: 32px;\n    margin-left: 8px; }\n\n.md-contact-suggestion {\n  height: 56px; }\n  .md-contact-suggestion img {\n    height: 40px;\n    border-radius: 20px;\n    margin-top: 8px; }\n  .md-contact-suggestion .md-contact-name {\n    margin-left: 8px;\n    width: 120px; }\n  .md-contact-suggestion .md-contact-name, .md-contact-suggestion .md-contact-email {\n    display: inline-block;\n    overflow: hidden;\n    text-overflow: ellipsis; }\n\n.md-contact-chips-suggestions li {\n  height: 100%; }\n\n.md-chips {\n  display: block;\n  font-family: Roboto, \"Helvetica Neue\", sans-serif;\n  font-size: 16px;\n  padding: 0 0 8px 3px;\n  vertical-align: middle; }\n  .md-chips:after {\n    content: '';\n    display: table;\n    clear: both; }\n  .md-chips:not(.md-readonly) {\n    cursor: text; }\n    .md-chips:not(.md-readonly) .md-chip {\n      padding-right: 22px; }\n  .md-chips .md-chip {\n    cursor: default;\n    border-radius: 16px;\n    display: block;\n    height: 32px;\n    line-height: 32px;\n    margin: 8px 8px 0 0;\n    padding: 0 12px 0 12px;\n    float: left;\n    box-sizing: border-box;\n    max-width: 100%;\n    position: relative; }\n    .md-chips .md-chip .md-chip-content {\n      display: block;\n      padding-right: 4px;\n      float: left;\n      white-space: nowrap;\n      max-width: 100%;\n      overflow: hidden;\n      text-overflow: ellipsis; }\n      .md-chips .md-chip .md-chip-content:focus {\n        outline: none; }\n    .md-chips .md-chip .md-chip-remove-container {\n      position: absolute;\n      right: 0;\n      line-height: 22px; }\n    .md-chips .md-chip .md-chip-remove {\n      text-align: center;\n      width: 32px;\n      height: 32px;\n      min-width: 0;\n      padding: 0;\n      background: transparent;\n      border: none;\n      box-shadow: none;\n      margin: 0;\n      position: relative; }\n      .md-chips .md-chip .md-chip-remove md-icon {\n        height: 18px;\n        width: 18px;\n        position: absolute;\n        top: 50%;\n        left: 50%;\n        transform: translate3d(-50%, -50%, 0); }\n  .md-chips .md-chip-input-container {\n    display: block;\n    line-height: 32px;\n    margin: 8px 8px 0 0;\n    padding: 0 12px 0 12px;\n    float: left; }\n    .md-chips .md-chip-input-container input:not([type]), .md-chips .md-chip-input-container input[type=\"email\"], .md-chips .md-chip-input-container input[type=\"number\"], .md-chips .md-chip-input-container input[type=\"tel\"], .md-chips .md-chip-input-container input[type=\"url\"], .md-chips .md-chip-input-container input[type=\"text\"] {\n      border: 0;\n      height: 32px;\n      line-height: 32px;\n      padding: 0; }\n      .md-chips .md-chip-input-container input:not([type]):focus, .md-chips .md-chip-input-container input[type=\"email\"]:focus, .md-chips .md-chip-input-container input[type=\"number\"]:focus, .md-chips .md-chip-input-container input[type=\"tel\"]:focus, .md-chips .md-chip-input-container input[type=\"url\"]:focus, .md-chips .md-chip-input-container input[type=\"text\"]:focus {\n        outline: none; }\n    .md-chips .md-chip-input-container md-autocomplete, .md-chips .md-chip-input-container md-autocomplete-wrap {\n      background: transparent;\n      height: 32px; }\n    .md-chips .md-chip-input-container md-autocomplete md-autocomplete-wrap {\n      box-shadow: none; }\n    .md-chips .md-chip-input-container md-autocomplete input {\n      position: relative; }\n    .md-chips .md-chip-input-container input {\n      border: 0;\n      height: 32px;\n      line-height: 32px;\n      padding: 0; }\n      .md-chips .md-chip-input-container input:focus {\n        outline: none; }\n    .md-chips .md-chip-input-container md-autocomplete, .md-chips .md-chip-input-container md-autocomplete-wrap {\n      height: 32px; }\n    .md-chips .md-chip-input-container md-autocomplete {\n      box-shadow: none; }\n      .md-chips .md-chip-input-container md-autocomplete input {\n        position: relative; }\n    .md-chips .md-chip-input-container:not(:first-child) {\n      margin: 8px 8px 0 0; }\n    .md-chips .md-chip-input-container input {\n      background: transparent;\n      border-width: 0; }\n  .md-chips md-autocomplete button {\n    display: none; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-chip-input-container,\n  md-chip {\n    border: 1px solid #fff; }\n  .md-chip-input-container md-autocomplete {\n    border: none; } }\n\nmd-content {\n  display: block;\n  position: relative;\n  overflow: auto;\n  -webkit-overflow-scrolling: touch; }\n  md-content[md-scroll-y] {\n    overflow-y: auto;\n    overflow-x: hidden; }\n  md-content[md-scroll-x] {\n    overflow-x: auto;\n    overflow-y: hidden; }\n  md-content.autoScroll {\n    -webkit-overflow-scrolling: auto; }\n\n.md-dialog-is-showing {\n  max-height: 100%; }\n\n.md-dialog-container {\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  position: absolute;\n  top: 0;\n  left: 0;\n  width: 100%;\n  height: 100%;\n  z-index: 80;\n  overflow: hidden; }\n\nmd-dialog {\n  opacity: 0;\n  min-width: 240px;\n  max-width: 80%;\n  max-height: 80%;\n  position: relative;\n  overflow: auto;\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12);\n  display: flex;\n  flex-direction: column; }\n  md-dialog.md-transition-in {\n    opacity: 1;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transform: translate3d(0, 0, 0) scale(1); }\n  md-dialog.md-transition-out {\n    opacity: 0;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transform: translate3d(0, 100%, 0) scale(0.2); }\n  md-dialog > form {\n    display: flex;\n    flex-direction: column;\n    overflow: auto; }\n  md-dialog .md-dialog-content {\n    padding: 24px; }\n  md-dialog md-dialog-content {\n    order: 1;\n    flex-direction: column;\n    overflow: auto;\n    -webkit-overflow-scrolling: touch; }\n    md-dialog md-dialog-content:not([layout=row]) > *:first-child:not(.md-subheader) {\n      margin-top: 0; }\n    md-dialog md-dialog-content:focus {\n      outline: none; }\n    md-dialog md-dialog-content .md-subheader {\n      margin: 0; }\n      md-dialog md-dialog-content .md-subheader.sticky-clone {\n        box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.16); }\n    md-dialog md-dialog-content.sticky-container {\n      padding: 0; }\n      md-dialog md-dialog-content.sticky-container > div {\n        padding: 24px;\n        padding-top: 0; }\n    md-dialog md-dialog-content .md-dialog-content-body {\n      width: 100%; }\n  md-dialog .md-actions {\n    display: flex;\n    order: 2;\n    box-sizing: border-box;\n    align-items: center;\n    justify-content: flex-end;\n    margin-bottom: 0;\n    padding-right: 8px;\n    padding-left: 16px;\n    min-height: 52px;\n    overflow: hidden; }\n    md-dialog .md-actions .md-button {\n      margin-bottom: 8px;\n      margin-left: 8px;\n      margin-right: 0;\n      margin-top: 8px; }\n  md-dialog.md-content-overflow .md-actions {\n    border-top-width: 1px;\n    border-top-style: solid; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-dialog {\n    border: 1px solid #fff; } }\n\nmd-divider {\n  display: block;\n  border-top-width: 1px;\n  border-top-style: solid;\n  margin: 0; }\n  md-divider[md-inset] {\n    margin-left: 80px; }\n\n/** Styles for mdCalendar. */\nmd-calendar {\n  font-size: 13px;\n  user-select: none; }\n\n.md-calendar-scroll-mask {\n  display: inline-block;\n  overflow: hidden;\n  height: 308px; }\n  .md-calendar-scroll-mask .md-virtual-repeat-scroller {\n    overflow-y: scroll;\n    -webkit-overflow-scrolling: touch; }\n    .md-calendar-scroll-mask .md-virtual-repeat-scroller::-webkit-scrollbar {\n      display: none; }\n  .md-calendar-scroll-mask .md-virtual-repeat-offsetter {\n    width: 100%; }\n\n.md-calendar-scroll-container {\n  box-shadow: inset -3px 3px 6px rgba(0, 0, 0, 0.2);\n  display: inline-block;\n  height: 308px;\n  width: 346px; }\n\n.md-calendar-date {\n  height: 44px;\n  width: 44px;\n  text-align: center;\n  padding: 0;\n  border: none; }\n  .md-calendar-date:first-child {\n    padding-left: 16px; }\n  .md-calendar-date:last-child {\n    padding-right: 16px; }\n  .md-calendar-date.md-calendar-date-disabled {\n    cursor: default; }\n\n.md-calendar-date-selection-indicator {\n  transition: background-color, color 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  border-radius: 50%;\n  display: inline-block;\n  width: 40px;\n  height: 40px;\n  line-height: 40px; }\n  .md-calendar-date:not(.md-disabled) .md-calendar-date-selection-indicator {\n    cursor: pointer; }\n\n.md-calendar-month-label {\n  height: 44px;\n  font-size: 14px;\n  font-weight: 500;\n  padding: 0 0 0 24px; }\n\n.md-calendar-day-header {\n  table-layout: fixed;\n  border-spacing: 0;\n  border-collapse: collapse; }\n  .md-calendar-day-header th {\n    height: 44px;\n    width: 44px;\n    text-align: center;\n    padding: 0;\n    border: none;\n    font-weight: normal;\n    height: 40px; }\n    .md-calendar-day-header th:first-child {\n      padding-left: 16px; }\n    .md-calendar-day-header th:last-child {\n      padding-right: 16px; }\n\n.md-calendar {\n  table-layout: fixed;\n  border-spacing: 0;\n  border-collapse: collapse; }\n  .md-calendar tr:last-child td {\n    border-bottom-width: 1px;\n    border-bottom-style: solid; }\n  .md-calendar:first-child {\n    border-top: 1px solid transparent; }\n\n/** Styles for mdDatepicker. */\nmd-datepicker {\n  white-space: nowrap; }\n\n.md-datepicker-button {\n  display: inline-block;\n  box-sizing: border-box;\n  background: none; }\n\n.md-datepicker-input {\n  font-size: 14px;\n  box-sizing: border-box;\n  border: none;\n  box-shadow: none;\n  outline: none;\n  background: transparent;\n  min-width: 120px;\n  max-width: 328px; }\n  .md-datepicker-input::-ms-clear {\n    display: none; }\n\n.md-datepicker-input-container {\n  position: relative;\n  padding-bottom: 5px;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  display: inline-block;\n  width: auto;\n  margin-left: 12px; }\n  .md-datepicker-input-container.md-datepicker-focused {\n    border-bottom-width: 2px; }\n\n.md-datepicker-calendar-pane {\n  position: absolute;\n  top: 0;\n  left: 0;\n  z-index: 99;\n  border-width: 1px;\n  border-style: solid;\n  background: transparent;\n  transform: scale(0);\n  transform-origin: 0 0;\n  transition: transform 0.2s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  .md-datepicker-calendar-pane.md-pane-open {\n    transform: scale(1); }\n\n.md-datepicker-input-mask {\n  height: 40px;\n  width: 340px;\n  position: relative;\n  background: transparent;\n  pointer-events: none;\n  cursor: text; }\n\n.md-datepicker-input-mask-opaque {\n  position: absolute;\n  right: 0;\n  left: 120px;\n  height: 100%; }\n\n.md-datepicker-calendar {\n  opacity: 0;\n  transition: opacity 0.2s cubic-bezier(0.5, 0, 0.25, 1); }\n  .md-pane-open .md-datepicker-calendar {\n    opacity: 1; }\n  .md-datepicker-calendar md-calendar:focus {\n    outline: none; }\n\n.md-datepicker-expand-triangle {\n  position: absolute;\n  top: 50%;\n  left: 50%;\n  transform: translate(-50%, -50%);\n  width: 0;\n  height: 0;\n  border-left: 5px solid transparent;\n  border-right: 5px solid transparent;\n  border-top: 5px solid; }\n\n.md-datepicker-triangle-button {\n  position: absolute;\n  right: 0;\n  top: 0;\n  transform: translateY(-25%) translateX(45%); }\n\n.md-datepicker-triangle-button.md-button.md-icon-button {\n  height: 100%;\n  width: 36px;\n  position: absolute; }\n\nmd-datepicker[disabled] .md-datepicker-input-container {\n  border-bottom-color: transparent; }\n\nmd-datepicker[disabled] .md-datepicker-triangle-button {\n  display: none; }\n\n.md-datepicker-open .md-datepicker-input-container {\n  margin-left: -12px;\n  border: none; }\n\n.md-datepicker-open .md-datepicker-input {\n  margin-left: 24px;\n  height: 40px; }\n\n.md-datepicker-open .md-datepicker-triangle-button {\n  display: none; }\n\n.md-datepicker-pos-adjusted .md-datepicker-input-mask {\n  display: none; }\n\n.md-datepicker-calendar-pane .md-calendar {\n  transform: translateY(-85px);\n  transition: transform 0.65s cubic-bezier(0.25, 0.8, 0.25, 1);\n  transition-delay: 0.125s; }\n\n.md-datepicker-calendar-pane.md-pane-open .md-calendar {\n  transform: translateY(0); }\n\nmd-fab-speed-dial {\n  position: relative;\n  display: flex;\n  align-items: center;\n  z-index: 20;\n  /*\n   * Handle the animations\n   */ }\n  md-fab-speed-dial.md-fab-bottom-right {\n    top: auto;\n    right: 20px;\n    bottom: 20px;\n    left: auto;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-bottom-left {\n    top: auto;\n    right: auto;\n    bottom: 20px;\n    left: 20px;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-top-right {\n    top: 20px;\n    right: 20px;\n    bottom: auto;\n    left: auto;\n    position: absolute; }\n  md-fab-speed-dial.md-fab-top-left {\n    top: 20px;\n    right: auto;\n    bottom: auto;\n    left: 20px;\n    position: absolute; }\n  md-fab-speed-dial:not(.md-hover-full) {\n    pointer-events: none; }\n    md-fab-speed-dial:not(.md-hover-full) md-fab-trigger, md-fab-speed-dial:not(.md-hover-full) .md-fab-action-item {\n      pointer-events: auto; }\n    md-fab-speed-dial:not(.md-hover-full).md-is-open {\n      pointer-events: auto; }\n  md-fab-speed-dial .md-css-variables {\n    z-index: 20; }\n  md-fab-speed-dial.md-is-open .md-fab-action-item {\n    visibility: visible;\n    align-items: center; }\n  md-fab-speed-dial md-fab-actions {\n    display: flex;\n    height: auto; }\n    md-fab-speed-dial md-fab-actions .md-fab-action-item {\n      visibility: hidden;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-down {\n    flex-direction: column; }\n    md-fab-speed-dial.md-down md-fab-trigger {\n      order: 1; }\n    md-fab-speed-dial.md-down md-fab-actions {\n      flex-direction: column;\n      order: 2; }\n  md-fab-speed-dial.md-up {\n    flex-direction: column; }\n    md-fab-speed-dial.md-up md-fab-trigger {\n      order: 2; }\n    md-fab-speed-dial.md-up md-fab-actions {\n      flex-direction: column-reverse;\n      order: 1; }\n  md-fab-speed-dial.md-left {\n    flex-direction: row; }\n    md-fab-speed-dial.md-left md-fab-trigger {\n      order: 2; }\n    md-fab-speed-dial.md-left md-fab-actions {\n      flex-direction: row-reverse;\n      order: 1; }\n      md-fab-speed-dial.md-left md-fab-actions .md-fab-action-item {\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-right {\n    flex-direction: row; }\n    md-fab-speed-dial.md-right md-fab-trigger {\n      order: 1; }\n    md-fab-speed-dial.md-right md-fab-actions {\n      flex-direction: row;\n      order: 2; }\n      md-fab-speed-dial.md-right md-fab-actions .md-fab-action-item {\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-fab-speed-dial.md-scale .md-fab-action-item {\n    opacity: 0;\n    transform: scale(0);\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 0.14286s; }\n\nmd-fab-toolbar {\n  display: block;\n  /*\n   * Closed styling\n   */\n  /*\n   * Hover styling\n   */ }\n  md-fab-toolbar.md-fab-bottom-right {\n    top: auto;\n    right: 20px;\n    bottom: 20px;\n    left: auto;\n    position: absolute; }\n  md-fab-toolbar.md-fab-bottom-left {\n    top: auto;\n    right: auto;\n    bottom: 20px;\n    left: 20px;\n    position: absolute; }\n  md-fab-toolbar.md-fab-top-right {\n    top: 20px;\n    right: 20px;\n    bottom: auto;\n    left: auto;\n    position: absolute; }\n  md-fab-toolbar.md-fab-top-left {\n    top: 20px;\n    right: auto;\n    bottom: auto;\n    left: 20px;\n    position: absolute; }\n  md-fab-toolbar .md-fab-toolbar-wrapper {\n    display: block;\n    position: relative;\n    overflow: hidden;\n    height: 68px; }\n  md-fab-toolbar md-fab-trigger {\n    position: absolute;\n    z-index: 20; }\n    md-fab-toolbar md-fab-trigger button {\n      overflow: visible !important; }\n    md-fab-toolbar md-fab-trigger .md-fab-toolbar-background {\n      display: block;\n      position: absolute;\n      z-index: 21;\n      opacity: 1;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n    md-fab-toolbar md-fab-trigger md-icon {\n      position: relative;\n      z-index: 22;\n      opacity: 1;\n      transition: all 200ms ease-in; }\n  md-fab-toolbar.md-left md-fab-trigger {\n    right: 0; }\n  md-fab-toolbar.md-left .md-toolbar-tools {\n    flex-direction: row-reverse; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:first-child {\n      margin-right: 0.6rem; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:first-child {\n      margin-left: -0.8rem; }\n    md-fab-toolbar.md-left .md-toolbar-tools > .md-button:last-child {\n      margin-right: 8px; }\n  md-fab-toolbar.md-right md-fab-trigger {\n    left: 0; }\n  md-fab-toolbar.md-right .md-toolbar-tools {\n    flex-direction: row; }\n  md-fab-toolbar md-toolbar {\n    background-color: transparent !important;\n    pointer-events: none;\n    z-index: 23; }\n    md-fab-toolbar md-toolbar .md-toolbar-tools {\n      padding: 0 20px;\n      margin-top: 3px; }\n    md-fab-toolbar md-toolbar .md-fab-action-item {\n      opacity: 0;\n      transform: scale(0);\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-duration: 0.15s; }\n  md-fab-toolbar.md-is-open md-fab-trigger > button {\n    box-shadow: none; }\n    md-fab-toolbar.md-is-open md-fab-trigger > button md-icon {\n      opacity: 0; }\n  md-fab-toolbar.md-is-open .md-fab-action-item {\n    opacity: 1;\n    transform: scale(1); }\n\nmd-grid-list {\n  box-sizing: border-box;\n  display: block;\n  position: relative; }\n  md-grid-list md-grid-tile,\n  md-grid-list md-grid-tile > figure,\n  md-grid-list md-grid-tile-header,\n  md-grid-list md-grid-tile-footer {\n    box-sizing: border-box; }\n  md-grid-list md-grid-tile {\n    display: block;\n    position: absolute; }\n    md-grid-list md-grid-tile figure {\n      display: flex;\n      align-items: center;\n      justify-content: center;\n      height: 100%;\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      left: 0;\n      padding: 0;\n      margin: 0; }\n    md-grid-list md-grid-tile md-grid-tile-header,\n    md-grid-list md-grid-tile md-grid-tile-footer {\n      display: flex;\n      flex-direction: row;\n      align-items: center;\n      height: 48px;\n      color: #fff;\n      background: rgba(0, 0, 0, 0.18);\n      overflow: hidden;\n      position: absolute;\n      left: 0;\n      right: 0; }\n      md-grid-list md-grid-tile md-grid-tile-header h3,\n      md-grid-list md-grid-tile md-grid-tile-header h4,\n      md-grid-list md-grid-tile md-grid-tile-footer h3,\n      md-grid-list md-grid-tile md-grid-tile-footer h4 {\n        font-weight: 400;\n        margin: 0 0 0 16px; }\n      md-grid-list md-grid-tile md-grid-tile-header h3,\n      md-grid-list md-grid-tile md-grid-tile-footer h3 {\n        font-size: 14px; }\n      md-grid-list md-grid-tile md-grid-tile-header h4,\n      md-grid-list md-grid-tile md-grid-tile-footer h4 {\n        font-size: 12px; }\n    md-grid-list md-grid-tile md-grid-tile-header {\n      top: 0; }\n    md-grid-list md-grid-tile md-grid-tile-footer {\n      bottom: 0; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-grid-tile {\n    border: 1px solid #fff; }\n  md-grid-tile-footer {\n    border-top: 1px solid #fff; } }\n\nmd-icon {\n  margin: auto;\n  background-repeat: no-repeat no-repeat;\n  display: inline-block;\n  vertical-align: middle;\n  fill: currentColor;\n  height: 24px;\n  width: 24px; }\n  md-icon svg {\n    pointer-events: none; }\n  md-icon[md-font-icon] {\n    line-height: 1;\n    width: auto; }\n\nmd-input-container {\n  display: flex;\n  position: relative;\n  flex-direction: column;\n  padding: 2px;\n  padding-bottom: 26px;\n  /*\n   * The .md-input class is added to the input/textarea\n   */ }\n  md-input-container.md-input-has-messages {\n    padding-bottom: 2px; }\n  md-input-container > md-icon {\n    position: absolute;\n    top: 5px;\n    left: 2px; }\n    md-input-container > md-icon + input {\n      margin-left: 36px; }\n  md-input-container textarea,\n  md-input-container input[type=\"text\"],\n  md-input-container input[type=\"password\"],\n  md-input-container input[type=\"datetime\"],\n  md-input-container input[type=\"datetime-local\"],\n  md-input-container input[type=\"date\"],\n  md-input-container input[type=\"month\"],\n  md-input-container input[type=\"time\"],\n  md-input-container input[type=\"week\"],\n  md-input-container input[type=\"number\"],\n  md-input-container input[type=\"email\"],\n  md-input-container input[type=\"url\"],\n  md-input-container input[type=\"search\"],\n  md-input-container input[type=\"tel\"],\n  md-input-container input[type=\"color\"] {\n    /* remove default appearance from all input/textarea */\n    -moz-appearance: none;\n    -webkit-appearance: none; }\n  md-input-container input[type=\"date\"],\n  md-input-container input[type=\"datetime-local\"],\n  md-input-container input[type=\"month\"],\n  md-input-container input[type=\"time\"],\n  md-input-container input[type=\"week\"] {\n    min-height: 26px; }\n  md-input-container textarea {\n    resize: none;\n    overflow: hidden; }\n  md-input-container textarea.md-input {\n    min-height: 26px;\n    -ms-flex-preferred-size: auto; }\n  md-input-container label {\n    position: relative;\n    top: -2px; }\n  md-input-container label:not(.md-no-float),\n  md-input-container .md-placeholder {\n    order: 1;\n    pointer-events: none;\n    -webkit-font-smoothing: antialiased;\n    padding-left: 2px;\n    z-index: 1;\n    transform: translate3d(0, 28px, 0) scale(1);\n    transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.25s;\n    transform-origin: left top; }\n    html[dir=rtl] md-input-container label:not(.md-no-float),\n    html[dir=rtl] md-input-container .md-placeholder {\n      transform-origin: right top;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-input-container label:not(.md-no-float),\n    body[dir=rtl] md-input-container .md-placeholder {\n      transform-origin: right top;\n      unicode-bidi: embed; }\n    md-input-container label:not(.md-no-float) bdo[dir=rtl],\n    md-input-container .md-placeholder bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-input-container label:not(.md-no-float) bdo[dir=ltr],\n    md-input-container .md-placeholder bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n  md-input-container .md-placeholder {\n    position: absolute;\n    top: 0;\n    opacity: 0;\n    transition-property: opacity, transform;\n    transform: translate3d(0, 30px, 0); }\n    md-input-container .md-placeholder.md-static {\n      position: static; }\n  md-input-container.md-input-focused .md-placeholder {\n    opacity: 1;\n    transform: translate3d(0, 24px, 0); }\n  md-input-container.md-input-has-value .md-placeholder {\n    transition: none;\n    opacity: 0; }\n  md-input-container:not(.md-input-has-value) input:not(:focus),\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-ampm-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-day-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-hour-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-millisecond-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-minute-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-month-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-second-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-week-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-year-field,\n  md-input-container:not(.md-input-has-value) input:not(:focus)::-webkit-datetime-edit-text {\n    color: transparent; }\n  md-input-container .md-input {\n    order: 2;\n    display: block;\n    margin-top: 0;\n    background: none;\n    padding-top: 2px;\n    padding-bottom: 1px;\n    padding-left: 2px;\n    padding-right: 2px;\n    border-width: 0 0 1px 0;\n    line-height: 26px;\n    -ms-flex-preferred-size: 26px;\n    border-radius: 0;\n    border-style: solid;\n    width: auto; }\n    md-input-container .md-input:focus {\n      outline: none; }\n    md-input-container .md-input:invalid {\n      outline: none;\n      box-shadow: none; }\n    md-input-container .md-input.md-no-flex {\n      flex: none !important; }\n  md-input-container .md-char-counter {\n    position: absolute;\n    right: 2px;\n    bottom: 7px; }\n  md-input-container ng-messages, md-input-container data-ng-messages, md-input-container x-ng-messages,\n  md-input-container [ng-messages], md-input-container [data-ng-messages], md-input-container [x-ng-messages] {\n    position: relative;\n    order: 4;\n    min-height: 24px; }\n    md-input-container ng-messages .md-char-counter, md-input-container data-ng-messages .md-char-counter, md-input-container x-ng-messages .md-char-counter,\n    md-input-container [ng-messages] .md-char-counter, md-input-container [data-ng-messages] .md-char-counter, md-input-container [x-ng-messages] .md-char-counter {\n      position: absolute;\n      top: 0;\n      right: 0;\n      bottom: auto; }\n  md-input-container ng-message, md-input-container data-ng-message, md-input-container x-ng-message,\n  md-input-container [ng-message], md-input-container [data-ng-message], md-input-container [x-ng-message],\n  md-input-container [ng-message-exp], md-input-container [data-ng-message-exp], md-input-container [x-ng-message-exp],\n  md-input-container .md-char-counter {\n    font-size: 12px;\n    line-height: 14px;\n    overflow: hidden;\n    padding-top: 5px; }\n    md-input-container ng-message:not(.md-char-counter), md-input-container data-ng-message:not(.md-char-counter), md-input-container x-ng-message:not(.md-char-counter),\n    md-input-container [ng-message]:not(.md-char-counter), md-input-container [data-ng-message]:not(.md-char-counter), md-input-container [x-ng-message]:not(.md-char-counter),\n    md-input-container [ng-message-exp]:not(.md-char-counter), md-input-container [data-ng-message-exp]:not(.md-char-counter), md-input-container [x-ng-message-exp]:not(.md-char-counter),\n    md-input-container .md-char-counter:not(.md-char-counter) {\n      padding-right: 50px; }\n    md-input-container ng-message.ng-enter, md-input-container data-ng-message.ng-enter, md-input-container x-ng-message.ng-enter,\n    md-input-container [ng-message].ng-enter, md-input-container [data-ng-message].ng-enter, md-input-container [x-ng-message].ng-enter,\n    md-input-container [ng-message-exp].ng-enter, md-input-container [data-ng-message-exp].ng-enter, md-input-container [x-ng-message-exp].ng-enter,\n    md-input-container .md-char-counter.ng-enter {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-delay: 0.2s;\n      transition-duration: 0.2s; }\n    md-input-container ng-message.ng-leave, md-input-container data-ng-message.ng-leave, md-input-container x-ng-message.ng-leave,\n    md-input-container [ng-message].ng-leave, md-input-container [data-ng-message].ng-leave, md-input-container [x-ng-message].ng-leave,\n    md-input-container [ng-message-exp].ng-leave, md-input-container [data-ng-message-exp].ng-leave, md-input-container [x-ng-message-exp].ng-leave,\n    md-input-container .md-char-counter.ng-leave {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transition-duration: 0.26667s; }\n    md-input-container ng-message.ng-enter,\n    md-input-container ng-message.ng-leave.ng-leave-active, md-input-container data-ng-message.ng-enter,\n    md-input-container data-ng-message.ng-leave.ng-leave-active, md-input-container x-ng-message.ng-enter,\n    md-input-container x-ng-message.ng-leave.ng-leave-active,\n    md-input-container [ng-message].ng-enter,\n    md-input-container [ng-message].ng-leave.ng-leave-active, md-input-container [data-ng-message].ng-enter,\n    md-input-container [data-ng-message].ng-leave.ng-leave-active, md-input-container [x-ng-message].ng-enter,\n    md-input-container [x-ng-message].ng-leave.ng-leave-active,\n    md-input-container [ng-message-exp].ng-enter,\n    md-input-container [ng-message-exp].ng-leave.ng-leave-active, md-input-container [data-ng-message-exp].ng-enter,\n    md-input-container [data-ng-message-exp].ng-leave.ng-leave-active, md-input-container [x-ng-message-exp].ng-enter,\n    md-input-container [x-ng-message-exp].ng-leave.ng-leave-active,\n    md-input-container .md-char-counter.ng-enter,\n    md-input-container .md-char-counter.ng-leave.ng-leave-active {\n      margin-top: -19px;\n      opacity: 0; }\n    md-input-container ng-message.ng-leave,\n    md-input-container ng-message.ng-enter.ng-enter-active, md-input-container data-ng-message.ng-leave,\n    md-input-container data-ng-message.ng-enter.ng-enter-active, md-input-container x-ng-message.ng-leave,\n    md-input-container x-ng-message.ng-enter.ng-enter-active,\n    md-input-container [ng-message].ng-leave,\n    md-input-container [ng-message].ng-enter.ng-enter-active, md-input-container [data-ng-message].ng-leave,\n    md-input-container [data-ng-message].ng-enter.ng-enter-active, md-input-container [x-ng-message].ng-leave,\n    md-input-container [x-ng-message].ng-enter.ng-enter-active,\n    md-input-container [ng-message-exp].ng-leave,\n    md-input-container [ng-message-exp].ng-enter.ng-enter-active, md-input-container [data-ng-message-exp].ng-leave,\n    md-input-container [data-ng-message-exp].ng-enter.ng-enter-active, md-input-container [x-ng-message-exp].ng-leave,\n    md-input-container [x-ng-message-exp].ng-enter.ng-enter-active,\n    md-input-container .md-char-counter.ng-leave,\n    md-input-container .md-char-counter.ng-enter.ng-enter-active {\n      margin-top: 0;\n      opacity: 1; }\n  md-input-container.md-input-focused label:not(.md-no-float),\n  md-input-container.md-input-has-placeholder label:not(.md-no-float),\n  md-input-container.md-input-has-value label:not(.md-no-float) {\n    transform: translate3d(0, 6px, 0) scale(0.75); }\n  md-input-container.md-input-has-value label {\n    transition: none; }\n  md-input-container.md-input-focused .md-input,\n  md-input-container .md-input.ng-invalid.ng-dirty {\n    padding-bottom: 0;\n    border-width: 0 0 2px 0; }\n  md-input-container .md-input[disabled],\n  [disabled] md-input-container .md-input {\n    background-position: 0 bottom;\n    background-size: 4px 1px;\n    background-repeat: repeat-x;\n    margin-bottom: -1px; }\n\nmd-input-container.md-icon-float {\n  margin-top: -16px;\n  transition: margin-top 0.5s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-input-container.md-icon-float > label {\n    pointer-events: none;\n    position: absolute;\n    margin-left: 36px; }\n  md-input-container.md-icon-float > md-icon {\n    top: 26px;\n    left: 2px; }\n    md-input-container.md-icon-float > md-icon + input,\n    md-input-container.md-icon-float > md-icon + textarea {\n      margin-left: 36px; }\n  md-input-container.md-icon-float > input,\n  md-input-container.md-icon-float > textarea {\n    padding-top: 24px; }\n  md-input-container.md-icon-float.md-input-focused,\n  md-input-container.md-icon-float.md-input-has-value {\n    margin-top: -8px; }\n    md-input-container.md-icon-float.md-input-focused label,\n    md-input-container.md-icon-float.md-input-has-value label {\n      transform: translate3d(0, 6px, 0) scale(0.75);\n      transition: transform cubic-bezier(0.25, 0.8, 0.25, 1) 0.5s; }\n\nmd-input-container.md-icon-right input {\n  margin-right: 36px; }\n  md-input-container.md-icon-right input + md-icon {\n    top: 26px;\n    right: 2px;\n    margin-right: 0; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-input-container.md-default-theme > md-icon {\n    fill: #fff; } }\n\nmd-list {\n  display: block;\n  padding: 8px 0px 8px 0px; }\n  md-list .md-subheader {\n    font-size: 14px;\n    font-weight: 500;\n    letter-spacing: 0.010em;\n    line-height: 1.2em; }\n\nmd-list-item.md-proxy-focus.md-focused .md-no-style {\n  transition: background-color 0.15s linear; }\n\nmd-list-item.md-no-proxy,\nmd-list-item .md-no-style {\n  position: relative;\n  padding: 0px 16px;\n  flex: 1 1 auto; }\n  md-list-item.md-no-proxy.md-button,\n  md-list-item .md-no-style.md-button {\n    font-size: inherit;\n    height: inherit;\n    text-align: left;\n    text-transform: none;\n    width: 100%;\n    white-space: normal;\n    flex-direction: inherit;\n    align-items: inherit; }\n  md-list-item.md-no-proxy:focus,\n  md-list-item .md-no-style:focus {\n    outline: none; }\n\nmd-list-item.md-with-secondary {\n  position: relative; }\n\nmd-list-item.md-clickable:hover {\n  cursor: pointer; }\n\nmd-list-item md-divider {\n  position: absolute;\n  bottom: 0;\n  left: 0;\n  width: 100%; }\n  md-list-item md-divider[md-inset] {\n    left: 96px;\n    width: calc(100% - 96px);\n    margin: 0; }\n\nmd-list-item, md-list-item .md-list-item-inner {\n  display: flex;\n  justify-content: flex-start;\n  align-items: center;\n  min-height: 48px;\n  height: auto; }\n  md-list-item > div.md-primary > md-icon:not(.md-avatar-icon),\n  md-list-item > div.md-secondary > md-icon:not(.md-avatar-icon),\n  md-list-item > md-icon:first-child:not(.md-avatar-icon),\n  md-list-item > md-icon.md-secondary:not(.md-avatar-icon), md-list-item .md-list-item-inner > div.md-primary > md-icon:not(.md-avatar-icon),\n  md-list-item .md-list-item-inner > div.md-secondary > md-icon:not(.md-avatar-icon),\n  md-list-item .md-list-item-inner > md-icon:first-child:not(.md-avatar-icon),\n  md-list-item .md-list-item-inner > md-icon.md-secondary:not(.md-avatar-icon) {\n    width: 24px;\n    margin-top: 16px;\n    margin-bottom: 12px;\n    box-sizing: content-box; }\n  md-list-item > div.md-primary > md-checkbox,\n  md-list-item > div.md-secondary > md-checkbox,\n  md-list-item > md-checkbox:first-child,\n  md-list-item md-checkbox.md-secondary, md-list-item .md-list-item-inner > div.md-primary > md-checkbox,\n  md-list-item .md-list-item-inner > div.md-secondary > md-checkbox,\n  md-list-item .md-list-item-inner > md-checkbox:first-child,\n  md-list-item .md-list-item-inner md-checkbox.md-secondary {\n    align-self: center; }\n    md-list-item > div.md-primary > md-checkbox .md-label,\n    md-list-item > div.md-secondary > md-checkbox .md-label,\n    md-list-item > md-checkbox:first-child .md-label,\n    md-list-item md-checkbox.md-secondary .md-label, md-list-item .md-list-item-inner > div.md-primary > md-checkbox .md-label,\n    md-list-item .md-list-item-inner > div.md-secondary > md-checkbox .md-label,\n    md-list-item .md-list-item-inner > md-checkbox:first-child .md-label,\n    md-list-item .md-list-item-inner md-checkbox.md-secondary .md-label {\n      display: none; }\n  md-list-item > md-icon:first-child:not(.md-avatar-icon), md-list-item .md-list-item-inner > md-icon:first-child:not(.md-avatar-icon) {\n    margin-right: 32px; }\n  md-list-item > md-checkbox:first-child, md-list-item .md-list-item-inner > md-checkbox:first-child {\n    width: 24px;\n    margin-left: 3px;\n    margin-right: 29px; }\n  md-list-item > .md-avatar, md-list-item .md-avatar-icon, md-list-item .md-list-item-inner > .md-avatar, md-list-item .md-list-item-inner .md-avatar-icon {\n    margin-top: 8px;\n    margin-bottom: 8px;\n    margin-right: 16px;\n    border-radius: 50%;\n    box-sizing: content-box; }\n  md-list-item > .md-avatar, md-list-item .md-list-item-inner > .md-avatar {\n    width: 40px;\n    height: 40px; }\n  md-list-item > .md-avatar-icon, md-list-item .md-list-item-inner > .md-avatar-icon {\n    padding: 8px; }\n  md-list-item md-checkbox.md-secondary,\n  md-list-item md-switch.md-secondary, md-list-item .md-list-item-inner md-checkbox.md-secondary,\n  md-list-item .md-list-item-inner md-switch.md-secondary {\n    margin-right: 0;\n    margin-top: 0;\n    margin-bottom: 0; }\n  md-list-item button.md-button.md-secondary-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container {\n    background-color: transparent;\n    align-self: center;\n    border-radius: 50%;\n    margin: 0px;\n    min-width: 0px; }\n    md-list-item button.md-button.md-secondary-container .md-ripple,\n    md-list-item button.md-button.md-secondary-container .md-ripple-container, md-list-item .md-list-item-inner button.md-button.md-secondary-container .md-ripple,\n    md-list-item .md-list-item-inner button.md-button.md-secondary-container .md-ripple-container {\n      border-radius: 50%; }\n  md-list-item .md-secondary-container,\n  md-list-item .md-secondary, md-list-item .md-list-item-inner .md-secondary-container,\n  md-list-item .md-list-item-inner .md-secondary {\n    margin-left: 16px;\n    position: absolute;\n    right: 16px;\n    top: 50%;\n    transform: translate3d(0, -50%, 0); }\n  md-list-item > .md-button.md-secondary-container > .md-secondary, md-list-item .md-list-item-inner > .md-button.md-secondary-container > .md-secondary {\n    margin-left: 0px;\n    position: static; }\n  md-list-item > p, md-list-item > .md-list-item-inner > p, md-list-item .md-list-item-inner > p, md-list-item .md-list-item-inner > .md-list-item-inner > p {\n    flex: 1;\n    margin: 0; }\n\nmd-list-item.md-2-line,\nmd-list-item.md-2-line > .md-no-style,\nmd-list-item.md-3-line,\nmd-list-item.md-3-line > .md-no-style {\n  align-items: flex-start;\n  justify-content: center; }\n  md-list-item.md-2-line .md-list-item-text,\n  md-list-item.md-2-line > .md-no-style .md-list-item-text,\n  md-list-item.md-3-line .md-list-item-text,\n  md-list-item.md-3-line > .md-no-style .md-list-item-text {\n    flex: 1;\n    margin: auto;\n    text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text.md-offset,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text.md-offset,\n    md-list-item.md-3-line .md-list-item-text.md-offset,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text.md-offset {\n      margin-left: 56px; }\n    md-list-item.md-2-line .md-list-item-text h3,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text h3,\n    md-list-item.md-3-line .md-list-item-text h3,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text h3 {\n      font-size: 16px;\n      font-weight: 400;\n      letter-spacing: 0.010em;\n      margin: 0 0 0px 0;\n      line-height: 1.2em;\n      overflow: hidden;\n      white-space: nowrap;\n      text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text h4,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text h4,\n    md-list-item.md-3-line .md-list-item-text h4,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text h4 {\n      font-size: 14px;\n      letter-spacing: 0.010em;\n      margin: 3px 0 1px 0;\n      font-weight: 400;\n      line-height: 1.2em;\n      overflow: hidden;\n      white-space: nowrap;\n      text-overflow: ellipsis; }\n    md-list-item.md-2-line .md-list-item-text p,\n    md-list-item.md-2-line > .md-no-style .md-list-item-text p,\n    md-list-item.md-3-line .md-list-item-text p,\n    md-list-item.md-3-line > .md-no-style .md-list-item-text p {\n      font-size: 14px;\n      font-weight: 500;\n      letter-spacing: 0.010em;\n      margin: 0 0 0 0;\n      line-height: 1.6em; }\n\nmd-list-item.md-2-line,\nmd-list-item.md-2-line > .md-no-style {\n  height: auto;\n  min-height: 72px; }\n  md-list-item.md-2-line.md-long-text,\n  md-list-item.md-2-line > .md-no-style.md-long-text {\n    margin: 1.6em; }\n  md-list-item.md-2-line > .md-avatar,\n  md-list-item.md-2-line .md-avatar-icon,\n  md-list-item.md-2-line > .md-no-style > .md-avatar, md-list-item.md-2-line > .md-no-style .md-avatar-icon {\n    margin-top: 12px; }\n  md-list-item.md-2-line > md-icon:first-child,\n  md-list-item.md-2-line > .md-no-style > md-icon:first-child {\n    align-self: flex-start; }\n  md-list-item.md-2-line .md-list-item-text,\n  md-list-item.md-2-line > .md-no-style .md-list-item-text {\n    flex: 1; }\n\nmd-list-item.md-3-line,\nmd-list-item.md-3-line > .md-no-style {\n  height: auto;\n  min-height: 88px; }\n  md-list-item.md-3-line.md-long-text,\n  md-list-item.md-3-line > .md-no-style.md-long-text {\n    margin: 1.6em; }\n  md-list-item.md-3-line > md-icon:first-child,\n  md-list-item.md-3-line > .md-avatar,\n  md-list-item.md-3-line > .md-no-style > md-icon:first-child,\n  md-list-item.md-3-line > .md-no-style > .md-avatar {\n    margin-top: 16px; }\n\n.md-open-menu-container {\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: 99;\n  opacity: 0;\n  border-radius: 2px; }\n  .md-open-menu-container md-menu-divider {\n    margin-top: 4px;\n    margin-bottom: 4px;\n    height: 1px;\n    width: 100%; }\n  .md-open-menu-container md-menu-content > * {\n    opacity: 0; }\n  .md-open-menu-container:not(.md-clickable) {\n    pointer-events: none; }\n  .md-open-menu-container.md-active {\n    opacity: 1;\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    transition-duration: 200ms; }\n    .md-open-menu-container.md-active > md-menu-content > * {\n      opacity: 1;\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n      transition-duration: 200ms;\n      transition-delay: 100ms; }\n  .md-open-menu-container.md-leave {\n    opacity: 0;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 250ms; }\n\nmd-menu-content {\n  display: flex;\n  flex-direction: column;\n  padding: 8px 0;\n  max-height: 304px;\n  overflow-y: auto; }\n  md-menu-content.md-dense {\n    max-height: 208px; }\n    md-menu-content.md-dense md-menu-item {\n      height: 32px;\n      min-height: 0px; }\n\nmd-menu-item {\n  display: flex;\n  flex-direction: row;\n  min-height: 48px;\n  height: 48px;\n  align-content: center;\n  justify-content: flex-start; }\n  md-menu-item > * {\n    width: 100%;\n    margin: auto 0;\n    padding-left: 16px;\n    padding-right: 16px; }\n  md-menu-item > a.md-button {\n    display: flex; }\n  md-menu-item > .md-button {\n    border-radius: 0;\n    margin: auto 0;\n    font-size: 15px;\n    text-transform: none;\n    font-weight: 400;\n    text-align: start;\n    height: 100%;\n    padding-left: 16px;\n    padding-right: 16px;\n    display: inline-block;\n    align-items: baseline;\n    align-content: left;\n    width: 100%; }\n    md-menu-item > .md-button md-icon {\n      margin: auto 16px auto 0; }\n    md-menu-item > .md-button p {\n      display: inline-block;\n      margin: auto; }\n    md-menu-item > .md-button span {\n      margin-top: auto;\n      margin-bottom: auto; }\n    md-menu-item > .md-button .md-ripple-container {\n      border-radius: inherit; }\n\n.md-menu {\n  padding: 8px 0; }\n\nmd-toolbar .md-menu {\n  height: auto;\n  margin: auto; }\n\n@media (max-width: 599px) {\n  md-menu-content {\n    min-width: 112px; }\n  md-menu-content[width=\"3\"] {\n    min-width: 168px; }\n  md-menu-content[width=\"4\"] {\n    min-width: 224px; }\n  md-menu-content[width=\"5\"] {\n    min-width: 280px; }\n  md-menu-content[width=\"6\"] {\n    min-width: 336px; }\n  md-menu-content[width=\"7\"] {\n    min-width: 392px; } }\n\n@media (min-width: 600px) {\n  md-menu-content {\n    min-width: 96px; }\n  md-menu-content[width=\"3\"] {\n    min-width: 192px; }\n  md-menu-content[width=\"4\"] {\n    min-width: 256px; }\n  md-menu-content[width=\"5\"] {\n    min-width: 320px; }\n  md-menu-content[width=\"6\"] {\n    min-width: 384px; }\n  md-menu-content[width=\"7\"] {\n    min-width: 448px; } }\n\nmd-toolbar.md-menu-toolbar h2.md-toolbar-tools {\n  line-height: 1rem;\n  height: auto;\n  padding: 28px;\n  padding-bottom: 12px; }\n\nmd-menu-bar {\n  padding: 0 20px;\n  display: block;\n  position: relative;\n  z-index: 2; }\n  md-menu-bar .md-menu {\n    display: inline-block;\n    padding: 0;\n    position: relative; }\n  md-menu-bar button {\n    font-size: 14px;\n    padding: 0 10px;\n    margin: 0;\n    border: 0;\n    background-color: transparent;\n    height: 40px; }\n  md-menu-bar md-backdrop.md-menu-backdrop {\n    z-index: -2; }\n\nmd-menu-content.md-menu-bar-menu.md-dense {\n  max-height: none;\n  padding: 16px 0; }\n  md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent {\n    position: relative; }\n    md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent > md-icon {\n      position: absolute;\n      padding: 0;\n      width: 24px;\n      top: 6px;\n      left: 24px; }\n    md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent > .md-button, md-menu-content.md-menu-bar-menu.md-dense md-menu-item.md-indent .md-menu > .md-button {\n      padding: 0 32px 0 64px; }\n  md-menu-content.md-menu-bar-menu.md-dense .md-button {\n    min-height: 0;\n    height: 32px;\n    display: flex; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-button span {\n      flex-grow: 1; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-button span.md-alt-text {\n      flex-grow: 0;\n      align-self: flex-end;\n      margin: 0 8px; }\n  md-menu-content.md-menu-bar-menu.md-dense md-menu-divider {\n    margin: 8px 0; }\n  md-menu-content.md-menu-bar-menu.md-dense .md-menu {\n    padding: 0; }\n    md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button {\n      position: relative;\n      margin: 0;\n      width: 100%;\n      text-align: left;\n      text-align: start;\n      text-transform: none;\n      font-weight: normal;\n      border-radius: 0px;\n      padding-left: 16px; }\n      md-menu-content.md-menu-bar-menu.md-dense .md-menu > .md-button:after {\n        display: block;\n        content: '\\25BC';\n        position: absolute;\n        top: 0px;\n        speak: none;\n        transform: rotate(270deg) scaleY(0.45) scaleX(0.9);\n        right: 28px; }\n\nmd-progress-circular {\n  display: block;\n  position: relative;\n  width: 100px;\n  height: 100px;\n  padding-top: 0 !important;\n  margin-bottom: 0 !important;\n  transform: scale(0.5); }\n  md-progress-circular .md-spinner-wrapper {\n    display: block;\n    position: relative;\n    overflow: hidden; }\n    md-progress-circular .md-spinner-wrapper .md-inner {\n      width: 100px;\n      height: 100px;\n      position: relative; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-gap {\n        position: absolute;\n        left: 49px;\n        right: 49px;\n        top: 0;\n        bottom: 0;\n        border-top-width: 10px;\n        border-top-style: solid;\n        box-sizing: border-box; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-left, md-progress-circular .md-spinner-wrapper .md-inner .md-right {\n        position: absolute;\n        top: 0;\n        height: 100px;\n        width: 50px;\n        overflow: hidden; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-left .md-half-circle, md-progress-circular .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n          position: absolute;\n          top: 0;\n          width: 100px;\n          height: 100px;\n          box-sizing: border-box;\n          border-width: 10px;\n          border-style: solid;\n          border-bottom-color: transparent;\n          border-radius: 50%; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-left {\n        left: 0; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-left .md-half-circle {\n          left: 0;\n          border-right-color: transparent; }\n      md-progress-circular .md-spinner-wrapper .md-inner .md-right {\n        right: 0; }\n        md-progress-circular .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n          right: 0;\n          border-left-color: transparent; }\n  md-progress-circular .md-spinner-wrapper.md-mode-indeterminate {\n    animation: outer-rotate 2.91667s linear infinite; }\n    md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner {\n      animation: sporadic-rotate 5.25s cubic-bezier(0.35, 0, 0.25, 1) infinite; }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-left .md-half-circle, md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-right .md-half-circle {\n        animation-iteration-count: infinite;\n        animation-duration: 1.3125s;\n        animation-timing-function: cubic-bezier(0.35, 0, 0.25, 1); }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-left .md-half-circle {\n        animation-name: left-wobble; }\n      md-progress-circular .md-spinner-wrapper.md-mode-indeterminate .md-inner .md-right .md-half-circle {\n        animation-name: right-wobble; }\n  md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper {\n    animation: none; }\n    md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner {\n      animation: none; }\n      md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner .md-left .md-half-circle {\n        animation-name: none; }\n      md-progress-circular md-progress-circular.ng-hide .md-spinner-wrapper .md-inner .md-right .md-half-circle {\n        animation-name: none; }\n  md-progress-circular .md-spinner-wrapper.ng-hide {\n    animation: none; }\n    md-progress-circular .md-spinner-wrapper.ng-hide .md-inner {\n      animation: none; }\n      md-progress-circular .md-spinner-wrapper.ng-hide .md-inner .md-left .md-half-circle {\n        animation-name: none; }\n      md-progress-circular .md-spinner-wrapper.ng-hide .md-inner .md-right .md-half-circle {\n        animation-name: none; }\n\n@keyframes outer-rotate {\n  100% {\n    transform: rotate(360deg); } }\n\n@keyframes left-wobble {\n  0%, 100% {\n    transform: rotate(130deg); }\n  50% {\n    transform: rotate(-5deg); } }\n\n@keyframes right-wobble {\n  0%, 100% {\n    transform: rotate(-130deg); }\n  50% {\n    transform: rotate(5deg); } }\n\n@keyframes sporadic-rotate {\n  12.5% {\n    transform: rotate(135deg); }\n  25% {\n    transform: rotate(270deg); }\n  37.5% {\n    transform: rotate(405deg); }\n  50% {\n    transform: rotate(540deg); }\n  62.5% {\n    transform: rotate(675deg); }\n  75% {\n    transform: rotate(810deg); }\n  87.5% {\n    transform: rotate(945deg); }\n  100% {\n    transform: rotate(1080deg); } }\n\nmd-radio-button,\n.md-switch-thumb {\n  box-sizing: border-box;\n  display: block;\n  margin: 15px;\n  white-space: nowrap;\n  cursor: pointer; }\n  md-radio-button .md-container,\n  .md-switch-thumb .md-container {\n    box-sizing: border-box;\n    position: relative;\n    top: 4px;\n    display: inline-block;\n    width: 16px;\n    height: 16px;\n    cursor: pointer; }\n    md-radio-button .md-container .md-ripple-container,\n    .md-switch-thumb .md-container .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: 48px;\n      height: 48px;\n      left: -16px;\n      top: -16px; }\n    md-radio-button .md-container:before,\n    .md-switch-thumb .md-container:before {\n      box-sizing: border-box;\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n  md-radio-button.md-align-top-left > div.md-container,\n  .md-switch-thumb.md-align-top-left > div.md-container {\n    top: -15px; }\n  md-radio-button .md-off,\n  .md-switch-thumb .md-off {\n    box-sizing: border-box;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 16px;\n    height: 16px;\n    border-style: solid;\n    border-width: 2px;\n    border-radius: 50%;\n    transition: border-color ease 0.28s; }\n  md-radio-button .md-on,\n  .md-switch-thumb .md-on {\n    box-sizing: border-box;\n    position: absolute;\n    top: 0;\n    left: 0;\n    width: 16px;\n    height: 16px;\n    border-radius: 50%;\n    transition: transform ease 0.28s;\n    transform: scale(0); }\n  md-radio-button.md-checked .md-on,\n  .md-switch-thumb.md-checked .md-on {\n    transform: scale(0.5); }\n  md-radio-button .md-label,\n  .md-switch-thumb .md-label {\n    box-sizing: border-box;\n    position: relative;\n    display: inline-block;\n    margin-left: 10px;\n    margin-right: 0;\n    vertical-align: middle;\n    white-space: normal;\n    pointer-events: none;\n    width: auto; }\n    html[dir=rtl] md-radio-button .md-label,\n    html[dir=rtl] .md-switch-thumb .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-radio-button .md-label,\n    body[dir=rtl] .md-switch-thumb .md-label {\n      margin-left: 0;\n      unicode-bidi: embed; }\n    md-radio-button .md-label bdo[dir=rtl],\n    .md-switch-thumb .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-radio-button .md-label bdo[dir=ltr],\n    .md-switch-thumb .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n    html[dir=rtl] md-radio-button .md-label,\n    html[dir=rtl] .md-switch-thumb .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    body[dir=rtl] md-radio-button .md-label,\n    body[dir=rtl] .md-switch-thumb .md-label {\n      margin-right: 10px;\n      unicode-bidi: embed; }\n    md-radio-button .md-label bdo[dir=rtl],\n    .md-switch-thumb .md-label bdo[dir=rtl] {\n      direction: rtl;\n      unicode-bidi: bidi-override; }\n    md-radio-button .md-label bdo[dir=ltr],\n    .md-switch-thumb .md-label bdo[dir=ltr] {\n      direction: ltr;\n      unicode-bidi: bidi-override; }\n  md-radio-button .circle,\n  .md-switch-thumb .circle {\n    border-radius: 50%; }\n\nmd-radio-group:focus {\n  outline: none; }\n\nmd-radio-group.md-focused .md-checked .md-container:before {\n  left: -8px;\n  top: -8px;\n  right: -8px;\n  bottom: -8px; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-radio-button.md-default-theme .md-on {\n    background-color: #fff; } }\n\nmd-progress-linear {\n  display: block;\n  position: relative;\n  width: 100%;\n  height: 5px;\n  padding-top: 0 !important;\n  margin-bottom: 0 !important; }\n  md-progress-linear .md-container {\n    display: block;\n    position: relative;\n    overflow: hidden;\n    width: 100%;\n    height: 5px;\n    transform: translate(0, 0) scale(1, 1); }\n    md-progress-linear .md-container .md-bar {\n      position: absolute;\n      left: 0;\n      top: 0;\n      bottom: 0;\n      width: 100%;\n      height: 5px; }\n    md-progress-linear .md-container .md-dashed:before {\n      content: \"\";\n      display: none;\n      position: absolute;\n      margin-top: 0;\n      height: 5px;\n      width: 100%;\n      background-color: transparent;\n      background-size: 10px 10px !important;\n      background-position: 0px -23px; }\n    md-progress-linear .md-container .md-bar1, md-progress-linear .md-container .md-bar2 {\n      transition: transform 0.2s linear; }\n    md-progress-linear .md-container.md-mode-query .md-bar1 {\n      display: none; }\n    md-progress-linear .md-container.md-mode-query .md-bar2 {\n      transition: all 0.2s linear;\n      animation: query 0.8s infinite cubic-bezier(0.39, 0.575, 0.565, 1); }\n    md-progress-linear .md-container.md-mode-determinate .md-bar1 {\n      display: none; }\n    md-progress-linear .md-container.md-mode-indeterminate .md-bar1 {\n      animation: md-progress-linear-indeterminate-scale-1 4s infinite, md-progress-linear-indeterminate-1 4s infinite; }\n    md-progress-linear .md-container.md-mode-indeterminate .md-bar2 {\n      animation: md-progress-linear-indeterminate-scale-2 4s infinite, md-progress-linear-indeterminate-2 4s infinite; }\n    md-progress-linear .md-container.ng-hide {\n      animation: none; }\n      md-progress-linear .md-container.ng-hide .md-bar1 {\n        animation-name: none; }\n      md-progress-linear .md-container.ng-hide .md-bar2 {\n        animation-name: none; }\n  md-progress-linear .md-container.md-mode-buffer {\n    background-color: transparent !important;\n    transition: all 0.2s linear; }\n    md-progress-linear .md-container.md-mode-buffer .md-dashed:before {\n      display: block;\n      animation: buffer 3s infinite linear; }\n\n@keyframes query {\n  0% {\n    opacity: 1;\n    transform: translateX(35%) scale(0.3, 1); }\n  100% {\n    opacity: 0;\n    transform: translateX(-50%) scale(0, 1); } }\n\n@keyframes buffer {\n  0% {\n    opacity: 1;\n    background-position: 0px -23px; }\n  50% {\n    opacity: 0; }\n  100% {\n    opacity: 1;\n    background-position: -200px -23px; } }\n\n@keyframes md-progress-linear-indeterminate-scale-1 {\n  0% {\n    transform: scaleX(0.1);\n    animation-timing-function: linear; }\n  36.6% {\n    transform: scaleX(0.1);\n    animation-timing-function: cubic-bezier(0.33473, 0.12482, 0.78584, 1); }\n  69.15% {\n    transform: scaleX(0.83);\n    animation-timing-function: cubic-bezier(0.22573, 0, 0.23365, 1.37098); }\n  100% {\n    transform: scaleX(0.1); } }\n\n@keyframes md-progress-linear-indeterminate-1 {\n  0% {\n    left: -105.16667%;\n    animation-timing-function: linear; }\n  20% {\n    left: -105.16667%;\n    animation-timing-function: cubic-bezier(0.5, 0, 0.70173, 0.49582); }\n  69.15% {\n    left: 21.5%;\n    animation-timing-function: cubic-bezier(0.30244, 0.38135, 0.55, 0.95635); }\n  100% {\n    left: 95.44444%; } }\n\n@keyframes md-progress-linear-indeterminate-scale-2 {\n  0% {\n    transform: scaleX(0.1);\n    animation-timing-function: cubic-bezier(0.20503, 0.05705, 0.57661, 0.45397); }\n  19.15% {\n    transform: scaleX(0.57);\n    animation-timing-function: cubic-bezier(0.15231, 0.19643, 0.64837, 1.00432); }\n  44.15% {\n    transform: scaleX(0.91);\n    animation-timing-function: cubic-bezier(0.25776, -0.00316, 0.21176, 1.38179); }\n  100% {\n    transform: scaleX(0.1); } }\n\n@keyframes md-progress-linear-indeterminate-2 {\n  0% {\n    left: -54.88889%;\n    animation-timing-function: cubic-bezier(0.15, 0, 0.51506, 0.40968); }\n  25% {\n    left: -17.25%;\n    animation-timing-function: cubic-bezier(0.31033, 0.28406, 0.8, 0.73372); }\n  48.35% {\n    left: 29.5%;\n    animation-timing-function: cubic-bezier(0.4, 0.62703, 0.6, 0.90203); }\n  100% {\n    left: 117.38889%; } }\n\n.md-select-menu-container {\n  position: fixed;\n  left: 0;\n  top: 0;\n  z-index: 99;\n  opacity: 0; }\n  .md-select-menu-container:not(.md-clickable) {\n    pointer-events: none; }\n  .md-select-menu-container md-progress-circular {\n    display: table;\n    margin: 24px auto !important; }\n  .md-select-menu-container.md-active {\n    opacity: 1; }\n    .md-select-menu-container.md-active md-select-menu {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transition-duration: 150ms; }\n      .md-select-menu-container.md-active md-select-menu > * {\n        opacity: 1;\n        transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n        transition-duration: 150ms;\n        transition-delay: 100ms; }\n  .md-select-menu-container.md-leave {\n    opacity: 0;\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    transition-duration: 250ms; }\n\nmd-input-container > md-select {\n  margin: 0;\n  order: 2; }\n\nmd-select {\n  display: flex;\n  margin: 20px 0 26px 0; }\n  md-select[disabled] .md-select-value {\n    background-position: 0 bottom;\n    background-size: 4px 1px;\n    background-repeat: repeat-x;\n    margin-bottom: -1px; }\n  md-select:focus {\n    outline: none; }\n  md-select[disabled]:hover {\n    cursor: default; }\n  md-select:not([disabled]):hover {\n    cursor: pointer; }\n  md-select:not([disabled]).ng-invalid.ng-dirty .md-select-value {\n    border-bottom: 2px solid;\n    padding-bottom: 0; }\n  md-select:not([disabled]):focus .md-select-value {\n    border-bottom-width: 2px;\n    border-bottom-style: solid;\n    padding-bottom: 0; }\n\n.md-select-value {\n  display: flex;\n  align-items: center;\n  padding: 2px 2px 1px;\n  border-bottom-width: 1px;\n  border-bottom-style: solid;\n  background-color: transparent;\n  position: relative;\n  box-sizing: content-box;\n  min-width: 64px;\n  min-height: 26px;\n  flex-grow: 1; }\n  .md-select-value *:first-child {\n    flex: 1;\n    text-overflow: ellipsis;\n    white-space: nowrap;\n    overflow: hidden;\n    max-width: calc(100% - 2*8px);\n    transform: translate3d(0, 2px, 0); }\n  .md-select-value .md-select-icon {\n    display: block;\n    align-items: flex-end;\n    text-align: end;\n    width: 24px;\n    margin: 0 4px;\n    transform: translate3d(0, 1px, 0); }\n  .md-select-value .md-select-icon:after {\n    display: block;\n    content: '\\25BC';\n    position: relative;\n    top: 2px;\n    speak: none;\n    transform: scaleY(0.6) scaleX(1); }\n  .md-select-value.md-select-placeholder {\n    display: flex;\n    order: 1;\n    pointer-events: none;\n    -webkit-font-smoothing: antialiased;\n    padding-left: 2px;\n    z-index: 1; }\n\nmd-select-menu {\n  display: flex;\n  flex-direction: column;\n  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12);\n  max-height: 256px;\n  min-height: 48px;\n  overflow-y: hidden;\n  transform-origin: left top;\n  transform: scale(1); }\n  md-select-menu.md-reverse {\n    flex-direction: column-reverse; }\n  md-select-menu:not(.md-overflow) md-content {\n    padding-top: 8px;\n    padding-bottom: 8px; }\n  html[dir=rtl] md-select-menu {\n    transform-origin: right top;\n    unicode-bidi: embed; }\n  body[dir=rtl] md-select-menu {\n    transform-origin: right top;\n    unicode-bidi: embed; }\n  md-select-menu bdo[dir=rtl] {\n    direction: rtl;\n    unicode-bidi: bidi-override; }\n  md-select-menu bdo[dir=ltr] {\n    direction: ltr;\n    unicode-bidi: bidi-override; }\n  md-select-menu md-content {\n    min-width: 136px;\n    min-height: 48px;\n    max-height: 256px;\n    overflow-y: auto; }\n  md-select-menu > * {\n    opacity: 0; }\n\nmd-option {\n  cursor: pointer;\n  position: relative;\n  display: flex;\n  align-items: center;\n  width: auto;\n  padding: 0 16px 0 16px;\n  height: 48px; }\n  md-option:focus {\n    outline: none; }\n  md-option .md-text {\n    -webkit-touch-callout: none;\n    -webkit-user-select: none;\n    -khtml-user-select: none;\n    -moz-user-select: none;\n    -ms-user-select: none;\n    user-select: none;\n    width: auto;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    font-size: 16px; }\n\nmd-optgroup {\n  display: block; }\n  md-optgroup label {\n    display: block;\n    font-size: 14px;\n    text-transform: uppercase;\n    padding: 16px;\n    font-weight: 500; }\n  md-optgroup md-option {\n    padding-left: 32px;\n    padding-right: 32px; }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-select-backdrop {\n    background-color: transparent; }\n  md-select-menu {\n    border: 1px solid #fff; } }\n\nmd-sidenav {\n  box-sizing: border-box;\n  position: absolute;\n  flex-direction: column;\n  z-index: 60;\n  width: 304px;\n  min-width: 304px;\n  max-width: 304px;\n  bottom: 0;\n  overflow: auto; }\n  md-sidenav ul {\n    list-style: none; }\n  md-sidenav.md-closed {\n    display: none; }\n  md-sidenav.md-closed-add,\n  md-sidenav.md-closed-remove {\n    display: flex;\n    transition: 0.2s ease-in all; }\n  md-sidenav.md-closed-add.md-closed-add-active,\n  md-sidenav.md-closed-remove.md-closed-remove-active {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-sidenav.md-locked-open-add,\n  md-sidenav.md-locked-open-remove {\n    position: static;\n    display: flex;\n    transform: translate3d(0, 0, 0); }\n  md-sidenav.md-locked-open {\n    width: 304px;\n    min-width: 304px;\n    max-width: 304px; }\n  md-sidenav.md-locked-open,\n  md-sidenav.md-locked-open.md-closed,\n  md-sidenav.md-locked-open.md-closed.md-sidenav-left,\n  md-sidenav.md-locked-open.md-closed,\n  md-sidenav.md-locked-open.md-closed.md-sidenav-right,\n  md-sidenav.md-locked-open-remove.md-closed {\n    position: static;\n    display: flex;\n    transform: translate3d(0, 0, 0); }\n  md-sidenav.md-locked-open-remove-active {\n    transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    width: 0;\n    min-width: 0; }\n  md-sidenav.md-closed.md-locked-open-add {\n    width: 0;\n    min-width: 0;\n    transform: translate3d(0%, 0, 0); }\n  md-sidenav.md-closed.md-locked-open-add-active {\n    transition: width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2), min-width 0.3s cubic-bezier(0.55, 0, 0.55, 0.2);\n    width: 304px;\n    min-width: 304px;\n    transform: translate3d(0%, 0, 0); }\n\n.md-sidenav-backdrop.md-locked-open {\n  display: none; }\n\n.md-sidenav-left, md-sidenav {\n  left: 0;\n  top: 0;\n  transform: translate3d(0%, 0, 0); }\n  .md-sidenav-left.md-closed, md-sidenav.md-closed {\n    transform: translate3d(-100%, 0, 0); }\n\n.md-sidenav-right {\n  left: 100%;\n  top: 0;\n  transform: translate3d(-100%, 0, 0); }\n  .md-sidenav-right.md-closed {\n    transform: translate3d(0%, 0, 0); }\n\n@media (max-width: 360px) {\n  md-sidenav {\n    width: 85%; } }\n\n@media screen and (-ms-high-contrast: active) {\n  .md-sidenav-left, md-sidenav {\n    border-right: 1px solid #fff; }\n  .md-sidenav-right {\n    border-left: 1px solid #fff; } }\n\n@keyframes sliderFocusThumb {\n  0% {\n    opacity: 0;\n    transform: scale(0); }\n  50% {\n    transform: scale(1);\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\nmd-slider {\n  height: 48px;\n  position: relative;\n  display: block;\n  margin-left: 4px;\n  margin-right: 4px;\n  padding: 0;\n  /**\n   * Track\n   */\n  /**\n   * Slider thumb\n   */\n  /* The sign that's focused in discrete mode */\n  /**\n   * The border/background that comes in when focused in non-discrete mode\n   */\n  /* Don't animate left/right while panning */ }\n  md-slider *, md-slider *:after {\n    box-sizing: border-box; }\n  md-slider .md-slider-wrapper {\n    position: relative; }\n  md-slider .md-track-container {\n    width: 100%;\n    position: absolute;\n    top: 23px;\n    height: 2px; }\n  md-slider .md-track {\n    position: absolute;\n    left: 0;\n    right: 0;\n    height: 100%; }\n  md-slider .md-track-fill {\n    transition: width 0.05s linear; }\n  md-slider .md-track-ticks {\n    position: absolute;\n    left: 0;\n    right: 0;\n    height: 100%; }\n  md-slider .md-track-ticks canvas {\n    width: 100%; }\n  md-slider .md-thumb-container {\n    position: absolute;\n    left: 0;\n    top: 50%;\n    transform: translate3d(-50%, -50%, 0);\n    transition: left 0.1s linear; }\n  md-slider .md-thumb {\n    z-index: 1;\n    position: absolute;\n    left: -19px;\n    top: 5px;\n    width: 38px;\n    height: 38px;\n    border-radius: 38px;\n    transform: scale(0.5);\n    transition: all 0.1s linear; }\n    md-slider .md-thumb:after {\n      content: '';\n      position: absolute;\n      left: 3px;\n      top: 3px;\n      width: 32px;\n      height: 32px;\n      border-radius: 32px;\n      border-width: 3px;\n      border-style: solid; }\n  md-slider .md-sign {\n    /* Center the children (slider-thumb-text) */\n    display: flex;\n    align-items: center;\n    justify-content: center;\n    position: absolute;\n    left: -14px;\n    top: -20px;\n    width: 28px;\n    height: 28px;\n    border-radius: 28px;\n    transform: scale(0.4) translate3d(0, 70px, 0);\n    transition: all 0.2s ease-in-out;\n    /* The arrow pointing down under the sign */ }\n    md-slider .md-sign:after {\n      position: absolute;\n      content: '';\n      left: 0px;\n      border-radius: 16px;\n      top: 19px;\n      border-left: 14px solid transparent;\n      border-right: 14px solid transparent;\n      border-top-width: 16px;\n      border-top-style: solid;\n      opacity: 0;\n      transform: translate3d(0, -8px, 0);\n      transition: all 0.2s ease-in-out; }\n    md-slider .md-sign .md-thumb-text {\n      z-index: 1;\n      font-size: 12px;\n      font-weight: bold; }\n  md-slider .md-focus-thumb {\n    position: absolute;\n    left: -24px;\n    top: 0px;\n    width: 48px;\n    height: 48px;\n    border-radius: 48px;\n    display: none;\n    opacity: 0;\n    background-color: #C0C0C0;\n    animation: sliderFocusThumb 0.4s linear; }\n  md-slider .md-focus-ring {\n    position: absolute;\n    left: -24px;\n    top: 0px;\n    width: 48px;\n    height: 48px;\n    border-radius: 48px;\n    transform: scale(0);\n    transition: all 0.2s linear;\n    opacity: 0.26; }\n  md-slider .md-disabled-thumb {\n    position: absolute;\n    left: -22px;\n    top: 2px;\n    width: 44px;\n    height: 44px;\n    border-radius: 44px;\n    transform: scale(0.35);\n    border-width: 6px;\n    border-style: solid;\n    display: none; }\n  md-slider.md-min .md-thumb:after {\n    background-color: white; }\n  md-slider.md-min .md-sign {\n    opacity: 0; }\n  md-slider:focus {\n    outline: none; }\n  md-slider.md-dragging .md-thumb-container,\n  md-slider.md-dragging .md-track-fill {\n    transition: none; }\n  md-slider:not([md-discrete]) {\n    /* Hide the sign and ticks in non-discrete mode */ }\n    md-slider:not([md-discrete]) .md-track-ticks,\n    md-slider:not([md-discrete]) .md-sign {\n      display: none; }\n    md-slider:not([md-discrete]):not([disabled]):hover .md-thumb {\n      transform: scale(0.6); }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-thumb,\n    md-slider:not([md-discrete]):not([disabled]).md-active .md-focus-thumb {\n      display: block; }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-focus-ring,\n    md-slider:not([md-discrete]):not([disabled]).md-active .md-focus-ring {\n      transform: scale(1); }\n    md-slider:not([md-discrete]):not([disabled]):focus .md-thumb,\n    md-slider:not([md-discrete]):not([disabled]).md-active .md-thumb {\n      transform: scale(0.85); }\n  md-slider[md-discrete] {\n    /* Hide the focus thumb in discrete mode */ }\n    md-slider[md-discrete] .md-focus-thumb,\n    md-slider[md-discrete] .md-focus-ring {\n      display: none; }\n    md-slider[md-discrete]:not([disabled]):focus .md-sign,\n    md-slider[md-discrete]:not([disabled]):focus .md-sign:after,\n    md-slider[md-discrete]:not([disabled]).md-active .md-sign,\n    md-slider[md-discrete]:not([disabled]).md-active .md-sign:after {\n      opacity: 1;\n      transform: translate3d(0, 0, 0) scale(1); }\n  md-slider[disabled] .md-track-fill {\n    display: none; }\n  md-slider[disabled] .md-sign {\n    display: none; }\n  md-slider[disabled] .md-thumb {\n    transform: scale(0.35); }\n  md-slider[disabled] .md-disabled-thumb {\n    display: block; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-slider.md-default-theme .md-track {\n    border-bottom: 1px solid #fff; } }\n\n.md-sticky-clone {\n  z-index: 2;\n  top: 0;\n  left: 0;\n  right: 0;\n  position: absolute !important;\n  transform: translate3d(-9999px, -9999px, 0); }\n  .md-sticky-clone[sticky-state=\"active\"] {\n    transform: translate3d(0, 0, 0); }\n    .md-sticky-clone[sticky-state=\"active\"]:not(.md-sticky-no-effect) .md-subheader-inner {\n      animation: subheaderStickyHoverIn 0.3s ease-out both; }\n\n@keyframes subheaderStickyHoverIn {\n  0% {\n    box-shadow: 0 0 0 0 transparent; }\n  100% {\n    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16); } }\n\n@keyframes subheaderStickyHoverOut {\n  0% {\n    box-shadow: 0px 2px 4px 0 rgba(0, 0, 0, 0.16); }\n  100% {\n    box-shadow: 0 0 0 0 transparent; } }\n\n.md-subheader-wrapper:not(.md-sticky-no-effect) {\n  transition: 0.2s ease-out margin; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect) .md-subheader {\n    margin: 0; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect).md-sticky-clone {\n    z-index: 2; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect)[sticky-state=\"active\"] {\n    margin-top: -2px; }\n  .md-subheader-wrapper:not(.md-sticky-no-effect):not(.md-sticky-clone)[sticky-prev-state=\"active\"] .md-subheader-inner:after {\n    animation: subheaderStickyHoverOut 0.3s ease-out both; }\n\n.md-subheader {\n  display: block;\n  font-size: 14px;\n  font-weight: 500;\n  line-height: 1em;\n  margin: 0 0 0 0;\n  margin-right: 16px;\n  position: relative; }\n  .md-subheader .md-subheader-inner {\n    display: block;\n    padding: 16px 0px 16px 16px; }\n  .md-subheader .md-subheader-content {\n    display: block;\n    z-index: 1;\n    position: relative; }\n\nmd-switch {\n  display: flex;\n  align-items: center;\n  margin: 15px;\n  white-space: nowrap;\n  cursor: pointer;\n  outline: none;\n  user-select: none; }\n  md-switch .md-container {\n    cursor: grab;\n    width: 36px;\n    height: 24px;\n    position: relative;\n    user-select: none;\n    margin-right: 8px; }\n  md-switch:not([disabled]) .md-dragging,\n  md-switch:not([disabled]).md-dragging .md-container {\n    cursor: grabbing; }\n  md-switch.md-focused:not([disabled]) .md-thumb:before {\n    left: -8px;\n    top: -8px;\n    right: -8px;\n    bottom: -8px; }\n  md-switch.md-focused:not([disabled]):not(.md-checked) .md-thumb:before {\n    background-color: rgba(0, 0, 0, 0.12); }\n  md-switch .md-label {\n    border-color: transparent;\n    border-width: 0; }\n  md-switch .md-bar {\n    left: 1px;\n    width: 34px;\n    top: 5px;\n    height: 14px;\n    border-radius: 8px;\n    position: absolute; }\n  md-switch .md-thumb-container {\n    top: 2px;\n    left: 0;\n    width: 16px;\n    position: absolute;\n    transform: translate3d(0, 0, 0);\n    z-index: 1; }\n  md-switch.md-checked .md-thumb-container {\n    transform: translate3d(100%, 0, 0); }\n  md-switch .md-thumb {\n    position: absolute;\n    margin: 0;\n    left: 0;\n    top: 0;\n    outline: none;\n    height: 20px;\n    width: 20px;\n    border-radius: 50%;\n    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }\n    md-switch .md-thumb:before {\n      background-color: transparent;\n      border-radius: 50%;\n      content: '';\n      position: absolute;\n      display: block;\n      height: auto;\n      left: 0;\n      top: 0;\n      right: 0;\n      bottom: 0;\n      transition: all 0.5s;\n      width: auto; }\n    md-switch .md-thumb .md-ripple-container {\n      position: absolute;\n      display: block;\n      width: auto;\n      height: auto;\n      left: -20px;\n      top: -20px;\n      right: -20px;\n      bottom: -20px; }\n  md-switch:not(.md-dragging) .md-bar,\n  md-switch:not(.md-dragging) .md-thumb-container,\n  md-switch:not(.md-dragging) .md-thumb {\n    transition: all 0.08s linear;\n    transition-property: transform, background-color; }\n  md-switch:not(.md-dragging) .md-bar,\n  md-switch:not(.md-dragging) .md-thumb {\n    transition-delay: 0.05s; }\n\n@media screen and (-ms-high-contrast: active) {\n  md-switch.md-default-theme .md-bar {\n    background-color: #666; }\n  md-switch.md-default-theme.md-checked .md-bar {\n    background-color: #9E9E9E; }\n  md-switch.md-default-theme .md-thumb {\n    background-color: #fff; } }\n\nmd-toast {\n  display: flex;\n  position: absolute;\n  z-index: 90;\n  box-sizing: border-box;\n  align-items: center;\n  min-height: 48px;\n  padding-left: 24px;\n  padding-right: 24px;\n  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.26);\n  border-radius: 2px;\n  font-size: 14px;\n  cursor: default;\n  height: 0px;\n  max-height: 168px;\n  max-width: 100%;\n  overflow: hidden;\n  opacity: 1;\n  transform: translate3d(0, 0, 0) rotateZ(0deg);\n  transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n  /* Transition differently when swiping */ }\n  md-toast.md-capsule {\n    border-radius: 24px; }\n  md-toast.ng-leave-active {\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-toast.md-swipeleft,\n  md-toast.md-swiperight,\n  md-toast.md-swipeup,\n  md-toast.md-swipedown {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1); }\n  md-toast.ng-enter {\n    transform: translate3d(0, 100%, 0);\n    opacity: 0; }\n    md-toast.ng-enter.md-top {\n      transform: translate3d(0, -100%, 0); }\n    md-toast.ng-enter.ng-enter-active {\n      transform: translate3d(0, 0, 0);\n      opacity: 1; }\n  md-toast.ng-leave.ng-leave-active {\n    opacity: 0;\n    transform: translate3d(0, 100%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-top {\n      transform: translate3d(0, -100%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-swipeleft {\n      transform: translate3d(-100%, 0%, 0); }\n    md-toast.ng-leave.ng-leave-active.md-swiperight {\n      transform: translate3d(100%, 0%, 0); }\n  md-toast .md-action {\n    line-height: 19px;\n    margin-left: 24px;\n    cursor: pointer;\n    text-transform: uppercase;\n    float: right; }\n    md-toast .md-action.md-button {\n      min-width: 0; }\n\n@media (max-width: 600px) {\n  md-toast {\n    left: 0;\n    right: 0;\n    width: 100%;\n    max-width: 100%;\n    min-width: 0;\n    border-radius: 0;\n    bottom: 0; }\n    md-toast.md-top {\n      bottom: auto;\n      top: 0; } }\n\n@media (min-width: 600px) {\n  md-toast {\n    min-width: 288px;\n    /*\n     * When the toast doesn't take up the whole screen,\n     * make it rotate when the user swipes it away\n     */ }\n    md-toast.md-bottom {\n      bottom: 8px; }\n    md-toast.md-left {\n      left: 8px; }\n    md-toast.md-right {\n      right: 8px; }\n    md-toast.md-top {\n      top: 8px; }\n    md-toast.ng-leave.ng-leave-active.md-swipeleft {\n      transform: translate3d(-100%, 25%, 0) rotateZ(-15deg); }\n    md-toast.ng-leave.ng-leave-active.md-swiperight {\n      transform: translate3d(100%, 25%, 0) rotateZ(15deg); }\n    md-toast.ng-leave.ng-leave-active.md-top.md-swipeleft {\n      transform: translate3d(-100%, 0, 0) rotateZ(-15deg); }\n    md-toast.ng-leave.ng-leave-active.md-top.md-swiperight {\n      transform: translate3d(100%, 0, 0) rotateZ(15deg); } }\n\n@media (min-width: 1200px) {\n  md-toast {\n    max-width: 568px; } }\n\n@media screen and (-ms-high-contrast: active) {\n  md-toast {\n    border: 1px solid #fff; } }\n\n@keyframes md-tab-content-hide {\n  0% {\n    opacity: 1; }\n  50% {\n    opacity: 1; }\n  100% {\n    opacity: 0; } }\n\nmd-tab-data {\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  z-index: -1;\n  opacity: 0; }\n\nmd-tabs {\n  display: block;\n  margin: 0;\n  border-radius: 2px;\n  overflow: hidden;\n  position: relative;\n  flex-shrink: 0; }\n  md-tabs:not(.md-no-tab-content):not(.md-dynamic-height) {\n    min-height: 248px; }\n  md-tabs[md-align-tabs=\"bottom\"] {\n    padding-bottom: 48px; }\n    md-tabs[md-align-tabs=\"bottom\"] md-tabs-wrapper {\n      position: absolute;\n      bottom: 0;\n      left: 0;\n      right: 0;\n      height: 48px;\n      z-index: 2; }\n    md-tabs[md-align-tabs=\"bottom\"] md-tabs-content-wrapper {\n      top: 0;\n      bottom: 48px; }\n  md-tabs.md-dynamic-height md-tabs-content-wrapper {\n    min-height: 0;\n    position: relative;\n    top: auto;\n    left: auto;\n    right: auto;\n    bottom: auto;\n    overflow: visible; }\n  md-tabs.md-dynamic-height md-tab-content.md-active {\n    position: relative; }\n  md-tabs[md-border-bottom] md-tabs-wrapper {\n    border-width: 0 0 1px;\n    border-style: solid; }\n  md-tabs[md-border-bottom]:not(.md-dynamic-height) md-tabs-content-wrapper {\n    top: 49px; }\n\nmd-tabs-wrapper {\n  display: block;\n  position: relative; }\n  md-tabs-wrapper md-prev-button, md-tabs-wrapper md-next-button {\n    height: 100%;\n    width: 32px;\n    position: absolute;\n    top: 50%;\n    transform: translateY(-50%);\n    line-height: 1em;\n    z-index: 2;\n    cursor: pointer;\n    font-size: 16px;\n    background: transparent no-repeat center center;\n    transition: all 0.5s cubic-bezier(0.35, 0, 0.25, 1); }\n    md-tabs-wrapper md-prev-button:focus, md-tabs-wrapper md-next-button:focus {\n      outline: none; }\n    md-tabs-wrapper md-prev-button.md-disabled, md-tabs-wrapper md-next-button.md-disabled {\n      opacity: 0.25;\n      cursor: default; }\n    md-tabs-wrapper md-prev-button.ng-leave, md-tabs-wrapper md-next-button.ng-leave {\n      transition: none; }\n    md-tabs-wrapper md-prev-button md-icon, md-tabs-wrapper md-next-button md-icon {\n      position: absolute;\n      top: 50%;\n      left: 50%;\n      transform: translate3d(-50%, -50%, 0); }\n  md-tabs-wrapper md-prev-button {\n    left: 0;\n    background-image: url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMjA4IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTUuNCw3LjQgMTQsNiA4LDEyIDE0LDE4IDE1LjQsMTYuNiAxMC44LDEyIAkJIiBzdHlsZT0iZmlsbDp3aGl0ZTsiLz4gPHJlY3QgZmlsbD0ibm9uZSIgd2lkdGg9IjI0IiBoZWlnaHQ9IjI0Ii8+IDwvZz4gPC9nPiA8ZyBpZD0iR3JpZCIgZGlzcGxheT0ibm9uZSI+IDxnIGRpc3BsYXk9ImlubGluZSI+IDwvZz4gPC9nPiA8L3N2Zz4NCg==\"); }\n  md-tabs-wrapper md-next-button {\n    right: 0;\n    background-image: url(\"data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPCEtLSBHZW5lcmF0b3I6IEFkb2JlIElsbHVzdHJhdG9yIDE3LjEuMCwgU1ZHIEV4cG9ydCBQbHVnLUluIC4gU1ZHIFZlcnNpb246IDYuMDAgQnVpbGQgMCkgIC0tPiA8IURPQ1RZUEUgc3ZnIFBVQkxJQyAiLS8vVzNDLy9EVEQgU1ZHIDEuMS8vRU4iICJodHRwOi8vd3d3LnczLm9yZy9HcmFwaGljcy9TVkcvMS4xL0RURC9zdmcxMS5kdGQiPiA8c3ZnIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayIgeD0iMHB4IiB5PSIwcHgiIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZW5hYmxlLWJhY2tncm91bmQ9Im5ldyAwIDAgMjQgMjQiIHhtbDpzcGFjZT0icHJlc2VydmUiPiA8ZyBpZD0iSGVhZGVyIj4gPGc+IDxyZWN0IHg9Ii02MTgiIHk9Ii0xMzM2IiBmaWxsPSJub25lIiB3aWR0aD0iMTQwMCIgaGVpZ2h0PSIzNjAwIi8+IDwvZz4gPC9nPiA8ZyBpZD0iTGFiZWwiPiA8L2c+IDxnIGlkPSJJY29uIj4gPGc+IDxwb2x5Z29uIHBvaW50cz0iMTAsNiA4LjYsNy40IDEzLjIsMTIgOC42LDE2LjYgMTAsMTggMTYsMTIgCQkiIHN0eWxlPSJmaWxsOndoaXRlOyIvPiA8cmVjdCBmaWxsPSJub25lIiB3aWR0aD0iMjQiIGhlaWdodD0iMjQiLz4gPC9nPiA8L2c+IDxnIGlkPSJHcmlkIiBkaXNwbGF5PSJub25lIj4gPGcgZGlzcGxheT0iaW5saW5lIj4gPC9nPiA8L2c+IDwvc3ZnPg0K\"); }\n    md-tabs-wrapper md-next-button md-icon {\n      transform: translate3d(-50%, -50%, 0) rotate(180deg); }\n  md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper {\n    width: 100%;\n    display: flex;\n    flex-direction: row; }\n    md-tabs-wrapper.md-stretch-tabs md-pagination-wrapper md-tab-item {\n      flex-grow: 1; }\n\nmd-tabs-canvas {\n  position: relative;\n  overflow: hidden;\n  display: block;\n  height: 48px; }\n  md-tabs-canvas:after {\n    content: '';\n    display: table;\n    clear: both; }\n  md-tabs-canvas .md-dummy-wrapper {\n    position: absolute;\n    top: 0;\n    left: 0; }\n  md-tabs-canvas.md-paginated {\n    margin: 0 32px; }\n  md-tabs-canvas.md-center-tabs {\n    display: flex;\n    flex-direction: column;\n    text-align: center; }\n    md-tabs-canvas.md-center-tabs .md-tab {\n      float: none;\n      display: inline-block; }\n\nmd-pagination-wrapper {\n  height: 48px;\n  display: block;\n  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n  position: absolute;\n  width: 999999px;\n  left: 0;\n  transform: translate3d(0, 0, 0); }\n  md-pagination-wrapper:after {\n    content: '';\n    display: table;\n    clear: both; }\n  md-pagination-wrapper.md-center-tabs {\n    position: relative;\n    width: initial;\n    margin: 0 auto; }\n\nmd-tabs-content-wrapper {\n  display: block;\n  position: absolute;\n  top: 48px;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  overflow: hidden; }\n\nmd-tab-content {\n  display: block;\n  position: absolute;\n  top: 0;\n  left: 0;\n  right: 0;\n  bottom: 0;\n  transform: translateX(0);\n  transition: transform 0.5s cubic-bezier(0.35, 0, 0.25, 1);\n  overflow: auto; }\n  md-tab-content.md-no-scroll {\n    bottom: auto;\n    overflow: hidden; }\n  md-tab-content.ng-leave, md-tab-content.md-no-transition {\n    transition: none; }\n  md-tab-content.md-left {\n    transform: translateX(-100%);\n    animation: 1s md-tab-content-hide;\n    opacity: 0; }\n    md-tab-content.md-left * {\n      transition: visibility 0s linear;\n      transition-delay: 0.5s;\n      visibility: hidden; }\n  md-tab-content.md-right {\n    transform: translateX(100%);\n    animation: 1s md-tab-content-hide;\n    opacity: 0; }\n    md-tab-content.md-right * {\n      transition: visibility 0s linear;\n      transition-delay: 0.5s;\n      visibility: hidden; }\n  md-tab-content > div.ng-leave {\n    animation: 1s md-tab-content-hide; }\n\nmd-ink-bar {\n  position: absolute;\n  left: auto;\n  right: auto;\n  bottom: 0;\n  height: 2px; }\n  md-ink-bar.md-left {\n    transition: left 0.125s cubic-bezier(0.35, 0, 0.25, 1), right 0.25s cubic-bezier(0.35, 0, 0.25, 1); }\n  md-ink-bar.md-right {\n    transition: left 0.25s cubic-bezier(0.35, 0, 0.25, 1), right 0.125s cubic-bezier(0.35, 0, 0.25, 1); }\n\nmd-tab {\n  position: absolute;\n  z-index: -1;\n  left: -9999px; }\n\n.md-tab {\n  font-size: 14px;\n  text-align: center;\n  line-height: 24px;\n  padding: 12px 24px;\n  transition: background-color 0.35s cubic-bezier(0.35, 0, 0.25, 1);\n  cursor: pointer;\n  white-space: nowrap;\n  position: relative;\n  text-transform: uppercase;\n  float: left;\n  font-weight: 500;\n  box-sizing: border-box;\n  overflow: hidden;\n  text-overflow: ellipsis; }\n  .md-tab.md-focused {\n    box-shadow: none;\n    outline: none; }\n  .md-tab.md-active {\n    cursor: default; }\n  .md-tab.md-disabled {\n    pointer-events: none;\n    touch-action: pan-y;\n    user-select: none;\n    -webkit-user-drag: none;\n    opacity: 0.5;\n    cursor: default; }\n  .md-tab.ng-leave {\n    transition: none; }\n\nmd-toolbar + md-tabs {\n  border-top-left-radius: 0;\n  border-top-right-radius: 0; }\n\nmd-toolbar {\n  box-sizing: border-box;\n  display: flex;\n  flex-direction: column;\n  position: relative;\n  z-index: 2;\n  font-size: 20px;\n  min-height: 64px;\n  width: 100%; }\n  md-toolbar.md-whiteframe-z1-add, md-toolbar.md-whiteframe-z1-remove {\n    transition: box-shadow 0.5s linear; }\n  md-toolbar md-toolbar-filler {\n    width: 72px; }\n  md-toolbar *,\n  md-toolbar *:before,\n  md-toolbar *:after {\n    box-sizing: border-box; }\n  md-toolbar.md-tall {\n    height: 128px;\n    min-height: 128px;\n    max-height: 128px; }\n  md-toolbar.md-medium-tall {\n    height: 88px;\n    min-height: 88px;\n    max-height: 88px; }\n    md-toolbar.md-medium-tall .md-toolbar-tools {\n      height: 48px;\n      min-height: 48px;\n      max-height: 48px; }\n  md-toolbar > .md-indent {\n    margin-left: 64px; }\n  md-toolbar ~ md-content > md-list {\n    padding: 0; }\n    md-toolbar ~ md-content > md-list md-list-item:last-child md-divider {\n      display: none; }\n\n.md-toolbar-tools {\n  font-size: 20px;\n  letter-spacing: 0.005em;\n  box-sizing: border-box;\n  font-weight: 400;\n  display: flex;\n  align-items: center;\n  flex-direction: row;\n  width: 100%;\n  height: 64px;\n  max-height: 64px;\n  padding: 0 16px;\n  margin: 0; }\n  .md-toolbar-tools h1, .md-toolbar-tools h2, .md-toolbar-tools h3 {\n    font-size: inherit;\n    font-weight: inherit;\n    margin: inherit; }\n  .md-toolbar-tools a {\n    color: inherit;\n    text-decoration: none; }\n  .md-toolbar-tools .fill-height {\n    display: flex;\n    align-items: center; }\n  .md-toolbar-tools .md-button {\n    margin-top: 0;\n    margin-bottom: 0; }\n  .md-toolbar-tools > .md-button:first-child {\n    margin-left: -8px; }\n  .md-toolbar-tools > .md-button:last-child {\n    margin-right: -8px; }\n  .md-toolbar-tools > md-menu:last-child {\n    margin-right: -8px; }\n    .md-toolbar-tools > md-menu:last-child > .md-button {\n      margin-right: 0; }\n  @media screen and (-ms-high-contrast: active) {\n    .md-toolbar-tools {\n      border-bottom: 1px solid #fff; } }\n\n@media only screen and (min-width: 0) and (max-width: 600px) and (orientation: portrait) {\n  md-toolbar {\n    min-height: 56px; }\n  .md-toolbar-tools {\n    height: 56px;\n    max-height: 56px; } }\n\n@media only screen and (min-width: 0) and (max-width: 600px) and (orientation: landscape) {\n  md-toolbar {\n    min-height: 48px; }\n  .md-toolbar-tools {\n    height: 48px;\n    max-height: 48px; } }\n\nmd-tooltip {\n  position: absolute;\n  z-index: 100;\n  overflow: hidden;\n  pointer-events: none;\n  border-radius: 4px;\n  font-weight: 500;\n  font-size: 14px; }\n  @media screen and (min-width: 600px) {\n    md-tooltip {\n      font-size: 10px; } }\n  md-tooltip .md-background {\n    position: absolute;\n    border-radius: 50%;\n    transform: translate(-50%, -50%) scale(0);\n    opacity: 1; }\n    md-tooltip .md-background.md-show-add {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      transform: translate(-50%, -50%) scale(0);\n      opacity: 0; }\n    md-tooltip .md-background.md-show, md-tooltip .md-background.md-show-add-active {\n      transform: translate(-50%, -50%) scale(1);\n      opacity: 1; }\n    md-tooltip .md-background.md-show-remove {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n      md-tooltip .md-background.md-show-remove.md-show-remove-active {\n        transform: translate(-50%, -50%) scale(0);\n        opacity: 0; }\n  md-tooltip .md-content {\n    position: relative;\n    white-space: nowrap;\n    overflow: hidden;\n    text-overflow: ellipsis;\n    background: transparent;\n    opacity: 0;\n    height: 32px;\n    line-height: 32px;\n    padding-left: 16px;\n    padding-right: 16px; }\n    @media screen and (min-width: 600px) {\n      md-tooltip .md-content {\n        height: 22px;\n        line-height: 22px;\n        padding-left: 8px;\n        padding-right: 8px; } }\n    md-tooltip .md-content.md-show-add {\n      transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n      opacity: 0; }\n    md-tooltip .md-content.md-show, md-tooltip .md-content.md-show-add-active {\n      opacity: 1; }\n    md-tooltip .md-content.md-show-remove {\n      transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n      md-tooltip .md-content.md-show-remove.md-show-remove-active {\n        opacity: 0; }\n  md-tooltip.md-hide {\n    transition: all 0.3s cubic-bezier(0.55, 0, 0.55, 0.2); }\n  md-tooltip.md-show {\n    transition: all 0.4s cubic-bezier(0.25, 0.8, 0.25, 1);\n    pointer-events: auto;\n    transform: translate3d(0, 0, 0); }\n\n.md-virtual-repeat-container {\n  box-sizing: border-box;\n  display: block;\n  margin: 0;\n  overflow: hidden;\n  padding: 0;\n  position: relative; }\n  .md-virtual-repeat-container .md-virtual-repeat-scroller {\n    bottom: 0;\n    box-sizing: border-box;\n    left: 0;\n    margin: 0;\n    overflow-x: hidden;\n    padding: 0;\n    position: absolute;\n    right: 0;\n    top: 0; }\n  .md-virtual-repeat-container .md-virtual-repeat-sizer {\n    box-sizing: border-box;\n    height: 1px;\n    display: block;\n    margin: 0;\n    padding: 0;\n    width: 1px; }\n  .md-virtual-repeat-container .md-virtual-repeat-offsetter {\n    box-sizing: border-box;\n    left: 0;\n    margin: 0;\n    padding: 0;\n    position: absolute;\n    right: 0;\n    top: 0; }\n\n.md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-scroller {\n  overflow-x: auto;\n  overflow-y: hidden; }\n\n.md-virtual-repeat-container.md-orient-horizontal .md-virtual-repeat-offsetter {\n  bottom: 16px;\n  right: auto;\n  white-space: nowrap; }\n\n.md-whiteframe-1dp, .md-whiteframe-z1 {\n  box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.2), 0px 1px 1px 0px rgba(0, 0, 0, 0.14), 0px 2px 1px -1px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-2dp {\n  box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2), 0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 3px 1px -2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-3dp {\n  box-shadow: 0px 1px 8px 0px rgba(0, 0, 0, 0.2), 0px 3px 4px 0px rgba(0, 0, 0, 0.14), 0px 3px 3px -2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-4dp, .md-whiteframe-z2 {\n  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2), 0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-5dp {\n  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 5px 8px 0px rgba(0, 0, 0, 0.14), 0px 1px 14px 0px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-6dp {\n  box-shadow: 0px 3px 5px -1px rgba(0, 0, 0, 0.2), 0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-7dp, .md-whiteframe-z3 {\n  box-shadow: 0px 4px 5px -2px rgba(0, 0, 0, 0.2), 0px 7px 10px 1px rgba(0, 0, 0, 0.14), 0px 2px 16px 1px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-8dp {\n  box-shadow: 0px 5px 5px -3px rgba(0, 0, 0, 0.2), 0px 8px 10px 1px rgba(0, 0, 0, 0.14), 0px 3px 14px 2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-9dp {\n  box-shadow: 0px 5px 6px -3px rgba(0, 0, 0, 0.2), 0px 9px 12px 1px rgba(0, 0, 0, 0.14), 0px 3px 16px 2px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-10dp, .md-whiteframe-z4 {\n  box-shadow: 0px 6px 6px -3px rgba(0, 0, 0, 0.2), 0px 10px 14px 1px rgba(0, 0, 0, 0.14), 0px 4px 18px 3px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-11dp {\n  box-shadow: 0px 6px 7px -4px rgba(0, 0, 0, 0.2), 0px 11px 15px 1px rgba(0, 0, 0, 0.14), 0px 4px 20px 3px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-12dp {\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 12px 17px 2px rgba(0, 0, 0, 0.14), 0px 5px 22px 4px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-13dp, .md-whiteframe-z5 {\n  box-shadow: 0px 7px 8px -4px rgba(0, 0, 0, 0.2), 0px 13px 19px 2px rgba(0, 0, 0, 0.14), 0px 5px 24px 4px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-14dp {\n  box-shadow: 0px 7px 9px -4px rgba(0, 0, 0, 0.2), 0px 14px 21px 2px rgba(0, 0, 0, 0.14), 0px 5px 26px 4px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-15dp {\n  box-shadow: 0px 8px 9px -5px rgba(0, 0, 0, 0.2), 0px 15px 22px 2px rgba(0, 0, 0, 0.14), 0px 6px 28px 5px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-16dp {\n  box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.2), 0px 16px 24px 2px rgba(0, 0, 0, 0.14), 0px 6px 30px 5px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-17dp {\n  box-shadow: 0px 8px 11px -5px rgba(0, 0, 0, 0.2), 0px 17px 26px 2px rgba(0, 0, 0, 0.14), 0px 6px 32px 5px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-18dp {\n  box-shadow: 0px 9px 11px -5px rgba(0, 0, 0, 0.2), 0px 18px 28px 2px rgba(0, 0, 0, 0.14), 0px 7px 34px 6px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-19dp {\n  box-shadow: 0px 9px 12px -6px rgba(0, 0, 0, 0.2), 0px 19px 29px 2px rgba(0, 0, 0, 0.14), 0px 7px 36px 6px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-20dp {\n  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 20px 31px 3px rgba(0, 0, 0, 0.14), 0px 8px 38px 7px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-21dp {\n  box-shadow: 0px 10px 13px -6px rgba(0, 0, 0, 0.2), 0px 21px 33px 3px rgba(0, 0, 0, 0.14), 0px 8px 40px 7px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-22dp {\n  box-shadow: 0px 10px 14px -6px rgba(0, 0, 0, 0.2), 0px 22px 35px 3px rgba(0, 0, 0, 0.14), 0px 8px 42px 7px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-23dp {\n  box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.2), 0px 23px 36px 3px rgba(0, 0, 0, 0.14), 0px 9px 44px 8px rgba(0, 0, 0, 0.12); }\n\n.md-whiteframe-24dp {\n  box-shadow: 0px 11px 15px -7px rgba(0, 0, 0, 0.2), 0px 24px 38px 3px rgba(0, 0, 0, 0.14), 0px 9px 46px 8px rgba(0, 0, 0, 0.12); }\n\n@media screen and (-ms-high-contrast: active) {\n  md-whiteframe {\n    border: 1px solid #fff; } }\n\nhtml,\nbody {\n  color: #fff;\n  background: #B71C1C; }\n\nmd-content,\n.md-subheader {\n  background-color: transparent;\n  color: #fff; }\n\nmd-list md-list-item button.md-button:not([disabled]):hover {\n  background-color: #F57F17; }\n\nmd-checkbox .md-icon {\n  border-color: #fff; }\n\na.md-button.md-accent.md-raised,\na.md-button.md-accent.md-fab,\n.md-button.md-accent.md-raised,\n.md-button.md-accent.md-fab {\n  color: #fff; }\n\n.md-fab ng-md-icon,\nmd-menu-item ng-md-icon {\n  position: relative;\n  top: 4px; }\n\nmd-input-container .md-input {\n  color: #fff; }\n\nmd-dialog md-input-container .md-input,\nmd-dialog .md-actions .md-button {\n  color: #333; }\n\nmd-menu-content {\n  padding: 0; }\n\nmd-menu-item {\n  min-height: 35px;\n  height: 35px; }\n\n.md-button ng-md-icon {\n  position: relative;\n  top: 3px; }\n\n.incoming-toggle {\n  position: absolute;\n  bottom: 0;\n  right: 0; }\n\n.edit-button {\n  min-height: 0;\n  min-width: 0;\n  margin: 0;\n  padding: 0;\n  line-height: 1.2em; }\n\n.add-button {\n  float: right;\n  position: relative;\n  top: -12px; }\n\n.contacts {\n  background-color: #C62828; }\n  .contacts .contact-list h3, .contacts .contact-list h4, .contacts .contact-list p {\n    margin: 0; }\n\n.scripts {\n  background-color: #D32F2F; }\n  .scripts h4 {\n    margin: 0; }\n  .scripts p {\n    margin-top: 0;\n    line-height: 1.2em; }\n\n.outgoing {\n  background-color: #E53935; }\n  .outgoing .md-button {\n    float: right; }\n\n.md-sidenav-right img {\n  max-width: 100%;\n  height: auto;\n  display: block; }\n", ""]);
 
 	// exports
 
@@ -34434,7 +34434,7 @@
 	 * Angular Material Design
 	 * https://github.com/angular/material
 	 * @license MIT
-	 * v0.11.2
+	 * v0.11.4
 	 */
 	(function( window, angular, undefined ){
 	"use strict";
@@ -34442,7 +34442,7 @@
 	(function(){
 	"use strict";
 
-	angular.module('ngMaterial', ["ng","ngAnimate","ngAria","material.core","material.core.gestures","material.core.layout","material.core.theming.palette","material.core.theming","material.core.animate","material.components.autocomplete","material.components.backdrop","material.components.bottomSheet","material.components.button","material.components.card","material.components.chips","material.components.checkbox","material.components.content","material.components.datepicker","material.components.dialog","material.components.divider","material.components.fabActions","material.components.fabShared","material.components.fabSpeedDial","material.components.fabToolbar","material.components.gridList","material.components.fabTrigger","material.components.icon","material.components.list","material.components.input","material.components.menu","material.components.menuBar","material.components.progressCircular","material.components.progressLinear","material.components.radioButton","material.components.select","material.components.sidenav","material.components.slider","material.components.subheader","material.components.swipe","material.components.switch","material.components.tabs","material.components.sticky","material.components.toast","material.components.toolbar","material.components.tooltip","material.components.virtualRepeat","material.components.whiteframe"]);
+	angular.module('ngMaterial', ["ng","ngAnimate","ngAria","material.core","material.core.gestures","material.core.layout","material.core.theming.palette","material.core.theming","material.core.animate","material.components.autocomplete","material.components.backdrop","material.components.bottomSheet","material.components.button","material.components.card","material.components.checkbox","material.components.chips","material.components.content","material.components.dialog","material.components.divider","material.components.datepicker","material.components.fabActions","material.components.fabShared","material.components.fabSpeedDial","material.components.fabToolbar","material.components.fabTrigger","material.components.gridList","material.components.icon","material.components.input","material.components.list","material.components.menu","material.components.menuBar","material.components.progressCircular","material.components.radioButton","material.components.progressLinear","material.components.select","material.components.sidenav","material.components.slider","material.components.sticky","material.components.subheader","material.components.swipe","material.components.switch","material.components.toast","material.components.tabs","material.components.toolbar","material.components.tooltip","material.components.virtualRepeat","material.components.whiteframe"]);
 	})();
 	(function(){
 	"use strict";
@@ -34940,18 +34940,17 @@
 	    var unwatchFns = [];
 	    attrNames.forEach(function(attrName) {
 	      var normalizedName = getNormalizedName(attrs, attrName);
-	      if (attrs[normalizedName]) {
+	      if (angular.isDefined(attrs[normalizedName])) {
 	        unwatchFns.push(
 	            attrs.$observe(normalizedName, angular.bind(void 0, watchFn, null)));
 	      }
 
 	      for (var mediaName in $mdConstant.MEDIA) {
 	        normalizedName = getNormalizedName(attrs, attrName + '-' + mediaName);
-	        if (!attrs[normalizedName]) {
-	          return;
+	        if (angular.isDefined(attrs[normalizedName])) {
+	          unwatchFns.push(
+	              attrs.$observe(normalizedName, angular.bind(void 0, watchFn, mediaName)));
 	        }
-
-	        unwatchFns.push(attrs.$observe(normalizedName, angular.bind(void 0, watchFn, mediaName)));
 	      }
 	    });
 
@@ -36775,7 +36774,6 @@
 	                                 $mdUtil, $mdCompiler, $mdTheming, $log ) {
 	    return function createInterimElementService() {
 	      var SHOW_CANCELLED = false;
-	      var SHOW_CLOSED = true;
 
 	      /*
 	       * @ngdoc service
@@ -36849,7 +36847,7 @@
 	       *
 	       */
 	      function hide(reason, options) {
-	        if ( !stack.length ) return $q.when(reason || SHOW_CLOSED);
+	        if ( !stack.length ) return $q.when(reason);
 	        options = options || {};
 
 	        if (options.closeAll) {
@@ -36865,7 +36863,7 @@
 
 	        function closeElement(interim) {
 	          interim
-	            .remove(reason || SHOW_CLOSED, false, options || { })
+	            .remove(reason, false, options || { })
 	            .catch(function( reason ) {
 	              //$log.error("InterimElement.hide() error: " + reason );
 	              return reason;
@@ -36888,10 +36886,10 @@
 	       */
 	      function cancel(reason, options) {
 	        var interim = stack.shift();
-	        if ( !interim ) return $q.when(reason || SHOW_CANCELLED);
+	        if ( !interim ) return $q.when(reason);
 
 	        interim
-	          .remove(reason || SHOW_CANCELLED, true, options || { })
+	          .remove(reason, true, options || { })
 	          .catch(function( reason ) {
 	            //$log.error("InterimElement.cancel() error: " + reason );
 	            return reason;
@@ -37127,11 +37125,14 @@
 	         * optional auto-Hide
 	         */
 	        function showElement(element, options, controller) {
+	          // Trigger onShowing callback before the `show()` starts
+	          var notifyShowing = options.onShowing || angular.noop;
 	          // Trigger onComplete callback when the `show()` finishes
 	          var notifyComplete = options.onComplete || angular.noop;
 
 	          return $q(function (resolve, reject) {
 	            try {
+	              notifyShowing(options.scope, element, options);
 
 	              // Start transitionIn
 	              $q.when(options.onShow(options.scope, element, options, controller))
@@ -37321,323 +37322,439 @@
 	(function(){
 	"use strict";
 
-	(function () {
+	(function() {
 	  'use strict';
 
-	  var $mdUtil, $$mdLayout, $parse, $interpolate;
+	  var $mdUtil, $interpolate;
+
+	  var SUFFIXES = /(-gt)?-(sm|md|lg)/g;
+	  var WHITESPACE = /\s+/g;
+
+	  var FLEX_OPTIONS = ['grow', 'initial', 'auto', 'none'];
+	  var LAYOUT_OPTIONS = ['row', 'column'];
+	  var ALIGNMENT_OPTIONS = [
+	        "start start", "start center", "start end",
+	        "center", "center center", "center start", "center end",
+	        "end", "end center", "end start", "end end",
+	        "space-around", "space-around center", "space-around start", "space-around end",
+	        "space-between", "space-between center", "space-between start", "space-between end"
+	      ];
+
+
+	  var config = {
+	    /**
+	     * Enable directive attribute-to-class conversions
+	     */
+	    enabled: true,
 
 	    /**
+	     * After translation to classname equivalents, remove the
+	     * original Layout attribute
+	     */
+	    removeAttributes : true,
+
+	    /**
+	     * List of mediaQuery breakpoints and associated suffixes
 	     *
-	     *   The original ngMaterial Layout solution used attribute selectors and CSS.
-	     *
-	     *  ```html
-	     *  <div layout="column"> My Content </div>
-	     *  ```
-	     *
-	     *  ```css
-	     *  [layout] {
+	     *   [
+	     *    { suffix: "sm", mediaQuery: "screen and (max-width: 599px)" },
+	     *    { suffix: "md", mediaQuery: "screen and (min-width: 600px) and (max-width: 959px)" }
+	     *   ]
+	     */
+	    breakpoints: []
+	  };
+
+	  /**
+	   *   The original ngMaterial Layout solution used attribute selectors and CSS.
+	   *
+	   *  ```html
+	   *  <div layout="column"> My Content </div>
+	   *  ```
+	   *
+	   *  ```css
+	   *  [layout] {
 	     *    box-sizing: border-box;
 	     *    display:flex;
 	     *  }
-	     *  [layout=column] {
+	   *  [layout=column] {
 	     *    flex-direction : column
 	     *  }
-	     *  ```
-	     *
-	     *  Use of attribute selectors creates significant performance impacts in some
-	     *  browsers... mainly IE.
-	     *
-	     *  This module registers directives that allow the same layout attributes to be
-	     *  interpreted and converted to class selectors. The directive will add equivalent classes to each element that
-	     *  contains a Layout directive.
-	     *
-	     * ```html
-	     *   <div layout="column" class="layout layout-column"> My Content </div>
-	     *```
-	     *
-	     *  ```css
-	     *  .layout {
+	   *  ```
+	   *
+	   *  Use of attribute selectors creates significant performance impacts in some
+	   *  browsers... mainly IE.
+	   *
+	   *  This module registers directives that allow the same layout attributes to be
+	   *  interpreted and converted to class selectors. The directive will add equivalent classes to each element that
+	   *  contains a Layout directive.
+	   *
+	   * ```html
+	   *   <div layout="column" class="layout layout-column"> My Content </div>
+	   *```
+	   *
+	   *  ```css
+	   *  .layout {
 	     *    box-sizing: border-box;
 	     *    display:flex;
 	     *  }
-	     *  .layout-column {
+	   *  .layout-column {
 	     *    flex-direction : column
 	     *  }
-	     *  ```
-	     */
-	    angular.module('material.core.layout', [ 'ng' ])
+	   *  ```
+	   */
+	  angular.module('material.core.layout', ['ng'])
 
-	      /**
-	       * Model of flags used by the Layout directives
-	       * Allows changes while running tests or runtime app changes
-	       */
-	      .factory("$$mdLayout", function() {
-	        return {
-	          removeAttributes : true
+	    .directive('mdLayoutCss', disableLayoutDirective )
 
-	        };
-	      })
+	    .directive('layout', attributeWithObserve('layout'))
+	    .directive('layoutSm', attributeWithObserve('layout-sm'))
+	    .directive('layoutGtSm', attributeWithObserve('layout-gt-sm'))
+	    .directive('layoutMd', attributeWithObserve('layout-md'))
+	    .directive('layoutGtMd', attributeWithObserve('layout-gt-md'))
+	    .directive('layoutLg', attributeWithObserve('layout-lg'))
+	    .directive('layoutGtLg', attributeWithObserve('layout-gt-lg'))
 
-	      // Attribute directives with optional value(s)
+	    .directive('flex', attributeWithObserve('flex'))
+	    .directive('flexSm', attributeWithObserve('flex-sm'))
+	    .directive('flexGtSm', attributeWithObserve('flex-gt-sm'))
+	    .directive('flexMd', attributeWithObserve('flex-md'))
+	    .directive('flexGtMd', attributeWithObserve('flex-gt-md'))
+	    .directive('flexLg', attributeWithObserve('flex-lg'))
+	    .directive('flexGtLg', attributeWithObserve('flex-gt-lg'))
 
-	      .directive('layout'              , attributeWithObserve('layout'      )  )
-	      .directive('layoutSm'            , attributeWithObserve('layout-sm'   )  )
-	      .directive('layoutGtSm'          , attributeWithObserve('layout-gt-sm')  )
-	      .directive('layoutMd'            , attributeWithObserve('layout-md'   )  )
-	      .directive('layoutGtMd'          , attributeWithObserve('layout-gt-md')  )
-	      .directive('layoutLg'            , attributeWithObserve('layout-lg'   )  )
-	      .directive('layoutGtLg'          , attributeWithObserve('layout-gt-lg')  )
+	    .directive('flexOrder', attributeWithObserve('flex-order'))
+	    .directive('flexOrderSm', attributeWithObserve('flex-order-sm'))
+	    .directive('flexOrderGtSm', attributeWithObserve('flex-order-gt-sm'))
+	    .directive('flexOrderMd', attributeWithObserve('flex-order-md'))
+	    .directive('flexOrderGtMd', attributeWithObserve('flex-order-gt-md'))
+	    .directive('flexOrderLg', attributeWithObserve('flex-order-lg'))
+	    .directive('flexOrderGtLg', attributeWithObserve('flex-order-gt-lg'))
 
-	      .directive('flex'                , attributeWithObserve('flex'        )  )
-	      .directive('flexSm'              , attributeWithObserve('flex-sm'     )  )
-	      .directive('flexGtSm'            , attributeWithObserve('flex-gt-sm'  )  )
-	      .directive('flexMd'              , attributeWithObserve('flex-md'     )  )
-	      .directive('flexGtMd'            , attributeWithObserve('flex-gt-md'  )  )
-	      .directive('flexLg'              , attributeWithObserve('flex-lg'     )  )
-	      .directive('flexGtLg'            , attributeWithObserve('flex-gt-lg'  )  )
+	    .directive('flexOffset', attributeWithObserve('flex-offset'))
+	    .directive('flexOffsetSm', attributeWithObserve('flex-offset-sm'))
+	    .directive('flexOffsetGtSm', attributeWithObserve('flex-offset-gt-sm'))
+	    .directive('flexOffsetMd', attributeWithObserve('flex-offset-md'))
+	    .directive('flexOffsetGtMd', attributeWithObserve('flex-offset-gt-md'))
+	    .directive('flexOffsetLg', attributeWithObserve('flex-offset-lg'))
+	    .directive('flexOffsetGtLg', attributeWithObserve('flex-offset-gt-lg'))
 
-	      // Attribute directives with optional value(s) but directiveName is NOT added as a class
+	    .directive('layoutAlign', attributeWithObserve('layout-align'))
+	    .directive('layoutAlignSm', attributeWithObserve('layout-align-sm'))
+	    .directive('layoutAlignGtSm', attributeWithObserve('layout-align-gt-sm'))
+	    .directive('layoutAlignMd', attributeWithObserve('layout-align-md'))
+	    .directive('layoutAlignGtMd', attributeWithObserve('layout-align-gt-md'))
+	    .directive('layoutAlignLg', attributeWithObserve('layout-align-lg'))
+	    .directive('layoutAlignGtLg', attributeWithObserve('layout-align-gt-lg'))
 
-	      .directive('layoutAlign'         , attributeWithObserve('layout-align')        )
-	      .directive('layoutAlignSm'       , attributeWithObserve('layout-align-sm')     )
-	      .directive('layoutAlignGtSm'     , attributeWithObserve('layout-align-gt-sm')  )
-	      .directive('layoutAlignMd'       , attributeWithObserve('layout-align-md')     )
-	      .directive('layoutAlignGtMd'     , attributeWithObserve('layout-align-gt-md')  )
-	      .directive('layoutAlignLg'       , attributeWithObserve('layout-align-lg')     )
-	      .directive('layoutAlignGtLg'     , attributeWithObserve('layout-align-gt-lg')  )
+	    // Attribute directives with no value(s)
 
-	      .directive('flexOrder'           , attributeWithObserve('flex-order')          )
-	      .directive('flexOrderSm'         , attributeWithObserve('flex-order-sm')       )
-	      .directive('flexOrderGtSm'       , attributeWithObserve('flex-order-gt-sm')    )
-	      .directive('flexOrderMd'         , attributeWithObserve('flex-order-md')       )
-	      .directive('flexOrderGtMd'       , attributeWithObserve('flex-order-gt-md')    )
-	      .directive('flexOrderLg'         , attributeWithObserve('flex-order-lg')       )
-	      .directive('flexOrderGtLg'       , attributeWithObserve('flex-order-gt-lg')    )
+	    .directive('hide', attributeWithoutValue('hide'))
+	    .directive('hideSm', attributeWithoutValue('hide-sm'))
+	    .directive('hideGtSm', attributeWithoutValue('hide-gt-sm'))
+	    .directive('hideMd', attributeWithoutValue('hide-md'))
+	    .directive('hideGtMd', attributeWithoutValue('hide-gt-md'))
+	    .directive('hideLg', attributeWithoutValue('hide-lg'))
+	    .directive('hideGtLg', attributeWithoutValue('hide-gt-lg'))
+	    .directive('show', attributeWithoutValue('show'))
+	    .directive('showSm', attributeWithoutValue('show-sm'))
+	    .directive('showGtSm', attributeWithoutValue('show-gt-sm'))
+	    .directive('showMd', attributeWithoutValue('show-md'))
+	    .directive('showGtMd', attributeWithoutValue('show-gt-md'))
+	    .directive('showLg', attributeWithoutValue('show-lg'))
+	    .directive('showGtLg', attributeWithoutValue('show-gt-lg'))
 
-	      .directive('offset'              , attributeWithObserve('offset')              )
-	      .directive('offsetSm'            , attributeWithObserve('offset-sm')           )
-	      .directive('offsetGtSm'          , attributeWithObserve('offset-gt-sm')        )
-	      .directive('offsetMd'            , attributeWithObserve('offset-md')           )
-	      .directive('offsetGtMd'          , attributeWithObserve('offset-gt-md')        )
-	      .directive('offsetLg'            , attributeWithObserve('offset-lg')           )
-	      .directive('offsetGtLg'          , attributeWithObserve('offset-gt-lg')        )
+	    // Attribute directives with no value(s) and NO breakpoints
 
-	      // Attribute directives with no value(s)
+	    .directive('layoutMargin', attributeWithoutValue('layout-margin'))
+	    .directive('layoutPadding', attributeWithoutValue('layout-padding'))
+	    .directive('layoutWrap', attributeWithoutValue('layout-wrap'))
+	    .directive('layoutNoWrap', attributeWithoutValue('layout-no-wrap'))
+	    .directive('layoutFill', attributeWithoutValue('layout-fill'))
 
-	      .directive('layoutMargin'        , attributeWithoutValue('layout-margin')      )
-	      .directive('layoutPadding'       , attributeWithoutValue('layout-padding')     )
-	      .directive('layoutWrap'          , attributeWithoutValue('layout-wrap')        )
-	      .directive('layoutFill'          , attributeWithoutValue('layout-fill')        )
+	    // !! Deprecated attributes: use the `-lt` (aka less-than) notations
 
-	      .directive('hide'                , attributeWithoutValue('hide')               )
-	      .directive('hideSm'              , attributeWithoutValue('hide-sm')            )
-	      .directive('hideGtSm'            , attributeWithoutValue('hide-gt-sm')         )
-	      .directive('hideMd'              , attributeWithoutValue('hide-md')            )
-	      .directive('hideGtMd'            , attributeWithoutValue('hide-gt-md')         )
-	      .directive('hideLg'              , attributeWithoutValue('hide-lg')            )
-	      .directive('hideGtLg'            , attributeWithoutValue('hide-gt-lg')         )
-	      .directive('show'                , attributeWithoutValue('show')               )
-	      .directive('showSm'              , attributeWithoutValue('show-sm')            )
-	      .directive('showGtSm'            , attributeWithoutValue('show-gt-sm')         )
-	      .directive('showMd'              , attributeWithoutValue('show-md')            )
-	      .directive('showGtMd'            , attributeWithoutValue('show-gt-md')         )
-	      .directive('showLg'              , attributeWithoutValue('show-lg')            )
-	      .directive('showGtLg'            , attributeWithoutValue('show-gt-lg')         )
+	    .directive('layoutLtMd', warnAttrNotSupported('layout-lt-md', true))
+	    .directive('layoutLtLg', warnAttrNotSupported('layout-lt-lg', true))
+	    .directive('flexLtMd', warnAttrNotSupported('flex-lt-md', true))
+	    .directive('flexLtLg', warnAttrNotSupported('flex-lt-lg', true))
 
-	      // !! Deprecated attributes: use the `-lt` (aka less-than) notations
+	    .directive('layoutAlignLtMd', warnAttrNotSupported('layout-align-lt-md'))
+	    .directive('layoutAlignLtLg', warnAttrNotSupported('layout-align-lt-lg'))
+	    .directive('flexOrderLtMd', warnAttrNotSupported('flex-order-lt-md'))
+	    .directive('flexOrderLtLg', warnAttrNotSupported('flex-order-lt-lg'))
+	    .directive('offsetLtMd', warnAttrNotSupported('flex-offset-lt-md'))
+	    .directive('offsetLtLg', warnAttrNotSupported('flex-offset-lt-lg'))
 
-	      .directive('layoutLtMd'          , warnAttrNotSupported('layout-lt-md',true)   )
-	      .directive('layoutLtLg'          , warnAttrNotSupported('layout-lt-lg',true)   )
-	      .directive('flexLtMd'            , warnAttrNotSupported('flex-lt-md'  ,true)   )
-	      .directive('flexLtLg'            , warnAttrNotSupported('flex-lt-lg'  ,true)   )
+	    .directive('hideLtMd', warnAttrNotSupported('hide-lt-md'))
+	    .directive('hideLtLg', warnAttrNotSupported('hide-lt-lg'))
+	    .directive('showLtMd', warnAttrNotSupported('show-lt-md'))
+	    .directive('showLtLg', warnAttrNotSupported('show-lt-lg'));
 
-	      .directive('layoutAlignLtMd'     , warnAttrNotSupported('layout-align-lt-md')  )
-	      .directive('layoutAlignLtLg'     , warnAttrNotSupported('layout-align-lt-lg')  )
-	      .directive('flexOrderLtMd'       , warnAttrNotSupported('flex-order-lt-md')    )
-	      .directive('flexOrderLtLg'       , warnAttrNotSupported('flex-order-lt-lg')    )
-	      .directive('offsetLtMd'          , warnAttrNotSupported('offset-lt-md')        )
-	      .directive('offsetLtLg'          , warnAttrNotSupported('offset-lt-lg')        )
+	  /**
+	   * Special directive that will disable ALL Layout conversions of layout
+	   * attribute(s) to classname(s).
+	   *
+	   * <link rel="stylesheet" href="angular-material.min.css">
+	   * <link rel="stylesheet" href="angular-material.layout.css">
+	   *
+	   * <body md-layout-css>
+	   *  ...
+	   * </body>
+	   *
+	   * Note: Using md-layout-css directive requires the developer to load the Material
+	   * Layout Attribute stylesheet (which only uses attribute selectors):
+	   *
+	   *       `angular-material.layout.css`
+	   *
+	   * Another option is to use the LayoutProvider to configure and disable the attribute
+	   * conversions; this would obviate the use of the `md-layout-css` directive
+	   *
+	   */
+	  function disableLayoutDirective() {
+	    return {
+	      restrict : 'A',
+	      priority : '900',
+	      compile  : function(element, attr) {
+	        config.enabled = false;
+	        return angular.noop;
+	      }
+	    };
+	  }
 
-	      .directive('hideLtMd'            , warnAttrNotSupported ('hide-lt-md')         )
-	      .directive('hideLtLg'            , warnAttrNotSupported ('hide-lt-lg')         )
-	      .directive('showLtMd'            , warnAttrNotSupported ('show-lt-md')         )
-	      .directive('showLtLg'            , warnAttrNotSupported ('show-lt-lg')         );
-
-	    /**
-	     * These functions create registration functions for ngMaterial Layout attribute directives
-	     * This provides easy translation to switch ngMaterial attribute selectors to
-	     * CLASS selectors and directives; which has huge performance implications
-	     * for IE Browsers
-	     */
-
-	    /**
-	     * Creates a directive registration function where a possbile dynamic attribute value will
-	     * be observed/watched.
-	     * @param {string} className attribute name; eg `md-layout-gt-md` with value ="row"
-	     */
-	    function attributeWithObserve(className) {
-
-	      return ['$mdUtil', '$$mdLayout', '$document', '$parse', '$interpolate', function(_$mdUtil_, _$$mdLayout_, $document, _$parse_, _$interpolate_) {
-	        $mdUtil = _$mdUtil_;
-	        $$mdLayout = _$$mdLayout_;
-	        $parse = _$parse_;
-	        $interpolate = _$interpolate_;
-
-	        return {
-	            restrict : 'A',
-	            compile: function(element, attr) {
-	              // Use for postLink to account for transforms after ng-transclude.
-
-	              if ( !injectLayoutSpecifier(element, attr) ) {
-	                attributeValueToClass(null, element, attr);
-	                return attributeValueToClass;
-	              }
-
-	              return angular.noop;
-	            }
-	        };
-	      }];
-
-	      /**
-	       * To avoid large sets of CSS rules
-	       * for layout-gt-md-row, layout-sm-column, etc...
-	       *
-	       * Instead create either a md-layout-row or md-layout-column
-	       * class that acts as a generic specifier.
-	       *
-	       */
-	      function injectLayoutSpecifier(element, attrs) {
-	        var injected = false;
-	        var breakpoints = ['','-sm','-gt-sm','-md','-gt-md','-lg','-gt-lg'];
-	        angular.forEach(breakpoints, function(it){
-	          if ( className === "layout"+it ) {
-
-	            var updateClassFn = updateClassWithValue(element,"md-layout"+it, attrs);
-	            var normalizedAttr = attrs.$normalize(className);
-	            var attrValue = attrs[normalizedAttr] ? attrs[normalizedAttr].replace(/\s+/g, "-") : "row";
-	            var addImmediate = attrValue ? !needsInterpolation(attrValue) : false;
-	            var watchValue   = needsInterpolation(attrValue);
+	  // *********************************************************************************
+	  //
+	  // These functions create registration functions for ngMaterial Layout attribute directives
+	  // This provides easy translation to switch ngMaterial attribute selectors to
+	  // CLASS selectors and directives; which has huge performance implications
+	  // for IE Browsers
+	  //
+	  // *********************************************************************************
 
 
-	            // Add special layout class: either '.md-layout-row' or '.md-layout-column'
-	            if ( addImmediate ) element.addClass( $mdUtil.supplant('md-layout{0}-{1}',[it,attrValue]) );
-	            if ( watchValue ) attrs.$observe( normalizedAttr, updateClassFn );
-	            if ( $$mdLayout.removeAttributes ) element.removeAttr(className);
+	  /**
+	   * Creates a directive registration function where a possible dynamic attribute
+	   * value will be observed/watched.
+	   * @param {string} className attribute name; eg `layout-gt-md` with value ="row"
+	   */
+	  function attributeWithObserve(className) {
 
-	            injected = true;
+	    return ['$mdUtil', '$interpolate', function(_$mdUtil_, _$interpolate_) {
+	      $mdUtil = _$mdUtil_;
+	      $interpolate = _$interpolate_;
+
+	      return {
+	        restrict: 'A',
+	        compile: function(element, attr) {
+	          var linkFn;
+	          if (config.enabled) {
+	            // immediately replace static (non-interpolated) invalid values...
+
+	            validateAttributeValue( className,
+	              getNormalizedAttrValue(className, attr, ""),
+	              buildUpdateFn(element, className, attr)
+	            );
+
+	            linkFn = translateWithValueToCssClass;
 	          }
-	        });
 
-	        return injected;
-	      }
-
-	      /**
-	       * Add as transformed class selector(s), then
-	       * remove the deprecated attribute selector
-	       */
-	      function attributeValueToClass(scope, element, attrs) {
-	        var updateClassFn = updateClassWithValue(element,className, attrs);
-	        var normalizedAttr = attrs.$normalize(className);
-	        var attrValue = attrs[normalizedAttr] ? attrs[normalizedAttr].replace(/\s+/g, "-") : null;
-	        var addImmediate = attrValue ? !needsInterpolation(attrValue) : false;
-	        var watchValue   = needsInterpolation(attrValue);
-
-	        // Add transformed class selector(s)
-
-	        if ( addImmediate ) element.addClass(className + "-" + attrValue);
-	        if ( watchValue ) attrs.$observe( normalizedAttr, updateClassFn );
-	        if ( !addImmediate && !watchValue )  element.addClass(className);
-
-	        if ( $$mdLayout.removeAttributes ) element.removeAttr(className);
-	      }
-
-	    }
-
-	    /**
-	     * See if the original value has interpolation symbols:
-	     * e.g.  flex-gt-md="{{triggerPoint}}"
-	     */
-	    function needsInterpolation(value) {
-	      return (value ||"").indexOf($interpolate.startSymbol()) > -1;
-	    }
-
-	    /**
-	     * After link-phase, do NOT remove deprecated layout attribute selector.
-	     * Instead watch the attribute so interpolated data-bindings to layout
-	     * selectors will continue to be supported.
-	     *
-	     * $observe() the className and update with new class (after removing the last one)
-	     *
-	     * e.g. `layout="{{layoutDemo.direction}}"` will update...
-	     *
-	     * NOTE: The value must match one of the specified styles in the CSS.
-	     * For example `flex-gt-md="{{size}}`  where `scope.size == 47` will NOT work since
-	     * only breakpoints for 0, 5, 10, 15... 100, 33, 34, 66, 67 are defined.
-	     *
-	     */
-	    function updateClassWithValue(element, className, attr) {
-	      var lastClass;
-
-	      return function updateClassWithValue(newValue) {
-	        var value = String(newValue || "").replace(/\s+/g, "-");
-
-	        element.removeClass(lastClass);
-	        lastClass = !value ? className : className + "-" + value;
-	        element.addClass(lastClass);
-
-	        // Conditionally remove the attribute selector in case the browser attempts to
-	        // read it and suffers a performance downgrade (IE).
-
-	        if ( $$mdLayout.removeAttributes ) element.removeAttr(className);
+	          // Use for postLink to account for transforms after ng-transclude.
+	          return linkFn || angular.noop;
+	        }
 	      };
-	    }
+	    }];
 
 	    /**
-	     * Creates a registration function with for ngMaterial Layout attribute directive.
-	     * This is a `simple` transpose of attribute usage to class usage
+	     * Add as transformed class selector(s), then
+	     * remove the deprecated attribute selector
 	     */
-	    function attributeWithoutValue(className) {
-	      return ['$$mdLayout', '$document', function(_$$mdLayout_, $document) {
-	        $$mdLayout = _$$mdLayout_;
-	        return {
-	          restrict : 'A',
-	          compile: function(element, attrs) {
+	    function translateWithValueToCssClass(scope, element, attrs) {
+	      var updateFn = updateClassWithValue(element, className, attrs);
+	      var unwatch = attrs.$observe(attrs.$normalize(className), updateFn);
 
-	            attributeToClass(null, element);
+	      updateFn(getNormalizedAttrValue(className, attrs, ""));
+	      scope.$on("$destroy", function() { unwatch() });
+
+	      if (config.removeAttributes) element.removeAttr(className);
+	    }
+	  }
+
+	  /**
+	   * Creates a registration function for ngMaterial Layout attribute directive.
+	   * This is a `simple` transpose of attribute usage to class usage; where we ignore
+	   * any attribute value
+	   */
+	  function attributeWithoutValue(className) {
+	    return ['$interpolate', function(_$interpolate_) {
+	      $interpolate = _$interpolate_;
+
+	      return {
+	        restrict: 'A',
+	        compile: function(element, attr) {
+	          var linkFn;
+	          if (config.enabled) {
+	            // immediately replace static (non-interpolated) invalid values...
+
+	            validateAttributeValue( className,
+	              getNormalizedAttrValue(className, attr, ""),
+	              buildUpdateFn(element, className, attr)
+	            );
+
+	            translateToCssClass(null, element);
 
 	            // Use for postLink to account for transforms after ng-transclude.
-	            return attributeToClass;
+	            linkFn = translateToCssClass;
 	          }
-	        };
-	      }];
 
-	      /**
-	       * Add as transformed class selector, then
-	       * remove the deprecated attribute selector
-	       */
-	      function attributeToClass(scope, element) {
-	        element.addClass(className);
-
-	        if ( $$mdLayout.removeAttributes ) {
-	          // After link-phase, remove deprecated layout attribute selector
-	          element.removeAttr(className);
+	          return linkFn || angular.noop;
 	        }
+	      };
+	    }];
+
+	    /**
+	     * Add as transformed class selector, then
+	     * remove the deprecated attribute selector
+	     */
+	    function translateToCssClass(scope, element) {
+	      element.addClass(className);
+
+	      if (config.removeAttributes) {
+	        // After link-phase, remove deprecated layout attribute selector
+	        element.removeAttr(className);
+	      }
+	    }
+	  }
+
+
+
+	  /**
+	   * After link-phase, do NOT remove deprecated layout attribute selector.
+	   * Instead watch the attribute so interpolated data-bindings to layout
+	   * selectors will continue to be supported.
+	   *
+	   * $observe() the className and update with new class (after removing the last one)
+	   *
+	   * e.g. `layout="{{layoutDemo.direction}}"` will update...
+	   *
+	   * NOTE: The value must match one of the specified styles in the CSS.
+	   * For example `flex-gt-md="{{size}}`  where `scope.size == 47` will NOT work since
+	   * only breakpoints for 0, 5, 10, 15... 100, 33, 34, 66, 67 are defined.
+	   *
+	   */
+	  function updateClassWithValue(element, className) {
+	    var lastClass;
+
+	    return function updateClassFn(newValue) {
+	      var value = validateAttributeValue(className, newValue || "");
+	      if ( angular.isDefined(value) ) {
+	        element.removeClass(lastClass);
+	        lastClass = !value ? className : className + "-" + value.replace(WHITESPACE, "-")
+	        element.addClass(lastClass);
+	      }
+	    };
+	  }
+
+	  /**
+	   * Provide console warning that this layout attribute has been deprecated
+	   *
+	   */
+	  function warnAttrNotSupported(className) {
+	    var parts = className.split("-");
+	    return ["$log", function($log) {
+	      $log.warn(className + "has been deprecated. Please use a `" + parts[0] + "-gt-<xxx>` variant.");
+	      return angular.noop;
+	    }];
+	  }
+
+	  /**
+	   * For the Layout attribute value, validate or replace with default
+	   * fallback value
+	   */
+	  function validateAttributeValue(className, value, updateFn) {
+	    var origValue = value;
+
+	    if (!needsInterpolation(value)) {
+	      switch (className.replace(SUFFIXES,"")) {
+	        case 'layout'        :
+	          if ( !findIn(value, LAYOUT_OPTIONS) ) {
+	            value = LAYOUT_OPTIONS[0];    // 'row';
+	          }
+	          break;
+
+	        case 'flex'          :
+	          if (!findIn(value, FLEX_OPTIONS)) {
+	            if (isNaN(value)) {
+	              value = '';
+	            }
+	          }
+	          break;
+
+	        case 'flex-offset' :
+	        case 'flex-order'    :
+	          if (!value || isNaN(+value)) {
+	            value = '0';
+	          }
+	          break;
+
+	        case 'layout-align'  :
+	          if (!findIn(value, ALIGNMENT_OPTIONS, "-")) {
+	            value = ALIGNMENT_OPTIONS[0];   // 'start-start';
+	          }
+	          break;
+
+	        case 'layout-padding' :
+	        case 'layout-margin'  :
+	        case 'layout-fill'    :
+	        case 'layout-wrap'    :
+	        case 'layout-no-wrap' :
+	          value = '';
+	          break;
+	      }
+
+	      if (value != origValue) {
+	        (updateFn || angular.noop)(value);
 	      }
 	    }
 
-	    /**
-	     * Provide console warning that this layout attribute has been deprecated
-	     *
-	     */
-	    function warnAttrNotSupported(className) {
-	      var parts = className.split("-");
+	    return value;
+	  }
 
-	      return ["$log", function($log) {
-	        $log.warn( className + "has been deprecated. Please use a `" + parts[0] + "-gt-<xxx>` variant.");
-	        return angular.noop;
-	      }];
+	  /**
+	   * Replace current attribute value with fallback value
+	   */
+	  function buildUpdateFn(element, className, attrs) {
+	    return function updateAttrValue(fallback) {
+	      if (!needsInterpolation(fallback)) {
+	        element.attr(className, fallback);
+	        attrs[attrs.$normalize(className)] = fallback;
+	      }
+	    };
+	  }
 
+	  /**
+	   * See if the original value has interpolation symbols:
+	   * e.g.  flex-gt-md="{{triggerPoint}}"
+	   */
+	  function needsInterpolation(value) {
+	    return (value || "").indexOf($interpolate.startSymbol()) > -1;
+	  }
+
+	  function getNormalizedAttrValue(className, attrs, defaultVal) {
+	    var normalizedAttr = attrs.$normalize(className);
+	    return attrs[normalizedAttr] ? attrs[normalizedAttr].replace(WHITESPACE, "-") : defaultVal || null;
+	  }
+
+	  function findIn(item, list, replaceWith) {
+	    item = replaceWith && item ? item.replace(WHITESPACE, replaceWith) : item;
+
+	    var found = false;
+	    if (item) {
+	      list.forEach(function(it) {
+	        it = replaceWith ? it.replace(WHITESPACE, replaceWith) : it;
+	        found = found || (it === item);
+	      });
 	    }
+	    return found;
+	  }
 
 	})();
 
@@ -37833,11 +37950,14 @@
 	  this.lastRipple = null;
 
 	  $mdUtil.valueOnUse(this, 'container', this.createContainer);
-	  $mdUtil.valueOnUse(this, 'color', this.getColor, 1);
 	  $mdUtil.valueOnUse(this, 'background', this.getColor, 0.5);
+
+	  this.color = this.getColor(1);
+	  this.$element.addClass('md-ink-ripple');
 
 	  // attach method for unit tests
 	  ($element.controller('mdInkRipple') || {}).createRipple = angular.bind(this, this.createRipple);
+	  ($element.controller('mdInkRipple') || {}).setColor = angular.bind(this, this.setColor);
 
 	  this.bindEvents();
 	}
@@ -37847,10 +37967,9 @@
 	 * Returns the color that the ripple should be (either based on CSS or hard-coded)
 	 * @returns {string}
 	 */
-	InkRippleCtrl.prototype.getColor = function (multiplier) {
-	  multiplier = multiplier || 1;
-	  return parseColor(this.$element.attr('md-ink-ripple'))
-	      || parseColor(getElementColor.call(this));
+	InkRippleCtrl.prototype.getColor = function () {
+	  return this._parseColor(this.$element.attr('md-ink-ripple'))
+	      || this._parseColor(getElementColor.call(this));
 
 	  /**
 	   * Finds the color element and returns its text color for use as default ripple color
@@ -37861,46 +37980,48 @@
 	    colorElement     = colorElement || this.$element[ 0 ];
 	    return colorElement ? this.$window.getComputedStyle(colorElement).color : 'rgb(0,0,0)';
 	  }
+	};
+	/**
+	 * Takes a string color and converts it to RGBA format
+	 * @param color {string}
+	 * @param [multiplier] {int}
+	 * @returns {string}
+	 */
+
+	InkRippleCtrl.prototype._parseColor = function parseColor (color, multiplier) {
+	  multiplier = multiplier || 1;
+
+	  if (!color) return;
+	  if (color.indexOf('rgba') === 0) return color.replace(/\d?\.?\d*\s*\)\s*$/, (0.1 * multiplier).toString() + ')');
+	  if (color.indexOf('rgb') === 0) return rgbToRGBA(color);
+	  if (color.indexOf('#') === 0) return hexToRGBA(color);
 
 	  /**
-	   * Takes a string color and converts it to RGBA format
+	   * Converts hex value to RGBA string
 	   * @param color {string}
 	   * @returns {string}
 	   */
-	  function parseColor (color) {
-	    if (!color) return;
-	    if (color.indexOf('rgba') === 0) return color.replace(/\d?\.?\d*\s*\)\s*$/, (0.1 * multiplier).toString() + ')');
-	    if (color.indexOf('rgb') === 0) return rgbToRGBA(color);
-	    if (color.indexOf('#') === 0) return hexToRGBA(color);
-
-	    /**
-	     * Converts hex value to RGBA string
-	     * @param color {string}
-	     * @returns {string}
-	     */
-	    function hexToRGBA (color) {
-	      var hex   = color[ 0 ] === '#' ? color.substr(1) : color,
-	          dig   = hex.length / 3,
-	          red   = hex.substr(0, dig),
-	          green = hex.substr(dig, dig),
-	          blue  = hex.substr(dig * 2);
-	      if (dig === 1) {
-	        red += red;
-	        green += green;
-	        blue += blue;
-	      }
-	      return 'rgba(' + parseInt(red, 16) + ',' + parseInt(green, 16) + ',' + parseInt(blue, 16) + ',0.1)';
+	  function hexToRGBA (color) {
+	    var hex   = color[ 0 ] === '#' ? color.substr(1) : color,
+	      dig   = hex.length / 3,
+	      red   = hex.substr(0, dig),
+	      green = hex.substr(dig, dig),
+	      blue  = hex.substr(dig * 2);
+	    if (dig === 1) {
+	      red += red;
+	      green += green;
+	      blue += blue;
 	    }
+	    return 'rgba(' + parseInt(red, 16) + ',' + parseInt(green, 16) + ',' + parseInt(blue, 16) + ',0.1)';
+	  }
 
-	    /**
-	     * Converts an RGB color to RGBA
-	     * @param color {string}
-	     * @returns {string}
-	     */
-	    function rgbToRGBA (color) {
-	      return color.replace(')', ', 0.1)').replace('(', 'a(');
-	    }
-
+	  /**
+	   * Converts an RGB color to RGBA
+	   * @param color {string}
+	   * @returns {string}
+	   */
+	  function rgbToRGBA (color) {
+	    return color.replace(')', ', 0.1)').replace('(', 'a(');
 	  }
 
 	};
@@ -37921,6 +38042,8 @@
 	InkRippleCtrl.prototype.handleMousedown = function (event) {
 	  if ( this.mousedown ) return;
 
+	  this.setColor(window.getComputedStyle(this.$element[0])['color']);
+
 	  // When jQuery is loaded, we have to get the original event
 	  if (event.hasOwnProperty('originalEvent')) event = event.originalEvent;
 	  this.mousedown = true;
@@ -37929,7 +38052,6 @@
 	  } else {
 	    this.createRipple(event.layerX, event.layerY);
 	  }
-
 	};
 
 	/**
@@ -38041,6 +38163,10 @@
 	        ? Math.max(x, y)
 	        : Math.sqrt(Math.pow(x, 2) + Math.pow(y, 2));
 	  }
+	};
+
+	InkRippleCtrl.prototype.setColor = function (color) {
+	  this.color = this._parseColor(color);
 	};
 
 	/**
@@ -38828,15 +38954,16 @@
 	      var attrThemeValue = el.attr('md-theme-watch');
 	      if ( (alwaysWatchTheme || angular.isDefined(attrThemeValue)) && attrThemeValue != 'false') {
 	        var deregisterWatch = $rootScope.$watch(function() {
-	          return ctrl && ctrl.$mdTheme || defaultTheme;
+	          return ctrl && ctrl.$mdTheme || (defaultTheme == 'default' ? '' : defaultTheme);
 	        }, changeTheme);
 	        el.on('$destroy', deregisterWatch);
 	      } else {
-	        var theme = ctrl && ctrl.$mdTheme || defaultTheme;
+	        var theme = ctrl && ctrl.$mdTheme || (defaultTheme == 'default' ? '' : defaultTheme);
 	        changeTheme(theme);
 	      }
 
 	      function changeTheme(theme) {
+	        if (!theme) return;
 	        if (!registered(theme)) {
 	          $log.warn('Attempted to use unregistered theme \'' + theme + '\'. ' +
 	                    'Register it with $mdThemingProvider.theme().');
@@ -38947,7 +39074,7 @@
 	    // Don't apply a selector rule to the default theme, making it easier to override
 	    // styles of the base-component
 	    if (theme.name == 'default') {
-	      newRule = newRule.replace(/\.md-default-theme/g, '');
+	      newRule = newRule.replace(/((\w|\.|-)+)\.md-default-theme((\.|\w|-|:|\(|\)|\[|\]|"|'|=)*)/g, '$&, $1$3');
 	    }
 	    generatedRules.push(newRule);
 	  });
@@ -39942,9 +40069,10 @@
 	 *   be used as names of values to inject into the controller. For example,
 	 *   `locals: {three: 3}` would inject `three` into the controller with the value
 	 *   of 3.
-	 *   - `targetEvent` - `{DOMClickEvent=}`: A click's event object. When passed in as an option,
-	 *   the location of the click will be used as the starting point for the opening animation
-	 *   of the the dialog.
+	 *   - `clickOutsideToClose` - `{boolean=}`: Whether the user can click outside the bottom sheet to
+	 *     close it. Default true.
+	 *   - `escapeToClose` - `{boolean=}`: Whether the user can press escape to close the bottom sheet.
+	 *     Default true.
 	 *   - `resolve` - `{object=}`: Similar to locals, except it takes promises as values
 	 *   and the bottom sheet will not open until the promises resolve.
 	 *   - `controllerAs` - `{string=}`: An alias to assign the controller to on the scope.
@@ -39990,7 +40118,7 @@
 	  bottomSheetDefaults.$inject = ["$animate", "$mdConstant", "$mdUtil", "$mdTheming", "$mdBottomSheet", "$rootElement", "$mdGesture"];
 	  return $$interimElementProvider('$mdBottomSheet')
 	    .setDefaults({
-	      methods: ['disableParentScroll', 'escapeToClose', 'targetEvent'],
+	      methods: ['disableParentScroll', 'escapeToClose', 'clickOutsideToClose'],
 	      options: bottomSheetDefaults
 	    });
 
@@ -40000,10 +40128,10 @@
 
 	    return {
 	      themable: true,
-	      targetEvent: null,
 	      onShow: onShow,
 	      onRemove: onRemove,
 	      escapeToClose: true,
+	      clickOutsideToClose: true,
 	      disableParentScroll: true
 	    };
 
@@ -40014,9 +40142,13 @@
 
 	      // Add a backdrop that will close on click
 	      backdrop = $mdUtil.createBackdrop(scope, "md-bottom-sheet-backdrop md-opaque");
-	      backdrop.on('click', function() {
-	        $mdUtil.nextTick($mdBottomSheet.cancel,true);
-	      });
+
+	      if (options.clickOutsideToClose) {
+	        backdrop.on('click', function() {
+	          $mdUtil.nextTick($mdBottomSheet.cancel,true);
+	        });
+	      }
+
 	      $mdTheming.inherit(backdrop, options.parent);
 
 	      $animate.enter(backdrop, options.parent, null);
@@ -40024,8 +40156,6 @@
 	      var bottomSheet = new BottomSheet(element, options.parent);
 	      options.bottomSheet = bottomSheet;
 
-	      // Give up focus on calling item
-	      options.targetEvent && angular.element(options.targetEvent.target).blur();
 	      $mdTheming.inherit(bottomSheet.element, options.parent);
 
 	      if (options.disableParentScroll) {
@@ -40065,9 +40195,6 @@
 	        }
 
 	        bottomSheet.cleanup();
-
-	        // Restore focus
-	        options.targetEvent && angular.element(options.targetEvent.target).focus();
 	      });
 	    }
 
@@ -40296,7 +40423,7 @@
 	 * fit within a single view on a platform, but it can temporarily expand as needed.
 	 *
 	 * @usage
-	 * ###Card with optional footer
+	 * ### Card with optional footer
 	 * <hljs lang="html">
 	 * <md-card>
 	 *  <img src="card-image.png" class="md-card-image" alt="image caption">
@@ -40310,7 +40437,7 @@
 	 * </md-card>
 	 * </hljs>
 	 *
-	 * ###Card with actions
+	 * ### Card with actions
 	 * <hljs lang="html">
 	 * <md-card>
 	 *  <img src="card-image.png" class="md-card-image" alt="image caption">
@@ -40335,22 +40462,6 @@
 	  };
 	}
 	mdCardDirective.$inject = ["$mdTheming"];
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
-	 * @name material.components.chips
-	 */
-	/*
-	 * @see js folder for chips implementation
-	 */
-	angular.module('material.components.chips', [
-	  'material.core',
-	  'material.components.autocomplete'
-	]);
 
 	})();
 	(function(){
@@ -40539,6 +40650,22 @@
 
 	/**
 	 * @ngdoc module
+	 * @name material.components.chips
+	 */
+	/*
+	 * @see js folder for chips implementation
+	 */
+	angular.module('material.components.chips', [
+	  'material.core',
+	  'material.components.autocomplete'
+	]);
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
 	 * @name material.components.content
 	 *
 	 * @description
@@ -40611,6 +40738,932 @@
 	    }
 	  });
 	}
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
+	 * @name material.components.dialog
+	 */
+	angular
+	  .module('material.components.dialog', [
+	    'material.core',
+	    'material.components.backdrop'
+	  ])
+	  .directive('mdDialog', MdDialogDirective)
+	  .provider('$mdDialog', MdDialogProvider);
+
+	function MdDialogDirective($$rAF, $mdTheming, $mdDialog) {
+	  return {
+	    restrict: 'E',
+	    link: function(scope, element, attr) {
+	      $mdTheming(element);
+	      $$rAF(function() {
+	        var images;
+	        var content = element[0].querySelector('md-dialog-content');
+
+	        if (content) {
+	          images = content.getElementsByTagName('img');
+	          addOverflowClass();
+	          //-- delayed image loading may impact scroll height, check after images are loaded
+	          angular.element(images).on('load', addOverflowClass);
+	        }
+
+	        scope.$on('$destroy', function() {
+	          $mdDialog.destroy();
+	        });
+
+	        /**
+	         *
+	         */
+	        function addOverflowClass() {
+	          element.toggleClass('md-content-overflow', content.scrollHeight > content.clientHeight);
+	        }
+
+
+	      });
+	    }
+	  };
+	}
+	MdDialogDirective.$inject = ["$$rAF", "$mdTheming", "$mdDialog"];
+
+	/**
+	 * @ngdoc service
+	 * @name $mdDialog
+	 * @module material.components.dialog
+	 *
+	 * @description
+	 * `$mdDialog` opens a dialog over the app to inform users about critical information or require
+	 *  them to make decisions. There are two approaches for setup: a simple promise API
+	 *  and regular object syntax.
+	 *
+	 * ## Restrictions
+	 *
+	 * - The dialog is always given an isolate scope.
+	 * - The dialog's template must have an outer `<md-dialog>` element.
+	 *   Inside, use an `<md-dialog-content>` element for the dialog's content, and use
+	 *   an element with class `md-actions` for the dialog's actions.
+	 * - Dialogs must cover the entire application to keep interactions inside of them.
+	 * Use the `parent` option to change where dialogs are appended.
+	 *
+	 * ## Sizing
+	 * - Complex dialogs can be sized with `flex="percentage"`, i.e. `flex="66"`.
+	 * - Default max-width is 80% of the `rootElement` or `parent`.
+	 *
+	 * ## Css
+	 * - `.md-dialog-content` - class that sets the padding on the content as the spec file
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 * <div  ng-app="demoApp" ng-controller="EmployeeController">
+	 *   <div>
+	 *     <md-button ng-click="showAlert()" class="md-raised md-warn">
+	 *       Employee Alert!
+	 *       </md-button>
+	 *   </div>
+	 *   <div>
+	 *     <md-button ng-click="showDialog($event)" class="md-raised">
+	 *       Custom Dialog
+	 *       </md-button>
+	 *   </div>
+	 *   <div>
+	 *     <md-button ng-click="closeAlert()" ng-disabled="!hasAlert()" class="md-raised">
+	 *       Close Alert
+	 *     </md-button>
+	 *   </div>
+	 *   <div>
+	 *     <md-button ng-click="showGreeting($event)" class="md-raised md-primary" >
+	 *       Greet Employee
+	 *       </md-button>
+	 *   </div>
+	 * </div>
+	 * </hljs>
+	 *
+	 * ### JavaScript: object syntax
+	 * <hljs lang="js">
+	 * (function(angular, undefined){
+	 *   "use strict";
+	 *
+	 *   angular
+	 *    .module('demoApp', ['ngMaterial'])
+	 *    .controller('AppCtrl', AppController);
+	 *
+	 *   function AppController($scope, $mdDialog) {
+	 *     var alert;
+	 *     $scope.showAlert = showAlert;
+	 *     $scope.showDialog = showDialog;
+	 *     $scope.items = [1, 2, 3];
+	 *
+	 *     // Internal method
+	 *     function showAlert() {
+	 *       alert = $mdDialog.alert({
+	 *         title: 'Attention',
+	 *         content: 'This is an example of how easy dialogs can be!',
+	 *         ok: 'Close'
+	 *       });
+	 *
+	 *       $mdDialog
+	 *         .show( alert )
+	 *         .finally(function() {
+	 *           alert = undefined;
+	 *         });
+	 *     }
+	 *
+	 *     function showDialog($event) {
+	 *        var parentEl = angular.element(document.body);
+	 *        $mdDialog.show({
+	 *          parent: parentEl,
+	 *          targetEvent: $event,
+	 *          template:
+	 *            '<md-dialog aria-label="List dialog">' +
+	 *            '  <md-dialog-content>'+
+	 *            '    <md-list>'+
+	 *            '      <md-list-item ng-repeat="item in items">'+
+	 *            '       <p>Number {{item}}</p>' +
+	 *            '      </md-item>'+
+	 *            '    </md-list>'+
+	 *            '  </md-dialog-content>' +
+	 *            '  <div class="md-actions">' +
+	 *            '    <md-button ng-click="closeDialog()" class="md-primary">' +
+	 *            '      Close Dialog' +
+	 *            '    </md-button>' +
+	 *            '  </div>' +
+	 *            '</md-dialog>',
+	 *          locals: {
+	 *            items: $scope.items
+	 *          },
+	 *          controller: DialogController
+	 *       });
+	 *       function DialogController($scope, $mdDialog, items) {
+	 *         $scope.items = items;
+	 *         $scope.closeDialog = function() {
+	 *           $mdDialog.hide();
+	 *         }
+	 *       }
+	 *     }
+	 *   }
+	 * })(angular);
+	 * </hljs>
+	 *
+	 * ### JavaScript: promise API syntax, custom dialog template
+	 * <hljs lang="js">
+	 * (function(angular, undefined){
+	 *   "use strict";
+	 *
+	 *   angular
+	 *     .module('demoApp', ['ngMaterial'])
+	 *     .controller('EmployeeController', EmployeeEditor)
+	 *     .controller('GreetingController', GreetingController);
+	 *
+	 *   // Fictitious Employee Editor to show how to use simple and complex dialogs.
+	 *
+	 *   function EmployeeEditor($scope, $mdDialog) {
+	 *     var alert;
+	 *
+	 *     $scope.showAlert = showAlert;
+	 *     $scope.closeAlert = closeAlert;
+	 *     $scope.showGreeting = showCustomGreeting;
+	 *
+	 *     $scope.hasAlert = function() { return !!alert };
+	 *     $scope.userName = $scope.userName || 'Bobby';
+	 *
+	 *     // Dialog #1 - Show simple alert dialog and cache
+	 *     // reference to dialog instance
+	 *
+	 *     function showAlert() {
+	 *       alert = $mdDialog.alert()
+	 *         .title('Attention, ' + $scope.userName)
+	 *         .content('This is an example of how easy dialogs can be!')
+	 *         .ok('Close');
+	 *
+	 *       $mdDialog
+	 *           .show( alert )
+	 *           .finally(function() {
+	 *             alert = undefined;
+	 *           });
+	 *     }
+	 *
+	 *     // Close the specified dialog instance and resolve with 'finished' flag
+	 *     // Normally this is not needed, just use '$mdDialog.hide()' to close
+	 *     // the most recent dialog popup.
+	 *
+	 *     function closeAlert() {
+	 *       $mdDialog.hide( alert, "finished" );
+	 *       alert = undefined;
+	 *     }
+	 *
+	 *     // Dialog #2 - Demonstrate more complex dialogs construction and popup.
+	 *
+	 *     function showCustomGreeting($event) {
+	 *         $mdDialog.show({
+	 *           targetEvent: $event,
+	 *           template:
+	 *             '<md-dialog>' +
+	 *
+	 *             '  <md-dialog-content>Hello {{ employee }}!</md-dialog-content>' +
+	 *
+	 *             '  <div class="md-actions">' +
+	 *             '    <md-button ng-click="closeDialog()" class="md-primary">' +
+	 *             '      Close Greeting' +
+	 *             '    </md-button>' +
+	 *             '  </div>' +
+	 *             '</md-dialog>',
+	 *           controller: 'GreetingController',
+	 *           onComplete: afterShowAnimation,
+	 *           locals: { employee: $scope.userName }
+	 *         });
+	 *
+	 *         // When the 'enter' animation finishes...
+	 *
+	 *         function afterShowAnimation(scope, element, options) {
+	 *            // post-show code here: DOM element focus, etc.
+	 *         }
+	 *     }
+	 *
+	 *     // Dialog #3 - Demonstrate use of ControllerAs and passing $scope to dialog
+	 *     //             Here we used ng-controller="GreetingController as vm" and
+	 *     //             $scope.vm === <controller instance>
+	 *
+	 *     function showCustomGreeting() {
+	 *
+	 *        $mdDialog.show({
+	 *           clickOutsideToClose: true,
+	 *
+	 *           scope: $scope,        // use parent scope in template
+	 *           preserveScope: true,  // do not forget this if use parent scope
+
+	 *           // Since GreetingController is instantiated with ControllerAs syntax
+	 *           // AND we are passing the parent '$scope' to the dialog, we MUST
+	 *           // use 'vm.<xxx>' in the template markup
+	 *
+	 *           template: '<md-dialog>' +
+	 *                     '  <md-dialog-content>' +
+	 *                     '     Hi There {{vm.employee}}' +
+	 *                     '  </md-dialog-content>' +
+	 *                     '</md-dialog>',
+	 *
+	 *           controller: function DialogController($scope, $mdDialog) {
+	 *             $scope.closeDialog = function() {
+	 *               $mdDialog.hide();
+	 *             }
+	 *           }
+	 *        });
+	 *     }
+	 *
+	 *   }
+	 *
+	 *   // Greeting controller used with the more complex 'showCustomGreeting()' custom dialog
+	 *
+	 *   function GreetingController($scope, $mdDialog, employee) {
+	 *     // Assigned from construction <code>locals</code> options...
+	 *     $scope.employee = employee;
+	 *
+	 *     $scope.closeDialog = function() {
+	 *       // Easily hides most recent dialog shown...
+	 *       // no specific instance reference is needed.
+	 *       $mdDialog.hide();
+	 *     };
+	 *   }
+	 *
+	 * })(angular);
+	 * </hljs>
+	 */
+
+	/**
+	 * @ngdoc method
+	 * @name $mdDialog#alert
+	 *
+	 * @description
+	 * Builds a preconfigured dialog with the specified message.
+	 *
+	 * @returns {obj} an `$mdDialogPreset` with the chainable configuration methods:
+	 *
+	 * - $mdDialogPreset#title(string) - sets title to string
+	 * - $mdDialogPreset#content(string) - sets content / message to string
+	 * - $mdDialogPreset#ok(string) - sets okay button text to string
+	 * - $mdDialogPreset#theme(string) - sets the theme of the dialog
+	 *
+	 */
+
+	/**
+	 * @ngdoc method
+	 * @name $mdDialog#confirm
+	 *
+	 * @description
+	 * Builds a preconfigured dialog with the specified message. You can call show and the promise returned
+	 * will be resolved only if the user clicks the confirm action on the dialog.
+	 *
+	 * @returns {obj} an `$mdDialogPreset` with the chainable configuration methods:
+	 *
+	 * Additionally, it supports the following methods:
+	 *
+	 * - $mdDialogPreset#title(string) - sets title to string
+	 * - $mdDialogPreset#content(string) - sets content / message to string
+	 * - $mdDialogPreset#ok(string) - sets okay button text to string
+	 * - $mdDialogPreset#cancel(string) - sets cancel button text to string
+	 * - $mdDialogPreset#theme(string) - sets the theme of the dialog
+	 *
+	 */
+
+	/**
+	 * @ngdoc method
+	 * @name $mdDialog#show
+	 *
+	 * @description
+	 * Show a dialog with the specified options.
+	 *
+	 * @param {object} optionsOrPreset Either provide an `$mdDialogPreset` returned from `alert()`, and
+	 * `confirm()`, or an options object with the following properties:
+	 *   - `templateUrl` - `{string=}`: The url of a template that will be used as the content
+	 *   of the dialog.
+	 *   - `template` - `{string=}`: Same as templateUrl, except this is an actual template string.
+	 *   - `targetEvent` - `{DOMClickEvent=}`: A click's event object. When passed in as an option,
+	 *     the location of the click will be used as the starting point for the opening animation
+	 *     of the the dialog.
+	 *   - `scope` - `{object=}`: the scope to link the template / controller to. If none is specified,
+	 *     it will create a new isolate scope.
+	 *     This scope will be destroyed when the dialog is removed unless `preserveScope` is set to true.
+	 *   - `preserveScope` - `{boolean=}`: whether to preserve the scope when the element is removed. Default is false
+	 *   - `disableParentScroll` - `{boolean=}`: Whether to disable scrolling while the dialog is open.
+	 *     Default true.
+	 *   - `hasBackdrop` - `{boolean=}`: Whether there should be an opaque backdrop behind the dialog.
+	 *     Default true.
+	 *   - `clickOutsideToClose` - `{boolean=}`: Whether the user can click outside the dialog to
+	 *     close it. Default false.
+	 *   - `escapeToClose` - `{boolean=}`: Whether the user can press escape to close the dialog.
+	 *     Default true.
+	 *   - `focusOnOpen` - `{boolean=}`: An option to override focus behavior on open. Only disable if
+	 *     focusing some other way, as focus management is required for dialogs to be accessible.
+	 *     Defaults to true.
+	 *   - `controller` - `{string=}`: The controller to associate with the dialog. The controller
+	 *     will be injected with the local `$mdDialog`, which passes along a scope for the dialog.
+	 *   - `locals` - `{object=}`: An object containing key/value pairs. The keys will be used as names
+	 *     of values to inject into the controller. For example, `locals: {three: 3}` would inject
+	 *     `three` into the controller, with the value 3. If `bindToController` is true, they will be
+	 *     copied to the controller instead.
+	 *   - `bindToController` - `bool`: bind the locals to the controller, instead of passing them in.
+	 *     These values will not be available until after initialization.
+	 *   - `resolve` - `{object=}`: Similar to locals, except it takes promises as values, and the
+	 *     dialog will not open until all of the promises resolve.
+	 *   - `controllerAs` - `{string=}`: An alias to assign the controller to on the scope.
+	 *   - `parent` - `{element=}`: The element to append the dialog to. Defaults to appending
+	 *     to the root element of the application.
+	 *   - `onShowing` `{function=} Callback function used to announce the show() action is
+	 *     starting.
+	 *   - `onComplete` `{function=}`: Callback function used to announce when the show() action is
+	 *     finished.
+	 *   - `onRemoving` `{function=} Callback function used to announce the close/hide() action is
+	 *     starting. This allows developers to run custom animations in parallel the close animations.
+	 *
+	 * @returns {promise} A promise that can be resolved with `$mdDialog.hide()` or
+	 * rejected with `$mdDialog.cancel()`.
+	 */
+
+	/**
+	 * @ngdoc method
+	 * @name $mdDialog#hide
+	 *
+	 * @description
+	 * Hide an existing dialog and resolve the promise returned from `$mdDialog.show()`.
+	 *
+	 * @param {*=} response An argument for the resolved promise.
+	 *
+	 * @returns {promise} A promise that is resolved when the dialog has been closed.
+	 */
+
+	/**
+	 * @ngdoc method
+	 * @name $mdDialog#cancel
+	 *
+	 * @description
+	 * Hide an existing dialog and reject the promise returned from `$mdDialog.show()`.
+	 *
+	 * @param {*=} response An argument for the rejected promise.
+	 *
+	 * @returns {promise} A promise that is resolved when the dialog has been closed.
+	 */
+
+	function MdDialogProvider($$interimElementProvider) {
+
+	  advancedDialogOptions.$inject = ["$mdDialog", "$mdTheming"];
+	  dialogDefaultOptions.$inject = ["$mdDialog", "$mdAria", "$mdUtil", "$mdConstant", "$animate", "$document", "$window", "$rootElement"];
+	  return $$interimElementProvider('$mdDialog')
+	    .setDefaults({
+	      methods: ['disableParentScroll', 'hasBackdrop', 'clickOutsideToClose', 'escapeToClose', 'targetEvent', 'parent'],
+	      options: dialogDefaultOptions
+	    })
+	    .addPreset('alert', {
+	      methods: ['title', 'content', 'ariaLabel', 'ok', 'theme', 'css'],
+	      options: advancedDialogOptions
+	    })
+	    .addPreset('confirm', {
+	      methods: ['title', 'content', 'ariaLabel', 'ok', 'cancel', 'theme', 'css'],
+	      options: advancedDialogOptions
+	    });
+
+	  /* @ngInject */
+	  function advancedDialogOptions($mdDialog, $mdTheming) {
+	    return {
+	      template: [
+	        '<md-dialog md-theme="{{ dialog.theme }}" aria-label="{{ dialog.ariaLabel }}" ng-class="dialog.css">',
+	        ' <md-dialog-content class="md-dialog-content" role="document" tabIndex="-1">',
+	        '   <h2 class="md-title">{{ dialog.title }}</h2>',
+	        '   <div class="md-dialog-content-body" md-template="::dialog.mdContent"></div>',
+	        ' </md-dialog-content>',
+	        ' <div class="md-actions">',
+	        '   <md-button ng-if="dialog.$type == \'confirm\'"' +
+	        '     ng-click="dialog.abort()" class="md-primary">',
+	        '     {{ dialog.cancel }}',
+	        '   </md-button>',
+	        '   <md-button ng-click="dialog.hide()" class="md-primary" md-autofocus="dialog.$type!=\'confirm\'">',
+	        '     {{ dialog.ok }}',
+	        '   </md-button>',
+	        ' </div>',
+	        '</md-dialog>'
+	      ].join('').replace(/\s\s+/g, ''),
+	      controller: function mdDialogCtrl() {
+	        this.hide = function() {
+	          $mdDialog.hide(true);
+	        };
+	        this.abort = function() {
+	          $mdDialog.cancel();
+	        };
+	      },
+	      controllerAs: 'dialog',
+	      bindToController: true,
+	      theme: $mdTheming.defaultTheme()
+	    };
+	  }
+
+	  /* @ngInject */
+	  function dialogDefaultOptions($mdDialog, $mdAria, $mdUtil, $mdConstant, $animate, $document, $window, $rootElement) {
+	    return {
+	      hasBackdrop: true,
+	      isolateScope: true,
+	      onShow: onShow,
+	      onRemove: onRemove,
+	      clickOutsideToClose: false,
+	      escapeToClose: true,
+	      targetEvent: null,
+	      focusOnOpen: true,
+	      disableParentScroll: true,
+	      transformTemplate: function(template) {
+	        return '<div class="md-dialog-container">' + validatedTemplate(template) + '</div>';
+
+	        /**
+	         * The specified template should contain a <md-dialog> wrapper element....
+	         */
+	        function validatedTemplate(template) {
+	          template || ""
+	          return /<\/md-dialog>/g.test(template) ? template : "<md-dialog>" + template + "</md-dialog>";
+	        }
+	      }
+	    };
+
+	    /**
+	     * Show method for dialogs
+	     */
+	    function onShow(scope, element, options, controller) {
+	      angular.element($document[0].body).addClass('md-dialog-is-showing');
+
+	      wrapSimpleContent();
+
+	      captureSourceAndParent(element, options);
+	      configureAria(element.find('md-dialog'), options);
+	      showBackdrop(scope, element, options);
+
+	      return dialogPopIn(element, options)
+	        .then(function() {
+	          activateListeners(element, options);
+	          lockScreenReader(element, options);
+	          focusOnOpen();
+	        });
+
+	      /**
+	       * For alerts, focus on content... otherwise focus on
+	       * the close button (or equivalent)
+	       */
+	      function focusOnOpen() {
+	        if (options.focusOnOpen) {
+	          var target = $mdUtil.findFocusTarget(element) || findCloseButton();
+	          target.focus();
+	        }
+
+	        /**
+	         *  If no element with class dialog-close, try to find the last
+	         *  button child in md-actions and assume it is a close button
+	         */
+	        function findCloseButton() {
+	          var closeButton = element[0].querySelector('.dialog-close');
+	          if (!closeButton) {
+	            var actionButtons = element[0].querySelectorAll('.md-actions button');
+	            closeButton = actionButtons[actionButtons.length - 1];
+	          }
+	          return angular.element(closeButton);
+	        }
+	      }
+
+	      /**
+	       * Wrap any simple content [specified via .content("")] in <p></p> tags.
+	       * otherwise accept HTML content within the dialog content area...
+	       * NOTE: Dialog uses the md-template directive to safely inject HTML content.
+	       */
+	      function wrapSimpleContent() {
+	        if ( controller ) {
+	          var HTML_END_TAG = /<\/[\w-]*>/gm;
+	          var content = controller.content || options.content || "";
+
+	          var hasHTML = HTML_END_TAG.test(content);
+	          if (!hasHTML) {
+	            content = $mdUtil.supplant("<p>{0}</p>", [content]);
+	          }
+
+	          // Publish updated dialog content body... to be compiled by mdTemplate directive
+	          controller.mdContent = content;
+	        }
+	      }
+
+	    }
+
+	    /**
+	     * Remove function for all dialogs
+	     */
+	    function onRemove(scope, element, options) {
+	      options.deactivateListeners();
+	      options.unlockScreenReader();
+	      options.hideBackdrop(options.$destroy);
+
+	      // For navigation $destroy events, do a quick, non-animated removal,
+	      // but for normal closes (from clicks, etc) animate the removal
+
+	      return !!options.$destroy ? detachAndClean() : animateRemoval().then( detachAndClean );
+
+	      /**
+	       * For normal closes, animate the removal.
+	       * For forced closes (like $destroy events), skip the animations
+	       */
+	      function animateRemoval() {
+	        return dialogPopOut(element, options);
+	      }
+
+	      /**
+	       * Detach the element
+	       */
+	      function detachAndClean() {
+	        angular.element($document[0].body).removeClass('md-dialog-is-showing');
+	        element.remove();
+
+	        if (!options.$destroy) options.origin.focus();
+	      }
+	    }
+
+	    /**
+	     * Capture originator/trigger element information (if available)
+	     * and the parent container for the dialog; defaults to the $rootElement
+	     * unless overridden in the options.parent
+	     */
+	    function captureSourceAndParent(element, options) {
+	      options.origin = angular.extend({
+	        element: null,
+	        bounds: null,
+	        focus: angular.noop
+	      }, options.origin || {});
+
+	      var source = angular.element((options.targetEvent || {}).target);
+	      if (source && source.length) {
+	        // Compute and save the target element's bounding rect, so that if the
+	        // element is hidden when the dialog closes, we can shrink the dialog
+	        // back to the same position it expanded from.
+	        options.origin.element = source;
+	        options.origin.bounds = source[0].getBoundingClientRect();
+	        options.origin.focus = function() {
+	          source.focus();
+	        }
+	      }
+
+	      // If the parent specifier is a simple string selector, then query for
+	      // the DOM element.
+	      if ( angular.isString(options.parent) ) {
+	        var simpleSelector = options.parent,
+	            container = $document[0].querySelectorAll(simpleSelector);
+	        options.parent = container.length ? container[0] : null;
+	      }
+	      // If we have a reference to a raw dom element, always wrap it in jqLite
+	      options.parent = angular.element(options.parent || $rootElement);
+
+	    }
+
+	    /**
+	     * Listen for escape keys and outside clicks to auto close
+	     */
+	    function activateListeners(element, options) {
+	      var window = angular.element($window);
+	      var onWindowResize = $mdUtil.debounce(function(){
+	        stretchDialogContainerToViewport(element, options);
+	      }, 60);
+
+	      var removeListeners = [];
+	      var smartClose = function() {
+	        // Only 'confirm' dialogs have a cancel button... escape/clickOutside will
+	        // cancel or fallback to hide.
+	        var closeFn = ( options.$type == 'alert' ) ? $mdDialog.hide : $mdDialog.cancel;
+	        $mdUtil.nextTick(closeFn, true);
+	      };
+
+	      if (options.escapeToClose) {
+	        var target = options.parent;
+	        var keyHandlerFn = function(ev) {
+	          if (ev.keyCode === $mdConstant.KEY_CODE.ESCAPE) {
+	            ev.stopPropagation();
+	            ev.preventDefault();
+
+	            smartClose();
+	          }
+	        };
+
+	        // Add keydown listeners
+	        element.on('keydown', keyHandlerFn);
+	        target.on('keydown', keyHandlerFn);
+	        window.on('resize', onWindowResize);
+
+	        // Queue remove listeners function
+	        removeListeners.push(function() {
+
+	          element.off('keydown', keyHandlerFn);
+	          target.off('keydown', keyHandlerFn);
+	          window.off('resize', onWindowResize);
+
+	        });
+	      }
+	      if (options.clickOutsideToClose) {
+	        var target = element;
+	        var sourceElem;
+
+	        // Keep track of the element on which the mouse originally went down
+	        // so that we can only close the backdrop when the 'click' started on it.
+	        // A simple 'click' handler does not work,
+	        // it sets the target object as the element the mouse went down on.
+	        var mousedownHandler = function(ev) {
+	          sourceElem = ev.target;
+	        };
+
+	        // We check if our original element and the target is the backdrop
+	        // because if the original was the backdrop and the target was inside the dialog
+	        // we don't want to dialog to close.
+	        var mouseupHandler = function(ev) {
+	          if (sourceElem === target[0] && ev.target === target[0]) {
+	            ev.stopPropagation();
+	            ev.preventDefault();
+
+	            smartClose();
+	          }
+	        };
+
+	        // Add listeners
+	        target.on('mousedown', mousedownHandler);
+	        target.on('mouseup', mouseupHandler);
+
+	        // Queue remove listeners function
+	        removeListeners.push(function() {
+	          target.off('mousedown', mousedownHandler);
+	          target.off('mouseup', mouseupHandler);
+	        });
+	      }
+
+	      // Attach specific `remove` listener handler
+	      options.deactivateListeners = function() {
+	        removeListeners.forEach(function(removeFn) {
+	          removeFn();
+	        });
+	        options.deactivateListeners = null;
+	      };
+	    }
+
+	    /**
+	     * Show modal backdrop element...
+	     */
+	    function showBackdrop(scope, element, options) {
+
+	      if (options.disableParentScroll) {
+	        // !! DO this before creating the backdrop; since disableScrollAround()
+	        //    configures the scroll offset; which is used by mdBackDrop postLink()
+	        options.restoreScroll = $mdUtil.disableScrollAround(element, options.parent);
+	      }
+
+	      if (options.hasBackdrop) {
+	        options.backdrop = $mdUtil.createBackdrop(scope, "md-dialog-backdrop md-opaque");
+	        $animate.enter(options.backdrop, options.parent);
+	      }
+
+	      /**
+	       * Hide modal backdrop element...
+	       */
+	      options.hideBackdrop = function hideBackdrop($destroy) {
+	        if (options.backdrop) {
+	          if ( !!$destroy ) options.backdrop.remove();
+	          else              $animate.leave(options.backdrop);
+	        }
+
+	        if (options.disableParentScroll) {
+	          options.restoreScroll();
+	          delete options.restoreScroll;
+	        }
+
+	        options.hideBackdrop = null;
+	      }
+	    }
+
+	    /**
+	     * Inject ARIA-specific attributes appropriate for Dialogs
+	     */
+	    function configureAria(element, options) {
+
+	      var role = (options.$type === 'alert') ? 'alertdialog' : 'dialog';
+	      var dialogContent = element.find('md-dialog-content');
+	      var dialogId = element.attr('id') || ('dialog_' + $mdUtil.nextUid());
+
+	      element.attr({
+	        'role': role,
+	        'tabIndex': '-1'
+	      });
+
+	      if (dialogContent.length === 0) {
+	        dialogContent = element;
+	      }
+
+	      dialogContent.attr('id', dialogId);
+	      element.attr('aria-describedby', dialogId);
+
+	      if (options.ariaLabel) {
+	        $mdAria.expect(element, 'aria-label', options.ariaLabel);
+	      }
+	      else {
+	        $mdAria.expectAsync(element, 'aria-label', function() {
+	          var words = dialogContent.text().split(/\s+/);
+	          if (words.length > 3) words = words.slice(0, 3).concat('...');
+	          return words.join(' ');
+	        });
+	      }
+	    }
+
+	    /**
+	     * Prevents screen reader interaction behind modal window
+	     * on swipe interfaces
+	     */
+	    function lockScreenReader(element, options) {
+	      var isHidden = true;
+
+	      // get raw DOM node
+	      walkDOM(element[0]);
+
+	      options.unlockScreenReader = function() {
+	        isHidden = false;
+	        walkDOM(element[0]);
+
+	        options.unlockScreenReader = null;
+	      };
+
+	      /**
+	       * Walk DOM to apply or remove aria-hidden on sibling nodes
+	       * and parent sibling nodes
+	       *
+	       */
+	      function walkDOM(element) {
+	        while (element.parentNode) {
+	          if (element === document.body) {
+	            return;
+	          }
+	          var children = element.parentNode.children;
+	          for (var i = 0; i < children.length; i++) {
+	            // skip over child if it is an ascendant of the dialog
+	            // or a script or style tag
+	            if (element !== children[i] && !isNodeOneOf(children[i], ['SCRIPT', 'STYLE'])) {
+	              children[i].setAttribute('aria-hidden', isHidden);
+	            }
+	          }
+
+	          walkDOM(element = element.parentNode);
+	        }
+	      }
+	    }
+
+	    /**
+	     * Ensure the dialog container fill-stretches to the viewport
+	     */
+	    function stretchDialogContainerToViewport(container, options) {
+
+	      var isFixed = $window.getComputedStyle($document[0].body).position == 'fixed';
+	      var backdrop = options.backdrop ? $window.getComputedStyle(options.backdrop[0]) : null;
+	      var height = backdrop ? Math.min($document[0].body.clientHeight, Math.ceil(Math.abs(parseInt(backdrop.height, 10)))) : 0;
+
+	      container.css({
+	        top: (isFixed ? $mdUtil.scrollTop(options.parent) : 0) + 'px',
+	        height: height ? height + 'px' : '100%'
+	      });
+
+	      return container;
+	    }
+
+	    /**
+	     *  Dialog open and pop-in animation
+	     */
+	    function dialogPopIn(container, options) {
+
+	      // Add the `md-dialog-container` to the DOM
+	      options.parent.append(container);
+	      stretchDialogContainerToViewport(container, options);
+
+	      var dialogEl = container.find('md-dialog');
+	      var animator = $mdUtil.dom.animator;
+	      var buildTranslateToOrigin = animator.calculateZoomToOrigin;
+	      var translateOptions = {transitionInClass: 'md-transition-in', transitionOutClass: 'md-transition-out'};
+	      var from = animator.toTransformCss(buildTranslateToOrigin(dialogEl, options.origin));
+	      var to = animator.toTransformCss("");  // defaults to center display (or parent or $rootElement)
+
+	      return animator
+	        .translate3d(dialogEl, from, to, translateOptions)
+	        .then(function(animateReversal) {
+
+
+
+	          // Build a reversal translate function synched to this translation...
+	          options.reverseAnimate = function() {
+
+	            delete options.reverseAnimate;
+	            return animateReversal(
+	              animator.toTransformCss(
+	                // in case the origin element has moved or is hidden,
+	                // let's recalculate the translateCSS
+	                buildTranslateToOrigin(dialogEl, options.origin)
+	              )
+	            );
+
+	          };
+	          return true;
+	        });
+	    }
+
+	    /**
+	     * Dialog close and pop-out animation
+	     */
+	    function dialogPopOut(container, options) {
+	      return options.reverseAnimate();
+	    }
+
+	    /**
+	     * Utility function to filter out raw DOM nodes
+	     */
+	    function isNodeOneOf(elem, nodeTypeArray) {
+	      if (nodeTypeArray.indexOf(elem.nodeName) !== -1) {
+	        return true;
+	      }
+	    }
+
+	  }
+	}
+	MdDialogProvider.$inject = ["$$interimElementProvider"];
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
+	 * @name material.components.divider
+	 * @description Divider module!
+	 */
+	angular.module('material.components.divider', [
+	  'material.core'
+	])
+	  .directive('mdDivider', MdDividerDirective);
+
+	/**
+	 * @ngdoc directive
+	 * @name mdDivider
+	 * @module material.components.divider
+	 * @restrict E
+	 *
+	 * @description
+	 * Dividers group and separate content within lists and page layouts using strong visual and spatial distinctions. This divider is a thin rule, lightweight enough to not distract the user from content.
+	 *
+	 * @param {boolean=} md-inset Add this attribute to activate the inset divider style.
+	 * @usage
+	 * <hljs lang="html">
+	 * <md-divider></md-divider>
+	 *
+	 * <md-divider md-inset></md-divider>
+	 * </hljs>
+	 *
+	 */
+	function MdDividerDirective($mdTheming) {
+	  return {
+	    restrict: 'E',
+	    link: $mdTheming
+	  };
+	}
+	MdDividerDirective.$inject = ["$mdTheming"];
 
 	})();
 	(function(){
@@ -42495,913 +43548,6 @@
 	(function(){
 	"use strict";
 
-	/**
-	 * @ngdoc module
-	 * @name material.components.dialog
-	 */
-	angular
-	  .module('material.components.dialog', [
-	    'material.core',
-	    'material.components.backdrop'
-	  ])
-	  .directive('mdDialog', MdDialogDirective)
-	  .provider('$mdDialog', MdDialogProvider);
-
-	function MdDialogDirective($$rAF, $mdTheming, $mdDialog) {
-	  return {
-	    restrict: 'E',
-	    link: function(scope, element, attr) {
-	      $mdTheming(element);
-	      $$rAF(function() {
-	        var images;
-	        var content = element[0].querySelector('md-dialog-content');
-
-	        if (content) {
-	          images = content.getElementsByTagName('img');
-	          addOverflowClass();
-	          //-- delayed image loading may impact scroll height, check after images are loaded
-	          angular.element(images).on('load', addOverflowClass);
-	        }
-
-	        scope.$on('$destroy', function() {
-	          $mdDialog.destroy();
-	        });
-
-	        /**
-	         *
-	         */
-	        function addOverflowClass() {
-	          element.toggleClass('md-content-overflow', content.scrollHeight > content.clientHeight);
-	        }
-
-
-	      });
-	    }
-	  };
-	}
-	MdDialogDirective.$inject = ["$$rAF", "$mdTheming", "$mdDialog"];
-
-	/**
-	 * @ngdoc service
-	 * @name $mdDialog
-	 * @module material.components.dialog
-	 *
-	 * @description
-	 * `$mdDialog` opens a dialog over the app to inform users about critical information or require
-	 *  them to make decisions. There are two approaches for setup: a simple promise API
-	 *  and regular object syntax.
-	 *
-	 * ## Restrictions
-	 *
-	 * - The dialog is always given an isolate scope.
-	 * - The dialog's template must have an outer `<md-dialog>` element.
-	 *   Inside, use an `<md-dialog-content>` element for the dialog's content, and use
-	 *   an element with class `md-actions` for the dialog's actions.
-	 * - Dialogs must cover the entire application to keep interactions inside of them.
-	 * Use the `parent` option to change where dialogs are appended.
-	 *
-	 * ## Sizing
-	 * - Complex dialogs can be sized with `flex="percentage"`, i.e. `flex="66"`.
-	 * - Default max-width is 80% of the `rootElement` or `parent`.
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 * <div  ng-app="demoApp" ng-controller="EmployeeController">
-	 *   <div>
-	 *     <md-button ng-click="showAlert()" class="md-raised md-warn">
-	 *       Employee Alert!
-	 *       </md-button>
-	 *   </div>
-	 *   <div>
-	 *     <md-button ng-click="showDialog($event)" class="md-raised">
-	 *       Custom Dialog
-	 *       </md-button>
-	 *   </div>
-	 *   <div>
-	 *     <md-button ng-click="closeAlert()" ng-disabled="!hasAlert()" class="md-raised">
-	 *       Close Alert
-	 *     </md-button>
-	 *   </div>
-	 *   <div>
-	 *     <md-button ng-click="showGreeting($event)" class="md-raised md-primary" >
-	 *       Greet Employee
-	 *       </md-button>
-	 *   </div>
-	 * </div>
-	 * </hljs>
-	 *
-	 * ### JavaScript: object syntax
-	 * <hljs lang="js">
-	 * (function(angular, undefined){
-	 *   "use strict";
-	 *
-	 *   angular
-	 *    .module('demoApp', ['ngMaterial'])
-	 *    .controller('AppCtrl', AppController);
-	 *
-	 *   function AppController($scope, $mdDialog) {
-	 *     var alert;
-	 *     $scope.showAlert = showAlert;
-	 *     $scope.showDialog = showDialog;
-	 *     $scope.items = [1, 2, 3];
-	 *
-	 *     // Internal method
-	 *     function showAlert() {
-	 *       alert = $mdDialog.alert({
-	 *         title: 'Attention',
-	 *         content: 'This is an example of how easy dialogs can be!',
-	 *         ok: 'Close'
-	 *       });
-	 *
-	 *       $mdDialog
-	 *         .show( alert )
-	 *         .finally(function() {
-	 *           alert = undefined;
-	 *         });
-	 *     }
-	 *
-	 *     function showDialog($event) {
-	 *        var parentEl = angular.element(document.body);
-	 *        $mdDialog.show({
-	 *          parent: parentEl,
-	 *          targetEvent: $event,
-	 *          template:
-	 *            '<md-dialog aria-label="List dialog">' +
-	 *            '  <md-dialog-content>'+
-	 *            '    <md-list>'+
-	 *            '      <md-list-item ng-repeat="item in items">'+
-	 *            '       <p>Number {{item}}</p>' +
-	 *            '      </md-item>'+
-	 *            '    </md-list>'+
-	 *            '  </md-dialog-content>' +
-	 *            '  <div class="md-actions">' +
-	 *            '    <md-button ng-click="closeDialog()" class="md-primary">' +
-	 *            '      Close Dialog' +
-	 *            '    </md-button>' +
-	 *            '  </div>' +
-	 *            '</md-dialog>',
-	 *          locals: {
-	 *            items: $scope.items
-	 *          },
-	 *          controller: DialogController
-	 *       });
-	 *       function DialogController($scope, $mdDialog, items) {
-	 *         $scope.items = items;
-	 *         $scope.closeDialog = function() {
-	 *           $mdDialog.hide();
-	 *         }
-	 *       }
-	 *     }
-	 *   }
-	 * })(angular);
-	 * </hljs>
-	 *
-	 * ### JavaScript: promise API syntax, custom dialog template
-	 * <hljs lang="js">
-	 * (function(angular, undefined){
-	 *   "use strict";
-	 *
-	 *   angular
-	 *     .module('demoApp', ['ngMaterial'])
-	 *     .controller('EmployeeController', EmployeeEditor)
-	 *     .controller('GreetingController', GreetingController);
-	 *
-	 *   // Fictitious Employee Editor to show how to use simple and complex dialogs.
-	 *
-	 *   function EmployeeEditor($scope, $mdDialog) {
-	 *     var alert;
-	 *
-	 *     $scope.showAlert = showAlert;
-	 *     $scope.closeAlert = closeAlert;
-	 *     $scope.showGreeting = showCustomGreeting;
-	 *
-	 *     $scope.hasAlert = function() { return !!alert };
-	 *     $scope.userName = $scope.userName || 'Bobby';
-	 *
-	 *     // Dialog #1 - Show simple alert dialog and cache
-	 *     // reference to dialog instance
-	 *
-	 *     function showAlert() {
-	 *       alert = $mdDialog.alert()
-	 *         .title('Attention, ' + $scope.userName)
-	 *         .content('This is an example of how easy dialogs can be!')
-	 *         .ok('Close');
-	 *
-	 *       $mdDialog
-	 *           .show( alert )
-	 *           .finally(function() {
-	 *             alert = undefined;
-	 *           });
-	 *     }
-	 *
-	 *     // Close the specified dialog instance and resolve with 'finished' flag
-	 *     // Normally this is not needed, just use '$mdDialog.hide()' to close
-	 *     // the most recent dialog popup.
-	 *
-	 *     function closeAlert() {
-	 *       $mdDialog.hide( alert, "finished" );
-	 *       alert = undefined;
-	 *     }
-	 *
-	 *     // Dialog #2 - Demonstrate more complex dialogs construction and popup.
-	 *
-	 *     function showCustomGreeting($event) {
-	 *         $mdDialog.show({
-	 *           targetEvent: $event,
-	 *           template:
-	 *             '<md-dialog>' +
-	 *
-	 *             '  <md-dialog-content>Hello {{ employee }}!</md-dialog-content>' +
-	 *
-	 *             '  <div class="md-actions">' +
-	 *             '    <md-button ng-click="closeDialog()" class="md-primary">' +
-	 *             '      Close Greeting' +
-	 *             '    </md-button>' +
-	 *             '  </div>' +
-	 *             '</md-dialog>',
-	 *           controller: 'GreetingController',
-	 *           onComplete: afterShowAnimation,
-	 *           locals: { employee: $scope.userName }
-	 *         });
-	 *
-	 *         // When the 'enter' animation finishes...
-	 *
-	 *         function afterShowAnimation(scope, element, options) {
-	 *            // post-show code here: DOM element focus, etc.
-	 *         }
-	 *     }
-	 *
-	 *     // Dialog #3 - Demonstrate use of ControllerAs and passing $scope to dialog
-	 *     //             Here we used ng-controller="GreetingController as vm" and
-	 *     //             $scope.vm === <controller instance>
-	 *
-	 *     function showCustomGreeting() {
-	 *
-	 *        $mdDialog.show({
-	 *           clickOutsideToClose: true,
-	 *
-	 *           scope: $scope,        // use parent scope in template
-	 *           preserveScope: true,  // do not forget this if use parent scope
-
-	 *           // Since GreetingController is instantiated with ControllerAs syntax
-	 *           // AND we are passing the parent '$scope' to the dialog, we MUST
-	 *           // use 'vm.<xxx>' in the template markup
-	 *
-	 *           template: '<md-dialog>' +
-	 *                     '  <md-dialog-content>' +
-	 *                     '     Hi There {{vm.employee}}' +
-	 *                     '  </md-dialog-content>' +
-	 *                     '</md-dialog>',
-	 *
-	 *           controller: function DialogController($scope, $mdDialog) {
-	 *             $scope.closeDialog = function() {
-	 *               $mdDialog.hide();
-	 *             }
-	 *           }
-	 *        });
-	 *     }
-	 *
-	 *   }
-	 *
-	 *   // Greeting controller used with the more complex 'showCustomGreeting()' custom dialog
-	 *
-	 *   function GreetingController($scope, $mdDialog, employee) {
-	 *     // Assigned from construction <code>locals</code> options...
-	 *     $scope.employee = employee;
-	 *
-	 *     $scope.closeDialog = function() {
-	 *       // Easily hides most recent dialog shown...
-	 *       // no specific instance reference is needed.
-	 *       $mdDialog.hide();
-	 *     };
-	 *   }
-	 *
-	 * })(angular);
-	 * </hljs>
-	 */
-
-	/**
-	 * @ngdoc method
-	 * @name $mdDialog#alert
-	 *
-	 * @description
-	 * Builds a preconfigured dialog with the specified message.
-	 *
-	 * @returns {obj} an `$mdDialogPreset` with the chainable configuration methods:
-	 *
-	 * - $mdDialogPreset#title(string) - sets title to string
-	 * - $mdDialogPreset#content(string) - sets content / message to string
-	 * - $mdDialogPreset#ok(string) - sets okay button text to string
-	 * - $mdDialogPreset#theme(string) - sets the theme of the dialog
-	 *
-	 */
-
-	/**
-	 * @ngdoc method
-	 * @name $mdDialog#confirm
-	 *
-	 * @description
-	 * Builds a preconfigured dialog with the specified message. You can call show and the promise returned
-	 * will be resolved only if the user clicks the confirm action on the dialog.
-	 *
-	 * @returns {obj} an `$mdDialogPreset` with the chainable configuration methods:
-	 *
-	 * Additionally, it supports the following methods:
-	 *
-	 * - $mdDialogPreset#title(string) - sets title to string
-	 * - $mdDialogPreset#content(string) - sets content / message to string
-	 * - $mdDialogPreset#ok(string) - sets okay button text to string
-	 * - $mdDialogPreset#cancel(string) - sets cancel button text to string
-	 * - $mdDialogPreset#theme(string) - sets the theme of the dialog
-	 *
-	 */
-
-	/**
-	 * @ngdoc method
-	 * @name $mdDialog#show
-	 *
-	 * @description
-	 * Show a dialog with the specified options.
-	 *
-	 * @param {object} optionsOrPreset Either provide an `$mdDialogPreset` returned from `alert()`, and
-	 * `confirm()`, or an options object with the following properties:
-	 *   - `templateUrl` - `{string=}`: The url of a template that will be used as the content
-	 *   of the dialog.
-	 *   - `template` - `{string=}`: Same as templateUrl, except this is an actual template string.
-	 *   - `targetEvent` - `{DOMClickEvent=}`: A click's event object. When passed in as an option,
-	 *     the location of the click will be used as the starting point for the opening animation
-	 *     of the the dialog.
-	 *   - `scope` - `{object=}`: the scope to link the template / controller to. If none is specified,
-	 *     it will create a new isolate scope.
-	 *     This scope will be destroyed when the dialog is removed unless `preserveScope` is set to true.
-	 *   - `preserveScope` - `{boolean=}`: whether to preserve the scope when the element is removed. Default is false
-	 *   - `disableParentScroll` - `{boolean=}`: Whether to disable scrolling while the dialog is open.
-	 *     Default true.
-	 *   - `hasBackdrop` - `{boolean=}`: Whether there should be an opaque backdrop behind the dialog.
-	 *     Default true.
-	 *   - `clickOutsideToClose` - `{boolean=}`: Whether the user can click outside the dialog to
-	 *     close it. Default false.
-	 *   - `escapeToClose` - `{boolean=}`: Whether the user can press escape to close the dialog.
-	 *     Default true.
-	 *   - `focusOnOpen` - `{boolean=}`: An option to override focus behavior on open. Only disable if
-	 *     focusing some other way, as focus management is required for dialogs to be accessible.
-	 *     Defaults to true.
-	 *   - `controller` - `{string=}`: The controller to associate with the dialog. The controller
-	 *     will be injected with the local `$mdDialog`, which passes along a scope for the dialog.
-	 *   - `locals` - `{object=}`: An object containing key/value pairs. The keys will be used as names
-	 *     of values to inject into the controller. For example, `locals: {three: 3}` would inject
-	 *     `three` into the controller, with the value 3. If `bindToController` is true, they will be
-	 *     copied to the controller instead.
-	 *   - `bindToController` - `bool`: bind the locals to the controller, instead of passing them in.
-	 *     These values will not be available until after initialization.
-	 *   - `resolve` - `{object=}`: Similar to locals, except it takes promises as values, and the
-	 *     dialog will not open until all of the promises resolve.
-	 *   - `controllerAs` - `{string=}`: An alias to assign the controller to on the scope.
-	 *   - `parent` - `{element=}`: The element to append the dialog to. Defaults to appending
-	 *     to the root element of the application.
-	 *   - `onComplete` `{function=}`: Callback function used to announce when the show() action is
-	 *     finished.
-	 *   - `onRemoving` `{function=} Callback function used to announce the close/hide() action is
-	 *     starting. This allows developers to run custom animations in parallel the close animations.
-	 *
-	 * @returns {promise} A promise that can be resolved with `$mdDialog.hide()` or
-	 * rejected with `$mdDialog.cancel()`.
-	 */
-
-	/**
-	 * @ngdoc method
-	 * @name $mdDialog#hide
-	 *
-	 * @description
-	 * Hide an existing dialog and resolve the promise returned from `$mdDialog.show()`.
-	 *
-	 * @param {*=} response An argument for the resolved promise.
-	 *
-	 * @returns {promise} A promise that is resolved when the dialog has been closed.
-	 */
-
-	/**
-	 * @ngdoc method
-	 * @name $mdDialog#cancel
-	 *
-	 * @description
-	 * Hide an existing dialog and reject the promise returned from `$mdDialog.show()`.
-	 *
-	 * @param {*=} response An argument for the rejected promise.
-	 *
-	 * @returns {promise} A promise that is resolved when the dialog has been closed.
-	 */
-
-	function MdDialogProvider($$interimElementProvider) {
-
-	  advancedDialogOptions.$inject = ["$mdDialog", "$mdTheming"];
-	  dialogDefaultOptions.$inject = ["$mdDialog", "$mdAria", "$mdUtil", "$mdConstant", "$animate", "$document", "$window", "$rootElement"];
-	  return $$interimElementProvider('$mdDialog')
-	    .setDefaults({
-	      methods: ['disableParentScroll', 'hasBackdrop', 'clickOutsideToClose', 'escapeToClose', 'targetEvent', 'parent'],
-	      options: dialogDefaultOptions
-	    })
-	    .addPreset('alert', {
-	      methods: ['title', 'content', 'ariaLabel', 'ok', 'theme', 'css'],
-	      options: advancedDialogOptions
-	    })
-	    .addPreset('confirm', {
-	      methods: ['title', 'content', 'ariaLabel', 'ok', 'cancel', 'theme', 'css'],
-	      options: advancedDialogOptions
-	    });
-
-	  /* @ngInject */
-	  function advancedDialogOptions($mdDialog, $mdTheming) {
-	    return {
-	      template: [
-	        '<md-dialog md-theme="{{ dialog.theme }}" aria-label="{{ dialog.ariaLabel }}" class="{{ dialog.css }}">',
-	        ' <md-dialog-content role="document" tabIndex="-1">',
-	        '   <h2 class="md-title">{{ dialog.title }}</h2>',
-	        '   <div class="md-dialog-content-body" md-template="::dialog.mdContent"></div>',
-	        ' </md-dialog-content>',
-	        ' <div class="md-actions">',
-	        '   <md-button ng-if="dialog.$type == \'confirm\'"' +
-	        '     ng-click="dialog.abort()" class="md-primary">',
-	        '     {{ dialog.cancel }}',
-	        '   </md-button>',
-	        '   <md-button ng-click="dialog.hide()" class="md-primary" md-autofocus="dialog.$type!=\'confirm\'">',
-	        '     {{ dialog.ok }}',
-	        '   </md-button>',
-	        ' </div>',
-	        '</md-dialog>'
-	      ].join('').replace(/\s\s+/g, ''),
-	      controller: function mdDialogCtrl() {
-	        this.hide = function() {
-	          $mdDialog.hide(true);
-	        };
-	        this.abort = function() {
-	          $mdDialog.cancel();
-	        };
-	      },
-	      controllerAs: 'dialog',
-	      bindToController: true,
-	      theme: $mdTheming.defaultTheme()
-	    };
-	  }
-
-	  /* @ngInject */
-	  function dialogDefaultOptions($mdDialog, $mdAria, $mdUtil, $mdConstant, $animate, $document, $window, $rootElement) {
-	    return {
-	      hasBackdrop: true,
-	      isolateScope: true,
-	      onShow: onShow,
-	      onRemove: onRemove,
-	      clickOutsideToClose: false,
-	      escapeToClose: true,
-	      targetEvent: null,
-	      focusOnOpen: true,
-	      disableParentScroll: true,
-	      transformTemplate: function(template) {
-	        return '<div class="md-dialog-container">' + validatedTemplate(template) + '</div>';
-
-	        /**
-	         * The specified template should contain a <md-dialog> wrapper element....
-	         */
-	        function validatedTemplate(template) {
-	          template || ""
-	          return /<\/md-dialog>/g.test(template) ? template : "<md-dialog>" + template + "</md-dialog>";
-	        }
-	      }
-	    };
-
-	    /**
-	     * Show method for dialogs
-	     */
-	    function onShow(scope, element, options, controller) {
-	      angular.element($document[0].body).addClass('md-dialog-is-showing');
-
-	      wrapSimpleContent();
-
-	      captureSourceAndParent(element, options);
-	      configureAria(element.find('md-dialog'), options);
-	      showBackdrop(scope, element, options);
-
-	      return dialogPopIn(element, options)
-	        .then(function() {
-	          activateListeners(element, options);
-	          lockScreenReader(element, options);
-	          focusOnOpen();
-	        });
-
-	      /**
-	       * For alerts, focus on content... otherwise focus on
-	       * the close button (or equivalent)
-	       */
-	      function focusOnOpen() {
-	        if (options.focusOnOpen) {
-	          var target = $mdUtil.findFocusTarget(element) || findCloseButton();
-	          target.focus();
-	        }
-
-	        /**
-	         *  If no element with class dialog-close, try to find the last
-	         *  button child in md-actions and assume it is a close button
-	         */
-	        function findCloseButton() {
-	          var closeButton = element[0].querySelector('.dialog-close');
-	          if (!closeButton) {
-	            var actionButtons = element[0].querySelectorAll('.md-actions button');
-	            closeButton = actionButtons[actionButtons.length - 1];
-	          }
-	          return angular.element(closeButton);
-	        }
-	      }
-
-	      /**
-	       * Wrap any simple content [specified via .content("")] in <p></p> tags.
-	       * otherwise accept HTML content within the dialog content area...
-	       * NOTE: Dialog uses the md-template directive to safely inject HTML content.
-	       */
-	      function wrapSimpleContent() {
-	        if ( controller ) {
-	          var HTML_END_TAG = /<\/[\w-]*>/gm;
-	          var content = controller.content || options.content || "";
-
-	          var hasHTML = HTML_END_TAG.test(content);
-	          if (!hasHTML) {
-	            content = $mdUtil.supplant("<p>{0}</p>", [content]);
-	          }
-
-	          // Publish updated dialog content body... to be compiled by mdTemplate directive
-	          controller.mdContent = content;
-	        }
-	      }
-
-	    }
-
-	    /**
-	     * Remove function for all dialogs
-	     */
-	    function onRemove(scope, element, options) {
-	      options.deactivateListeners();
-	      options.unlockScreenReader();
-	      options.hideBackdrop(options.$destroy);
-
-	      // For navigation $destroy events, do a quick, non-animated removal,
-	      // but for normal closes (from clicks, etc) animate the removal
-
-	      return !!options.$destroy ? detachAndClean() : animateRemoval().then( detachAndClean );
-
-	      /**
-	       * For normal closes, animate the removal.
-	       * For forced closes (like $destroy events), skip the animations
-	       */
-	      function animateRemoval() {
-	        return dialogPopOut(element, options);
-	      }
-
-	      /**
-	       * Detach the element
-	       */
-	      function detachAndClean() {
-	        angular.element($document[0].body).removeClass('md-dialog-is-showing');
-	        element.remove();
-
-	        if (!options.$destroy) options.origin.focus();
-	      }
-	    }
-
-	    /**
-	     * Capture originator/trigger element information (if available)
-	     * and the parent container for the dialog; defaults to the $rootElement
-	     * unless overridden in the options.parent
-	     */
-	    function captureSourceAndParent(element, options) {
-	      options.origin = angular.extend({
-	        element: null,
-	        bounds: null,
-	        focus: angular.noop
-	      }, options.origin || {});
-
-	      var source = angular.element((options.targetEvent || {}).target);
-	      if (source && source.length) {
-	        // Compute and save the target element's bounding rect, so that if the
-	        // element is hidden when the dialog closes, we can shrink the dialog
-	        // back to the same position it expanded from.
-	        options.origin.element = source;
-	        options.origin.bounds = source[0].getBoundingClientRect();
-	        options.origin.focus = function() {
-	          source.focus();
-	        }
-	      }
-
-	      // If the parent specifier is a simple string selector, then query for
-	      // the DOM element.
-	      if ( angular.isString(options.parent) ) {
-	        var simpleSelector = options.parent,
-	            container = $document[0].querySelectorAll(simpleSelector);
-	        options.parent = container.length ? container[0] : null;
-	      }
-	      // If we have a reference to a raw dom element, always wrap it in jqLite
-	      options.parent = angular.element(options.parent || $rootElement);
-
-	    }
-
-	    /**
-	     * Listen for escape keys and outside clicks to auto close
-	     */
-	    function activateListeners(element, options) {
-	      var window = angular.element($window);
-	      var onWindowResize = $mdUtil.debounce(function(){
-	        stretchDialogContainerToViewport(element, options);
-	      }, 60);
-
-	      var removeListeners = [];
-	      var smartClose = function() {
-	        // Only 'confirm' dialogs have a cancel button... escape/clickOutside will
-	        // cancel or fallback to hide.
-	        var closeFn = ( options.$type == 'alert' ) ? $mdDialog.hide : $mdDialog.cancel;
-	        $mdUtil.nextTick(closeFn, true);
-	      };
-
-	      if (options.escapeToClose) {
-	        var target = options.parent;
-	        var keyHandlerFn = function(ev) {
-	          if (ev.keyCode === $mdConstant.KEY_CODE.ESCAPE) {
-	            ev.stopPropagation();
-	            ev.preventDefault();
-
-	            smartClose();
-	          }
-	        };
-
-	        // Add keyup listeners
-	        element.on('keyup', keyHandlerFn);
-	        target.on('keyup', keyHandlerFn);
-	        window.on('resize', onWindowResize);
-
-	        // Queue remove listeners function
-	        removeListeners.push(function() {
-
-	          element.off('keyup', keyHandlerFn);
-	          target.off('keyup', keyHandlerFn);
-	          window.off('resize', onWindowResize);
-
-	        });
-	      }
-	      if (options.clickOutsideToClose) {
-	        var target = element;
-	        var clickHandler = function(ev) {
-	          // Only close if we click the flex container outside on the backdrop
-	          if (ev.target === target[0]) {
-	            ev.stopPropagation();
-	            ev.preventDefault();
-
-	            smartClose();
-	          }
-	        };
-
-	        // Add click listeners
-	        target.on('click', clickHandler);
-
-	        // Queue remove listeners function
-	        removeListeners.push(function() {
-	          target.off('click', clickHandler);
-	        });
-	      }
-
-	      // Attach specific `remove` listener handler
-	      options.deactivateListeners = function() {
-	        removeListeners.forEach(function(removeFn) {
-	          removeFn();
-	        });
-	        options.deactivateListeners = null;
-	      };
-	    }
-
-	    /**
-	     * Show modal backdrop element...
-	     */
-	    function showBackdrop(scope, element, options) {
-
-	      if (options.disableParentScroll) {
-	        // !! DO this before creating the backdrop; since disableScrollAround()
-	        //    configures the scroll offset; which is used by mdBackDrop postLink()
-	        options.restoreScroll = $mdUtil.disableScrollAround(element, options.parent);
-	      }
-
-	      if (options.hasBackdrop) {
-	        options.backdrop = $mdUtil.createBackdrop(scope, "md-dialog-backdrop md-opaque");
-	        $animate.enter(options.backdrop, options.parent);
-	      }
-
-	      /**
-	       * Hide modal backdrop element...
-	       */
-	      options.hideBackdrop = function hideBackdrop($destroy) {
-	        if (options.backdrop) {
-	          if ( !!$destroy ) options.backdrop.remove();
-	          else              $animate.leave(options.backdrop);
-	        }
-
-	        if (options.disableParentScroll) {
-	          options.restoreScroll();
-	          delete options.restoreScroll;
-	        }
-
-	        options.hideBackdrop = null;
-	      }
-	    }
-
-	    /**
-	     * Inject ARIA-specific attributes appropriate for Dialogs
-	     */
-	    function configureAria(element, options) {
-
-	      var role = (options.$type === 'alert') ? 'alertdialog' : 'dialog';
-	      var dialogContent = element.find('md-dialog-content');
-	      var dialogId = element.attr('id') || ('dialog_' + $mdUtil.nextUid());
-
-	      element.attr({
-	        'role': role,
-	        'tabIndex': '-1'
-	      });
-
-	      if (dialogContent.length === 0) {
-	        dialogContent = element;
-	      }
-
-	      dialogContent.attr('id', dialogId);
-	      element.attr('aria-describedby', dialogId);
-
-	      if (options.ariaLabel) {
-	        $mdAria.expect(element, 'aria-label', options.ariaLabel);
-	      }
-	      else {
-	        $mdAria.expectAsync(element, 'aria-label', function() {
-	          var words = dialogContent.text().split(/\s+/);
-	          if (words.length > 3) words = words.slice(0, 3).concat('...');
-	          return words.join(' ');
-	        });
-	      }
-	    }
-
-	    /**
-	     * Prevents screen reader interaction behind modal window
-	     * on swipe interfaces
-	     */
-	    function lockScreenReader(element, options) {
-	      var isHidden = true;
-
-	      // get raw DOM node
-	      walkDOM(element[0]);
-
-	      options.unlockScreenReader = function() {
-	        isHidden = false;
-	        walkDOM(element[0]);
-
-	        options.unlockScreenReader = null;
-	      };
-
-	      /**
-	       * Walk DOM to apply or remove aria-hidden on sibling nodes
-	       * and parent sibling nodes
-	       *
-	       */
-	      function walkDOM(element) {
-	        while (element.parentNode) {
-	          if (element === document.body) {
-	            return;
-	          }
-	          var children = element.parentNode.children;
-	          for (var i = 0; i < children.length; i++) {
-	            // skip over child if it is an ascendant of the dialog
-	            // or a script or style tag
-	            if (element !== children[i] && !isNodeOneOf(children[i], ['SCRIPT', 'STYLE'])) {
-	              children[i].setAttribute('aria-hidden', isHidden);
-	            }
-	          }
-
-	          walkDOM(element = element.parentNode);
-	        }
-	      }
-	    }
-
-	    /**
-	     * Ensure the dialog container fill-stretches to the viewport
-	     */
-	    function stretchDialogContainerToViewport(container, options) {
-
-	      var isFixed = $window.getComputedStyle($document[0].body).position == 'fixed';
-	      var backdrop = options.backdrop ? $window.getComputedStyle(options.backdrop[0]) : null;
-	      var height = backdrop ? Math.min($document[0].body.clientHeight, Math.ceil(Math.abs(parseInt(backdrop.height, 10)))) : 0;
-
-	      container.css({
-	        top: (isFixed ? $mdUtil.scrollTop(options.parent) : 0) + 'px',
-	        height: height ? height + 'px' : '100%'
-	      });
-
-	      return container;
-	    }
-
-	    /**
-	     *  Dialog open and pop-in animation
-	     */
-	    function dialogPopIn(container, options) {
-
-	      // Add the `md-dialog-container` to the DOM
-	      options.parent.append(container);
-	      stretchDialogContainerToViewport(container, options);
-
-	      var dialogEl = container.find('md-dialog');
-	      var animator = $mdUtil.dom.animator;
-	      var buildTranslateToOrigin = animator.calculateZoomToOrigin;
-	      var translateOptions = {transitionInClass: 'md-transition-in', transitionOutClass: 'md-transition-out'};
-	      var from = animator.toTransformCss(buildTranslateToOrigin(dialogEl, options.origin));
-	      var to = animator.toTransformCss("");  // defaults to center display (or parent or $rootElement)
-
-	      return animator
-	        .translate3d(dialogEl, from, to, translateOptions)
-	        .then(function(animateReversal) {
-
-
-
-	          // Build a reversal translate function synched to this translation...
-	          options.reverseAnimate = function() {
-
-	            delete options.reverseAnimate;
-	            return animateReversal(
-	              animator.toTransformCss(
-	                // in case the origin element has moved or is hidden,
-	                // let's recalculate the translateCSS
-	                buildTranslateToOrigin(dialogEl, options.origin)
-	              )
-	            );
-
-	          };
-	          return true;
-	        });
-	    }
-
-	    /**
-	     * Dialog close and pop-out animation
-	     */
-	    function dialogPopOut(container, options) {
-	      return options.reverseAnimate();
-	    }
-
-	    /**
-	     * Utility function to filter out raw DOM nodes
-	     */
-	    function isNodeOneOf(elem, nodeTypeArray) {
-	      if (nodeTypeArray.indexOf(elem.nodeName) !== -1) {
-	        return true;
-	      }
-	    }
-
-	  }
-	}
-	MdDialogProvider.$inject = ["$$interimElementProvider"];
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
-	 * @name material.components.divider
-	 * @description Divider module!
-	 */
-	angular.module('material.components.divider', [
-	  'material.core'
-	])
-	  .directive('mdDivider', MdDividerDirective);
-
-	/**
-	 * @ngdoc directive
-	 * @name mdDivider
-	 * @module material.components.divider
-	 * @restrict E
-	 *
-	 * @description
-	 * Dividers group and separate content within lists and page layouts using strong visual and spatial distinctions. This divider is a thin rule, lightweight enough to not distract the user from content.
-	 *
-	 * @param {boolean=} md-inset Add this attribute to activate the inset divider style.
-	 * @usage
-	 * <hljs lang="html">
-	 * <md-divider></md-divider>
-	 *
-	 * <md-divider md-inset></md-divider>
-	 * </hljs>
-	 *
-	 */
-	function MdDividerDirective($mdTheming) {
-	  return {
-	    restrict: 'E',
-	    link: $mdTheming
-	  };
-	}
-	MdDividerDirective.$inject = ["$mdTheming"];
-
-	})();
-	(function(){
-	"use strict";
-
 	(function() {
 	  'use strict';
 
@@ -43422,7 +43568,7 @@
 	   *
 	   * @description
 	   * The `<md-fab-actions>` directive is used inside of a `<md-fab-speed-dial>` or
-	   * `<md-fab-toolbar>` directive to mark the an element (or elements) as the actions and setup the
+	   * `<md-fab-toolbar>` directive to mark an element (or elements) as the actions and setup the
 	   * proper event listeners.
 	   *
 	   * @usage
@@ -43850,6 +43996,11 @@
 	   * These CSS classes use `position: absolute`, so you need to ensure that the container element
 	   * also uses `position: absolute` or `position: relative` in order for them to work.
 	   *
+	   * Additionally, you may use the standard `ng-mouseenter` and `ng-mouseleave` directives to
+	   * open or close the speed dial. However, if you wish to allow users to hover over the empty
+	   * space where the actions will appear, you must also add the `md-hover-full` class to the speed
+	   * dial element. Without this, the hover effect will only occur on top of the trigger.
+	   *
 	   * @usage
 	   * <hljs lang="html">
 	   * <md-fab-speed-dial md-direction="up" class="md-fling">
@@ -43869,7 +44020,7 @@
 	   * </md-fab-speed-dial>
 	   * </hljs>
 	   *
-	   * @param {string=} md-direction From which direction you would like the speed dial to appear
+	   * @param {string} md-direction From which direction you would like the speed dial to appear
 	   * relative to the trigger element.
 	   * @param {expression=} md-open Programmatically control whether or not the speed-dial is visible.
 	   */
@@ -43979,6 +44130,12 @@
 	      var ctrl = element.controller('mdFabSpeedDial');
 	      var items = el.querySelectorAll('.md-fab-action-item');
 
+	      // Grab our element which stores CSS variables
+	      var variablesElement = el.querySelector('.md-css-variables');
+
+	      // Setup JS variables based on our CSS variables
+	      var startZIndex = parseInt(window.getComputedStyle(variablesElement).zIndex);
+
 	      // Always reset the items to their natural position/state
 	      angular.forEach(items, function(item, index) {
 	        var styles = item.style,
@@ -43987,6 +44144,9 @@
 	        styles.opacity = ctrl.isOpen ? 1 : 0;
 	        styles.transform = styles.webkitTransform = ctrl.isOpen ? 'scale(1)' : 'scale(0)';
 	        styles.transitionDelay = (ctrl.isOpen ? offsetDelay : (items.length - offsetDelay)) + 'ms';
+
+	        // Make the items closest to the trigger have the highest z-index
+	        styles.zIndex = (items.length - index) + startZIndex;
 	      });
 	    }
 
@@ -44076,7 +44236,7 @@
 	   * </md-fab-toolbar>
 	   * </hljs>
 	   *
-	   * @param {string=} md-direction From which direction you would like the toolbar items to appear
+	   * @param {string} md-direction From which direction you would like the toolbar items to appear
 	   * relative to the trigger element. Supports `left` and `right` directions.
 	   * @param {expression=} md-open Programmatically control whether or not the toolbar is visible.
 	   */
@@ -44135,8 +44295,8 @@
 	        var width = el.offsetWidth;
 	        var height = el.offsetHeight;
 
-	        // Make a square
-	        var scale = width * 2;
+	        // Make it twice as big as it should be since we scale from the center
+	        var scale = 2 * (width / triggerElement.offsetWidth);
 
 	        // Set some basic styles no matter what animation we're doing
 	        backgroundElement.style.backgroundColor = color;
@@ -44147,22 +44307,9 @@
 	          // Turn on toolbar pointer events when closed
 	          toolbarElement.style.pointerEvents = 'initial';
 
-	          // Set the width/height to take up the full toolbar width
-	          backgroundElement.style.width = scale + 'px';
-	          backgroundElement.style.height = scale + 'px';
-
-	          // Set the top/left to move up/left (or right) by the scale width/height
-	          backgroundElement.style.top = -(scale / 2) + 'px';
-
-	          if (element.hasClass('md-right')) {
-	            backgroundElement.style.left = -(scale / 2) + 'px';
-	            backgroundElement.style.right = null;
-	          }
-
-	          if (element.hasClass('md-left')) {
-	            backgroundElement.style.right = -(scale / 2) + 'px';
-	            backgroundElement.style.left = null;
-	          }
+	          backgroundElement.style.width = triggerElement.offsetWidth + 'px';
+	          backgroundElement.style.height = triggerElement.offsetHeight + 'px';
+	          backgroundElement.style.transform = 'scale(' + scale + ')';
 
 	          // Set the next close animation to have the proper delays
 	          backgroundElement.style.transitionDelay = '0ms';
@@ -44176,20 +44323,19 @@
 	          // Turn off toolbar pointer events when closed
 	          toolbarElement.style.pointerEvents = 'none';
 
-	          // Otherwise, set the width/height to the trigger's width/height
-	          backgroundElement.style.width = triggerElement.offsetWidth + 'px';
-	          backgroundElement.style.height = triggerElement.offsetHeight + 'px';
+	          // Scale it back down to the trigger's size
+	          backgroundElement.style.transform = 'scale(1)';
 
 	          // Reset the position
-	          backgroundElement.style.top = '0px';
+	          backgroundElement.style.top = '0';
 
 	          if (element.hasClass('md-right')) {
-	            backgroundElement.style.left = '0px';
+	            backgroundElement.style.left = '0';
 	            backgroundElement.style.right = null;
 	          }
 
 	          if (element.hasClass('md-left')) {
-	            backgroundElement.style.right = '0px';
+	            backgroundElement.style.right = '0';
 	            backgroundElement.style.left = null;
 	          }
 
@@ -44218,6 +44364,47 @@
 	    }
 	  }
 	})();
+	})();
+	(function(){
+	"use strict";
+
+	(function() {
+	  'use strict';
+
+	  /**
+	   * @ngdoc module
+	   * @name material.components.fabTrigger
+	   */
+	  angular
+	    .module('material.components.fabTrigger', ['material.core'])
+	    .directive('mdFabTrigger', MdFabTriggerDirective);
+
+	  /**
+	   * @ngdoc directive
+	   * @name mdFabTrigger
+	   * @module material.components.fabSpeedDial
+	   *
+	   * @restrict E
+	   *
+	   * @description
+	   * The `<md-fab-trigger>` directive is used inside of a `<md-fab-speed-dial>` or
+	   * `<md-fab-toolbar>` directive to mark an element (or elements) as the trigger and setup the
+	   * proper event listeners.
+	   *
+	   * @usage
+	   * See the `<md-fab-speed-dial>` or `<md-fab-toolbar>` directives for example usage.
+	   */
+	  function MdFabTriggerDirective() {
+	    // TODO: Remove this completely?
+	    return {
+	      restrict: 'E',
+
+	      require: ['^?mdFabSpeedDial', '^?mdFabToolbar']
+	    };
+	  }
+	})();
+
+
 	})();
 	(function(){
 	"use strict";
@@ -44348,7 +44535,7 @@
 	            .addListener(invalidateLayout);
 	      }
 	      return $mdMedia.watchResponsiveAttributes(
-	          ['md-cols', 'md-row-height'], attrs, layoutIfMediaMatch);
+	          ['md-cols', 'md-row-height', 'md-gutter'], attrs, layoutIfMediaMatch);
 	    }
 
 	    function unwatchMedia() {
@@ -44543,14 +44730,12 @@
 	    }
 
 	    function getGridStyle(colCount, rowCount, gutter, rowMode, rowHeight) {
-	      var style = {
-	        height: '',
-	        paddingBottom: ''
-	      };
+	      var style = {};
 
 	      switch(rowMode) {
 	        case 'fixed':
 	          style.height = DIMENSION({ unit: rowHeight, span: rowCount, gutter: gutter });
+	          style.paddingBottom = '';
 	          break;
 
 	        case 'ratio':
@@ -44560,6 +44745,7 @@
 	              vShare = hShare * (1 / rowHeight),
 	              vUnit = UNIT({ share: vShare, gutterShare: hGutterShare, gutter: gutter });
 
+	          style.height = '';
 	          style.paddingBottom = DIMENSION({ unit: vUnit, span: rowCount, gutter: gutter});
 	          break;
 
@@ -44573,7 +44759,7 @@
 
 	    function getTileElements() {
 	      return [].filter.call(element.children(), function(ele) {
-	        return ele.tagName == 'MD-GRID-TILE';
+	        return ele.tagName == 'MD-GRID-TILE' && !ele.$$mdDestroyed;
 	      });
 	    }
 
@@ -44950,6 +45136,9 @@
 	    // Tile registration/deregistration
 	    gridCtrl.invalidateTiles();
 	    scope.$on('$destroy', function() {
+	      // Mark the tile as destroyed so it is no longer considered in layout,
+	      // even if the DOM element sticks around (like during a leave animation)
+	      element[0].$$mdDestroyed = true;
 	      unwatchAttrs();
 	      gridCtrl.invalidateLayout();
 	    });
@@ -44979,47 +45168,6 @@
 	(function(){
 	"use strict";
 
-	(function() {
-	  'use strict';
-
-	  /**
-	   * @ngdoc module
-	   * @name material.components.fabTrigger
-	   */
-	  angular
-	    .module('material.components.fabTrigger', ['material.core'])
-	    .directive('mdFabTrigger', MdFabTriggerDirective);
-
-	  /**
-	   * @ngdoc directive
-	   * @name mdFabTrigger
-	   * @module material.components.fabSpeedDial
-	   *
-	   * @restrict E
-	   *
-	   * @description
-	   * The `<md-fab-trigger>` directive is used inside of a `<md-fab-speed-dial>` or
-	   * `<md-fab-toolbar>` directive to mark the an element (or elements) as the trigger and setup the
-	   * proper event listeners.
-	   *
-	   * @usage
-	   * See the `<md-fab-speed-dial>` or `<md-fab-toolbar>` directives for example usage.
-	   */
-	  function MdFabTriggerDirective() {
-	    // TODO: Remove this completely?
-	    return {
-	      restrict: 'E',
-
-	      require: ['^?mdFabSpeedDial', '^?mdFabToolbar']
-	    };
-	  }
-	})();
-
-
-	})();
-	(function(){
-	"use strict";
-
 	/**
 	 * @ngdoc module
 	 * @name material.components.icon
@@ -45029,275 +45177,6 @@
 	angular.module('material.components.icon', [
 	    'material.core'
 	  ]);
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
-	 * @name material.components.list
-	 * @description
-	 * List module
-	 */
-	angular.module('material.components.list', [
-	  'material.core'
-	])
-	  .controller('MdListController', MdListController)
-	  .directive('mdList', mdListDirective)
-	  .directive('mdListItem', mdListItemDirective);
-
-	/**
-	 * @ngdoc directive
-	 * @name mdList
-	 * @module material.components.list
-	 *
-	 * @restrict E
-	 *
-	 * @description
-	 * The `<md-list>` directive is a list container for 1..n `<md-list-item>` tags.
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 * <md-list>
-	 *   <md-list-item class="md-2-line" ng-repeat="item in todos">
-	 *     <md-checkbox ng-model="item.done"></md-checkbox>
-	 *     <div class="md-list-item-text">
-	 *       <h3>{{item.title}}</h3>
-	 *       <p>{{item.description}}</p>
-	 *     </div>
-	 *   </md-list-item>
-	 * </md-list>
-	 * </hljs>
-	 */
-
-	function mdListDirective($mdTheming) {
-	  return {
-	    restrict: 'E',
-	    compile: function(tEl) {
-	      tEl[0].setAttribute('role', 'list');
-	      return $mdTheming;
-	    }
-	  };
-	}
-	mdListDirective.$inject = ["$mdTheming"];
-	/**
-	 * @ngdoc directive
-	 * @name mdListItem
-	 * @module material.components.list
-	 *
-	 * @restrict E
-	 *
-	 * @description
-	 * The `<md-list-item>` directive is a container intended for row items in a `<md-list>` container.
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 *  <md-list>
-	 *    <md-list-item>
-	 *            Item content in list
-	 *    </md-list-item>
-	 *  </md-list>
-	 * </hljs>
-	 *
-	 */
-	function mdListItemDirective($mdAria, $mdConstant, $mdUtil, $timeout) {
-	  var proxiedTypes = ['md-checkbox', 'md-switch'];
-	  return {
-	    restrict: 'E',
-	    controller: 'MdListController',
-	    compile: function(tEl, tAttrs) {
-	      // Check for proxy controls (no ng-click on parent, and a control inside)
-	      var secondaryItem = tEl[0].querySelector('.md-secondary');
-	      var hasProxiedElement;
-	      var proxyElement;
-
-	      tEl[0].setAttribute('role', 'listitem');
-
-	      if (!tAttrs.ngClick) {
-	        for (var i = 0, type; type = proxiedTypes[i]; ++i) {
-	          if (proxyElement = tEl[0].querySelector(type)) {
-	            hasProxiedElement = true;
-	            break;
-	          }
-	        }
-	        if (hasProxiedElement) {
-	          wrapIn('div');
-	        } else if (!tEl[0].querySelector('md-button')) {
-	          tEl.addClass('md-no-proxy');
-	        }
-	      } else {
-	        wrapIn('button');
-	      }
-	      setupToggleAria();
-
-
-	      function setupToggleAria() {
-	        var toggleTypes = ['md-switch', 'md-checkbox'];
-	        var toggle;
-
-	        for (var i = 0, toggleType; toggleType = toggleTypes[i]; ++i) {
-	          if (toggle = tEl.find(toggleType)[0]) {
-	            if (!toggle.hasAttribute('aria-label')) {
-	              var p = tEl.find('p')[0];
-	              if (!p) return;
-	              toggle.setAttribute('aria-label', 'Toggle ' + p.textContent);
-	            }
-	          }
-	        }
-	      }
-
-	      function wrapIn(type) {
-	        var container;
-	        if (type == 'div') {
-	          container = angular.element('<div class="md-no-style md-list-item-inner">');
-	          container.append(tEl.contents());
-	          tEl.addClass('md-proxy-focus');
-	        } else {
-	          container = angular.element('<md-button class="md-no-style"><div class="md-list-item-inner"></div></md-button>');
-	          var copiedAttrs = ['ng-click', 'aria-label', 'ng-disabled'];
-	          angular.forEach(copiedAttrs, function(attr) {
-	            if (tEl[0].hasAttribute(attr)) {
-	              container[0].setAttribute(attr, tEl[0].getAttribute(attr));
-	              tEl[0].removeAttribute(attr);
-	            }
-	          });
-	          container.children().eq(0).append(tEl.contents());
-	        }
-
-	        tEl[0].setAttribute('tabindex', '-1');
-	        tEl.append(container);
-
-	        if (secondaryItem && secondaryItem.hasAttribute('ng-click')) {
-	          $mdAria.expect(secondaryItem, 'aria-label');
-	          var buttonWrapper = angular.element('<md-button class="md-secondary-container md-icon-button">');
-	          buttonWrapper.attr('ng-click', secondaryItem.getAttribute('ng-click'));
-	          secondaryItem.removeAttribute('ng-click');
-	          secondaryItem.setAttribute('tabindex', '-1');
-	          secondaryItem.classList.remove('md-secondary');
-	          buttonWrapper.append(secondaryItem);
-	          secondaryItem = buttonWrapper[0];
-	        }
-
-	        // Check for a secondary item and move it outside
-	        if ( secondaryItem && (
-	          secondaryItem.hasAttribute('ng-click') ||
-	            ( tAttrs.ngClick &&
-	             isProxiedElement(secondaryItem) )
-	        )) {
-	          tEl.addClass('md-with-secondary');
-	          tEl.append(secondaryItem);
-	        }
-	      }
-
-	      function isProxiedElement(el) {
-	        return proxiedTypes.indexOf(el.nodeName.toLowerCase()) != -1;
-	      }
-
-	      return postLink;
-
-	      function postLink($scope, $element, $attr, ctrl) {
-
-	        var proxies    = [],
-	            firstChild = $element[0].firstElementChild,
-	            hasClick   = firstChild && firstChild.hasAttribute('ng-click');
-
-	        computeProxies();
-	        computeClickable();
-
-	        if ($element.hasClass('md-proxy-focus') && proxies.length) {
-	          angular.forEach(proxies, function(proxy) {
-	            proxy = angular.element(proxy);
-
-	            $scope.mouseActive = false;
-	            proxy.on('mousedown', function() {
-	              $scope.mouseActive = true;
-	              $timeout(function(){
-	                $scope.mouseActive = false;
-	              }, 100);
-	            })
-	            .on('focus', function() {
-	              if ($scope.mouseActive === false) { $element.addClass('md-focused'); }
-	              proxy.on('blur', function proxyOnBlur() {
-	                $element.removeClass('md-focused');
-	                proxy.off('blur', proxyOnBlur);
-	              });
-	            });
-	          });
-	        }
-
-	        function computeProxies() {
-	          var children = $element.children();
-	          if (children.length && !children[0].hasAttribute('ng-click')) {
-	            angular.forEach(proxiedTypes, function(type) {
-	              angular.forEach(firstChild.querySelectorAll(type), function(child) {
-	                proxies.push(child);
-	              });
-	            });
-	          }
-	        }
-	        function computeClickable() {
-	          if (proxies.length || hasClick) {
-	            $element.addClass('md-clickable');
-
-	            ctrl.attachRipple($scope, angular.element($element[0].querySelector('.md-no-style')));
-	          }
-	        }
-
-	        if (!hasClick && !proxies.length) {
-	          firstChild && firstChild.addEventListener('keypress', function(e) {
-	            if (e.target.nodeName != 'INPUT' && e.target.nodeName != 'TEXTAREA') {
-	              var keyCode = e.which || e.keyCode;
-	              if (keyCode == $mdConstant.KEY_CODE.SPACE) {
-	                if (firstChild) {
-	                  firstChild.click();
-	                  e.preventDefault();
-	                  e.stopPropagation();
-	                }
-	              }
-	            }
-	          });
-	        }
-
-	        $element.off('click');
-	        $element.off('keypress');
-
-	        if (proxies.length && firstChild) {
-	          $element.children().eq(0).on('click', function(e) {
-	            var parentButton = $mdUtil.getClosest(e.target, 'BUTTON');
-	            if (!parentButton && firstChild.contains(e.target)) {
-	              angular.forEach(proxies, function(proxy) {
-	                if (e.target !== proxy && !proxy.contains(e.target)) {
-	                  angular.element(proxy).triggerHandler('click');
-	                }
-	              });
-	            }
-	          });
-	        }
-	      }
-	    }
-	  };
-	}
-	mdListItemDirective.$inject = ["$mdAria", "$mdConstant", "$mdUtil", "$timeout"];
-
-	/*
-	 * @private
-	 * @ngdoc controller
-	 * @name MdListController
-	 * @module material.components.list
-	 *
-	 */
-	function MdListController($scope, $element, $mdListInkRipple) {
-	  var ctrl = this;
-	  ctrl.attachRipple = attachRipple;
-
-	  function attachRipple (scope, element) {
-	    var options = {};
-	    $mdListInkRipple.attach(scope, element, options);
-	  }
-	}
-	MdListController.$inject = ["$scope", "$element", "$mdListInkRipple"];
-
 
 	})();
 	(function(){
@@ -45433,6 +45312,7 @@
 	 * @param {string=} placeholder An alternative approach to using aria-label when the label is not
 	 *   PRESENT. The placeholder text is copied to the aria-label attribute.
 	 * @param md-no-autogrow {boolean=} When present, textareas will not grow automatically.
+	 * @param md-detect-hidden {boolean=} When present, textareas will be sized properly when they are revealed after being hidden. This is off by default for performance reasons because it guarantees a reflow every digest cycle.
 	 *
 	 * @usage
 	 * <hljs lang="html">
@@ -45648,6 +45528,31 @@
 	        var height = node.offsetHeight + line;
 	        node.style.height = height + 'px';
 	      }
+
+	      // Attach a watcher to detect when the textarea gets shown.
+	      if (angular.isDefined(element.attr('md-detect-hidden'))) {
+
+	        var handleHiddenChange = function() {
+	          var wasHidden = false;
+
+	          return function() {
+	            var isHidden = node.offsetHeight === 0;
+
+	            if (isHidden === false && wasHidden === true) {
+	              growTextarea();
+	            }
+
+	            wasHidden = isHidden;
+	          };
+	        }();
+
+	        // Check every digest cycle whether the visibility of the textarea has changed.
+	        // Queue up to run after the digest cycle is complete.
+	        scope.$watch(function() {
+	          $mdUtil.nextTick(handleHiddenChange, false);
+	          return true;
+	        });
+	      }
 	    }
 	  }
 	}
@@ -45692,7 +45597,7 @@
 
 	    ngModelCtrl.$formatters.push(renderCharCount);
 	    ngModelCtrl.$viewChangeListeners.push(renderCharCount);
-	    element.on('input keydown', function() {
+	    element.on('input keydown keyup', function() {
 	      renderCharCount(); //make sure it's called with no args
 	    });
 
@@ -45716,7 +45621,9 @@
 	    };
 
 	    function renderCharCount(value) {
-	      charCountEl.text(( element.val() || value || '' ).length + '/' + maxlength);
+	      // Force the value into a string since it may be a number,
+	      // which does not have a length property.
+	      charCountEl.text(String(element.val() || value || '').length + '/' + maxlength);
 	      return value;
 	    }
 	  }
@@ -45735,14 +45642,15 @@
 	    // If there is no input container, just return
 	    if (!inputContainer) return;
 
-	    // Add a placeholder class so we can target it in the CSS
-	    inputContainer.setHasPlaceholder(true);
-
 	    var label = inputContainer.element.find('label');
 	    var hasNoFloat = angular.isDefined(inputContainer.element.attr('md-no-float'));
 
 	    // If we have a label, or they specify the md-no-float attribute, just return
-	    if ((label && label.length) || hasNoFloat) return;
+	    if ((label && label.length) || hasNoFloat) {
+	      // Add a placeholder class so we can target it in the CSS
+	      inputContainer.setHasPlaceholder(true);
+	      return;
+	    }
 
 	    // Otherwise, grab/remove the placeholder
 	    var placeholderText = attr.placeholder;
@@ -45782,6 +45690,287 @@
 	    });
 	  }
 	}
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
+	 * @name material.components.list
+	 * @description
+	 * List module
+	 */
+	angular.module('material.components.list', [
+	  'material.core'
+	])
+	  .controller('MdListController', MdListController)
+	  .directive('mdList', mdListDirective)
+	  .directive('mdListItem', mdListItemDirective);
+
+	/**
+	 * @ngdoc directive
+	 * @name mdList
+	 * @module material.components.list
+	 *
+	 * @restrict E
+	 *
+	 * @description
+	 * The `<md-list>` directive is a list container for 1..n `<md-list-item>` tags.
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 * <md-list>
+	 *   <md-list-item class="md-2-line" ng-repeat="item in todos">
+	 *     <md-checkbox ng-model="item.done"></md-checkbox>
+	 *     <div class="md-list-item-text">
+	 *       <h3>{{item.title}}</h3>
+	 *       <p>{{item.description}}</p>
+	 *     </div>
+	 *   </md-list-item>
+	 * </md-list>
+	 * </hljs>
+	 */
+
+	function mdListDirective($mdTheming) {
+	  return {
+	    restrict: 'E',
+	    compile: function(tEl) {
+	      tEl[0].setAttribute('role', 'list');
+	      return $mdTheming;
+	    }
+	  };
+	}
+	mdListDirective.$inject = ["$mdTheming"];
+	/**
+	 * @ngdoc directive
+	 * @name mdListItem
+	 * @module material.components.list
+	 *
+	 * @restrict E
+	 *
+	 * @description
+	 * The `<md-list-item>` directive is a container intended for row items in a `<md-list>` container.
+	 *
+	 * ## CSS
+	 * `.md-avatar` - class for image avatars
+	 *
+	 * `.md-avatar-icon` - class for icon avatars
+	 *
+	 * `.md-offset` - on content without an avatar
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 *  <md-list>
+	 *    <md-list-item>
+	 *      <img class="md-avatar" ng-src="path/to/img"/>
+	 *      <span>Item content in list</span>
+	 *    </md-list-item>
+	 *    <md-list-item>
+	 *      <md-icon class="md-avatar-icon" md-svg-icon="communication:phone"></md-icon>
+	 *      <span>Item content in list</span>
+	 *    </md-list-item>
+	 *  </md-list>
+	 * </hljs>
+	 *
+	 */
+	function mdListItemDirective($mdAria, $mdConstant, $mdUtil, $timeout) {
+	  var proxiedTypes = ['md-checkbox', 'md-switch'];
+	  return {
+	    restrict: 'E',
+	    controller: 'MdListController',
+	    compile: function(tEl, tAttrs) {
+	      // Check for proxy controls (no ng-click on parent, and a control inside)
+	      var secondaryItem = tEl[0].querySelector('.md-secondary');
+	      var hasProxiedElement;
+	      var proxyElement;
+
+	      tEl[0].setAttribute('role', 'listitem');
+
+	      if (!tAttrs.ngClick) {
+	        for (var i = 0, type; type = proxiedTypes[i]; ++i) {
+	          if (proxyElement = tEl[0].querySelector(type)) {
+	            hasProxiedElement = true;
+	            break;
+	          }
+	        }
+	        if (hasProxiedElement) {
+	          wrapIn('div');
+	        } else if (!tEl[0].querySelector('md-button')) {
+	          tEl.addClass('md-no-proxy');
+	        }
+	      } else {
+	        wrapIn('button');
+	      }
+	      setupToggleAria();
+
+
+	      function setupToggleAria() {
+	        var toggleTypes = ['md-switch', 'md-checkbox'];
+	        var toggle;
+
+	        for (var i = 0, toggleType; toggleType = toggleTypes[i]; ++i) {
+	          if (toggle = tEl.find(toggleType)[0]) {
+	            if (!toggle.hasAttribute('aria-label')) {
+	              var p = tEl.find('p')[0];
+	              if (!p) return;
+	              toggle.setAttribute('aria-label', 'Toggle ' + p.textContent);
+	            }
+	          }
+	        }
+	      }
+
+	      function wrapIn(type) {
+	        var container;
+	        if (type == 'div') {
+	          container = angular.element('<div class="md-no-style md-list-item-inner">');
+	          container.append(tEl.contents());
+	          tEl.addClass('md-proxy-focus');
+	        } else {
+	          container = angular.element('<md-button class="md-no-style"><div class="md-list-item-inner"></div></md-button>');
+	          var copiedAttrs = ['ng-click', 'aria-label', 'ng-disabled'];
+	          angular.forEach(copiedAttrs, function(attr) {
+	            if (tEl[0].hasAttribute(attr)) {
+	              container[0].setAttribute(attr, tEl[0].getAttribute(attr));
+	              tEl[0].removeAttribute(attr);
+	            }
+	          });
+	          container.children().eq(0).append(tEl.contents());
+	        }
+
+	        tEl[0].setAttribute('tabindex', '-1');
+	        tEl.append(container);
+
+	        if (secondaryItem && secondaryItem.hasAttribute('ng-click')) {
+	          $mdAria.expect(secondaryItem, 'aria-label');
+	          var buttonWrapper = angular.element('<md-button class="md-secondary-container md-icon-button">');
+	          buttonWrapper.attr('ng-click', secondaryItem.getAttribute('ng-click'));
+	          secondaryItem.removeAttribute('ng-click');
+	          secondaryItem.setAttribute('tabindex', '-1');
+	          secondaryItem.classList.remove('md-secondary');
+	          buttonWrapper.append(secondaryItem);
+	          secondaryItem = buttonWrapper[0];
+	        }
+
+	        // Check for a secondary item and move it outside
+	        if ( secondaryItem && (
+	          secondaryItem.hasAttribute('ng-click') ||
+	            ( tAttrs.ngClick &&
+	             isProxiedElement(secondaryItem) )
+	        )) {
+	          tEl.addClass('md-with-secondary');
+	          tEl.append(secondaryItem);
+	        }
+	      }
+
+	      function isProxiedElement(el) {
+	        return proxiedTypes.indexOf(el.nodeName.toLowerCase()) != -1;
+	      }
+
+	      return postLink;
+
+	      function postLink($scope, $element, $attr, ctrl) {
+
+	        var proxies    = [],
+	            firstChild = $element[0].firstElementChild,
+	            hasClick   = firstChild && firstChild.hasAttribute('ng-click');
+
+	        computeProxies();
+	        computeClickable();
+
+	        if ($element.hasClass('md-proxy-focus') && proxies.length) {
+	          angular.forEach(proxies, function(proxy) {
+	            proxy = angular.element(proxy);
+
+	            $scope.mouseActive = false;
+	            proxy.on('mousedown', function() {
+	              $scope.mouseActive = true;
+	              $timeout(function(){
+	                $scope.mouseActive = false;
+	              }, 100);
+	            })
+	            .on('focus', function() {
+	              if ($scope.mouseActive === false) { $element.addClass('md-focused'); }
+	              proxy.on('blur', function proxyOnBlur() {
+	                $element.removeClass('md-focused');
+	                proxy.off('blur', proxyOnBlur);
+	              });
+	            });
+	          });
+	        }
+
+	        function computeProxies() {
+	          var children = $element.children();
+	          if (children.length && !children[0].hasAttribute('ng-click')) {
+	            angular.forEach(proxiedTypes, function(type) {
+	              angular.forEach(firstChild.querySelectorAll(type), function(child) {
+	                proxies.push(child);
+	              });
+	            });
+	          }
+	        }
+	        function computeClickable() {
+	          if (proxies.length || hasClick) {
+	            $element.addClass('md-clickable');
+
+	            ctrl.attachRipple($scope, angular.element($element[0].querySelector('.md-no-style')));
+	          }
+	        }
+
+	        if (!hasClick && !proxies.length) {
+	          firstChild && firstChild.addEventListener('keypress', function(e) {
+	            if (e.target.nodeName != 'INPUT' && e.target.nodeName != 'TEXTAREA') {
+	              var keyCode = e.which || e.keyCode;
+	              if (keyCode == $mdConstant.KEY_CODE.SPACE) {
+	                if (firstChild) {
+	                  firstChild.click();
+	                  e.preventDefault();
+	                  e.stopPropagation();
+	                }
+	              }
+	            }
+	          });
+	        }
+
+	        $element.off('click');
+	        $element.off('keypress');
+
+	        if (proxies.length && firstChild) {
+	          $element.children().eq(0).on('click', function(e) {
+	            var parentButton = $mdUtil.getClosest(e.target, 'BUTTON');
+	            if (!parentButton && firstChild.contains(e.target)) {
+	              angular.forEach(proxies, function(proxy) {
+	                if (e.target !== proxy && !proxy.contains(e.target)) {
+	                  angular.element(proxy).triggerHandler('click');
+	                }
+	              });
+	            }
+	          });
+	        }
+	      }
+	    }
+	  };
+	}
+	mdListItemDirective.$inject = ["$mdAria", "$mdConstant", "$mdUtil", "$timeout"];
+
+	/*
+	 * @private
+	 * @ngdoc controller
+	 * @name MdListController
+	 * @module material.components.list
+	 *
+	 */
+	function MdListController($scope, $element, $mdListInkRipple) {
+	  var ctrl = this;
+	  ctrl.attachRipple = attachRipple;
+
+	  function attachRipple (scope, element) {
+	    var options = {};
+	    $mdListInkRipple.attach(scope, element, options);
+	  }
+	}
+	MdListController.$inject = ["$scope", "$element", "$mdListInkRipple"];
+
 
 	})();
 	(function(){
@@ -46072,198 +46261,6 @@
 
 	/**
 	 * @ngdoc module
-	 * @name material.components.progressLinear
-	 * @description Linear Progress module!
-	 */
-	angular.module('material.components.progressLinear', [
-	  'material.core'
-	])
-	  .directive('mdProgressLinear', MdProgressLinearDirective);
-
-	/**
-	 * @ngdoc directive
-	 * @name mdProgressLinear
-	 * @module material.components.progressLinear
-	 * @restrict E
-	 *
-	 * @description
-	 * The linear progress directive is used to make loading content
-	 * in your app as delightful and painless as possible by minimizing
-	 * the amount of visual change a user sees before they can view
-	 * and interact with content.
-	 *
-	 * Each operation should only be represented by one activity indicator
-	 * For example: one refresh operation should not display both a
-	 * refresh bar and an activity circle.
-	 *
-	 * For operations where the percentage of the operation completed
-	 * can be determined, use a determinate indicator. They give users
-	 * a quick sense of how long an operation will take.
-	 *
-	 * For operations where the user is asked to wait a moment while
-	 * something finishes up, and it’s not necessary to expose what's
-	 * happening behind the scenes and how long it will take, use an
-	 * indeterminate indicator.
-	 *
-	 * @param {string} md-mode Select from one of four modes: determinate, indeterminate, buffer or query.
-	 *
-	 * Note: if the `md-mode` value is set as undefined or specified as 1 of the four (4) valid modes, then `.ng-hide`
-	 * will be auto-applied as a style to the component.
-	 *
-	 * Note: if not configured, the `md-mode="indeterminate"` will be auto injected as an attribute. If `value=""` is also specified, however,
-	 * then `md-mode="determinate"` would be auto-injected instead.
-	 * @param {number=} value In determinate and buffer modes, this number represents the percentage of the primary progress bar. Default: 0
-	 * @param {number=} md-buffer-value In the buffer mode, this number represents the percentage of the secondary progress bar. Default: 0
-	 *
-	 * @usage
-	 * <hljs lang="html">
-	 * <md-progress-linear md-mode="determinate" value="..."></md-progress-linear>
-	 *
-	 * <md-progress-linear md-mode="determinate" ng-value="..."></md-progress-linear>
-	 *
-	 * <md-progress-linear md-mode="indeterminate"></md-progress-linear>
-	 *
-	 * <md-progress-linear md-mode="buffer" value="..." md-buffer-value="..."></md-progress-linear>
-	 *
-	 * <md-progress-linear md-mode="query"></md-progress-linear>
-	 * </hljs>
-	 */
-	function MdProgressLinearDirective($mdTheming, $mdUtil, $log) {
-	  var MODE_DETERMINATE = "determinate",
-	      MODE_INDETERMINATE = "indeterminate",
-	      MODE_BUFFER = "buffer",
-	      MODE_QUERY = "query";
-
-	  return {
-	    restrict: 'E',
-	    template: '<div class="md-container">' +
-	      '<div class="md-dashed"></div>' +
-	      '<div class="md-bar md-bar1"></div>' +
-	      '<div class="md-bar md-bar2"></div>' +
-	      '</div>',
-	    compile: compile
-	  };
-	  
-	  function compile(tElement, tAttrs, transclude) {
-	    tElement.attr('aria-valuemin', 0);
-	    tElement.attr('aria-valuemax', 100);
-	    tElement.attr('role', 'progressbar');
-
-	    return postLink;
-	  }
-	  function postLink(scope, element, attr) {
-	    $mdTheming(element);
-
-	    var lastMode, toVendorCSS = $mdUtil.dom.animator.toCss;
-	    var bar1 = angular.element(element[0].querySelector('.md-bar1')),
-	        bar2 = angular.element(element[0].querySelector('.md-bar2')),
-	        container = angular.element(element[0].querySelector('.md-container'));
-
-	    element.attr('md-mode', mode());
-
-	    validateMode();
-	    watchAttributes();
-
-	    /**
-	     * Watch the value, md-buffer-value, and md-mode attributes
-	     */
-	    function watchAttributes() {
-	      attr.$observe('value', function(value) {
-	        var percentValue = clamp(value);
-	        element.attr('aria-valuenow', percentValue);
-
-	        if (mode() != MODE_QUERY) animateIndicator(bar2, percentValue);
-	      });
-
-	      attr.$observe('mdBufferValue', function(value) {
-	        animateIndicator(bar1, clamp(value));
-	      });
-
-	      attr.$observe('mdMode',function(mode){
-	        switch( mode ) {
-	          case MODE_QUERY:
-	          case MODE_BUFFER:
-	          case MODE_DETERMINATE:
-	          case MODE_INDETERMINATE:
-	            container.removeClass( 'ng-hide' + ' ' + lastMode );
-	            container.addClass( lastMode = "md-mode-" + mode );
-	            break;
-	          default:
-	            container.removeClass( lastMode );
-	            container.addClass('ng-hide');
-	            lastMode = undefined;
-	            break;
-	        }
-	      });
-	    }
-
-	    /**
-	     * Auto-defaults the mode to either `determinate` or `indeterminate` mode; if not specified
-	     */
-	    function validateMode() {
-	      if ( angular.isUndefined(attr.mdMode) ) {
-	        var hasValue = angular.isDefined(attr.value);
-	        var mode = hasValue ? MODE_DETERMINATE : MODE_INDETERMINATE;
-	        var info = "Auto-adding the missing md-mode='{0}' to the ProgressLinear element";
-
-	        $log.debug( $mdUtil.supplant(info, [mode]) );
-
-	        element.attr("md-mode",mode);
-	        attr['mdMode'] = mode;
-	      }
-	    }
-
-	    /**
-	     * Is the md-mode a valid option?
-	     */
-	    function mode() {
-	      var value = (attr.mdMode || "").trim();
-	      if ( value ) {
-	        switch(value) {
-	          case MODE_DETERMINATE:
-	          case MODE_INDETERMINATE:
-	          case MODE_BUFFER:
-	          case MODE_QUERY:
-	            break;
-	          default:
-	            value = undefined;
-	            break;
-	        }
-	      }
-	      return value;
-	    }
-
-	    /**
-	     * Manually set CSS to animate the Determinate indicator based on the specified
-	     * percentage value (0-100).
-	     */
-	    function animateIndicator(target, value) {
-	      if ( !mode() ) return;
-
-	      var to = $mdUtil.supplant("translateX({0}%) scale({1},1)", [ (value-100)/2, value/100 ]);
-	      var styles = toVendorCSS({ transform : to });
-	      angular.element(target).css( styles );
-	    }
-	  }
-
-	  /**
-	   * Clamps the value to be between 0 and 100.
-	   * @param {number} value The value to clamp.
-	   * @returns {number}
-	   */
-	  function clamp(value) {
-	    return Math.max(0, Math.min(value || 0, 100));
-	  }
-	}
-	MdProgressLinearDirective.$inject = ["$mdTheming", "$mdUtil", "$log"];
-
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
 	 * @name material.components.radioButton
 	 * @description radioButton module!
 	 */
@@ -46473,7 +46470,7 @@
 	 * @param {string=} ngChange Angular expression to be executed when input changes due to user
 	 *    interaction with the input element.
 	 * @param {string} ngValue Angular expression which sets the value to which the expression should
-	 *    be set when selected.*
+	 *    be set when selected.
 	 * @param {string} value The value to which the expression should be set when selected.
 	 * @param {string=} name Property name of the form under which the control is published.
 	 * @param {string=} aria-label Adds label to radio button for accessibility.
@@ -46614,6 +46611,198 @@
 
 	/**
 	 * @ngdoc module
+	 * @name material.components.progressLinear
+	 * @description Linear Progress module!
+	 */
+	angular.module('material.components.progressLinear', [
+	  'material.core'
+	])
+	  .directive('mdProgressLinear', MdProgressLinearDirective);
+
+	/**
+	 * @ngdoc directive
+	 * @name mdProgressLinear
+	 * @module material.components.progressLinear
+	 * @restrict E
+	 *
+	 * @description
+	 * The linear progress directive is used to make loading content
+	 * in your app as delightful and painless as possible by minimizing
+	 * the amount of visual change a user sees before they can view
+	 * and interact with content.
+	 *
+	 * Each operation should only be represented by one activity indicator
+	 * For example: one refresh operation should not display both a
+	 * refresh bar and an activity circle.
+	 *
+	 * For operations where the percentage of the operation completed
+	 * can be determined, use a determinate indicator. They give users
+	 * a quick sense of how long an operation will take.
+	 *
+	 * For operations where the user is asked to wait a moment while
+	 * something finishes up, and it’s not necessary to expose what's
+	 * happening behind the scenes and how long it will take, use an
+	 * indeterminate indicator.
+	 *
+	 * @param {string} md-mode Select from one of four modes: determinate, indeterminate, buffer or query.
+	 *
+	 * Note: if the `md-mode` value is set as undefined or specified as 1 of the four (4) valid modes, then `.ng-hide`
+	 * will be auto-applied as a style to the component.
+	 *
+	 * Note: if not configured, the `md-mode="indeterminate"` will be auto injected as an attribute. If `value=""` is also specified, however,
+	 * then `md-mode="determinate"` would be auto-injected instead.
+	 * @param {number=} value In determinate and buffer modes, this number represents the percentage of the primary progress bar. Default: 0
+	 * @param {number=} md-buffer-value In the buffer mode, this number represents the percentage of the secondary progress bar. Default: 0
+	 *
+	 * @usage
+	 * <hljs lang="html">
+	 * <md-progress-linear md-mode="determinate" value="..."></md-progress-linear>
+	 *
+	 * <md-progress-linear md-mode="determinate" ng-value="..."></md-progress-linear>
+	 *
+	 * <md-progress-linear md-mode="indeterminate"></md-progress-linear>
+	 *
+	 * <md-progress-linear md-mode="buffer" value="..." md-buffer-value="..."></md-progress-linear>
+	 *
+	 * <md-progress-linear md-mode="query"></md-progress-linear>
+	 * </hljs>
+	 */
+	function MdProgressLinearDirective($mdTheming, $mdUtil, $log) {
+	  var MODE_DETERMINATE = "determinate",
+	      MODE_INDETERMINATE = "indeterminate",
+	      MODE_BUFFER = "buffer",
+	      MODE_QUERY = "query";
+
+	  return {
+	    restrict: 'E',
+	    template: '<div class="md-container">' +
+	      '<div class="md-dashed"></div>' +
+	      '<div class="md-bar md-bar1"></div>' +
+	      '<div class="md-bar md-bar2"></div>' +
+	      '</div>',
+	    compile: compile
+	  };
+	  
+	  function compile(tElement, tAttrs, transclude) {
+	    tElement.attr('aria-valuemin', 0);
+	    tElement.attr('aria-valuemax', 100);
+	    tElement.attr('role', 'progressbar');
+
+	    return postLink;
+	  }
+	  function postLink(scope, element, attr) {
+	    $mdTheming(element);
+
+	    var lastMode, toVendorCSS = $mdUtil.dom.animator.toCss;
+	    var bar1 = angular.element(element[0].querySelector('.md-bar1')),
+	        bar2 = angular.element(element[0].querySelector('.md-bar2')),
+	        container = angular.element(element[0].querySelector('.md-container'));
+
+	    element.attr('md-mode', mode());
+
+	    validateMode();
+	    watchAttributes();
+
+	    /**
+	     * Watch the value, md-buffer-value, and md-mode attributes
+	     */
+	    function watchAttributes() {
+	      attr.$observe('value', function(value) {
+	        var percentValue = clamp(value);
+	        element.attr('aria-valuenow', percentValue);
+
+	        if (mode() != MODE_QUERY) animateIndicator(bar2, percentValue);
+	      });
+
+	      attr.$observe('mdBufferValue', function(value) {
+	        animateIndicator(bar1, clamp(value));
+	      });
+
+	      attr.$observe('mdMode',function(mode){
+	        switch( mode ) {
+	          case MODE_QUERY:
+	          case MODE_BUFFER:
+	          case MODE_DETERMINATE:
+	          case MODE_INDETERMINATE:
+	            container.removeClass( 'ng-hide' + ' ' + lastMode );
+	            container.addClass( lastMode = "md-mode-" + mode );
+	            break;
+	          default:
+	            container.removeClass( lastMode );
+	            container.addClass('ng-hide');
+	            lastMode = undefined;
+	            break;
+	        }
+	      });
+	    }
+
+	    /**
+	     * Auto-defaults the mode to either `determinate` or `indeterminate` mode; if not specified
+	     */
+	    function validateMode() {
+	      if ( angular.isUndefined(attr.mdMode) ) {
+	        var hasValue = angular.isDefined(attr.value);
+	        var mode = hasValue ? MODE_DETERMINATE : MODE_INDETERMINATE;
+	        var info = "Auto-adding the missing md-mode='{0}' to the ProgressLinear element";
+
+	        $log.debug( $mdUtil.supplant(info, [mode]) );
+
+	        element.attr("md-mode",mode);
+	        attr['mdMode'] = mode;
+	      }
+	    }
+
+	    /**
+	     * Is the md-mode a valid option?
+	     */
+	    function mode() {
+	      var value = (attr.mdMode || "").trim();
+	      if ( value ) {
+	        switch(value) {
+	          case MODE_DETERMINATE:
+	          case MODE_INDETERMINATE:
+	          case MODE_BUFFER:
+	          case MODE_QUERY:
+	            break;
+	          default:
+	            value = undefined;
+	            break;
+	        }
+	      }
+	      return value;
+	    }
+
+	    /**
+	     * Manually set CSS to animate the Determinate indicator based on the specified
+	     * percentage value (0-100).
+	     */
+	    function animateIndicator(target, value) {
+	      if ( !mode() ) return;
+
+	      var to = $mdUtil.supplant("translateX({0}%) scale({1},1)", [ (value-100)/2, value/100 ]);
+	      var styles = toVendorCSS({ transform : to });
+	      angular.element(target).css( styles );
+	    }
+	  }
+
+	  /**
+	   * Clamps the value to be between 0 and 100.
+	   * @param {number} value The value to clamp.
+	   * @returns {number}
+	   */
+	  function clamp(value) {
+	    return Math.max(0, Math.min(value || 0, 100));
+	  }
+	}
+	MdProgressLinearDirective.$inject = ["$mdTheming", "$mdUtil", "$log"];
+
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
 	 * @name material.components.select
 	 */
 
@@ -46655,11 +46844,12 @@
 	 *
 	 * @param {expression} ng-model The model!
 	 * @param {boolean=} multiple Whether it's multiple.
-	 * @param {expression=} md-on-close expression to be evaluated when the select is closed
+	 * @param {expression=} md-on-close Expression to be evaluated when the select is closed.
 	 * @param {string=} placeholder Placeholder hint text.
 	 * @param {string=} aria-label Optional label for accessibility. Only necessary if no placeholder or
-	 * @param {string=} md-container-class class list to get applied to the .md-select-menu-container element (for custom styling)
 	 * explicit label is present.
+	 * @param {string=} md-container-class Class list to get applied to the `.md-select-menu-container`
+	 * element (for custom styling).
 	 *
 	 * @usage
 	 * With a placeholder (label and aria-label are added dynamically)
@@ -48685,12 +48875,13 @@
 	     * @param percent 0-1
 	     */
 	    function setSliderPercent(percent) {
-	      activeTrack.css('width', (percent * 100) + '%');
-	      thumbContainer.css(
-	        'left',
-	        (percent * 100) + '%'
-	      );
-	      element.toggleClass('md-min', percent === 0);
+	        var percentStr = (percent * 100) + '%';
+
+	        activeTrack.css('width', percentStr);
+	        thumbContainer.css('left',percentStr);
+
+	        element.toggleClass('md-min', percent === 0);
+	        element.toggleClass('md-max', percent === 1);
 	    }
 
 
@@ -48797,6 +48988,329 @@
 	  }
 	}
 	SliderDirective.$inject = ["$$rAF", "$window", "$mdAria", "$mdUtil", "$mdConstant", "$mdTheming", "$mdGesture", "$parse", "$log"];
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
+	 * @name material.components.sticky
+	 * @description
+	 * Sticky effects for md
+	 *
+	 */
+	angular
+	  .module('material.components.sticky', [
+	    'material.core',
+	    'material.components.content'
+	  ])
+	  .factory('$mdSticky', MdSticky);
+
+	/**
+	 * @ngdoc service
+	 * @name $mdSticky
+	 * @module material.components.sticky
+	 *
+	 * @description
+	 * The `$mdSticky`service provides a mixin to make elements sticky.
+	 *
+	 * @returns A `$mdSticky` function that takes three arguments:
+	 *   - `scope`
+	 *   - `element`: The element that will be 'sticky'
+	 *   - `elementClone`: A clone of the element, that will be shown
+	 *     when the user starts scrolling past the original element.
+	 *     If not provided, it will use the result of `element.clone()`.
+	 */
+	function MdSticky($document, $mdConstant, $$rAF, $mdUtil) {
+
+	  var browserStickySupport = checkStickySupport();
+
+	  /**
+	   * Registers an element as sticky, used internally by directives to register themselves
+	   */
+	  return function registerStickyElement(scope, element, stickyClone) {
+	    var contentCtrl = element.controller('mdContent');
+	    if (!contentCtrl) return;
+
+	    if (browserStickySupport) {
+	      element.css({
+	        position: browserStickySupport,
+	        top: 0,
+	        'z-index': 2
+	      });
+	    } else {
+	      var $$sticky = contentCtrl.$element.data('$$sticky');
+	      if (!$$sticky) {
+	        $$sticky = setupSticky(contentCtrl);
+	        contentCtrl.$element.data('$$sticky', $$sticky);
+	      }
+
+	      var deregister = $$sticky.add(element, stickyClone || element.clone());
+	      scope.$on('$destroy', deregister);
+	    }
+	  };
+
+	  function setupSticky(contentCtrl) {
+	    var contentEl = contentCtrl.$element;
+
+	    // Refresh elements is very expensive, so we use the debounced
+	    // version when possible.
+	    var debouncedRefreshElements = $$rAF.throttle(refreshElements);
+
+	    // setupAugmentedScrollEvents gives us `$scrollstart` and `$scroll`,
+	    // more reliable than `scroll` on android.
+	    setupAugmentedScrollEvents(contentEl);
+	    contentEl.on('$scrollstart', debouncedRefreshElements);
+	    contentEl.on('$scroll', onScroll);
+
+	    var self;
+	    return self = {
+	      prev: null,
+	      current: null, //the currently stickied item
+	      next: null,
+	      items: [],
+	      add: add,
+	      refreshElements: refreshElements
+	    };
+
+	    /***************
+	     * Public
+	     ***************/
+	    // Add an element and its sticky clone to this content's sticky collection
+	    function add(element, stickyClone) {
+	      stickyClone.addClass('md-sticky-clone');
+
+	      var item = {
+	        element: element,
+	        clone: stickyClone
+	      };
+	      self.items.push(item);
+
+	      $mdUtil.nextTick(function() {
+	        contentEl.prepend(item.clone);
+	      });
+
+	      debouncedRefreshElements();
+
+	      return function remove() {
+	        self.items.forEach(function(item, index) {
+	          if (item.element[0] === element[0]) {
+	            self.items.splice(index, 1);
+	            item.clone.remove();
+	          }
+	        });
+	        debouncedRefreshElements();
+	      };
+	    }
+
+	    function refreshElements() {
+	      // Sort our collection of elements by their current position in the DOM.
+	      // We need to do this because our elements' order of being added may not
+	      // be the same as their order of display.
+	      self.items.forEach(refreshPosition);
+	      self.items = self.items.sort(function(a, b) {
+	        return a.top < b.top ? -1 : 1;
+	      });
+
+	      // Find which item in the list should be active, 
+	      // based upon the content's current scroll position
+	      var item;
+	      var currentScrollTop = contentEl.prop('scrollTop');
+	      for (var i = self.items.length - 1; i >= 0; i--) {
+	        if (currentScrollTop > self.items[i].top) {
+	          item = self.items[i];
+	          break;
+	        }
+	      }
+	      setCurrentItem(item);
+	    }
+
+	    /***************
+	     * Private
+	     ***************/
+
+	    // Find the `top` of an item relative to the content element,
+	    // and also the height.
+	    function refreshPosition(item) {
+	      // Find the top of an item by adding to the offsetHeight until we reach the 
+	      // content element.
+	      var current = item.element[0];
+	      item.top = 0;
+	      item.left = 0;
+	      while (current && current !== contentEl[0]) {
+	        item.top += current.offsetTop;
+	        item.left += current.offsetLeft;
+	        current = current.offsetParent;
+	      }
+	      item.height = item.element.prop('offsetHeight');
+	      item.clone.css('margin-left', item.left + 'px');
+	      if ($mdUtil.floatingScrollbars()) {
+	        item.clone.css('margin-right', '0');
+	      }
+	    }
+
+	    // As we scroll, push in and select the correct sticky element.
+	    function onScroll() {
+	      var scrollTop = contentEl.prop('scrollTop');
+	      var isScrollingDown = scrollTop > (onScroll.prevScrollTop || 0);
+
+	      // Store the previous scroll so we know which direction we are scrolling
+	      onScroll.prevScrollTop = scrollTop;
+
+	      //
+	      // AT TOP (not scrolling)
+	      //
+	      if (scrollTop === 0) {
+	        // If we're at the top, just clear the current item and return
+	        setCurrentItem(null);
+	        return;
+	      }
+
+	      //
+	      // SCROLLING DOWN (going towards the next item)
+	      //
+	      if (isScrollingDown) {
+
+	        // If we've scrolled down past the next item's position, sticky it and return
+	        if (self.next && self.next.top <= scrollTop) {
+	          setCurrentItem(self.next);
+	          return;
+	        }
+
+	        // If the next item is close to the current one, push the current one up out of the way
+	        if (self.current && self.next && self.next.top - scrollTop <= self.next.height) {
+	          translate(self.current, scrollTop + (self.next.top - self.next.height - scrollTop));
+	          return;
+	        }
+	      }
+
+	      //
+	      // SCROLLING UP (not at the top & not scrolling down; must be scrolling up)
+	      //
+	      if (!isScrollingDown) {
+
+	        // If we've scrolled up past the previous item's position, sticky it and return
+	        if (self.current && self.prev && scrollTop < self.current.top) {
+	          setCurrentItem(self.prev);
+	          return;
+	        }
+
+	        // If the next item is close to the current one, pull the current one down into view
+	        if (self.next && self.current && (scrollTop >= (self.next.top - self.current.height))) {
+	          translate(self.current, scrollTop + (self.next.top - scrollTop - self.current.height));
+	          return;
+	        }
+	      }
+
+	      //
+	      // Otherwise, just move the current item to the proper place (scrolling up or down)
+	      //
+	      if (self.current) {
+	        translate(self.current, scrollTop);
+	      }
+	    }
+
+	    function setCurrentItem(item) {
+	      if (self.current === item) return;
+	      // Deactivate currently active item
+	      if (self.current) {
+	        translate(self.current, null);
+	        setStickyState(self.current, null);
+	      }
+
+	      // Activate new item if given
+	      if (item) {
+	        setStickyState(item, 'active');
+	      }
+
+	      self.current = item;
+	      var index = self.items.indexOf(item);
+	      // If index === -1, index + 1 = 0. It works out.
+	      self.next = self.items[index + 1];
+	      self.prev = self.items[index - 1];
+	      setStickyState(self.next, 'next');
+	      setStickyState(self.prev, 'prev');
+	    }
+
+	    function setStickyState(item, state) {
+	      if (!item || item.state === state) return;
+	      if (item.state) {
+	        item.clone.attr('sticky-prev-state', item.state);
+	        item.element.attr('sticky-prev-state', item.state);
+	      }
+	      item.clone.attr('sticky-state', state);
+	      item.element.attr('sticky-state', state);
+	      item.state = state;
+	    }
+
+	    function translate(item, amount) {
+	      if (!item) return;
+	      if (amount === null || amount === undefined) {
+	        if (item.translateY) {
+	          item.translateY = null;
+	          item.clone.css($mdConstant.CSS.TRANSFORM, '');
+	        }
+	      } else {
+	        item.translateY = amount;
+	        item.clone.css(
+	          $mdConstant.CSS.TRANSFORM,
+	          'translate3d(' + item.left + 'px,' + amount + 'px,0)'
+	        );
+	      }
+	    }
+	  }
+
+	  // Function to check for browser sticky support
+	  function checkStickySupport($el) {
+	    var stickyProp;
+	    var testEl = angular.element('<div>');
+	    $document[0].body.appendChild(testEl[0]);
+
+	    var stickyProps = ['sticky', '-webkit-sticky'];
+	    for (var i = 0; i < stickyProps.length; ++i) {
+	      testEl.css({position: stickyProps[i], top: 0, 'z-index': 2});
+	      if (testEl.css('position') == stickyProps[i]) {
+	        stickyProp = stickyProps[i];
+	        break;
+	      }
+	    }
+	    testEl.remove();
+	    return stickyProp;
+	  }
+
+	  // Android 4.4 don't accurately give scroll events.
+	  // To fix this problem, we setup a fake scroll event. We say:
+	  // > If a scroll or touchmove event has happened in the last DELAY milliseconds, 
+	  //   then send a `$scroll` event every animationFrame.
+	  // Additionally, we add $scrollstart and $scrollend events.
+	  function setupAugmentedScrollEvents(element) {
+	    var SCROLL_END_DELAY = 200;
+	    var isScrolling;
+	    var lastScrollTime;
+	    element.on('scroll touchmove', function() {
+	      if (!isScrolling) {
+	        isScrolling = true;
+	        $$rAF.throttle(loopScrollEvent);
+	        element.triggerHandler('$scrollstart');
+	      }
+	      element.triggerHandler('$scroll');
+	      lastScrollTime = +$mdUtil.now();
+	    });
+
+	    function loopScrollEvent() {
+	      if (+$mdUtil.now() - lastScrollTime > SCROLL_END_DELAY) {
+	        isScrolling = false;
+	        element.triggerHandler('$scrollend');
+	      } else {
+	        element.triggerHandler('$scroll');
+	        $$rAF.throttle(loopScrollEvent);
+	      }
+	    }
+	  }
+
+	}
+	MdSticky.$inject = ["$document", "$mdConstant", "$$rAF", "$mdUtil"];
 
 	})();
 	(function(){
@@ -49137,361 +49651,6 @@
 
 	/**
 	 * @ngdoc module
-	 * @name material.components.tabs
-	 * @description
-	 *
-	 *  Tabs, created with the `<md-tabs>` directive provide *tabbed* navigation with different styles.
-	 *  The Tabs component consists of clickable tabs that are aligned horizontally side-by-side.
-	 *
-	 *  Features include support for:
-	 *
-	 *  - static or dynamic tabs,
-	 *  - responsive designs,
-	 *  - accessibility support (ARIA),
-	 *  - tab pagination,
-	 *  - external or internal tab content,
-	 *  - focus indicators and arrow-key navigations,
-	 *  - programmatic lookup and access to tab controllers, and
-	 *  - dynamic transitions through different tab contents.
-	 *
-	 */
-	/*
-	 * @see js folder for tabs implementation
-	 */
-	angular.module('material.components.tabs', [
-	  'material.core',
-	  'material.components.icon'
-	]);
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
-	 * @name material.components.sticky
-	 * @description
-	 * Sticky effects for md
-	 *
-	 */
-	angular
-	  .module('material.components.sticky', [
-	    'material.core',
-	    'material.components.content'
-	  ])
-	  .factory('$mdSticky', MdSticky);
-
-	/**
-	 * @ngdoc service
-	 * @name $mdSticky
-	 * @module material.components.sticky
-	 *
-	 * @description
-	 * The `$mdSticky`service provides a mixin to make elements sticky.
-	 *
-	 * @returns A `$mdSticky` function that takes three arguments:
-	 *   - `scope`
-	 *   - `element`: The element that will be 'sticky'
-	 *   - `elementClone`: A clone of the element, that will be shown
-	 *     when the user starts scrolling past the original element.
-	 *     If not provided, it will use the result of `element.clone()`.
-	 */
-	function MdSticky($document, $mdConstant, $$rAF, $mdUtil) {
-
-	  var browserStickySupport = checkStickySupport();
-
-	  /**
-	   * Registers an element as sticky, used internally by directives to register themselves
-	   */
-	  return function registerStickyElement(scope, element, stickyClone) {
-	    var contentCtrl = element.controller('mdContent');
-	    if (!contentCtrl) return;
-
-	    if (browserStickySupport) {
-	      element.css({
-	        position: browserStickySupport,
-	        top: 0,
-	        'z-index': 2
-	      });
-	    } else {
-	      var $$sticky = contentCtrl.$element.data('$$sticky');
-	      if (!$$sticky) {
-	        $$sticky = setupSticky(contentCtrl);
-	        contentCtrl.$element.data('$$sticky', $$sticky);
-	      }
-
-	      var deregister = $$sticky.add(element, stickyClone || element.clone());
-	      scope.$on('$destroy', deregister);
-	    }
-	  };
-
-	  function setupSticky(contentCtrl) {
-	    var contentEl = contentCtrl.$element;
-
-	    // Refresh elements is very expensive, so we use the debounced
-	    // version when possible.
-	    var debouncedRefreshElements = $$rAF.throttle(refreshElements);
-
-	    // setupAugmentedScrollEvents gives us `$scrollstart` and `$scroll`,
-	    // more reliable than `scroll` on android.
-	    setupAugmentedScrollEvents(contentEl);
-	    contentEl.on('$scrollstart', debouncedRefreshElements);
-	    contentEl.on('$scroll', onScroll);
-
-	    var self;
-	    return self = {
-	      prev: null,
-	      current: null, //the currently stickied item
-	      next: null,
-	      items: [],
-	      add: add,
-	      refreshElements: refreshElements
-	    };
-
-	    /***************
-	     * Public
-	     ***************/
-	    // Add an element and its sticky clone to this content's sticky collection
-	    function add(element, stickyClone) {
-	      stickyClone.addClass('md-sticky-clone');
-
-	      var item = {
-	        element: element,
-	        clone: stickyClone
-	      };
-	      self.items.push(item);
-
-	      $mdUtil.nextTick(function() {
-	        contentEl.prepend(item.clone);
-	      });
-
-	      debouncedRefreshElements();
-
-	      return function remove() {
-	        self.items.forEach(function(item, index) {
-	          if (item.element[0] === element[0]) {
-	            self.items.splice(index, 1);
-	            item.clone.remove();
-	          }
-	        });
-	        debouncedRefreshElements();
-	      };
-	    }
-
-	    function refreshElements() {
-	      // Sort our collection of elements by their current position in the DOM.
-	      // We need to do this because our elements' order of being added may not
-	      // be the same as their order of display.
-	      self.items.forEach(refreshPosition);
-	      self.items = self.items.sort(function(a, b) {
-	        return a.top < b.top ? -1 : 1;
-	      });
-
-	      // Find which item in the list should be active, 
-	      // based upon the content's current scroll position
-	      var item;
-	      var currentScrollTop = contentEl.prop('scrollTop');
-	      for (var i = self.items.length - 1; i >= 0; i--) {
-	        if (currentScrollTop > self.items[i].top) {
-	          item = self.items[i];
-	          break;
-	        }
-	      }
-	      setCurrentItem(item);
-	    }
-
-	    /***************
-	     * Private
-	     ***************/
-
-	    // Find the `top` of an item relative to the content element,
-	    // and also the height.
-	    function refreshPosition(item) {
-	      // Find the top of an item by adding to the offsetHeight until we reach the 
-	      // content element.
-	      var current = item.element[0];
-	      item.top = 0;
-	      item.left = 0;
-	      while (current && current !== contentEl[0]) {
-	        item.top += current.offsetTop;
-	        item.left += current.offsetLeft;
-	        current = current.offsetParent;
-	      }
-	      item.height = item.element.prop('offsetHeight');
-	      item.clone.css('margin-left', item.left + 'px');
-	      if ($mdUtil.floatingScrollbars()) {
-	        item.clone.css('margin-right', '0');
-	      }
-	    }
-
-	    // As we scroll, push in and select the correct sticky element.
-	    function onScroll() {
-	      var scrollTop = contentEl.prop('scrollTop');
-	      var isScrollingDown = scrollTop > (onScroll.prevScrollTop || 0);
-
-	      // Store the previous scroll so we know which direction we are scrolling
-	      onScroll.prevScrollTop = scrollTop;
-
-	      //
-	      // AT TOP (not scrolling)
-	      //
-	      if (scrollTop === 0) {
-	        // If we're at the top, just clear the current item and return
-	        setCurrentItem(null);
-	        return;
-	      }
-
-	      //
-	      // SCROLLING DOWN (going towards the next item)
-	      //
-	      if (isScrollingDown) {
-
-	        // If we've scrolled down past the next item's position, sticky it and return
-	        if (self.next && self.next.top <= scrollTop) {
-	          setCurrentItem(self.next);
-	          return;
-	        }
-
-	        // If the next item is close to the current one, push the current one up out of the way
-	        if (self.current && self.next && self.next.top - scrollTop <= self.next.height) {
-	          translate(self.current, scrollTop + (self.next.top - self.next.height - scrollTop));
-	          return;
-	        }
-	      }
-
-	      //
-	      // SCROLLING UP (not at the top & not scrolling down; must be scrolling up)
-	      //
-	      if (!isScrollingDown) {
-
-	        // If we've scrolled up past the previous item's position, sticky it and return
-	        if (self.current && self.prev && scrollTop < self.current.top) {
-	          setCurrentItem(self.prev);
-	          return;
-	        }
-
-	        // If the next item is close to the current one, pull the current one down into view
-	        if (self.next && self.current && (scrollTop >= (self.next.top - self.current.height))) {
-	          translate(self.current, scrollTop + (self.next.top - scrollTop - self.current.height));
-	          return;
-	        }
-	      }
-
-	      //
-	      // Otherwise, just move the current item to the proper place (scrolling up or down)
-	      //
-	      if (self.current) {
-	        translate(self.current, scrollTop);
-	      }
-	    }
-
-	    function setCurrentItem(item) {
-	      if (self.current === item) return;
-	      // Deactivate currently active item
-	      if (self.current) {
-	        translate(self.current, null);
-	        setStickyState(self.current, null);
-	      }
-
-	      // Activate new item if given
-	      if (item) {
-	        setStickyState(item, 'active');
-	      }
-
-	      self.current = item;
-	      var index = self.items.indexOf(item);
-	      // If index === -1, index + 1 = 0. It works out.
-	      self.next = self.items[index + 1];
-	      self.prev = self.items[index - 1];
-	      setStickyState(self.next, 'next');
-	      setStickyState(self.prev, 'prev');
-	    }
-
-	    function setStickyState(item, state) {
-	      if (!item || item.state === state) return;
-	      if (item.state) {
-	        item.clone.attr('sticky-prev-state', item.state);
-	        item.element.attr('sticky-prev-state', item.state);
-	      }
-	      item.clone.attr('sticky-state', state);
-	      item.element.attr('sticky-state', state);
-	      item.state = state;
-	    }
-
-	    function translate(item, amount) {
-	      if (!item) return;
-	      if (amount === null || amount === undefined) {
-	        if (item.translateY) {
-	          item.translateY = null;
-	          item.clone.css($mdConstant.CSS.TRANSFORM, '');
-	        }
-	      } else {
-	        item.translateY = amount;
-	        item.clone.css(
-	          $mdConstant.CSS.TRANSFORM,
-	          'translate3d(' + item.left + 'px,' + amount + 'px,0)'
-	        );
-	      }
-	    }
-	  }
-
-	  // Function to check for browser sticky support
-	  function checkStickySupport($el) {
-	    var stickyProp;
-	    var testEl = angular.element('<div>');
-	    $document[0].body.appendChild(testEl[0]);
-
-	    var stickyProps = ['sticky', '-webkit-sticky'];
-	    for (var i = 0; i < stickyProps.length; ++i) {
-	      testEl.css({position: stickyProps[i], top: 0, 'z-index': 2});
-	      if (testEl.css('position') == stickyProps[i]) {
-	        stickyProp = stickyProps[i];
-	        break;
-	      }
-	    }
-	    testEl.remove();
-	    return stickyProp;
-	  }
-
-	  // Android 4.4 don't accurately give scroll events.
-	  // To fix this problem, we setup a fake scroll event. We say:
-	  // > If a scroll or touchmove event has happened in the last DELAY milliseconds, 
-	  //   then send a `$scroll` event every animationFrame.
-	  // Additionally, we add $scrollstart and $scrollend events.
-	  function setupAugmentedScrollEvents(element) {
-	    var SCROLL_END_DELAY = 200;
-	    var isScrolling;
-	    var lastScrollTime;
-	    element.on('scroll touchmove', function() {
-	      if (!isScrolling) {
-	        isScrolling = true;
-	        $$rAF.throttle(loopScrollEvent);
-	        element.triggerHandler('$scrollstart');
-	      }
-	      element.triggerHandler('$scroll');
-	      lastScrollTime = +$mdUtil.now();
-	    });
-
-	    function loopScrollEvent() {
-	      if (+$mdUtil.now() - lastScrollTime > SCROLL_END_DELAY) {
-	        isScrolling = false;
-	        element.triggerHandler('$scrollend');
-	      } else {
-	        element.triggerHandler('$scroll');
-	        $$rAF.throttle(loopScrollEvent);
-	      }
-	    }
-	  }
-
-	}
-	MdSticky.$inject = ["$document", "$mdConstant", "$$rAF", "$mdUtil"];
-
-	})();
-	(function(){
-	"use strict";
-
-	/**
-	 * @ngdoc module
 	 * @name material.components.toast
 	 * @description
 	 * Toast
@@ -49774,6 +49933,38 @@
 
 	/**
 	 * @ngdoc module
+	 * @name material.components.tabs
+	 * @description
+	 *
+	 *  Tabs, created with the `<md-tabs>` directive provide *tabbed* navigation with different styles.
+	 *  The Tabs component consists of clickable tabs that are aligned horizontally side-by-side.
+	 *
+	 *  Features include support for:
+	 *
+	 *  - static or dynamic tabs,
+	 *  - responsive designs,
+	 *  - accessibility support (ARIA),
+	 *  - tab pagination,
+	 *  - external or internal tab content,
+	 *  - focus indicators and arrow-key navigations,
+	 *  - programmatic lookup and access to tab controllers, and
+	 *  - dynamic transitions through different tab contents.
+	 *
+	 */
+	/*
+	 * @see js folder for tabs implementation
+	 */
+	angular.module('material.components.tabs', [
+	  'material.core',
+	  'material.components.icon'
+	]);
+
+	})();
+	(function(){
+	"use strict";
+
+	/**
+	 * @ngdoc module
 	 * @name material.components.toolbar
 	 */
 	angular.module('material.components.toolbar', [
@@ -49821,8 +50012,10 @@
 	 *
 	 * @param {boolean=} md-scroll-shrink Whether the header should shrink away as
 	 * the user scrolls down, and reveal itself as the user scrolls up.
+	 *
 	 * _**Note (1):** for scrollShrink to work, the toolbar must be a sibling of a
 	 * `md-content` element, placed before it. See the scroll shrink demo._
+	 *
 	 * _**Note (2):** The `md-scroll-shrink` attribute is only parsed on component
 	 * initialization, it does not watch for scope changes._
 	 *
@@ -50322,11 +50515,13 @@
 	 * @usage
 	 * <hljs lang="html">
 	 *
-	 * <md-virtual-repeat-container>
+	 * <md-virtual-repeat-container md-top-index="topIndex">
 	 *   <div md-virtual-repeat="i in items" md-item-size="20">Hello {{i}}!</div>
 	 * </md-virtual-repeat-container>
 	 * </hljs>
 	 *
+	 * @param {number=} md-top-index Binds the index of the item that is at the top of the scroll
+	 *     container to $scope. It can both read and set the scroll position.
 	 * @param {boolean=} md-orient-horizontal Whether the container should scroll horizontally
 	 *     (defaults to orientation and scrolling vertically).
 	 * @param {boolean=} md-auto-shrink When present, the container will shrink to fit
@@ -50375,7 +50570,7 @@
 	var NUM_EXTRA = 3;
 
 	/** @ngInject */
-	function VirtualRepeatContainerController($$rAF, $scope, $element, $attrs) {
+	function VirtualRepeatContainerController($$rAF, $parse, $scope, $element, $attrs) {
 	  this.$scope = $scope;
 	  this.$element = $element;
 	  this.$attrs = $attrs;
@@ -50399,6 +50594,25 @@
 	  /** @type {number} Amount to offset the total scroll size by. */
 	  this.offsetSize = parseInt(this.$attrs.mdOffsetSize, 10) || 0;
 
+	  if (this.$attrs.mdTopIndex) {
+	    /** @type {function(angular.Scope): number} Binds to topIndex on Angular scope */
+	    this.bindTopIndex = $parse(this.$attrs.mdTopIndex);
+	    /** @type {number} The index of the item that is at the top of the scroll container */
+	    this.topIndex = this.bindTopIndex(this.$scope);
+
+	    if (!angular.isDefined(this.topIndex)) {
+	      this.topIndex = 0;
+	      this.bindTopIndex.assign(this.$scope, 0);
+	    }
+
+	    this.$scope.$watch(this.bindTopIndex, angular.bind(this, function(newIndex) {
+	      if (newIndex !== this.topIndex) {
+	        this.scrollToIndex(newIndex);
+	      }
+	    }));
+	  } else {
+	    this.topIndex = 0;
+	  }
 
 	  this.scroller = $element[0].getElementsByClassName('md-virtual-repeat-scroller')[0];
 	  this.sizer = this.scroller.getElementsByClassName('md-virtual-repeat-sizer')[0];
@@ -50416,7 +50630,7 @@
 	    }));
 	  }
 	}
-	VirtualRepeatContainerController.$inject = ["$$rAF", "$scope", "$element", "$attrs"];
+	VirtualRepeatContainerController.$inject = ["$$rAF", "$parse", "$scope", "$element", "$attrs"];
 
 
 	/** Called by the md-virtual-repeat inside of the container at startup. */
@@ -50558,6 +50772,19 @@
 	  this.handleScroll_();
 	};
 
+	/**
+	 * Scrolls the item with the given index to the top of the scroll container.
+	 * @param {number} index
+	 */
+	VirtualRepeatContainerController.prototype.scrollToIndex = function(index) {
+	  var itemSize = this.repeater.getItemSize();
+	  var itemsLength = this.repeater.itemsLength;
+	  if(index > itemsLength) {
+	    index = itemsLength - 1;
+	  }
+	  this.scrollTo(itemSize * index);
+	};
+
 	VirtualRepeatContainerController.prototype.resetScroll = function() {
 	  this.scrollTo(0);
 	};
@@ -50578,6 +50805,15 @@
 	  this.scrollOffset = offset;
 	  this.offsetter.style.webkitTransform = transform;
 	  this.offsetter.style.transform = transform;
+
+	  if (this.bindTopIndex) {
+	    var topIndex = Math.floor(offset / itemSize);
+	    if (topIndex !== this.topIndex && topIndex < this.repeater.itemsLength) {
+	      this.topIndex = topIndex;
+	      this.bindTopIndex.assign(this.$scope, topIndex);
+	      if (!this.$scope.$root.$$phase) this.$scope.$digest();
+	    }
+	  }
 
 	  this.repeater.containerUpdated();
 	};
@@ -50608,22 +50844,22 @@
 	 * </md-virtual-repeat-container>
 	 * </hljs>
 	 *
-	 * @param {number=} md-item-size The height or width of the repeated elements (which
-	 *     must be identical for each element). Optional. Will attempt to read the size
-	 *     from the dom if missing, but still assumes that all repeated nodes have same
-	 *     height or width.
-	 * @param {string=} md-extra-name Evaluates to an additional name to which
-	 *     the current iterated item can be assigned on the repeated scope. (Needed
-	 *     for use in md-autocomplete).
-	 * @param {boolean=} md-on-demand When present, treats the md-virtual-repeat argument
-	 *     as an object that can fetch rows rather than an array.
-	 *     NOTE: This object must implement the following interface with two (2) methods:
-	 *     getItemAtIndex: function(index) -> item at that index or null if it is not yet
-	 *         loaded (It should start downloading the item in that case).
-	 *     getLength: function() -> number The data legnth to which the repeater container
-	 *         should be sized. Ideally, when the count is known, this method should return it.
-	 *         Otherwise, return a higher number than the currently loaded items to produce an
-	 *         infinite-scroll behavior.
+	 * @param {number=} md-item-size The height or width of the repeated elements (which must be
+	 *   identical for each element). Optional. Will attempt to read the size from the dom if missing,
+	 *   but still assumes that all repeated nodes have same height or width.
+	 * @param {string=} md-extra-name Evaluates to an additional name to which the current iterated item
+	 *   can be assigned on the repeated scope (needed for use in `md-autocomplete`).
+	 * @param {boolean=} md-on-demand When present, treats the md-virtual-repeat argument as an object
+	 *   that can fetch rows rather than an array.
+	 *
+	 *   **NOTE:** This object must implement the following interface with two (2) methods:
+	 *
+	 *   - `getItemAtIndex: function(index) [object]` The item at that index or null if it is not yet
+	 *     loaded (it should start downloading the item in that case).
+	 *   - `getLength: function() [number]` The data length to which the repeater container
+	 *     should be sized. Ideally, when the count is known, this method should return it.
+	 *     Otherwise, return a higher number than the currently loaded items to produce an
+	 *     infinite-scroll behavior.
 	 */
 	function VirtualRepeatDirective($parse) {
 	  return {
@@ -50833,19 +51069,19 @@
 	 * @private
 	 */
 	VirtualRepeatController.prototype.virtualRepeatUpdate_ = function(items, oldItems) {
-	  var itemsLength = items ? items.length : 0;
+	  var itemsLength = items && items.length || 0;
 	  var lengthChanged = false;
-
-	  if (itemsLength !== this.itemsLength) {
-	    lengthChanged = true;
-	    this.itemsLength = itemsLength;
-	  }
 
 	  // If the number of items shrank, scroll up to the top.
 	  if (this.items && itemsLength < this.items.length && this.container.getScrollOffset() !== 0) {
 	    this.items = items;
 	    this.container.resetScroll();
 	    return;
+	  }
+
+	  if (itemsLength !== this.itemsLength) {
+	    lengthChanged = true;
+	    this.itemsLength = itemsLength;
 	  }
 
 	  this.items = items;
@@ -50861,8 +51097,10 @@
 
 	  if (this.isFirstRender) {
 	    this.isFirstRender = false;
-	    var startIndex = this.$attrs.mdStartIndex ? this.$scope.$eval(this.$attrs.mdStartIndex) : 0;
-	    this.container.scrollTo(startIndex * this.itemSize);
+	    var startIndex = this.$attrs.mdStartIndex ?
+	      this.$scope.$eval(this.$attrs.mdStartIndex) :
+	      this.container.topIndex;
+	    this.container.scrollToIndex(startIndex);
 	  }
 
 	  // Detach and pool any blocks that are no longer in the viewport.
@@ -51133,6 +51371,7 @@
 	  ctrl.id         = $mdUtil.nextUid();
 	  ctrl.isDisabled = null;
 	  ctrl.isRequired = null;
+	  ctrl.hasNotFound = false;
 
 	  //-- public methods
 	  ctrl.keydown                       = keydown;
@@ -51147,6 +51386,7 @@
 	  ctrl.registerSelectedItemWatcher   = registerSelectedItemWatcher;
 	  ctrl.unregisterSelectedItemWatcher = unregisterSelectedItemWatcher;
 	  ctrl.notFoundVisible               = notFoundVisible;
+	  ctrl.loadingIsVisible              = loadingIsVisible;
 
 	  return init();
 
@@ -51308,19 +51548,16 @@
 	    if (!hidden && oldHidden) {
 	      positionDropdown();
 
-	      if (elements)
+	      if (elements) {
 	        $mdUtil.nextTick(function () {
-
 	          $mdUtil.disableScrollAround(elements.ul);
-
-	        }, false, $scope);
-	      } else if (hidden && !oldHidden) {
-	        $mdUtil.nextTick(function () {
-
-	          $mdUtil.enableScrolling();
-
 	        }, false, $scope);
 	      }
+	    } else if (hidden && !oldHidden) {
+	      $mdUtil.nextTick(function () {
+	        $mdUtil.enableScrolling();
+	      }, false, $scope);
+	    }
 	  }
 
 	  /**
@@ -51335,7 +51572,7 @@
 	   */
 	  function onListLeave () {
 	    noBlur = false;
-	    if (!hasFocus) ctrl.hidden = true;
+	    ctrl.hidden = shouldHide();
 	  }
 
 	  /**
@@ -51426,9 +51663,8 @@
 
 	        // cancel results if search text is not long enough
 	        if (!isMinLengthMet()) {
-	          ctrl.loading = false;
 	          ctrl.matches = [];
-	          ctrl.hidden  = shouldHide();
+	          setLoading(false);
 	          updateMessages();
 	        } else {
 	          handleQuery();
@@ -51442,8 +51678,18 @@
 	   * Handles input blur event, determines if the dropdown should hide.
 	   */
 	  function blur () {
-	    hasFocus = false;
-	    if (!noBlur) ctrl.hidden = true;
+	    if (!noBlur) {
+	      hasFocus = false;
+	      ctrl.hidden = shouldHide();
+	    }
+	  }
+
+	  function doBlur(forceBlur) {
+	    if (forceBlur) {
+	      noBlur = false;
+	    }
+
+	    elements.input.blur();
 	  }
 
 	  /**
@@ -51453,7 +51699,6 @@
 	    hasFocus = true;
 	    //-- if searchText is null, let's force it to be a string
 	    if (!angular.isString($scope.searchText)) $scope.searchText = '';
-	    if ($scope.minLength > 0) return;
 	    ctrl.hidden = shouldHide();
 	    if (!ctrl.hidden) handleQuery();
 	  }
@@ -51491,9 +51736,10 @@
 	        event.stopPropagation();
 	        event.preventDefault();
 	        clearValue();
-	        ctrl.matches = [];
-	        ctrl.hidden  = true;
-	        ctrl.index   = getDefaultIndex();
+
+	        // Force the component to blur if they hit escape
+	        doBlur(true);
+
 	        break;
 	      default:
 	    }
@@ -51549,11 +51795,60 @@
 	  }
 
 	  /**
+	   * Sets the loading parameter and updates the hidden state.
+	   * @param value {boolean} Whether or not the component is currently loading.
+	   */
+	  function setLoading(value) {
+	    if (ctrl.loading != value) {
+	      ctrl.loading = value;
+	    }
+
+	    // Always refresh the hidden variable as something else might have changed
+	    ctrl.hidden = shouldHide();
+	  }
+
+	  /**
 	   * Determines if the menu should be hidden.
 	   * @returns {boolean}
 	   */
 	  function shouldHide () {
-	    if (!isMinLengthMet() || !ctrl.matches.length) return true;
+	    if ((ctrl.loading && !hasMatches()) || hasSelection() || !hasFocus) {
+	      return true;
+	    }
+
+	    return !shouldShow();
+	  }
+
+	  /**
+	   * Determines if the menu should be shown.
+	   * @returns {boolean}
+	   */
+	  function shouldShow() {
+	    return (isMinLengthMet() && hasMatches()) || notFoundVisible();
+	  }
+
+	  /**
+	   * Returns true if the search text has matches.
+	   * @returns {boolean}
+	   */
+	  function hasMatches() {
+	    return ctrl.matches.length ? true : false;
+	  }
+
+	  /**
+	   * Returns true if the autocomplete has a valid selection.
+	   * @returns {boolean}
+	   */
+	  function hasSelection() {
+	    return ctrl.scope.selectedItem ? true : false;
+	  }
+
+	  /**
+	   * Returns true if the loading indicator is, or should be, visible.
+	   * @returns {boolean}
+	   */
+	  function loadingIsVisible() {
+	    return ctrl.loading && !hasSelection();
 	  }
 
 	  /**
@@ -51569,7 +51864,7 @@
 	   * @returns {*}
 	   */
 	  function isMinLengthMet () {
-	    return angular.isDefined($scope.searchText) && $scope.searchText.length >= getMinLength();
+	    return ($scope.searchText || '').length >= getMinLength();
 	  }
 
 	  //-- actions
@@ -51604,10 +51899,7 @@
 	        ngModel.$render();
 	      }).finally(function () {
 	        $scope.selectedItem = ctrl.matches[ index ];
-	        ctrl.loading        = false;
-	        ctrl.hidden         = true;
-	        ctrl.index          = 0;
-	        ctrl.matches        = [];
+	        setLoading(false);
 	      });
 	    }, false);
 	  }
@@ -51616,7 +51908,15 @@
 	   * Clears the searchText value and selected item.
 	   */
 	  function clearValue () {
+	    // Set the loading to true so we don't see flashes of content
+	    setLoading(true);
+
+	    // Reset our variables
+	    ctrl.index = 0;
+	    ctrl.matches = [];
 	    $scope.searchText = '';
+
+	    // Tell the select to fire and select nothing
 	    select(-1);
 
 	    // Per http://www.w3schools.com/jsref/event_oninput.asp
@@ -51637,16 +51937,18 @@
 	    if (angular.isArray(items)) {
 	      handleResults(items);
 	    } else if (items) {
+	      setLoading(true);
 	      $mdUtil.nextTick(function () {
-	        ctrl.loading = true;
 	        if (items.success) items.success(handleResults);
 	        if (items.then)    items.then(handleResults);
-	        if (items.finally) items.finally(function () { ctrl.loading = false; });
+	        if (items.finally) items.finally(function () {
+	          setLoading(false);
+	        });
 	      },true, $scope);
 	    }
 	    function handleResults (matches) {
 	      cache[ term ] = matches;
-	      if (searchText !== $scope.searchText) return; //-- just cache the results if old request
+	      if ((searchText || '') !== ($scope.searchText || '')) return; //-- just cache the results if old request
 	      ctrl.matches = matches;
 	      ctrl.hidden  = shouldHide();
 	      if ($scope.selectOnMatch) selectItemOnMatch();
@@ -51703,7 +52005,9 @@
 	  }
 
 	  function notFoundVisible () {
-	    return !ctrl.matches.length && !ctrl.loading && ctrl.scope.searchText && hasFocus && !ctrl.scope.selectedItem;
+	    var textLength = (ctrl.scope.searchText || '').length;
+
+	    return ctrl.hasNotFound && !hasMatches() && !ctrl.loading && textLength >= getMinLength() && hasFocus && !hasSelection();
 	  }
 
 	  /**
@@ -51720,7 +52024,8 @@
 	    } else {
 	      fetchResults(searchText);
 	    }
-	    if (hasFocus) ctrl.hidden = shouldHide();
+
+	    ctrl.hidden = shouldHide();
 	  }
 
 	  /**
@@ -51785,9 +52090,9 @@
 	 *     selected
 	 * @param {expression=} md-search-text-change An expression to be run each time the search text
 	 *     updates
-	 * @param {string=} md-search-text A model to bind the search query text to
+	 * @param {expression=} md-search-text A model to bind the search query text to
 	 * @param {object=} md-selected-item A model to bind the selected item to
-	 * @param {string=} md-item-text An expression that will convert your object to a single string.
+	 * @param {expression=} md-item-text An expression that will convert your object to a single string.
 	 * @param {string=} placeholder Placeholder text that will be forwarded to the input.
 	 * @param {boolean=} md-no-cache Disables the internal caching that happens in autocomplete
 	 * @param {boolean=} ng-disabled Determines whether or not to disable the input field
@@ -51809,7 +52114,7 @@
 	 *     the item if the search text is an exact match
 	 *
 	 * @usage
-	 * ###Basic Example
+	 * ### Basic Example
 	 * <hljs lang="html">
 	 *   <md-autocomplete
 	 *       md-selected-item="selectedItem"
@@ -51820,7 +52125,7 @@
 	 *   </md-autocomplete>
 	 * </hljs>
 	 *
-	 * ###Example with "not found" message
+	 * ### Example with "not found" message
 	 * <hljs lang="html">
 	 * <md-autocomplete
 	 *     md-selected-item="selectedItem"
@@ -51864,6 +52169,8 @@
 	 */
 
 	function MdAutocomplete () {
+	  var hasNotFoundTemplate = false;
+
 	  return {
 	    controller:   'MdAutocompleteCtrl',
 	    controllerAs: '$mdAutocompleteCtrl',
@@ -51888,10 +52195,23 @@
 	      menuClass:      '@?mdMenuClass',
 	      inputId:        '@?mdInputId'
 	    },
+	    link: function(scope, element, attrs, controller) {
+	      controller.hasNotFound = hasNotFoundTemplate;
+	    },
 	    template:     function (element, attr) {
 	      var noItemsTemplate = getNoItemsTemplate(),
 	          itemTemplate    = getItemTemplate(),
-	          leftover        = element.html();
+	          leftover        = element.html(),
+	          tabindex        = attr.tabindex;
+
+	      if (noItemsTemplate) {
+	        hasNotFoundTemplate = true;
+	      }
+
+	      if (attr.hasOwnProperty('tabindex')) {
+	        element.attr('tabindex', '-1');
+	      }
+
 	      return '\
 	        <md-autocomplete-wrap\
 	            layout="row"\
@@ -51899,12 +52219,12 @@
 	            role="listbox">\
 	          ' + getInputElement() + '\
 	          <md-progress-linear\
-	              ng-if="$mdAutocompleteCtrl.loading && !$mdAutocompleteCtrl.hidden"\
+	              ng-if="$mdAutocompleteCtrl.loadingIsVisible()"\
 	              md-mode="indeterminate"></md-progress-linear>\
 	          <md-virtual-repeat-container\
 	              md-auto-shrink\
 	              md-auto-shrink-min="1"\
-	              ng-hide="$mdAutocompleteCtrl.hidden && !$mdAutocompleteCtrl.notFoundVisible()"\
+	              ng-hide="$mdAutocompleteCtrl.hidden"\
 	              class="md-autocomplete-suggestions-container md-whiteframe-z1"\
 	              role="presentation">\
 	            <ul class="md-autocomplete-suggestions"\
@@ -51952,6 +52272,7 @@
 	            <md-input-container flex ng-if="floatingLabel">\
 	              <label>{{floatingLabel}}</label>\
 	              <input type="search"\
+	                  ' + (tabindex != null ? 'tabindex="' + tabindex + '"' : '') + '\
 	                  id="{{ inputId || \'fl-input-\' + $mdAutocompleteCtrl.id }}"\
 	                  name="{{inputName}}"\
 	                  autocomplete="off"\
@@ -51974,6 +52295,7 @@
 	        } else {
 	          return '\
 	            <input flex type="search"\
+	                ' + (tabindex != null ? 'tabindex="' + tabindex + '"' : '') + '\
 	                id="{{ inputId || \'input-\' + $mdAutocompleteCtrl.id }}"\
 	                name="{{inputName}}"\
 	                ng-if="!floatingLabel"\
@@ -52123,11 +52445,11 @@
 	 *
 	 * @param {string} md-highlight-text A model to be searched for
 	 * @param {string=} md-highlight-flags A list of flags (loosely based on JavaScript RexExp flags).
-	 *     #### **Supported flags**:
-	 *     - `g`: Find all matches within the provided text
-	 *     - `i`: Ignore case when searching for matches
-	 *     - `$`: Only match if the text ends with the search term
-	 *     - `^`: Only match if the text begins with the search term
+	 * #### **Supported flags**:
+	 * - `g`: Find all matches within the provided text
+	 * - `i`: Ignore case when searching for matches
+	 * - `$`: Only match if the text ends with the search term
+	 * - `^`: Only match if the text begins with the search term
 	 *
 	 * @usage
 	 * <hljs lang="html">
@@ -52746,9 +53068,12 @@
 	   * displayed as 'chips'. This component can make use of an `<input>` element or an
 	   * `<md-autocomplete>` element.
 	   *
-	   * <strong>Custom `<md-chip-template>` template</strong>
+	   * ### Custom templates
 	   * A custom template may be provided to render the content of each chip. This is achieved by
-	   * specifying an `<md-chip-template>` element as a child of `<md-chips>`. Note: Any attributes on
+	   * specifying an `<md-chip-template>` element containing the custom content as a child of
+	   * `<md-chips>`.
+	   *
+	   * Note: Any attributes on
 	   * `<md-chip-template>` will be dropped as only the innerHTML is used for the chip template. The
 	   * variables `$chip` and `$index` are available in the scope of `<md-chip-template>`, representing
 	   * the chip object and its index in the list of chips, respectively.
@@ -53146,7 +53471,8 @@
 	            <div class="md-contact-suggestion">\
 	              <img \
 	                  ng-src="{{item[$mdContactChipsCtrl.contactImage]}}"\
-	                  alt="{{item[$mdContactChipsCtrl.contactName]}}" />\
+	                  alt="{{item[$mdContactChipsCtrl.contactName]}}"\
+	                  ng-if="item[$mdContactChipsCtrl.contactImage]" />\
 	              <span class="md-contact-name" md-highlight-text="$mdContactChipsCtrl.searchText"\
 	                    md-highlight-flags="{{$mdContactChipsCtrl.highlightFlags}}">\
 	                {{item[$mdContactChipsCtrl.contactName]}}\
@@ -53158,7 +53484,8 @@
 	            <div class="md-contact-avatar">\
 	              <img \
 	                  ng-src="{{$chip[$mdContactChipsCtrl.contactImage]}}"\
-	                  alt="{{$chip[$mdContactChipsCtrl.contactName]}}" />\
+	                  alt="{{$chip[$mdContactChipsCtrl.contactName]}}"\
+	                  ng-if="$chip[$mdContactChipsCtrl.contactImage]" />\
 	            </div>\
 	            <div class="md-contact-name">\
 	              {{$chip[$mdContactChipsCtrl.contactName]}}\
@@ -53315,7 +53642,8 @@
 	 * nor a label on the parent element, a warning will be logged to the console.
 	 * @param {string=} alt Labels icon for accessibility. If an empty string is provided, icon
 	 * will be hidden from accessibility layer with `aria-hidden="true"`. If there's no alt on the icon
-	 * nor a label on the parent element, a warning will be logged to the console. *
+	 * nor a label on the parent element, a warning will be logged to the console.
+	 *
 	 * @usage
 	 * When using SVGs:
 	 * <hljs lang="html">
@@ -53445,25 +53773,12 @@
 	      return false;
 	    }
 
-	    function prepareForFontIcon () {
+	    function prepareForFontIcon() {
 	      if (!scope.svgIcon && !scope.svgSrc) {
-
 	        if (scope.fontIcon) {
 	          element.addClass('md-font ' + scope.fontIcon);
 	        }
-
-	        if (scope.fontSet) {
-	          element.addClass($mdIcon.fontSet(scope.fontSet));
-	        }
-
-	        if (shouldUseDefaultFontSet()) {
-	          element.addClass($mdIcon.fontSet());
-	        }
-
-	      }
-
-	      function shouldUseDefaultFontSet() {
-	        return !scope.fontIcon && !scope.fontSet;
+	        element.addClass($mdIcon.fontSet(scope.fontSet));
 	      }
 	    }
 	  }
@@ -53487,7 +53802,7 @@
 	    * icons and icon sets to be pre-registered and associated with source URLs **before** the `<md-icon />`
 	    * directives are compiled.
 	    *
-	    * If using font-icons, the developer is repsonsible for loading the fonts.
+	    * If using font-icons, the developer is responsible for loading the fonts.
 	    *
 	    * If using SVGs, loading of the actual svg files are deferred to on-demand requests and are loaded
 	    * internally by the `$mdIcon` service using the `$http` service. When an SVG is requested by name/ID,
@@ -53973,7 +54288,7 @@
 	    *  Define the Icon class
 	    */
 	   function Icon(el, config) {
-	     if (el.tagName != 'svg') {
+	     if (el && el.tagName != 'svg') {
 	       el = angular.element('<svg xmlns="http://www.w3.org/2000/svg">').append(el)[0];
 	     }
 
@@ -54097,7 +54412,7 @@
 	          nestedMenu.open();
 	        }
 	      }, nestedMenu ? 100 : 250);
-	      var focusableTarget = event.currentTarget.querySelector('[tabindex]');
+	      var focusableTarget = event.currentTarget.querySelector('button:not([disabled])');
 	      focusableTarget && focusableTarget.focus();
 	    });
 	    menuItems.on('mouseleave', function(event) {
@@ -54169,7 +54484,8 @@
 	    if ( !self.isOpen ) return;
 	    self.isOpen = false;
 
-	    $scope.$emit('$mdMenuClose', $element);
+	    var eventDetails = angular.extend({}, closeOpts, { skipFocus: skipFocus });
+	    $scope.$emit('$mdMenuClose', $element, eventDetails);
 	    $mdMenu.hide(null, closeOpts);
 
 	    if (!skipFocus) {
@@ -54342,7 +54658,7 @@
 	 * </md-menu>
 	 * </hljs>
 	 *
-	 * @param {string} md-po*ition-mode The position mode in the form of
+	 * @param {string} md-position-mode The position mode in the form of
 	 *           `x`, `y`. Default value is `target`,`target`. Right now the `x` axis
 	 *           also suppports `target-right`.
 	 * @param {string} md-offset An offset to apply to the dropdown after positioning
@@ -54650,10 +54966,10 @@
 
 	        // kick off initial focus in the menu on the first element
 	        var focusTarget = opts.menuContentEl[0].querySelector('[md-menu-focus-target]');
-	        if ( !focusTarget && firstChild ) {
+	        if ( !focusTarget ) {
 	          var firstChild = opts.menuContentEl[0].firstElementChild;
 
-	          focusTarget = firstChild.querySelector('[tabindex]') || firstChild.firstElementChild;
+	          focusTarget = firstChild && (firstChild.querySelector('.md-button:not([disabled])') || firstChild.firstElementChild);
 	        }
 
 	        focusTarget && focusTarget.focus();
@@ -54671,10 +54987,9 @@
 
 	        function onMenuKeyDown(ev) {
 	          var handled;
-	          var keyCodes = $mdConstant.KEY_CODE;
 	          switch (ev.keyCode) {
 	            case $mdConstant.KEY_CODE.ESCAPE:
-	              opts.mdMenuCtrl.close(true, { closeAll: true });
+	              opts.mdMenuCtrl.close(false, { closeAll: true });
 	              handled = true;
 	              break;
 	            case $mdConstant.KEY_CODE.UP_ARROW:
@@ -55000,23 +55315,25 @@
 	    }
 	  });
 
-	  $scope.$on('$mdMenuClose', function(event, el) {
+	  $scope.$on('$mdMenuClose', function(event, el, opts) {
 	    var rootMenus = self.getMenus();
 	    if (rootMenus.indexOf(el[0]) != -1) {
 	      $element[0].classList.remove('md-open');
 	      el[0].classList.remove('md-open');
 	    }
 
-	    if ($element[0].contains(el[0])) {
-	      var parentMenu = el[0];
-	      while (parentMenu && rootMenus.indexOf(parentMenu) == -1) {
-	        parentMenu = $mdUtil.getClosest(parentMenu, 'MD-MENU', true);
-	      }
-	      if (parentMenu) {
-	        parentMenu.querySelector('button').focus();
-	        self.currentlyOpenMenu = undefined;
-	        self.disableOpenOnHover();
-	        self.setKeyboardMode(true);
+	    if (opts.closeAll) {
+	      if ($element[0].contains(el[0])) {
+	        var parentMenu = el[0];
+	        while (parentMenu && rootMenus.indexOf(parentMenu) == -1) {
+	          parentMenu = $mdUtil.getClosest(parentMenu, 'MD-MENU', true);
+	        }
+	        if (parentMenu) {
+	          if (!opts.skipFocus) parentMenu.querySelector('button:not([disabled])').focus();
+	          self.currentlyOpenMenu = undefined;
+	          self.disableOpenOnHover();
+	          self.setKeyboardMode(true);
+	        }
 	      }
 	    }
 	  });
@@ -55036,8 +55353,6 @@
 	MenuBarController.prototype.enableOpenOnHover = function() {
 	  if (this.openOnHoverEnabled) return;
 	  this.openOnHoverEnabled = true;
-
-	  var $element = this.$element;
 
 	  var parentToolbar;
 	  if (parentToolbar = this.parentToolbar) {
@@ -55084,14 +55399,14 @@
 	      menuCtrl.open();
 	    }, 200, false);
 	  }
-	}
+	};
 
 	MenuBarController.prototype.handleKeyDown = function(e) {
 	  var keyCodes = this.$mdConstant.KEY_CODE;
 	  var currentMenu = this.currentlyOpenMenu;
 	  var wasOpen = currentMenu && currentMenu.isOpen;
 	  this.setKeyboardMode(true);
-	  var handled;
+	  var handled, newMenu, newMenuCtrl;
 	  switch (e.keyCode) {
 	    case keyCodes.DOWN_ARROW:
 	      if (currentMenu) {
@@ -55106,17 +55421,17 @@
 	      handled = true;
 	      break;
 	    case keyCodes.LEFT_ARROW:
-	      var newMenu = this.focusMenu(-1);
+	      newMenu = this.focusMenu(-1);
 	      if (wasOpen) {
-	        var newMenuCtrl = angular.element(newMenu).controller('mdMenu');
+	        newMenuCtrl = angular.element(newMenu).controller('mdMenu');
 	        this.scheduleOpenMenu(newMenuCtrl);
 	      }
 	      handled = true;
 	      break;
 	    case keyCodes.RIGHT_ARROW:
-	      var newMenu = this.focusMenu(+1);
+	      newMenu = this.focusMenu(+1);
 	      if (wasOpen) {
-	        var newMenuCtrl = angular.element(newMenu).controller('mdMenu');
+	        newMenuCtrl = angular.element(newMenu).controller('mdMenu');
 	        this.scheduleOpenMenu(newMenuCtrl);
 	      }
 	      handled = true;
@@ -55167,7 +55482,6 @@
 
 	MenuBarController.prototype.getFocusedMenuIndex = function() {
 	  var $mdUtil = this.$mdUtil;
-	  var $element = this.$element;
 	  var focusedEl = $mdUtil.getClosest(
 	    this.$document[0].activeElement,
 	    'MD-MENU'
@@ -55540,6 +55854,7 @@
 	 * @param {boolean=} disabled If present, disabled tab selection.
 	 * @param {expression=} md-on-deselect Expression to be evaluated after the tab has been de-selected.
 	 * @param {expression=} md-on-select Expression to be evaluated after the tab has been selected.
+	 * @param {boolean=} md-active When true, sets the active tab.  Note: There can only be one active tab at a time.
 	 *
 	 *
 	 * @usage
@@ -55581,12 +55896,11 @@
 	        label = angular.element('<md-tab-label></md-tab-label>');
 	        if (attr.label) label.text(attr.label);
 	        else label.append(element.contents());
-	      }
-
-	      if (body.length == 0) {
-	        var contents = element.contents().detach();
-	        body         = angular.element('<md-tab-body></md-tab-body>');
-	        body.append(contents);
+	        if (body.length == 0) {
+	          var contents = element.contents().detach();
+	          body         = angular.element('<md-tab-body></md-tab-body>');
+	          body.append(contents);
+	        }
 	      }
 
 	      element.append(label);
@@ -55726,7 +56040,7 @@
 	  defineBooleanAttribute('swipeContent');
 	  defineBooleanAttribute('noDisconnect');
 	  defineBooleanAttribute('autoselect');
-	  defineBooleanAttribute('centerTabs', handleCenterTabs);
+	  defineBooleanAttribute('centerTabs', handleCenterTabs, false);
 	  defineBooleanAttribute('enableDisconnect');
 
 	  // define public properties
@@ -56228,7 +56542,15 @@
 	   * Updates whether or not pagination should be displayed.
 	   */
 	  function updatePagination () {
+	    if (!shouldStretchTabs()) updatePagingWidth();
+	    ctrl.maxTabWidth = getMaxTabWidth();
 	    ctrl.shouldPaginate = shouldPaginate();
+	  }
+
+	  function updatePagingWidth() {
+	    var width = 1;
+	    angular.forEach(elements.dummies, function (element) { width += element.offsetWidth; });
+	    angular.element(elements.paging).css('width', width + 'px');
 	  }
 
 	  function getMaxTabWidth () {
@@ -56322,17 +56644,28 @@
 	  function updateHeightFromContent () {
 	    if (!ctrl.dynamicHeight) return $element.css('height', '');
 	    if (!ctrl.tabs.length) return queue.push(updateHeightFromContent);
+
 	    var tabContent    = elements.contents[ ctrl.selectedIndex ],
 	        contentHeight = tabContent ? tabContent.offsetHeight : 0,
 	        tabsHeight    = elements.wrapper.offsetHeight,
 	        newHeight     = contentHeight + tabsHeight,
-	        currentHeight = $element.prop('clientHeight');
+	        currentHeight = $element.prop('offsetHeight');
+
+	    // Adjusts calculations for when the buttons are bottom-aligned since this relies on absolute
+	    // positioning.  This should probably be cleaned up if a cleaner solution is possible.
+	    if ($element.attr('md-align-tabs') === 'bottom') {
+	      currentHeight -= tabsHeight;
+	      newHeight -= tabsHeight;
+	      // Need to include bottom border in these calculations
+	      if ($element.attr('md-border-bottom') !== undefined) ++currentHeight;
+	    }
+
 	    if (currentHeight === newHeight) return;
 
 	    // Lock during animation so the user can't change tabs
 	    locked = true;
 
-	    var fromHeight = { height: currentHeight + 'px'},
+	    var fromHeight = { height: currentHeight + 'px' },
 	        toHeight = { height: newHeight + 'px' };
 
 	    // Set the height to the current, specific pixel height to fix a bug on iOS where the height
@@ -56492,7 +56825,7 @@
 	 *
 	 * @param {integer=} md-selected Index of the active/selected tab
 	 * @param {boolean=} md-no-ink If present, disables ink ripple effects.
-	 * @param {boolean=} md-no-bar If present, disables the selection ink bar.
+	 * @param {boolean=} md-no-ink-bar If present, disables the selection ink bar.
 	 * @param {string=}  md-align-tabs Attribute to indicate position of tab buttons: `bottom` or `top`; default is `top`
 	 * @param {string=} md-stretch-tabs Attribute to indicate whether or not to stretch tabs: `auto`, `always`, or `never`; default is `auto`
 	 * @param {boolean=} md-dynamic-height When enabled, the tab wrapper will resize based on the contents of the selected tab
@@ -56687,7 +57020,7 @@
 
 	})();
 	(function(){ 
-	angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-THEME_NAME-theme {  background: '{{background-50}}'; }  md-autocomplete.md-THEME_NAME-theme[disabled] {    background: '{{background-100}}'; }  md-autocomplete.md-THEME_NAME-theme button md-icon path {    fill: '{{background-600}}'; }  md-autocomplete.md-THEME_NAME-theme button:after {    background: '{{background-600-0.3}}'; }.md-autocomplete-suggestions-container.md-THEME_NAME-theme {  background: '{{background-50}}'; }  .md-autocomplete-suggestions-container.md-THEME_NAME-theme li {    color: '{{background-900}}'; }    .md-autocomplete-suggestions-container.md-THEME_NAME-theme li .highlight {      color: '{{background-600}}'; }    .md-autocomplete-suggestions-container.md-THEME_NAME-theme li:hover, .md-autocomplete-suggestions-container.md-THEME_NAME-theme li.selected {      background: '{{background-200}}'; }md-backdrop {  background-color: '{{background-900-0.0}}'; }  md-backdrop.md-opaque.md-THEME_NAME-theme {    background-color: '{{background-900-1.0}}'; }md-bottom-sheet.md-THEME_NAME-theme {  background-color: '{{background-50}}';  border-top-color: '{{background-300}}'; }  md-bottom-sheet.md-THEME_NAME-theme.md-list md-list-item {    color: '{{foreground-1}}'; }  md-bottom-sheet.md-THEME_NAME-theme .md-subheader {    background-color: '{{background-50}}'; }  md-bottom-sheet.md-THEME_NAME-theme .md-subheader {    color: '{{foreground-1}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]):hover, .md-button.md-THEME_NAME-theme:not([disabled]):hover {  background-color: '{{background-500-0.2}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme:not([disabled]).md-focused {  background-color: '{{background-500-0.2}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]).md-icon-button:hover, .md-button.md-THEME_NAME-theme:not([disabled]).md-icon-button:hover {  background-color: transparent; }a.md-button.md-THEME_NAME-theme.md-fab, .md-button.md-THEME_NAME-theme.md-fab {  background-color: '{{accent-color}}';  color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab md-icon, .md-button.md-THEME_NAME-theme.md-fab md-icon {    color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover {    background-color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused {    background-color: '{{accent-A700}}'; }a.md-button.md-THEME_NAME-theme.md-primary, .md-button.md-THEME_NAME-theme.md-primary {  color: '{{primary-color}}'; }  a.md-button.md-THEME_NAME-theme.md-primary.md-raised, a.md-button.md-THEME_NAME-theme.md-primary.md-fab, .md-button.md-THEME_NAME-theme.md-primary.md-raised, .md-button.md-THEME_NAME-theme.md-primary.md-fab {    color: '{{primary-contrast}}';    background-color: '{{primary-color}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]) md-icon {      color: '{{primary-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]):hover {      background-color: '{{primary-color}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]).md-focused {      background-color: '{{primary-600}}'; }  a.md-button.md-THEME_NAME-theme.md-primary:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary:not([disabled]) md-icon {    color: '{{primary-color}}'; }a.md-button.md-THEME_NAME-theme.md-fab, .md-button.md-THEME_NAME-theme.md-fab {  background-color: '{{accent-color}}';  color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]) .md-icon, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]) .md-icon {    color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover {    background-color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused {    background-color: '{{accent-A700}}'; }a.md-button.md-THEME_NAME-theme.md-raised, .md-button.md-THEME_NAME-theme.md-raised {  color: '{{background-contrast}}';  background-color: '{{background-50}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]) .md-icon, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]) .md-icon {    color: '{{background-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]):hover {    background-color: '{{background-50}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]).md-focused {    background-color: '{{background-200}}'; }a.md-button.md-THEME_NAME-theme.md-warn, .md-button.md-THEME_NAME-theme.md-warn {  color: '{{warn-color}}'; }  a.md-button.md-THEME_NAME-theme.md-warn.md-raised, a.md-button.md-THEME_NAME-theme.md-warn.md-fab, .md-button.md-THEME_NAME-theme.md-warn.md-raised, .md-button.md-THEME_NAME-theme.md-warn.md-fab {    color: '{{warn-contrast}}';    background-color: '{{warn-color}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]) md-icon {      color: '{{warn-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]):hover {      background-color: '{{warn-color}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]).md-focused {      background-color: '{{warn-700}}'; }  a.md-button.md-THEME_NAME-theme.md-warn:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn:not([disabled]) md-icon {    color: '{{warn-color}}'; }a.md-button.md-THEME_NAME-theme.md-accent, .md-button.md-THEME_NAME-theme.md-accent {  color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-accent.md-raised, a.md-button.md-THEME_NAME-theme.md-accent.md-fab, .md-button.md-THEME_NAME-theme.md-accent.md-raised, .md-button.md-THEME_NAME-theme.md-accent.md-fab {    color: '{{accent-contrast}}';    background-color: '{{accent-color}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]) md-icon {      color: '{{accent-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]):hover {      background-color: '{{accent-color}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]).md-focused {      background-color: '{{accent-700}}'; }  a.md-button.md-THEME_NAME-theme.md-accent:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent:not([disabled]) md-icon {    color: '{{accent-color}}'; }a.md-button.md-THEME_NAME-theme[disabled], a.md-button.md-THEME_NAME-theme.md-raised[disabled], a.md-button.md-THEME_NAME-theme.md-fab[disabled], a.md-button.md-THEME_NAME-theme.md-accent[disabled], a.md-button.md-THEME_NAME-theme.md-warn[disabled], .md-button.md-THEME_NAME-theme[disabled], .md-button.md-THEME_NAME-theme.md-raised[disabled], .md-button.md-THEME_NAME-theme.md-fab[disabled], .md-button.md-THEME_NAME-theme.md-accent[disabled], .md-button.md-THEME_NAME-theme.md-warn[disabled] {  color: '{{foreground-3}}';  cursor: not-allowed; }  a.md-button.md-THEME_NAME-theme[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-raised[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-fab[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-accent[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-warn[disabled] md-icon, .md-button.md-THEME_NAME-theme[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-raised[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-fab[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-accent[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-warn[disabled] md-icon {    color: '{{foreground-3}}'; }a.md-button.md-THEME_NAME-theme.md-raised[disabled], a.md-button.md-THEME_NAME-theme.md-fab[disabled], .md-button.md-THEME_NAME-theme.md-raised[disabled], .md-button.md-THEME_NAME-theme.md-fab[disabled] {  background-color: '{{foreground-4}}'; }a.md-button.md-THEME_NAME-theme[disabled], .md-button.md-THEME_NAME-theme[disabled] {  background-color: transparent; }md-card.md-THEME_NAME-theme {  background-color: '{{background-color}}';  border-radius: 2px; }  md-card.md-THEME_NAME-theme .md-card-image {    border-radius: 2px 2px 0 0; }md-chips.md-THEME_NAME-theme .md-chips {  box-shadow: 0 1px '{{background-300}}'; }  md-chips.md-THEME_NAME-theme .md-chips.md-focused {    box-shadow: 0 2px '{{primary-color}}'; }md-chips.md-THEME_NAME-theme .md-chip {  background: '{{background-300}}';  color: '{{background-800}}'; }  md-chips.md-THEME_NAME-theme .md-chip.md-focused {    background: '{{primary-color}}';    color: '{{primary-contrast}}'; }    md-chips.md-THEME_NAME-theme .md-chip.md-focused md-icon {      color: '{{primary-contrast}}'; }md-chips.md-THEME_NAME-theme md-chip-remove .md-button md-icon path {  fill: '{{background-500}}'; }.md-contact-suggestion span.md-contact-email {  color: '{{background-400}}'; }md-checkbox.md-THEME_NAME-theme .md-ripple {  color: '{{accent-600}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-ripple {  color: '{{background-600}}'; }md-checkbox.md-THEME_NAME-theme.md-checked.md-focused .md-container:before {  background-color: '{{accent-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-icon {  background-color: '{{accent-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary .md-ripple {  color: '{{primary-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ripple {  color: '{{background-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-icon {  background-color: '{{primary-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked.md-focused .md-container:before {  background-color: '{{primary-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn .md-ripple {  color: '{{warn-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-icon {  background-color: '{{warn-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked.md-focused:not([disabled]) .md-container:before {  background-color: '{{warn-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme[disabled] .md-icon {  border-color: '{{foreground-3}}'; }md-checkbox.md-THEME_NAME-theme[disabled].md-checked .md-icon {  background-color: '{{foreground-3}}'; }md-checkbox.md-THEME_NAME-theme[disabled] .md-label {  color: '{{foreground-3}}'; }md-content.md-THEME_NAME-theme {  color: '{{foreground-1}}';  background-color: '{{background-color}}'; }/** Theme styles for mdCalendar. */.md-calendar.md-THEME_NAME-theme {  color: '{{foreground-1}}'; }  .md-calendar.md-THEME_NAME-theme tr:last-child td {    border-bottom-color: '{{background-200}}'; }.md-THEME_NAME-theme .md-calendar-day-header {  background: '{{background-hue-1}}';  color: '{{foreground-1}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator {  border: 1px solid '{{primary-500}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-date-today.md-calendar-date-disabled {  color: '{{primary-500-0.6}}'; }.md-THEME_NAME-theme .md-calendar-date.md-focus .md-calendar-date-selection-indicator {  background: '{{background-hue-1}}'; }.md-THEME_NAME-theme .md-calendar-date-selection-indicator:hover {  background: '{{background-hue-1}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-THEME_NAME-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {  background: '{{primary-500}}';  color: '{{primary-500-contrast}}';  border-color: transparent; }.md-THEME_NAME-theme .md-calendar-date-disabled, .md-THEME_NAME-theme .md-calendar-month-label-disabled {  color: '{{foreground-3}}'; }/** Theme styles for mdDatepicker. */md-datepicker.md-THEME_NAME-theme {  background: '{{background-color}}'; }.md-THEME_NAME-theme .md-datepicker-input {  color: '{{background-contrast}}';  background: '{{background-color}}'; }  .md-THEME_NAME-theme .md-datepicker-input::-webkit-input-placeholder, .md-THEME_NAME-theme .md-datepicker-input::-moz-placeholder, .md-THEME_NAME-theme .md-datepicker-input:-moz-placeholder, .md-THEME_NAME-theme .md-datepicker-input:-ms-input-placeholder {    color: '{{foreground-3}}'; }.md-THEME_NAME-theme .md-datepicker-input-container {  border-bottom-color: '{{background-300}}'; }  .md-THEME_NAME-theme .md-datepicker-input-container.md-datepicker-focused {    border-bottom-color: '{{primary-500}}'; }  .md-THEME_NAME-theme .md-datepicker-input-container.md-datepicker-invalid {    border-bottom-color: '{{warn-500}}'; }.md-THEME_NAME-theme .md-datepicker-calendar-pane {  border-color: '{{background-300}}'; }.md-THEME_NAME-theme .md-datepicker-triangle-button .md-datepicker-expand-triangle {  border-top-color: '{{foreground-3}}'; }.md-THEME_NAME-theme .md-datepicker-triangle-button:hover .md-datepicker-expand-triangle {  border-top-color: '{{foreground-2}}'; }.md-THEME_NAME-theme .md-datepicker-open .md-datepicker-calendar-icon {  fill: '{{primary-500}}'; }.md-THEME_NAME-theme .md-datepicker-calendar, .md-THEME_NAME-theme .md-datepicker-input-mask-opaque {  background: '{{background-color}}'; }md-dialog.md-THEME_NAME-theme {  border-radius: 4px;  background-color: '{{background-color}}'; }  md-dialog.md-THEME_NAME-theme.md-content-overflow .md-actions {    border-top-color: '{{foreground-4}}'; }md-divider.md-THEME_NAME-theme {  border-top-color: '{{foreground-4}}'; }md-icon.md-THEME_NAME-theme {  color: '{{foreground-2}}'; }  md-icon.md-THEME_NAME-theme.md-primary {    color: '{{primary-color}}'; }  md-icon.md-THEME_NAME-theme.md-accent {    color: '{{accent-color}}'; }  md-icon.md-THEME_NAME-theme.md-warn {    color: '{{warn-color}}'; }md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text h3, md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text h4, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text h3, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text h4 {  color: '{{foreground-1}}'; }md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text p, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text p {  color: '{{foreground-2}}'; }md-list.md-THEME_NAME-theme .md-proxy-focus.md-focused div.md-no-style {  background-color: '{{background-100}}'; }md-list.md-THEME_NAME-theme md-list-item > md-icon {  color: '{{foreground-2}}'; }  md-list.md-THEME_NAME-theme md-list-item > md-icon.md-highlight {    color: '{{primary-color}}'; }    md-list.md-THEME_NAME-theme md-list-item > md-icon.md-highlight.md-accent {      color: '{{accent-color}}'; }md-list.md-THEME_NAME-theme md-list-item button {  background-color: '{{background-color}}'; }  md-list.md-THEME_NAME-theme md-list-item button.md-button:not([disabled]):hover {    background-color: '{{background-color}}'; }md-input-container.md-THEME_NAME-theme .md-input {  color: '{{foreground-1}}';  border-color: '{{foreground-4}}';  text-shadow: '{{foreground-shadow}}'; }  md-input-container.md-THEME_NAME-theme .md-input::-webkit-input-placeholder, md-input-container.md-THEME_NAME-theme .md-input::-moz-placeholder, md-input-container.md-THEME_NAME-theme .md-input:-moz-placeholder, md-input-container.md-THEME_NAME-theme .md-input:-ms-input-placeholder {    color: '{{foreground-3}}'; }md-input-container.md-THEME_NAME-theme > md-icon {  color: '{{foreground-1}}'; }md-input-container.md-THEME_NAME-theme label, md-input-container.md-THEME_NAME-theme .md-placeholder {  text-shadow: '{{foreground-shadow}}';  color: '{{foreground-3}}'; }md-input-container.md-THEME_NAME-theme ng-messages :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [ng-messages] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme ng-message :not(.md-char-counter), md-input-container.md-THEME_NAME-theme data-ng-message :not(.md-char-counter), md-input-container.md-THEME_NAME-theme x-ng-message :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [ng-message] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [data-ng-message] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [x-ng-message] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [ng-message-exp] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [data-ng-message-exp] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [x-ng-message-exp] :not(.md-char-counter) {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-has-value label {  color: '{{foreground-2}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused .md-input {  border-color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused label {  color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused md-icon {  color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-accent .md-input {  border-color: '{{accent-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-accent label {  color: '{{accent-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-warn .md-input {  border-color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-warn label {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid .md-input {  border-color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid.md-input-focused label {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid data-ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid x-ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid [ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [data-ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [x-ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [ng-message-exp], md-input-container.md-THEME_NAME-theme.md-input-invalid [data-ng-message-exp], md-input-container.md-THEME_NAME-theme.md-input-invalid [x-ng-message-exp], md-input-container.md-THEME_NAME-theme.md-input-invalid .md-char-counter {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme .md-input[disabled], [disabled] md-input-container.md-THEME_NAME-theme .md-input {  border-bottom-color: transparent;  color: '{{foreground-3}}';  background-image: linear-gradient(to right, '{{foreground-3}}' 0%, '{{foreground-3}}' 33%, transparent 0%);  background-image: -ms-linear-gradient(left, transparent 0%, '{{foreground-3}}' 100%); }md-menu-content.md-THEME_NAME-theme {  background-color: '{{background-color}}'; }  md-menu-content.md-THEME_NAME-theme md-menu-divider {    background-color: '{{foreground-4}}'; }md-menu-bar.md-THEME_NAME-theme > button.md-button {  color: '{{foreground-2}}';  border-radius: 2px; }md-menu-bar.md-THEME_NAME-theme md-menu.md-open > button, md-menu-bar.md-THEME_NAME-theme md-menu > button:focus {  outline: none;  background: '{{background-200}}'; }md-menu-bar.md-THEME_NAME-theme.md-open:not(.md-keyboard-mode) md-menu:hover > button {  background-color: '{{ background-500-0.2}}'; }md-menu-bar.md-THEME_NAME-theme:not(.md-keyboard-mode):not(.md-open) md-menu button:hover, md-menu-bar.md-THEME_NAME-theme:not(.md-keyboard-mode):not(.md-open) md-menu button:focus {  background: transparent; }md-menu-content.md-THEME_NAME-theme .md-menu > .md-button:after {  color: '{{foreground-2}}'; }md-menu-content.md-THEME_NAME-theme .md-menu.md-open > .md-button {  background-color: '{{ background-500-0.2}}'; }md-toolbar.md-THEME_NAME-theme.md-menu-toolbar {  background-color: '{{background-color}}';  color: '{{foreground-1}}'; }  md-toolbar.md-THEME_NAME-theme.md-menu-toolbar md-toolbar-filler {    background-color: '{{primary-color}}';    color: '{{primary-contrast}}'; }    md-toolbar.md-THEME_NAME-theme.md-menu-toolbar md-toolbar-filler md-icon {      color: '{{primary-contrast}}'; }md-progress-circular.md-THEME_NAME-theme {  background-color: transparent; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-gap {    border-top-color: '{{primary-color}}';    border-bottom-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme .md-inner .md-right .md-half-circle {    border-top-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-right .md-half-circle {    border-right-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-left .md-half-circle {    border-left-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-gap {    border-top-color: '{{warn-color}}';    border-bottom-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-right .md-half-circle {    border-top-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-right .md-half-circle {    border-right-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-left .md-half-circle {    border-left-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-gap {    border-top-color: '{{accent-color}}';    border-bottom-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-right .md-half-circle {    border-top-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-right .md-half-circle {    border-right-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-left .md-half-circle {    border-left-color: '{{accent-color}}'; }md-progress-linear.md-THEME_NAME-theme .md-container {  background-color: '{{primary-100}}'; }md-progress-linear.md-THEME_NAME-theme .md-bar {  background-color: '{{primary-color}}'; }md-progress-linear.md-THEME_NAME-theme.md-warn .md-container {  background-color: '{{warn-100}}'; }md-progress-linear.md-THEME_NAME-theme.md-warn .md-bar {  background-color: '{{warn-color}}'; }md-progress-linear.md-THEME_NAME-theme.md-accent .md-container {  background-color: '{{accent-100}}'; }md-progress-linear.md-THEME_NAME-theme.md-accent .md-bar {  background-color: '{{accent-color}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-warn .md-bar1 {  background-color: '{{warn-100}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-warn .md-dashed:before {  background: radial-gradient('{{warn-100}}' 0%, '{{warn-100}}' 16%, transparent 42%); }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-accent .md-bar1 {  background-color: '{{accent-100}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-accent .md-dashed:before {  background: radial-gradient('{{accent-100}}' 0%, '{{accent-100}}' 16%, transparent 42%); }md-radio-button.md-THEME_NAME-theme .md-off {  border-color: '{{foreground-2}}'; }md-radio-button.md-THEME_NAME-theme .md-on {  background-color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme.md-checked .md-off {  border-color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme.md-checked .md-ink-ripple {  color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme .md-container .md-ripple {  color: '{{accent-600}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-on, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-on {  background-color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-off {  border-color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ink-ripple {  color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-container .md-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-container .md-ripple {  color: '{{primary-600}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-on, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-on {  background-color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-off {  border-color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-ink-ripple {  color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-container .md-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-container .md-ripple {  color: '{{warn-600}}'; }md-radio-group.md-THEME_NAME-theme[disabled], md-radio-button.md-THEME_NAME-theme[disabled] {  color: '{{foreground-3}}'; }  md-radio-group.md-THEME_NAME-theme[disabled] .md-container .md-off, md-radio-button.md-THEME_NAME-theme[disabled] .md-container .md-off {    border-color: '{{foreground-3}}'; }  md-radio-group.md-THEME_NAME-theme[disabled] .md-container .md-on, md-radio-button.md-THEME_NAME-theme[disabled] .md-container .md-on {    border-color: '{{foreground-3}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked .md-container:before {  background-color: '{{accent-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked:not([disabled]).md-primary .md-container:before {  background-color: '{{primary-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked.md-primary .md-container:before {  background-color: '{{warn-color-0.26}}'; }md-select.md-THEME_NAME-theme[disabled] .md-select-value {  border-bottom-color: transparent;  background-image: linear-gradient(to right, '{{foreground-3}}' 0%, '{{foreground-3}}' 33%, transparent 0%);  background-image: -ms-linear-gradient(left, transparent 0%, '{{foreground-3}}' 100%); }md-select.md-THEME_NAME-theme .md-select-value {  border-bottom-color: '{{foreground-4}}'; }  md-select.md-THEME_NAME-theme .md-select-value.md-select-placeholder {    color: '{{foreground-3}}'; }md-select.md-THEME_NAME-theme.ng-invalid.ng-dirty .md-select-value {  color: '{{warn-500}}' !important;  border-bottom-color: '{{warn-500}}' !important; }md-select.md-THEME_NAME-theme:not([disabled]):focus .md-select-value {  border-bottom-color: '{{primary-color}}';  color: '{{ foreground-1 }}'; }  md-select.md-THEME_NAME-theme:not([disabled]):focus .md-select-value.md-select-placeholder {    color: '{{ foreground-1 }}'; }md-select.md-THEME_NAME-theme:not([disabled]):focus.md-accent .md-select-value {  border-bottom-color: '{{accent-color}}'; }md-select.md-THEME_NAME-theme:not([disabled]):focus.md-warn .md-select-value {  border-bottom-color: '{{warn-color}}'; }md-select.md-THEME_NAME-theme[disabled] .md-select-value {  color: '{{foreground-3}}'; }  md-select.md-THEME_NAME-theme[disabled] .md-select-value.md-select-placeholder {    color: '{{foreground-3}}'; }md-select-menu.md-THEME_NAME-theme md-option[disabled] {  color: '{{foreground-3}}'; }md-select-menu.md-THEME_NAME-theme md-optgroup {  color: '{{foreground-2}}'; }  md-select-menu.md-THEME_NAME-theme md-optgroup md-option {    color: '{{foreground-1}}'; }md-select-menu.md-THEME_NAME-theme md-option[selected] {  color: '{{primary-500}}'; }  md-select-menu.md-THEME_NAME-theme md-option[selected]:focus {    color: '{{primary-600}}'; }  md-select-menu.md-THEME_NAME-theme md-option[selected].md-accent {    color: '{{accent-500}}'; }    md-select-menu.md-THEME_NAME-theme md-option[selected].md-accent:focus {      color: '{{accent-600}}'; }md-select-menu.md-THEME_NAME-theme md-option:focus:not([selected]) {  background: '{{background-200}}'; }md-sidenav.md-THEME_NAME-theme {  background-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme .md-track {  background-color: '{{foreground-3}}'; }md-slider.md-THEME_NAME-theme .md-track-ticks {  background-color: '{{foreground-4}}'; }md-slider.md-THEME_NAME-theme .md-focus-thumb {  background-color: '{{foreground-2}}'; }md-slider.md-THEME_NAME-theme .md-focus-ring {  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-disabled-thumb {  border-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme.md-min .md-thumb:after {  background-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme .md-track.md-track-fill {  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-thumb:after {  border-color: '{{accent-color}}';  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-sign {  background-color: '{{accent-color}}'; }  md-slider.md-THEME_NAME-theme .md-sign:after {    border-top-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-thumb-text {  color: '{{accent-contrast}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-focus-ring {  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-track.md-track-fill {  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-thumb:after {  border-color: '{{warn-color}}';  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-sign {  background-color: '{{warn-color}}'; }  md-slider.md-THEME_NAME-theme.md-warn .md-sign:after {    border-top-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-thumb-text {  color: '{{warn-contrast}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-focus-ring {  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-track.md-track-fill {  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-thumb:after {  border-color: '{{primary-color}}';  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-sign {  background-color: '{{primary-color}}'; }  md-slider.md-THEME_NAME-theme.md-primary .md-sign:after {    border-top-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-thumb-text {  color: '{{primary-contrast}}'; }md-slider.md-THEME_NAME-theme[disabled] .md-thumb:after {  border-color: '{{foreground-3}}'; }md-slider.md-THEME_NAME-theme[disabled]:not(.md-min) .md-thumb:after {  background-color: '{{foreground-3}}'; }.md-subheader.md-THEME_NAME-theme {  color: '{{ foreground-2-0.23 }}';  background-color: '{{background-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-primary {    color: '{{primary-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-accent {    color: '{{accent-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-warn {    color: '{{warn-color}}'; }md-switch.md-THEME_NAME-theme .md-thumb {  background-color: '{{background-50}}'; }md-switch.md-THEME_NAME-theme .md-bar {  background-color: '{{background-500}}'; }md-switch.md-THEME_NAME-theme.md-checked .md-thumb {  background-color: '{{accent-color}}'; }md-switch.md-THEME_NAME-theme.md-checked .md-bar {  background-color: '{{accent-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-focused .md-thumb:before {  background-color: '{{accent-color-0.26}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary .md-thumb {  background-color: '{{primary-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary .md-bar {  background-color: '{{primary-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary.md-focused .md-thumb:before {  background-color: '{{primary-color-0.26}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn .md-thumb {  background-color: '{{warn-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn .md-bar {  background-color: '{{warn-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn.md-focused .md-thumb:before {  background-color: '{{warn-color-0.26}}'; }md-switch.md-THEME_NAME-theme[disabled] .md-thumb {  background-color: '{{background-400}}'; }md-switch.md-THEME_NAME-theme[disabled] .md-bar {  background-color: '{{foreground-4}}'; }md-tabs.md-THEME_NAME-theme md-tabs-wrapper {  background-color: transparent;  border-color: '{{foreground-4}}'; }md-tabs.md-THEME_NAME-theme .md-paginator md-icon {  color: '{{primary-color}}'; }md-tabs.md-THEME_NAME-theme md-ink-bar {  color: '{{accent-color}}';  background: '{{accent-color}}'; }md-tabs.md-THEME_NAME-theme .md-tab {  color: '{{foreground-2}}'; }  md-tabs.md-THEME_NAME-theme .md-tab[disabled] {    color: '{{foreground-3}}'; }  md-tabs.md-THEME_NAME-theme .md-tab.md-active, md-tabs.md-THEME_NAME-theme .md-tab.md-focused {    color: '{{primary-color}}'; }  md-tabs.md-THEME_NAME-theme .md-tab.md-focused {    background: '{{primary-color-0.1}}'; }  md-tabs.md-THEME_NAME-theme .md-tab .md-ripple-container {    color: '{{accent-100}}'; }md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper {  background-color: '{{accent-color}}'; }  md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{accent-100}}'; }    md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{accent-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{accent-contrast-0.1}}'; }  md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-ink-bar {    color: '{{primary-600-1}}';    background: '{{primary-600-1}}'; }md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper {  background-color: '{{primary-color}}'; }  md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{primary-100}}'; }    md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{primary-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{primary-contrast-0.1}}'; }md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper {  background-color: '{{warn-color}}'; }  md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{warn-100}}'; }    md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{warn-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{warn-contrast-0.1}}'; }md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{primary-color}}'; }  md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{primary-100}}'; }    md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{primary-contrast}}'; }    md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{primary-contrast-0.1}}'; }md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{accent-color}}'; }  md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{accent-100}}'; }    md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{accent-contrast}}'; }    md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{accent-contrast-0.1}}'; }  md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-ink-bar {    color: '{{primary-600-1}}';    background: '{{primary-600-1}}'; }md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{warn-color}}'; }  md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{warn-100}}'; }    md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{warn-contrast}}'; }    md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{warn-contrast-0.1}}'; }md-toast.md-THEME_NAME-theme {  background-color: #323232;  color: '{{background-50}}'; }  md-toast.md-THEME_NAME-theme .md-button {    color: '{{background-50}}'; }    md-toast.md-THEME_NAME-theme .md-button.md-highlight {      color: '{{primary-A200}}'; }      md-toast.md-THEME_NAME-theme .md-button.md-highlight.md-accent {        color: '{{accent-A200}}'; }      md-toast.md-THEME_NAME-theme .md-button.md-highlight.md-warn {        color: '{{warn-A200}}'; }md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) {  background-color: '{{primary-color}}';  color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) md-icon {    color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) .md-button {    color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar).md-accent {    background-color: '{{accent-color}}';    color: '{{accent-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar).md-warn {    background-color: '{{warn-color}}';    color: '{{warn-contrast}}'; }md-tooltip.md-THEME_NAME-theme {  color: '{{background-A100}}'; }  md-tooltip.md-THEME_NAME-theme .md-background {    background-color: '{{foreground-2}}'; }"); 
+	angular.module("material.core").constant("$MD_THEME_CSS", "md-autocomplete.md-THEME_NAME-theme {  background: '{{background-50}}'; }  md-autocomplete.md-THEME_NAME-theme[disabled] {    background: '{{background-100}}'; }  md-autocomplete.md-THEME_NAME-theme button md-icon path {    fill: '{{background-600}}'; }  md-autocomplete.md-THEME_NAME-theme button:after {    background: '{{background-600-0.3}}'; }.md-autocomplete-suggestions-container.md-THEME_NAME-theme {  background: '{{background-50}}'; }  .md-autocomplete-suggestions-container.md-THEME_NAME-theme li {    color: '{{background-900}}'; }    .md-autocomplete-suggestions-container.md-THEME_NAME-theme li .highlight {      color: '{{background-600}}'; }    .md-autocomplete-suggestions-container.md-THEME_NAME-theme li:hover, .md-autocomplete-suggestions-container.md-THEME_NAME-theme li.selected {      background: '{{background-200}}'; }md-backdrop {  background-color: '{{background-900-0.0}}'; }  md-backdrop.md-opaque.md-THEME_NAME-theme {    background-color: '{{background-900-1.0}}'; }md-bottom-sheet.md-THEME_NAME-theme {  background-color: '{{background-50}}';  border-top-color: '{{background-300}}'; }  md-bottom-sheet.md-THEME_NAME-theme.md-list md-list-item {    color: '{{foreground-1}}'; }  md-bottom-sheet.md-THEME_NAME-theme .md-subheader {    background-color: '{{background-50}}'; }  md-bottom-sheet.md-THEME_NAME-theme .md-subheader {    color: '{{foreground-1}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]):hover, .md-button.md-THEME_NAME-theme:not([disabled]):hover {  background-color: '{{background-500-0.2}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme:not([disabled]).md-focused {  background-color: '{{background-500-0.2}}'; }a.md-button.md-THEME_NAME-theme:not([disabled]).md-icon-button:hover, .md-button.md-THEME_NAME-theme:not([disabled]).md-icon-button:hover {  background-color: transparent; }a.md-button.md-THEME_NAME-theme.md-fab, .md-button.md-THEME_NAME-theme.md-fab {  background-color: '{{accent-color}}';  color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab md-icon, .md-button.md-THEME_NAME-theme.md-fab md-icon {    color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover {    background-color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused {    background-color: '{{accent-A700}}'; }a.md-button.md-THEME_NAME-theme.md-primary, .md-button.md-THEME_NAME-theme.md-primary {  color: '{{primary-color}}'; }  a.md-button.md-THEME_NAME-theme.md-primary.md-raised, a.md-button.md-THEME_NAME-theme.md-primary.md-fab, .md-button.md-THEME_NAME-theme.md-primary.md-raised, .md-button.md-THEME_NAME-theme.md-primary.md-fab {    color: '{{primary-contrast}}';    background-color: '{{primary-color}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]) md-icon {      color: '{{primary-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]):hover {      background-color: '{{primary-color}}'; }    a.md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-primary.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-primary.md-fab:not([disabled]).md-focused {      background-color: '{{primary-600}}'; }  a.md-button.md-THEME_NAME-theme.md-primary:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-primary:not([disabled]) md-icon {    color: '{{primary-color}}'; }a.md-button.md-THEME_NAME-theme.md-fab, .md-button.md-THEME_NAME-theme.md-fab {  background-color: '{{accent-color}}';  color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]) .md-icon, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]) .md-icon {    color: '{{accent-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]):hover {    background-color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-fab:not([disabled]).md-focused {    background-color: '{{accent-A700}}'; }a.md-button.md-THEME_NAME-theme.md-raised, .md-button.md-THEME_NAME-theme.md-raised {  color: '{{background-contrast}}';  background-color: '{{background-50}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]) .md-icon, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]) .md-icon {    color: '{{background-contrast}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]):hover {    background-color: '{{background-50}}'; }  a.md-button.md-THEME_NAME-theme.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-raised:not([disabled]).md-focused {    background-color: '{{background-200}}'; }a.md-button.md-THEME_NAME-theme.md-warn, .md-button.md-THEME_NAME-theme.md-warn {  color: '{{warn-color}}'; }  a.md-button.md-THEME_NAME-theme.md-warn.md-raised, a.md-button.md-THEME_NAME-theme.md-warn.md-fab, .md-button.md-THEME_NAME-theme.md-warn.md-raised, .md-button.md-THEME_NAME-theme.md-warn.md-fab {    color: '{{warn-contrast}}';    background-color: '{{warn-color}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]) md-icon {      color: '{{warn-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]):hover {      background-color: '{{warn-color}}'; }    a.md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-warn.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-warn.md-fab:not([disabled]).md-focused {      background-color: '{{warn-700}}'; }  a.md-button.md-THEME_NAME-theme.md-warn:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-warn:not([disabled]) md-icon {    color: '{{warn-color}}'; }a.md-button.md-THEME_NAME-theme.md-accent, .md-button.md-THEME_NAME-theme.md-accent {  color: '{{accent-color}}'; }  a.md-button.md-THEME_NAME-theme.md-accent.md-raised, a.md-button.md-THEME_NAME-theme.md-accent.md-fab, .md-button.md-THEME_NAME-theme.md-accent.md-raised, .md-button.md-THEME_NAME-theme.md-accent.md-fab {    color: '{{accent-contrast}}';    background-color: '{{accent-color}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]) md-icon, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]) md-icon {      color: '{{accent-contrast}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]):hover, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]):hover, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]):hover {      background-color: '{{accent-color}}'; }    a.md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]).md-focused, a.md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-accent.md-raised:not([disabled]).md-focused, .md-button.md-THEME_NAME-theme.md-accent.md-fab:not([disabled]).md-focused {      background-color: '{{accent-700}}'; }  a.md-button.md-THEME_NAME-theme.md-accent:not([disabled]) md-icon, .md-button.md-THEME_NAME-theme.md-accent:not([disabled]) md-icon {    color: '{{accent-color}}'; }a.md-button.md-THEME_NAME-theme[disabled], a.md-button.md-THEME_NAME-theme.md-raised[disabled], a.md-button.md-THEME_NAME-theme.md-fab[disabled], a.md-button.md-THEME_NAME-theme.md-accent[disabled], a.md-button.md-THEME_NAME-theme.md-warn[disabled], .md-button.md-THEME_NAME-theme[disabled], .md-button.md-THEME_NAME-theme.md-raised[disabled], .md-button.md-THEME_NAME-theme.md-fab[disabled], .md-button.md-THEME_NAME-theme.md-accent[disabled], .md-button.md-THEME_NAME-theme.md-warn[disabled] {  color: '{{foreground-3}}';  cursor: not-allowed; }  a.md-button.md-THEME_NAME-theme[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-raised[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-fab[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-accent[disabled] md-icon, a.md-button.md-THEME_NAME-theme.md-warn[disabled] md-icon, .md-button.md-THEME_NAME-theme[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-raised[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-fab[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-accent[disabled] md-icon, .md-button.md-THEME_NAME-theme.md-warn[disabled] md-icon {    color: '{{foreground-3}}'; }a.md-button.md-THEME_NAME-theme.md-raised[disabled], a.md-button.md-THEME_NAME-theme.md-fab[disabled], .md-button.md-THEME_NAME-theme.md-raised[disabled], .md-button.md-THEME_NAME-theme.md-fab[disabled] {  background-color: '{{foreground-4}}'; }a.md-button.md-THEME_NAME-theme[disabled], .md-button.md-THEME_NAME-theme[disabled] {  background-color: transparent; }md-card.md-THEME_NAME-theme {  background-color: '{{background-color}}';  border-radius: 2px; }  md-card.md-THEME_NAME-theme .md-card-image {    border-radius: 2px 2px 0 0; }md-checkbox.md-THEME_NAME-theme .md-ripple {  color: '{{accent-600}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-ripple {  color: '{{background-600}}'; }md-checkbox.md-THEME_NAME-theme.md-checked.md-focused .md-container:before {  background-color: '{{accent-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme .md-ink-ripple {  color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-ink-ripple {  color: '{{accent-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-icon {  background-color: '{{accent-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary .md-ripple {  color: '{{primary-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ripple {  color: '{{background-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary .md-ink-ripple {  color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ink-ripple {  color: '{{primary-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-icon {  background-color: '{{primary-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked.md-focused .md-container:before {  background-color: '{{primary-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn .md-ripple {  color: '{{warn-600}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn .md-ink-ripple {  color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-ink-ripple {  color: '{{warn-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn .md-icon {  border-color: '{{foreground-2}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-icon {  background-color: '{{warn-color-0.87}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked.md-focused:not([disabled]) .md-container:before {  background-color: '{{warn-color-0.26}}'; }md-checkbox.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-icon:after {  border-color: '{{background-200}}'; }md-checkbox.md-THEME_NAME-theme[disabled] .md-icon {  border-color: '{{foreground-3}}'; }md-checkbox.md-THEME_NAME-theme[disabled].md-checked .md-icon {  background-color: '{{foreground-3}}'; }md-checkbox.md-THEME_NAME-theme[disabled] .md-label {  color: '{{foreground-3}}'; }md-chips.md-THEME_NAME-theme .md-chips {  box-shadow: 0 1px '{{background-300}}'; }  md-chips.md-THEME_NAME-theme .md-chips.md-focused {    box-shadow: 0 2px '{{primary-color}}'; }md-chips.md-THEME_NAME-theme .md-chip {  background: '{{background-300}}';  color: '{{background-800}}'; }  md-chips.md-THEME_NAME-theme .md-chip.md-focused {    background: '{{primary-color}}';    color: '{{primary-contrast}}'; }    md-chips.md-THEME_NAME-theme .md-chip.md-focused md-icon {      color: '{{primary-contrast}}'; }md-chips.md-THEME_NAME-theme md-chip-remove .md-button md-icon path {  fill: '{{background-500}}'; }.md-contact-suggestion span.md-contact-email {  color: '{{background-400}}'; }md-content.md-THEME_NAME-theme {  color: '{{foreground-1}}';  background-color: '{{background-color}}'; }md-dialog.md-THEME_NAME-theme {  border-radius: 4px;  background-color: '{{background-color}}'; }  md-dialog.md-THEME_NAME-theme.md-content-overflow .md-actions {    border-top-color: '{{foreground-4}}'; }md-divider.md-THEME_NAME-theme {  border-top-color: '{{foreground-4}}'; }/** Theme styles for mdCalendar. */.md-calendar.md-THEME_NAME-theme {  color: '{{foreground-1}}'; }  .md-calendar.md-THEME_NAME-theme tr:last-child td {    border-bottom-color: '{{background-200}}'; }.md-THEME_NAME-theme .md-calendar-day-header {  background: '{{background-hue-1}}';  color: '{{foreground-1}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-date-today .md-calendar-date-selection-indicator {  border: 1px solid '{{primary-500}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-date-today.md-calendar-date-disabled {  color: '{{primary-500-0.6}}'; }.md-THEME_NAME-theme .md-calendar-date.md-focus .md-calendar-date-selection-indicator {  background: '{{background-hue-1}}'; }.md-THEME_NAME-theme .md-calendar-date-selection-indicator:hover {  background: '{{background-hue-1}}'; }.md-THEME_NAME-theme .md-calendar-date.md-calendar-selected-date .md-calendar-date-selection-indicator, .md-THEME_NAME-theme .md-calendar-date.md-focus.md-calendar-selected-date .md-calendar-date-selection-indicator {  background: '{{primary-500}}';  color: '{{primary-500-contrast}}';  border-color: transparent; }.md-THEME_NAME-theme .md-calendar-date-disabled, .md-THEME_NAME-theme .md-calendar-month-label-disabled {  color: '{{foreground-3}}'; }/** Theme styles for mdDatepicker. */md-datepicker.md-THEME_NAME-theme {  background: '{{background-color}}'; }.md-THEME_NAME-theme .md-datepicker-input {  color: '{{background-contrast}}';  background: '{{background-color}}'; }  .md-THEME_NAME-theme .md-datepicker-input::-webkit-input-placeholder, .md-THEME_NAME-theme .md-datepicker-input::-moz-placeholder, .md-THEME_NAME-theme .md-datepicker-input:-moz-placeholder, .md-THEME_NAME-theme .md-datepicker-input:-ms-input-placeholder {    color: '{{foreground-3}}'; }.md-THEME_NAME-theme .md-datepicker-input-container {  border-bottom-color: '{{background-300}}'; }  .md-THEME_NAME-theme .md-datepicker-input-container.md-datepicker-focused {    border-bottom-color: '{{primary-500}}'; }  .md-THEME_NAME-theme .md-datepicker-input-container.md-datepicker-invalid {    border-bottom-color: '{{warn-500}}'; }.md-THEME_NAME-theme .md-datepicker-calendar-pane {  border-color: '{{background-300}}'; }.md-THEME_NAME-theme .md-datepicker-triangle-button .md-datepicker-expand-triangle {  border-top-color: '{{foreground-3}}'; }.md-THEME_NAME-theme .md-datepicker-triangle-button:hover .md-datepicker-expand-triangle {  border-top-color: '{{foreground-2}}'; }.md-THEME_NAME-theme .md-datepicker-open .md-datepicker-calendar-icon {  fill: '{{primary-500}}'; }.md-THEME_NAME-theme .md-datepicker-calendar, .md-THEME_NAME-theme .md-datepicker-input-mask-opaque {  background: '{{background-color}}'; }md-icon.md-THEME_NAME-theme {  color: '{{foreground-2}}'; }  md-icon.md-THEME_NAME-theme.md-primary {    color: '{{primary-color}}'; }  md-icon.md-THEME_NAME-theme.md-accent {    color: '{{accent-color}}'; }  md-icon.md-THEME_NAME-theme.md-warn {    color: '{{warn-color}}'; }md-input-container.md-THEME_NAME-theme .md-input {  color: '{{foreground-1}}';  border-color: '{{foreground-4}}';  text-shadow: '{{foreground-shadow}}'; }  md-input-container.md-THEME_NAME-theme .md-input::-webkit-input-placeholder, md-input-container.md-THEME_NAME-theme .md-input::-moz-placeholder, md-input-container.md-THEME_NAME-theme .md-input:-moz-placeholder, md-input-container.md-THEME_NAME-theme .md-input:-ms-input-placeholder {    color: '{{foreground-3}}'; }md-input-container.md-THEME_NAME-theme > md-icon {  color: '{{foreground-1}}'; }md-input-container.md-THEME_NAME-theme label, md-input-container.md-THEME_NAME-theme .md-placeholder {  text-shadow: '{{foreground-shadow}}';  color: '{{foreground-3}}'; }md-input-container.md-THEME_NAME-theme ng-messages :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [ng-messages] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme ng-message :not(.md-char-counter), md-input-container.md-THEME_NAME-theme data-ng-message :not(.md-char-counter), md-input-container.md-THEME_NAME-theme x-ng-message :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [ng-message] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [data-ng-message] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [x-ng-message] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [ng-message-exp] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [data-ng-message-exp] :not(.md-char-counter), md-input-container.md-THEME_NAME-theme [x-ng-message-exp] :not(.md-char-counter) {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-has-value label {  color: '{{foreground-2}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused .md-input {  border-color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused label {  color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused md-icon {  color: '{{primary-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-accent .md-input {  border-color: '{{accent-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-accent label {  color: '{{accent-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-warn .md-input {  border-color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme:not(.md-input-invalid).md-input-focused.md-warn label {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid .md-input {  border-color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid.md-input-focused label {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme.md-input-invalid ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid data-ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid x-ng-message, md-input-container.md-THEME_NAME-theme.md-input-invalid [ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [data-ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [x-ng-message], md-input-container.md-THEME_NAME-theme.md-input-invalid [ng-message-exp], md-input-container.md-THEME_NAME-theme.md-input-invalid [data-ng-message-exp], md-input-container.md-THEME_NAME-theme.md-input-invalid [x-ng-message-exp], md-input-container.md-THEME_NAME-theme.md-input-invalid .md-char-counter {  color: '{{warn-500}}'; }md-input-container.md-THEME_NAME-theme .md-input[disabled], md-input-container.md-THEME_NAME-theme .md-input [disabled] {  border-bottom-color: transparent;  color: '{{foreground-3}}';  background-image: linear-gradient(to right, '{{foreground-3}}' 0%, '{{foreground-3}}' 33%, transparent 0%);  background-image: -ms-linear-gradient(left, transparent 0%, '{{foreground-3}}' 100%); }md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text h3, md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text h4, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text h3, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text h4 {  color: '{{foreground-1}}'; }md-list.md-THEME_NAME-theme md-list-item.md-2-line .md-list-item-text p, md-list.md-THEME_NAME-theme md-list-item.md-3-line .md-list-item-text p {  color: '{{foreground-2}}'; }md-list.md-THEME_NAME-theme .md-proxy-focus.md-focused div.md-no-style {  background-color: '{{background-100}}'; }md-list.md-THEME_NAME-theme md-list-item > .md-avatar-icon {  background-color: '{{foreground-3}}';  color: '{{background-color}}'; }md-list.md-THEME_NAME-theme md-list-item > md-icon {  color: '{{foreground-2}}'; }  md-list.md-THEME_NAME-theme md-list-item > md-icon.md-highlight {    color: '{{primary-color}}'; }    md-list.md-THEME_NAME-theme md-list-item > md-icon.md-highlight.md-accent {      color: '{{accent-color}}'; }md-list.md-THEME_NAME-theme md-list-item button {  background-color: '{{background-color}}'; }  md-list.md-THEME_NAME-theme md-list-item button.md-button:not([disabled]):hover {    background-color: '{{background-color}}'; }md-menu-content.md-THEME_NAME-theme {  background-color: '{{background-color}}'; }  md-menu-content.md-THEME_NAME-theme md-menu-divider {    background-color: '{{foreground-4}}'; }md-menu-bar.md-THEME_NAME-theme > button.md-button {  color: '{{foreground-2}}';  border-radius: 2px; }md-menu-bar.md-THEME_NAME-theme md-menu.md-open > button, md-menu-bar.md-THEME_NAME-theme md-menu > button:focus {  outline: none;  background: '{{background-200}}'; }md-menu-bar.md-THEME_NAME-theme.md-open:not(.md-keyboard-mode) md-menu:hover > button {  background-color: '{{ background-500-0.2}}'; }md-menu-bar.md-THEME_NAME-theme:not(.md-keyboard-mode):not(.md-open) md-menu button:hover, md-menu-bar.md-THEME_NAME-theme:not(.md-keyboard-mode):not(.md-open) md-menu button:focus {  background: transparent; }md-menu-content.md-THEME_NAME-theme .md-menu > .md-button:after {  color: '{{foreground-2}}'; }md-menu-content.md-THEME_NAME-theme .md-menu.md-open > .md-button {  background-color: '{{ background-500-0.2}}'; }md-toolbar.md-THEME_NAME-theme.md-menu-toolbar {  background-color: '{{background-color}}';  color: '{{foreground-1}}'; }  md-toolbar.md-THEME_NAME-theme.md-menu-toolbar md-toolbar-filler {    background-color: '{{primary-color}}';    color: '{{primary-contrast}}'; }    md-toolbar.md-THEME_NAME-theme.md-menu-toolbar md-toolbar-filler md-icon {      color: '{{primary-contrast}}'; }md-progress-circular.md-THEME_NAME-theme {  background-color: transparent; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-gap {    border-top-color: '{{primary-color}}';    border-bottom-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme .md-inner .md-right .md-half-circle {    border-top-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-right .md-half-circle {    border-right-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme .md-inner .md-left .md-half-circle {    border-left-color: '{{primary-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-gap {    border-top-color: '{{warn-color}}';    border-bottom-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-right .md-half-circle {    border-top-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-right .md-half-circle {    border-right-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-warn .md-inner .md-left .md-half-circle {    border-left-color: '{{warn-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-gap {    border-top-color: '{{accent-color}}';    border-bottom-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-left .md-half-circle, md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-right .md-half-circle {    border-top-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-right .md-half-circle {    border-right-color: '{{accent-color}}'; }  md-progress-circular.md-THEME_NAME-theme.md-accent .md-inner .md-left .md-half-circle {    border-left-color: '{{accent-color}}'; }md-radio-button.md-THEME_NAME-theme .md-off {  border-color: '{{foreground-2}}'; }md-radio-button.md-THEME_NAME-theme .md-on {  background-color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme.md-checked .md-off {  border-color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme.md-checked .md-ink-ripple {  color: '{{accent-color-0.87}}'; }md-radio-button.md-THEME_NAME-theme .md-container .md-ripple {  color: '{{accent-600}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-on, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-on {  background-color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-off {  border-color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary.md-checked .md-ink-ripple {  color: '{{primary-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-primary .md-container .md-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-primary .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-primary .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-primary .md-container .md-ripple {  color: '{{primary-600}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-on, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-on, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-on {  background-color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-off, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-off, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-off {  border-color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-ink-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn.md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-checked .md-ink-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn.md-checked .md-ink-ripple {  color: '{{warn-color-0.87}}'; }md-radio-group.md-THEME_NAME-theme:not([disabled]) .md-warn .md-container .md-ripple, md-radio-group.md-THEME_NAME-theme:not([disabled]).md-warn .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]) .md-warn .md-container .md-ripple, md-radio-button.md-THEME_NAME-theme:not([disabled]).md-warn .md-container .md-ripple {  color: '{{warn-600}}'; }md-radio-group.md-THEME_NAME-theme[disabled], md-radio-button.md-THEME_NAME-theme[disabled] {  color: '{{foreground-3}}'; }  md-radio-group.md-THEME_NAME-theme[disabled] .md-container .md-off, md-radio-button.md-THEME_NAME-theme[disabled] .md-container .md-off {    border-color: '{{foreground-3}}'; }  md-radio-group.md-THEME_NAME-theme[disabled] .md-container .md-on, md-radio-button.md-THEME_NAME-theme[disabled] .md-container .md-on {    border-color: '{{foreground-3}}'; }md-radio-group.md-THEME_NAME-theme .md-checked .md-ink-ripple {  color: '{{accent-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-primary .md-checked:not([disabled]) .md-ink-ripple, md-radio-group.md-THEME_NAME-theme .md-checked:not([disabled]).md-primary .md-ink-ripple {  color: '{{primary-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme .md-checked.md-primary .md-ink-ripple {  color: '{{warn-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked .md-container:before {  background-color: '{{accent-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked:not([disabled]).md-primary .md-container:before {  background-color: '{{primary-color-0.26}}'; }md-radio-group.md-THEME_NAME-theme.md-focused:not(:empty) .md-checked.md-primary .md-container:before {  background-color: '{{warn-color-0.26}}'; }md-progress-linear.md-THEME_NAME-theme .md-container {  background-color: '{{primary-100}}'; }md-progress-linear.md-THEME_NAME-theme .md-bar {  background-color: '{{primary-color}}'; }md-progress-linear.md-THEME_NAME-theme.md-warn .md-container {  background-color: '{{warn-100}}'; }md-progress-linear.md-THEME_NAME-theme.md-warn .md-bar {  background-color: '{{warn-color}}'; }md-progress-linear.md-THEME_NAME-theme.md-accent .md-container {  background-color: '{{accent-100}}'; }md-progress-linear.md-THEME_NAME-theme.md-accent .md-bar {  background-color: '{{accent-color}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-warn .md-bar1 {  background-color: '{{warn-100}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-warn .md-dashed:before {  background: radial-gradient('{{warn-100}}' 0%, '{{warn-100}}' 16%, transparent 42%); }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-accent .md-bar1 {  background-color: '{{accent-100}}'; }md-progress-linear.md-THEME_NAME-theme[md-mode=buffer].md-accent .md-dashed:before {  background: radial-gradient('{{accent-100}}' 0%, '{{accent-100}}' 16%, transparent 42%); }md-select.md-THEME_NAME-theme[disabled] .md-select-value {  border-bottom-color: transparent;  background-image: linear-gradient(to right, '{{foreground-3}}' 0%, '{{foreground-3}}' 33%, transparent 0%);  background-image: -ms-linear-gradient(left, transparent 0%, '{{foreground-3}}' 100%); }md-select.md-THEME_NAME-theme .md-select-value {  border-bottom-color: '{{foreground-4}}'; }  md-select.md-THEME_NAME-theme .md-select-value.md-select-placeholder {    color: '{{foreground-3}}'; }md-select.md-THEME_NAME-theme.ng-invalid.ng-dirty .md-select-value {  color: '{{warn-500}}' !important;  border-bottom-color: '{{warn-500}}' !important; }md-select.md-THEME_NAME-theme:not([disabled]):focus .md-select-value {  border-bottom-color: '{{primary-color}}';  color: '{{ foreground-1 }}'; }  md-select.md-THEME_NAME-theme:not([disabled]):focus .md-select-value.md-select-placeholder {    color: '{{ foreground-1 }}'; }md-select.md-THEME_NAME-theme:not([disabled]):focus.md-accent .md-select-value {  border-bottom-color: '{{accent-color}}'; }md-select.md-THEME_NAME-theme:not([disabled]):focus.md-warn .md-select-value {  border-bottom-color: '{{warn-color}}'; }md-select.md-THEME_NAME-theme[disabled] .md-select-value {  color: '{{foreground-3}}'; }  md-select.md-THEME_NAME-theme[disabled] .md-select-value.md-select-placeholder {    color: '{{foreground-3}}'; }md-select-menu.md-THEME_NAME-theme md-option[disabled] {  color: '{{foreground-3}}'; }md-select-menu.md-THEME_NAME-theme md-optgroup {  color: '{{foreground-2}}'; }  md-select-menu.md-THEME_NAME-theme md-optgroup md-option {    color: '{{foreground-1}}'; }md-select-menu.md-THEME_NAME-theme md-option[selected] {  color: '{{primary-500}}'; }  md-select-menu.md-THEME_NAME-theme md-option[selected]:focus {    color: '{{primary-600}}'; }  md-select-menu.md-THEME_NAME-theme md-option[selected].md-accent {    color: '{{accent-500}}'; }    md-select-menu.md-THEME_NAME-theme md-option[selected].md-accent:focus {      color: '{{accent-600}}'; }md-select-menu.md-THEME_NAME-theme md-option:focus:not([selected]) {  background: '{{background-200}}'; }md-sidenav.md-THEME_NAME-theme {  background-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme .md-track {  background-color: '{{foreground-3}}'; }md-slider.md-THEME_NAME-theme .md-track-ticks {  background-color: '{{foreground-4}}'; }md-slider.md-THEME_NAME-theme .md-focus-thumb {  background-color: '{{foreground-2}}'; }md-slider.md-THEME_NAME-theme .md-focus-ring {  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-disabled-thumb {  border-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme.md-min .md-thumb:after {  background-color: '{{background-color}}'; }md-slider.md-THEME_NAME-theme .md-track.md-track-fill {  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-thumb:after {  border-color: '{{accent-color}}';  background-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-sign {  background-color: '{{accent-color}}'; }  md-slider.md-THEME_NAME-theme .md-sign:after {    border-top-color: '{{accent-color}}'; }md-slider.md-THEME_NAME-theme .md-thumb-text {  color: '{{accent-contrast}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-focus-ring {  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-track.md-track-fill {  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-thumb:after {  border-color: '{{warn-color}}';  background-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-sign {  background-color: '{{warn-color}}'; }  md-slider.md-THEME_NAME-theme.md-warn .md-sign:after {    border-top-color: '{{warn-color}}'; }md-slider.md-THEME_NAME-theme.md-warn .md-thumb-text {  color: '{{warn-contrast}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-focus-ring {  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-track.md-track-fill {  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-thumb:after {  border-color: '{{primary-color}}';  background-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-sign {  background-color: '{{primary-color}}'; }  md-slider.md-THEME_NAME-theme.md-primary .md-sign:after {    border-top-color: '{{primary-color}}'; }md-slider.md-THEME_NAME-theme.md-primary .md-thumb-text {  color: '{{primary-contrast}}'; }md-slider.md-THEME_NAME-theme[disabled] .md-thumb:after {  border-color: '{{foreground-3}}'; }md-slider.md-THEME_NAME-theme[disabled]:not(.md-min) .md-thumb:after {  background-color: '{{foreground-3}}'; }.md-subheader.md-THEME_NAME-theme {  color: '{{ foreground-2-0.23 }}';  background-color: '{{background-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-primary {    color: '{{primary-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-accent {    color: '{{accent-color}}'; }  .md-subheader.md-THEME_NAME-theme.md-warn {    color: '{{warn-color}}'; }md-switch.md-THEME_NAME-theme .md-ink-ripple {  color: '{{background-500}}'; }md-switch.md-THEME_NAME-theme .md-thumb {  background-color: '{{background-50}}'; }md-switch.md-THEME_NAME-theme .md-bar {  background-color: '{{background-500}}'; }md-switch.md-THEME_NAME-theme.md-checked .md-ink-ripple {  color: '{{accent-color}}'; }md-switch.md-THEME_NAME-theme.md-checked .md-thumb {  background-color: '{{accent-color}}'; }md-switch.md-THEME_NAME-theme.md-checked .md-bar {  background-color: '{{accent-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-focused .md-thumb:before {  background-color: '{{accent-color-0.26}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary .md-ink-ripple {  color: '{{primary-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary .md-thumb {  background-color: '{{primary-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary .md-bar {  background-color: '{{primary-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-primary.md-focused .md-thumb:before {  background-color: '{{primary-color-0.26}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn .md-ink-ripple {  color: '{{warn-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn .md-thumb {  background-color: '{{warn-color}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn .md-bar {  background-color: '{{warn-color-0.5}}'; }md-switch.md-THEME_NAME-theme.md-checked.md-warn.md-focused .md-thumb:before {  background-color: '{{warn-color-0.26}}'; }md-switch.md-THEME_NAME-theme[disabled] .md-thumb {  background-color: '{{background-400}}'; }md-switch.md-THEME_NAME-theme[disabled] .md-bar {  background-color: '{{foreground-4}}'; }md-toast.md-THEME_NAME-theme {  background-color: #323232;  color: '{{background-50}}'; }  md-toast.md-THEME_NAME-theme .md-button {    color: '{{background-50}}'; }    md-toast.md-THEME_NAME-theme .md-button.md-highlight {      color: '{{primary-A200}}'; }      md-toast.md-THEME_NAME-theme .md-button.md-highlight.md-accent {        color: '{{accent-A200}}'; }      md-toast.md-THEME_NAME-theme .md-button.md-highlight.md-warn {        color: '{{warn-A200}}'; }md-tabs.md-THEME_NAME-theme md-tabs-wrapper {  background-color: transparent;  border-color: '{{foreground-4}}'; }md-tabs.md-THEME_NAME-theme .md-paginator md-icon {  color: '{{primary-color}}'; }md-tabs.md-THEME_NAME-theme md-ink-bar {  color: '{{accent-color}}';  background: '{{accent-color}}'; }md-tabs.md-THEME_NAME-theme .md-tab {  color: '{{foreground-2}}'; }  md-tabs.md-THEME_NAME-theme .md-tab[disabled], md-tabs.md-THEME_NAME-theme .md-tab[disabled] md-icon {    color: '{{foreground-3}}'; }  md-tabs.md-THEME_NAME-theme .md-tab.md-active, md-tabs.md-THEME_NAME-theme .md-tab.md-active md-icon, md-tabs.md-THEME_NAME-theme .md-tab.md-focused, md-tabs.md-THEME_NAME-theme .md-tab.md-focused md-icon {    color: '{{primary-color}}'; }  md-tabs.md-THEME_NAME-theme .md-tab.md-focused {    background: '{{primary-color-0.1}}'; }  md-tabs.md-THEME_NAME-theme .md-tab .md-ripple-container {    color: '{{accent-100}}'; }md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper {  background-color: '{{accent-color}}'; }  md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{accent-100}}'; }    md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{accent-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{accent-contrast-0.1}}'; }  md-tabs.md-THEME_NAME-theme.md-accent > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-ink-bar {    color: '{{primary-600-1}}';    background: '{{primary-600-1}}'; }md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper {  background-color: '{{primary-color}}'; }  md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{primary-100}}'; }    md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{primary-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-primary > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{primary-contrast-0.1}}'; }md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper {  background-color: '{{warn-color}}'; }  md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{warn-100}}'; }    md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{warn-contrast}}'; }    md-tabs.md-THEME_NAME-theme.md-warn > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{warn-contrast-0.1}}'; }md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{primary-color}}'; }  md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{primary-100}}'; }    md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{primary-contrast}}'; }    md-toolbar > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{primary-contrast-0.1}}'; }md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{accent-color}}'; }  md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{accent-100}}'; }    md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{accent-contrast}}'; }    md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{accent-contrast-0.1}}'; }  md-toolbar.md-accent > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-ink-bar {    color: '{{primary-600-1}}';    background: '{{primary-600-1}}'; }md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper {  background-color: '{{warn-color}}'; }  md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]) {    color: '{{warn-100}}'; }    md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-active, md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      color: '{{warn-contrast}}'; }    md-toolbar.md-warn > md-tabs.md-THEME_NAME-theme > md-tabs-wrapper > md-tabs-canvas > md-pagination-wrapper > md-tab-item:not([disabled]).md-focused {      background: '{{warn-contrast-0.1}}'; }md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) {  background-color: '{{primary-color}}';  color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) md-icon {    color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar) .md-button {    color: '{{primary-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar).md-accent {    background-color: '{{accent-color}}';    color: '{{accent-contrast}}'; }  md-toolbar.md-THEME_NAME-theme:not(.md-menu-toolbar).md-warn {    background-color: '{{warn-color}}';    color: '{{warn-contrast}}'; }md-tooltip.md-THEME_NAME-theme {  color: '{{background-A100}}'; }  md-tooltip.md-THEME_NAME-theme .md-background {    background-color: '{{foreground-2}}'; }"); 
 	})();
 
 
@@ -62180,19 +62513,19 @@
 	        Script
 	    ) {
 	        $scope.init = function () {
-	            $scope.contacts = Contact.$query();
+	            $scope.contacts = Contact.query();
 
 	            $scope.incoming = [];
 
-	            $scope.scripts = Script.$query();
+	            $scope.scripts = Script.query();
 
-	            // $scope.scripts = Script().$query();
+	            // $scope.scripts = Script().query();
 
-	            // $scope.scripts = Script.$query(function (results) {
+	            // $scope.scripts = Script.query(function (results) {
 	            //     console.log(results);
 	            // });
 	            // var script = new Script();
-	            // Script.$query()
+	            // Script.query()
 	            //     .then(function (results) {
 	            //         $scope.scripts = results;
 	            //     });
@@ -62207,6 +62540,19 @@
 	            $scope.$on('socket:incoming', function (ev, data) {
 	                console.log('incoming', data);
 	                data.timestamp = new Date();
+
+	                // divide media into an array
+	                if (parseInt(data.NumMedia)) {
+	                    data.images = [];
+
+	                    for (var i = 0; i < parseInt(data.NumMedia); i++) {
+	                        data.images.push({
+	                            type: data['MediaContentType' + i],
+	                            url: data['MediaUrl' + i]
+	                        });
+	                    }
+	                }
+	                console.log('incoming', data);
 	                $scope.incoming.push(data);
 	            });
 
@@ -62231,7 +62577,7 @@
 
 	            var text = new Text(options);
 
-	            text.$save()
+	            text.save()
 	                .then(
 	                    function (data) {
 	                        console.log('text sent', data);
@@ -62260,8 +62606,8 @@
 	                clickOutsideToClose: true
 	            })
 	            .then(function (contact) {
-	                Contact.$save(contact);
-	                $scope.contacts = Contact.$query();
+	                Contact.save(contact);
+	                $scope.contacts = Contact.query();
 	            });
 	        };
 
@@ -62278,14 +62624,14 @@
 	            })
 	            .then(function (results) {
 	                if (results.action === 'update') {
-	                    Contact.$update(results.contact);
-	                    $scope.contacts = Contact.$query();
+	                    Contact.update(results.contact);
+	                    $scope.contacts = Contact.query();
 	                    return;
 	                }
 
 	                if (results.action === 'remove') {
 	                    Contact.$remove(results.contact);
-	                    $scope.contacts = Contact.$query();
+	                    $scope.contacts = Contact.query();
 	                    return;
 	                }
 	            });
@@ -62303,8 +62649,8 @@
 	            })
 	            .then(function (script) {
 	                console.log('script', script);
-	                Script.$save(script);
-	                $scope.scripts = Script.$query();
+	                Script.save(script);
+	                $scope.scripts = Script.query();
 	            });
 	        };
 
@@ -62320,17 +62666,18 @@
 	                bindToController: true
 	            })
 	            .then(function (results) {
-	                console.log(results);
 	                if (results.action === 'update') {
-	                    Script.$update(results.script);
-	                    $scope.scripts = Script.$query();
-	                    return;
+	                    return Script.update(results.script,
+	                        function () {
+	                            $scope.scripts = Script.query();
+	                        }
+	                    );
 	                }
 
 	                if (results.action === 'remove') {
-	                    Script.$remove(results.script);
-	                    $scope.scripts = Script.$query();
-	                    return;
+	                    return Script.delete(results.script, function () {
+	                        $scope.scripts = Script.query();
+	                    });
 	                }
 	            });
 	        };
@@ -62505,14 +62852,14 @@
 	        ];
 
 	        return {
-	            $query: function () {
+	            query: function () {
 	                return contacts;
 	            },
-	            $save: function (contact) {
+	            save: function (contact) {
 	                contact.id = contacts.length + 1;
 	                contacts.push(contact);
 	            },
-	            $update: function (contact) {
+	            update: function (contact) {
 	                var oldContact = contacts.filter(function (c) {
 	                    return c.id === contact.id;
 	                });
@@ -62522,7 +62869,7 @@
 
 	                return contacts;
 	            },
-	            $remove: function (contact) {
+	            remove: function (contact) {
 	                contacts = contacts.filter(function (c) {
 	                    return c.id !== contact.id;
 	                });
@@ -62545,101 +62892,24 @@
 	    '$resource',
 	    '$window',
 	    function (API, $resource, $window) {
-	        // var apiUrl = API.protocol + '://localhost:' + API.port;
-	        //
-	        // if (!/localhost/.test($window.location.href)) {
-	        //     apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
-	        // }
+	        var apiUrl = '';
+	        
+	        if (/localhost/.test($window.location.href)) {
+	            apiUrl = API.protocol + '://localhost:' + API.port;
+	        } else {
+	            apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
+	        }
 
-	        var scripts = [
+	        return $resource(apiUrl + '/api/scripts/:id',
 	            {
-	                id: 1,
-	                title: 'This is a title',
-	                content: 'This is a script'
+	                id: '@id'
+	            },
+	            {
+	                update: {
+	                    method: 'PUT'
+	                }
 	            }
-	        ];
-
-	        var self = this;
-
-	        return {
-	            $query: function () {
-	                return scripts;
-	            },
-	            $save: function (script) {
-	                script.id = scripts.length + 1;
-	                scripts.push(script);
-	            },
-	            $update: function (script) {
-	                var oldScript = scripts.filter(function (c) {
-	                    return c.id === script.id;
-	                });
-
-	                oldScript.name = script.title;
-	                oldScript.number = script.content;
-
-	                return scripts;
-	            },
-	            $remove: function (script) {
-	                scripts = scripts.filter(function (c) {
-	                    return c.id !== script.id;
-	                });
-
-	                return scripts;
-	            }
-	        };
-
-	        // return $resource(apiUrl + '/api/scripts/:id',
-	        //     {
-	        //         id: '@id'
-	        //     },
-	        //     {
-	        //         update: {
-	        //             method: 'PUT'
-	        //         }
-	        //     }
-	        // );
-
-	        // return new Script();
-
-	        // var scripts = [
-	        //     {
-	        //         id: 1,
-	        //         title: 'First Script',
-	        //         content: 'This is the first script. It is long.'
-	        //     },
-	        //     {
-	        //         id: 2,
-	        //         title: 'Second Script',
-	        //         content: 'This is the second script'
-	        //     }
-	        // ];
-	        //
-	        // return {
-	        //     get: function () {
-	        //         return scripts;
-	        //     },
-	        //     save: function (script) {
-	        //         script.id = scripts.length + 1;
-	        //         scripts.push(script);
-	        //     },
-	        //     update: function (script) {
-	        //         var oldContact = scripts.filter(function (c) {
-	        //             return c.id === script.id;
-	        //         });
-	        //
-	        //         oldContact.name = script.name;
-	        //         oldContact.number = script.number;
-	        //
-	        //         return scripts;
-	        //     },
-	        //     remove: function (script) {
-	        //         scripts = scripts.filter(function (c) {
-	        //             return c.id !== script.id;
-	        //         });
-	        //
-	        //         return scripts;
-	        //     }
-	        // };
+	        );
 	    }
 	];
 
@@ -62648,13 +62918,13 @@
 /* 32 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-content layout=\"column\" flex=\"33\" offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login()\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"credentials.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"credentials.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
+	module.exports = "<md-content layout=\"column\" flex=\"33\" flex-offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login()\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"credentials.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"credentials.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
 
 /***/ },
 /* 33 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-content class=\"texter\" layout=\"row\" flex>\n    <div class=\"contacts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Contacts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Contact\"\n                ng-click=\"openAddContactDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n        </md-subheader>\n\n        <md-list class=\"contact-list\">\n            <md-list-item ng-repeat=\"contact in contacts\">\n                <md-list-item-text flex=\"90\" layout=\"row\" layout-align=\"start center\">\n                    <div flex>\n                        <h4>{{ contact.name }}</h4>\n                        <p>{{ contact.phone }}</p>\n                        <p>\n                            <md-button class=\"edit-button md-accent md-mini\"\n                                ng-click=\"openEditContactDialog(contact)\">\n                                <ng-md-icon icon=\"edit\"\n                                    style=\"fill: #FF9800\"\n                                    size=\"17\"></ng-md-icon>\n                                Edit\n                            </md-button>\n                        </p>\n                    </div>\n\n                    <div flex=\"10\">\n                        <md-checkbox class=\"md-accent\"\n                            ng-model=\"contact.selected\"></md-checkbox>\n                    </div>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"scripts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Scripts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Script\"\n                ng-click=\"openAddScriptDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n        </md-subheader>\n\n        <md-list>\n            <md-list-item class=\"md-2-line\"\n                ng-repeat=\"script in scripts\"\n                ng-click=\"loadScript(script)\">\n                <md-list-item-text>\n                    <h4>{{ script.title }}</h4>\n                    <p>\n                        {{ script.content }}\n                        <md-button class=\"edit-button md-accent md-mini\"\n                            ng-click=\"openEditScriptDialog(script)\">\n                            <ng-md-icon icon=\"edit\"\n                                style=\"fill: #FF9800\"\n                                size=\"17\"></ng-md-icon>\n                            Edit\n                        </md-button>\n                    </p>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"outgoing\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Outgoing\n        </md-subheader>\n\n        <md-content layout-padding>\n            <form name=\"outgoingForm\" ng-submit=\"send()\">\n                <md-input-container>\n                    <label for=\"text\">Text</label>\n                    <textarea name=\"text\" ng-model=\"outgoing.text\">\n                    </textarea>\n                </md-input-container>\n\n                <md-button class=\"md-accent\"\n                    type=\"submit\">Send</md-button>\n            </form>\n        </md-content>\n\n        <md-button class=\"incoming-toggle\"\n            ng-click=\"toggleIncoming()\">\n                <ng-md-icon icon=\"chevron_left\"\n                    style=\"fill: #fff\"\n                    size=\"17\"></ng-md-icon>\n                {{ incoming.length }} Incoming\n        </md-button>\n    </div>\n\n    <md-sidenav class=\"md-sidenav-right md-whiteframe-z2\"\n        md-component-id=\"incoming\">\n        <md-toolbar class=\"md-theme-light\">\n            <h1 class=\"md-toolbar-tools\">Incoming Texts</h1>\n        </md-toolbar>\n        <md-list>\n            <md-list-item class=\"md-3-line\"\n                ng-repeat=\"text in incoming\">\n\n                <ng-md-icon class=\"md-avatar\"\n                    icon=\"account_circle\"\n                    style=\"fill: #fff\"\n                    size=\"40\"></ng-md-icon>\n\n                    <div class=\"md-list-item-text\" layout=\"column\">\n                        <h3>From: {{ text.From }}</h3>\n                        <h4>Sent: {{ text.timestamp | date:'short' }}</h4>\n                        <p>{{ text.Body }}</p>\n                    </div>\n            </md-list-item>\n        </md-list>\n    </md-sidenav>\n</md-content>\n"
+	module.exports = "<md-content class=\"texter\" layout=\"row\" flex>\n    <div class=\"contacts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Contacts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Contact\"\n                ng-click=\"openAddContactDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n        </md-subheader>\n\n        <md-list class=\"contact-list\">\n            <md-list-item ng-repeat=\"contact in contacts\">\n                <md-list-item-text flex=\"90\" layout=\"row\" layout-align=\"start center\">\n                    <div flex>\n                        <h4>{{ contact.name }}</h4>\n                        <p>{{ contact.phone }}</p>\n                        <p>\n                            <md-button class=\"edit-button md-accent md-mini\"\n                                ng-click=\"openEditContactDialog(contact)\">\n                                <ng-md-icon icon=\"edit\"\n                                    style=\"fill: #FF9800\"\n                                    size=\"17\"></ng-md-icon>\n                                Edit\n                            </md-button>\n                        </p>\n                    </div>\n\n                    <div flex=\"10\">\n                        <md-checkbox class=\"md-accent\"\n                            ng-model=\"contact.selected\"></md-checkbox>\n                    </div>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"scripts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Scripts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Script\"\n                ng-click=\"openAddScriptDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n        </md-subheader>\n\n        <md-list>\n            <md-list-item class=\"md-2-line\"\n                ng-repeat=\"script in scripts\"\n                ng-click=\"loadScript(script)\">\n                <md-list-item-text>\n                    <h4>{{ script.title }}</h4>\n                    <p>\n                        {{ script.content }}\n                        <md-button class=\"edit-button md-accent md-mini\"\n                            ng-click=\"openEditScriptDialog(script)\">\n                            <ng-md-icon icon=\"edit\"\n                                style=\"fill: #FF9800\"\n                                size=\"17\"></ng-md-icon>\n                            Edit\n                        </md-button>\n                    </p>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"outgoing\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Outgoing\n        </md-subheader>\n\n        <md-content layout-padding>\n            <form name=\"outgoingForm\" ng-submit=\"send()\">\n                <md-input-container>\n                    <label for=\"text\">Text</label>\n                    <textarea name=\"text\" ng-model=\"outgoing.text\">\n                    </textarea>\n                </md-input-container>\n\n                <md-button class=\"md-accent\"\n                    type=\"submit\">Send</md-button>\n            </form>\n        </md-content>\n\n        <md-button class=\"incoming-toggle\"\n            ng-click=\"toggleIncoming()\">\n                <ng-md-icon icon=\"chevron_left\"\n                    style=\"fill: #fff\"\n                    size=\"17\"></ng-md-icon>\n                {{ incoming.length }} Incoming\n        </md-button>\n    </div>\n\n    <md-sidenav class=\"md-sidenav-right md-whiteframe-z2\"\n        md-component-id=\"incoming\">\n        <md-toolbar class=\"md-theme-light\">\n            <h1 class=\"md-toolbar-tools\">Incoming Texts</h1>\n        </md-toolbar>\n        <md-list>\n            <md-list-item class=\"md-3-line\"\n                ng-repeat=\"text in incoming\">\n\n                <ng-md-icon class=\"md-avatar\"\n                    icon=\"account_circle\"\n                    style=\"fill: #fff\"\n                    size=\"40\"></ng-md-icon>\n\n                    <div class=\"md-list-item-text\" layout=\"column\">\n                        <h3>From: {{ text.From }}</h3>\n                        <h4>Sent: {{ text.timestamp | date:'short' }}</h4>\n                        <div class=\"images\" ng-show=\"text.images.length\">\n                            <div class=\"image\"\n                                ng-repeat=\"image in text.images\">\n                                <img ng-src=\"{{ image.url }}\" alt=\"Media\">\n                            </div>\n                        </div>\n                        <p>{{ text.Body }}</p>\n                    </div>\n            </md-list-item>\n        </md-list>\n    </md-sidenav>\n</md-content>\n"
 
 /***/ }
 /******/ ]);
