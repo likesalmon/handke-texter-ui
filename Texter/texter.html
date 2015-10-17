@@ -120,6 +120,12 @@
                     <div class="md-list-item-text" layout="column">
                         <h3>From: {{ text.From }}</h3>
                         <h4>Sent: {{ text.timestamp | date:'short' }}</h4>
+                        <div class="images" ng-show="text.images.length">
+                            <div class="image"
+                                ng-repeat="image in text.images">
+                                <img ng-src="{{ image.url }}" alt="Media">
+                            </div>
+                        </div>
                         <p>{{ text.Body }}</p>
                     </div>
             </md-list-item>
