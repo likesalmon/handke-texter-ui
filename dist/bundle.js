@@ -86,12 +86,12 @@
 	            $stateProvider
 	                .state('login', {
 	                    url: '/login',
-	                    template: __webpack_require__(24),
+	                    template: __webpack_require__(32),
 	                    controller: 'LoginCtrl'
 	                })
 	                .state('texter', {
 	                    url: '/texter',
-	                    template: __webpack_require__(25),
+	                    template: __webpack_require__(33),
 	                    controller: 'TexterCtrl'
 	                });
 
@@ -61303,7 +61303,7 @@
 
 	module.exports = angular.module('Texter', [])
 	        .controller('TexterCtrl', __webpack_require__(22))
-	        .service('Text', __webpack_require__(23));
+	        .service('Text', __webpack_require__(29));
 
 
 /***/ },
@@ -61376,7 +61376,13 @@
 
 
 /***/ },
-/* 23 */
+/* 23 */,
+/* 24 */,
+/* 25 */,
+/* 26 */,
+/* 27 */,
+/* 28 */,
+/* 29 */
 /***/ function(module, exports) {
 
 	module.exports = ['$resource', 'API', function Text ($resource, API) {
@@ -61385,13 +61391,15 @@
 
 
 /***/ },
-/* 24 */
+/* 30 */,
+/* 31 */,
+/* 32 */
 /***/ function(module, exports) {
 
 	module.exports = "<md-content layout=\"column\" flex=\"33\" offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login()\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"credentials.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"credentials.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
 
 /***/ },
-/* 25 */
+/* 33 */
 /***/ function(module, exports) {
 
 	module.exports = "<md-content class=\"texter\" layout=\"row\" flex>\n    <div layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">Contacts</md-subheader>\n        <md-list>\n            <md-list-item ng-repeat=\"contact in contacts\">\n                <ng-md-icon class=\"md-avatar\"\n                    icon=\"account_circle\"\n                    style=\"fill: #000\"\n                    size=\"40\"></ng-md-icon>\n\n                <p class=\"md-primary\">{{ contact.number }}</p>\n                <md-checkbox class=\"md-secondary\"\n                    ng-model=\"contact.selected\"></md-checkbox>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Scripts\n        </md-subheader>\n\n        <md-list>\n            <md-list-item class=\"md-2-line\"\n                ng-repeat=\"script in scripts\"\n                ng-click=\"loadScript(script)\">\n                <md-list-item-text>\n                    <h4>{{ script.title }}</h4>\n                    <p>{{ script.text }}</p>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Outgoing\n        </md-subheader>\n\n        <md-content layout-padding>\n            <form name=\"outgoingForm\" ng-submit=\"send()\">\n                <md-input-container>\n                    <label for=\"text\">Text</label>\n                    <textarea name=\"text\" ng-model=\"outgoing.text\">\n                    </textarea>\n                </md-input-container>\n\n                <md-button class=\"md-raised md-primary\"\n                    type=\"submit\">Send</md-button>\n            </form>\n        </md-content>\n\n    </div>\n\n    <div layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">Incoming</md-subheader>\n        <md-list>\n            <md-list-item class=\"md-3-line\"\n                ng-repeat=\"text in incoming\">\n\n                <ng-md-icon class=\"md-avatar\"\n                    icon=\"account_circle\"\n                    style=\"fill: #000\"\n                    size=\"40\"></ng-md-icon>\n\n                    <div class=\"md-list-item-text\" layout=\"column\">\n                        <h3>From: {{ text.From }}</h3>\n                        <h4>Sent: {{ text.timestamp | date:'short' }}</h4>\n                        <p>{{ text.Body }}</p>\n                    </div>\n            </md-list-item>\n        </md-list>\n    </div>\n</md-content>\n"
