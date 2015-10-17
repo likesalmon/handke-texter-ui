@@ -4,21 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "forever start index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "ngrok": "ngrok http 8000"
+    "start": "serve",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "angular": "^1.4.6",
+    "angular": "^1.4.7",
+    "angular-animate": "^1.4.7",
+    "angular-aria": "^1.4.7",
     "angular-material": "^0.11.0",
     "angular-material-icons": "^0.6.0",
     "angular-resource": "^1.4.6",
     "angular-socket-io": "^0.7.0",
     "angular-ui-router": "^0.2.15",
-    "hapi": "^10.0.1",
-    "inert": "^3.0.1",
     "mdi": "^1.2.65",
     "serve": "^1.4.0"
   },

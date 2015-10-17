@@ -2,4 +2,8 @@ var angular = require('angular');
 
 module.exports = angular.module('Texter', [])
         .controller('TexterCtrl', require('./TexterCtrl'))
-        .service('Text', require('./TexterService'));
+        .controller('ContactDialogCtrl', require('./ContactDialogCtrl'))
+        .controller('ScriptDialogCtrl', require('./ScriptDialogCtrl'))
+        .service('Text', require('./TexterService'))
+        .factory('Contact', require('./ContactService'))
+        .factory('Script', require('./ScriptService'));

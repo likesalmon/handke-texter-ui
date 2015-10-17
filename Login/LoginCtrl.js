@@ -3,4 +3,4 @@ module.exports = [
     function LoginCtrl ($scope) {
         $scope.credentials = {};
     }
-]
+];

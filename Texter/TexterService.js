@@ -1,3 +1,8 @@
-module.exports = ['$resource', 'API', function Text ($resource, API) {
-    return $resource(API.root + API.sendText);
-}];
+module.exports = [
+    '$resource',
+    'Helper',
+    '$window',
+    function ($resource, Helper, $window) {
+        return $resource(Helper.getAPIUrl() + '/api/sms/send');
+    }
+];

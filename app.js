@@ -20,20 +20,26 @@ angular.module('handkeTexter', [
         Login.name
     ])
     .constant('API', {
-        root: 'http://localhost:8000/api',
-        login: '/login',
-        sendText: '/sendText'
+        protocol: 'http',
+        ip: '45.55.27.217',
+        port: '8000'
     })
     .config([
         '$locationProvider',
         '$stateProvider',
+        '$mdThemingProvider',
         '$urlRouterProvider',
         function (
             $locationProvider,
             $stateProvider,
+            $mdThemingProvider,
             $urlRouterProvider
         ) {
             $locationProvider.html5Mode(false);
+
+            $mdThemingProvider.theme('default')
+                .primaryPalette('red')
+                .accentPalette('orange');
 
             $urlRouterProvider.otherwise('/login');
 
@@ -52,12 +58,35 @@ angular.module('handkeTexter', [
 
         }
     ])
-    .run(['$state', function ($state) {
-    }])
-    .factory('handkeSocket', ['socketFactory', function (socketFactory) {
-        var handkeSocket = socketFactory({
-            ioSocket: io.connect('http://localhost:8000')
-        });
-        handkeSocket.forward('error');
-        return handkeSocket;
-    }]);
+    .factory('Helper', [
+        'API',
+        '$window',
+        function (API, $window) {
+            return {
+                getAPIUrl: function () {
+                    var url = '';
+
+                    if (/localhost/.test($window.location.href)) {
+                        url = API.protocol + '://localhost:' + API.port;
+                    } else {
+                        url = API.protocol + '://' + API.ip + ':' + API.port;
+                    }
+
+                    return url;
+                }
+            };
+        }
+    ])
+    .factory('handkeSocket', [
+        'Helper',
+        'socketFactory',
+        '$window',
+        function (Helper, socketFactory, $window) {
+            var handkeSocket = socketFactory({
+                ioSocket: io.connect(Helper.getAPIUrl())
+            });
+
+            handkeSocket.forward('error');
+            return handkeSocket;
+        }
+    ]);
