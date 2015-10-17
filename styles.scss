@@ -110,3 +110,11 @@ md-menu-item {
         float: right;
     }
 }
+
+.md-sidenav-right {
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
