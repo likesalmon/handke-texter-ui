@@ -16,19 +16,19 @@ module.exports = [
         Script
     ) {
         $scope.init = function () {
-            $scope.contacts = Contact.$query();
+            $scope.contacts = Contact.query();
 
             $scope.incoming = [];
 
-            $scope.scripts = Script.$query();
+            $scope.scripts = Script.query();
 
-            // $scope.scripts = Script().$query();
+            // $scope.scripts = Script().query();
 
-            // $scope.scripts = Script.$query(function (results) {
+            // $scope.scripts = Script.query(function (results) {
             //     console.log(results);
             // });
             // var script = new Script();
-            // Script.$query()
+            // Script.query()
             //     .then(function (results) {
             //         $scope.scripts = results;
             //     });
@@ -43,6 +43,19 @@ module.exports = [
             $scope.$on('socket:incoming', function (ev, data) {
                 console.log('incoming', data);
                 data.timestamp = new Date();
+
+                // divide media into an array
+                if (parseInt(data.NumMedia)) {
+                    data.images = [];
+
+                    for (var i = 0; i < parseInt(data.NumMedia); i++) {
+                        data.images.push({
+                            type: data['MediaContentType' + i],
+                            url: data['MediaUrl' + i]
+                        });
+                    }
+                }
+                console.log('incoming', data);
                 $scope.incoming.push(data);
             });
 
@@ -67,7 +80,7 @@ module.exports = [
 
             var text = new Text(options);
 
-            text.$save()
+            text.save()
                 .then(
                     function (data) {
                         console.log('text sent', data);
@@ -96,8 +109,8 @@ module.exports = [
                 clickOutsideToClose: true
             })
             .then(function (contact) {
-                Contact.$save(contact);
-                $scope.contacts = Contact.$query();
+                Contact.save(contact);
+                $scope.contacts = Contact.query();
             });
         };
 
@@ -114,14 +127,14 @@ module.exports = [
             })
             .then(function (results) {
                 if (results.action === 'update') {
-                    Contact.$update(results.contact);
-                    $scope.contacts = Contact.$query();
+                    Contact.update(results.contact);
+                    $scope.contacts = Contact.query();
                     return;
                 }
 
                 if (results.action === 'remove') {
                     Contact.$remove(results.contact);
-                    $scope.contacts = Contact.$query();
+                    $scope.contacts = Contact.query();
                     return;
                 }
             });
@@ -139,8 +152,8 @@ module.exports = [
             })
             .then(function (script) {
                 console.log('script', script);
-                Script.$save(script);
-                $scope.scripts = Script.$query();
+                Script.save(script);
+                $scope.scripts = Script.query();
             });
         };
 
@@ -156,17 +169,18 @@ module.exports = [
                 bindToController: true
             })
             .then(function (results) {
-                console.log(results);
                 if (results.action === 'update') {
-                    Script.$update(results.script);
-                    $scope.scripts = Script.$query();
-                    return;
+                    return Script.update(results.script,
+                        function () {
+                            $scope.scripts = Script.query();
+                        }
+                    );
                 }
 
                 if (results.action === 'remove') {
-                    Script.$remove(results.script);
-                    $scope.scripts = Script.$query();
-                    return;
+                    return Script.delete(results.script, function () {
+                        $scope.scripts = Script.query();
+                    });
                 }
             });
         };
