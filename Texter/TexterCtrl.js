@@ -1,19 +1,23 @@
 module.exports = [
     'Contact',
     'handkeSocket',
+    '$log',
     '$mdDialog',
     '$mdSidenav',
-    'Text',
+    '$mdToast',
     '$scope',
     'Script',
+    'Text',
     function TexterCtrl (
         Contact,
         handkeSocket,
+        $log,
         $mdDialog,
         $mdSidenav,
-        Text,
+        $mdToast,
         $scope,
-        Script
+        Script,
+        Text
     ) {
         $scope.init = function () {
             $scope.contacts = Contact.query();
@@ -22,26 +26,14 @@ module.exports = [
 
             $scope.scripts = Script.query();
 
-            // $scope.scripts = Script().query();
-
-            // $scope.scripts = Script.query(function (results) {
-            //     console.log(results);
-            // });
-            // var script = new Script();
-            // Script.query()
-            //     .then(function (results) {
-            //         $scope.scripts = results;
-            //     });
-
             $scope.outgoing = {};
 
             $scope.$on('socket:error', function (ev, data) {
-                console.error('socket:error', data);
+                $log.error('socket:error', data);
             });
 
             handkeSocket.forward('incoming', $scope);
             $scope.$on('socket:incoming', function (ev, data) {
-                console.log('incoming', data);
                 data.timestamp = new Date();
 
                 // divide media into an array
@@ -55,42 +47,63 @@ module.exports = [
                         });
                     }
                 }
-                console.log('incoming', data);
                 $scope.incoming.push(data);
             });
 
             handkeSocket.forward('connection', $scope);
             $scope.$on('socket:connection', function (ev, data) {
-                console.log('socket:connection');
+                $log.log('socket:connection');
             });
         };
 
+        /**
+         * Populate the outgoing textarea with the selected script
+         */
         $scope.loadScript = function (script) {
             $scope.outgoing.text = script.content;
         };
 
+        /**
+         * Send a text to an array of numbers
+         */
         $scope.send = function () {
-
-            var options = {
-                to: $scope.contacts.filter(function (contact) {
+            var phoneNumbers = $scope.contacts
+                .filter(function (contact) {
                     return contact.selected;
-                })[0].phone,
+                })
+                .map(function (contact) {
+                    return contact.phone;
+                });
+
+            if (!phoneNumbers.length) {
+                return $mdToast.show(
+                  $mdToast.simple()
+                    .content('Please select a contact')
+                    .hideDelay(3000)
+                );
+            }
+
+            if (!$scope.outgoing.text) {
+                return $mdToast.show(
+                  $mdToast.simple()
+                    .content('Please enter some text')
+                    .hideDelay(3000)
+                );
+            }
+
+            var text = {
+                to: phoneNumbers,
                 body: $scope.outgoing.text
             };
 
-            var text = new Text(options);
-
-            text.save()
-                .then(
-                    function (data) {
-                        console.log('text sent', data);
-                    },
-                    function (data) {
-                        console.error('text error', data);
-                    }
-                );
+            Text.save(text, function (response) {
+                console.log('contact saved', response);
+            });
         };
 
+        /**
+         * Open or close the incoming texts sidebar
+         */
         $scope.toggleIncoming = function () {
             $mdSidenav('incoming').toggle();
         };
@@ -109,8 +122,10 @@ module.exports = [
                 clickOutsideToClose: true
             })
             .then(function (contact) {
-                Contact.save(contact);
-                $scope.contacts = Contact.query();
+                Contact.save(contact, function () {
+                    $scope.contacts = Contact.query();
+                });
+
             });
         };
 
@@ -127,15 +142,15 @@ module.exports = [
             })
             .then(function (results) {
                 if (results.action === 'update') {
-                    Contact.update(results.contact);
-                    $scope.contacts = Contact.query();
-                    return;
+                    Contact.update(results.contact, function () {
+                        $scope.contacts = Contact.query();
+                    });
                 }
 
                 if (results.action === 'remove') {
-                    Contact.$remove(results.contact);
-                    $scope.contacts = Contact.query();
-                    return;
+                    Contact.delete(results.contact, function () {
+                        $scope.contacts = Contact.query();
+                    });
                 }
             });
         };
@@ -151,9 +166,9 @@ module.exports = [
                 clickOutsideToClose: true
             })
             .then(function (script) {
-                console.log('script', script);
-                Script.save(script);
-                $scope.scripts = Script.query();
+                Script.save(script, function () {
+                    $scope.scripts = Script.query();
+                });
             });
         };
 
@@ -178,7 +193,7 @@ module.exports = [
                 }
 
                 if (results.action === 'remove') {
-                    return Script.delete(results.script, function () {
+                    return Script.delete(results.script, function (scripts) {
                         $scope.scripts = Script.query();
                     });
                 }
