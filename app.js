@@ -58,22 +58,32 @@ angular.module('handkeTexter', [
 
         }
     ])
-    .run(['$state', function ($state) {
-    }])
-    .factory('handkeSocket', [
+    .factory('Helper', [
         'API',
+        '$window',
+        function (API, $window) {
+            return {
+                getAPIUrl: function () {
+                    var url = '';
+
+                    if (/localhost/.test($window.location.href)) {
+                        url = API.protocol + '://localhost:' + API.port;
+                    } else {
+                        url = API.protocol + '://' + API.ip + ':' + API.port;
+                    }
+
+                    return url;
+                }
+            };
+        }
+    ])
+    .factory('handkeSocket', [
+        'Helper',
         'socketFactory',
         '$window',
-        function (API, socketFactory, $window) {
-            var options = {};
-            var apiUrl = API.protocol + '://localhost:' + API.port;
-
-            if (!/localhost/.test($window.location.href)) {
-                apiUrl = API.protocol + '://' + API.ip + ':' + API.port;
-            }
-
+        function (Helper, socketFactory, $window) {
             var handkeSocket = socketFactory({
-                ioSocket: io.connect(apiUrl)
+                ioSocket: io.connect(Helper.getAPIUrl())
             });
 
             handkeSocket.forward('error');
