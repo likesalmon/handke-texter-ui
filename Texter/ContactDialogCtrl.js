@@ -1,14 +1,18 @@
 'use strict';
 
 module.exports = [
+    'GROUPS',
     '$mdDialog',
     '$scope',
     function (
+        GROUPS,
         $mdDialog,
         $scope
     ) {
         var self = this;
         $scope.init = function () {
+            $scope.groups = GROUPS;
+
             if (self.contact) {
                 $scope.contact = self.contact;
             }
@@ -19,14 +23,16 @@ module.exports = [
         };
 
         $scope.save = function () {
-            $mdDialog.hide($scope.contact);
-        };
-
-        $scope.update = function () {
-            $mdDialog.hide({
-                action: 'update',
-                contact: $scope.contact
-            });
+            // if the contact has an id update it
+            if ($scope.contact.id) {
+                $mdDialog.hide({
+                    action: 'update',
+                    contact: $scope.contact
+                });
+            } else {
+                // otherwise save a new contact
+                $mdDialog.hide($scope.contact);
+            }
         };
 
         $scope.remove = function () {

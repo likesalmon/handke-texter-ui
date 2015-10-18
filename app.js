@@ -1,6 +1,7 @@
 require('./styles.scss');
 
 var angular = require('angular');
+var ngMessages = require('angular-messages');
 var ngResource = require('angular-resource');
 var material = require('angular-material');
 var uiRouter = require('angular-ui-router');
@@ -13,6 +14,7 @@ angular.module('handkeTexter', [
         'ngResource',
         uiRouter,
         'ngMaterial',
+        'ngMessages',
         'ngMdIcons',
         'ui.router',
         'btford.socket-io',
@@ -24,6 +26,7 @@ angular.module('handkeTexter', [
         ip: '45.55.27.217',
         port: '8000'
     })
+    .constant('GROUPS', ['A','B','C','D'])
     .config([
         '$locationProvider',
         '$stateProvider',

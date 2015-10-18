@@ -39,10 +39,12 @@ md-input-container .md-input {
 
 md-dialog {
     padding: 15px;
-    
-    md-input-container .md-input,
-    .md-actions .md-button {
-        color: #333;
+    color: rgba(0,0,0,0.87);
+
+    .md-input,
+    .md-actions .md-button,
+    md-select-value {
+        color: rgba(0,0,0,0.87);
     }
 }
 
@@ -53,6 +55,13 @@ md-menu-content {
 md-menu-item {
     min-height: 35px;
     height: 35px;
+}
+
+.md-select-menu-container {
+    background-color: #fff;
+    md-option {
+        color: #333;
+    }
 }
 
 .md-button {

@@ -121,7 +121,7 @@ module.exports = [
         $scope.openAddContactDialog = function () {
             $mdDialog.show({
                 controller: 'ContactDialogCtrl',
-                template: require('./AddContactDialog.html'),
+                template: require('./contactDialog.html'),
                 parent: angular.element(document.body),
                 clickOutsideToClose: true
             })
@@ -136,7 +136,7 @@ module.exports = [
         $scope.openEditContactDialog = function (contact) {
             $mdDialog.show({
                 controller: 'ContactDialogCtrl',
-                template: require('./EditContactDialog.html'),
+                template: require('./contactDialog.html'),
                 parent: angular.element(document.body),
                 clickOutsideToClose: true,
                 locals: {
