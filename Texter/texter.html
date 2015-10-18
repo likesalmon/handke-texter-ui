@@ -6,7 +6,7 @@
             Contacts
             <md-button class="add-button md-icon-button"
                 aria-label="Add Contact"
-                ng-click="openAddContactDialog()">
+                ng-click="openContactDialog()">
                 <ng-md-icon icon="add"
                     style="fill: #fff"
                     size="20"></ng-md-icon>
@@ -21,7 +21,7 @@
                         <p>{{ contact.phone }}</p>
                         <p>
                             <md-button class="edit-button md-accent md-mini"
-                                ng-click="openEditContactDialog(contact)">
+                                ng-click="openContactDialog(contact)">
                                 <ng-md-icon icon="edit"
                                     style="fill: #FF9800"
                                     size="17"></ng-md-icon>
@@ -46,7 +46,7 @@
             Scripts
             <md-button class="add-button md-icon-button"
                 aria-label="Add Script"
-                ng-click="openAddScriptDialog()">
+                ng-click="openScriptDialog()">
                 <ng-md-icon icon="add"
                     style="fill: #fff"
                     size="20"></ng-md-icon>
@@ -62,7 +62,7 @@
                     <p>
                         {{ script.content }}
                         <md-button class="edit-button md-accent md-mini"
-                            ng-click="openEditScriptDialog(script)">
+                            ng-click="openScriptDialog(script)">
                             <ng-md-icon icon="edit"
                                 style="fill: #FF9800"
                                 size="17"></ng-md-icon>

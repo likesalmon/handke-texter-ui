@@ -13,9 +13,7 @@ module.exports = [
         $scope.init = function () {
             $scope.groups = GROUPS;
 
-            if (self.contact) {
-                $scope.contact = self.contact;
-            }
+            $scope.contact = self.contact;
         };
 
         $scope.cancel = function () {
@@ -31,7 +29,10 @@ module.exports = [
                 });
             } else {
                 // otherwise save a new contact
-                $mdDialog.hide($scope.contact);
+                $mdDialog.hide({
+                    action: 'save',
+                    contact: $scope.contact
+                });
             }
         };
 

@@ -117,90 +117,74 @@ module.exports = [
         /*************
             Contacts
         **************/
-
-        $scope.openAddContactDialog = function () {
-            $mdDialog.show({
-                controller: 'ContactDialogCtrl',
-                template: require('./contactDialog.html'),
-                parent: angular.element(document.body),
-                clickOutsideToClose: true
-            })
-            .then(function (contact) {
-                Contact.save(contact, function () {
-                    $scope.contacts = Contact.query();
-                });
-
-            });
-        };
-
-        $scope.openEditContactDialog = function (contact) {
+        $scope.openContactDialog = function (contact) {
             $mdDialog.show({
                 controller: 'ContactDialogCtrl',
                 template: require('./contactDialog.html'),
                 parent: angular.element(document.body),
                 clickOutsideToClose: true,
                 locals: {
-                    contact: contact
+                    contact: contact || null
                 },
                 bindToController: true
             })
             .then(function (results) {
-                if (results.action === 'update') {
-                    Contact.update(results.contact, function () {
-                        $scope.contacts = Contact.query();
-                    });
-                }
+                var actions = {
+                    save: function () {
+                        Contact.save(results.contact, function () {
+                            $scope.contacts = Contact.query();
+                        });
+                    },
+                    remove: function () {
+                        Contact.delete(results.contact, function () {
+                            $scope.contacts = Contact.query();
+                        });
+                    },
+                    update: function () {
+                        Contact.update(results.contact, function () {
+                            $scope.contacts = Contact.query();
+                        });
+                    }
+                };
 
-                if (results.action === 'remove') {
-                    Contact.delete(results.contact, function () {
-                        $scope.contacts = Contact.query();
-                    });
-                }
+                actions[results.action]();
             });
         };
 
         /*************
             Scripts
         **************/
-        $scope.openAddScriptDialog = function () {
+        $scope.openScriptDialog = function (script) {
             $mdDialog.show({
                 controller: 'ScriptDialogCtrl',
-                template: require('./AddScriptDialog.html'),
-                parent: angular.element(document.body),
-                clickOutsideToClose: true
-            })
-            .then(function (script) {
-                Script.save(script, function () {
-                    $scope.scripts = Script.query();
-                });
-            });
-        };
-
-        $scope.openEditScriptDialog = function (script) {
-            $mdDialog.show({
-                controller: 'ScriptDialogCtrl',
-                template: require('./EditScriptDialog.html'),
+                template: require('./scriptDialog.html'),
                 parent: angular.element(document.body),
                 clickOutsideToClose: true,
                 locals: {
-                    script: script
+                    script: script || null
                 },
                 bindToController: true
             })
             .then(function (results) {
-                if (results.action === 'update') {
-                    return Script.update(results.script,
-                        function () {
+                var actions = {
+                    save: function () {
+                        Script.save(results.script, function () {
                             $scope.scripts = Script.query();
-                        }
-                    );
-                }
+                        });
+                    },
+                    remove: function () {
+                        Script.delete(results.script, function (scripts) {
+                            $scope.scripts = Script.query();
+                        });
+                    },
+                    update: function () {
+                        Script.update(results.script, function () {
+                            $scope.scripts = Script.query();
+                        });
+                    }
+                };
 
-                if (results.action === 'remove') {
-                    return Script.delete(results.script, function (scripts) {
-                        $scope.scripts = Script.query();
-                    });
-                }
+                actions[results.action]();
             });
         };
 

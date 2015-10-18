@@ -19,12 +19,14 @@
                 </md-select>
             </md-input-container>
             <div class="md-actions">
-                <md-button ng-if="!contact.id"
+                <md-button class="md-raised"
+                    ng-if="!contact.id"
                     type="submit">Save</md-button>
                 <md-button ng-if="contact.id"
                     ng-click="remove()"
                     type="button">Remove</md-button>
-                <md-button ng-if="contact.id"
+                <md-button class="md-raised"
+                    ng-if="contact.id"
                     type="submit">Update</md-button>
             </div>
         </form>
