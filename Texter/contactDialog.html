@@ -60,7 +60,10 @@
                     type="button">Remove</md-button>
                 <md-button class="md-raised"
                     ng-if="contact.id"
-                    type="submit">Update</md-button>
+                    type="submit"
+                    ng-disabled="contactForm.$error.required[0].$invalid">
+                    Update
+                </md-button>
             </div>
         </form>
     </md-dialog-content>
