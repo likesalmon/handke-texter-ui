@@ -112,22 +112,21 @@
             <md-list-item class="md-3-line"
                 ng-repeat="text in incoming">
 
-                <ng-md-icon class="md-avatar"
-                    icon="account_circle"
-                    style="fill: #fff"
-                    size="40"></ng-md-icon>
+                <div class="md-avatar group">
+                    {{ text.contact.group }}
+                </div>
 
-                    <div class="md-list-item-text" layout="column">
-                        <h3>From: {{ text.From || text.from }}</h3>
-                        <h4>Received: {{ text.timestamp | date:'short' }}</h4>
-                        <div class="images" ng-show="text.images.length">
-                            <div class="image"
-                                ng-repeat="image in text.images">
-                                <img ng-src="{{ image.url }}" alt="Media">
-                            </div>
+                <div class="md-list-item-text" layout="column">
+                    <h3>From: {{ text.contact.name }}, {{ text.contact.phone }}</h3>
+                    <p>{{ text.createdAt | date:'short' }}</p>
+                    <div class="images" ng-show="text.images.length">
+                        <div class="image"
+                            ng-repeat="image in text.images">
+                            <img ng-src="{{ image.url }}" alt="Media">
                         </div>
-                        <p>{{ text.Body || text.body }}</p>
                     </div>
+                    <p>{{ text.body }}</p>
+                </div>
             </md-list-item>
         </md-list>
     </md-sidenav>

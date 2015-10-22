@@ -32,8 +32,13 @@ module.exports = [
                 $log.error('socket:error', data);
             });
 
+            handkeSocket.forward('connection', $scope);
+            $scope.$on('socket:connection', function (ev, data) {
+                $log.log('socket:connection');
+            });
+
             handkeSocket.forward('incoming', $scope);
-            $scope.$on('socket:incoming', function (ev, data) {
+            $scope.$on('socket:incoming', function (event, data) {
                 data.timestamp = new Date();
 
                 // divide media into an array
@@ -50,9 +55,10 @@ module.exports = [
                 $scope.incoming.push(data);
             });
 
-            handkeSocket.forward('connection', $scope);
-            $scope.$on('socket:connection', function (ev, data) {
-                $log.log('socket:connection');
+            handkeSocket.forward('contact:new', $scope);
+            $scope.$on('socket:contact:new', function (event, data) {
+                console.log(data);
+                $scope.contacts.push(data);
             });
         };
 
