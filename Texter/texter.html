@@ -4,6 +4,7 @@
         flex>
         <md-subheader class="md-no-sticky">
             Contacts
+            <span class="count">{{ contacts.length }}</span>
             <md-button class="add-button md-icon-button"
                 aria-label="Add Contact"
                 ng-click="openContactDialog()">
@@ -11,11 +12,19 @@
                     style="fill: #fff"
                     size="20"></ng-md-icon>
             </md-button>
+            <md-input-container class="list-filter">
+                <label>Search Contacts</label>
+                <input type="text" ng-model="contactFilter">
+            </md-input-container>
         </md-subheader>
 
-        <md-list class="contact-list">
-            <md-list-item ng-repeat="contact in contacts">
-                <md-list-item-text flex="90" layout="row" layout-align="start center">
+        <md-list class="contact-list scroll">
+            <md-list-item ng-repeat="contact in contacts | filter:contactFilter">
+                <div class="md-avatar group">
+                    {{ contact.group }}
+                </div>
+
+                <md-list-item-text flex="70" layout="row" layout-align="start center">
                     <div flex>
                         <h4>{{ contact.name }}</h4>
                         <p>{{ contact.phone }}</p>
@@ -44,6 +53,11 @@
         flex>
         <md-subheader class="md-no-sticky">
             Scripts
+            <span class="count">{{ scripts.length }}</span>
+            <md-input-container class="list-filter">
+                <label>Search Scripts</label>
+                <input type="text" ng-model="scriptFilter">
+            </md-input-container>
             <md-button class="add-button md-icon-button"
                 aria-label="Add Script"
                 ng-click="openScriptDialog()">
@@ -53,9 +67,9 @@
             </md-button>
         </md-subheader>
 
-        <md-list>
+        <md-list class="script-list scroll">
             <md-list-item class="md-2-line"
-                ng-repeat="script in scripts"
+                ng-repeat="script in scripts | filter:scriptFilter"
                 ng-click="loadScript(script)">
                 <md-list-item-text>
                     <h4>{{ script.title }}</h4>
@@ -108,7 +122,7 @@
         <md-toolbar class="md-theme-light">
             <h1 class="md-toolbar-tools">Incoming Texts</h1>
         </md-toolbar>
-        <md-list>
+        <md-list class="incoming-list scroll">
             <md-list-item class="md-3-line"
                 ng-repeat="text in incoming">
 
