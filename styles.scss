@@ -62,6 +62,12 @@ md-list.scroll {
     overflow: auto;
 }
 
+.nav-menu {
+    .md-button ng-md-icon {
+        margin-right: 5px;
+    }
+}
+
 .md-select-menu-container {
     background-color: #fff;
     md-option {

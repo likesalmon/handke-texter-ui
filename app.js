@@ -9,6 +9,7 @@ var ngMdIcons = require('angular-material-icons');
 var socketIo = require('./node_modules/angular-socket-io/socket.js');
 var Login = require('./Login');
 var Texter = require('./Texter');
+var Messages = require('./Messages');
 
 angular.module('handkeTexter', [
         'ngResource',
@@ -19,7 +20,8 @@ angular.module('handkeTexter', [
         'ui.router',
         'btford.socket-io',
         Texter.name,
-        Login.name
+        Login.name,
+        Messages.name
     ])
     .constant('API', {
         protocol: 'http',
@@ -56,6 +58,21 @@ angular.module('handkeTexter', [
                     url: '/texter',
                     template: require('./Texter/texter.html'),
                     controller: 'TexterCtrl'
+                })
+                .state('messages', {
+                    url: '/messages',
+                    template: require('./Messages/messages.html'),
+                    controller: 'MessagesCtrl'
+                })
+                .state('messages.images', {
+                    url: '/messages/images',
+                    template: require('./Messages/messages.html'),
+                    controller: 'MessagesCtrl'
+                })
+                .state('messages.text', {
+                    url: '/messages.text',
+                    template: require('./Messages/messages.html'),
+                    controller: 'MessagesCtrl'
                 });
 
 
@@ -91,5 +108,42 @@ angular.module('handkeTexter', [
 
             handkeSocket.forward('error');
             return handkeSocket;
+        }
+    ])
+    .controller('Navigation', [
+        '$scope',
+        function ($scope) {
+            $scope.navItems = [
+                {
+                    name: 'Texter',
+                    icon: 'messenger',
+                    sref: 'texter'
+                },
+                {
+                    name: 'All Texts',
+                    icon: 'forum',
+                    sref: 'messages'
+                },
+                {
+                    name: 'Just Images',
+                    icon: 'photo',
+                    sref: 'messages.images'
+                },
+                {
+                    name: 'Just Words',
+                    icon: 'message',
+                    sref: 'messages.text'
+                },
+                {
+                    name: 'Admin',
+                    icon: 'settings',
+                    sref: 'texter'
+                },
+                {
+                    name: 'Logout',
+                    icon: 'logout',
+                    sref: 'logout'
+                }
+            ];
         }
     ]);
