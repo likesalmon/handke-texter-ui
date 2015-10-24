@@ -1,13 +1,18 @@
 module.exports = [
-    'handkeSocket',
+    'HandkeSocket',
+    '$rootScope',
     '$scope',
     function (
-        handkeSocket,
+        HandkeSocket,
+        $rootScope,
         $scope
     ) {
+        $rootScope.showNav = false;
+        $scope.showNav = $rootScope.showNav;
+
         $scope.incoming = [];
 
-        handkeSocket.forward('incoming', $scope);
+        HandkeSocket.forward('incoming', $scope);
         $scope.$on('socket:incoming', function (event, data) {
             data.timestamp = new Date();
 

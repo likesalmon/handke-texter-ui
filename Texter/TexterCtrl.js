@@ -1,6 +1,6 @@
 module.exports = [
     'Contact',
-    'handkeSocket',
+    'HandkeSocket',
     '$log',
     '$mdDialog',
     '$mdSidenav',
@@ -10,7 +10,7 @@ module.exports = [
     'Text',
     function TexterCtrl (
         Contact,
-        handkeSocket,
+        HandkeSocket,
         $log,
         $mdDialog,
         $mdSidenav,
@@ -51,12 +51,12 @@ module.exports = [
                 $log.error('socket:error', data);
             });
 
-            handkeSocket.forward('connection', $scope);
+            HandkeSocket.forward('connection', $scope);
             $scope.$on('socket:connection', function (ev, data) {
                 $log.log('socket:connection');
             });
 
-            handkeSocket.forward('incoming', $scope);
+            HandkeSocket.forward('incoming', $scope);
             $scope.$on('socket:incoming', function (event, data) {
                 data.timestamp = new Date();
 
@@ -74,7 +74,7 @@ module.exports = [
                 $scope.incoming.push(data);
             });
 
-            handkeSocket.forward('contact:new', $scope);
+            HandkeSocket.forward('contact:new', $scope);
             $scope.$on('socket:contact:new', function (event, data) {
                 $scope.contacts.push(data);
             });

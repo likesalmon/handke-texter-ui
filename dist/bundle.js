@@ -52,10 +52,10 @@
 	var material = __webpack_require__(11);
 	var uiRouter = __webpack_require__(17);
 	var ngMdIcons = __webpack_require__(18);
-	var socketIo = __webpack_require__(20);
-	var Login = __webpack_require__(21);
-	var Texter = __webpack_require__(23);
-	var Messages = __webpack_require__(35);
+	var Common = __webpack_require__(36);
+	var Login = __webpack_require__(20);
+	var Texter = __webpack_require__(22);
+	var Messages = __webpack_require__(31);
 
 	angular.module('handkeTexter', [
 	        'ngResource',
@@ -64,17 +64,11 @@
 	        'ngMessages',
 	        'ngMdIcons',
 	        'ui.router',
-	        'btford.socket-io',
+	        Common.name,
 	        Texter.name,
 	        Login.name,
 	        Messages.name
 	    ])
-	    .constant('API', {
-	        protocol: 'http',
-	        ip: '45.55.27.217',
-	        port: '8000'
-	    })
-	    .constant('GROUPS', ['A','B','C','D'])
 	    .config([
 	        '$locationProvider',
 	        '$stateProvider',
@@ -97,102 +91,46 @@
 	            $stateProvider
 	                .state('login', {
 	                    url: '/login',
-	                    template: __webpack_require__(32),
+	                    template: __webpack_require__(33),
 	                    controller: 'LoginCtrl'
 	                })
 	                .state('texter', {
 	                    url: '/texter',
-	                    template: __webpack_require__(33),
+	                    template: __webpack_require__(34),
 	                    controller: 'TexterCtrl'
 	                })
 	                .state('messages', {
 	                    url: '/messages',
-	                    template: __webpack_require__(34),
+	                    template: __webpack_require__(35),
 	                    controller: 'MessagesCtrl'
 	                })
 	                .state('messages.images', {
 	                    url: '/messages/images',
-	                    template: __webpack_require__(34),
+	                    template: __webpack_require__(35),
 	                    controller: 'MessagesCtrl'
 	                })
 	                .state('messages.text', {
 	                    url: '/messages.text',
-	                    template: __webpack_require__(34),
+	                    template: __webpack_require__(35),
 	                    controller: 'MessagesCtrl'
 	                });
 
 
 	        }
 	    ])
-	    .factory('Helper', [
-	        'API',
-	        '$window',
-	        function (API, $window) {
-	            return {
-	                getAPIUrl: function () {
-	                    var url = '';
-
-	                    if (/localhost/.test($window.location.href)) {
-	                        url = API.protocol + '://localhost:' + API.port;
-	                    } else {
-	                        url = API.protocol + '://' + API.ip + ':' + API.port;
-	                    }
-
-	                    return url;
-	                }
-	            };
-	        }
-	    ])
-	    .factory('handkeSocket', [
-	        'Helper',
-	        'socketFactory',
-	        '$window',
-	        function (Helper, socketFactory, $window) {
-	            var handkeSocket = socketFactory({
-	                ioSocket: io.connect(Helper.getAPIUrl())
-	            });
-
-	            handkeSocket.forward('error');
-	            return handkeSocket;
-	        }
-	    ])
-	    .controller('Navigation', [
-	        '$scope',
-	        function ($scope) {
-	            $scope.navItems = [
-	                {
-	                    name: 'Texter',
-	                    icon: 'messenger',
-	                    sref: 'texter'
-	                },
-	                {
-	                    name: 'All Texts',
-	                    icon: 'forum',
-	                    sref: 'messages'
-	                },
-	                {
-	                    name: 'Just Images',
-	                    icon: 'photo',
-	                    sref: 'messages.images'
-	                },
-	                {
-	                    name: 'Just Words',
-	                    icon: 'message',
-	                    sref: 'messages.text'
-	                },
-	                {
-	                    name: 'Admin',
-	                    icon: 'settings',
-	                    sref: 'texter'
-	                },
-	                {
-	                    name: 'Logout',
-	                    icon: 'logout',
-	                    sref: 'logout'
-	                }
-	            ];
-	        }
-	    ]);
+	    .run(['$rootScope', function ($rootScope) {
+	        // Some controllers, like Messages, hide the nav bar.
+	        // This resets showNav.
+	        $rootScope.$on('$stateChangeStart', function () {
+	            $rootScope.showNav = true;
+	        });
+	    }])
+	    .constant('API', {
+	        protocol: 'http',
+	        ip: '45.55.27.217',
+	        port: '8000'
+	    })
+	    .constant('GROUPS', ['A','B','C','D']);
 
 
 /***/ },
@@ -63113,6 +63051,613 @@
 
 /***/ },
 /* 20 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var angular = __webpack_require__(5);
+
+	module.exports = angular.module('Login', [])
+	        .controller('LoginCtrl', __webpack_require__(21));
+
+
+/***/ },
+/* 21 */
+/***/ function(module, exports) {
+
+	module.exports = [
+	    '$scope',
+	    function LoginCtrl ($scope) {
+	        $scope.credentials = {};
+	    }
+	];
+
+
+/***/ },
+/* 22 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var angular = __webpack_require__(5);
+
+	module.exports = angular.module('Texter', [])
+	    .controller('TexterCtrl', __webpack_require__(23))
+	    .controller('ContactDialogCtrl', __webpack_require__(26))
+	    .controller('ScriptDialogCtrl', __webpack_require__(27))
+	    .service('Text', __webpack_require__(28))
+	    .factory('Contact', __webpack_require__(29))
+	    .factory('Script', __webpack_require__(30));
+
+
+/***/ },
+/* 23 */
+/***/ function(module, exports, __webpack_require__) {
+
+	module.exports = [
+	    'Contact',
+	    'HandkeSocket',
+	    '$log',
+	    '$mdDialog',
+	    '$mdSidenav',
+	    '$mdToast',
+	    '$scope',
+	    'Script',
+	    'Text',
+	    function TexterCtrl (
+	        Contact,
+	        HandkeSocket,
+	        $log,
+	        $mdDialog,
+	        $mdSidenav,
+	        $mdToast,
+	        $scope,
+	        Script,
+	        Text
+	    ) {
+	        $scope.init = function () {
+	            $scope.contacts = Contact.query();
+	            $scope.contactGroups = [
+	                {
+	                    name: 'A',
+	                    selected: false
+	                },
+	                {
+	                    name: 'B',
+	                    selected: false
+	                },
+	                {
+	                    name: 'C',
+	                    selected: false
+	                },
+	                {
+	                    name: 'D',
+	                    selected: false
+	                }
+	            ];
+
+	            $scope.incoming = [];
+
+	            $scope.scripts = Script.query();
+	            $scope.scriptFilter = '';
+
+	            $scope.outgoing = {};
+
+	            $scope.$on('socket:error', function (ev, data) {
+	                $log.error('socket:error', data);
+	            });
+
+	            HandkeSocket.forward('connection', $scope);
+	            $scope.$on('socket:connection', function (ev, data) {
+	                $log.log('socket:connection');
+	            });
+
+	            HandkeSocket.forward('incoming', $scope);
+	            $scope.$on('socket:incoming', function (event, data) {
+	                data.timestamp = new Date();
+
+	                // divide media into an array
+	                if (parseInt(data.NumMedia)) {
+	                    data.images = [];
+
+	                    for (var i = 0; i < parseInt(data.NumMedia); i++) {
+	                        data.images.push({
+	                            type: data['MediaContentType' + i],
+	                            url: data['MediaUrl' + i]
+	                        });
+	                    }
+	                }
+	                $scope.incoming.push(data);
+	            });
+
+	            HandkeSocket.forward('contact:new', $scope);
+	            $scope.$on('socket:contact:new', function (event, data) {
+	                $scope.contacts.push(data);
+	            });
+	        };
+
+	        /**
+	         * Populate the outgoing textarea with the selected script
+	         */
+	        $scope.loadScript = function (script) {
+	            $scope.outgoing.text = script.content;
+	        };
+
+	        /**
+	         * Send a text to an array of numbers
+	         */
+	        $scope.send = function () {
+	            var phoneNumbers = $scope.contacts
+	                .filter(function (contact) {
+	                    return contact.selected;
+	                })
+	                .map(function (contact) {
+	                    return contact.phone;
+	                });
+
+	            if (!phoneNumbers.length) {
+	                return $mdToast.show(
+	                  $mdToast.simple()
+	                    .content('Please select a contact')
+	                    .hideDelay(3000)
+	                );
+	            }
+
+	            if (!$scope.outgoing.text) {
+	                return $mdToast.show(
+	                  $mdToast.simple()
+	                    .content('Please enter some text')
+	                    .hideDelay(3000)
+	                );
+	            }
+
+	            var text = {
+	                to: phoneNumbers,
+	                body: $scope.outgoing.text
+	            };
+
+	            Text.save(text, function (response) {
+	                return $mdToast.show(
+	                  $mdToast.simple()
+	                    .content('Your text was sent')
+	                    .hideDelay(3000)
+	                );
+	            });
+	        };
+
+	        /**
+	         * Open or close the incoming texts sidebar
+	         */
+	        $scope.toggleIncoming = function () {
+	            $mdSidenav('incoming').toggle();
+	        };
+
+
+
+	        /*************
+	            Contacts
+	        **************/
+	        $scope.selectGroup = function (contacts, group) {
+	            group.selected = !group.selected;
+
+	            contacts.filter(function (contact) {
+	                return contact.group === group.name;
+	            })
+	            .forEach(function (contact) {
+	                contact.selected = group.selected;
+	            });
+	        };
+
+	        $scope.openContactDialog = function (contact) {
+	            $mdDialog.show({
+	                controller: 'ContactDialogCtrl',
+	                template: __webpack_require__(24),
+	                parent: angular.element(document.body),
+	                clickOutsideToClose: true,
+	                locals: {
+	                    contact: contact || null
+	                },
+	                bindToController: true
+	            })
+	            .then(function (results) {
+	                var actions = {
+	                    save: function () {
+	                        Contact.save(results.contact, function () {
+	                            $scope.contacts = Contact.query();
+	                        });
+	                    },
+	                    remove: function () {
+	                        Contact.delete(results.contact, function () {
+	                            $scope.contacts = Contact.query();
+	                        });
+	                    },
+	                    update: function () {
+	                        Contact.update(results.contact, function () {
+	                            $scope.contacts = Contact.query();
+	                        });
+	                    }
+	                };
+
+	                actions[results.action]();
+	            });
+	        };
+
+	        /*************
+	            Scripts
+	        **************/
+	        $scope.openScriptDialog = function (script) {
+	            $mdDialog.show({
+	                controller: 'ScriptDialogCtrl',
+	                template: __webpack_require__(25),
+	                parent: angular.element(document.body),
+	                clickOutsideToClose: true,
+	                locals: {
+	                    script: script || null
+	                },
+	                bindToController: true
+	            })
+	            .then(function (results) {
+	                var actions = {
+	                    save: function () {
+	                        Script.save(results.script, function () {
+	                            $scope.scripts = Script.query();
+	                        });
+	                    },
+	                    remove: function () {
+	                        Script.delete(results.script, function (scripts) {
+	                            $scope.scripts = Script.query();
+	                        });
+	                    },
+	                    update: function () {
+	                        Script.update(results.script, function () {
+	                            $scope.scripts = Script.query();
+	                        });
+	                    }
+	                };
+
+	                actions[results.action]();
+	            });
+	        };
+
+	        $scope.init();
+	    }
+	];
+
+
+/***/ },
+/* 24 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <form name=\"contactForm\" ng-submit=\"save()\" novalidate>\n            <md-input-container>\n                <label>Name</label>\n                <input name=\"name\"\n                    ng-model=\"contact.name\"\n                    required\n                    type=\"text\">\n                <div ng-messages=\"contactForm.name.$error\"\n                    ng-show=\"contactForm.name.$touched\">\n                    <div ng-message=\"required\">\n                        Name is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <md-input-container>\n                <label>Phone</label>\n                <input name=\"phone\"\n                    ng-model=\"contact.phone\"\n                    ng-pattern=\"/\\+\\d{10}/\"\n                    required\n                    type=\"tel\"></textarea>\n                <div ng-messages=\"contactForm.phone.$error\"\n                    ng-show=\"contactForm.phone.$touched\">\n                    <div ng-message=\"required\">\n                        Phone is required.\n                    </div>\n                    <div ng-message=\"pattern\">\n                        Phone must be in the format \"+1234567890\".\n                    </div>\n                </div>\n            </md-input-container>\n            <md-input-container>\n                <label>Group</label>\n                <md-select name=\"group\"\n                    ng-model=\"contact.group\">\n                    <md-option ng-repeat=\"group in groups\"\n                        value=\"{{ group }}\">\n                        {{ group }}\n                    </md-option>\n                </md-select>\n                <div ng-messages=\"contactForm.group.$error\"\n                    ng-show=\"contactForm.phone.$touched\">\n                    <div ng-message=\"required\">\n                        Group is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <div class=\"md-actions\">\n                <md-button class=\"md-raised\"\n                    ng-if=\"!contact.id\"\n                    type=\"submit\"\n                    ng-disabled=\"contactForm.$error.required[0].$invalid\">\n                    Save\n                </md-button>\n                <md-button ng-if=\"contact.id\"\n                    ng-click=\"remove()\"\n                    type=\"button\">Remove</md-button>\n                <md-button class=\"md-raised\"\n                    ng-if=\"contact.id\"\n                    type=\"submit\"\n                    ng-disabled=\"contactForm.$error.required[0].$invalid\">\n                    Update\n                </md-button>\n            </div>\n        </form>\n    </md-dialog-content>\n</md-dialog>\n"
+
+/***/ },
+/* 25 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <form name=\"scriptForm\" ng-submit=\"save()\" novalidate>\n            <md-input-container>\n                <label>Title</label>\n                <input name=\"title\"\n                    type=\"text\"\n                    ng-model=\"script.title\"\n                    required>\n                <div ng-messages=\"scriptForm.title.$error\"\n                    ng-show=\"scriptForm.title.$touched\">\n                    <div ng-message=\"required\">\n                        Title is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <md-input-container>\n                <label>Text</label>\n                <textarea name=\"text\"\n                    ng-model=\"script.content\"\n                    required></textarea>\n                <div ng-messages=\"scriptForm.content.$error\"\n                    ng-show=\"scriptForm.content.$touched\">\n                    <div ng-message=\"required\">\n                        Text is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <div class=\"md-actions\">\n                <md-button class=\"md-raised\"\n                    ng-if=\"!script.id\"\n                    type=\"submit\"\n                    ng-disabled=\"scriptForm.$error.required[0].$invalid\">\n                    Save\n                </md-button>\n                <md-button ng-if=\"script.id\"\n                    ng-click=\"remove()\"\n                    type=\"button\">Remove</md-button>\n                <md-button class=\"md-raised\"\n                    ng-if=\"script.id\"\n                    type=\"submit\"\n                    ng-disabled=\"scriptForm.$error.required[0].$invalid\">\n                    Update\n                </md-button>\n            </div>\n        </form>\n    </md-dialog-content>\n</md-dialog>\n"
+
+/***/ },
+/* 26 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    'GROUPS',
+	    '$mdDialog',
+	    '$scope',
+	    function (
+	        GROUPS,
+	        $mdDialog,
+	        $scope
+	    ) {
+	        var self = this;
+	        $scope.init = function () {
+	            $scope.groups = GROUPS;
+
+	            $scope.contact = self.contact;
+	        };
+
+	        $scope.cancel = function () {
+	            $mdDialog.cancel();
+	        };
+
+	        $scope.save = function () {
+	            // if the contact has an id update it
+	            if ($scope.contact.id) {
+	                $mdDialog.hide({
+	                    action: 'update',
+	                    contact: $scope.contact
+	                });
+	            } else {
+	                // otherwise save a new contact
+	                $mdDialog.hide({
+	                    action: 'save',
+	                    contact: $scope.contact
+	                });
+	            }
+	        };
+
+	        $scope.remove = function () {
+	            $mdDialog.hide({
+	                action: 'remove',
+	                contact: $scope.contact
+	            });
+	        };
+
+	        $scope.init();
+	    }
+	];
+
+
+/***/ },
+/* 27 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    '$mdDialog',
+	    '$scope',
+	    function (
+	        $mdDialog,
+	        $scope
+	    ) {
+	        var self = this;
+
+	        $scope.init = function () {
+	            if (self.script) {
+	                $scope.script = self.script;
+	            }
+	        };
+
+	        $scope.cancel = function () {
+	            $mdDialog.cancel();
+	        };
+
+	        $scope.save = function () {
+	            if ($scope.script.id) {
+	                $mdDialog.hide({
+	                    action: 'update',
+	                    script: $scope.script
+	                });
+	            } else {
+	                $mdDialog.hide({
+	                    action: 'save',
+	                    script: $scope.script
+	                });
+	            }
+	        };
+
+	        $scope.remove = function () {
+	            $mdDialog.hide({
+	                action: 'remove',
+	                script: $scope.script
+	            });
+	        };
+
+	        $scope.init();
+	    }
+	];
+
+
+/***/ },
+/* 28 */
+/***/ function(module, exports) {
+
+	module.exports = [
+	    '$resource',
+	    'Helper',
+	    '$window',
+	    function ($resource, Helper, $window) {
+	        return $resource(Helper.getAPIUrl() + '/api/sms/send');
+	    }
+	];
+
+
+/***/ },
+/* 29 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    'Helper',
+	    '$resource',
+	    '$window',
+	    function (Helper, $resource, $window) {
+	        return $resource(Helper.getAPIUrl() + '/api/contacts/:id',
+	            {
+	                id: '@id'
+	            },
+	            {
+	                update: {
+	                    method: 'PUT'
+	                }
+	            }
+	        );
+	    }
+	];
+
+
+/***/ },
+/* 30 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    'Helper',
+	    '$resource',
+	    '$window',
+	    function (Helper, $resource, $window) {
+	        return $resource(Helper.getAPIUrl() + '/api/scripts/:id',
+	            {
+	                id: '@id'
+	            },
+	            {
+	                update: {
+	                    method: 'PUT'
+	                }
+	            }
+	        );
+	    }
+	];
+
+
+/***/ },
+/* 31 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var angular = __webpack_require__(5);
+
+	module.exports = angular.module('Messages', [])
+	    .controller('MessagesCtrl', __webpack_require__(32));
+
+
+/***/ },
+/* 32 */
+/***/ function(module, exports) {
+
+	module.exports = [
+	    'HandkeSocket',
+	    '$rootScope',
+	    '$scope',
+	    function (
+	        HandkeSocket,
+	        $rootScope,
+	        $scope
+	    ) {
+	        $rootScope.showNav = false;
+	        $scope.showNav = $rootScope.showNav;
+
+	        $scope.incoming = [];
+
+	        HandkeSocket.forward('incoming', $scope);
+	        $scope.$on('socket:incoming', function (event, data) {
+	            data.timestamp = new Date();
+
+	            // divide media into an array
+	            if (parseInt(data.NumMedia)) {
+	                data.images = [];
+
+	                for (var i = 0; i < parseInt(data.NumMedia); i++) {
+	                    data.images.push({
+	                        type: data['MediaContentType' + i],
+	                        url: data['MediaUrl' + i]
+	                    });
+	                }
+	            }
+	            $scope.incoming.push(data);
+	        });
+	    }
+	];
+
+
+/***/ },
+/* 33 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-content layout=\"column\" flex=\"33\" flex-offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login()\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"credentials.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"credentials.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
+
+/***/ },
+/* 34 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-content class=\"texter\" layout=\"row\" flex>\n    <div class=\"contacts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Contacts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Contact\"\n                ng-click=\"openContactDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n            <span class=\"count\">{{ contacts.length }}</span>\n            <md-input-container class=\"list-filter\">\n                <label>Search Contacts</label>\n                <input type=\"text\" ng-model=\"contactFilter\">\n            </md-input-container>\n            <div class=\"groups\">\n                <md-button class=\"md-fab md-mini\"\n                    ng-class=\"{ 'md-accent md-hue-2': group.selected }\"\n                    ng-repeat=\"group in contactGroups\"\n                    ng-click=\"selectGroup(contacts, group)\">\n                    {{ group.name }}\n                </md-button>\n            </div>\n        </md-subheader>\n\n        <md-list class=\"contact-list scroll\">\n            <md-list-item\n                ng-repeat=\"contact in contacts |\n                    orderBy:['group', 'name'] |\n                    filter:contactFilter\"\n            >\n                <div class=\"md-avatar group\">\n                    {{ contact.group }}\n                </div>\n\n                <md-list-item-text flex=\"70\" layout=\"row\"\n                    layout-align=\"start center\">\n                    <div flex>\n                        <h4>{{ contact.name | limitTo:35 }}</h4>\n                        <p>{{ contact.phone }}</p>\n                        <p>\n                            <md-button class=\"edit-button md-accent md-mini\"\n                                ng-click=\"openContactDialog(contact)\">\n                                <ng-md-icon icon=\"edit\"\n                                    style=\"fill: #FF9800\"\n                                    size=\"17\"></ng-md-icon>\n                                Edit\n                            </md-button>\n                        </p>\n                    </div>\n\n                    <div flex=\"10\">\n                        <md-checkbox class=\"md-accent\"\n                            ng-model=\"contact.selected\"></md-checkbox>\n                    </div>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"scripts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Scripts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Script\"\n                ng-click=\"openScriptDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n            <span class=\"count\">{{ scripts.length }}</span>\n            <md-input-container class=\"list-filter\">\n                <label>Search Scripts</label>\n                <input type=\"text\" ng-model=\"scriptFilter\">\n            </md-input-container>\n        </md-subheader>\n\n        <md-list class=\"script-list scroll\">\n            <md-list-item class=\"md-2-line\"\n                ng-repeat=\"script in scripts | filter:scriptFilter\"\n                ng-click=\"loadScript(script)\">\n                <md-list-item-text>\n                    <h4>{{ script.title | limitTo:35 }}</h4>\n                    <p>\n                        {{ script.content | limitTo:35 }}\n                        <md-button class=\"edit-button md-accent md-mini\"\n                            ng-click=\"openScriptDialog(script)\">\n                            <ng-md-icon icon=\"edit\"\n                                style=\"fill: #FF9800\"\n                                size=\"17\"></ng-md-icon>\n                            Edit\n                        </md-button>\n                    </p>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"outgoing\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Outgoing\n        </md-subheader>\n\n        <md-content layout-padding>\n            <form name=\"outgoingForm\" ng-submit=\"send()\">\n                <md-input-container>\n                    <label for=\"text\">Text</label>\n                    <textarea name=\"text\" ng-model=\"outgoing.text\">\n                    </textarea>\n                </md-input-container>\n\n                <md-button class=\"md-accent\"\n                    type=\"submit\">Send</md-button>\n            </form>\n        </md-content>\n\n        <md-button class=\"incoming-toggle\"\n            ng-click=\"toggleIncoming()\">\n                <ng-md-icon icon=\"chevron_left\"\n                    style=\"fill: #fff\"\n                    size=\"17\"></ng-md-icon>\n                {{ incoming.length }} Incoming\n        </md-button>\n    </div>\n\n    <md-sidenav class=\"md-sidenav-right md-whiteframe-z2\"\n        md-component-id=\"incoming\">\n        <md-toolbar class=\"md-theme-light\">\n            <h1 class=\"md-toolbar-tools\">Incoming Texts</h1>\n        </md-toolbar>\n        <md-list class=\"incoming-list scroll\">\n            <md-list-item class=\"md-3-line\"\n                ng-repeat=\"text in incoming\">\n\n                <div class=\"md-avatar group\">\n                    {{ text.contact.group }}\n                </div>\n\n                <div class=\"md-list-item-text\" layout=\"column\">\n                    <h3>\n                        {{ text.contact.name }}\n                    </h3>\n                    <p>{{ text.createdAt | date:'short' }}</p>\n                    <div class=\"images\" ng-show=\"text.images.length\">\n                        <div class=\"image\"\n                            ng-repeat=\"image in text.images\">\n                            <img ng-src=\"{{ image.url }}\" alt=\"Media\">\n                        </div>\n                    </div>\n                    <p>{{ text.body }}</p>\n                </div>\n            </md-list-item>\n        </md-list>\n    </md-sidenav>\n</md-content>\n"
+
+/***/ },
+/* 35 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-list class=\"incoming-list scroll\">\n    <md-list-item ng-repeat=\"text in incoming\">\n        <div class=\"md-list-item-text\" layout=\"column\">\n            <h3>\n                {{ text.contact.name }}\n            </h3>\n            <p>{{ text.createdAt | date:'short' }}</p>\n            <div class=\"images\" ng-show=\"text.images.length\">\n                <div class=\"image\"\n                    ng-repeat=\"image in text.images\">\n                    <img ng-src=\"{{ image.url }}\" alt=\"Media\">\n                </div>\n            </div>\n            <p>{{ text.body }}</p>\n        </div>\n    </md-list-item>\n</md-list>\n"
+
+/***/ },
+/* 36 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var angular = __webpack_require__(5);
+	// io is available on the global scope
+	__webpack_require__(39);
+
+	module.exports = angular.module('Common', ['btford.socket-io'])
+	    .controller('NavigationCtrl', __webpack_require__(37))
+	    .factory('Helper', __webpack_require__(38))
+	    .factory('HandkeSocket', __webpack_require__(40));
+
+
+/***/ },
+/* 37 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    '$scope',
+	    function ($scope) {
+	        $scope.navItems = [
+	            {
+	                name: 'Texter',
+	                icon: 'messenger',
+	                sref: 'texter'
+	            },
+	            {
+	                name: 'All Texts',
+	                icon: 'forum',
+	                sref: 'messages'
+	            },
+	            {
+	                name: 'Just Images',
+	                icon: 'photo',
+	                sref: 'messages.images'
+	            },
+	            {
+	                name: 'Just Words',
+	                icon: 'message',
+	                sref: 'messages.text'
+	            },
+	            {
+	                name: 'Admin',
+	                icon: 'settings',
+	                sref: 'texter'
+	            },
+	            {
+	                name: 'Logout',
+	                icon: 'logout',
+	                sref: 'logout'
+	            }
+	        ];
+	    }
+	];
+
+
+/***/ },
+/* 38 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    'API',
+	    '$window',
+	    function (API, $window) {
+	        return {
+	            getAPIUrl: function () {
+	                var url = '';
+
+	                if (/localhost/.test($window.location.href)) {
+	                    url = API.protocol + '://localhost:' + API.port;
+	                } else {
+	                    url = API.protocol + '://' + API.ip + ':' + API.port;
+	                }
+
+	                return url;
+	            }
+	        };
+	    }
+	];
+
+
+/***/ },
+/* 39 */
 /***/ function(module, exports) {
 
 	/*
@@ -63221,515 +63766,25 @@
 
 
 /***/ },
-/* 21 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var angular = __webpack_require__(5);
-
-	module.exports = angular.module('Login', [])
-	        .controller('LoginCtrl', __webpack_require__(22));
-
-
-/***/ },
-/* 22 */
-/***/ function(module, exports) {
-
-	module.exports = [
-	    '$scope',
-	    function LoginCtrl ($scope) {
-	        $scope.credentials = {};
-	    }
-	];
-
-
-/***/ },
-/* 23 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var angular = __webpack_require__(5);
-
-	module.exports = angular.module('Texter', [])
-	    .controller('TexterCtrl', __webpack_require__(24))
-	    .controller('ContactDialogCtrl', __webpack_require__(27))
-	    .controller('ScriptDialogCtrl', __webpack_require__(28))
-	    .service('Text', __webpack_require__(29))
-	    .factory('Contact', __webpack_require__(30))
-	    .factory('Script', __webpack_require__(31));
-
-
-/***/ },
-/* 24 */
-/***/ function(module, exports, __webpack_require__) {
-
-	module.exports = [
-	    'Contact',
-	    'handkeSocket',
-	    '$log',
-	    '$mdDialog',
-	    '$mdSidenav',
-	    '$mdToast',
-	    '$scope',
-	    'Script',
-	    'Text',
-	    function TexterCtrl (
-	        Contact,
-	        handkeSocket,
-	        $log,
-	        $mdDialog,
-	        $mdSidenav,
-	        $mdToast,
-	        $scope,
-	        Script,
-	        Text
-	    ) {
-	        $scope.init = function () {
-	            $scope.contacts = Contact.query();
-	            $scope.contactGroups = [
-	                {
-	                    name: 'A',
-	                    selected: false
-	                },
-	                {
-	                    name: 'B',
-	                    selected: false
-	                },
-	                {
-	                    name: 'C',
-	                    selected: false
-	                },
-	                {
-	                    name: 'D',
-	                    selected: false
-	                }
-	            ];
-
-	            $scope.incoming = [];
-
-	            $scope.scripts = Script.query();
-	            $scope.scriptFilter = '';
-
-	            $scope.outgoing = {};
-
-	            $scope.$on('socket:error', function (ev, data) {
-	                $log.error('socket:error', data);
-	            });
-
-	            handkeSocket.forward('connection', $scope);
-	            $scope.$on('socket:connection', function (ev, data) {
-	                $log.log('socket:connection');
-	            });
-
-	            handkeSocket.forward('incoming', $scope);
-	            $scope.$on('socket:incoming', function (event, data) {
-	                data.timestamp = new Date();
-
-	                // divide media into an array
-	                if (parseInt(data.NumMedia)) {
-	                    data.images = [];
-
-	                    for (var i = 0; i < parseInt(data.NumMedia); i++) {
-	                        data.images.push({
-	                            type: data['MediaContentType' + i],
-	                            url: data['MediaUrl' + i]
-	                        });
-	                    }
-	                }
-	                $scope.incoming.push(data);
-	            });
-
-	            handkeSocket.forward('contact:new', $scope);
-	            $scope.$on('socket:contact:new', function (event, data) {
-	                $scope.contacts.push(data);
-	            });
-	        };
-
-	        /**
-	         * Populate the outgoing textarea with the selected script
-	         */
-	        $scope.loadScript = function (script) {
-	            $scope.outgoing.text = script.content;
-	        };
-
-	        /**
-	         * Send a text to an array of numbers
-	         */
-	        $scope.send = function () {
-	            var phoneNumbers = $scope.contacts
-	                .filter(function (contact) {
-	                    return contact.selected;
-	                })
-	                .map(function (contact) {
-	                    return contact.phone;
-	                });
-
-	            if (!phoneNumbers.length) {
-	                return $mdToast.show(
-	                  $mdToast.simple()
-	                    .content('Please select a contact')
-	                    .hideDelay(3000)
-	                );
-	            }
-
-	            if (!$scope.outgoing.text) {
-	                return $mdToast.show(
-	                  $mdToast.simple()
-	                    .content('Please enter some text')
-	                    .hideDelay(3000)
-	                );
-	            }
-
-	            var text = {
-	                to: phoneNumbers,
-	                body: $scope.outgoing.text
-	            };
-
-	            Text.save(text, function (response) {
-	                return $mdToast.show(
-	                  $mdToast.simple()
-	                    .content('Your text was sent')
-	                    .hideDelay(3000)
-	                );
-	            });
-	        };
-
-	        /**
-	         * Open or close the incoming texts sidebar
-	         */
-	        $scope.toggleIncoming = function () {
-	            $mdSidenav('incoming').toggle();
-	        };
-
-
-
-	        /*************
-	            Contacts
-	        **************/
-	        $scope.selectGroup = function (contacts, group) {
-	            group.selected = !group.selected;
-
-	            contacts.filter(function (contact) {
-	                return contact.group === group.name;
-	            })
-	            .forEach(function (contact) {
-	                contact.selected = group.selected;
-	            });
-	        };
-
-	        $scope.openContactDialog = function (contact) {
-	            $mdDialog.show({
-	                controller: 'ContactDialogCtrl',
-	                template: __webpack_require__(25),
-	                parent: angular.element(document.body),
-	                clickOutsideToClose: true,
-	                locals: {
-	                    contact: contact || null
-	                },
-	                bindToController: true
-	            })
-	            .then(function (results) {
-	                var actions = {
-	                    save: function () {
-	                        Contact.save(results.contact, function () {
-	                            $scope.contacts = Contact.query();
-	                        });
-	                    },
-	                    remove: function () {
-	                        Contact.delete(results.contact, function () {
-	                            $scope.contacts = Contact.query();
-	                        });
-	                    },
-	                    update: function () {
-	                        Contact.update(results.contact, function () {
-	                            $scope.contacts = Contact.query();
-	                        });
-	                    }
-	                };
-
-	                actions[results.action]();
-	            });
-	        };
-
-	        /*************
-	            Scripts
-	        **************/
-	        $scope.openScriptDialog = function (script) {
-	            $mdDialog.show({
-	                controller: 'ScriptDialogCtrl',
-	                template: __webpack_require__(26),
-	                parent: angular.element(document.body),
-	                clickOutsideToClose: true,
-	                locals: {
-	                    script: script || null
-	                },
-	                bindToController: true
-	            })
-	            .then(function (results) {
-	                var actions = {
-	                    save: function () {
-	                        Script.save(results.script, function () {
-	                            $scope.scripts = Script.query();
-	                        });
-	                    },
-	                    remove: function () {
-	                        Script.delete(results.script, function (scripts) {
-	                            $scope.scripts = Script.query();
-	                        });
-	                    },
-	                    update: function () {
-	                        Script.update(results.script, function () {
-	                            $scope.scripts = Script.query();
-	                        });
-	                    }
-	                };
-
-	                actions[results.action]();
-	            });
-	        };
-
-	        $scope.init();
-	    }
-	];
-
-
-/***/ },
-/* 25 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <form name=\"contactForm\" ng-submit=\"save()\" novalidate>\n            <md-input-container>\n                <label>Name</label>\n                <input name=\"name\"\n                    ng-model=\"contact.name\"\n                    required\n                    type=\"text\">\n                <div ng-messages=\"contactForm.name.$error\"\n                    ng-show=\"contactForm.name.$touched\">\n                    <div ng-message=\"required\">\n                        Name is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <md-input-container>\n                <label>Phone</label>\n                <input name=\"phone\"\n                    ng-model=\"contact.phone\"\n                    ng-pattern=\"/\\+\\d{10}/\"\n                    required\n                    type=\"tel\"></textarea>\n                <div ng-messages=\"contactForm.phone.$error\"\n                    ng-show=\"contactForm.phone.$touched\">\n                    <div ng-message=\"required\">\n                        Phone is required.\n                    </div>\n                    <div ng-message=\"pattern\">\n                        Phone must be in the format \"+1234567890\".\n                    </div>\n                </div>\n            </md-input-container>\n            <md-input-container>\n                <label>Group</label>\n                <md-select name=\"group\"\n                    ng-model=\"contact.group\">\n                    <md-option ng-repeat=\"group in groups\"\n                        value=\"{{ group }}\">\n                        {{ group }}\n                    </md-option>\n                </md-select>\n                <div ng-messages=\"contactForm.group.$error\"\n                    ng-show=\"contactForm.phone.$touched\">\n                    <div ng-message=\"required\">\n                        Group is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <div class=\"md-actions\">\n                <md-button class=\"md-raised\"\n                    ng-if=\"!contact.id\"\n                    type=\"submit\"\n                    ng-disabled=\"contactForm.$error.required[0].$invalid\">\n                    Save\n                </md-button>\n                <md-button ng-if=\"contact.id\"\n                    ng-click=\"remove()\"\n                    type=\"button\">Remove</md-button>\n                <md-button class=\"md-raised\"\n                    ng-if=\"contact.id\"\n                    type=\"submit\"\n                    ng-disabled=\"contactForm.$error.required[0].$invalid\">\n                    Update\n                </md-button>\n            </div>\n        </form>\n    </md-dialog-content>\n</md-dialog>\n"
-
-/***/ },
-/* 26 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <form name=\"scriptForm\" ng-submit=\"save()\" novalidate>\n            <md-input-container>\n                <label>Title</label>\n                <input name=\"title\"\n                    type=\"text\"\n                    ng-model=\"script.title\"\n                    required>\n                <div ng-messages=\"scriptForm.title.$error\"\n                    ng-show=\"scriptForm.title.$touched\">\n                    <div ng-message=\"required\">\n                        Title is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <md-input-container>\n                <label>Text</label>\n                <textarea name=\"text\"\n                    ng-model=\"script.content\"\n                    required></textarea>\n                <div ng-messages=\"scriptForm.content.$error\"\n                    ng-show=\"scriptForm.content.$touched\">\n                    <div ng-message=\"required\">\n                        Text is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <div class=\"md-actions\">\n                <md-button class=\"md-raised\"\n                    ng-if=\"!script.id\"\n                    type=\"submit\"\n                    ng-disabled=\"scriptForm.$error.required[0].$invalid\">\n                    Save\n                </md-button>\n                <md-button ng-if=\"script.id\"\n                    ng-click=\"remove()\"\n                    type=\"button\">Remove</md-button>\n                <md-button class=\"md-raised\"\n                    ng-if=\"script.id\"\n                    type=\"submit\"\n                    ng-disabled=\"scriptForm.$error.required[0].$invalid\">\n                    Update\n                </md-button>\n            </div>\n        </form>\n    </md-dialog-content>\n</md-dialog>\n"
-
-/***/ },
-/* 27 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	module.exports = [
-	    'GROUPS',
-	    '$mdDialog',
-	    '$scope',
-	    function (
-	        GROUPS,
-	        $mdDialog,
-	        $scope
-	    ) {
-	        var self = this;
-	        $scope.init = function () {
-	            $scope.groups = GROUPS;
-
-	            $scope.contact = self.contact;
-	        };
-
-	        $scope.cancel = function () {
-	            $mdDialog.cancel();
-	        };
-
-	        $scope.save = function () {
-	            // if the contact has an id update it
-	            if ($scope.contact.id) {
-	                $mdDialog.hide({
-	                    action: 'update',
-	                    contact: $scope.contact
-	                });
-	            } else {
-	                // otherwise save a new contact
-	                $mdDialog.hide({
-	                    action: 'save',
-	                    contact: $scope.contact
-	                });
-	            }
-	        };
-
-	        $scope.remove = function () {
-	            $mdDialog.hide({
-	                action: 'remove',
-	                contact: $scope.contact
-	            });
-	        };
-
-	        $scope.init();
-	    }
-	];
-
-
-/***/ },
-/* 28 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	module.exports = [
-	    '$mdDialog',
-	    '$scope',
-	    function (
-	        $mdDialog,
-	        $scope
-	    ) {
-	        var self = this;
-
-	        $scope.init = function () {
-	            if (self.script) {
-	                $scope.script = self.script;
-	            }
-	        };
-
-	        $scope.cancel = function () {
-	            $mdDialog.cancel();
-	        };
-
-	        $scope.save = function () {
-	            if ($scope.script.id) {
-	                $mdDialog.hide({
-	                    action: 'update',
-	                    script: $scope.script
-	                });
-	            } else {
-	                $mdDialog.hide({
-	                    action: 'save',
-	                    script: $scope.script
-	                });
-	            }
-	        };
-
-	        $scope.remove = function () {
-	            $mdDialog.hide({
-	                action: 'remove',
-	                script: $scope.script
-	            });
-	        };
-
-	        $scope.init();
-	    }
-	];
-
-
-/***/ },
-/* 29 */
-/***/ function(module, exports) {
-
-	module.exports = [
-	    '$resource',
-	    'Helper',
-	    '$window',
-	    function ($resource, Helper, $window) {
-	        return $resource(Helper.getAPIUrl() + '/api/sms/send');
-	    }
-	];
-
-
-/***/ },
-/* 30 */
+/* 40 */
 /***/ function(module, exports) {
 
 	'use strict';
 
 	module.exports = [
 	    'Helper',
-	    '$resource',
+	    'socketFactory',
 	    '$window',
-	    function (Helper, $resource, $window) {
-	        return $resource(Helper.getAPIUrl() + '/api/contacts/:id',
-	            {
-	                id: '@id'
-	            },
-	            {
-	                update: {
-	                    method: 'PUT'
-	                }
-	            }
-	        );
-	    }
-	];
+	    function (Helper, socketFactory, $window) {
 
-
-/***/ },
-/* 31 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	module.exports = [
-	    'Helper',
-	    '$resource',
-	    '$window',
-	    function (Helper, $resource, $window) {
-	        return $resource(Helper.getAPIUrl() + '/api/scripts/:id',
-	            {
-	                id: '@id'
-	            },
-	            {
-	                update: {
-	                    method: 'PUT'
-	                }
-	            }
-	        );
-	    }
-	];
-
-
-/***/ },
-/* 32 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-content layout=\"column\" flex=\"33\" flex-offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login()\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"credentials.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"credentials.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
-
-/***/ },
-/* 33 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-content class=\"texter\" layout=\"row\" flex>\n    <div class=\"contacts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Contacts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Contact\"\n                ng-click=\"openContactDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n            <span class=\"count\">{{ contacts.length }}</span>\n            <md-input-container class=\"list-filter\">\n                <label>Search Contacts</label>\n                <input type=\"text\" ng-model=\"contactFilter\">\n            </md-input-container>\n            <div class=\"groups\">\n                <md-button class=\"md-fab md-mini\"\n                    ng-class=\"{ 'md-accent md-hue-2': group.selected }\"\n                    ng-repeat=\"group in contactGroups\"\n                    ng-click=\"selectGroup(contacts, group)\">\n                    {{ group.name }}\n                </md-button>\n            </div>\n        </md-subheader>\n\n        <md-list class=\"contact-list scroll\">\n            <md-list-item\n                ng-repeat=\"contact in contacts |\n                    orderBy:['group', 'name'] |\n                    filter:contactFilter\"\n            >\n                <div class=\"md-avatar group\">\n                    {{ contact.group }}\n                </div>\n\n                <md-list-item-text flex=\"70\" layout=\"row\"\n                    layout-align=\"start center\">\n                    <div flex>\n                        <h4>{{ contact.name | limitTo:35 }}</h4>\n                        <p>{{ contact.phone }}</p>\n                        <p>\n                            <md-button class=\"edit-button md-accent md-mini\"\n                                ng-click=\"openContactDialog(contact)\">\n                                <ng-md-icon icon=\"edit\"\n                                    style=\"fill: #FF9800\"\n                                    size=\"17\"></ng-md-icon>\n                                Edit\n                            </md-button>\n                        </p>\n                    </div>\n\n                    <div flex=\"10\">\n                        <md-checkbox class=\"md-accent\"\n                            ng-model=\"contact.selected\"></md-checkbox>\n                    </div>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"scripts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Scripts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Script\"\n                ng-click=\"openScriptDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n            <span class=\"count\">{{ scripts.length }}</span>\n            <md-input-container class=\"list-filter\">\n                <label>Search Scripts</label>\n                <input type=\"text\" ng-model=\"scriptFilter\">\n            </md-input-container>\n        </md-subheader>\n\n        <md-list class=\"script-list scroll\">\n            <md-list-item class=\"md-2-line\"\n                ng-repeat=\"script in scripts | filter:scriptFilter\"\n                ng-click=\"loadScript(script)\">\n                <md-list-item-text>\n                    <h4>{{ script.title | limitTo:35 }}</h4>\n                    <p>\n                        {{ script.content | limitTo:35 }}\n                        <md-button class=\"edit-button md-accent md-mini\"\n                            ng-click=\"openScriptDialog(script)\">\n                            <ng-md-icon icon=\"edit\"\n                                style=\"fill: #FF9800\"\n                                size=\"17\"></ng-md-icon>\n                            Edit\n                        </md-button>\n                    </p>\n                </md-list-item-text>\n            </md-list-item>\n        </md-list>\n    </div>\n\n    <div class=\"outgoing\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Outgoing\n        </md-subheader>\n\n        <md-content layout-padding>\n            <form name=\"outgoingForm\" ng-submit=\"send()\">\n                <md-input-container>\n                    <label for=\"text\">Text</label>\n                    <textarea name=\"text\" ng-model=\"outgoing.text\">\n                    </textarea>\n                </md-input-container>\n\n                <md-button class=\"md-accent\"\n                    type=\"submit\">Send</md-button>\n            </form>\n        </md-content>\n\n        <md-button class=\"incoming-toggle\"\n            ng-click=\"toggleIncoming()\">\n                <ng-md-icon icon=\"chevron_left\"\n                    style=\"fill: #fff\"\n                    size=\"17\"></ng-md-icon>\n                {{ incoming.length }} Incoming\n        </md-button>\n    </div>\n\n    <md-sidenav class=\"md-sidenav-right md-whiteframe-z2\"\n        md-component-id=\"incoming\">\n        <md-toolbar class=\"md-theme-light\">\n            <h1 class=\"md-toolbar-tools\">Incoming Texts</h1>\n        </md-toolbar>\n        <md-list class=\"incoming-list scroll\">\n            <md-list-item class=\"md-3-line\"\n                ng-repeat=\"text in incoming\">\n\n                <div class=\"md-avatar group\">\n                    {{ text.contact.group }}\n                </div>\n\n                <div class=\"md-list-item-text\" layout=\"column\">\n                    <h3>\n                        {{ text.contact.name }}\n                    </h3>\n                    <p>{{ text.createdAt | date:'short' }}</p>\n                    <div class=\"images\" ng-show=\"text.images.length\">\n                        <div class=\"image\"\n                            ng-repeat=\"image in text.images\">\n                            <img ng-src=\"{{ image.url }}\" alt=\"Media\">\n                        </div>\n                    </div>\n                    <p>{{ text.body }}</p>\n                </div>\n            </md-list-item>\n        </md-list>\n    </md-sidenav>\n</md-content>\n"
-
-/***/ },
-/* 34 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-list class=\"incoming-list scroll\">\n    <md-list-item ng-repeat=\"text in incoming\">\n        <div class=\"md-list-item-text\" layout=\"column\">\n            <h3>\n                {{ text.contact.name }}\n            </h3>\n            <p>{{ text.createdAt | date:'short' }}</p>\n            <div class=\"images\" ng-show=\"text.images.length\">\n                <div class=\"image\"\n                    ng-repeat=\"image in text.images\">\n                    <img ng-src=\"{{ image.url }}\" alt=\"Media\">\n                </div>\n            </div>\n            <p>{{ text.body }}</p>\n        </div>\n    </md-list-item>\n</md-list>\n"
-
-/***/ },
-/* 35 */
-/***/ function(module, exports, __webpack_require__) {
-
-	var angular = __webpack_require__(5);
-
-	module.exports = angular.module('Messages', [])
-	    .controller('MessagesCtrl', __webpack_require__(36));
-
-
-/***/ },
-/* 36 */
-/***/ function(module, exports) {
-
-	module.exports = [
-	    'handkeSocket',
-	    '$scope',
-	    function (
-	        handkeSocket,
-	        $scope
-	    ) {
-	        $scope.incoming = [];
-
-	        handkeSocket.forward('incoming', $scope);
-	        $scope.$on('socket:incoming', function (event, data) {
-	            data.timestamp = new Date();
-
-	            // divide media into an array
-	            if (parseInt(data.NumMedia)) {
-	                data.images = [];
-
-	                for (var i = 0; i < parseInt(data.NumMedia); i++) {
-	                    data.images.push({
-	                        type: data['MediaContentType' + i],
-	                        url: data['MediaUrl' + i]
-	                    });
-	                }
-	            }
-	            $scope.incoming.push(data);
+	        var handkeSocket = socketFactory({
+	            /* jshint undef: false */
+	            // io is availble on the global scope
+	            ioSocket: io.connect(Helper.getAPIUrl())
 	        });
+
+	        handkeSocket.forward('error');
+	        return handkeSocket;
 	    }
 	];
 
