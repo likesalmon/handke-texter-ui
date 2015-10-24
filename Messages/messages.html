@@ -1,0 +1,17 @@
+<md-list class="incoming-list scroll">
+    <md-list-item ng-repeat="text in incoming">
+        <div class="md-list-item-text" layout="column">
+            <h3>
+                {{ text.contact.name }}
+            </h3>
+            <p>{{ text.createdAt | date:'short' }}</p>
+            <div class="images" ng-show="text.images.length">
+                <div class="image"
+                    ng-repeat="image in text.images">
+                    <img ng-src="{{ image.url }}" alt="Media">
+                </div>
+            </div>
+            <p>{{ text.body }}</p>
+        </div>
+    </md-list-item>
+</md-list>
