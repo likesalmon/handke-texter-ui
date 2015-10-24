@@ -21,6 +21,24 @@ module.exports = [
     ) {
         $scope.init = function () {
             $scope.contacts = Contact.query();
+            $scope.contactGroups = [
+                {
+                    name: 'A',
+                    selected: false
+                },
+                {
+                    name: 'B',
+                    selected: false
+                },
+                {
+                    name: 'C',
+                    selected: false
+                },
+                {
+                    name: 'D',
+                    selected: false
+                }
+            ];
 
             $scope.incoming = [];
 
@@ -123,6 +141,17 @@ module.exports = [
         /*************
             Contacts
         **************/
+        $scope.selectGroup = function (contacts, group) {
+            group.selected = !group.selected;
+
+            contacts.filter(function (contact) {
+                return contact.group === group.name;
+            })
+            .forEach(function (contact) {
+                contact.selected = group.selected;
+            });
+        };
+
         $scope.openContactDialog = function (contact) {
             $mdDialog.show({
                 controller: 'ContactDialogCtrl',

@@ -4,7 +4,6 @@
         flex>
         <md-subheader class="md-no-sticky">
             Contacts
-            <span class="count">{{ contacts.length }}</span>
             <md-button class="add-button md-icon-button"
                 aria-label="Add Contact"
                 ng-click="openContactDialog()">
@@ -12,21 +11,35 @@
                     style="fill: #fff"
                     size="20"></ng-md-icon>
             </md-button>
+            <span class="count">{{ contacts.length }}</span>
             <md-input-container class="list-filter">
                 <label>Search Contacts</label>
                 <input type="text" ng-model="contactFilter">
             </md-input-container>
+            <div class="groups">
+                <md-button class="md-fab md-mini"
+                    ng-class="{ 'md-accent md-hue-2': group.selected }"
+                    ng-repeat="group in contactGroups"
+                    ng-click="selectGroup(contacts, group)">
+                    {{ group.name }}
+                </md-button>
+            </div>
         </md-subheader>
 
         <md-list class="contact-list scroll">
-            <md-list-item ng-repeat="contact in contacts | filter:contactFilter">
+            <md-list-item
+                ng-repeat="contact in contacts |
+                    orderBy:['group', 'name'] |
+                    filter:contactFilter"
+            >
                 <div class="md-avatar group">
                     {{ contact.group }}
                 </div>
 
-                <md-list-item-text flex="70" layout="row" layout-align="start center">
+                <md-list-item-text flex="70" layout="row"
+                    layout-align="start center">
                     <div flex>
-                        <h4>{{ contact.name }}</h4>
+                        <h4>{{ contact.name | limitTo:35 }}</h4>
                         <p>{{ contact.phone }}</p>
                         <p>
                             <md-button class="edit-button md-accent md-mini"
@@ -53,11 +66,6 @@
         flex>
         <md-subheader class="md-no-sticky">
             Scripts
-            <span class="count">{{ scripts.length }}</span>
-            <md-input-container class="list-filter">
-                <label>Search Scripts</label>
-                <input type="text" ng-model="scriptFilter">
-            </md-input-container>
             <md-button class="add-button md-icon-button"
                 aria-label="Add Script"
                 ng-click="openScriptDialog()">
@@ -65,6 +73,11 @@
                     style="fill: #fff"
                     size="20"></ng-md-icon>
             </md-button>
+            <span class="count">{{ scripts.length }}</span>
+            <md-input-container class="list-filter">
+                <label>Search Scripts</label>
+                <input type="text" ng-model="scriptFilter">
+            </md-input-container>
         </md-subheader>
 
         <md-list class="script-list scroll">
@@ -72,9 +85,9 @@
                 ng-repeat="script in scripts | filter:scriptFilter"
                 ng-click="loadScript(script)">
                 <md-list-item-text>
-                    <h4>{{ script.title }}</h4>
+                    <h4>{{ script.title | limitTo:35 }}</h4>
                     <p>
-                        {{ script.content }}
+                        {{ script.content | limitTo:35 }}
                         <md-button class="edit-button md-accent md-mini"
                             ng-click="openScriptDialog(script)">
                             <ng-md-icon icon="edit"
@@ -131,7 +144,9 @@
                 </div>
 
                 <div class="md-list-item-text" layout="column">
-                    <h3>From: {{ text.contact.name }}, {{ text.contact.phone }}</h3>
+                    <h3>
+                        {{ text.contact.name }}
+                    </h3>
                     <p>{{ text.createdAt | date:'short' }}</p>
                     <div class="images" ng-show="text.images.length">
                         <div class="image"
