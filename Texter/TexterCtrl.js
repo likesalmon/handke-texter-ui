@@ -1,6 +1,8 @@
 module.exports = [
+    '$anchorScroll',
     'Contact',
     'HandkeSocket',
+    '$location',
     '$log',
     '$mdDialog',
     '$mdSidenav',
@@ -9,8 +11,10 @@ module.exports = [
     'Script',
     'Text',
     function TexterCtrl (
+        $anchorScroll,
         Contact,
         HandkeSocket,
+        $location,
         $log,
         $mdDialog,
         $mdSidenav,
@@ -40,43 +44,17 @@ module.exports = [
                 }
             ];
 
-            $scope.incoming = [];
+            $scope.incoming = HandkeSocket.messages;
 
             $scope.scripts = Script.query();
             $scope.scriptFilter = '';
 
             $scope.outgoing = {};
 
-            $scope.$on('socket:error', function (ev, data) {
-                $log.error('socket:error', data);
-            });
-
-            HandkeSocket.forward('connection', $scope);
-            $scope.$on('socket:connection', function (ev, data) {
-                $log.log('socket:connection');
-            });
-
-            HandkeSocket.forward('incoming', $scope);
+            HandkeSocket.socket.forward('incoming', $scope);
             $scope.$on('socket:incoming', function (event, data) {
-                data.timestamp = new Date();
-
-                // divide media into an array
-                if (parseInt(data.NumMedia)) {
-                    data.images = [];
-
-                    for (var i = 0; i < parseInt(data.NumMedia); i++) {
-                        data.images.push({
-                            type: data['MediaContentType' + i],
-                            url: data['MediaUrl' + i]
-                        });
-                    }
-                }
-                $scope.incoming.push(data);
-            });
-
-            HandkeSocket.forward('contact:new', $scope);
-            $scope.$on('socket:contact:new', function (event, data) {
-                $scope.contacts.push(data);
+                $location.hash('text-' + ($scope.incoming.length - 1));
+                $anchorScroll();
             });
         };
 

@@ -1,33 +1,25 @@
 module.exports = [
+    '$anchorScroll',
     'HandkeSocket',
+    '$location',
     '$rootScope',
     '$scope',
     function (
+        $anchorScroll,
         HandkeSocket,
+        $location,
         $rootScope,
         $scope
     ) {
         $rootScope.showNav = false;
         $scope.showNav = $rootScope.showNav;
 
-        $scope.incoming = [];
+        $scope.incoming = HandkeSocket.messages;
 
-        HandkeSocket.forward('incoming', $scope);
+        HandkeSocket.socket.forward('incoming', $scope);
         $scope.$on('socket:incoming', function (event, data) {
-            data.timestamp = new Date();
-
-            // divide media into an array
-            if (parseInt(data.NumMedia)) {
-                data.images = [];
-
-                for (var i = 0; i < parseInt(data.NumMedia); i++) {
-                    data.images.push({
-                        type: data['MediaContentType' + i],
-                        url: data['MediaUrl' + i]
-                    });
-                }
-            }
-            $scope.incoming.push(data);
+            $location.hash('text-' + ($scope.incoming.length - 1));
+            $anchorScroll();
         });
     }
 ];

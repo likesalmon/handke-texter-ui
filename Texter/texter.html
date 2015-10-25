@@ -137,7 +137,7 @@
         </md-toolbar>
         <md-list class="incoming-list scroll">
             <md-list-item class="md-3-line"
-                ng-repeat="text in incoming">
+                ng-repeat="text in incoming" id="text-{{ $index }}">
 
                 <div class="md-avatar group">
                     {{ text.contact.group }}

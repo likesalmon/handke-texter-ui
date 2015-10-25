@@ -1,0 +1,38 @@
+.messages {
+    height: 100%;
+    background-color: #fff;
+    color: #333;
+
+    h3, p {
+        margin-bottom: 0;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .message {
+        font-size: 26px;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 15px;
+        box-shadow: 0 0 20px #bbb;
+        max-width: 30%;
+
+        .name {
+            font-weight: bold;
+            color: #bbb;
+            font-size: 18px;
+        }
+
+        &.handke-message {
+            box-shadow: none;
+            align-self: flex-end;
+            color: #333;
+            text-align: right;
+            font-style: italic;
+            font-weight: bold;
+        }
+    }
+}
