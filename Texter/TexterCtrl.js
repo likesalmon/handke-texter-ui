@@ -107,13 +107,6 @@ module.exports = [
             });
         };
 
-        /**
-         * Open or close the incoming texts sidebar
-         */
-        $scope.toggleIncoming = function () {
-            $mdSidenav('incoming').toggle();
-        };
-
 
 
         /*************

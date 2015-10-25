@@ -1,0 +1,20 @@
+<md-list class="incoming-list" flex layout="column">
+    <md-list-item ng-repeat="text in incoming"
+        id="text-{{ $index }}"
+        ng-class="{ 'handke-message': text.contact.name === 'Handke' }"
+        class="message"
+        flex="30">
+        <div class="md-list-item-text">
+            <div class="name" ng-hide="text.contact.name === 'Handke'">
+                {{ text.contact.name }} said,
+            </div>
+            <div>{{ text.body }}</div>
+            <div class="images" ng-show="text.images.length">
+                <div class="image"
+                    ng-repeat="image in text.images">
+                    <img ng-src="{{ image.url }}" alt="Media">
+                </div>
+            </div>
+        </div>
+    </md-list-item>
+</md-list>

@@ -26,39 +26,41 @@
             </div>
         </md-subheader>
 
-        <md-list class="contact-list scroll">
-            <md-list-item
-                ng-repeat="contact in contacts |
-                    orderBy:['group', 'name'] |
-                    filter:contactFilter"
-            >
-                <div class="md-avatar group">
-                    {{ contact.group }}
-                </div>
-
-                <md-list-item-text flex="70" layout="row"
-                    layout-align="start center">
-                    <div flex>
-                        <h4>{{ contact.name | limitTo:35 }}</h4>
-                        <p>{{ contact.phone }}</p>
-                        <p>
-                            <md-button class="edit-button md-accent md-mini"
-                                ng-click="openContactDialog(contact)">
-                                <ng-md-icon icon="edit"
-                                    style="fill: #FF9800"
-                                    size="17"></ng-md-icon>
-                                Edit
-                            </md-button>
-                        </p>
+        <md-content>
+            <md-list class="contact-list">
+                <md-list-item
+                    ng-repeat="contact in contacts |
+                        orderBy:['group', 'name'] |
+                        filter:contactFilter"
+                >
+                    <div class="md-avatar group">
+                        {{ contact.group }}
                     </div>
 
-                    <div flex="10">
-                        <md-checkbox class="md-accent"
-                            ng-model="contact.selected"></md-checkbox>
-                    </div>
-                </md-list-item-text>
-            </md-list-item>
-        </md-list>
+                    <md-list-item-text flex="70" layout="row"
+                        layout-align="start center">
+                        <div flex>
+                            <h4>{{ contact.name | limitTo:35 }}</h4>
+                            <p>{{ contact.phone }}</p>
+                            <p>
+                                <md-button class="edit-button md-accent md-mini"
+                                    ng-click="openContactDialog(contact)">
+                                    <ng-md-icon icon="edit"
+                                        style="fill: #FF9800"
+                                        size="17"></ng-md-icon>
+                                    Edit
+                                </md-button>
+                            </p>
+                        </div>
+
+                        <div flex="10">
+                            <md-checkbox class="md-accent"
+                                ng-model="contact.selected"></md-checkbox>
+                        </div>
+                    </md-list-item-text>
+                </md-list-item>
+            </md-list>
+        </md-content>
     </div>
 
     <div class="scripts"
@@ -80,35 +82,35 @@
             </md-input-container>
         </md-subheader>
 
-        <md-list class="script-list scroll">
-            <md-list-item class="md-2-line"
-                ng-repeat="script in scripts | filter:scriptFilter"
-                ng-click="loadScript(script)">
-                <md-list-item-text>
-                    <h4>{{ script.title | limitTo:35 }}</h4>
-                    <p>
-                        {{ script.content | limitTo:35 }}
-                        <md-button class="edit-button md-accent md-mini"
-                            ng-click="openScriptDialog(script)">
-                            <ng-md-icon icon="edit"
-                                style="fill: #FF9800"
-                                size="17"></ng-md-icon>
-                            Edit
-                        </md-button>
-                    </p>
-                </md-list-item-text>
-            </md-list-item>
-        </md-list>
+        <md-content>
+            <md-list class="script-list">
+                <md-list-item class="md-2-line"
+                    ng-repeat="script in scripts | filter:scriptFilter"
+                    ng-click="loadScript(script)">
+                    <md-list-item-text>
+                        <h4>{{ script.title | limitTo:35 }}</h4>
+                        <p>
+                            {{ script.content | limitTo:35 }}
+                            <md-button class="edit-button md-accent md-mini"
+                                ng-click="openScriptDialog(script)">
+                                <ng-md-icon icon="edit"
+                                    style="fill: #FF9800"
+                                    size="17"></ng-md-icon>
+                                Edit
+                            </md-button>
+                        </p>
+                    </md-list-item-text>
+                </md-list-item>
+            </md-list>
+        </md-content>
     </div>
 
-    <div class="outgoing"
+    <div class="texts"
         layout="column"
         flex>
         <md-subheader class="md-no-sticky">
             Outgoing
-        </md-subheader>
 
-        <md-content layout-padding>
             <form name="outgoingForm" ng-submit="send()">
                 <md-input-container>
                     <label for="text">Text</label>
@@ -119,44 +121,15 @@
                 <md-button class="md-accent"
                     type="submit">Send</md-button>
             </form>
+        </md-subheader>
+
+        <md-subheader class="md-no-sticky">
+            Incoming
+            <span class="count">{{ incoming.length }}</span>
+        </md-subheader>
+
+        <md-content class="incoming">
+            <ng-include src="'Messages/incoming-list.html'"></ng-include>
         </md-content>
-
-        <md-button class="incoming-toggle"
-            ng-click="toggleIncoming()">
-                <ng-md-icon icon="chevron_left"
-                    style="fill: #fff"
-                    size="17"></ng-md-icon>
-                {{ incoming.length }} Incoming
-        </md-button>
     </div>
-
-    <md-sidenav class="md-sidenav-right md-whiteframe-z2"
-        md-component-id="incoming">
-        <md-toolbar class="md-theme-light">
-            <h1 class="md-toolbar-tools">Incoming Texts</h1>
-        </md-toolbar>
-        <md-list class="incoming-list scroll">
-            <md-list-item class="md-3-line"
-                ng-repeat="text in incoming" id="text-{{ $index }}">
-
-                <div class="md-avatar group">
-                    {{ text.contact.group }}
-                </div>
-
-                <div class="md-list-item-text" layout="column">
-                    <h3>
-                        {{ text.contact.name }}
-                    </h3>
-                    <p>{{ text.createdAt | date:'short' }}</p>
-                    <div class="images" ng-show="text.images.length">
-                        <div class="image"
-                            ng-repeat="image in text.images">
-                            <img ng-src="{{ image.url }}" alt="Media">
-                        </div>
-                    </div>
-                    <p>{{ text.body }}</p>
-                </div>
-            </md-list-item>
-        </md-list>
-    </md-sidenav>
 </md-content>
