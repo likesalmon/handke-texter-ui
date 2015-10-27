@@ -63314,7 +63314,8 @@
 	var angular = __webpack_require__(5);
 
 	module.exports = angular.module('Login', [])
-	        .controller('LoginCtrl', __webpack_require__(26));
+	        .controller('LoginCtrl', __webpack_require__(26))
+	        .factory('Login', __webpack_require__(46));
 
 
 /***/ },
@@ -63886,6 +63887,24 @@
 	        $resource
 	    ) {
 	        return $resource(Helper.getAPIUrl() + '/api/purge/:table');
+	    }
+	];
+
+
+/***/ },
+/* 46 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    'Helper',
+	    '$resource',
+	    function (
+	        Helper,
+	        $resource
+	    ) {
+	        return $resource(Helper.getAPIUrl() + '/api/login');
 	    }
 	];
 
