@@ -63679,8 +63679,10 @@
 	module.exports = [
 	    '$resource',
 	    'Helper',
-	    '$window',
-	    function ($resource, Helper, $window) {
+	    function (
+	        $resource,
+	        Helper
+	    ) {
 	        return $resource(Helper.getAPIUrl() + '/api/sms/send');
 	    }
 	];
@@ -63810,7 +63812,7 @@
 
 	module.exports = angular.module('Settings', [])
 	    .controller('SettingsCtrl', __webpack_require__(42))
-	    .factory('SettingsService', __webpack_require__(43));
+	    .factory('Purge', __webpack_require__(45));
 
 
 /***/ },
@@ -63820,24 +63822,73 @@
 	'use strict';
 
 	module.exports = [
+	    '$mdDialog',
+	    '$mdToast',
+	    'Purge',
 	    '$scope',
-	    function ($scope) {
-	        
+	    function (
+	        $mdDialog,
+	        $mdToast,
+	        Purge,
+	        $scope
+	    ) {
+	        $scope.purge = function (source) {
+	            var dialog = $mdDialog.confirm()
+	                .title('Are you sure you want to delete all ' + source + '?')
+	                .content('Choose wisely! Deleting is forever.')
+	                .ariaLabel('Delete ' + source)
+	                .ok('Delete ' + source)
+	                .cancel('Cancel');
+
+	            $mdDialog.show(dialog).then(
+	                function() {
+	                    return Purge.delete({ table: source },
+	                        function (response) {
+	                            return $mdToast.show(
+	                              $mdToast.simple()
+	                                .content(response.message)
+	                                .hideDelay(3000)
+	                            );
+	                        },
+	                        function (err) {
+	                            return $mdToast.show(
+	                              $mdToast.simple()
+	                                .content(err.statusText)
+	                                .hideDelay(3000)
+	                            );
+	                        }
+	                    );
+	                }
+	            );
+	        };
 	    }
 	];
 
 
 /***/ },
-/* 43 */
-/***/ function(module, exports) {
-
-	
-
-/***/ },
+/* 43 */,
 /* 44 */
 /***/ function(module, exports) {
 
-	module.exports = ""
+	module.exports = "<md-content class=\"settings\" layout=\"column\" layout-margin flex>\n    <h2>Settings</h2>\n    <p>\n        Use buttons to purge the database. You will be asked\n        to confirm your selection, but be careful! Deleting\n        is forever.\n    </p>\n    <p>\n        After deleting, refresh your browser to see the results.\n    </p>\n    <div layout=\"row\" layout-align=\"space-around start\" flex>\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('contacts')\">\n                Delete Contacts\n            </md-button>\n        </div>\n\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('scripts')\">\n                Delete Scripts\n            </md-button>\n        </div>\n\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('texts')\">\n                Delete Texts\n            </md-button>\n        </div>\n    </div>\n</md-content>\n"
+
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    'Helper',
+	    '$resource',
+	    function (
+	        Helper,
+	        $resource
+	    ) {
+	        return $resource(Helper.getAPIUrl() + '/api/purge/:table');
+	    }
+	];
+
 
 /***/ }
 /******/ ]);
