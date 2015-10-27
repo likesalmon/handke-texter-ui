@@ -10,6 +10,7 @@ var Common = require('./Common');
 var Login = require('./Login');
 var Texter = require('./Texter');
 var Messages = require('./Messages');
+var Settings = require('./Settings');
 
 angular.module('handkeTexter', [
         'ngResource',
@@ -21,7 +22,8 @@ angular.module('handkeTexter', [
         Common.name,
         Texter.name,
         Login.name,
-        Messages.name
+        Messages.name,
+        Settings.name
     ])
     .config([
         '$locationProvider',
@@ -64,9 +66,14 @@ angular.module('handkeTexter', [
                     controller: 'MessagesCtrl'
                 })
                 .state('messages.text', {
-                    url: '/messages.text',
+                    url: '/messages/text',
                     template: require('./Messages/messages.html'),
                     controller: 'MessagesCtrl'
+                })
+                .state('settings', {
+                    url: '/settings',
+                    template: require('./Settings/settings.html'),
+                    controller: 'SettingsCtrl'
                 });
 
 

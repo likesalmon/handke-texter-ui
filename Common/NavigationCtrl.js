@@ -5,7 +5,7 @@ module.exports = [
     '$scope',
     function (API, $scope) {
         $scope.phoneNumber = API.phoneNumber;
-        
+
         $scope.navItems = [
             {
                 name: 'Texter',
@@ -28,9 +28,9 @@ module.exports = [
                 sref: 'messages.text'
             },
             {
-                name: 'Admin',
+                name: 'Settings',
                 icon: 'settings',
-                sref: 'texter'
+                sref: 'settings'
             },
             {
                 name: 'Logout',
