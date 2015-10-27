@@ -1,8 +1,11 @@
 'use strict';
 
 module.exports = [
+    'API',
     '$scope',
-    function ($scope) {
+    function (API, $scope) {
+        $scope.phoneNumber = API.phoneNumber;
+        
         $scope.navItems = [
             {
                 name: 'Texter',

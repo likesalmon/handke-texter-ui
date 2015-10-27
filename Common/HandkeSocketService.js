@@ -19,7 +19,7 @@ module.exports = [
         socket.forward('error');
         socket.forward('connection');
 
-        var incoming = [];
+        var messages = [];
         socket.forward('incoming');
         $rootScope.$on('socket:incoming', function (event, data) {
             // divide media into an array
@@ -33,12 +33,12 @@ module.exports = [
                     });
                 }
             }
-            incoming.push(data);
+            messages.push(data);
         });
 
         return {
             socket: socket,
-            messages: incoming
+            messages: messages
         };
     }
 ];

@@ -56,13 +56,19 @@ module.exports = [
                 $location.hash('text-' + ($scope.incoming.length - 1));
                 $anchorScroll();
             });
+
+            HandkeSocket.socket.forward('contact:new', $scope);
+            $scope.$on('socket:contact:new', function (event, data) {
+                console.log(data);
+                $scope.contacts.push(data);
+            });
         };
 
         /**
          * Populate the outgoing textarea with the selected script
          */
-        $scope.loadScript = function (script) {
-            $scope.outgoing.text = script.content;
+        $scope.populateOutgoing = function (text) {
+            $scope.outgoing.text = text;
         };
 
         /**
@@ -137,8 +143,8 @@ module.exports = [
             .then(function (results) {
                 var actions = {
                     save: function () {
-                        Contact.save(results.contact, function () {
-                            $scope.contacts = Contact.query();
+                        Contact.save(results.contact, function (response) {
+                            // $scope.contacts = Contact.query();
                         });
                     },
                     remove: function () {

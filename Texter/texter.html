@@ -31,8 +31,7 @@
                 <md-list-item
                     ng-repeat="contact in contacts |
                         orderBy:['group', 'name'] |
-                        filter:contactFilter"
-                >
+                        filter:contactFilter">
                     <div class="md-avatar group">
                         {{ contact.group }}
                     </div>
@@ -86,7 +85,7 @@
             <md-list class="script-list">
                 <md-list-item class="md-2-line"
                     ng-repeat="script in scripts | filter:scriptFilter"
-                    ng-click="loadScript(script)">
+                    ng-click="populateOutgoing(script.content)">
                     <md-list-item-text>
                         <h4>{{ script.title | limitTo:35 }}</h4>
                         <p>

@@ -9,3 +9,9 @@ Development
 
 Production
 ==========
+
+
+TODO
+====
+* texts view gets white text on black; black bubbles with white drop shadows
+* No Hanke in text feed

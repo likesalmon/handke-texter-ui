@@ -79,3 +79,11 @@ md-list.scroll {
         top: 3px;
     }
 }
+
+md-list md-list-item button.md-button:not([disabled]):hover {
+    background-color: transparent;
+}
+
+md-list-item, md-list-item .md-list-item-inner {
+    min-height: 0;
+}

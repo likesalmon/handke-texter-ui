@@ -70,22 +70,47 @@
 
     .md-button {
         float: right;
+        padding: 0;
     }
 
     md-input-container {
         padding-bottom: 0;
     }
 
+    .md-subheader:first-child .md-subheader-content > span {
+        line-height: 22px;
+    }
+
     .incoming {
         .message {
-            font-size: 14px;
-            border-radius: 10px;
-            padding: 10px;
-            margin: 10px;
-            box-shadow: 0 0 10px #B71C1C;
+            button.md-button{
+                font-size: 16px;
+                line-height: 18px;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 10px;
+                box-shadow: 0 0 10px #B71C1C;
 
-            .name {
-                font-size: 12px;
+                &:not([disabled]):hover {
+                    background: rgba(255,255,255,0.6);
+                }
+
+                .name {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+
+                .text {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+
+            &.handke-message {
+                button.md-button {
+                    box-shadow: none;
+                    padding: 0 10px;
+                }
             }
         }
     }

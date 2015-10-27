@@ -82,6 +82,7 @@ angular.module('handkeTexter', [
     .constant('API', {
         protocol: 'http',
         ip: '45.55.27.217',
-        port: '8000'
+        port: '8000',
+        phoneNumber: '+19292442868'
     })
     .constant('GROUPS', ['A','B','C','D']);

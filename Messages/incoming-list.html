@@ -1,14 +1,16 @@
-<md-list class="incoming-list" flex layout="column">
-    <md-list-item ng-repeat="text in incoming"
+<div class="incoming-list"
+    flex
+    layout="column"
+    layout-align="space-around start">
+    <div ng-repeat="text in incoming"
         id="text-{{ $index }}"
         ng-class="{ 'handke-message': text.contact.name === 'Handke' }"
-        class="message"
-        flex="30">
-        <div class="md-list-item-text">
+        class="message">
+        <md-button ng-click="populateOutgoing(text.body)">
             <div class="name" ng-hide="text.contact.name === 'Handke'">
                 {{ text.contact.name }} said,
             </div>
-            <div>{{ text.body }}</div>
+            <div class="text">{{ text.body }}</div>
             <div class="images" ng-show="text.images.length">
                 <div class="image"
                     ng-repeat="image in text.images">
@@ -16,5 +18,5 @@
                 </div>
             </div>
         </div>
-    </md-list-item>
-</md-list>
+    </div>
+</div>
