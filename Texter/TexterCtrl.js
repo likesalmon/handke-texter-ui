@@ -1,6 +1,8 @@
 module.exports = [
+    '$anchorScroll',
     'Contact',
-    'handkeSocket',
+    'HandkeSocket',
+    '$location',
     '$log',
     '$mdDialog',
     '$mdSidenav',
@@ -9,8 +11,10 @@ module.exports = [
     'Script',
     'Text',
     function TexterCtrl (
+        $anchorScroll,
         Contact,
-        handkeSocket,
+        HandkeSocket,
+        $location,
         $log,
         $mdDialog,
         $mdSidenav,
@@ -21,46 +25,49 @@ module.exports = [
     ) {
         $scope.init = function () {
             $scope.contacts = Contact.query();
+            $scope.contactGroups = [
+                {
+                    name: 'A',
+                    selected: false
+                },
+                {
+                    name: 'B',
+                    selected: false
+                },
+                {
+                    name: 'C',
+                    selected: false
+                },
+                {
+                    name: 'D',
+                    selected: false
+                }
+            ];
 
-            $scope.incoming = [];
+            $scope.incoming = HandkeSocket.messages;
 
             $scope.scripts = Script.query();
+            $scope.scriptFilter = '';
 
             $scope.outgoing = {};
 
-            $scope.$on('socket:error', function (ev, data) {
-                $log.error('socket:error', data);
+            HandkeSocket.socket.forward('incoming', $scope);
+            $scope.$on('socket:incoming', function (event, data) {
+                $location.hash('text-' + ($scope.incoming.length - 1));
+                $anchorScroll();
             });
 
-            handkeSocket.forward('incoming', $scope);
-            $scope.$on('socket:incoming', function (ev, data) {
-                data.timestamp = new Date();
-
-                // divide media into an array
-                if (parseInt(data.NumMedia)) {
-                    data.images = [];
-
-                    for (var i = 0; i < parseInt(data.NumMedia); i++) {
-                        data.images.push({
-                            type: data['MediaContentType' + i],
-                            url: data['MediaUrl' + i]
-                        });
-                    }
-                }
-                $scope.incoming.push(data);
-            });
-
-            handkeSocket.forward('connection', $scope);
-            $scope.$on('socket:connection', function (ev, data) {
-                $log.log('socket:connection');
+            HandkeSocket.socket.forward('contact:new', $scope);
+            $scope.$on('socket:contact:new', function (event, data) {
+                $scope.contacts.push(data);
             });
         };
 
         /**
          * Populate the outgoing textarea with the selected script
          */
-        $scope.loadScript = function (script) {
-            $scope.outgoing.text = script.content;
+        $scope.populateOutgoing = function (text) {
+            $scope.outgoing.text = text;
         };
 
         /**
@@ -105,102 +112,90 @@ module.exports = [
             });
         };
 
-        /**
-         * Open or close the incoming texts sidebar
-         */
-        $scope.toggleIncoming = function () {
-            $mdSidenav('incoming').toggle();
-        };
-
 
 
         /*************
             Contacts
         **************/
+        $scope.selectGroup = function (contacts, group) {
+            group.selected = !group.selected;
 
-        $scope.openAddContactDialog = function () {
-            $mdDialog.show({
-                controller: 'ContactDialogCtrl',
-                template: require('./AddContactDialog.html'),
-                parent: angular.element(document.body),
-                clickOutsideToClose: true
+            contacts.filter(function (contact) {
+                return contact.group === group.name;
             })
-            .then(function (contact) {
-                Contact.save(contact, function () {
-                    $scope.contacts = Contact.query();
-                });
-
+            .forEach(function (contact) {
+                contact.selected = group.selected;
             });
         };
 
-        $scope.openEditContactDialog = function (contact) {
+        $scope.openContactDialog = function (contact) {
             $mdDialog.show({
                 controller: 'ContactDialogCtrl',
-                template: require('./EditContactDialog.html'),
+                template: require('./contactDialog.html'),
                 parent: angular.element(document.body),
                 clickOutsideToClose: true,
                 locals: {
-                    contact: contact
+                    contact: contact || null
                 },
                 bindToController: true
             })
             .then(function (results) {
-                if (results.action === 'update') {
-                    Contact.update(results.contact, function () {
-                        $scope.contacts = Contact.query();
-                    });
-                }
+                var actions = {
+                    save: function () {
+                        Contact.save(results.contact, function (response) {
+                            // $scope.contacts = Contact.query();
+                        });
+                    },
+                    remove: function () {
+                        Contact.delete(results.contact, function () {
+                            $scope.contacts = Contact.query();
+                        });
+                    },
+                    update: function () {
+                        Contact.update(results.contact, function () {
+                            $scope.contacts = Contact.query();
+                        });
+                    }
+                };
 
-                if (results.action === 'remove') {
-                    Contact.delete(results.contact, function () {
-                        $scope.contacts = Contact.query();
-                    });
-                }
+                actions[results.action]();
             });
         };
 
         /*************
             Scripts
         **************/
-        $scope.openAddScriptDialog = function () {
+        $scope.openScriptDialog = function (script) {
             $mdDialog.show({
                 controller: 'ScriptDialogCtrl',
-                template: require('./AddScriptDialog.html'),
-                parent: angular.element(document.body),
-                clickOutsideToClose: true
-            })
-            .then(function (script) {
-                Script.save(script, function () {
-                    $scope.scripts = Script.query();
-                });
-            });
-        };
-
-        $scope.openEditScriptDialog = function (script) {
-            $mdDialog.show({
-                controller: 'ScriptDialogCtrl',
-                template: require('./EditScriptDialog.html'),
+                template: require('./scriptDialog.html'),
                 parent: angular.element(document.body),
                 clickOutsideToClose: true,
                 locals: {
-                    script: script
+                    script: script || null
                 },
                 bindToController: true
             })
             .then(function (results) {
-                if (results.action === 'update') {
-                    return Script.update(results.script,
-                        function () {
+                var actions = {
+                    save: function () {
+                        Script.save(results.script, function () {
                             $scope.scripts = Script.query();
-                        }
-                    );
-                }
+                        });
+                    },
+                    remove: function () {
+                        Script.delete(results.script, function (scripts) {
+                            $scope.scripts = Script.query();
+                        });
+                    },
+                    update: function () {
+                        Script.update(results.script, function () {
+                            $scope.scripts = Script.query();
+                        });
+                    }
+                };
 
-                if (results.action === 'remove') {
-                    return Script.delete(results.script, function (scripts) {
-                        $scope.scripts = Script.query();
-                    });
-                }
+                actions[results.action]();
             });
         };
 

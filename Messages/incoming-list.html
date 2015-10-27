@@ -1,0 +1,22 @@
+<div class="incoming-list"
+    flex
+    layout="column"
+    layout-align="space-around start">
+    <div ng-repeat="text in incoming"
+        id="text-{{ $index }}"
+        ng-class="{ 'handke-message': text.contact.name === 'Handke' }"
+        class="message">
+        <md-button ng-click="populateOutgoing(text.body)">
+            <div class="name" ng-hide="text.contact.name === 'Handke'">
+                {{ text.contact.name }} said,
+            </div>
+            <div class="text">{{ text.body }}</div>
+            <div class="images" ng-show="text.images.length">
+                <div class="image"
+                    ng-repeat="image in text.images">
+                    <img ng-src="{{ image.url }}" alt="Media">
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

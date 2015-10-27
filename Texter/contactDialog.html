@@ -1,0 +1,69 @@
+<md-dialog>
+    <md-dialog-content>
+        <form name="contactForm" ng-submit="save()" novalidate>
+            <md-input-container>
+                <label>Name</label>
+                <input name="name"
+                    ng-model="contact.name"
+                    required
+                    type="text">
+                <div ng-messages="contactForm.name.$error"
+                    ng-show="contactForm.name.$touched">
+                    <div ng-message="required">
+                        Name is required.
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Phone</label>
+                <input name="phone"
+                    ng-model="contact.phone"
+                    ng-pattern="/\+\d{10}/"
+                    required
+                    type="tel"></textarea>
+                <div ng-messages="contactForm.phone.$error"
+                    ng-show="contactForm.phone.$touched">
+                    <div ng-message="required">
+                        Phone is required.
+                    </div>
+                    <div ng-message="pattern">
+                        Phone must be in the format "+1234567890".
+                    </div>
+                </div>
+            </md-input-container>
+            <md-input-container>
+                <label>Group</label>
+                <md-select name="group"
+                    ng-model="contact.group">
+                    <md-option ng-repeat="group in groups"
+                        value="{{ group }}">
+                        {{ group }}
+                    </md-option>
+                </md-select>
+                <div ng-messages="contactForm.group.$error"
+                    ng-show="contactForm.phone.$touched">
+                    <div ng-message="required">
+                        Group is required.
+                    </div>
+                </div>
+            </md-input-container>
+            <div class="md-actions">
+                <md-button class="md-raised"
+                    ng-if="!contact.id"
+                    type="submit"
+                    ng-disabled="contactForm.$error.required[0].$invalid">
+                    Save
+                </md-button>
+                <md-button ng-if="contact.id"
+                    ng-click="remove()"
+                    type="button">Remove</md-button>
+                <md-button class="md-raised"
+                    ng-if="contact.id"
+                    type="submit"
+                    ng-disabled="contactForm.$error.required[0].$invalid">
+                    Update
+                </md-button>
+            </div>
+        </form>
+    </md-dialog-content>
+</md-dialog>

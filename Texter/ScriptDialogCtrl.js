@@ -20,14 +20,17 @@ module.exports = [
         };
 
         $scope.save = function () {
-            $mdDialog.hide($scope.script);
-        };
-
-        $scope.update = function () {
-            $mdDialog.hide({
-                action: 'update',
-                script: $scope.script
-            });
+            if ($scope.script.id) {
+                $mdDialog.hide({
+                    action: 'update',
+                    script: $scope.script
+                });
+            } else {
+                $mdDialog.hide({
+                    action: 'save',
+                    script: $scope.script
+                });
+            }
         };
 
         $scope.remove = function () {

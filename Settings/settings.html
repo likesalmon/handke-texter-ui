@@ -1,0 +1,33 @@
+<md-content class="settings" layout="column" layout-margin flex>
+    <h2>Settings</h2>
+    <p>
+        Use buttons to purge the database. You will be asked
+        to confirm your selection, but be careful! Deleting
+        is forever.
+    </p>
+    <p>
+        After deleting, refresh your browser to see the results.
+    </p>
+    <div layout="row" layout-align="space-around start" flex>
+        <div>
+            <md-button class="md-raised"
+                ng-click="purge('contacts')">
+                Delete Contacts
+            </md-button>
+        </div>
+
+        <div>
+            <md-button class="md-raised"
+                ng-click="purge('scripts')">
+                Delete Scripts
+            </md-button>
+        </div>
+
+        <div>
+            <md-button class="md-raised"
+                ng-click="purge('texts')">
+                Delete Texts
+            </md-button>
+        </div>
+    </div>
+</md-content>

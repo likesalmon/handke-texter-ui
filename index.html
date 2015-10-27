@@ -6,9 +6,11 @@
         <title>Handke Texter</title>
     </head>
     <body layout="column">
-        <md-toolbar layout="row">
+        <md-toolbar layout="row"
+            ng-controller="NavigationCtrl"
+            ng-show="showNav">
             <div class="md-toolbar-tools">
-                <h2>Handke Texter</h2>
+                <h2>Handke Texter :: {{ phoneNumber }}</h2>
                 <span flex></span>
                 <md-menu>
                     <md-button class="md-icon-button"
@@ -20,21 +22,24 @@
                             md-menu-align-target>
                         </ng-md-icon>
                     </md-button>
-                    <md-menu-content>
-                        <md-menu-item>
+                    <md-menu-content class="nav-menu">
+                        <md-menu-item ng-repeat="item in navItems"
+                            flex layout="column">
                             <md-button class="md-primary"
-                                ui-sref="texter">
-                                <ng-md-icon icon="textsms"
+                                ui-sref="{{ item.sref }}">
+                                <ng-md-icon icon="{{ item.icon }}"
                                     style="fill: #F44336"
                                     size="16">
                                 </ng-md-icon>
-                                Texter
+                                {{ item.name }}
                             </md-button>
+                            <md-divider></md-divider>
                         </md-menu-item>
-                        <md-divider></md-divider>
-                        <md-menu-item>
+
+                        <md-menu-item flex layout="column">
                             <md-button class="md-primary"
-                                ui-sref="login">
+                                ui-sref="login"
+                                ng-click="logout()">
                                 <ng-md-icon icon="logout"
                                     style="fill: #F44336"
                                     size="16">

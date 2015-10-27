@@ -1,0 +1,67 @@
+.messages {
+    height: 100%;
+    min-height: 100vh;
+    background-color: #000;
+    color: #333;
+
+    h3, p {
+        margin-bottom: 0;
+    }
+}
+
+.messages-container {
+    max-width: 100%;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.message {
+    button.md-button {
+        text-align: left;
+        font-size: inherit;
+        font-weight: normal;
+        min-height: 0;
+        min-width: inherit;
+        text-transform: none;
+        align-items: top;
+        white-space: normal;
+        border-radius: 10px;
+        padding: 10px;
+        margin: 15px;
+        box-shadow: 0 0 20px #fff;
+        background-color: #000;
+        color: #fff;
+
+        .name {
+            font-weight: bold;
+            color: #bbb;
+            font-size: 18px;
+            line-height: 20px;
+        }
+
+        .text {
+            font-size: 44px;
+            line-height: 52px;
+        }
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+    &.handke-message {
+        display: none;
+        box-shadow: none;
+        align-self: flex-end;
+
+        button.md-button {
+            text-align: right;
+            font-style: italic;
+            box-shadow: none;
+            background-color: transparent;
+            padding: 0 10px;
+            color: #ccc;
+        }
+    }
+}

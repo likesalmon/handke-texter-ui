@@ -1,0 +1,89 @@
+html,
+body {
+    color: #fff;
+    background: #B71C1C;
+}
+
+md-content,
+.md-subheader.md-default-theme,
+.md-subheader {
+    background-color: transparent;
+    color: #fff;
+}
+
+md-list md-list-item button.md-button:not([disabled]):hover {
+    background-color: #F57F17;
+}
+
+md-checkbox .md-icon {
+    border-color: #fff;
+}
+
+a.md-button.md-accent.md-raised,
+a.md-button.md-accent.md-fab,
+.md-button.md-accent.md-raised,
+.md-button.md-accent.md-fab {
+    color: #fff;
+}
+
+.md-fab ng-md-icon,
+md-menu-item ng-md-icon {
+    position: relative;
+    top: 4px;
+}
+
+md-input-container .md-input {
+    color: #fff;
+}
+
+md-dialog {
+    padding: 15px;
+    color: rgba(0,0,0,0.87);
+
+    .md-input,
+    .md-actions .md-button,
+    md-select-value {
+        color: rgba(0,0,0,0.87);
+    }
+}
+
+md-menu-content {
+    padding: 0;
+}
+
+md-menu-item {
+    min-height: 35px;
+    height: 35px;
+}
+
+md-list.scroll {
+    overflow: auto;
+}
+
+.nav-menu {
+    .md-button ng-md-icon {
+        margin-right: 5px;
+    }
+}
+
+.md-select-menu-container {
+    background-color: #fff;
+    md-option {
+        color: #333;
+    }
+}
+
+.md-button {
+    ng-md-icon {
+        position: relative;
+        top: 3px;
+    }
+}
+
+md-list md-list-item button.md-button:not([disabled]):hover {
+    background-color: transparent;
+}
+
+md-list-item, md-list-item .md-list-item-inner {
+    min-height: 0;
+}

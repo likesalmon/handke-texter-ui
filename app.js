@@ -1,29 +1,32 @@
 require('./styles.scss');
 
 var angular = require('angular');
+var ngMessages = require('angular-messages');
 var ngResource = require('angular-resource');
 var material = require('angular-material');
 var uiRouter = require('angular-ui-router');
 var ngMdIcons = require('angular-material-icons');
-var socketIo = require('./node_modules/angular-socket-io/socket.js');
+var Common = require('./Common');
 var Login = require('./Login');
 var Texter = require('./Texter');
+var Messages = require('./Messages');
+var Settings = require('./Settings');
+require('ngstorage');
 
 angular.module('handkeTexter', [
         'ngResource',
+        'ngStorage',
         uiRouter,
         'ngMaterial',
+        'ngMessages',
         'ngMdIcons',
         'ui.router',
-        'btford.socket-io',
+        Common.name,
         Texter.name,
-        Login.name
+        Login.name,
+        Messages.name,
+        Settings.name
     ])
-    .constant('API', {
-        protocol: 'http',
-        ip: '45.55.27.217',
-        port: '8000'
-    })
     .config([
         '$locationProvider',
         '$stateProvider',
@@ -53,40 +56,60 @@ angular.module('handkeTexter', [
                     url: '/texter',
                     template: require('./Texter/texter.html'),
                     controller: 'TexterCtrl'
+                })
+                .state('messages', {
+                    url: '/messages',
+                    template: require('./Messages/messages.html'),
+                    controller: 'MessagesCtrl'
+                })
+                .state('messages.images', {
+                    url: '/messages/images',
+                    template: require('./Messages/messages.html'),
+                    controller: 'MessagesCtrl'
+                })
+                .state('messages.text', {
+                    url: '/messages/text',
+                    template: require('./Messages/messages.html'),
+                    controller: 'MessagesCtrl'
+                })
+                .state('settings', {
+                    url: '/settings',
+                    template: require('./Settings/settings.html'),
+                    controller: 'SettingsCtrl'
                 });
 
 
         }
     ])
-    .factory('Helper', [
-        'API',
-        '$window',
-        function (API, $window) {
-            return {
-                getAPIUrl: function () {
-                    var url = '';
+    .run([
+        '$http',
+        '$rootScope',
+        '$sessionStorage',
+        '$state',
+        function (
+            $http,
+            $rootScope,
+            $sessionStorage,
+            $state
+        ) {
+            // $http.get('http://localhost:8000/api/login')
+            //     .then(function (response) {
+            //         console.log(response);
+            //     });
 
-                    if (/localhost/.test($window.location.href)) {
-                        url = API.protocol + '://localhost:' + API.port;
-                    } else {
-                        url = API.protocol + '://' + API.ip + ':' + API.port;
-                    }
-
-                    return url;
-                }
-            };
-        }
-    ])
-    .factory('handkeSocket', [
-        'Helper',
-        'socketFactory',
-        '$window',
-        function (Helper, socketFactory, $window) {
-            var handkeSocket = socketFactory({
-                ioSocket: io.connect(Helper.getAPIUrl())
+            // Some controllers, like Messages, hide the nav bar.
+            // This resets showNav.
+            $rootScope.$on('$stateChangeStart', function () {
+                $rootScope.showNav = true;
             });
 
-            handkeSocket.forward('error');
-            return handkeSocket;
+
         }
-    ]);
+    ])
+    .constant('API', {
+        protocol: 'http',
+        ip: '45.55.27.217',
+        port: '8000',
+        phoneNumber: '+19292442868'
+    })
+    .constant('GROUPS', ['A','B','C','D']);

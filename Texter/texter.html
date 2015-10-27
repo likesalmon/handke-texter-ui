@@ -6,37 +6,60 @@
             Contacts
             <md-button class="add-button md-icon-button"
                 aria-label="Add Contact"
-                ng-click="openAddContactDialog()">
+                ng-click="openContactDialog()">
                 <ng-md-icon icon="add"
                     style="fill: #fff"
                     size="20"></ng-md-icon>
             </md-button>
+            <span class="count">{{ contacts.length }}</span>
+            <md-input-container class="list-filter">
+                <label>Search Contacts</label>
+                <input type="text" ng-model="contactFilter">
+            </md-input-container>
+            <div class="groups">
+                <md-button class="md-fab md-mini"
+                    ng-class="{ 'md-accent md-hue-2': group.selected }"
+                    ng-repeat="group in contactGroups"
+                    ng-click="selectGroup(contacts, group)">
+                    {{ group.name }}
+                </md-button>
+            </div>
         </md-subheader>
 
-        <md-list class="contact-list">
-            <md-list-item ng-repeat="contact in contacts">
-                <md-list-item-text flex="90" layout="row" layout-align="start center">
-                    <div flex>
-                        <h4>{{ contact.name }}</h4>
-                        <p>{{ contact.phone }}</p>
-                        <p>
-                            <md-button class="edit-button md-accent md-mini"
-                                ng-click="openEditContactDialog(contact)">
-                                <ng-md-icon icon="edit"
-                                    style="fill: #FF9800"
-                                    size="17"></ng-md-icon>
-                                Edit
-                            </md-button>
-                        </p>
+        <md-content>
+            <md-list class="contact-list">
+                <md-list-item
+                    ng-repeat="contact in contacts |
+                        orderBy:['group', 'name'] |
+                        filter:contactFilter">
+                    <div class="md-avatar group">
+                        {{ contact.group }}
                     </div>
 
-                    <div flex="10">
-                        <md-checkbox class="md-accent"
-                            ng-model="contact.selected"></md-checkbox>
-                    </div>
-                </md-list-item-text>
-            </md-list-item>
-        </md-list>
+                    <md-list-item-text flex="70" layout="row"
+                        layout-align="start center">
+                        <div flex>
+                            <h4>{{ contact.name | limitTo:35 }}</h4>
+                            <p>{{ contact.phone }}</p>
+                            <p>
+                                <md-button class="edit-button md-accent md-mini"
+                                    ng-click="openContactDialog(contact)">
+                                    <ng-md-icon icon="edit"
+                                        style="fill: #FF9800"
+                                        size="17"></ng-md-icon>
+                                    Edit
+                                </md-button>
+                            </p>
+                        </div>
+
+                        <div flex="10">
+                            <md-checkbox class="md-accent"
+                                ng-model="contact.selected"></md-checkbox>
+                        </div>
+                    </md-list-item-text>
+                </md-list-item>
+            </md-list>
+        </md-content>
     </div>
 
     <div class="scripts"
@@ -46,42 +69,47 @@
             Scripts
             <md-button class="add-button md-icon-button"
                 aria-label="Add Script"
-                ng-click="openAddScriptDialog()">
+                ng-click="openScriptDialog()">
                 <ng-md-icon icon="add"
                     style="fill: #fff"
                     size="20"></ng-md-icon>
             </md-button>
+            <span class="count">{{ scripts.length }}</span>
+            <md-input-container class="list-filter">
+                <label>Search Scripts</label>
+                <input type="text" ng-model="scriptFilter">
+            </md-input-container>
         </md-subheader>
 
-        <md-list>
-            <md-list-item class="md-2-line"
-                ng-repeat="script in scripts"
-                ng-click="loadScript(script)">
-                <md-list-item-text>
-                    <h4>{{ script.title }}</h4>
-                    <p>
-                        {{ script.content }}
-                        <md-button class="edit-button md-accent md-mini"
-                            ng-click="openEditScriptDialog(script)">
-                            <ng-md-icon icon="edit"
-                                style="fill: #FF9800"
-                                size="17"></ng-md-icon>
-                            Edit
-                        </md-button>
-                    </p>
-                </md-list-item-text>
-            </md-list-item>
-        </md-list>
+        <md-content>
+            <md-list class="script-list">
+                <md-list-item class="md-2-line"
+                    ng-repeat="script in scripts | filter:scriptFilter"
+                    ng-click="populateOutgoing(script.content)">
+                    <md-list-item-text>
+                        <h4>{{ script.title | limitTo:35 }}</h4>
+                        <p>
+                            {{ script.content | limitTo:35 }}
+                            <md-button class="edit-button md-accent md-mini"
+                                ng-click="openScriptDialog(script)">
+                                <ng-md-icon icon="edit"
+                                    style="fill: #FF9800"
+                                    size="17"></ng-md-icon>
+                                Edit
+                            </md-button>
+                        </p>
+                    </md-list-item-text>
+                </md-list-item>
+            </md-list>
+        </md-content>
     </div>
 
-    <div class="outgoing"
+    <div class="texts"
         layout="column"
         flex>
         <md-subheader class="md-no-sticky">
             Outgoing
-        </md-subheader>
 
-        <md-content layout-padding>
             <form name="outgoingForm" ng-submit="send()">
                 <md-input-container>
                     <label for="text">Text</label>
@@ -92,43 +120,15 @@
                 <md-button class="md-accent"
                     type="submit">Send</md-button>
             </form>
+        </md-subheader>
+
+        <md-subheader class="md-no-sticky">
+            Incoming
+            <span class="count">{{ incoming.length }}</span>
+        </md-subheader>
+
+        <md-content class="incoming">
+            <ng-include src="'Messages/incoming-list.html'"></ng-include>
         </md-content>
-
-        <md-button class="incoming-toggle"
-            ng-click="toggleIncoming()">
-                <ng-md-icon icon="chevron_left"
-                    style="fill: #fff"
-                    size="17"></ng-md-icon>
-                {{ incoming.length }} Incoming
-        </md-button>
     </div>
-
-    <md-sidenav class="md-sidenav-right md-whiteframe-z2"
-        md-component-id="incoming">
-        <md-toolbar class="md-theme-light">
-            <h1 class="md-toolbar-tools">Incoming Texts</h1>
-        </md-toolbar>
-        <md-list>
-            <md-list-item class="md-3-line"
-                ng-repeat="text in incoming">
-
-                <ng-md-icon class="md-avatar"
-                    icon="account_circle"
-                    style="fill: #fff"
-                    size="40"></ng-md-icon>
-
-                    <div class="md-list-item-text" layout="column">
-                        <h3>From: {{ text.From || text.from }}</h3>
-                        <h4>Received: {{ text.timestamp | date:'short' }}</h4>
-                        <div class="images" ng-show="text.images.length">
-                            <div class="image"
-                                ng-repeat="image in text.images">
-                                <img ng-src="{{ image.url }}" alt="Media">
-                            </div>
-                        </div>
-                        <p>{{ text.Body || text.body }}</p>
-                    </div>
-            </md-list-item>
-        </md-list>
-    </md-sidenav>
 </md-content>

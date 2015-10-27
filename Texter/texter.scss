@@ -1,0 +1,125 @@
+.incoming-toggle {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+
+.edit-button {
+    min-height: 0;
+    min-width: 0;
+    margin: 0;
+    padding: 0;
+    line-height: 1.2em;
+}
+
+.add-button {
+    float: right;
+    position: relative;
+    top: -12px;
+}
+
+.list-filter {
+    padding-bottom: 0;
+}
+
+.count {
+    padding: 5px;
+    background-color: tomato;
+    border-radius: 50%;
+    display: inline-block;
+    width: 16px;
+    text-align: center;
+}
+
+.contacts {
+    background-color: #C62828;
+
+    .contact-list {
+        md-list-item {
+            margin-bottom: 20px;
+        }
+        .md-avatar {
+            background-color: #fff;
+            font-weight: bold;
+            color: #C62828;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        h3, h4, p {
+            margin: 0 0 4px 0;
+        }
+    }
+}
+
+.scripts {
+    background-color: #D32F2F;
+
+    h4 {
+        margin: 0;
+    }
+
+    p {
+        margin-top: 0;
+        line-height: 1.2em;
+    }
+}
+
+.texts {
+    background-color: #E53935;
+
+    .md-button {
+        float: right;
+        padding: 0;
+    }
+
+    md-input-container {
+        padding-bottom: 0;
+    }
+
+    .md-subheader:first-child .md-subheader-content > span {
+        line-height: 22px;
+    }
+
+    .incoming {
+        .message {
+            button.md-button{
+                font-size: 16px;
+                line-height: 18px;
+                border-radius: 10px;
+                padding: 10px;
+                margin: 10px;
+                box-shadow: 0 0 10px #B71C1C;
+
+                &:not([disabled]):hover {
+                    background: rgba(255,255,255,0.6);
+                }
+
+                .name {
+                    font-size: 12px;
+                    line-height: 14px;
+                }
+
+                .text {
+                    font-size: 16px;
+                    line-height: 18px;
+                }
+            }
+
+            &.handke-message {
+                button.md-button {
+                    box-shadow: none;
+                    padding: 0 10px;
+                }
+            }
+        }
+    }
+}
+
+.md-sidenav-right {
+    img {
+        max-width: 100%;
+        height: auto;
+        display: block;
+    }
+}
