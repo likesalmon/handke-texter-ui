@@ -59,7 +59,6 @@ module.exports = [
 
             HandkeSocket.socket.forward('contact:new', $scope);
             $scope.$on('socket:contact:new', function (event, data) {
-                console.log(data);
                 $scope.contacts.push(data);
             });
         };

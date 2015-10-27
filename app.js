@@ -11,9 +11,11 @@ var Login = require('./Login');
 var Texter = require('./Texter');
 var Messages = require('./Messages');
 var Settings = require('./Settings');
+require('ngstorage');
 
 angular.module('handkeTexter', [
         'ngResource',
+        'ngStorage',
         uiRouter,
         'ngMaterial',
         'ngMessages',
@@ -79,13 +81,31 @@ angular.module('handkeTexter', [
 
         }
     ])
-    .run(['$rootScope', function ($rootScope) {
-        // Some controllers, like Messages, hide the nav bar.
-        // This resets showNav.
-        $rootScope.$on('$stateChangeStart', function () {
-            $rootScope.showNav = true;
-        });
-    }])
+    .run([
+        '$http',
+        '$rootScope',
+        '$sessionStorage',
+        '$state',
+        function (
+            $http,
+            $rootScope,
+            $sessionStorage,
+            $state
+        ) {
+            // $http.get('http://localhost:8000/api/login')
+            //     .then(function (response) {
+            //         console.log(response);
+            //     });
+
+            // Some controllers, like Messages, hide the nav bar.
+            // This resets showNav.
+            $rootScope.$on('$stateChangeStart', function () {
+                $rootScope.showNav = true;
+            });
+
+
+        }
+    ])
     .constant('API', {
         protocol: 'http',
         ip: '45.55.27.217',

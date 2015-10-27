@@ -35,6 +35,18 @@
                             </md-button>
                             <md-divider></md-divider>
                         </md-menu-item>
+
+                        <md-menu-item flex layout="column">
+                            <md-button class="md-primary"
+                                ui-sref="login"
+                                ng-click="logout()">
+                                <ng-md-icon icon="logout"
+                                    style="fill: #F44336"
+                                    size="16">
+                                </ng-md-icon>
+                                Logout
+                            </md-button>
+                        </md-menu-item>
                     </md-menu-content>
                 </md-menu>
             </div>

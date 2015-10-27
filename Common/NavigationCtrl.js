@@ -2,8 +2,19 @@
 
 module.exports = [
     'API',
+    'Login',
+    '$mdToast',
     '$scope',
-    function (API, $scope) {
+    '$sessionStorage',
+    '$state',
+    function (
+        API,
+        Login,
+        $mdToast,
+        $scope,
+        $sessionStorage,
+        $state
+    ) {
         $scope.phoneNumber = API.phoneNumber;
 
         $scope.navItems = [
@@ -31,12 +42,28 @@ module.exports = [
                 name: 'Settings',
                 icon: 'settings',
                 sref: 'settings'
-            },
-            {
-                name: 'Logout',
-                icon: 'logout',
-                sref: 'logout'
             }
         ];
+
+        $scope.logout = function () {
+            Login.delete({},
+                function (response) {
+                    $mdToast.show(
+                        $mdToast.simple()
+                            .content(response.message)
+                            .hideDelay(3000)
+                    );
+                    $state.go('login');
+                },
+                function (err) {
+                    $mdToast.show(
+                        $mdToast.simple()
+                            .content(err.statusText)
+                            .hideDelay(3000)
+                    );
+                }
+            );
+
+        };
     }
 ];

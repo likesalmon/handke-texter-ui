@@ -57,9 +57,11 @@
 	var Texter = __webpack_require__(27);
 	var Messages = __webpack_require__(36);
 	var Settings = __webpack_require__(41);
+	__webpack_require__(47);
 
 	angular.module('handkeTexter', [
 	        'ngResource',
+	        'ngStorage',
 	        uiRouter,
 	        'ngMaterial',
 	        'ngMessages',
@@ -125,13 +127,31 @@
 
 	        }
 	    ])
-	    .run(['$rootScope', function ($rootScope) {
-	        // Some controllers, like Messages, hide the nav bar.
-	        // This resets showNav.
-	        $rootScope.$on('$stateChangeStart', function () {
-	            $rootScope.showNav = true;
-	        });
-	    }])
+	    .run([
+	        '$http',
+	        '$rootScope',
+	        '$sessionStorage',
+	        '$state',
+	        function (
+	            $http,
+	            $rootScope,
+	            $sessionStorage,
+	            $state
+	        ) {
+	            // $http.get('http://localhost:8000/api/login')
+	            //     .then(function (response) {
+	            //         console.log(response);
+	            //     });
+
+	            // Some controllers, like Messages, hide the nav bar.
+	            // This resets showNav.
+	            $rootScope.$on('$stateChangeStart', function () {
+	                $rootScope.showNav = true;
+	            });
+
+
+	        }
+	    ])
 	    .constant('API', {
 	        protocol: 'http',
 	        ip: '45.55.27.217',
@@ -63190,8 +63210,19 @@
 
 	module.exports = [
 	    'API',
+	    'Login',
+	    '$mdToast',
 	    '$scope',
-	    function (API, $scope) {
+	    '$sessionStorage',
+	    '$state',
+	    function (
+	        API,
+	        Login,
+	        $mdToast,
+	        $scope,
+	        $sessionStorage,
+	        $state
+	    ) {
 	        $scope.phoneNumber = API.phoneNumber;
 
 	        $scope.navItems = [
@@ -63219,13 +63250,29 @@
 	                name: 'Settings',
 	                icon: 'settings',
 	                sref: 'settings'
-	            },
-	            {
-	                name: 'Logout',
-	                icon: 'logout',
-	                sref: 'logout'
 	            }
 	        ];
+
+	        $scope.logout = function () {
+	            Login.delete({},
+	                function (response) {
+	                    $mdToast.show(
+	                        $mdToast.simple()
+	                            .content(response.message)
+	                            .hideDelay(3000)
+	                    );
+	                    $state.go('login');
+	                },
+	                function (err) {
+	                    $mdToast.show(
+	                        $mdToast.simple()
+	                            .content(err.statusText)
+	                            .hideDelay(3000)
+	                    );
+	                }
+	            );
+
+	        };
 	    }
 	];
 
@@ -63323,9 +63370,51 @@
 /***/ function(module, exports) {
 
 	module.exports = [
+	    '$http',
+	    'Login',
+	    '$mdToast',
+	    '$sessionStorage',
 	    '$scope',
-	    function LoginCtrl ($scope) {
-	        $scope.credentials = {};
+	    '$state',
+	    function LoginCtrl (
+	        $http,
+	        Login,
+	        $mdToast,
+	        $sessionStorage,
+	        $scope,
+	        $state
+	    ) {
+	        $scope.user = {
+	            username: null,
+	            password: null
+	        };
+	        $scope.storage = $sessionStorage;
+
+	        $scope.login = function (username, password) {
+	            Login.save(
+	                {
+	                    username: username,
+	                    password: password
+	                },
+	                function (response) {
+	                    $mdToast.show(
+	                        $mdToast.simple()
+	                            .content(response.message)
+	                            .hideDelay(3000)
+	                    );
+	                    if (!response.error) {
+	                        $state.go('texter');
+	                    }
+	                },
+	                function (err) {
+	                    $mdToast.show(
+	                        $mdToast.simple()
+	                            .content(err.statusText)
+	                            .hideDelay(3000)
+	                    );
+	                }
+	            );
+	        };
 	    }
 	];
 
@@ -63410,7 +63499,6 @@
 
 	            HandkeSocket.socket.forward('contact:new', $scope);
 	            $scope.$on('socket:contact:new', function (event, data) {
-	                console.log(data);
 	                $scope.contacts.push(data);
 	            });
 	        };
@@ -63789,7 +63877,7 @@
 /* 38 */
 /***/ function(module, exports) {
 
-	module.exports = "<md-content layout=\"column\" flex=\"33\" flex-offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login()\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"credentials.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"credentials.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
+	module.exports = "<md-content layout=\"column\" flex=\"33\" flex-offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login(user.username, user.password)\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"user.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"user.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
 
 /***/ },
 /* 39 */
@@ -63907,6 +63995,224 @@
 	        return $resource(Helper.getAPIUrl() + '/api/login');
 	    }
 	];
+
+
+/***/ },
+/* 47 */
+/***/ function(module, exports, __webpack_require__) {
+
+	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
+	  'use strict';
+
+	  if (true) {
+	    !(__WEBPACK_AMD_DEFINE_ARRAY__ = [__webpack_require__(5)], __WEBPACK_AMD_DEFINE_FACTORY__ = (factory), __WEBPACK_AMD_DEFINE_RESULT__ = (typeof __WEBPACK_AMD_DEFINE_FACTORY__ === 'function' ? (__WEBPACK_AMD_DEFINE_FACTORY__.apply(exports, __WEBPACK_AMD_DEFINE_ARRAY__)) : __WEBPACK_AMD_DEFINE_FACTORY__), __WEBPACK_AMD_DEFINE_RESULT__ !== undefined && (module.exports = __WEBPACK_AMD_DEFINE_RESULT__));
+	  } else if (typeof exports === 'object') {
+	    module.exports = factory(require('angular'));
+	  } else {
+	    // Browser globals (root is window), we don't register it.
+	    factory(root.angular);
+	  }
+	}(this , function (angular) {
+	    'use strict';
+
+	    // RequireJS does not pass in Angular to us (will be undefined).
+	    // Fallback to window which should mostly be there.
+	    angular = (angular && angular.module ) ? angular : window.angular;
+
+	    /**
+	     * @ngdoc overview
+	     * @name ngStorage
+	     */
+
+	    return angular.module('ngStorage', [])
+
+	    /**
+	     * @ngdoc object
+	     * @name ngStorage.$localStorage
+	     * @requires $rootScope
+	     * @requires $window
+	     */
+
+	    .provider('$localStorage', _storageProvider('localStorage'))
+
+	    /**
+	     * @ngdoc object
+	     * @name ngStorage.$sessionStorage
+	     * @requires $rootScope
+	     * @requires $window
+	     */
+
+	    .provider('$sessionStorage', _storageProvider('sessionStorage'));
+
+	    function _storageProvider(storageType) {
+	        return function () {
+	          var storageKeyPrefix = 'ngStorage-';
+
+	          this.setKeyPrefix = function (prefix) {
+	            if (typeof prefix !== 'string') {
+	              throw new TypeError('[ngStorage] - ' + storageType + 'Provider.setKeyPrefix() expects a String.');
+	            }
+	            storageKeyPrefix = prefix;
+	          };
+
+	          var serializer = angular.toJson;
+	          var deserializer = angular.fromJson;
+
+	          this.setSerializer = function (s) {
+	            if (typeof s !== 'function') {
+	              throw new TypeError('[ngStorage] - ' + storageType + 'Provider.setSerializer expects a function.');
+	            }
+
+	            serializer = s;
+	          };
+
+	          this.setDeserializer = function (d) {
+	            if (typeof d !== 'function') {
+	              throw new TypeError('[ngStorage] - ' + storageType + 'Provider.setDeserializer expects a function.');
+	            }
+
+	            deserializer = d;
+	          };
+
+	          // Note: This is not very elegant at all.
+	          this.get = function (key) {
+	            return deserializer(window[storageType].getItem(storageKeyPrefix + key));
+	          };
+
+	          // Note: This is not very elegant at all.
+	          this.set = function (key, value) {
+	            return window[storageType].setItem(storageKeyPrefix + key, serializer(value));
+	          };
+
+	          this.$get = [
+	              '$rootScope',
+	              '$window',
+	              '$log',
+	              '$timeout',
+
+	              function(
+	                  $rootScope,
+	                  $window,
+	                  $log,
+	                  $timeout
+	              ){
+	                function isStorageSupported(storageType) {
+
+	                    // Some installations of IE, for an unknown reason, throw "SCRIPT5: Error: Access is denied"
+	                    // when accessing window.localStorage. This happens before you try to do anything with it. Catch
+	                    // that error and allow execution to continue.
+
+	                    // fix 'SecurityError: DOM Exception 18' exception in Desktop Safari, Mobile Safari
+	                    // when "Block cookies": "Always block" is turned on
+	                    var supported;
+	                    try {
+	                        supported = $window[storageType];
+	                    }
+	                    catch (err) {
+	                        supported = false;
+	                    }
+
+	                    // When Safari (OS X or iOS) is in private browsing mode, it appears as though localStorage
+	                    // is available, but trying to call .setItem throws an exception below:
+	                    // "QUOTA_EXCEEDED_ERR: DOM Exception 22: An attempt was made to add something to storage that exceeded the quota."
+	                    if (supported && storageType === 'localStorage') {
+	                        var key = '__' + Math.round(Math.random() * 1e7);
+
+	                        try {
+	                            localStorage.setItem(key, key);
+	                            localStorage.removeItem(key);
+	                        }
+	                        catch (err) {
+	                            supported = false;
+	                        }
+	                    }
+
+	                    return supported;
+	                }
+
+	                // The magic number 10 is used which only works for some keyPrefixes...
+	                // See https://github.com/gsklee/ngStorage/issues/137
+	                var prefixLength = storageKeyPrefix.length;
+
+	                // #9: Assign a placeholder object if Web Storage is unavailable to prevent breaking the entire AngularJS app
+	                var webStorage = isStorageSupported(storageType) || ($log.warn('This browser does not support Web Storage!'), {setItem: angular.noop, getItem: angular.noop}),
+	                    $storage = {
+	                        $default: function(items) {
+	                            for (var k in items) {
+	                                angular.isDefined($storage[k]) || ($storage[k] = items[k]);
+	                            }
+
+	                            $storage.$sync();
+	                            return $storage;
+	                        },
+	                        $reset: function(items) {
+	                            for (var k in $storage) {
+	                                '$' === k[0] || (delete $storage[k] && webStorage.removeItem(storageKeyPrefix + k));
+	                            }
+
+	                            return $storage.$default(items);
+	                        },
+	                        $sync: function () {
+	                            for (var i = 0, l = webStorage.length, k; i < l; i++) {
+	                                // #8, #10: `webStorage.key(i)` may be an empty string (or throw an exception in IE9 if `webStorage` is empty)
+	                                (k = webStorage.key(i)) && storageKeyPrefix === k.slice(0, prefixLength) && ($storage[k.slice(prefixLength)] = deserializer(webStorage.getItem(k)));
+	                            }
+	                        },
+	                        $apply: function() {
+	                            var temp$storage;
+
+	                            _debounce = null;
+
+	                            if (!angular.equals($storage, _last$storage)) {
+	                                temp$storage = angular.copy(_last$storage);
+	                                angular.forEach($storage, function(v, k) {
+	                                    if (angular.isDefined(v) && '$' !== k[0]) {
+	                                        webStorage.setItem(storageKeyPrefix + k, serializer(v))
+	                                        delete temp$storage[k];
+	                                    }
+	                                });
+
+	                                for (var k in temp$storage) {
+	                                    webStorage.removeItem(storageKeyPrefix + k);
+	                                }
+
+	                                _last$storage = angular.copy($storage);
+	                            }
+	                        },
+	                    },
+	                    _last$storage,
+	                    _debounce;
+
+	                $storage.$sync();
+
+	                _last$storage = angular.copy($storage);
+
+	                $rootScope.$watch(function() {
+	                    _debounce || (_debounce = $timeout($storage.$apply, 100, false));
+	                });
+
+	                // #6: Use `$window.addEventListener` instead of `angular.element` to avoid the jQuery-specific `event.originalEvent`
+	                $window.addEventListener && $window.addEventListener('storage', function(event) {
+	                    if (storageKeyPrefix === event.key.slice(0, prefixLength)) {
+	                        event.newValue ? $storage[event.key.slice(prefixLength)] = deserializer(event.newValue) : delete $storage[event.key.slice(prefixLength)];
+
+	                        _last$storage = angular.copy($storage);
+
+	                        $rootScope.$apply();
+	                    }
+	                });
+
+	                $window.addEventListener && $window.addEventListener('beforeunload', function() {
+	                    $storage.$apply();
+	                });
+
+	                return $storage;
+	            }
+	        ];
+	      };
+	    }
+
+	}));
 
 
 /***/ }
