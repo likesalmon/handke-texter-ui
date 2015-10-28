@@ -54,10 +54,10 @@
 	var ngMdIcons = __webpack_require__(18);
 	var Common = __webpack_require__(20);
 	var Login = __webpack_require__(25);
-	var Texter = __webpack_require__(27);
-	var Messages = __webpack_require__(36);
-	var Settings = __webpack_require__(41);
-	__webpack_require__(47);
+	var Texter = __webpack_require__(28);
+	var Messages = __webpack_require__(37);
+	var Settings = __webpack_require__(39);
+	__webpack_require__(42);
 
 	angular.module('handkeTexter', [
 	        'ngResource',
@@ -95,32 +95,32 @@
 	            $stateProvider
 	                .state('login', {
 	                    url: '/login',
-	                    template: __webpack_require__(38),
+	                    template: __webpack_require__(43),
 	                    controller: 'LoginCtrl'
 	                })
 	                .state('texter', {
 	                    url: '/texter',
-	                    template: __webpack_require__(39),
+	                    template: __webpack_require__(44),
 	                    controller: 'TexterCtrl'
 	                })
 	                .state('messages', {
 	                    url: '/messages',
-	                    template: __webpack_require__(40),
+	                    template: __webpack_require__(45),
 	                    controller: 'MessagesCtrl'
 	                })
 	                .state('messages.images', {
 	                    url: '/messages/images',
-	                    template: __webpack_require__(40),
+	                    template: __webpack_require__(45),
 	                    controller: 'MessagesCtrl'
 	                })
 	                .state('messages.text', {
 	                    url: '/messages/text',
-	                    template: __webpack_require__(40),
+	                    template: __webpack_require__(45),
 	                    controller: 'MessagesCtrl'
 	                })
 	                .state('settings', {
 	                    url: '/settings',
-	                    template: __webpack_require__(44),
+	                    template: __webpack_require__(46),
 	                    controller: 'SettingsCtrl'
 	                });
 
@@ -154,7 +154,8 @@
 	    ])
 	    .constant('API', {
 	        protocol: 'http',
-	        ip: '45.55.27.217',
+	        // ip: '45.55.27.217',
+	        ip: 'localhost',
 	        port: '8000',
 	        phoneNumber: '+19292442868'
 	    })
@@ -63362,7 +63363,7 @@
 
 	module.exports = angular.module('Login', [])
 	        .controller('LoginCtrl', __webpack_require__(26))
-	        .factory('Login', __webpack_require__(46));
+	        .factory('Login', __webpack_require__(27));
 
 
 /***/ },
@@ -63421,21 +63422,39 @@
 
 /***/ },
 /* 27 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = [
+	    'Helper',
+	    '$resource',
+	    function (
+	        Helper,
+	        $resource
+	    ) {
+	        return $resource(Helper.getAPIUrl() + '/api/login');
+	    }
+	];
+
+
+/***/ },
+/* 28 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var angular = __webpack_require__(5);
 
 	module.exports = angular.module('Texter', [])
-	    .controller('TexterCtrl', __webpack_require__(28))
-	    .controller('ContactDialogCtrl', __webpack_require__(31))
-	    .controller('ScriptDialogCtrl', __webpack_require__(32))
-	    .service('Text', __webpack_require__(33))
-	    .factory('Contact', __webpack_require__(34))
-	    .factory('Script', __webpack_require__(35));
+	    .controller('TexterCtrl', __webpack_require__(29))
+	    .controller('ContactDialogCtrl', __webpack_require__(32))
+	    .controller('ScriptDialogCtrl', __webpack_require__(33))
+	    .service('Text', __webpack_require__(34))
+	    .factory('Contact', __webpack_require__(35))
+	    .factory('Script', __webpack_require__(36));
 
 
 /***/ },
-/* 28 */
+/* 29 */
 /***/ function(module, exports, __webpack_require__) {
 
 	module.exports = [
@@ -63571,7 +63590,7 @@
 	        $scope.openContactDialog = function (contact) {
 	            $mdDialog.show({
 	                controller: 'ContactDialogCtrl',
-	                template: __webpack_require__(29),
+	                template: __webpack_require__(30),
 	                parent: angular.element(document.body),
 	                clickOutsideToClose: true,
 	                locals: {
@@ -63608,7 +63627,7 @@
 	        $scope.openScriptDialog = function (script) {
 	            $mdDialog.show({
 	                controller: 'ScriptDialogCtrl',
-	                template: __webpack_require__(30),
+	                template: __webpack_require__(31),
 	                parent: angular.element(document.body),
 	                clickOutsideToClose: true,
 	                locals: {
@@ -63645,19 +63664,19 @@
 
 
 /***/ },
-/* 29 */
+/* 30 */
 /***/ function(module, exports) {
 
 	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <form name=\"contactForm\" ng-submit=\"save()\" novalidate>\n            <md-input-container>\n                <label>Name</label>\n                <input name=\"name\"\n                    ng-model=\"contact.name\"\n                    required\n                    type=\"text\">\n                <div ng-messages=\"contactForm.name.$error\"\n                    ng-show=\"contactForm.name.$touched\">\n                    <div ng-message=\"required\">\n                        Name is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <md-input-container>\n                <label>Phone</label>\n                <input name=\"phone\"\n                    ng-model=\"contact.phone\"\n                    ng-pattern=\"/\\+\\d{10}/\"\n                    required\n                    type=\"tel\"></textarea>\n                <div ng-messages=\"contactForm.phone.$error\"\n                    ng-show=\"contactForm.phone.$touched\">\n                    <div ng-message=\"required\">\n                        Phone is required.\n                    </div>\n                    <div ng-message=\"pattern\">\n                        Phone must be in the format \"+1234567890\".\n                    </div>\n                </div>\n            </md-input-container>\n            <md-input-container>\n                <label>Group</label>\n                <md-select name=\"group\"\n                    ng-model=\"contact.group\">\n                    <md-option ng-repeat=\"group in groups\"\n                        value=\"{{ group }}\">\n                        {{ group }}\n                    </md-option>\n                </md-select>\n                <div ng-messages=\"contactForm.group.$error\"\n                    ng-show=\"contactForm.phone.$touched\">\n                    <div ng-message=\"required\">\n                        Group is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <div class=\"md-actions\">\n                <md-button class=\"md-raised\"\n                    ng-if=\"!contact.id\"\n                    type=\"submit\"\n                    ng-disabled=\"contactForm.$error.required[0].$invalid\">\n                    Save\n                </md-button>\n                <md-button ng-if=\"contact.id\"\n                    ng-click=\"remove()\"\n                    type=\"button\">Remove</md-button>\n                <md-button class=\"md-raised\"\n                    ng-if=\"contact.id\"\n                    type=\"submit\"\n                    ng-disabled=\"contactForm.$error.required[0].$invalid\">\n                    Update\n                </md-button>\n            </div>\n        </form>\n    </md-dialog-content>\n</md-dialog>\n"
 
 /***/ },
-/* 30 */
+/* 31 */
 /***/ function(module, exports) {
 
 	module.exports = "<md-dialog>\n    <md-dialog-content>\n        <form name=\"scriptForm\" ng-submit=\"save()\" novalidate>\n            <md-input-container>\n                <label>Title</label>\n                <input name=\"title\"\n                    type=\"text\"\n                    ng-model=\"script.title\"\n                    required>\n                <div ng-messages=\"scriptForm.title.$error\"\n                    ng-show=\"scriptForm.title.$touched\">\n                    <div ng-message=\"required\">\n                        Title is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <md-input-container>\n                <label>Text</label>\n                <textarea name=\"text\"\n                    ng-model=\"script.content\"\n                    required></textarea>\n                <div ng-messages=\"scriptForm.content.$error\"\n                    ng-show=\"scriptForm.content.$touched\">\n                    <div ng-message=\"required\">\n                        Text is required.\n                    </div>\n                </div>\n            </md-input-container>\n            <div class=\"md-actions\">\n                <md-button class=\"md-raised\"\n                    ng-if=\"!script.id\"\n                    type=\"submit\"\n                    ng-disabled=\"scriptForm.$error.required[0].$invalid\">\n                    Save\n                </md-button>\n                <md-button ng-if=\"script.id\"\n                    ng-click=\"remove()\"\n                    type=\"button\">Remove</md-button>\n                <md-button class=\"md-raised\"\n                    ng-if=\"script.id\"\n                    type=\"submit\"\n                    ng-disabled=\"scriptForm.$error.required[0].$invalid\">\n                    Update\n                </md-button>\n            </div>\n        </form>\n    </md-dialog-content>\n</md-dialog>\n"
 
 /***/ },
-/* 31 */
+/* 32 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63711,7 +63730,7 @@
 
 
 /***/ },
-/* 32 */
+/* 33 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63762,7 +63781,7 @@
 
 
 /***/ },
-/* 33 */
+/* 34 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -63778,7 +63797,7 @@
 
 
 /***/ },
-/* 34 */
+/* 35 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63803,7 +63822,7 @@
 
 
 /***/ },
-/* 35 */
+/* 36 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63828,17 +63847,17 @@
 
 
 /***/ },
-/* 36 */
+/* 37 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var angular = __webpack_require__(5);
 
 	module.exports = angular.module('Messages', [])
-	    .controller('MessagesCtrl', __webpack_require__(37));
+	    .controller('MessagesCtrl', __webpack_require__(38));
 
 
 /***/ },
-/* 37 */
+/* 38 */
 /***/ function(module, exports) {
 
 	module.exports = [
@@ -63874,25 +63893,7 @@
 
 
 /***/ },
-/* 38 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-content layout=\"column\" flex=\"33\" flex-offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login(user.username, user.password)\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"user.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"user.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
-
-/***/ },
 /* 39 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-content class=\"texter\" layout=\"row\" flex>\n    <div class=\"contacts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Contacts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Contact\"\n                ng-click=\"openContactDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n            <span class=\"count\">{{ contacts.length }}</span>\n            <md-input-container class=\"list-filter\">\n                <label>Search Contacts</label>\n                <input type=\"text\" ng-model=\"contactFilter\">\n            </md-input-container>\n            <div class=\"groups\">\n                <md-button class=\"md-fab md-mini\"\n                    ng-class=\"{ 'md-accent md-hue-2': group.selected }\"\n                    ng-repeat=\"group in contactGroups\"\n                    ng-click=\"selectGroup(contacts, group)\">\n                    {{ group.name }}\n                </md-button>\n            </div>\n        </md-subheader>\n\n        <md-content>\n            <md-list class=\"contact-list\">\n                <md-list-item\n                    ng-repeat=\"contact in contacts |\n                        orderBy:['group', 'name'] |\n                        filter:contactFilter\">\n                    <div class=\"md-avatar group\">\n                        {{ contact.group }}\n                    </div>\n\n                    <md-list-item-text flex=\"70\" layout=\"row\"\n                        layout-align=\"start center\">\n                        <div flex>\n                            <h4>{{ contact.name | limitTo:35 }}</h4>\n                            <p>{{ contact.phone }}</p>\n                            <p>\n                                <md-button class=\"edit-button md-accent md-mini\"\n                                    ng-click=\"openContactDialog(contact)\">\n                                    <ng-md-icon icon=\"edit\"\n                                        style=\"fill: #FF9800\"\n                                        size=\"17\"></ng-md-icon>\n                                    Edit\n                                </md-button>\n                            </p>\n                        </div>\n\n                        <div flex=\"10\">\n                            <md-checkbox class=\"md-accent\"\n                                ng-model=\"contact.selected\"></md-checkbox>\n                        </div>\n                    </md-list-item-text>\n                </md-list-item>\n            </md-list>\n        </md-content>\n    </div>\n\n    <div class=\"scripts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Scripts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Script\"\n                ng-click=\"openScriptDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n            <span class=\"count\">{{ scripts.length }}</span>\n            <md-input-container class=\"list-filter\">\n                <label>Search Scripts</label>\n                <input type=\"text\" ng-model=\"scriptFilter\">\n            </md-input-container>\n        </md-subheader>\n\n        <md-content>\n            <md-list class=\"script-list\">\n                <md-list-item class=\"md-2-line\"\n                    ng-repeat=\"script in scripts | filter:scriptFilter\"\n                    ng-click=\"populateOutgoing(script.content)\">\n                    <md-list-item-text>\n                        <h4>{{ script.title | limitTo:35 }}</h4>\n                        <p>\n                            {{ script.content | limitTo:35 }}\n                            <md-button class=\"edit-button md-accent md-mini\"\n                                ng-click=\"openScriptDialog(script)\">\n                                <ng-md-icon icon=\"edit\"\n                                    style=\"fill: #FF9800\"\n                                    size=\"17\"></ng-md-icon>\n                                Edit\n                            </md-button>\n                        </p>\n                    </md-list-item-text>\n                </md-list-item>\n            </md-list>\n        </md-content>\n    </div>\n\n    <div class=\"texts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Outgoing\n\n            <form name=\"outgoingForm\" ng-submit=\"send()\">\n                <md-input-container>\n                    <label for=\"text\">Text</label>\n                    <textarea name=\"text\" ng-model=\"outgoing.text\">\n                    </textarea>\n                </md-input-container>\n\n                <md-button class=\"md-accent\"\n                    type=\"submit\">Send</md-button>\n            </form>\n        </md-subheader>\n\n        <md-subheader class=\"md-no-sticky\">\n            Incoming\n            <span class=\"count\">{{ incoming.length }}</span>\n        </md-subheader>\n\n        <md-content class=\"incoming\">\n            <ng-include src=\"'Messages/incoming-list.html'\"></ng-include>\n        </md-content>\n    </div>\n</md-content>\n"
-
-/***/ },
-/* 40 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-content class=\"messages\" flex>\n    <div class=\"messages-container\">\n        <ng-include src=\"'Messages/incoming-list.html'\"></ng-include>\n    </div>\n</md-content>\n"
-
-/***/ },
-/* 41 */
 /***/ function(module, exports, __webpack_require__) {
 
 	'use strict';
@@ -63900,12 +63901,12 @@
 	var angular = __webpack_require__(5);
 
 	module.exports = angular.module('Settings', [])
-	    .controller('SettingsCtrl', __webpack_require__(42))
-	    .factory('Purge', __webpack_require__(45));
+	    .controller('SettingsCtrl', __webpack_require__(40))
+	    .factory('Purge', __webpack_require__(41));
 
 
 /***/ },
-/* 42 */
+/* 40 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63955,14 +63956,7 @@
 
 
 /***/ },
-/* 43 */,
-/* 44 */
-/***/ function(module, exports) {
-
-	module.exports = "<md-content class=\"settings\" layout=\"column\" layout-margin flex>\n    <h2>Settings</h2>\n    <p>\n        Use buttons to purge the database. You will be asked\n        to confirm your selection, but be careful! Deleting\n        is forever.\n    </p>\n    <p>\n        After deleting, refresh your browser to see the results.\n    </p>\n    <div layout=\"row\" layout-align=\"space-around start\" flex>\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('contacts')\">\n                Delete Contacts\n            </md-button>\n        </div>\n\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('scripts')\">\n                Delete Scripts\n            </md-button>\n        </div>\n\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('texts')\">\n                Delete Texts\n            </md-button>\n        </div>\n    </div>\n</md-content>\n"
-
-/***/ },
-/* 45 */
+/* 41 */
 /***/ function(module, exports) {
 
 	'use strict';
@@ -63980,25 +63974,7 @@
 
 
 /***/ },
-/* 46 */
-/***/ function(module, exports) {
-
-	'use strict';
-
-	module.exports = [
-	    'Helper',
-	    '$resource',
-	    function (
-	        Helper,
-	        $resource
-	    ) {
-	        return $resource(Helper.getAPIUrl() + '/api/login');
-	    }
-	];
-
-
-/***/ },
-/* 47 */
+/* 42 */
 /***/ function(module, exports, __webpack_require__) {
 
 	var __WEBPACK_AMD_DEFINE_FACTORY__, __WEBPACK_AMD_DEFINE_ARRAY__, __WEBPACK_AMD_DEFINE_RESULT__;(function (root, factory) {
@@ -64214,6 +64190,30 @@
 
 	}));
 
+
+/***/ },
+/* 43 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-content layout=\"column\" flex=\"33\" flex-offset=\"33\">\n    <h2>Login</h2>\n    <form name=\"loginForm\" ng-submit=\"login(user.username, user.password)\">\n        <md-input-container>\n            <label for=\"username\">Username</label>\n            <input type=\"text\"\n                name=\"username\"\n                ng-model=\"user.username\">\n        </md-input-container>\n        <md-input-container>\n            <label for=\"password\">Password</label>\n            <input type=\"password\"\n                name=\"password\"\n                ng-model=\"user.password\">\n        </md-input-container>\n        <md-button\n            type=\"submit\"\n            class=\"md-primary md-raised\">\n            Login\n        </md-button>\n    </form>\n</md-content>\n<span flex></span>\n"
+
+/***/ },
+/* 44 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-content class=\"texter\" layout=\"row\" flex>\n    <div class=\"contacts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Contacts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Contact\"\n                ng-click=\"openContactDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n            <span class=\"count\">{{ contacts.length }}</span>\n            <md-input-container class=\"list-filter\">\n                <label>Search Contacts</label>\n                <input type=\"text\" ng-model=\"contactFilter\">\n            </md-input-container>\n            <div class=\"groups\">\n                <md-button class=\"md-fab md-mini\"\n                    ng-class=\"{ 'md-accent md-hue-2': group.selected }\"\n                    ng-repeat=\"group in contactGroups\"\n                    ng-click=\"selectGroup(contacts, group)\">\n                    {{ group.name }}\n                </md-button>\n            </div>\n        </md-subheader>\n\n        <md-content>\n            <md-list class=\"contact-list\">\n                <md-list-item\n                    ng-repeat=\"contact in contacts |\n                        orderBy:['group', 'name'] |\n                        filter:contactFilter\">\n                    <div class=\"md-avatar group\">\n                        {{ contact.group }}\n                    </div>\n\n                    <md-list-item-text flex=\"70\" layout=\"row\"\n                        layout-align=\"start center\">\n                        <div flex>\n                            <h4>{{ contact.name | limitTo:35 }}</h4>\n                            <p>{{ contact.phone }}</p>\n                            <p>\n                                <md-button class=\"edit-button md-accent md-mini\"\n                                    ng-click=\"openContactDialog(contact)\">\n                                    <ng-md-icon icon=\"edit\"\n                                        style=\"fill: #FF9800\"\n                                        size=\"17\"></ng-md-icon>\n                                    Edit\n                                </md-button>\n                            </p>\n                        </div>\n\n                        <div flex=\"10\">\n                            <md-checkbox class=\"md-accent\"\n                                ng-model=\"contact.selected\"></md-checkbox>\n                        </div>\n                    </md-list-item-text>\n                </md-list-item>\n            </md-list>\n        </md-content>\n    </div>\n\n    <div class=\"scripts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Scripts\n            <md-button class=\"add-button md-icon-button\"\n                aria-label=\"Add Script\"\n                ng-click=\"openScriptDialog()\">\n                <ng-md-icon icon=\"add\"\n                    style=\"fill: #fff\"\n                    size=\"20\"></ng-md-icon>\n            </md-button>\n            <span class=\"count\">{{ scripts.length }}</span>\n            <md-input-container class=\"list-filter\">\n                <label>Search Scripts</label>\n                <input type=\"text\" ng-model=\"scriptFilter\">\n            </md-input-container>\n        </md-subheader>\n\n        <md-content>\n            <md-list class=\"script-list\">\n                <md-list-item class=\"md-2-line\"\n                    ng-repeat=\"script in scripts | filter:scriptFilter\"\n                    ng-click=\"populateOutgoing(script.content)\">\n                    <md-list-item-text>\n                        <h4>{{ script.title | limitTo:35 }}</h4>\n                        <p>\n                            {{ script.content | limitTo:35 }}\n                            <md-button class=\"edit-button md-accent md-mini\"\n                                ng-click=\"openScriptDialog(script)\">\n                                <ng-md-icon icon=\"edit\"\n                                    style=\"fill: #FF9800\"\n                                    size=\"17\"></ng-md-icon>\n                                Edit\n                            </md-button>\n                        </p>\n                    </md-list-item-text>\n                </md-list-item>\n            </md-list>\n        </md-content>\n    </div>\n\n    <div class=\"texts\"\n        layout=\"column\"\n        flex>\n        <md-subheader class=\"md-no-sticky\">\n            Outgoing\n\n            <form name=\"outgoingForm\" ng-submit=\"send()\">\n                <md-input-container>\n                    <label for=\"text\">Text</label>\n                    <textarea name=\"text\" ng-model=\"outgoing.text\">\n                    </textarea>\n                </md-input-container>\n\n                <md-button class=\"md-accent\"\n                    type=\"submit\">Send</md-button>\n            </form>\n        </md-subheader>\n\n        <md-subheader class=\"md-no-sticky\">\n            Incoming\n            <span class=\"count\">{{ incoming.length }}</span>\n        </md-subheader>\n\n        <md-content class=\"incoming\">\n            <ng-include src=\"'Messages/incoming-list.html'\"></ng-include>\n        </md-content>\n    </div>\n</md-content>\n"
+
+/***/ },
+/* 45 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-content class=\"messages\" flex>\n    <div class=\"messages-container\">\n        <ng-include src=\"'Messages/incoming-list.html'\"></ng-include>\n    </div>\n</md-content>\n"
+
+/***/ },
+/* 46 */
+/***/ function(module, exports) {
+
+	module.exports = "<md-content class=\"settings\" layout=\"column\" layout-margin flex>\n    <h2>Settings</h2>\n    <p>\n        Use buttons to purge the database. You will be asked\n        to confirm your selection, but be careful! Deleting\n        is forever.\n    </p>\n    <p>\n        After deleting, refresh your browser to see the results.\n    </p>\n    <div layout=\"row\" layout-align=\"space-around start\" flex>\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('contacts')\">\n                Delete Contacts\n            </md-button>\n        </div>\n\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('scripts')\">\n                Delete Scripts\n            </md-button>\n        </div>\n\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('texts')\">\n                Delete Texts\n            </md-button>\n        </div>\n    </div>\n</md-content>\n"
 
 /***/ }
 /******/ ]);
