@@ -63321,7 +63321,7 @@
 	            /* jshint undef: false */
 	            // io is availble on the global scope
 	            ioSocket: io.connect('http://handke.likesalmon.net', {
-	                path: 'api/socket.io'
+	                path: '/api/socket.io'
 	            })
 	        });
 
