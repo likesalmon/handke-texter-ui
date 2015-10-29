@@ -5,6 +5,7 @@ module.exports = [
         $resource,
         Helper
     ) {
-        return $resource(Helper.getAPIUrl() + '/sms/send');
+        return $resource(
+            Helper.getAPIUrl() + Helper.getAPIPath() + '/sms/send');
     }
 ];
