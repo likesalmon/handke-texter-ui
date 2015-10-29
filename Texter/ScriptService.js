@@ -5,7 +5,7 @@ module.exports = [
     '$resource',
     '$window',
     function (Helper, $resource, $window) {
-        return $resource(Helper.getAPIUrl() + '/api/scripts/:id',
+        return $resource(Helper.getAPIUrl() + '/scripts/:id',
             {
                 id: '@id'
             },

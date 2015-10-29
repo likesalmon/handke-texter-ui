@@ -7,6 +7,6 @@ module.exports = [
         Helper,
         $resource
     ) {
-        return $resource(Helper.getAPIUrl() + '/api/login');
+        return $resource(Helper.getAPIUrl() + '/login');
     }
 ];

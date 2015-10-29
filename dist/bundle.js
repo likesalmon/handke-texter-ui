@@ -63426,7 +63426,7 @@
 	        Helper,
 	        $resource
 	    ) {
-	        return $resource(Helper.getAPIUrl() + '/api/login');
+	        return $resource(Helper.getAPIUrl() + '/login');
 	    }
 	];
 
@@ -63784,7 +63784,7 @@
 	        $resource,
 	        Helper
 	    ) {
-	        return $resource(Helper.getAPIUrl() + '/api/sms/send');
+	        return $resource(Helper.getAPIUrl() + '/sms/send');
 	    }
 	];
 
@@ -63800,7 +63800,7 @@
 	    '$resource',
 	    '$window',
 	    function (Helper, $resource, $window) {
-	        return $resource(Helper.getAPIUrl() + '/api/contacts/:id',
+	        return $resource(Helper.getAPIUrl() + '/contacts/:id',
 	            {
 	                id: '@id'
 	            },
@@ -63825,7 +63825,7 @@
 	    '$resource',
 	    '$window',
 	    function (Helper, $resource, $window) {
-	        return $resource(Helper.getAPIUrl() + '/api/scripts/:id',
+	        return $resource(Helper.getAPIUrl() + '/scripts/:id',
 	            {
 	                id: '@id'
 	            },
@@ -63961,7 +63961,7 @@
 	        Helper,
 	        $resource
 	    ) {
-	        return $resource(Helper.getAPIUrl() + '/api/purge/:table');
+	        return $resource(Helper.getAPIUrl() + '/purge/:table');
 	    }
 	];
 
