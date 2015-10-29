@@ -102,7 +102,7 @@ angular.module('handkeTexter', [
         }
     ])
     .constant('API', {
-        url: 'http://handke.likesalmon.new',
+        url: 'http://handke.likesalmon.net',
         port: '8000',
         phoneNumber: '+19292442868'
     })
