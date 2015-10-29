@@ -12,8 +12,8 @@ module.exports = [
         var socket = socketFactory({
             /* jshint undef: false */
             // io is availble on the global scope
-            ioSocket: io.connect('http://handke.likesalmon.net', {
-                path: '/api/socket.io'
+            ioSocket: io.connect(Helper.getAPIUrl(), {
+                path: Helper.getAPIPath()
             })
         });
 
