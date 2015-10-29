@@ -15,6 +15,7 @@ module.exports = [
         $scope.showNav = $rootScope.showNav;
 
         $scope.incoming = HandkeSocket.messages;
+        $scope.showNames = false;
 
         // Used in template but not in this module
         $scope.populateOutgoing = function () {

@@ -7,7 +7,9 @@
         ng-class="{ 'handke-message': text.contact.name === 'Handke' }"
         class="message">
         <md-button ng-click="populateOutgoing(text.body)">
-            <div class="name" ng-hide="text.contact.name === 'Handke'">
+            <div class="name"
+                ng-if="showNames"
+                ng-hide="text.contact.name === 'Handke'">
                 {{ text.contact.name }} said,
             </div>
             <div class="text">{{ text.body }}</div>
