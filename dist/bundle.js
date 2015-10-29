@@ -63294,7 +63294,7 @@
 	                if (/localhost/.test($window.location.href)) {
 	                    return '';
 	                } else {
-	                    return  '/api';
+	                    return  '/api/socket.io';
 	                }
 	            }
 	        };
