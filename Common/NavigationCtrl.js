@@ -29,16 +29,6 @@ module.exports = [
                 sref: 'messages'
             },
             {
-                name: 'Just Images',
-                icon: 'photo',
-                sref: 'messages.images'
-            },
-            {
-                name: 'Just Words',
-                icon: 'message',
-                sref: 'messages.text'
-            },
-            {
                 name: 'Settings',
                 icon: 'settings',
                 sref: 'settings'
