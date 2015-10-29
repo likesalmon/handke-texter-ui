@@ -12,7 +12,7 @@ module.exports = [
         var socket = socketFactory({
             /* jshint undef: false */
             // io is availble on the global scope
-            ioSocket: io.connect(Helper.getAPIUrl())
+            ioSocket: io.connect('/api/socket.io')
         });
 
         socket.forward('error');
