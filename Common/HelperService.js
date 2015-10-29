@@ -6,15 +6,19 @@ module.exports = [
     function (API, $window) {
         return {
             getAPIUrl: function () {
-                var url = '';
-
                 if (/localhost/.test($window.location.href)) {
-                    url = 'http://localhost:' + API.port + '/api';
+                    return 'http://localhost:' + API.port + '/api';
                 } else {
-                    url = API.url + '/api';
+                    return  API.url + '/api';
                 }
+            },
 
-                return url;
+            getAPIPath: function () {
+                if (/localhost/.test($window.location.href)) {
+                    return '';
+                } else {
+                    return  '/api';
+                }
             }
         };
     }

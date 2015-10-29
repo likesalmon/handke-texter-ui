@@ -9,11 +9,12 @@ module.exports = [
         socketFactory,
         $rootScope
     ) {
-
         var socket = socketFactory({
             /* jshint undef: false */
             // io is availble on the global scope
-            ioSocket: io.connect(Helper.getAPIUrl())
+            ioSocket: io.connect(Helper.getAPIUrl(), {
+                path: Helper.getAPIPath()
+            })
         });
 
         socket.forward('error');

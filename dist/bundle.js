@@ -63283,15 +63283,19 @@
 	    function (API, $window) {
 	        return {
 	            getAPIUrl: function () {
-	                var url = '';
-
 	                if (/localhost/.test($window.location.href)) {
-	                    url = 'http://localhost:' + API.port + '/api';
+	                    return 'http://localhost:' + API.port + '/api';
 	                } else {
-	                    url = API.url + '/api';
+	                    return  API.url + '/api';
 	                }
+	            },
 
-	                return url;
+	            getAPIPath: function () {
+	                if (/localhost/.test($window.location.href)) {
+	                    return '';
+	                } else {
+	                    return  '/api';
+	                }
 	            }
 	        };
 	    }
@@ -63313,11 +63317,12 @@
 	        socketFactory,
 	        $rootScope
 	    ) {
-
 	        var socket = socketFactory({
 	            /* jshint undef: false */
 	            // io is availble on the global scope
-	            ioSocket: io.connect(Helper.getAPIUrl())
+	            ioSocket: io.connect(Helper.getAPIUrl(), {
+	                path: Helper.getAPIPath()
+	            })
 	        });
 
 	        socket.forward('error');
