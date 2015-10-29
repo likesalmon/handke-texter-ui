@@ -149,7 +149,8 @@
 	    ])
 	    .constant('API', {
 	        url: 'http://handke.likesalmon.net',
-	        port: '8000',
+	        devUrl: 'http://localhost:8000',
+	        path: '/api',
 	        phoneNumber: '+19292442868'
 	    })
 	    .constant('GROUPS', ['A','B','C','D']);
@@ -63274,13 +63275,17 @@
 	        return {
 	            getAPIUrl: function () {
 	                if (/localhost/.test($window.location.href)) {
-	                    return 'http://localhost:' + API.port + '/api';
+	                    return API.devUrl;
 	                } else {
-	                    return  API.url + '/api';
+	                    return  API.url;
 	                }
 	            },
 
 	            getAPIPath: function () {
+	                return API.path;
+	            },
+
+	            getSocketPath: function () {
 	                if (/localhost/.test($window.location.href)) {
 	                    return '';
 	                } else {
@@ -63311,7 +63316,7 @@
 	            /* jshint undef: false */
 	            // io is availble on the global scope
 	            ioSocket: io.connect(Helper.getAPIUrl(), {
-	                path: Helper.getAPIPath()
+	                path: Helper.getSocketPath()
 	            })
 	        });
 
@@ -63421,7 +63426,7 @@
 	        Helper,
 	        $resource
 	    ) {
-	        return $resource(Helper.getAPIUrl() + '/login');
+	        return $resource(Helper.getAPIUrl() + Helper.getAPIPath() + '/login');
 	    }
 	];
 
@@ -63500,12 +63505,14 @@
 
 	            HandkeSocket.socket.forward('incoming', $scope);
 	            $scope.$on('socket:incoming', function (event, data) {
+	                console.log('socket:incoming');
 	                $location.hash('text-' + ($scope.incoming.length - 1));
 	                $anchorScroll();
 	            });
 
 	            HandkeSocket.socket.forward('contact:new', $scope);
 	            $scope.$on('socket:contact:new', function (event, data) {
+	                console.log('socket:contact:new');
 	                $scope.contacts.push(data);
 	            });
 	        };
@@ -63795,7 +63802,8 @@
 	    '$resource',
 	    '$window',
 	    function (Helper, $resource, $window) {
-	        return $resource(Helper.getAPIUrl() + '/contacts/:id',
+	        return $resource(
+	            Helper.getAPIUrl() + Helper.getAPIPath() + '/contacts/:id',
 	            {
 	                id: '@id'
 	            },
@@ -63820,7 +63828,8 @@
 	    '$resource',
 	    '$window',
 	    function (Helper, $resource, $window) {
-	        return $resource(Helper.getAPIUrl() + '/scripts/:id',
+	        return $resource(
+	            Helper.getAPIUrl() + Helper.getAPIPath() + '/scripts/:id',
 	            {
 	                id: '@id'
 	            },
@@ -63957,7 +63966,9 @@
 	        Helper,
 	        $resource
 	    ) {
-	        return $resource(Helper.getAPIUrl() + '/purge/:table');
+	        return $resource(
+	            Helper.getAPIUrl() + Helper.getAPIPath() + '/purge/:table'
+	        );
 	    }
 	];
 

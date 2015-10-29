@@ -13,7 +13,7 @@ module.exports = [
             /* jshint undef: false */
             // io is availble on the global scope
             ioSocket: io.connect(Helper.getAPIUrl(), {
-                path: Helper.getAPIPath()
+                path: Helper.getSocketPath()
             })
         });
 

@@ -7,6 +7,8 @@ module.exports = [
         Helper,
         $resource
     ) {
-        return $resource(Helper.getAPIUrl() + '/purge/:table');
+        return $resource(
+            Helper.getAPIUrl() + Helper.getAPIPath() + '/purge/:table'
+        );
     }
 ];

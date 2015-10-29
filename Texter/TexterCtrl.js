@@ -53,12 +53,14 @@ module.exports = [
 
             HandkeSocket.socket.forward('incoming', $scope);
             $scope.$on('socket:incoming', function (event, data) {
+                console.log('socket:incoming');
                 $location.hash('text-' + ($scope.incoming.length - 1));
                 $anchorScroll();
             });
 
             HandkeSocket.socket.forward('contact:new', $scope);
             $scope.$on('socket:contact:new', function (event, data) {
+                console.log('socket:contact:new');
                 $scope.contacts.push(data);
             });
         };

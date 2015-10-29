@@ -7,13 +7,17 @@ module.exports = [
         return {
             getAPIUrl: function () {
                 if (/localhost/.test($window.location.href)) {
-                    return 'http://localhost:' + API.port + '/api';
+                    return API.devUrl;
                 } else {
-                    return  API.url + '/api';
+                    return  API.url;
                 }
             },
 
             getAPIPath: function () {
+                return API.path;
+            },
+
+            getSocketPath: function () {
                 if (/localhost/.test($window.location.href)) {
                     return '';
                 } else {

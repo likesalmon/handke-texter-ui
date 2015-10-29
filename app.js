@@ -103,7 +103,8 @@ angular.module('handkeTexter', [
     ])
     .constant('API', {
         url: 'http://handke.likesalmon.net',
-        port: '8000',
+        devUrl: 'http://localhost:8000',
+        path: '/api',
         phoneNumber: '+19292442868'
     })
     .constant('GROUPS', ['A','B','C','D']);
