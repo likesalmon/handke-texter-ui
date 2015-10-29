@@ -63320,7 +63320,9 @@
 	        var socket = socketFactory({
 	            /* jshint undef: false */
 	            // io is availble on the global scope
-	            ioSocket: io.connect('/api/socket.io')
+	            ioSocket: io.connect('http://handke.likesalmon.net', {
+	                path: 'api/socket.io'
+	            })
 	        });
 
 	        socket.forward('error');
