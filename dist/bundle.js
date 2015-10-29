@@ -138,11 +138,6 @@
 	            $sessionStorage,
 	            $state
 	        ) {
-	            // $http.get('http://localhost:8000/api/login')
-	            //     .then(function (response) {
-	            //         console.log(response);
-	            //     });
-
 	            // Some controllers, like Messages, hide the nav bar.
 	            // This resets showNav.
 	            $rootScope.$on('$stateChangeStart', function () {
@@ -153,9 +148,7 @@
 	        }
 	    ])
 	    .constant('API', {
-	        protocol: 'http',
-	        // ip: '45.55.27.217',
-	        ip: 'localhost',
+	        url: 'http://handke.likesalmon.new',
 	        port: '8000',
 	        phoneNumber: '+19292442868'
 	    })
@@ -63293,9 +63286,9 @@
 	                var url = '';
 
 	                if (/localhost/.test($window.location.href)) {
-	                    url = API.protocol + '://localhost:' + API.port;
+	                    url = 'http://localhost:' + API.port;
 	                } else {
-	                    url = API.protocol + '://' + API.ip + ':' + API.port;
+	                    url = API.url;
 	                }
 
 	                return url;

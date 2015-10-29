@@ -92,11 +92,6 @@ angular.module('handkeTexter', [
             $sessionStorage,
             $state
         ) {
-            // $http.get('http://localhost:8000/api/login')
-            //     .then(function (response) {
-            //         console.log(response);
-            //     });
-
             // Some controllers, like Messages, hide the nav bar.
             // This resets showNav.
             $rootScope.$on('$stateChangeStart', function () {
@@ -107,9 +102,7 @@ angular.module('handkeTexter', [
         }
     ])
     .constant('API', {
-        protocol: 'http',
-        // ip: '45.55.27.217',
-        ip: 'localhost',
+        url: 'http://handke.likesalmon.new',
         port: '8000',
         phoneNumber: '+19292442868'
     })
