@@ -9,9 +9,9 @@ module.exports = [
                 var url = '';
 
                 if (/localhost/.test($window.location.href)) {
-                    url = 'http://localhost:' + API.port;
+                    url = 'http://localhost:' + API.port + '/api';
                 } else {
-                    url = API.url;
+                    url = API.url + '/api';
                 }
 
                 return url;
