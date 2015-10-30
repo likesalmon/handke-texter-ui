@@ -28,17 +28,21 @@ angular.module('handkeTexter', [
         Settings.name
     ])
     .config([
+        '$httpProvider',
         '$locationProvider',
-        '$stateProvider',
         '$mdThemingProvider',
+        '$stateProvider',
         '$urlRouterProvider',
         function (
+            $httpProvider,
             $locationProvider,
-            $stateProvider,
             $mdThemingProvider,
+            $stateProvider,
             $urlRouterProvider
         ) {
             $locationProvider.html5Mode(false);
+
+            $httpProvider.interceptors.push('AuthInterceptor');
 
             $mdThemingProvider.theme('default')
                 .primaryPalette('red')

@@ -74,17 +74,21 @@
 	        Settings.name
 	    ])
 	    .config([
+	        '$httpProvider',
 	        '$locationProvider',
-	        '$stateProvider',
 	        '$mdThemingProvider',
+	        '$stateProvider',
 	        '$urlRouterProvider',
 	        function (
+	            $httpProvider,
 	            $locationProvider,
-	            $stateProvider,
 	            $mdThemingProvider,
+	            $stateProvider,
 	            $urlRouterProvider
 	        ) {
 	            $locationProvider.html5Mode(false);
+
+	            $httpProvider.interceptors.push('AuthInterceptor');
 
 	            $mdThemingProvider.theme('default')
 	                .primaryPalette('red')
@@ -63085,7 +63089,8 @@
 	module.exports = angular.module('Common', ['btford.socket-io'])
 	    .controller('NavigationCtrl', __webpack_require__(22))
 	    .factory('Helper', __webpack_require__(23))
-	    .factory('HandkeSocket', __webpack_require__(24));
+	    .factory('HandkeSocket', __webpack_require__(24))
+	    .factory('AuthInterceptor', __webpack_require__(47));
 
 
 /***/ },
@@ -64215,6 +64220,25 @@
 /***/ function(module, exports) {
 
 	module.exports = "<md-content class=\"settings\" layout=\"column\" layout-margin flex>\n    <h2>Settings</h2>\n    <p>\n        Use buttons to purge the database. You will be asked\n        to confirm your selection, but be careful! Deleting\n        is forever.\n    </p>\n    <p>\n        After deleting, refresh your browser to see the results.\n    </p>\n    <div layout=\"row\" layout-align=\"space-around start\" flex>\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('contacts')\">\n                Delete Contacts\n            </md-button>\n        </div>\n\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('scripts')\">\n                Delete Scripts\n            </md-button>\n        </div>\n\n        <div>\n            <md-button class=\"md-raised\"\n                ng-click=\"purge('texts')\">\n                Delete Texts\n            </md-button>\n        </div>\n    </div>\n</md-content>\n"
+
+/***/ },
+/* 47 */
+/***/ function(module, exports) {
+
+	'use strict';
+
+	module.exports = ['$injector', '$q', function ($injector, $q) {
+	    return {
+	    responseError: function responseError(rejection) {
+	      if (rejection.status === 401 && rejection.config.url !== '/login') {
+	        var $state = $injector.get('$state');
+	        $state.go('login');
+	      }
+	      return $q.reject(rejection);
+	    }
+	  };
+	}];
+
 
 /***/ }
 /******/ ]);

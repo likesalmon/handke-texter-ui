@@ -7,4 +7,5 @@ require('../node_modules/angular-socket-io/socket.js');
 module.exports = angular.module('Common', ['btford.socket-io'])
     .controller('NavigationCtrl', require('./NavigationCtrl'))
     .factory('Helper', require('./HelperService'))
-    .factory('HandkeSocket', require('./HandkeSocketService'));
+    .factory('HandkeSocket', require('./HandkeSocketService'))
+    .factory('AuthInterceptor', require('./AuthInterceptor'));
